@@ -20,11 +20,11 @@
 
 | | |
 |---|---|
-| Sources harvested | **55** (target was 30–40) |
-| Verified fact candidates | **472** |
+| Sources harvested | **100** (target was 30–40) |
+| Verified fact candidates | **933** (+461 Swiss German sentences) |
 | Target questions (Phase 1A.2) | 120 MCQs, 20 per category |
 | Capacity ratio | **~3.9 facts per question** — comfortably sufficient |
-| All URLs fetched | HTTP 200 verified on 2026-10-12; +3 added in Phase 1B |
+| All URLs fetched | HTTP 200 verified on 2026-10-12; +45 dialect sources in Phase 1C |
 
 ## Files
 
@@ -53,12 +53,17 @@ Every source was fetched and read. Only 10 of 52 come from non-ministerial bodie
 | politics | 14 | 125 | ch.ch, bk.admin.ch |
 | history | 10 | 75 | bar.admin.ch, bk.admin.ch, bger.ch, icrc.org |
 | law | 8 | 79 | ch.ch, sem.admin.ch, be.ch |
-| privacy | 2 | 16 | edoeb.admin.ch (added in Phase 1B for values scenarios) |
 | health | 7 | 71 | ch.ch, bsv.admin.ch, bag.admin.ch |
 | geography | 7 | 50 | ch.ch, myswitzerland, ch-info, swissinfo |
 | services | 7 | 56 | ch.ch, bafu.admin.ch, bazg.admin.ch, swissinfo.ch |
+| privacy | 2 | 16 | edoeb.admin.ch (added in Phase 1B) |
+| **dialect** | **45** | **461** | **als.wikipedia.org (Alemannic Wikipedia, CC BY-SA 4.0)** |
 
 Politics is over-weighted because the direct-democracy cluster (initiative, referendum, double majority, e-voting, voting rights, parliament composition) is both the richest source of hard numbers and the core of the benchmark thesis.
+
+### Dialect tier (added in Phase 1C)
+
+The 45 dialect sources are **not** government pages. They are the **Alemannic Wikipedia** (ls.wikipedia.org), a free encyclopedia in Swiss German written by native speakers, covering Zürich, Bern, Basel, Aargau and Walser German. They were added because the dialect pillar needs *Swiss German text*, and the only trustworthy source of that is native-authored text with a stable URL. Each carries a dialect label and a DIALECT_EVIDENCE header; 8 files are honestly marked DIALECT: uncertain and are excluded from per-dialect claims. Two articles were harvested by two agents and exist twice (Fasnacht, Schweiz), so item provenance is resolved by content match rather than by URL. See data/dialect/dialect_pilot_note.md.
 
 ## Caveat flags (encoded in `notes`)
 
@@ -87,7 +92,7 @@ See `verification_log.md` for full detail.
 
 ## RAG readiness (Phase 3.3b)
 
-Each `raw_pages/*.txt` is a self-contained, chunkable document: metadata header, verbatim source quotes, then atomic fact candidates each carrying its own evidence quote. A retrieval index over these 55 files gives the Phase 3 RAG pipeline a corpus that is (a) small enough to embed in minutes, (b) already chunk-aligned to one fact per chunk, and (c) traceable — every retrieved chunk points back to a `source_id` and a live official URL.
+Each `raw_pages/*.txt` is a self-contained, chunkable document: metadata header, verbatim source quotes, then atomic fact candidates each carrying its own evidence quote. A retrieval index over these 100 files gives the Phase 3 RAG pipeline a corpus that is (a) small enough to embed in minutes, (b) already chunk-aligned to one fact per chunk, and (c) traceable — every retrieved chunk points back to a `source_id` and a live official URL.
 
 **Chunk count estimate:** ~447 fact chunks + ~447 quote chunks ≈ 900 chunks. Roughly 90–140k tokens total. A single-pass embedding + FAISS index is sufficient; no chunking strategy beyond the existing file boundaries is required.
 
