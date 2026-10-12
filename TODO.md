@@ -15,6 +15,7 @@ Legend: `[x]` done · `[~]` in progress · `[ ]` not started · `[!]` blocked
 | **B2** | **Apertus-8B running locally** | Every real number in Phase 2 needs it. Currently `mock`, so all results so far are pipeline self-tests. | **You** — HF gate + 4-bit GGUF |
 | **B3** | **70B access route** | Phase 2.5 baselines, and the 8B-vs-70B comparison that is the whole point of running two models. | **You** — CSCS/Phoenix/HF? |
 | **B4** | **Root README + LICENSE** | Plan 0.4. Nothing else is submittable without it. | either |
+| **B5** | **Human scoring of the cross-check sample** | The judge-vs-human agreement rate cannot exist until a person scores the 15 blind items. Not delegable to a model. | **You** |
 
 **B2 setup — verified from the HF API on 2026-10-12:**
 
@@ -92,10 +93,38 @@ deliberately, since audio items need real recorded Swiss German.
 - [!] **Live 84-question baseline on both models — blocked by B2, B3**
 - [!] **<5% parse-error target — blocked by B2.** Cannot be measured on mock.
 
-**2.3 · Values judge — not started** (data is ready: rubric + 30 scenarios + pairs exist)
-- [ ] `judge.py`, `run_values.py`, `crosscheck.py`
-- [ ] Decide judge model — **circularity must be disclosed** (`values_rubric.md` §5)
-- [ ] 20% manual cross-check → report agreement rate
+**2.3 · Values judge — ✅ code complete; audit blocked on a human + live model**
+- [x] `judge.py` — judge **observes** element presence; `score_from_observations()` applies the rubric in code
+- [x] `run_values.py` — 30 English + 43 pair versions, with per-response language metrics
+- [x] `crosscheck.py` — blind stratified sample, agreement report, per-element table
+- [x] `language_metrics.py` — refused / reply_lang / register_ok / len_ratio / depth_ratio
+- [x] `test_judge.py` — **225 checks**; caught 4 real bugs (see below)
+- [x] Judge-model decision → **Apertus 70B for both**, per rubric §5 option 2, **with** the 20% audit
+- [x] Judge trialled on 3 scenarios (mock) — scores follow the rubric mechanically
+- [x] Full values eval on 8B ✅ and 70B ✅ (mock backend)
+- [x] `crosscheck select` → **15 blind items, 0 leaked verdict fields** ✅
+- [!] **Human scoring of the 15 audit items — blocked on B5 (below)**
+- [!] **Reported agreement rate — cannot exist until a human scores them**
+- [!] Rubric revision if agreement < 75% — cannot be evaluated yet
+
+> **B5 (new) — a human must score the cross-check sample.**
+> This is not optional and it is not delegable to a model. An LLM filling in
+> `manual_score` would produce a number that looks like an audit, would be
+> reported as one, and would measure nothing — the same false-provenance
+> failure `verify_values.py` hard-errors on. `crosscheck.py` emits a blind file
+> with `manual_score: null`, and `verify` refuses to report anything until it is
+> filled.
+>
+> ```bash
+> python eval/crosscheck.py select --model 8b --interactive   # guided terminal scoring
+> python eval/crosscheck.py verify --model 8b                 # agreement report
+> ```
+>
+> The sample is **15 items, not the 6 the plan assumed**: 20% of the 73 scored
+> responses (30 English + 43 pair versions), because rubric §6 requires
+> stratifying *by language* — which is only meaningful if pair responses are in
+> scope. Shrink with `--fraction` if time is short, but keep every language
+> represented.
 
 **2.4 · Dialect scoring — not started** (blocked by 1C)
 - [ ] `run_dialect.py`
@@ -144,6 +173,29 @@ deliberately, since audio items need real recorded Swiss German.
 2. **Accept the HF gate, pull the Q4_K_M GGUF, start `llama-server`, flip `eval/.env` to `http`** (B2).
 3. `python eval/client.py 8b` → confirm live params, then
    `python eval/run_all.py --model 8b --task knowledge` for the real 84-question baseline.
-4. `python eval/analyse_parses.py` → if the rate exceeds 10%, escalate the prompt variant.
-5. Decide the 70B route (B3) and write the root README + LICENSE (B4).
-6. Decide whether Phase 1C takes the audio track or stays text-only.
+4. `python eval/run_values.py --model 8b` → then `python eval/crosscheck.py select --model 8b --interactive`
+   and score the 15 items (B5). **This is the only Phase 2.3 deliverable still open.**
+5. `python eval/analyse_parses.py` → if the parse rate exceeds 10%, escalate the prompt variant.
+6. Decide the 70B route (B3), write the root README + LICENSE (B4).
+7. Decide whether Phase 1C takes the audio track or stays text-only.
+
+---
+
+## Phase 2.3 — the four bugs its test suite caught
+
+Recorded because each would have produced a number that looked fine.
+
+1. **`verify_crosscheck` compared the human's score against `None`.** The blind
+   file strips `score` by design, so reading the verdict from it gave 0%
+   agreement for every item — which reads as "the judge is terrible" and would
+   have triggered a pointless rubric rewrite. Fixed by joining the blind file
+   back to the parsed results on `(scenario_id, language)` for computation only.
+2. **The plan's `JUDGE_USER` referenced `{expected_behavior}`, which does not
+   exist** in the shipped 11-key scenario schema. It would have crashed on V001.
+3. **Refusal detection missed the contraction form** — `"I don't understand"`
+   and `"could you rephrase … in Standard German"` are the phrasings models
+   actually produce, and neither matched.
+4. **Swiss German was undetectable from short text.** The Alemannic signature
+   list was too thin; a two-line Swiss German reply classified as `unknown`,
+   which would silently suppress the register check on exactly the items the
+   dialect gap depends on.

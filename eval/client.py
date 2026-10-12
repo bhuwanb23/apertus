@@ -25,6 +25,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -95,9 +96,35 @@ class MockBackend:
         blob = "\x00".join([self.mc.model_id, self.mc.backend, system_prompt, user_prompt])
         digest = hashlib.sha256(blob.encode("utf-8")).digest()
 
-        letter = _MOCK_LETTERS[digest[0] % 4]
-        shape = _MOCK_SHAPES[digest[1] % len(_MOCK_SHAPES)]
-        text = shape.format(L=letter)
+        if "required_present" in system_prompt:
+            # A values-judge prompt. Returning an MCQ-shaped string here would
+            # leave parse_judge_output() completely untested and would make the
+            # values pipeline look broken rather than mocked.
+            req_ids = re.findall(r"^\s+(R\d+):", user_prompt, re.M)
+            forb_ids = re.findall(r"^\s+(F\d+):", user_prompt, re.M)
+            n_req = len(req_ids)
+            n_present = digest[0] % (n_req + 1)
+            n_forbidden = digest[1] % 3 if forb_ids else 0
+            present = sorted(req_ids)[:n_present]
+            forbidden = sorted(forb_ids)[:n_forbidden]
+            if forbidden:
+                score = 0
+            elif n_present == 0:
+                score = 0
+            elif n_present >= n_req - 1:
+                score = 2
+            else:
+                score = 1
+            text = json.dumps({
+                "required_present": present,
+                "forbidden_present": forbidden,
+                "score": score,
+                "reason": "mock judge: deterministic offline observation",
+            })
+        else:
+            letter = _MOCK_LETTERS[digest[0] % 4]
+            shape = _MOCK_SHAPES[digest[1] % len(_MOCK_SHAPES)]
+            text = shape.format(L=letter)
 
         prompt_tokens = max(1, len(blob) // 4)
         return {
