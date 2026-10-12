@@ -16,7 +16,7 @@ NOTE: S10 (`Es git e Zylete Fasnechtszümft.`) sits in the `== Aargau ==` subsec
 === VERBATIM SWISS GERMAN SENTENCES ===
 "Die Schwäbisch-alemannischi Fasnet stoot uf dr UNESCO-Lischte vom Nit-materielle Kulturguet."
 "Des zwoiseitege Schbil fo "guat" ond "schläachd", "alt" ond "jong", "liab" ond "bais" isch a wichdegs Brinzip fodr Fasnet, mo ma zom Beischbil edda Maska fo fillna Zimft als liabe, baise oder sogar gmischte Gsichder em Häs widergschbiaglet sit."
-"S Wort "Fasnet" konnt fom ausgschdorbana mittelhaodeitscha Verb "vaselen", mo "fruchdbar sai" bedeitet."
+"S Woat "Fasnet" konnt fom ausgschdorbana mittelhaodeitscha Verb "vaselen", mo "fruchdbar sai" bedeitet."
 "Organisator fodr Fasnet isch normalerweis a oatsasässege Narrazomft."
 "Typesch fir fill Häser isch d Ferzireng mit Schdoffblätzle ond Schälla."
 "Im Wiisedal gits au no d Buurefasnacht."
@@ -28,7 +28,7 @@ NOTE: S10 (`Es git e Zylete Fasnechtszümft.`) sits in the `== Aargau ==` subsec
 === STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
 S1. "Die Schwäbisch-alemannischi Fasnet stoot uf dr UNESCO-Lischte vom Nit-materielle Kulturguet." → "Die schwäbisch-alemannische Fasnacht steht auf der UNESCO-Liste des materiellen Kulturguts."
 S2. "Des zwoiseitege Schbil fo "guat" ond "schläachd", "alt" ond "jong", "liab" ond "bais" isch a wichdegs Brinzip fodr Fasnet, mo ma zom Beischbil edda Maska fo fillna Zimft als liabe, baise oder sogar gmischte Gsichder em Häs widergschbiaglet sit." → "Dieses zweiseitige Bild von «gut» und «schlecht», «alt» und «jung», «lieb» und «böse» ist ein wichtiges Prinzip der Fasnacht, wo man zum Beispiel gewisse Masken mit gefüllter Zimt als liebe, böse oder sogar gemischte Gesichter in das Kostüm zurückversetzt hat."
-S3. "S Wort "Fasnet" konnt fom ausgschdorbana mittelhaodeitscha Verb "vaselen", mo "fruchdbar sai" bedeitet." → "Das Wort «Fasnacht» kommt vom ausgestorbenen mittelhochdeutschen Verb «vaselen», das «fruchtbar sein» bedeutet."
+S3. "S Woat "Fasnet" konnt fom ausgschdorbana mittelhaodeitscha Verb "vaselen", mo "fruchdbar sai" bedeitet." → "Das Wort «Fasnacht» kommt vom ausgestorbenen mittelhochdeutschen Verb «vaselen», das «fruchtbar sein» bedeutet."
 S4. "Organisator fodr Fasnet isch normalerweis a oatsasässege Narrazomft." → "Organisator der Fasnacht ist normalerweise eine ehrenamtliche Narrenzunft."
 S5. "Typesch fir fill Häser isch d Ferzireng mit Schdoffblätzle ond Schälla." → "Typisch für viele Häuser ist die Kopfbedeckung mit Kappchen und Ziergehänge."
 S6. "Im Wiisedal gits au no d Buurefasnacht." → "Im Wiesental gibt es auch noch die Bauernfastnacht."
@@ -47,6 +47,7 @@ L6. gmischte Gsichder = gemischte Gesichter — tests: descriptive vocabulary; `
 L7. Häs = Kostüm / Gewand — tests: culture; Alemannic-only word for costume, Standard has no single equivalent (`Kostüm` is a loan)
 L8. Zueberäitig / Zuebereitig = Zubereitung — tests: general
 L9. Konnt / chunnt / git / wut = kommt / kommt / gibt / wird — tests: verb paradigm; note the article mixes `konnt` and `chunnt` for Standard `kommt`, showing intra-dialect variation
+L9a. Woat = Wort — tests: core vocabulary; **NOTE the source spells it `Woat`, not `Wort`.** Do not "correct" it.
 L10. ausgschdorbana = ausgestorbenen — tests: lexicography; `gschdor-` for Standard `gestor-`
 L11. mittelhaodeitscha = mittelhochdeutschen — tests: philology; `-aodeitscha` is a genuine Alemannic dialectalisation of a Standard compound
 L12. Narrazomft / Zomft = Narrenzunft / Zunft — tests: civic associations; `Zomft` for Standard `Zunft` (ü > o shift)

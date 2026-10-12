@@ -19,7 +19,7 @@ CROSS-REF NOTE: no cross-reference. The English corpus has no Alemannic renderin
 "Chnotèbaanhööf sin in sèllèm Zämmèhang meefachi Drènnigs- un/odder Chrüzzungsbaanhööf von èm Huufè vo Streggè."
 "Bi U-Baanè differenzyrt mò im Allgmeinè nit zwǜschè Baanhööf un Haltepüngt."
 "In èm Kopfbaanhof odder Sackbaanhof höred d Hauptgleis mit Stumpfgleis uff, è Durchfaart isch nit möglich."
-"Deilwys wörd uff selli Unterscheidig vozichet bzw. zwǜschè eifachè Zwǜschèbaanhööf un Zwǜschèbaanhööf mit Streggèvozwygigè unterschiddè."
+"deilwys wörd uff selli Unterscheidig vozichet bzw. zwǜschè eifachè Zwǜschèbaanhööf un Zwǜschèbaanhööf mit Streggèvozwygigè unterschiddè."
 "D Redewendig „Ich voschtand nu Baanhof“ besait hüt umgangsschprõchlich, da mò öppis nit voschtò cha."
 
 === STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
@@ -30,7 +30,8 @@ S4. "Èm Zwǜschèbaanhof isch è Bedrybsschtell an èrè durchgöngigè Baansch
 S5. "Chnotèbaanhööf sin in sèllèm Zämmèhang meefachi Drènnigs- un/odder Chrüzzungsbaanhööf von èm Huufè vo Streggè." → "Knotenbahnhöfe sind in demselben Zusammenhang mehrfach Verzweigungs- und/oder Kreuzungsbahnhöfe von einem Haufen von Gleisen."
 S6. "Bi U-Baanè differenzyrt mò im Allgmeinè nit zwǜschè Baanhööf un Haltepüngt." → "Bei U-Bahnen differenziert man im Allgemeinen nicht zwischen Bahnhöfen und Haltepunkten."
 S7. "In èm Kopfbaanhof odder Sackbaanhof höred d Hauptgleis mit Stumpfgleis uff, è Durchfaart isch nit möglich." → "In einem Kopfbahnhof oder Sackbahnhof enden die Hauptgleise mit Stumpfgleis, eine Durchfahrt ist nicht möglich."
-S8. "Deilwys wörd uff selli Unterscheidig vozichet bzw. zwǜschè eifachè Zwǜschèbaanhööf un Zwǜschèbaanhööf mit Streggèvozwygigè unterschiddè." → "Teilweise wird auf diese Unterscheidung verzichtet beziehungsweise zwischen einfachem Zwischenbahnhof und Zwischenbahnhof mit Gleisabzweigungen unterschieden."
+S8. "deilwys wörd uff selli Unterscheidig vozichet bzw. zwǜschè eifachè Zwǜschèbaanhööf un Zwǜschèbaanhööf mit Streggèvozwygigè unterschiddè." → "Teilweise wird auf diese Unterscheidung verzichtet beziehungsweise zwischen einfachem Zwischenbahnhof und Zwischenbahnhof mit Gleisabzweigungen unterschieden."
+NOTE ON S8: the sentence begins with lowercase `deilwys` because in the source it is the second half of a single sentence (`Deilwys voschtòt mò ... , deilwys wörd uff selli ...`). **Do not capitalise it — a string-matching verifier will reject the capitalised form.**
 S9. "D Redewendig „Ich voschtand nu Baanhof“ besait hüt umgangsschprõchlich, da mò öppis nit voschtò cha." → "Die Redewendung «Ich verstand nur Bahnhof» besagt heute umgangssprachlich, dass man etwas nicht verstehen konnte."
 
 === LEXICAL NOTES ===

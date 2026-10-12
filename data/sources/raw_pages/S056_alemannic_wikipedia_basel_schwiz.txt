@@ -13,7 +13,7 @@ CAVEAT: numerals present in S3 (`62`, `23`, `8`, `0,5`) — retained deliberatel
 CROSS-REF NOTE: no cross-reference. S025/S029/S047/S058 cover Swiss institutions in Standard German, never the Alemannic rendering of `Amtssprooch`, `Sproochgränz`, `Minderheitesprooch`.
 
 === VERBATIM SWISS GERMAN SENTENCES ===
-"D Religion het lang e grossi Rolle gspiilt in dr Schwiiz und nid numme im Positive."
+"D Religion het lang e grossi Rolle gspiilt in dr Schwiz und nid numme im Positive."
 "D Schwiz isch e Schtaat, wo als e föderalistisch organisierti direkti Demokratii funkzioniert."
 "D Schwyz het luut Bùndesverfassig vier Landes- ùn Amtssprooche: Dütsch mit eme Aadeil vo öbe 62 Prozänt, Französisch mit 23 Prozänt, Italiänisch mit 8 Prozänt ùn Rätoromanisch mit 0,5 Prozänt."
 "Viersproochig isch aber nùmme de Bùndestaat als Institution: Di meischte Kantön hen dergäge nùmme ei Amtssprooch."
@@ -23,7 +23,7 @@ CROSS-REF NOTE: no cross-reference. S025/S029/S047/S058 cover Swiss institutions
 "D Region zwüsche Bärn und Züri seit me ou Mittuland und dr französischsprächende Teil vor Schwiz isch under em Name Romandie, Wälschland oder Weschtschwiiz bekannt."
 
 === STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
-S1. "D Religion het lang e grossi Rolle gspiilt in dr Schwiiz und nid numme im Positive." → "Die Religion hat lange eine grosse Rolle gespielt in der Schweiz und nicht nur im Positiven."
+S1. "D Religion het lang e grossi Rolle gspiilt in dr Schwiz und nid numme im Positive." → "Die Religion hat lange eine grosse Rolle gespielt in der Schweiz und nicht nur im Positiven."
 S2. "D Schwiz isch e Schtaat, wo als e föderalistisch organisierti direkti Demokratii funkzioniert." → "Die Schweiz ist ein Staat, der als föderalistisch organisierte direkte Demokratie funktioniert."
 S3. "D Schwyz het luut Bùndesverfassig vier Landes- ùn Amtssprooche: Dütsch mit eme Aadeil vo öbe 62 Prozänt, Französisch mit 23 Prozänt, Italiänisch mit 8 Prozänt ùn Rätoromanisch mit 0,5 Prozänt." → "Die Schweiz hat laut Bundesverfassung vier Landes- und Amtssprachen: Deutsch mit einem Anteil von über 62 Prozent, Französisch mit 23 Prozent, Italienisch mit 8 Prozent und Rätoromanisch mit 0,5 Prozent."
 S4. "Viersproochig isch aber nùmme de Bùndestaat als Institution: Di meischte Kantön hen dergäge nùmme ei Amtssprooch." → "Viersprachig ist aber nur der Bund als Institution: Die meisten Kantone haben demgegenüber nur eine Amtssprache."
