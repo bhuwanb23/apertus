@@ -1,0 +1,100 @@
+SOURCE_ID: S019
+URL: https://www.ch.ch/en/health/health-insurance/health-insurance-taking-out--changing--cancelling/
+TITLE: Taking out, changing and cancelling health insurance
+CATEGORY: health
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON REQUESTED URL: https://www.ch.ch/en/health-insurance/ is now a redirect hub;
+the substantive page covering who must be insured / free choice / 3-month deadline is
+the URL above. https://www.ch.ch/en/health-insurance/ itself returned HTTP 200 but
+resolved to the "Health insurance benefits" sub-page, which does not cover these topics.
+
+=== VERBATIM SOURCE QUOTES ===
+"If you live in Switzerland, you must be insured with a Swiss health insurer."
+
+"If you have just moved to Switzerland, you have three months in which to arrange
+health insurance cover. The same deadline applies to new-borns. You or your baby are
+already insured for this three-month period."
+
+"Foreign retirees, students and diplomats do not necessarily need to take out health
+insurance. The relevant agency in your canton or municipality approves any exemptions."
+
+"As a cross-border commuter, you have the choice of taking out health insurance in
+Switzerland where you work, or over the border where you live.
+
+If you don't want to take out Swiss health insurance, you must apply for an exemption
+with the relevant cantonal authority within three months of starting your job."
+
+"Free choice of health insurance company
+
+The list of authorised health insurance companies covers all insurers. You can choose
+any company that operates in the region where you live. Simply register, because they
+are required to offer everyone basic insurance.
+
+It's also worth knowing that a child can have a different health insurer to their parents."
+
+"You can generally change your health insurer at the end of each year. To do this, you
+must cancel your basic insurance in writing. Your letter must reach your current health
+insurer by 30 November."
+
+"Your current insurer will notify you by the end of October of your premium for the
+next year. This is in time for you to cancel if you do not agree with it."
+
+"If you have a deductible of CHF 300 under a 'regular' insurance model, you can also
+cancel your basic insurance with effect from the end of June. A three-month notice period
+applies."
+
+"You can take out compulsory basic insurance and voluntary supplementary insurance from
+different health insurers. For example, if you want to switch your basic insurance, you
+can still keep your supplementary insurance where it is."
+
+"You can also change your insurance model at the end of the year. Your letter must reach
+your health insurer by the end of November."
+
+"As a rule you will have to complete a questionnaire on your health before an insurer will
+approve supplementary health insurance for you."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Anyone living in Switzerland must hold compulsory health insurance with a Swiss
+    health insurer. — evidence quote: "If you live in Switzerland, you must be insured
+    with a Swiss health insurer."
+
+F2. A person who has just moved to Switzerland has three months to arrange health
+    insurance cover, and is already insured during that period; the same 3-month deadline
+    applies to newborns. — evidence quote: "If you have just moved to Switzerland, you
+    have three months in which to arrange health insurance cover. The same deadline
+    applies to new-borns. You or your baby are already insured for this three-month period."
+
+F3. Insured persons have free choice of insurer: they may register with any authorised
+    company operating in the region where they live, because insurers are required to
+    accept everyone for basic insurance. — evidence quote: "You can choose any company
+    that operates in the region where you live. Simply register, because they are required
+    to offer everyone basic insurance."
+
+F4. Foreign retirees, students and diplomats are not automatically required to take out
+    health insurance; exemptions are approved by the cantonal or municipal authority. —
+    evidence quote: "Foreign retirees, students and diplomats do not necessarily need to
+    take out health insurance. The relevant agency in your canton or municipality approves
+    any exemptions."
+
+F5. The ordinary cancellation deadline is 30 November, allowing an insurer change at the
+    end of each calendar year. — evidence quote: "You can generally change your health
+    insurer at the end of each year. To do this, you must cancel your basic insurance in
+    writing. Your letter must reach your current health insurer by 30 November."
+
+F6. A holder of the CHF 300 deductible under a standard/regular insurance model may
+    additionally cancel with effect from the end of June, on three months' notice. —
+    evidence quote: "If you have a deductible of CHF 300 under a 'regular' insurance model,
+    you can also cancel your basic insurance with effect from the end of June. A
+    three-month notice period applies."
+
+F7. Basic (compulsory) and supplementary (voluntary) insurance can be held with different
+    insurers, so switching basic cover does not force loss of supplementary cover. —
+    evidence quote: "You can take out compulsory basic insurance and voluntary
+    supplementary insurance from different health insurers."
+
+F8. Health insurers are not obliged to accept applicants for supplementary insurance; the
+    applicant must complete a health questionnaire. — evidence quote: "As a rule you will
+    have to complete a questionnaire on your health before an insurer will approve
+    supplementary health insurance for you."

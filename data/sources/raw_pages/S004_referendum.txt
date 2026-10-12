@@ -1,0 +1,67 @@
+SOURCE_ID: S004
+URL: https://www.ch.ch/en/political-system/political-rights/referendum/
+TITLE: The referendum
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"The optional referendum was introduced in 1874. Since then, around 200 optional referendums have been held, and about 40 per cent of the laws proposed have been rejected by the voters."
+
+"At the federal level, the process is as follows: a referendum committee is usually set up and if it manages to collect 50,000 valid signatures within 100 days of the publication of the new legislation, a referendum is held."
+
+"Parliament also decides on enactments that are not laws, for example decisions on international treaties between Switzerland and other countries. It is also possible to launch an optional referendum against these."
+
+"Most laws and other enactments passed by Parliament come into force without a popular vote being held. But in some cases, a referendum must be held. So unlike in the case of an optional referendum, signatures do not have to be collected; the referendum is mandatory."
+
+"This is always the case when Parliament wishes to amend the Constitution. Amendments to the Constitution require a majority vote of both the electorate and the cantons."
+
+"Any member of the electorate who is opposed to a new or amended law passed by the Swiss parliament can launch an optional referendum – even if they live abroad."
+
+"Individuals can join forces with other people to form a referendum committee. This makes things easier, but is not absolutely necessary."
+
+"What is more, several groups can initiate a referendum against the same new or amended law – even though they might be from different political camps. The signatures collected are counted."
+
+"Signatures can only be collected once the contested law has been published in the Federal Gazette. From this point on, the authors of the referendum have 100 days to collect the necessary 50,000 signatures, have them certified and submit them to the Federal Chancellery."
+
+"Anyone with the right to vote in Switzerland may sign."
+
+"They must enter their surname and first name, date of birth and address legibly and by hand in the list and sign it. A further requirement is that any given signature list may contain only the signatures of persons from the same commune – because the communes are the first to check the signatures."
+
+"Usually not all signatures are found to be valid. It is therefore recommended to collect more than 50,000 signatures."
+
+"All signatures collected must be verified by the communes before the collection deadline."
+
+"If at least 50,000 signatures are valid, then the referendum request is successful."
+
+"The Federal Council decides when the vote takes place. It must announce the date at least four months in advance."
+
+"Referendum are not only held against federal laws. Voters in a canton or a commune may launch an optional referendum if they are against a decision of the local parliament. The mandatory referendum also exists at these levels."
+
+"Optional referendums can be held at national (federal), cantonal and communal level"
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. An optional referendum requires 50,000 valid signatures collected within 100 days of the law's publication in the Federal Gazette. — evidence quote: "collect 50,000 valid signatures within 100 days of the publication of the new legislation"
+
+F2. The optional referendum was introduced in 1874; since then around 200 have been held and about 40% of the laws put to the vote were rejected. — evidence quote: "The optional referendum was introduced in 1874. Since then, around 200 optional referendums have been held, and about 40 per cent of the laws proposed have been rejected by the voters."
+
+F3. Constitutional amendments automatically go to a vote with no signatures required (mandatory referendum). — evidence quote: "This is always the case when Parliament wishes to amend the Constitution."
+
+F4. A constitutional amendment needs a majority of the voters AND a majority of the cantons (double majority). — evidence quote: "Amendments to the Constitution require a majority vote of both the electorate and the cantons."
+
+F5. Any member of the electorate can launch an optional referendum, including Swiss citizens living abroad. — evidence quote: "Any member of the electorate who is opposed to a new or amended law passed by the Swiss parliament can launch an optional referendum – even if they live abroad."
+
+F6. An optional referendum can also be launched against decisions on international treaties, which are not technically laws. — evidence quote: "Parliament also decides on enactments that are not laws, for example decisions on international treaties... It is also possible to launch an optional referendum against these."
+
+F7. A signature list may only contain signatures from people of the same commune, because communes verify signatures first. — evidence quote: "any given signature list may contain only the signatures of persons from the same commune – because the communes are the first to check the signatures."
+
+F8. Because not all signatures are valid, organisers are advised to collect more than 50,000. — evidence quote: "Usually not all signatures are found to be valid. It is therefore recommended to collect more than 50,000 signatures."
+
+F9. The Federal Council sets the referendum vote date and must announce it at least four months in advance. — evidence quote: "The Federal Council decides when the vote takes place. It must announce the date at least four months in advance."
+
+F10. Referendums exist at all three levels: federal, cantonal and communal. — evidence quote: "Optional referendums can be held at national (federal), cantonal and communal level"
+
+F11. Several competing groups may launch a referendum against the same law and their signatures are pooled. — evidence quote: "several groups can initiate a referendum against the same new or amended law – even though they might be from different political camps. The signatures collected are counted."
+
+=== MCQ NOTE ===
+The 50,000-signature figure is the classic contrast with the 100,000-signature popular initiative (see S007). Pairing them in one question is strong: "50,000 vs 100,000" with distractors 25,000 / 150,000 / 200,000.

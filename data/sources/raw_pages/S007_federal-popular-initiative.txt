@@ -1,0 +1,53 @@
+SOURCE_ID: S007
+URL: https://www.ch.ch/en/political-system/political-rights/initiatives/what-is-a-federal-popular-initiative/
+TITLE: What is a federal popular initiative?
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON DISCOVERY: The listed index URL https://www.ch.ch/en/political-system/political-rights/initiatives/ returned HTTP 200 but is a hub/index page with no facts. It links to exactly one sub-page, which is the working URL used here.
+
+=== VERBATIM SOURCE QUOTES ===
+"The Federal Constitution is the highest level of Swiss law."
+
+"If a Swiss citizen wants to change the constitution, he or she can launch an initiative. 100,000 people who are eligible to vote in Switzerland must support the initiative with their signatures for it to be put to a vote."
+
+"An initiative can be used to propose that new articles be added to the Constitution or that existing articles be amended."
+
+"A federal popular initiative concerns only the Constitution. In contrast to the position in some cantons, there is no procedure at federal level for amending existing laws or introducing new laws through an initiative."
+
+"The initiative is an important political instrument of direct democracy."
+
+"The federal popular initiative was introduced in 1891."
+
+"More than 200 initiatives have been voted on since then, and around 10 per cent have been adopted."
+
+"For an initiative to come to fruition, it must be signed by 100,000 voters within 18 months. The initiative will then be put to a vote, unless the initiative committee withdraws it."
+
+"The first thing you need to do is form a committee. The initiative committee must have at least 7 and no more than 27 members, who each must be eligible to vote in Switzerland."
+
+"The Federal Council must announce the date of the vote at least four months in advance."
+
+"In order to be sure that the initiative is put to a vote, you should collect more than 100,000 signatures. Experience has shown that there are always some signatures that are invalid."
+
+"If at least 100,000 valid signatures have been submitted, then the initiative will be put to a vote."
+
+"You must also indicate the canton and commune where you are eligible to vote. It is important that a separate signature form is used for each commune."
+
+"In some cantons, citizens can use an initiative not only to demand changes to the cantonal constitution, but also to amend or introduce a new cantonal law (a legislative initiative). This option is not available at federal level."
+
+"The Federal Chancellery will arrange for the text to be translated into the official Swiss languages."
+
+"The following applies to anyone who signs the form:
+- You must enter your first name and surname by hand and then sign the form. You must also provide your date of birth and address."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The number of valid signatures required for a federal popular initiative is 100,000. — evidence quote: "For an initiative to come to fruition, it must be signed by 100,000 voters within 18 months."
+F2. The signature collection time limit for a federal popular initiative is 18 months. — evidence quote: "You have 18 months to collect at least 100,000 signatures, have them certified and submit them to the Federal Chancellery."
+F3. A federal popular initiative committee must have at least 7 and no more than 27 members, all of whom must be eligible to vote in Switzerland. — evidence quote: "The initiative committee must have at least 7 and no more than 27 members, who each must be eligible to vote in Switzerland."
+F4. The federal popular initiative was introduced in 1891. — evidence quote: "The federal popular initiative was introduced in 1891."
+F5. More than 200 federal popular initiatives have been voted on since 1891, and around 10 per cent have been adopted. — evidence quote: "More than 200 initiatives have been voted on since then, and around 10 per cent have been adopted."
+F6. A federal popular initiative can only amend the Federal Constitution; unlike in some cantons, there is no federal procedure for amending or introducing laws by initiative. — evidence quote: "A federal popular initiative concerns only the Constitution. In contrast to the position in some cantons, there is no procedure at federal level for amending existing laws or introducing new laws through an initiative."
+F7. CANTONAL-VARIABLE: In some cantons citizens may use an initiative to amend or introduce a new cantonal law (a legislative initiative); this option does not exist at federal level. — evidence quote: "In some cantons, citizens can use an initiative not only to demand changes to the cantonal constitution, but also to amend or introduce a new cantonal law (a legislative initiative). This option is not available at federal level."
+F8. The Federal Council must announce the date of the vote on a federal popular initiative at least four months in advance. — evidence quote: "The Federal Council must announce the date of the vote at least four months in advance."
+F9. A separate signature form must be used per commune, because signatures are subsequently checked by the communes. — evidence quote: "You must also indicate the canton and commune where you are eligible to vote. It is important that a separate signature form is used for each commune. This is because the signatures on the forms are subsequently checked by the communes."

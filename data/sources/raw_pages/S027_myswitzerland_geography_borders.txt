@@ -1,0 +1,40 @@
+SOURCE_ID: S027
+URL: https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/geography
+TITLE: Geography | Switzerland Tourism
+CATEGORY: geography
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"Switzerland has an area of 41,285 square kilometres (15,940 square miles). The productive area - i.e. the area without lakes, rivers, unproductive vegetation and without any vegetation - covers 30 753 km²."
+
+"Switzerland has a population of 8.9 million. The population density is high at 215 inhabitants per square kilometre. However, the distribution of the population across the country is very different: The Alps, which make up a large part of the country in terms of area, are home to only 10% of the total population."
+
+"Switzerland at a glance
+Capital: Bern
+Cantons: 26
+Area: 41,285 km2
+Borders: altogether: 1852 km/Austria 164 km/France 573 km/Germany 334 km/Italy 740 km/Liechtenstein 41 km
+Distance from north to south: 220 km (137 miles)
+Distance from east to west: 346 km (216 miles)
+Highest point: Dufour Peak, in the Monte Rosa Mountains, 4,634 m (15,203 feet)
+Lowest point: Lake Maggiore (Ticino) 193 m (633 feet)
+Lakes: 1,484
+glaciers: 1'400"
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Switzerland borders five countries, with Italy accounting for the longest border stretch (740 km) and Liechtenstein the shortest (41 km). — evidence quote: "Borders: altogether: 1852 km/Austria 164 km/France 573 km/Germany 334 km/Italy 740 km/Liechtenstein 41 km"
+
+F2. The five countries bordering Switzerland are Austria, France, Germany, Italy and Liechtenstein, with a total border length of 1,852 km. — evidence quote: "Borders: altogether: 1852 km/Austria 164 km/France 573 km/Germany 334 km/Italy 740 km/Liechtenstein 41 km"
+
+F3. Switzerland's highest point is the Dufour Peak in the Monte Rosa Mountains at 4,634 m; its lowest point is Lake Maggiore (Ticino) at 193 m. — evidence quote: "Highest point: Dufour Peak, in the Monte Rosa Mountains, 4,634 m (15,203 feet) Lowest point: Lake Maggiore (Ticino) 193 m (633 feet)"
+
+F4. Switzerland has an area of 41,285 square kilometres and 26 cantons, with the capital Bern. — evidence quote: "Capital: Bern Cantons: 26 Area: 41,285 km2"
+
+F5. Switzerland has 1,484 lakes and about 1,400 glaciers. — evidence quote: "Lakes: 1,484 glaciers: 1'400"
+
+F6. Switzerland measures 220 km from north to south and 346 km from east to west. — evidence quote: "Distance from north to south: 220 km (137 miles) Distance from east to west: 346 km (216 miles)"
+
+F7. Despite the Alps covering a large part of the country's area, they are home to only 10% of the total population. — evidence quote: "The Alps, which make up a large part of the country in terms of area, are home to only 10% of the total population."
+
+NOTE: Source domain myswitzerland.com (Switzerland Tourism / STnet.ch) — federation-owned tourism site, used as an accessible substitute for the EDA About Switzerland geography page, which returned HTTP 403 to direct fetches. Per-country border lengths vary by measurement/border-survey basis.

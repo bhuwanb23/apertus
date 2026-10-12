@@ -1,0 +1,123 @@
+SOURCE_ID: S016
+URL: https://www.ch.ch/en/vehicles-and-traffic/driving-licence/learning-to-drive/
+TITLE: Provisional licence, theory test and practical driving test
+CATEGORY: law
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON URL DISCOVERY:
+- Requested https://www.ch.ch/en/driving-and-transport/ -> not used; live slug is /en/vehicles-and-traffic/
+- Requested https://www.ch.ch/en/vehicles-and-transport/driving-licence/ -> HTTP 404 (typo in brief).
+  Correct hub: https://www.ch.ch/en/vehicles-and-traffic/driving-licence/  (HTTP 200), whose sub-pages are
+  /en/vehicles-and-traffic/driving-licence/exchanging-your-driving-licence/ ,
+  /en/vehicles-and-traffic/driving-licence/international-driving-licence/ and
+  /en/vehicles-and-traffic/driving-licence/learning-to-drive/  <- the one saved here.
+- Note: /en/work/working-hours/ was tried for the Employment source and did 404; see S013.
+
+=== VERBATIM SOURCE QUOTES ===
+
+"### Applying for a provisional licence
+To learn to drive, you need a provisional licence. You can start preparing ahead of your 17th birthday.
+
+### First aid course
+You have to complete a first aid course before you can apply for your provisional licence. The first aid certificate is valid for six years.
+
+### Application
+Normally, you cannot submit your application for a provisional licence until one month before your 17th birthday at the earliest."
+
+"In some cantons, now you can also apply for an electronic provisional licence. This is possible in cantons AR, BE, TI, VS and NE."
+
+"### Rules for the accompanying person
+- The accompanying person must be at least 23 years old, have passed their driving test at least three years previously and must no longer have a probationary driving licence.
+- On the road, they must ensure that safety is guaranteed and that traffic regulations are respected.
+- They must be able to reach and operate the handbrake easily."
+
+"### Further rules that apply to learner drivers
+- A blue plate with a white 'L' must be clearly displayed on the rear of the vehicle. The plate must be removed when the learner is not driving.
+- Learner drivers may only use motor vehicles that are covered by third-party liability insurance.
+- Neither the learner driver nor the accompanying person may drink any alcohol before going for a drive. (A blood alcohol level of over 0.01% is over the legal limit.)
+- With the exception of commercial passengers, other people are allowed in a car while a learner is driving."
+
+"### Validity of the provisional licence
+- The provisional licence is valid for 24 months for cars (category B) and for 4 months for motorcycles (category A).
+- Your provisional licence is only valid in Switzerland. Driving as a learner when abroad is also not advisable for insurance reasons."
+
+"### Traffic skills course
+The traffic skills course is compulsory. It lasts eight hours, spread over two to four days, and is run by driving schools and driving instructors.
+You will need a valid provisional licence to attend the traffic skills course.
+You can only register for the practical driving test once you have attended the traffic skills course. However, you do not need to attend the traffic skills course if you already have a category A, A1 or B1 driving licence."
+
+"### The driving test
+If you get your provisional licence before your 20th birthday, you will need to wait at least 12 months before you can take the practical driving test."
+
+"### If you fail the test
+If you fail the driving test the first time, then you can usually take it again after a month has passed.
+
+### Failing twice
+If you fail the driving test a second time, you must present a certificate from a qualified driving instructor in order to register for the test a third time.
+
+### Failing three times
+If you fail the practical driving test three times, you have to take a driving aptitude test if you wish to take the test again. If you fail the test again, your provisional licence becomes invalid. You will then have to pass a driving psychology test before you can take the test again."
+
+"### Probationary driving licence
+When you acquire a category A (motorcycle) or category B (car) driving licence for the first time, you will initially be issued with a probationary driving licence.
+
+### How long is the probationary period?
+The probationary period lasts three years. If you commit a serious traffic violation during this period and are disqualified from driving, the probationary period will be extended by one year.
+
+### Refresher course
+You must attend a one-day refresher course within twelve months of receiving your probationary driving licence."
+
+"### Full driving licence
+Once the probationary period is over and you have completed the refresher course, you can apply for a full driving licence. After that, no further tests are required."
+
+"### Costs of obtaining a driving licence
+Exactly how much it costs to get your driving licence depends on which canton you live in, how many lessons you take and how many attempts you need to pass the test. You can expect the following costs:
+- Eye test: 10 to 15 francs
+- First-aid course: 100 to 200 francs
+- Theory book (not compulsory): approx. 30 francs
+- Theory test: 30 to 40 francs
+- Provisional licence: 20 to 80 francs
+- Traffic skills course: 200 to 280 francs
+- Driving lessons (not compulsory, 45-50 min.): 80 to 110 francs per lesson
+- Practical driving test: 120 to 140 francs
+- Refresher course: 340 to 510 francs
+- Probationary driving licence: 30 to 60 francs
+- Full driving license: 15 to 70 francs
+
+For more information on the exact costs, contact the Driver and Vehicle Licensing Office in your canton of residence."
+
+"### Test requirements
+You must take the practical driving test in a vehicle in the correct test category.
+You must take the following documents with you to the test:
+- a valid identity document (passport, ID card or foreign national's ID card)
+- your provisional licence
+- your driving licence, if you are already allowed to drive another category of vehicle
+- the vehicle registration document for the test vehicle."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The provisional (learner) licence is valid for 24 months for cars (category B) but only 4 months for motorcycles (category A). — evidence quote: "The provisional licence is valid for 24 months for cars (category B) and for 4 months for motorcycles (category A)."
+
+F2. The accompanying person driving with a learner must be at least 23 years old, must have passed their driving test at least three years previously, and must no longer hold a probationary licence. — evidence quote: "The accompanying person must be at least 23 years old, have passed their driving test at least three years previously and must no longer have a probationary driving licence."
+
+F3. Minimum age to apply for a provisional licence is effectively 17: application may be submitted from one month before the 17th birthday at the earliest. — evidence quote: "Normally, you cannot submit your application for a provisional licence until one month before your 17th birthday at the earliest."
+
+F4. You must wait at least 12 months after obtaining the provisional licence before the practical test applies if the licence was issued before the 20th birthday. — evidence quote: "If you get your provisional licence before your 20th birthday, you will need to wait at least 12 months before you can take the practical driving test."
+
+F5. The probationary driving licence lasts three years, and is extended by one year on a serious traffic violation leading to disqualification from driving. — evidence quote: "The probationary period lasts three years. If you commit a serious traffic violation during this period and are disqualified from driving, the probationary period will be extended by one year."
+
+F6. The compulsory traffic skills course lasts eight hours spread over two to four days; a one-day refresher course must be attended within twelve months of receiving the probationary licence. — evidence quote: "The traffic skills course is compulsory. It lasts eight hours, spread over two to four days" / "You must attend a one-day refresher course within twelve months of receiving your probationary driving licence."
+
+F7. A first aid course must be completed before applying for a provisional licence, and the first aid certificate is valid for six years. — evidence quote: "You have to complete a first aid course before you can apply for your provisional licence. The first aid certificate is valid for six years."
+
+F8. Failing the driving test: normally retake after one month; a second failure requires a driving instructor's certificate for a third attempt; a third failure requires a driving aptitude test, and failing again invalidates the provisional licence (a driving psychology test is then needed). — evidence quote: "If you fail the driving test the first time, then you can usually take it again after a month has passed." / "If you fail the practical driving test three times, you have to take a driving aptitude test if you wish to take the test again. If you fail the test again, your provisional licence becomes invalid."
+
+F9. CANTONAL VARIABLE — licence costs vary by canton. Listed indicative ranges: eye test CHF 10-15, first-aid course CHF 100-200, theory test CHF 30-40, provisional licence CHF 20-80, traffic skills course CHF 200-280, practical driving test CHF 120-140, refresher course CHF 340-510, probationary licence CHF 30-60, full driving licence CHF 15-70. Do NOT present any single price as a nationwide fixed fee. — evidence quote: "Exactly how much it costs to get your driving licence depends on which canton you live in, how many lessons you take and how many attempts you need to pass the test."
+
+F10. CANTONAL VARIABLE — an electronic provisional licence is available only in certain cantons (AR, BE, TI, VS, NE). — evidence quote: "This is possible in cantons AR, BE, TI, VS and NE."
+
+=== COVERAGE GAPS ===
+- Licence CATEGORY LIST / full exchange rules for a FOREIGN licence are not on this page; see the sibling page
+  /en/vehicles-and-traffic/driving-licence/exchanging-your-driving-licence/ .
+- CANTONAL VARIABLE: theory-test registration and cost "varies from canton to canton"; the page says most cantons
+  require online registration and directs users to the cantonal Driver and Vehicle Licensing Office.

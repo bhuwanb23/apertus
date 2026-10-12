@@ -1,0 +1,67 @@
+SOURCE_ID: S018
+URL: https://www.ch.ch/en/taxes-and-finances/paying-taxes/
+TITLE: Taxes in Switzerland
+CATEGORY: law
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON URL DISCOVERY:
+- Requested https://www.ch.ch/en/taxes/ -> HTTP 404. Live slug is /en/taxes-and-finances/ (HTTP 200), which
+  lists "Paying taxes", "Types of taxation", "Tax return", "Debt...", "Old-age pension".
+- /en/taxes-and-finances/types-of-taxation/ (HTTP 200) is a hub listing Dog tax, Gift tax, Inheritance tax,
+  Military Service Exemption Tax, Taxation of real estate, Tax at source, VAT, and Anticipatory (withholding) tax;
+  it carries no facts. The substantive page on the three tax levels is the one saved here.
+
+=== VERBATIM SOURCE QUOTES ===
+
+"### Paying taxes
+How much your tax bill will be depends on how much you earn and where you live, among other things. You can calculate how much you will probably have to pay in federal, cantonal and communal taxes online."
+
+"### Note
+Democracy also applies to taxes: Swiss citizens vote on what taxes they have to pay. Often they can also have a say in determining the tax rates and the tax co-efficient."
+
+"### Calculating direct federal tax
+In Switzerland, the federal government, the cantons and the communes all levy taxes. The Confederation levies direct federal tax on the income of people living and working in Switzerland. The amount payable depends on your income. Direct federal tax is higher in percentage terms the more you earn."
+
+"You can use the Federal Tax Administration's tax calculator to calculate what you can expect to pay in federal, cantonal and communal taxes."
+
+"### Calculating cantonal and communal taxes
+The cantons and the communes levy their taxes on both the income and the assets of private individuals. Each canton has its own tax laws and the tax burden varies from canton to canton and from commune to commune."
+
+"### Statutory tax rate and tax co-efficient
+The percentage of your taxable income that you have to pay in cantonal and communal taxes is determined by the statutory tax rate set by law and the applicable tax co-efficient, which is changed from time to time. Because each commune determines its own tax co-efficient, and these can vary considerably, there can be low-tax and high-tax communes within the same canton."
+
+"### Taxable income and assets
+Taxes are not calculated on the basis of your total income, but on the basis of what is known as your 'taxable income'. This is a lower amount. You can deduct social insurance contributions from your income and make various other deductions in your tax return.
+Wealth taxes are calculated on what is called your 'taxable wealth'. Here, too, you can make deductions in your tax return."
+
+"### Paying your taxes
+The cantonal tax authorities calculate your taxes on the basis of the figures you provide in your tax return. The cantons collect both the federal taxes and the cantonal and communal taxes. The amount you have to pay is assessed each year and is normally paid in instalments."
+
+"If you have any questions about your tax bill or have any difficulty making payment, you can contact the cantonal tax administration. Payment in smaller instalments than those demanded by the authorities or an extension of the deadline for payment are both possible."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Switzerland has three taxing levels: the federal government, the cantons and the communes all levy taxes, and the Confederation levies direct federal tax on the income of people living and working in Switzerland. — evidence quote: "In Switzerland, the federal government, the cantons and the communes all levy taxes. The Confederation levies direct federal tax on the income of people living and working in Switzerland."
+
+F2. Division of tax bases: the Confederation levies DIRECT FEDERAL TAX on income, while cantons and communes levy taxes on BOTH income AND assets (wealth) of private individuals. — evidence quote: "The cantons and the communes levy their taxes on both the income and the assets of private individuals."
+
+F3. CANTONAL VARIABLE — each canton has its own tax laws, so the tax burden varies from canton to canton and from commune to commune. There is NO single Swiss cantonal/municipal tax rate. Never present a cantonal or communal rate as nationwide. — evidence quote: "Each canton has its own tax laws and the tax burden varies from canton to canton and from commune to commune."
+
+F4. CANTONAL VARIABLE (municipal autonomy) — the cantonal/communal tax charged is determined by the statutory tax rate set by law AND the applicable tax co-efficient, and each commune sets its own tax co-efficient. Because co-efficients vary considerably, low-tax and high-tax communes can exist within the SAME canton. — evidence quote: "Because each commune determines its own tax co-efficient, and these can vary considerably, there can be low-tax and high-tax communes within the same canton."
+
+F5. CANTONAL VARIABLE — the tax co-efficient is not fixed for ever; it "is changed from time to time". Do not present any specific co-efficient value as permanent. — evidence quote: "the applicable tax co-efficient, which is changed from time to time."
+
+F6. Cantons are the collecting and assessing authority: the cantonal tax authorities calculate taxes from the tax return and the cantons collect BOTH the federal taxes and the cantonal and communal taxes; the bill is assessed each year and normally paid in instalments. — evidence quote: "The cantonal tax authorities calculate your taxes on the basis of the figures you provide in your tax return. The cantons collect both the federal taxes and the cantonal and communal taxes. The amount you have to pay is assessed each year and is normally paid in instalments."
+
+F7. Direct federal tax is progressive in percentage terms: "Direct federal tax is higher in percentage terms the more you earn." — evidence quote: "Direct federal tax is higher in percentage terms the more you earn."
+
+F8. Taxes are levied on 'taxable income' and 'taxable wealth', which are lower than total income/wealth, because social insurance contributions and other deductions may be subtracted in the tax return. — evidence quote: "Taxes are not calculated on the basis of your total income, but on the basis of what is known as your 'taxable income'. This is a lower amount. You can deduct social insurance contributions from your income and make various other deductions in your tax return."
+
+F9. Payers may request smaller instalments than demanded or an extension of the payment deadline; questions go to the cantonal tax administration. — evidence quote: "Payment in smaller instalments than those demanded by the authorities or an extension of the deadline for payment are both possible."
+
+F10. Tax levels are subject to democratic approval: Swiss citizens vote on what taxes they have to pay, and often also have a say in determining the tax rates and the tax co-efficient. — evidence quote: "Democracy also applies to taxes: Swiss citizens vote on what taxes they have to pay. Often they can also have a say in determining the tax rates and the tax co-efficient."
+
+=== COVERAGE GAPS ===
+- No numeric CHF rates, tax brackets or percentages appear on this page; the page deliberately links to the
+  Federal Tax Administration (EFD) for statutory/effective rates and per-commune co-efficients. Any MCQ item
+  needing an actual rate must come from a cantonal or EFD source and must be marked CANTONAL VARIABLE.

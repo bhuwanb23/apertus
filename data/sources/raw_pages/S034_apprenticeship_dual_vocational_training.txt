@@ -1,0 +1,60 @@
+SOURCE_ID: S034
+URL: https://www.ch.ch/en/school-and-education/compulsory-education/what-comes-after-compulsory-education/
+ALT_SAME_CONTENT_URL: https://www.ch.ch/en/school-and-education/apprenticeship-or-school/
+SUPPLEMENT_URL (also fetched 2026-10-12): https://www.sbfi.admin.ch/en/vocational-education-and-training-vet
+TITLE: Apprenticeship and academic baccalaureate (ch.ch, Federal Chancellery) + supplement: Vocational Education and Training (VET), State Secretariat for Education, Research and Innovation SERI
+CATEGORY: services
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES (page A: ch.ch) ===
+"After compulsory school, you can decide whether you want to do an apprenticeship or attend an upper secondary level school, such as a baccalaureate school."
+
+"How do I find an apprenticeship? In a first step, you can choose from over 240 professions. Then look for a company with an opening for an apprenticeship."
+
+"How do the host company and the vocational school tie in together? In most cases, your host company will provide you with practical training and you will learn the theoretical basics of your profession at the vocational school. In some cases, you can also complete your apprenticeship full-time in a school."
+
+"The Confederation and the cantons and communes also offer exciting apprenticeship opportunities. ... The cantons and communes usually post available apprenticeship positions directly on their websites."
+
+"If you want to study for a baccalaureate, you need to meet different requirements depending on the canton and the type of baccalaureate you wish to obtain, including good grades, a recommendation from your class teacher or a successful entrance examination."
+
+"Most apprenticeships allow you to complete the vocational baccalaureate as a supplement. This would either require you to take additional classes during your apprenticeship, or you can complete the vocational baccalaureate afterwards."
+
+"A vocational baccalaureate opens the door to study at a university of applied sciences."
+
+"You usually start baccalaureate school after the second or third year of upper-secondary level school. The study programme lasts four years in most cantons and aims to provide a good general education. Students do not learn a profession, however the completion of an academic baccalaureate gives them access to study at a university or a federal institute of technology (ETH Zurich or EPFL)."
+
+"Specialised schools focus on increasing students' general knowledge. They also provide students insight into one or two occupational fields of choice. The first part of the programme lasts three years. Upon completion of the programme, students receive a specialised school certificate. Students then have the option to work towards a specialised baccalaureate. This programme lasts one year."
+
+"You can also prepare and take the Swiss academic baccalaureate examination or the federal vocational baccalaureate examination (both web pages available in German, French and Italian). Students prepare for the exam on their own or at a private school."
+
+=== VERBATIM SOURCE QUOTES (page B supplement: SERI / SBFI, Vocational Education and Training) ===
+"The Confederation, the Cantons and professional organisations all contribute to maintaining the high standard of vocational education and training and strive to ensure that there is an adequate number of apprenticeship positions available."
+
+"Two-thirds of young people in Switzerland benefit from the solid foundation provided by vocational education and training."
+
+"Two-year VET programmes lead to the award of a Federal VET Certificate; three-year and four-year VET programmes lead to the award of a Federal VET Diploma. During three-year and four-year VET programmes, learners have the option of attending general education courses to prepare for the Federal Vocational Baccalaureate Examination."
+
+"SERI works closely with the Cantons and professional organisations to coordinate vocational education and training, as it does for the VPET system as a whole. SERI is responsible for the following areas: - Supervising and issuing VET ordinances. - Regulating the teaching of language, communication and society (LCS) in VET programmes. - Regulating the teaching of preparatory courses for the Federal Vocational Baccalaureate examination. - Issuing the core syllabus for the teaching of sports in VET programmes. - Continued development of VET programmes."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Swiss basic vocational training is dual: the host company supplies the practical training and the vocational school the theoretical basics (with a minority full-time school-based route). — evidence quote: "In most cases, your host company will provide you with practical training and you will learn the theoretical basics of your profession at the vocational school. In some cases, you can also complete your apprenticeship full-time in a school."
+
+F2. More than 240 professions are available as apprenticeships. — evidence quote: "In a first step, you can choose from over 240 professions."
+
+F3. The three parties sharing responsibility for VET are the Confederation, the cantons and professional organisations. — evidence quote: "The Confederation, the Cantons and professional organisations all contribute to maintaining the high standard of vocational education and training and strive to ensure that there is an adequate number of apprenticeship positions available."
+
+F4. Qualification levels are split by programme length: 2-year programmes → Federal VET Certificate; 3- and 4-year programmes → Federal VET Diploma; general-education courses for the Federal Vocational Baccalaureate can be taken in parallel. — evidence quote: "Two-year VET programmes lead to the award of a Federal VET Certificate; three-year and four-year VET programmes lead to the award of a Federal VET Diploma."
+
+F5. Roughly two-thirds of Swiss young people take the VET route. — evidence quote: "Two-thirds of young people in Switzerland benefit from the solid foundation provided by vocational education and training."
+
+F6. CANTONAL VARIABLE — Entry to a baccalaureate (gymnasium) depends on the canton and baccalaureate type: grades, a class teacher's recommendation, or an entrance exam; the academic baccalaureate normally lasts four years. — evidence quote: "you need to meet different requirements depending on the canton and the type of baccalaureate you wish to obtain, including good grades, a recommendation from your class teacher or a successful entrance examination." / "The study programme lasts four years in most cantons"
+
+F7. After compulsory school there are three distinct upper-secondary routes: apprenticeship, academic baccalaureate (gymnasium, general education, no profession learned, opens university/ETH/EPFL) and specialised school (3 years → certificate; +1 year → specialised baccalaureate, opening university of applied sciences). — evidence quote: "After compulsory school, you can decide whether you want to do an apprenticeship or attend an upper secondary level school, such as a baccalaureate school." / "Students do not learn a profession, however the completion of an academic baccalaureate gives them access to study at a university or a federal institute of technology (ETH Zurich or EPFL)."
+
+F8. Apprentice vacancies are posted by cantons and communes directly on their own websites (the federal administration has its own page). — evidence quote: "The cantons and communes usually post available apprenticeship positions directly on their websites."
+
+CAVEATS / NOT FOUND ON EITHER PAGE:
+- Neither page states the number of days per week spent in company vs. school (e.g. "three to four days a week"), nor whether apprentices are paid — do not attribute such figures to this source.
+- Neither page describes a "final examination" structure or the three learning venues (company / vocational school / branch training centres) in detail.
+- Term used on the pages is "vocational baccalaureate" / "academic baccalaureate"; the word "gymnasium" is not used.

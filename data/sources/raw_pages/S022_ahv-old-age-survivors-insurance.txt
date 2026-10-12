@@ -1,0 +1,128 @@
+SOURCE_ID: S022
+URL: https://www.bsv.admin.ch/en/old-age-insurance-system
+TITLE: Old-age insurance system (Federal Social Insurance Office FSIO / BSV)
+CATEGORY: health
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON REQUESTED URL: https://www.bsv.admin.ch/bsv/en/home/sozialversicherung/ahv.html
+returned HTTP 404. BSV has migrated to a new URL scheme. Replacement found and verified at
+the URL above (page published on 21 August 2025).
+
+=== VERBATIM SOURCE QUOTES ===
+"The Swiss old-age insurance system is based on three pillars: state provision (OASI),
+occupational provision (pension funds) and private provision."
+
+"As a general rule, anyone who lives or works in Switzerland, regardless of their
+nationality, is covered by the mandatory old-age and survivors' insurance scheme. You are
+also covered if you are not in paid work, e.g. stay-at-home spouses and students."
+
+"#### Full OASI pensions (with complete contribution record)
+
+- minimum old-age pension: CHF 1,260
+- maximum old-age pension: CHF 2,520"
+
+"If you live or work in Switzerland, you must pay OASI contributions from 1 January after
+you turn 20 until you reach the reference (retirement) age. If you are already working,
+this obligation begins on 1 January of the year in which you turn 18. If you continue to
+work beyond the reference age, you too must continue to pay in to the OASI scheme."
+
+"- As an employee, you pay half of the contributions. Your employer pays the other half."
+
+"- the contributions paid by your spouse or registered partner provided that they are in
+paid work and pay at least twice the minimum OASI contribution per year. In 2025, this
+corresponds to CHF 1,060;"
+
+"You are subject to mandatory occupational pension contributions if you annually earn more
+than CHF 22,680 (as of 2025) from one employer and are older than 17 (insurance cover
+against the risks of invalidity and death from the age of 17; old-age insurance cover from
+the age 25). The mandatory insurance scheme covers annual incomes up to CHF 90,720."
+
+"Under flexible retirement age rules, you can take your old-age pension
+
+- early: from the age of 63 (or from the age of 62 for women born between 1961 and 1969)
+and by individual months; or
+
+- late: by between one and five years after reaching reference age (you may cancel the
+deferral of your old-age pension on a monthly basis before the maximum deferral period has
+expired)."
+
+"Contributions to private pension plans are tax-deductible up to a certain amount. The
+maximum annual tax-deductible amount in 2025 is:
+
+- CHF 7,258 for employees/self-employed persons with occupational pension cover;
+- 20% of earnings up to CHF 36,288 for employees/self-employed persions with no
+occupational pension cover."
+
+"With certain exceptions, your Pillar 3a savings remain blocked for up to five years before
+you reach the reference age."
+
+"You should submit your claim approximately three to four months before reaching the
+reference age or, in the case of early retirement, before your preferred retirement date."
+
+"If your contribution or insurance records have gaps, you are only entitled to a partial
+OASI pension. ... You also have the option of paying missing contributions retroactively.
+However, this is only possible for gaps which occurred in the previous five years..."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+
+NOTE: The page does NOT itself spell out the gender-specific transition to reference age 65
+(that detail is on source S023, BSV "Old-age provision in occupational benefits plans").
+Use S023 for the 1961/1962/1963/1964 birth-year ladder.
+
+F1. The Swiss old-age insurance system rests on three pillars: state provision (OASI),
+    occupational provision (pension funds), and private provision. — evidence quote: "The
+    Swiss old-age insurance system is based on three pillars: state provision (OASI),
+    occupational provision (pension funds) and private provision."
+
+F2. A full OASI old-age pension with a complete contribution record ranges from a minimum of
+    CHF 1,260 to a maximum of CHF 2,520 per month. (TIME-SENSITIVE: the CHF 2,520 maximum is
+    used by BSV elsewhere as the 2026 figure; the page here gives the amounts without an
+    explicit year label in this section.) — evidence quote: "minimum old-age pension: CHF
+    1,260 / maximum old-age pension: CHF 2,520"
+
+F3. OASI coverage is compulsory for everyone living or working in Switzerland regardless of
+    nationality, including non-paid workers such as stay-at-home spouses and students. —
+    evidence quote: "anyone who lives or works in Switzerland, regardless of their
+    nationality, is covered by the mandatory old-age and survivors' insurance scheme. You
+    are also covered if you are not in paid work, e.g. stay-at-home spouses and students."
+
+F4. OASI contribution obligation runs from 1 January after turning 20 to the reference
+    (retirement) age; for those already working it starts on 1 January of the year the
+    person turns 18. — evidence quote: "you must pay OASI contributions from 1 January after
+    you turn 20 until you reach the reference (retirement) age. If you are already working,
+    this obligation begins on 1 January of the year in which you turn 18."
+
+F5. OASI is financed on a pay-as-you-go basis split 50/50 between employee and employer:
+    employees pay half, the employer the other half; self-employed are assessed on net
+    income. — evidence quote: "As an employee, you pay half of the contributions. Your
+    employer pays the other half. If you are self-employed, your OASI contributions are
+    calculated on the basis of your net income for the contribution year."
+
+F6. Under flexible retirement, the old-age pension can be drawn early from age 63 (or from
+    age 62 for women born between 1961 and 1969) and by individual months. — evidence quote:
+    "early: from the age of 63 (or from the age of 62 for women born between 1961 and 1969)
+    and by individual months"
+
+F7. Under flexible retirement, the old-age pension can be deferred by between one and five
+    years past the reference age. — evidence quote: "late: by between one and five years
+    after reaching reference age"
+
+F8. The maximum annual tax-deductible pillar 3a contribution for 2025 is CHF 7,258 for
+    persons with occupational pension cover, or 20% of earnings up to CHF 36,288 for persons
+    without occupational pension cover. (TIME-SENSITIVE: explicitly labelled "in 2025".) —
+    evidence quote: "The maximum annual tax-deductible amount in 2025 is: - CHF 7,258 for
+    employees/self-employed persons with occupational pension cover; - 20% of earnings up to
+    CHF 36,288 for employees/self-employed persions with no occupational pension cover."
+
+F9. Mandatory occupational pension contributions apply above an annual income of CHF 22,680
+    (as of 2025) from a single employer, for persons older than 17; the mandatory scheme
+    covers annual incomes up to CHF 90,720. (TIME-SENSITIVE: explicitly "as of 2025".) —
+    evidence quote: "You are subject to mandatory occupational pension contributions if you
+    annually earn more than CHF 22,680 (as of 2025) from one employer and are older than 17
+    ... The mandatory insurance scheme covers annual incomes up to CHF 90,720."
+
+F10. Retroactive payment of OASI contribution gaps is possible only for gaps in the previous
+    five years. — evidence quote: "this is only possible for gaps which occurred in the
+    previous five years and provided that you were insured under the OASI scheme during that
+    period. You cannot make up for contribution gaps that date back more than five years."

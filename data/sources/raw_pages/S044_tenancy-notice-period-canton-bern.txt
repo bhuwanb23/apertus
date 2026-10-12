@@ -1,0 +1,47 @@
+SOURCE_ID: S044
+URL: https://www.zsg.justice.be.ch/de/start/themen/zivilrecht/mietrecht/beendigung-mietvertrag/beenden-mieter-in.html
+TITLE: Mietvertrag beenden als Mieter/in (Canton Bern, Zivil- und Strafgerichtsbarkeit / conciliation authority)
+CATEGORY: law
+LANGUAGE: de
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON THE PREMISE OF THE GAP:
+The gap brief asked for a "one month" notice period and the "end of month" rule. Neither was
+verified. The official source below states a MINIMUM NOTICE PERIOD OF THREE MONTHS for
+residential premises (six months for commercial premises), not one month. No page fetched
+states a universal "notice must be given to the end of a month" rule; it states the rule as
+"die ortsüblichen Kündigungstermine" (the locally customary termination dates). The
+three-month figure and the cannot-be-shortened rule are recorded here exactly as the source
+states them.
+
+=== VERBATIM SOURCE QUOTES ===
+"Die ordentliche Kündigung ist nur unter Einhaltung der Kündigungsfrist und der Kündigungstermine möglich. In einem Mietvertrag muss die Kündigungsfrist mindestens drei Monate für Wohnräume und sechs Monate für Geschäftsräume betragen, es können aber auch längere Fristen vereinbart werden. Wenn der Mietvertrag nichts zu den Fristen und Terminen sagt oder eine kürzere Frist vorgesehen ist, gelten die gesetzlichen Fristen von drei Monaten für Wohnräume und sechs Monate für Geschäftsräume sowie die ortsüblichen Kündigungstermine."
+
+"Wichtig: Die Kündigungsfrist läuft erst ab Zustellung der Kündigung an die Vermieterin oder den Vermieter. Wenn Sie also beispielsweise am 31. März die Kündigung verschicken und die Vermieterin oder der Vermieter diese am 1. April erhält, gilt die Kündigung erst auf Ende Juli statt Ende Juni."
+
+"Wenn Sie mehrere Mieter/innen sind, müssen alle die Kündigung unterschreiben."
+
+"Wenn Sie als Ehepaar oder eingetragene Partner/innen in der Wohnung wohnen, müssen beide die Kündigung unterschreiben. Dies gilt auch dann, wenn nur eine/r von Ihnen auf dem Mietvertrag als Mieter/in aufgeführt ist."
+
+"Sie können das Mietverhältnis vor Ablauf einer festen Vertragsdauer, der Kündigungsfrist oder einem Kündigungstermin beenden, wenn Sie der Vermieterin oder dem Vermieter kumulativ
+- eine Nachmieterin oder einen Nachmieter vorschlagen, der/die den Mietvertrag zu den gleichen Bedingungen übernehmen will und zumutbar ist, und
+- das Mietobjekt zurückgeben."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The minimum statutory notice period for terminating a Swiss residential tenancy is three months, not one month. — evidence quote: "In einem Mietvertrag muss die Kündigungsfrist mindestens drei Monate für Wohnräume und sechs Monate für Geschäftsräume betragen, es können aber auch längere Fristen vereinbart werden."
+
+F2. For commercial premises the minimum notice period is six months. — evidence quote: "In einem Mietvertrag muss die Kündigungsfrist mindestens drei Monate für Wohnräume und sechs Monate für Geschäftsräume betragen, es können aber auch längere Fristen vereinbart werden."
+
+F3. A notice period shorter than the statutory minimum is invalid; if the contract says nothing, or provides a shorter period, the statutory period of three months for residential premises applies, together with the locally customary termination dates. — evidence quote: "Wenn der Mietvertrag nichts zu den Fristen und Terminen sagt oder eine kürzere Frist vorgesehen ist, gelten die gesetzlichen Fristen von drei Monate für Wohnräume und sechs Monate für Geschäftsräume sowie die ortsüblichen Kündigungstermine." [verbatim source reads "drei Monaten"; see F1 quote for the clean form]
+
+F4. A longer notice period than the statutory minimum MAY be agreed by contract, but the statutory minimum can never be shortened. — evidence quote: "es können aber auch längere Fristen vereinbart werden."
+
+F5. The notice period only begins to run once the notice has been DELIVERED to the landlord; the date of posting is not decisive. — evidence quote: "Die Kündigungsfrist läuft erst ab Zustellung der Kündigung an die Vermieterin oder den Vermieter. Wenn Sie also beispielsweise am 31. März die Kündigung verschicken und die Vermieterin oder der Vermieter diese am 1. April erhält, gilt die Kündigung erst auf Ende Juli statt Ende Juni."
+
+F6. All tenants named in the lease must sign the notice. — evidence quote: "Wenn Sie mehrere Mieter/innen sind, müssen alle die Kündigung unterschreiben."
+
+F7. Where a married couple or registered partners live in the flat, BOTH must sign the notice, even if only one is listed as the tenant on the lease. — evidence quote: "Wenn Sie als Ehepaar oder eingetragene Partner/innen in der Wohnung wohnen, müssen beide die Kündigung unterschreiben. Dies gilt auch dann, wenn nur eine/r von Ihnen auf dem Mietvertrag als Mieter/in aufgeführt ist."
+
+F8. Ordinary termination is only possible if the notice period AND the termination dates are observed. — evidence quote: "Die ordentliche Kündigung ist nur unter Einhaltung der Kündigungsfrist und der Kündigungstermine möglich."
+
+F9. A tenant may end the tenancy early without observing the notice period or termination date by cumulatively (a) proposing a suitable replacement tenant who will take over on the same conditions AND (b) returning the rented property. — evidence quote: "Sie können das Mietverhältnis vor Ablauf einer festen Vertragsdauer, der Kündigungsfrist oder einem Kündigungstermin beenden, wenn Sie der Vermieterin oder dem Vermieter kumulativ - eine Nachmieterin oder einen Nachmieter vorschlagen, der/die den Mietvertrag zu den gleichen Bedingungen übernehmen will und zumutbar ist, und - das Mietobjekt zurückgeben."

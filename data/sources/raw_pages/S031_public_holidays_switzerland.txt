@@ -1,0 +1,49 @@
+SOURCE_ID: S031
+URL: https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/
+TITLE: Vacation, public holidays and absences from work (ch.ch, Federal Chancellery)
+CATEGORY: services
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"The first of August – Swiss national day – is Switzerland's only national public holiday."
+
+"The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton."
+
+"If a public holiday falls on a non-working day, such as a Saturday or Sunday, you cannot redeem the holiday time during the week."
+
+"If a public holiday falls during your vacation, that day does not count as a day of vacation."
+
+"Regardless of whether you work full or part-time, you are entitled to at least four weeks' vacation per year."
+
+"Up to the age of 20, you are entitled to at least five weeks' vacation."
+
+"In Switzerland, all workers are entitled to at least 4 weeks' holidays per year. You can take days or hours off for special events."
+
+"For more information about public holidays in the different cantons, check the webpage Public holidays in the cantons."
+
+"On its website, the State Secretariat for Economic Affairs (SECO) provides FAQs and answers about public holidays and vacation days"
+
+"The law does not clearly define how many hours or days you can take off. Ask your employer about the rules that apply in your company."
+
+PAGE NOTE: ch.ch is "A service of the Confederation, cantons and communes." This page does NOT state a statutory weekly maximum working time (no "41 hours" figure appears anywhere on it); the max-weekly-hours question is NOT covered here.
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. 1 August (Swiss National Day) is the only nationwide/national public holiday in Switzerland; there is no federal statutory list of other national holidays. — evidence quote: "The first of August – Swiss national day – is Switzerland's only national public holiday."
+
+F2. CANTONAL/COMMUNAL VARIABLE — Cantons may add up to eight further public holidays beyond 1 August, so the holiday calendar differs from canton to canton (including within-canton variation by commune). — evidence quote: "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton."
+
+F3. A public holiday that falls on a non-working day (e.g. Saturday or Sunday) is not compensable as time off during that week. — evidence quote: "If a public holiday falls on a non-working day, such as a Saturday or Sunday, you cannot redeem the holiday time during the week."
+
+F4. A public holiday falling during annual leave does not consume a day of the employee's vacation entitlement. — evidence quote: "If a public holiday falls during your vacation, that day does not count as a day of vacation."
+
+F5. Minimum statutory annual leave is 4 weeks for all workers (full- and part-time), rising to at least 5 weeks for workers under 20. — evidence quote: "Regardless of whether you work full or part-time, you are entitled to at least four weeks' vacation per year." / "Up to the age of 20, you are entitled to at least five weeks' vacation."
+
+F6. Taking time off for the listed special events (court appearance, public duties, marriage, death of a close relative, moving house, birth of a child, caring for a close relative, looking after a sick child) does not require making up the hours/days. — evidence quote: "In the cases listed below, you can take time off work without having to make up the hours/days that you are absent from work" (list includes "A court appearance or similar legal appointment", "Public duties (working as a member of Parliament, local councillor, etc.)", "Marriage", "Death of a close relative", "Moving house", "Birth of your child", "Care of a close relative", "Looking after a sick child").
+
+F7. The duration of leave for special absences is NOT fixed by law — it is left to company rules. — evidence quote: "The law does not clearly define how many hours or days you can take off. Ask your employer about the rules that apply in your company."
+
+CAVEATS / NOT FOUND ON THIS PAGE:
+- No statement of a 41-hour maximum weekly working time (federal sector or otherwise) appears on this page.
+- The page does not use the term "statutory day of rest" for Sunday; Sunday-rest rules are on the working-hours pages (see S032).
+- No list of cantonal holidays is given inline; the page links out to an SECO FAQ and a Federal Department of Justice PDF "Public holidays in the cantons".

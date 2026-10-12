@@ -1,0 +1,34 @@
+SOURCE_ID: S011
+URL: https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/courts/
+TITLE: Swiss courts
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON DISCOVERY: The requested URL https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/courts (no trailing slash) — the working canonical URL is the one above with a trailing slash.
+
+=== VERBATIM SOURCE QUOTES ===
+"The judiciary is the third branch of state, alongside the legislature and the the executive. The executive ensures the law is applied correctly and that those who break the law are dealt with appropriately."
+
+"The Federal Supreme Court is Switzerland's highest court. It exercises judicial functions at federal level. The Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court are the three other courts at federal level."
+
+"The Federal Supreme Court is the highest judicial authority in Switzerland. It rules as the final instance on all appeals against decisions of the highest cantonal courts, the Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court. The court ensures that Swiss federal law is correctly applied in individual cases and that the rights of citizens enshrined in the Constitution are protected."
+
+"Most criminal cases are decided in the first instance by cantonal courts. The Federal Criminal Court hears criminal cases involving offences against federal interests, explosives offences, international cases of white-collar crime, cases relating to organised crime, corruption and money laundering, and offences related to civil aviation or war material."
+
+"The Federal Administrative Court rules on appeals against decisions made by authorities of the Federal Administration. Some of the issues may be controversial from both a social and political standpoint. Examples include decisions of principle in asylum-related cases or on major transport and infrastructure projects."
+
+"The Federal Patent Court decides whether a patent for a technical innovation is legally valid and whether patent rights have been infringed by a product or process. The court also decides on cases where there is a dispute over who holds a given patent, or how a patent may be used in terms of a licence."
+
+"Each canton has its own courts, which hear cases at first instance in their jurisdictions."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Switzerland has four courts at federal level: the Federal Supreme Court plus three others — the Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court. — evidence quote: "The Federal Supreme Court is Switzerland's highest court. It exercises judicial functions at federal level. The Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court are the three other courts at federal level."
+F2. The judiciary is the third branch of state, alongside the legislature and the executive. — evidence quote: "The judiciary is the third branch of state, alongside the legislature and the the executive."
+F3. The Federal Supreme Court rules as the final instance on all appeals against decisions of the highest cantonal courts, the Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court. — evidence quote: "It rules as the final instance on all appeals against decisions of the highest cantonal courts, the Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court."
+F4. Most criminal cases are decided in the first instance by cantonal courts, not by the Federal Criminal Court. — evidence quote: "Most criminal cases are decided in the first instance by cantonal courts."
+F5. The Federal Criminal Court hears criminal cases involving offences against federal interests, explosives offences, international white-collar crime, organised crime, corruption, money laundering, and offences related to civil aviation or war material. — evidence quote: "The Federal Criminal Court hears criminal cases involving offences against federal interests, explosives offences, international cases of white-collar crime, cases relating to organised crime, corruption and money laundering, and offences related to civil aviation or war material."
+F6. The Federal Administrative Court rules on appeals against decisions made by authorities of the Federal Administration, for example decisions of principle in asylum-related cases or on major transport and infrastructure projects. — evidence quote: "The Federal Administrative Court rules on appeals against decisions made by authorities of the Federal Administration. ... Examples include decisions of principle in asylum-related cases or on major transport and infrastructure projects."
+F7. The Federal Patent Court decides on the legal validity of patents, on whether patent rights have been infringed, and on disputes over patent ownership and licensing. — evidence quote: "If there is a dispute, the Federal Patent Court decides whether a patent for a technical innovation is legally valid and whether patent rights have been infringed by a product or process. The court also decides on cases where there is a dispute over who holds a given patent, or how a patent may be used in terms of a licence."
+F8. Each canton has its own courts, which hear cases at first instance in their jurisdictions. — evidence quote: "Each canton has its own courts, which hear cases at first instance in their jurisdictions."
+F9. The Federal Supreme Court ensures that Swiss federal law is correctly applied and that constitutional rights of citizens are protected. — evidence quote: "The court ensures that Swiss federal law is correctly applied in individual cases and that the rights of citizens enshrined in the Constitution are protected."

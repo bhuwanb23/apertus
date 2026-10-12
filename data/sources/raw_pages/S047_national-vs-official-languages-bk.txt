@@ -1,0 +1,52 @@
+SOURCE_ID: S047
+URL: https://www.bk.admin.ch/en/romansh
+TITLE: Romansh (Federal Chancellery FCh / bk.admin.ch)
+CATEGORY: geography
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+RELATED PAGES FETCHED FROM THE SAME SITE:
+- https://www.bk.admin.ch/en/swiss-confederation
+- https://ch-info.swiss/en/die-schweiz
+- https://www.swissinfo.ch/eng/culture/languages-in-switzerland/29177618
+
+NOTE ON THE PREMISE OF THE GAP:
+This gap asked for a single page stating both the FOUR national languages and the THREE official
+languages of the Confederation. No single fetched official page states both in one sentence.
+The bk.admin.ch Romansh page is the strongest official source for the distinguishing rule and
+is quoted verbatim below. The ch-info.swiss and swissinfo.ch pages are quoted as corroboration
+for the four national languages. Both the "four" and the "three" facts are recorded, each
+attributed to the page that actually states it.
+
+=== VERBATIM SOURCE QUOTES ===
+[bk.admin.ch/en/romansh]
+"Romansh is a national language and a semi-official language of the Confederation. The Federal Chancellery receives assignments for translations into Romansh from the whole of the Federal Administration and coordinates the translation work."
+
+[bk.admin.ch/en/romansh]
+"Since 1938 Romansh has been recognised in the Swiss Constitution as a national language along with German, French and Italian. Romansh is also an official language of the Confederation when communicating with persons who speak Romansh."
+
+[ch-info.swiss/en/die-schweiz]
+"Switzerland is a multilingual country. The four national languages are German, French, Italian and Romansh. 62 per cent of the population primarily speak (Swiss-)German, 23 per cent French, 8 per cent Italian and 0.5 per cent Romansh. For 23 per cent of the population, their mother tongue is not one of Switzerland's national languages."
+
+[swissinfo.ch]
+"Switzerland has four national languages: German, French, Italian and Romansh. Although it is not an official language, English is often used to bridge the divides, and a significant proportion of official documentation is available in English."
+
+[swissinfo.ch]
+"Switzerland is made up of four different linguistic areas, namely a German-speaking part, a French-speaking part, an Italian-speaking part and a Romansh-speaking part, illustrating the diversity of the Swiss language. Three cantons (Bern, Fribourg and Valais) and two cities (Biel/Bienne and Fribourg) are officially bilingual. Graubünden is the only officially trilingual canton."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Switzerland has FOUR national languages: German, French, Italian and Romansh. — evidence quote: "Switzerland is a multilingual country. The four national languages are German, French, Italian and Romansh."
+
+F2. Romansh is a national language and a SEMI-OFFICIAL language of the Confederation — it does not have the same status as the three federal official languages. — evidence quote: "Romansh is a national language and a semi-official language of the Confederation."
+
+F3. Romansh has been recognised in the Swiss Constitution as a national language since 1938, alongside German, French and Italian. — evidence quote: "Since 1938 Romansh has been recognised in the Swiss Constitution as a national language along with German, French and Italian."
+
+F4. Romansh IS an official language of the Confederation when communicating with persons who speak Romansh — i.e. its official status is limited to dealings with Romansh-speaking persons. — evidence quote: "Romansh is also an official language of the Confederation when communicating with persons who speak Romansh."
+
+F5. Language distribution: 62 per cent of the population primarily speak (Swiss-)German, 23 per cent French, 8 per cent Italian and 0.5 per cent Romansh. — evidence quote: "62 per cent of the population primarily speak (Swiss-)German, 23 per cent French, 8 per cent Italian and 0.5 per cent Romansh."
+
+F6. For 23 per cent of the population, their mother tongue is not one of Switzerland's national languages. — evidence quote: "For 23 per cent of the population, their mother tongue is not one of Switzerland's national languages."
+
+F7. Switzerland is made up of four different linguistic areas; three cantons (Bern, Fribourg, Valais) and two cities (Biel/Bienne and Fribourg) are officially bilingual, and Graubünden is the only officially trilingual canton. — evidence quote: "Switzerland is made up of four different linguistic areas, namely a German-speaking part, a French-speaking part, an Italian-speaking part and a Romansh-speaking part... Three cantons (Bern, Fribourg and Valais) and two cities (Biel/Bienne and Fribourg) are officially bilingual. Graubünden is the only officially trilingual canton."
+
+F8. English is not an official language of Switzerland. — evidence quote: "Although it is not an official language, English is often used to bridge the divides"

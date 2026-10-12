@@ -1,0 +1,40 @@
+SOURCE_ID: S008b
+URL: https://www.ch.ch/en/political-system/cantons/cantonal-parliament-role-and-composition/
+TITLE: Cantonal parliament: role and composition
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON DISCOVERY: Sub-page of the cantons hub https://www.ch.ch/en/political-system/cantons/ (which is an index page only). Saved as a companion to S008 so the cantonal legislature is covered alongside the cantonal executive.
+
+=== VERBATIM SOURCE QUOTES ===
+"As at federal level, the cantons also maintain a separation of powers between the legislature, executive and judiciary. The cantonal parliament is the cantonal legislature."
+
+"Terminology: Like the cantonal governments, the cantonal parliaments have a variety of titles in Switzerland's national languages, including Grand Conseil, Landrat, Kantonsrat, Grosser Rat or Gussegl grond."
+
+"The number of members of parliament varies from canton to canton. It is usually proportional to the population of the canton. The parliament of Appenzell Innerrhoden currently has 50 members while the Zurich parliament has 180 members."
+
+"Like the Federal Assembly, all cantonal parliaments are semi-professional parliaments, allowing members of parliament to hold down another job while fulfilling their parliamentary duties."
+
+"The cantonal parliament's main task is to adopt, reject or amend cantonal legislation, and to decide on initiatives and petitions submitted by citizens, communes or members of parliament."
+
+"It also has the task of adopting the cantonal budget, which it is presented by the cantonal government, and authorising the levying of duties and taxes."
+
+"Last but not least, the cantonal parliament supervises the activity of the cantonal government."
+
+"Council members holds regular, scheduled meetings, usually once a month. These meetings and their minutes are generally public."
+
+"the members of parliament set up ad hoc committees (transport committee, finance committee, etc.) to analyse issues and prepare items of business for plenary debate in parliament or for submission to the cantonal government."
+
+"Parliament annually elects one of its members to be president. The president's duties include chairing the meetings of parliament."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The cantonal parliament is the cantonal legislature, completing a separation of powers between legislature, executive and judiciary at cantonal level. — evidence quote: "As at federal level, the cantons also maintain a separation of powers between the legislature, executive and judiciary. The cantonal parliament is the cantonal legislature."
+F2. CANTONAL-VARIABLE: The number of cantonal parliament members varies from canton to canton and is usually proportional to population; Appenzell Innerrhoden has 50 members and Zurich has 180. — evidence quote: "The number of members of parliament varies from canton to canton. It is usually proportional to the population of the canton. The parliament of Appenzell Innerrhoden currently has 50 members while the Zurich parliament has 180 members."
+F3. CANTONAL-VARIABLE: Cantonal parliaments have a variety of titles in Switzerland's national languages, including Grand Conseil, Landrat, Kantonsrat, Grosser Rat or Gussegl grond. — evidence quote: "Terminology: Like the cantonal governments, the cantonal parliaments have a variety of titles in Switzerland's national languages, including Grand Conseil, Landrat, Kantonsrat, Grosser Rat or Gussegl grond."
+F4. Like the Federal Assembly, all cantonal parliaments are semi-professional, so members can hold another job alongside parliamentary duties. — evidence quote: "Like the Federal Assembly, all cantonal parliaments are semi-professional parliaments, allowing members of parliament to hold down another job while fulfilling their parliamentary duties."
+F5. The cantonal parliament's main task is to adopt, reject or amend cantonal legislation and to decide on initiatives and petitions from citizens, communes or parliament members. — evidence quote: "The cantonal parliament's main task is to adopt, reject or amend cantonal legislation, and to decide on initiatives and petitions submitted by citizens, communes or members of parliament."
+F6. The cantonal parliament adopts the cantonal budget (presented to it by the cantonal government) and authorises the levying of duties and taxes. — evidence quote: "It also has the task of adopting the cantonal budget, which it is presented by the cantonal government, and authorising the levying of duties and taxes."
+F7. The cantonal parliament supervises the activity of the cantonal government. — evidence quote: "Last but not least, the cantonal parliament supervises the activity of the cantonal government."
+F8. Cantonal parliament meetings are usually held once a month, and the meetings and their minutes are generally public. — evidence quote: "Council members holds regular, scheduled meetings, usually once a month. These meetings and their minutes are generally public."
+F9. The cantonal parliament elects one of its members as president annually. — evidence quote: "Parliament annually elects one of its members to be president."

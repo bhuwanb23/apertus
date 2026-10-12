@@ -1,0 +1,40 @@
+SOURCE_ID: S010
+URL: https://www.ch.ch/en/political-system/political-rights/e-voting/
+TITLE: e-voting
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"Some cantons are conducting e-voting trials. During this period, a limited number of eligible voters will be able to cast their votes online."
+
+"In Switzerland, e-voting means that eligible voters can participate in popular ballots and elections via the internet using a computer, tablet or smartphone. This eliminates the need to go to a polling station, or a letter-box if voting by post."
+
+"E-voting trials are currently being conducted in certain cantons. Votes cast via e-voting count towards the result."
+
+"The scope of the trials is limited: a maximum of 30% of eligible voters are permitted to use e-voting in any particular canton, with the national cap set at 10%. Current e-voting numbers still fall well below these quotas."
+
+"Eligible voters with disabilities such as visual impairments will also benefit from the switch to e-voting, which will make it easier for them to vote unassisted."
+
+"Every canton decides for itself whether to conduct e-voting trials. The cantons also decide which voters would be eligible to participate in the trials."
+
+"E-voting trials currently pertain to the cantons of St Gallen, Thurgau, Graubünden, Lucerne and Neuchâtel."
+
+"Since 2004, a total of 15 cantons have participated in e-voting trials: ZH, BE, LU, GL, FR, SO, BS, SH, SG, GR, AG, TG, NE, GE, VD."
+
+"If you are part of an e-voting trial, you will receive a voter identification card with your personal verification codes. You will use these codes to cast your vote electronically and then verify that it has been submitted correctly."
+
+"Switzerland currently uses an e-voting system developed and tested by Swiss Post. Tests included a bug bounty-style programme: anyone, including hackers, could access the system and try to find errors or security gaps, for which they would be rewarded."
+
+"Note: Once you have cast your vote electronically, your voter identification card will be recorded and blocked for other forms of voting (by post or at a polling station). You cannot vote again at a polling station using a voter identification card that has already been used for e-voting. Votes sent by post with a voter identification card that has already been used will not be counted."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. In any particular canton, a maximum of 30% of eligible voters may use e-voting, with a national cap of 10%. — evidence quote: "The scope of the trials is limited: a maximum of 30% of eligible voters are permitted to use e-voting in any particular canton, with the national cap set at 10%. Current e-voting numbers still fall well below these quotas."
+F2. Since 2004 a total of 15 cantons have participated in e-voting trials: ZH, BE, LU, GL, FR, SO, BS, SH, SG, GR, AG, TG, NE, GE, VD. — evidence quote: "Since 2004, a total of 15 cantons have participated in e-voting trials: ZH, BE, LU, GL, FR, SO, BS, SH, SG, GR, AG, TG, NE, GE, VD."
+F3. E-voting trials currently pertain to the cantons of St Gallen, Thurgau, Graubünden, Lucerne and Neuchâtel. — evidence quote: "E-voting trials currently pertain to the cantons of St Gallen, Thurgau, Graubünden, Lucerne and Neuchâtel."
+F4. Votes cast via e-voting count towards the result. — evidence quote: "E-voting trials are currently being conducted in certain cantons. Votes cast via e-voting count towards the result."
+F5. CANTONAL-VARIABLE: Each canton decides for itself whether to hold e-voting trials and which voters are eligible to take part. — evidence quote: "Every canton decides for itself whether to conduct e-voting trials. The cantons also decide which voters would be eligible to participate in the trials."
+F6. Switzerland's e-voting system was developed and tested by Swiss Post, and testing included a bug bounty-style programme in which anyone, including hackers, could look for errors or security gaps for a reward. — evidence quote: "Switzerland currently uses an e-voting system developed and tested by Swiss Post. Tests included a bug bounty-style programme: anyone, including hackers, could access the system and try to find errors or security gaps, for which they would be rewarded."
+F7. Participants receive a voter identification card with personal verification codes, used to cast the vote electronically and verify correct submission. — evidence quote: "If you are part of an e-voting trial, you will receive a voter identification card with your personal verification codes. You will use these codes to cast your vote electronically and then verify that it has been submitted correctly."
+F8. After casting a vote electronically, the voter identification card is blocked for other voting channels; postal votes sent with an already-used card are not counted. — evidence quote: "Once you have cast your vote electronically, your voter identification card will be recorded and blocked for other forms of voting (by post or at a polling station). ... Votes sent by post with a voter identification card that has already been used will not be counted."
+F9. In Switzerland, e-voting means participating in popular ballots and elections via the internet using a computer, tablet or smartphone. — evidence quote: "In Switzerland, e-voting means that eligible voters can participate in popular ballots and elections via the internet using a computer, tablet or smartphone."

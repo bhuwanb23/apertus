@@ -1,0 +1,38 @@
+SOURCE_ID: S030
+URL: https://www.swissinfo.ch/eng/swiss-politics/cantons-and-municipalities/29289028
+TITLE: Swiss cantons and municipalities - SWI swissinfo.ch
+CATEGORY: geography
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"Switzerland has been a federal state since 1848. Authority is shared between the Confederation (central state), the 26 Swiss cantons and half-cantons (federal states) and the 2,121 smaller local communes, or municipalities. (status 07.03.2025)"
+
+"While all cantons have their own laws and systems in place, half cantons like Nidwalden only have one seat instead of two in the Senate, and a half vote in cases where a majority of cantons must approve constitutional changes in nationwide votes."
+
+"The newest canton, Jura, was admitted to the Confederation by a national vote in 1979. It split off from Bern"
+
+"Cantonal governments have five to seven members and are elected by the people. Cantonal parliaments have one chamber and are known by different names in different cantons."
+
+"The number of municipalities (communes) in Switzerland has been decreasing due to mergers aimed at improving administrative efficiency. As of January 1, 2025, there are 2,121 municipalities."
+
+"Around a fifth of Switzerland's communes have their own parliaments, and local laws relating to matters such as streets, school buildings, water and energy prices, as well as parking regulations."
+
+"Each canton of Switzerland, including Zürich, Basel, and Nidwalden, has its own constitution approved by the federal parliament."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Switzerland has 26 cantons (including former half-cantons) and 2,121 communes; authority is shared between the Confederation, the cantons and the communes. — evidence quote: "Authority is shared between the Confederation (central state), the 26 Swiss cantons and half-cantons (federal states) and the 2,121 smaller local communes, or municipalities."
+
+F2. Jura is the newest canton, admitted by national vote in 1979 after splitting off from Bern. — evidence quote: "The newest canton, Jura, was admitted to the Confederation by a national vote in 1979. It split off from Bern"
+
+F3. Half-cantons such as Nidwalden have only one seat instead of two in the Council of States and only half a vote in nationwide constitutional votes. — evidence quote: "half cantons like Nidwalden only have one seat instead of two in the Senate, and a half vote in cases where a majority of cantons must approve constitutional changes in nationwide votes."
+
+F4. As of 1 January 2025 Switzerland had 2,121 municipalities (communes), a number that is falling because of mergers. — evidence quote: "As of January 1, 2025, there are 2,121 municipalities." [REGIONAL VARIABLE: commune count changes with mergers / reference date]
+
+F5. Cantonal governments have five to seven members, elected by the people, and cantonal parliaments are unicameral with names differing per canton. — evidence quote: "Cantonal governments have five to seven members and are elected by the people. Cantonal parliaments have one chamber and are known by different names in different cantons."
+
+F6. Every canton has its own constitution, which is approved by the federal parliament. — evidence quote: "Each canton of Switzerland, including Zürich, Basel, and Nidwalden, has its own constitution approved by the federal parliament."
+
+F7. Around a fifth of Swiss communes have their own parliaments and issue local laws. — evidence quote: "Around a fifth of Switzerland's communes have their own parliaments, and local laws relating to matters such as streets, school buildings, water and energy prices, as well as parking regulations."
+
+NOTE: Source domain swissinfo.ch (SWI swissinfo.ch, a branch of Swiss Broadcasting Corporation SRG SSR) — used as an accessible substitute because ch.ch's cantons hub is a JS link hub, BFS renders title-only, and eda.admin.ch returned HTTP 403. Page carries an explicit editorial currency note ("this information was current as of March 2025") and partly AI-generated summary text, flagged accordingly.

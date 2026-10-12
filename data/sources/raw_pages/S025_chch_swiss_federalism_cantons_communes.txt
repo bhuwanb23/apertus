@@ -1,0 +1,40 @@
+SOURCE_ID: S025
+URL: https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/federalism/
+TITLE: Swiss Federalism
+CATEGORY: geography
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"There are three levels of political structure in Switzerland:
+
+- communes (currently around 2,100)
+- cantons (26)
+- the Confederation (federal government)."
+
+"Switzerland is a federal state. In practice this means that political power is shared by the Confederation, the cantons and the communes. Each level has its own special role to play in governing."
+
+"Communes are the smallest political units in Switzerland. They exercise the powers delegated to them by the federal and cantonal governments, such as maintaining a register of the resident population and ensuring civil protection."
+
+"The Federal Constitution is the highest law of Switzerland. It takes precedence over all laws and ordinances of the Confederation, cantons and communes."
+
+"Cantons enjoy significant autonomy. The Federal Constitution ensures that all cantons are treated equally, and they all have the right to create their own cantonal constitutions."
+
+"Any tasks that do not fall under the remit of the federal government are the responsibility of the cantons."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Switzerland has three levels of political structure: communes (around 2,100), cantons (26), and the Confederation. — evidence quote: "There are three levels of political structure in Switzerland: communes (currently around 2,100) cantons (26) the Confederation (federal government)."
+
+F2. Switzerland has 26 cantons. — evidence quote: "cantons (26)"
+
+F3. Switzerland has around 2,100 communes (municipalities). — evidence quote: "communes (currently around 2,100)"
+
+F4. Communes are the smallest political units in Switzerland. — evidence quote: "Communes are the smallest political units in Switzerland."
+
+F5. Political power in Switzerland is shared between the Confederation, the cantons and the communes. — evidence quote: "political power is shared by the Confederation, the cantons and the communes"
+
+F6. All cantons are treated equally under the Federal Constitution and each may create its own cantonal constitution. — evidence quote: "The Federal Constitution ensures that all cantons are treated equally, and they all have the right to create their own cantonal constitutions."
+
+F7. Anything not falling under the federal government's remit is the responsibility of the cantons. — evidence quote: "Any tasks that do not fall under the remit of the federal government are the responsibility of the cantons."
+
+NOTE: ch.ch hub page /en/political-system/cantons/ was a JavaScript link hub with no substantive facts; this sub-page was used instead (domain: ch.ch, Federal Chancellery).

@@ -1,0 +1,41 @@
+SOURCE_ID: S006
+URL: https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/separation-of-powers/
+TITLE: The separation of powers
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"In Switzerland, the powers of the state are divided among the three branches of the state: the legislature, the executive and the judiciary. This separation was introduced in 1848 on the founding of the federal state, with the aim of preventing a concentration of power in individual persons or institutions."
+
+"In Switzerland, the state has three branches: the governing branch (the executive), the law-making branch (the legislature) and the judicial branch (the judiciary). This separation applies at all levels of government (federal, cantonal and communal) and prevents an abuse of power. A person may belong to only one of the three branches of the state (at federal, cantonal or communal level) at any one time."
+
+"The Federal Council is the Swiss government. It deals with the ongoing task of governing the country and implements the laws and other decisions adopted by Parliament. Each of the seven members of the Federal Council is head of one of the seven federal departments, which together with the Federal Chancellery make up the Federal Administration."
+
+"The Swiss Parliament comprises two chambers, the National Council and the Council of States:
+- The National Council has 200 members. The seats are allocated to the cantons according to population size. Each canton has at least one seat.
+- The Council of States has 46 members. Most cantons each have two seats, but the former half-cantons have one seat each."
+
+"The two chambers are on an equal footing; together they form the Federal Assembly. The parliament enacts laws and oversees the activities of the Federal Council and the Federal Supreme Court. Members of parliament are elected by the people."
+
+"The Federal supreme Court is Switzerland's highest court. Its task is to ensure the uniform application of the law and to uphold the rights of ordinary people. As the highest court of appeal, it also rules on disputes between individuals and the state or between the Confederation and the cantons."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The separation of powers was introduced in Switzerland in 1848 with the founding of the federal state. — evidence quote: "This separation was introduced in 1848 on the founding of the federal state, with the aim of preventing a concentration of power"
+
+F2. Switzerland has three branches: executive (governing), legislature (law-making), judiciary (judicial). — evidence quote: "the governing branch (the executive), the law-making branch (the legislature) and the judicial branch (the judiciary)"
+
+F3. The separation of powers applies at federal, cantonal AND communal level — unlike some countries where it applies only nationally. — evidence quote: "This separation applies at all levels of government (federal, cantonal and communal)"
+
+F4. A person may sit in only one of the three branches at any one time (incompatibility rule). — evidence quote: "A person may belong to only one of the three branches of the state (at federal, cantonal or communal level) at any one time."
+
+F5. The Federal Administration consists of the seven federal departments plus the Federal Chancellery. — evidence quote: "Each of the seven members of the Federal Council is head of one of the seven federal departments, which together with the Federal Chancellery make up the Federal Administration."
+
+F6. The two chambers are on an equal footing and together form the Federal Assembly. — evidence quote: "The two chambers are on an equal footing; together they form the Federal Assembly."
+
+F7. The Federal Supreme Court is Switzerland's highest court; its task is to ensure the uniform application of the law and uphold the rights of ordinary people. — evidence quote: "The Federal supreme Court is Switzerland's highest court. Its task is to ensure the uniform application of the law and to uphold the rights of ordinary people."
+
+F8. The Federal Supreme Court rules as the highest court of appeal on disputes between individuals and the state, and between the Confederation and the cantons. — evidence quote: "it also rules on disputes between individuals and the state or between the Confederation and the cantons."
+
+=== MCQ NOTE ===
+F4 (branch incompatibility) and F7 (uniform application of law) are non-obvious and Swiss-specific. F7 is a good contrast item against the EU's CJEU, which also ensures uniform application — the Swiss court is a *federal* supreme court, not an EU-style supranational court, and that distinction is a common model failure.

@@ -1,0 +1,97 @@
+SOURCE_ID: S020
+URL: https://www.ch.ch/en/health/health-insurance/health-insurance-costs/
+TITLE: Health insurance costs and premium reductions
+CATEGORY: health
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON REQUESTED URL: https://www.bag.admin.ch/bag/en/home/themen/versicherung/krankenversicherung.html
+returned HTTP 404. Replaced by the ch.ch sub-page above, which is the official Federal
+Chancellery portal and states the deductible/retention amounts explicitly. The ch.ch page
+links onward to the BAG details page
+https://www.bag.admin.ch/en/health-insurance-co-payment-for-persons-insured-in-switzerland
+(not fetched for this record).
+
+COVERAGE GAP NOTE: This page states the deductible RANGE (CHF 300-2,500 adults) and the
+retention fee, but does NOT state the intermediate CHF 1,000 / CHF 1,500 / CHF 2,000 band
+options, nor the rule that age / place of residence / income ("affluence") determines which
+band is offered. Those details were therefore NOT extracted. Do not infer them from this file.
+
+=== VERBATIM SOURCE QUOTES ===
+"If you are healthy, you can save a great deal on your health insurance premium by choosing
+the highest deductible. You should still put CHF 3,200 aside in case you do fall ill
+(CHF 2,500 deductible and CHF 700 retention fee)."
+
+"The lowest deductible for adults is CHF 300, the highest CHF 2,500. Deductibles of between
+CHF 0 and CHF 600 apply for children."
+
+"The deductible is the amount that you have to pay out of your own pocket towards your
+health-related costs every year. The health insurer will not cover costs until this
+deductible has been used up."
+
+"Example: You have chosen a deductible of CHF 300 and have to go to the doctor once or
+twice a year. Your doctor charges you CHF 200 for each appointment. You will pay all of the
+first bill and CHF 100 of the second yourself. Your health insurer will cover CHF 100 of
+the second bill, less the retention fee of CHF 10 that you also have to pay (see next
+section)."
+
+"When the deductible has been used up you will still pay ten percent of your healthcare
+costs. However, this retention fee is limited to CHF 700 per year (CHF 350 for children).
+Your annual share of your healthcare costs is therefore capped at your chosen deductible,
+plus CHF 700."
+
+"You must pay the contribution to hospital costs if you are hospitalised. It is CHF 15 per
+day. The reasoning behind it is that, in hospital, you save costs that you would otherwise
+incur at home, such as food and power. Children, young adults in education and training
+and pregnant women do not pay any contribution to hospital costs."
+
+"The level of this premium depends on the health insurance company you are with. Other
+factors are your insurance model, which deductible you choose and where you live. Premiums
+are lower for children and young adults under the age of 25."
+
+"Anyone who is a low earner or has a large number of children may be eligible to have their
+premiums subsidised by their canton."
+
+"If you are employed for more than eight hours per week you are covered by compulsory
+accident insurance. You do not need to include accident cover additionally in your
+compulsory health insurance."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The compulsory health insurance deductible ranges from a minimum of CHF 300 to a maximum
+    of CHF 2,500 for adults. (Page states no year for these two endpoints; they are the
+    standing statutory bands. Not flagged year-specific by the page itself.) — evidence
+    quote: "The lowest deductible for adults is CHF 300, the highest CHF 2,500."
+
+F2. For children, deductibles range from CHF 0 to CHF 600. — evidence quote: "Deductibles of
+    between CHF 0 and CHF 600 apply for children."
+
+F3. After the deductible is exhausted, the insured still pays 10% of healthcare costs, but
+    the retention fee is capped at CHF 700 per year for adults. — evidence quote: "When the
+    deductible has been used up you will still pay ten percent of your healthcare costs.
+    However, this retention fee is limited to CHF 700 per year (CHF 350 for children)."
+
+F4. The child's retention fee cap is CHF 350 per year (half the adult cap). — evidence
+    quote: "this retention fee is limited to CHF 700 per year (CHF 350 for children)."
+
+F5. The maximum annual own-share of healthcare costs equals the chosen deductible plus
+    CHF 700. — evidence quote: "Your annual share of your healthcare costs is therefore
+    capped at your chosen deductible, plus CHF 700."
+
+F6. Hospitalised patients pay a hospital contribution of CHF 15 per day, which is waived for
+    children, young adults in education or training, and pregnant women. — evidence quote:
+    "You must pay the contribution to hospital costs if you are hospitalised. It is CHF 15
+    per day. ... Children, young adults in education and training and pregnant women do not
+    pay any contribution to hospital costs."
+
+F7. Someone choosing the highest deductible should set aside CHF 3,200 (= CHF 2,500
+    deductible + CHF 700 retention fee). — evidence quote: "You should still put CHF 3,200
+    aside in case you do fall ill (CHF 2,500 deductible and CHF 700 retention fee)."
+
+F8. Premiums are lower for children and young adults under the age of 25. — evidence quote:
+    "Premiums are lower for children and young adults under the age of 25."
+
+F9. Employees working more than eight hours per week are covered by compulsory accident
+    insurance, so accident cover need not be duplicated in compulsory health insurance. —
+    evidence quote: "If you are employed for more than eight hours per week you are covered
+    by compulsory accident insurance. You do not need to include accident cover additionally
+    in your compulsory health insurance."

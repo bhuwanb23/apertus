@@ -1,0 +1,36 @@
+SOURCE_ID: S028
+URL: https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/language-distribution/
+TITLE: Language distribution | Switzerland Tourism
+CATEGORY: geography
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"Switzerland has four unevenly distributed languages and a wealth of dialects."
+
+"German (62.6 %) German is by far the most widely spoken language in Switzerland: 19 of the country's 26 cantons are predominantly (Swiss) German-speaking."
+
+"French (22.9 %) French is spoken in the western part of the country, the "Suisse Romande." Four cantons are French-speaking: Geneva, Jura, Neuchâtel and Vaud. Three cantons are bilingual: in Bern, Fribourg and Valais both French and German are spoken."
+
+"Italian (8.2 %) Italian is spoken in Ticino and four southern valleys of Canton Graubünden."
+
+"Rhaeto-Rumantsch (0.5 %) Rumantsch is spoken in the only trilingual canton, Graubünden. The other two languages spoken there are German and Italian. Rumantsch, like Italian and French, is a language with Latin roots. It is spoken by just 0.5% of the total Swiss population."
+
+"Other languages (5.8 %) Foreigners living in Switzerland also contribute to language diversity. There are more and more people in Switzerland whose mother tongue is not one of the four 'Swiss languages'."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Switzerland has four national languages: German, French, Italian and Romansh (Rhaeto-Rumantsch). — evidence quote: "Switzerland has four unevenly distributed languages and a wealth of dialects." + headline block "German (62.6 %) ... French (22.9 %) ... Italian (8.2 %) ... Rhaeto-Rumantsch (0.5 %)"
+
+F2. The four French-speaking cantons are Geneva, Jura, Neuchâtel and Vaud. — evidence quote: "Four cantons are French-speaking: Geneva, Jura, Neuchâtel and Vaud."
+
+F3. The three bilingual cantons are Bern, Fribourg and Valais, where both French and German are spoken. — evidence quote: "Three cantons are bilingual: in Bern, Fribourg and Valais both French and German are spoken."
+
+F4. Graubünden is the only trilingual canton (German, Romansh and Italian). — evidence quote: "Rumantsch is spoken in the only trilingual canton, Graubünden. The other two languages spoken there are German and Italian."
+
+F5. 19 of Switzerland's 26 cantons are predominantly (Swiss) German-speaking. — evidence quote: "19 of the country's 26 cantons are predominantly (Swiss) German-speaking."
+
+F6. Language shares of the population: German 62.6%, French 22.9%, Italian 8.2%, Romansh 0.5%, other languages 5.8%. — evidence quote: "German (62.6 %)" / "French (22.9 %)" / "Italian (8.2 %)" / "Rhaeto-Rumantsch (0.5 %)" / "Other languages (5.8 %)"
+
+F7. Italian is spoken in Ticino and in four southern valleys of the canton of Graubünden. — evidence quote: "Italian is spoken in Ticino and four southern valleys of Canton Graubünden." [REGIONAL VARIABLE: language shares are population-statistics dependent and updated over time]
+
+NOTE: Source domain myswitzerland.com (Switzerland Tourism / STnet.ch) — used because BFS and EDA pages could not be fetched (BFS rendered title-only / JS; EDA returned HTTP 403). Page states four languages but does not enumerate the official-language tiers at federal level.

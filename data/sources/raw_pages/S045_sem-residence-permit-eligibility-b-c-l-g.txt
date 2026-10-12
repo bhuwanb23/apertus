@@ -1,0 +1,87 @@
+SOURCE_ID: S045
+URL: https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/eu_efta.html
+TITLE: Residence permits for EU/EFTA nationals (State Secretariat for Migration SEM) — index page with links to B, C, Ci, G and L sub-pages
+CATEGORY: law
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+SUB-PAGES FETCHED AND USED FOR THE QUOTES BELOW:
+- https://www.sem.admin.ch/sem/en/home/themen/aufenthalt.html
+- https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/eu_efta/ausweis_b_eu_efta.html
+- https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/eu_efta/ausweis_c_eu_efta.html
+- https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/eu_efta/ausweis_l_eu_efta.html
+- https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/eu_efta/ausweis_g_eu_efta.html
+
+NOTE ON THE PREMISE OF THE GAP:
+The gap brief asked for "L (short stay up to 90 days)". The SEM L-permit page does NOT state a
+90-day figure; it defines the L permit by employment-contract duration (three to twelve months).
+The 90-day figure appears only indirectly in the general SEM Residence page, which is quoted
+verbatim below and left unglossed. No 90-day statement about the L permit itself was verified.
+
+=== VERBATIM SOURCE QUOTES ===
+[Residence, general]
+"Anyone who works during his/her stay in Switzerland or who remains in Switzerland for longer than three months requires a permit. Residence permits are issued by the Cantonal Migration Offices. A distinction is made between short-term residence permits (less than 1 year), annual residence permits (limited) and permanent residence permits (unlimited)."
+
+[Residence, general]
+"Third-state nationals (L, B, C) see Biometric residence permits for foreign nationals"
+
+[B EU/EFTA permit]
+"Resident foreign nationals are foreign nationals who reside in Switzerland for a longer period of time for a certain purpose, with or without gainful employment."
+
+[B EU/EFTA permit]
+"The residence permit for EU/EFTA nationals is valid for five years. This permit is issued to EU/EFTA citizens holding a contract of employment of at least twelve months or of unlimited duration."
+
+[B EU/EFTA permit]
+"The residence permit is valid for five years and can be renewed for five years if the foreign national satisfies the requirements. First-time renewal of the permit can be limited to one year, however, if the holder has been involuntarily unemployed for more than twelve consecutive months. Nationals from all EU/EFTA member states without gainful employment are entitled to a B permit if they can prove they have sufficient financial means and adequate health and accident insurance."
+
+[C EU/EFTA permit]
+"Settled foreign nationals are foreign nationals who have been granted a settlement permit after five or ten years' residence in Switzerland. The right to settle in Switzerland is not subject to any time restrictions or conditions. The State Secretariat for Migration (SEM) determines the earliest date from which the competent national authorities may grant settlement permits."
+
+[C EU/EFTA permit]
+"If they meet the required conditions, nationals of Austria, Belgium, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Luxembourg, the Netherlands, Portugal, Spain and Sweden as well as EFTA nationals (Iceland, Liechtenstein, Norway) are granted settlement permits pursuant to settlement treaties or reciprocal agreements after five years' regular and uninterrupted residence in Switzerland. No such treaties exist for nationals of the other EU member states."
+
+[L EU/EFTA permit]
+"Short-term residents are foreign nationals who reside in Switzerland for a limited period of time, usually less than a year, for a certain purpose with or without gainful employment."
+
+[L EU/EFTA permit]
+"EU/EFTA nationals are entitled to this permit provided they are in possession of an employment contract valid from three up to twelve months. Employment contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure. The period of validity of the permit is identical to the term of the employment contract. It can be extended for a total period of less than twelve months."
+
+[L EU/EFTA permit]
+"L EU/EFTA permits without gainful employment are granted to job seekers from all EU/EFTA states. However, this practice does not create an entitlement to social assistance."
+
+[G EU/EFTA permit]
+"EU/EFTA cross-border commuters are nationals of EU/EFTA member states who reside in an EU/EFTA member state and work in Switzerland (either in an employed or self-employed capacity). Cross-border commuters must return to their main place of residence abroad as a rule every day, or at least once a week."
+
+[G EU/EFTA permit]
+"The EU/EFTA cross-border commuter permit is valid for five years in the case of a fixed-term employment contract valid for more than one year or in the case of a permanent employment contract. If a fixed-term employment contract is valid for less than a year but for more than three months, the period of validity of the cross-border commuter permit is identical to the duration of this employment contract. If the period of employment is less than three months, then no work permit is needed but the online notification procedure applies."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. A permit is required if you work during your stay in Switzerland or if you remain in Switzerland for longer than three months; residence permits are issued by the cantonal migration offices. — evidence quote: "Anyone who works during his/her stay in Switzerland or who remains in Switzerland for longer than three months requires a permit. Residence permits are issued by the Cantonal Migration Offices."
+
+F2. SEM distinguishes three classes of residence permit: short-term (less than 1 year), annual (limited) and permanent (unlimited). — evidence quote: "A distinction is made between short-term residence permits (less than 1 year), annual residence permits (limited) and permanent residence permits (unlimited)."
+
+F3. The B permit (resident foreign nationals) is for EU/EFTA citizens residing in Switzerland for a longer period for a certain purpose, with or without gainful employment. — evidence quote: "Resident foreign nationals are foreign nationals who reside in Switzerland for a longer period of time for a certain purpose, with or without gainful employment."
+
+F4. A B permit is issued to an EU/EFTA citizen holding an employment contract of at least twelve months or of unlimited duration, and is valid for five years. — evidence quote: "The residence permit for EU/EFTA nationals is valid for five years. This permit is issued to EU/EFTA citizens holding a contract of employment of at least twelve months or of unlimited duration."
+
+F5. EU/EFTA nationals WITHOUT gainful employment are entitled to a B permit if they can prove sufficient financial means and adequate health and accident insurance. — evidence quote: "Nationals from all EU/EFTA member states without gainful employment are entitled to a B permit if they can prove they have sufficient financial means and adequate health and accident insurance."
+
+F6. A first-time renewal of a B permit can be limited to one year if the holder has been involuntarily unemployed for more than twelve consecutive months. — evidence quote: "First-time renewal of the permit can be limited to one year, however, if the holder has been involuntarily unemployed for more than twelve consecutive months."
+
+F7. The C permit (settled foreign nationals) is granted after five or ten years' residence in Switzerland; SEM determines the earliest date from which authorities may grant settlement permits. — evidence quote: "Settled foreign nationals are foreign nationals who have been granted a settlement permit after five or ten years' residence in Switzerland. The right to settle in Switzerland is not subject to any time restrictions or conditions. The State Secretariat for Migration (SEM) determines the earliest date from which the competent national authorities may grant settlement permits."
+
+F8. C permits for EU/EFTA nationals are governed by settlement treaties; after five years' regular and uninterrupted residence, nationals of 15 named EU states plus the EFTA states Iceland, Liechtenstein and Norway qualify under such treaties or reciprocal agreements. No such treaties exist for nationals of the other EU member states. — evidence quote: "If they meet the required conditions, nationals of Austria, Belgium, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Luxembourg, the Netherlands, Portugal, Spain and Sweden as well as EFTA nationals (Iceland, Liechtenstein, Norway) are granted settlement permits pursuant to settlement treaties or reciprocal agreements after five years' regular and uninterrupted residence in Switzerland. No such treaties exist for nationals of the other EU member states."
+
+F9. The L permit (short-term residents) covers stays of a limited period, usually less than a year. — evidence quote: "Short-term residents are foreign nationals who reside in Switzerland for a limited period of time, usually less than a year, for a certain purpose with or without gainful employment."
+
+F10. An L permit requires an employment contract valid from three up to twelve months; the permit's validity matches the contract term and can be extended to a total of less than twelve months. — evidence quote: "EU/EFTA nationals are entitled to this permit provided they are in possession of an employment contract valid from three up to twelve months. ... The period of validity of the permit is identical to the term of the employment contract. It can be extended for a total period of less than twelve months."
+
+F11. Employment contracts of less than three months within a calendar year do not require a permit but only the online notification procedure. — evidence quote: "Employment contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure."
+
+F12. L permits without gainful employment go to job seekers from all EU/EFTA states, but this does not create an entitlement to social assistance. — evidence quote: "L EU/EFTA permits without gainful employment are granted to job seekers from all EU/EFTA states. However, this practice does not create an entitlement to social assistance."
+
+F13. A G permit (cross-border commuter) is for EU/EFTA nationals who live in an EU/EFTA member state and work in Switzerland, and who must return to their main residence abroad as a rule every day, or at least once a week. — evidence quote: "EU/EFTA cross-border commuters are nationals of EU/EFTA member states who reside in an EU/EFTA member state and work in Switzerland (either in an employed or self-employed capacity). Cross-border commuters must return to their main place of residence abroad as a rule every day, or at least once a week."
+
+F14. A G permit is valid for five years for a fixed-term contract of more than one year or a permanent contract; for a fixed-term contract of less than a year but more than three months it matches the contract; for employment of less than three months no work permit is needed, only the online notification procedure. — evidence quote: "The EU/EFTA cross-border commuter permit is valid for five years in the case of a fixed-term employment contract valid for more than one year or in the case of a permanent employment contract. If a fixed-term employment contract is valid for less than a year but for more than three months, the period of validity of the cross-border commuter permit is identical to the duration of this employment contract. If the period of employment is less than three months, then no work permit is needed but the online notification procedure applies."
+
+F15. Third-state nationals who hold an L, B or C permit are covered by the biometric residence permit programme. — evidence quote: "Third-state nationals (L, B, C) see Biometric residence permits for foreign nationals"

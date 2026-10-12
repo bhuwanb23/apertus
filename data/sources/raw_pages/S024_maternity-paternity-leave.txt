@@ -1,0 +1,140 @@
+SOURCE_ID: S024
+URL: https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/
+SECONDARY_URL: https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/paternity-leave--co-parental-leave/
+TITLE: Maternity leave  /  Paternity leave or second parent leave
+CATEGORY: health
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON REQUESTED URL: https://www.ch.ch/en/family/ does not exist as such; ch.ch has no
+top-level /en/family/ path. Verified working pages used:
+  maternity  -> https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/
+  (identical content is also served at https://www.ch.ch/en/work/family-and-work/maternity-leave/)
+  paternity  -> https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/paternity-leave--co-parental-leave/
+Both returned HTTP 200. Quotes below are tagged [MATERNITY] or [PATERNITY] by source page.
+
+=== VERBATIM SOURCE QUOTES ===
+
+[MATERNITY] "When a child is born, the mother who has given birth is entitled to 14 weeks'
+paid leave."
+
+[MATERNITY] "If you are in paid work you will generally be entitled to maternity allowance,
+whether you are employed or self-employed. This right is subject to the following conditions:
+
+- You were insured under the OASI/DI scheme for the nine months prior to the birth.
+- You worked for at least five months during your pregnancy.
+- When the child is born, you are still employed, self-employed or working for your
+husband's business for a wage."
+
+[MATERNITY] "Maternity leave lasts for 14 weeks. Maternity allowance amounts to 80% of your
+earnings, but no more than CHF 220 per day. Cantonal provisions, personnel regulations and
+collective employment contracts may provide for more generous arrangements."
+
+[MATERNITY] "If your newborn has to stay in hospital for more than 14 days directly after the
+birth, the period for which you can claim maternity benefits is extended by a maximum of 56
+days, provided that you return to work when your maternity leave ends."
+
+[MATERNITY] "If the father or spouse of the mother dies within six months of the child's
+birth, the mother is entitled to an additional two weeks' leave."
+
+[MATERNITY] "If you go back to work sooner than the end of the 14th week after the birth, you
+will lose your entitlement to any further maternity allowance. You are not allowed to return
+to work in the first eight weeks after the birth."
+
+[MATERNITY] "You have the right to extend your maternity leave by two weeks beyond the
+standard 14-week period. However, you will not receive benefits for those two additional
+weeks."
+
+[MATERNITY] "If you are pregnant or gave birth less than 16 weeks ago, you benefit from
+special legal safeguards. You cannot be dismissed while you are pregnant or on maternity
+leave"
+
+[PATERNITY] "When a child is born, the baby's father - or the wife of the biological mother -
+is entitled to two weeks' paid leave."
+
+[PATERNITY] "If you are a father who is in paid employment or self-employment, you are
+entitled to second parent leave (formerly known as paternity leave) on the following
+conditions:
+
+- You are the legal father of the child.
+- You were insured under the OASI/AHV scheme for the nine months prior to the birth of your
+child.
+- You worked for at least five months during the mother's pregnancy."
+
+[PATERNITY] "Co-parental leave lasts for two weeks: 14 daily allowances and ten days off
+work. Co-parental allowance amounts to 80% of your earnings, but no more than CHF 220 per
+day. Cantonal provisions, personnel regulations and collective employment contracts may
+provide for more generous arrangements."
+
+[PATERNITY] "If the mother dies within 14 weeks of the child's birth, the surviving spouse
+is entitled to a further 14 weeks' leave."
+
+[PATERNITY] "Unlike maternity leave, paternity/co-parental leave is flexible. You can take
+it all at once, or as individual days as long as it is taken within the six months after the
+birth of your child."
+
+[PATERNITY] "Fathers and co-parents have no legal right to extend their leave. You can only
+extend your leave if your employer agrees."
+
+[MATERNITY] (from the related ch.ch page "Pregnancy, maternity leave and work",
+https://www.ch.ch/en/family-and-partnership/work-and-family/pregnancy--maternity-leave-and-work/ )
+"Your employer cannot dismiss you during pregnancy or during the 16 weeks of maternity
+leave following the birth."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+
+F1. Maternity leave lasts 14 weeks and is paid. — evidence quote: "Maternity leave lasts
+    for 14 weeks."
+
+F2. Maternity allowance equals 80% of earnings but is capped at CHF 220 per day; cantonal
+    rules or collective contracts may be more generous. — evidence quote: "Maternity
+    allowance amounts to 80% of your earnings, but no more than CHF 220 per day."
+
+F3. Maternity allowance entitlement requires OASI/DI insurance for the nine months before the
+    birth, at least five months worked during the pregnancy, and still being in paid work at
+    the birth. — evidence quote: "You were insured under the OASI/DI scheme for the nine
+    months prior to the birth. ... You worked for at least five months during your
+    pregnancy. ... When the child is born, you are still employed, self-employed or working
+    for your husband's business for a wage."
+
+F4. The mother must not return to work in the first eight weeks after birth, and returning
+    before the end of week 14 forfeits further maternity allowance. — evidence quote: "You
+    are not allowed to return to work in the first eight weeks after the birth." / "If you go
+    back to work sooner than the end of the 14th week after the birth, you will lose your
+    entitlement to any further maternity allowance."
+
+F5. Maternity benefits are extended by up to 56 days if the newborn must stay in hospital
+    more than 14 days directly after birth. — evidence quote: "If your newborn has to stay in
+    hospital for more than 14 days directly after the birth, the period for which you can
+    claim maternity benefits is extended by a maximum of 56 days".
+
+F6. Maternity leave can be extended unpaid by two weeks beyond the standard 14-week period. —
+    evidence quote: "You have the right to extend your maternity leave by two weeks beyond
+    the standard 14-week period. However, you will not receive benefits for those two
+    additional weeks."
+
+F7. Paternity / second-parent leave lasts two weeks - 14 daily allowances and ten days off
+    work - and is paid at 80% of earnings capped at CHF 220 per day. — evidence quote:
+    "Co-parental leave lasts for two weeks: 14 daily allowances and ten days off work.
+    Co-parental allowance amounts to 80% of your earnings, but no more than CHF 220 per day."
+
+F8. Paternity/co-parental leave is flexible and must be used within six months of the birth;
+    it can be taken in one block or as individual days, unlike maternity leave. — evidence
+    quote: "Unlike maternity leave, paternity/co-parental leave is flexible. You can take it
+    all at once, or as individual days as long as it is taken within the six months after the
+    birth of your child."
+
+F9. Paternity/co-parental leave has no legal right of extension; any extension requires the
+    employer's agreement. — evidence quote: "Fathers and co-parents have no legal right to
+    extend their leave. You can only extend your leave if your employer agrees."
+
+F10. If the mother dies within 14 weeks of the birth, the surviving spouse is entitled to a
+    further 14 weeks' leave; and if the father/spouse of the mother dies within six months of
+    the birth, the mother is entitled to an additional two weeks. — evidence quote: "If the
+    mother dies within 14 weeks of the child's birth, the surviving spouse is entitled to a
+    further 14 weeks' leave." / "If the father or spouse of the mother dies within six
+    months of the child's birth, the mother is entitled to an additional two weeks' leave."
+
+F11. The employer cannot dismiss a woman during pregnancy or during the 16 weeks of maternity
+    leave following the birth. — evidence quote: "Your employer cannot dismiss you during
+    pregnancy or during the 16 weeks of maternity leave following the birth."

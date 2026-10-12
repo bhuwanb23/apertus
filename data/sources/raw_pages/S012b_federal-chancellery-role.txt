@@ -1,0 +1,39 @@
+SOURCE_ID: S012b
+URL: https://www.bk.admin.ch/en
+TITLE: Federal Chancellery FCh
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON DISCOVERY: Fetched from the root of bk.admin.ch (which serves the English site). The requested https://www.bk.admin.ch/bk/en/home.html returned HTTP 404 and all admin.ch/gov/en/... URLs returned HTTP 403.
+
+=== VERBATIM SOURCE QUOTES ===
+"The Federal Chancellery is the staff office of the Federal Council: it ensures that the Federal Council can make informed decisions and actively communicate them to the public. It is responsible for coordination within the Federal Administration and supports it in the digital transformation process as well as in crisis management. As guardian of the people's rights, the Federal Chancellery organises federal elections and referendums."
+
+"The Federal Chancellery organises the Federal Council meetings along with the respective presidential department. These meetings take place almost every week."
+
+"Along with the cantons, the Federal Chancellery organises federal elections and popular votes. Referendum and initiative committees submit the signatures they collect to the Federal Chancellery."
+
+"Via media conferences and social media, the Federal Chancellery ensures that the public is informed about the decisions reached by the Federal Council."
+
+"The Federal Chancellery coordinates the digital transformation of the federal administration. In doing so, it works closely with the departments."
+
+"The Federal Chancellery keeps abreast of international trends and develops scenarios for the future. This helps the Federal Council make policy decisions."
+
+"German, French, Italian, and sometimes Romansh or English: the Federal Chancellery ensures that laws and official texts are understandable and correct."
+
+"Viktor Rossi has been head of the Federal Chancellery since 2024. The Federal Chancellor supports and advises the government."
+
+"The Federal Chancellery is the administrative office of the Federal Council. It is headed by Federal Chancellor Viktor Rossi."
+
+"The publication "The Swiss Confederation - A Brief Guide" provides information on politics, administration, and the judiciary. Updated annually, it is available in print and as an app."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The Federal Chancellery is the staff/administrative office of the Federal Council and acts as guardian of the people's rights by organising federal elections and referendums. — evidence quote: "The Federal Chancellery is the staff office of the Federal Council: it ensures that the Federal Council can make informed decisions and actively communicate them to the public. ... As guardian of the people's rights, the Federal Chancellery organises federal elections and referendums."
+F2. Viktor Rossi has been head of the Federal Chancellery (Federal Chancellor) since 2024. — evidence quote: "Viktor Rossi has been head of the Federal Chancellery since 2024."
+F3. The Federal Chancellery is responsible for coordination within the Federal Administration and supports it in digital transformation and in crisis management. — evidence quote: "It is responsible for coordination within the Federal Administration and supports it in the digital transformation process as well as in crisis management."
+F4. Along with the cantons, the Federal Chancellery organises federal elections and popular votes, and referendum and initiative committees submit their collected signatures to it. — evidence quote: "Along with the cantons, the Federal Chancellery organises federal elections and popular votes. Referendum and initiative committees submit the signatures they collect to the Federal Chancellery."
+F5. The Federal Chancellery organises Federal Council meetings together with the respective presidential department; these meetings take place almost every week. — evidence quote: "The Federal Chancellery organises the Federal Council meetings along with the respective presidential department. These meetings take place almost every week."
+F6. The Federal Chancellery keeps abreast of international trends and develops future scenarios to help the Federal Council make policy decisions. — evidence quote: "The Federal Chancellery keeps abreast of international trends and develops scenarios for the future. This helps the Federal Council make policy decisions."
+F7. The Federal Chancellery ensures laws and official texts are understandable and correct in German, French, Italian and sometimes Romansh or English. — evidence quote: "German, French, Italian, and sometimes Romansh or English: the Federal Chancellery ensures that laws and official texts are understandable and correct."
+F8. The Federal Chancellor supports and advises the government. — evidence quote: "The Federal Chancellor supports and advises the government."

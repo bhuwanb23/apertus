@@ -1,0 +1,38 @@
+SOURCE_ID: S040
+URL: https://www.bar.admin.ch/en/womens-suffrage-in-switzerland
+TITLE: Women's suffrage in Switzerland (Swiss Federal Archives SFA)
+CATEGORY: history
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON SUBSTITUTION: https://www.ebgf.admin.ch/ebgf/en/home/home.html and the FOGE successor
+site (ebg.admin.ch) were not used; the Swiss Federal Archives English page was fetched successfully.
+This page does NOT mention Appenzell Innerrhoden; that detail (F6) is taken verbatim from the official
+Federal Supreme Court brochure fetched in the same session (https://www.bger.ch/files/live/sites/tfl/files/pdf/Divers/Flyer_150_Years_SFSC.pdf)
+and is labelled accordingly.
+
+=== VERBATIM SOURCE QUOTES ===
+"On 7 February 1971, Switzerland's all-male electorate granted the vote to the nation's female citizens."
+
+"In 1929, the Swiss Association for Women's Suffrage presented a petition in Bern signed by 170,400 women and 78,800 men. Parliament backed the petition, but the Federal Council chose not to pursue it."
+
+"The first vote at federal level in 1959 failed by a large margin, with 67% of those who cast their ballots against. By that time, women had been given the vote across almost all of Europe."
+
+"Women’s dogged persistence, social liberalisation and pressure from abroad helped turn the tide, and in 1971 most men voted yes, with one third still in the 'no' camp."
+
+"One key topic is the events leading up to the national votes on 1 February 1959 and 7 February 1971."
+
+[Secondary, bger.ch official brochure] "The Swiss Federal Supreme Court rules that women from the canton of Appenzell Innerrhoden be granted the right to vote at the cantonal assembly. On 28 April 1991, women in Appenzell Innerrhoden were also able to vote in cantonal elections for the first time. BGE 116 Ia 359"
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Federal women's suffrage in Switzerland was approved by an all-male electorate on 7 February 1971. — evidence quote: "On 7 February 1971, Switzerland's all-male electorate granted the vote to the nation’s female citizens."
+
+F2. In 1929 the Swiss Association for Women's Suffrage submitted a petition in Bern signed by 170,400 women and 78,800 men; Parliament supported it but the Federal Council did not pursue it. — evidence quote: "In 1929, the Swiss Association for Women’s Suffrage presented a petition in Bern signed by 170,400 women and 78,800 men. Parliament backed the petition, but the Federal Council chose not to pursue it."
+
+F3. The first federal vote on women's suffrage, held on 1 February 1959, was rejected with 67% of ballots cast against it. — evidence quote: "The first vote at federal level in 1959 failed by a large margin, with 67% of those who cast their ballots against." + "the national votes on 1 February 1959 and 7 February 1971"
+
+F4. At the time of the 1959 federal vote, women had already been given the vote across almost all of Europe. — evidence quote: "By that time, women had been given the vote across almost all of Europe."
+
+F5. In the 1971 vote a majority of men voted yes, but one third still voted "no". — evidence quote: "in 1971 most men voted yes, with one third still in the 'no' camp."
+
+F6. Appenzell Innerrhoden (the last canton) was forced by the Federal Supreme Court in 1990 to grant women the vote at the cantonal assembly; from 28 April 1991 women there could vote in cantonal elections (BGE 116 Ia 359). — evidence quote: "The Swiss Federal Supreme Court rules that women from the canton of Appenzell Innerrhoden be granted the right to vote at the cantonal assembly. On 28 April 1991, women in Appenzell Innerrhoden were also able to vote in cantonal elections for the first time. BGE 116 Ia 359" [source: bger.ch official 150-year brochure, not on the SFA page]

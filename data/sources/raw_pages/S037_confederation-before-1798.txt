@@ -1,0 +1,38 @@
+SOURCE_ID: S037
+URL: https://www.bar.admin.ch/en/the-confederation-before-1798
+TITLE: The Confederation before 1798: Switzers, Swiss and Helvetians
+CATEGORY: history
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON SUBSTITUTION: The requested page https://www.eda.admin.ch/aboutswitzerland/en/home/history.html
+returned HTTP 403 (bot protection) and could not be fetched. Substituted the Swiss Federal Archives
+(SFA/bar.admin.ch), an official federal portal page in English covering the same founding material.
+The Rütli oath and the 1999 total revision of the Federal Constitution are NOT stated on this page;
+see S038/S041 (Federal Chancellery brief guide) for those items.
+
+=== VERBATIM SOURCE QUOTES ===
+"In 1291, the three cantons of Uri, Schwyz and Unterwalden concluded the regional Waldstätte Alliance, which was sealed by the Federal Charter of 1291."
+
+"The Schwyzer, or Switzers, soon became well known far and wide thanks to the significant role they played in the Waldstätte Alliance and the importance of their troops as mercenaries. As a result, the surrounding German-speaking regions started to refer to all confederates as “Schwyzer”. The spelling changed over the course of time from “Schwyzer” (Switzer) to “Schweizer” (Swiss)."
+
+"The Helvetian Republic was proclaimed in 1798 under pressure from the occupying French forces. The proclamation went hand in hand with the creation of centralised political bodies. The Central Archives, a predecessor of the current Swiss Federal Archives, were also established during this time."
+
+"The Latin designation “Confoederatio Helvetica” appears increasingly on official documents, coins and seals following the founding of the Federal State in 1848."
+
+"The origins of modern Switzerland date back to the developments that took place between the founding of the Helvetian Republic in 1798 and the founding of the Federal State in 1848."
+
+"The mercenaries had their heyday between the 15th and 18th century before being outlawed with the founding of the Federal State."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. In 1291 the three cantons of Uri, Schwyz and Unterwalden concluded the Waldstätte Alliance, sealed by the Federal Charter of 1291. — evidence quote: "In 1291, the three cantons of Uri, Schwyz and Unterwalden concluded the regional Waldstätte Alliance, which was sealed by the Federal Charter of 1291."
+
+F2. The name "Swiss" derives from the Schwyzers (Switzers), whose Waldstätte alliance role and mercenary troops made them famous. — evidence quote: "The Schwyzer, or Switzers, soon became well known far and wide thanks to the significant role they played in the Waldstätte Alliance and the importance of their troops as mercenaries."
+
+F3. The Helvetian Republic was proclaimed in 1798 under French occupation, and centralised political bodies plus the Central Archives (predecessor of the Swiss Federal Archives) were created at that time. — evidence quote: "The Helvetian Republic was proclaimed in 1798 under pressure from the occupying French forces. The proclamation went hand in hand with the creation of centralised political bodies. The Central Archives, a predecessor of the current Swiss Federal Archives, were also established during this time."
+
+F4. The Latin designation "Confoederatio Helvetica" spread to official documents, coins and seals after the founding of the Federal State in 1848. — evidence quote: "The Latin designation “Confoederatio Helvetica” appears increasingly on official documents, coins and seals following the founding of the Federal State in 1848."
+
+F5. Modern Switzerland's origins lie between the Helvetian Republic founded in 1798 and the founding of the Federal State in 1848. — evidence quote: "The origins of modern Switzerland date back to the developments that took place between the founding of the Helvetian Republic in 1798 and the founding of the Federal State in 1848."
+
+F6. Swiss mercenaries flourished between the 15th and 18th centuries and were outlawed with the founding of the Federal State. — evidence quote: "The mercenaries had their heyday between the 15th and 18th century before being outlawed with the founding of the Federal State."

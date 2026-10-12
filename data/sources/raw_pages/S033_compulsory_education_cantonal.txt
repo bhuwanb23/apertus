@@ -1,0 +1,55 @@
+SOURCE_ID: S033
+URL: https://www.ch.ch/en/school-and-education/compulsory-education/school-and-kindergarten/
+TITLE: School and kindergarten (ch.ch — Compulsory education, Federal Chancellery)
+CATEGORY: services
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"Most children start kindergarten at the age of four. Compulsory education lasts 11 years."
+
+"Compulsory education is the responsibility of the cantons. This is why it is important to check the information on your canton's website."
+
+"Children generally begin their schooling at age four in kindergarten or a similar classroom setting at the age of four. The deadline for enrolment is usually 31 July. This means that children who have turned four by the end of July, will start kindergarten after the summer holidays. Some cantons in eastern and central Switzerland have a different cut-off date."
+
+"How long does compulsory education last? In most cantons, children are required to attend school for 11 years, including the two years they attend kindergarten."
+
+"Primary school, including kindergarten, usually comprises eight years. Secondary education usually comprises three years. In Ticino, primary school lasts seven years and secondary school four years."
+
+"The website of the Swiss Conference of Cantonal Ministers of Education provides an overview of the cantonal school structure for each canton."
+
+"Children can be sent to a public school or they can be homeschooled. Contact your canton for the specific rules and conditions."
+
+"The school year starts in August."
+
+"The following chart lists school holidays for all cantons. School holidays for your specific school are available on the website of your commune or of the school."
+
+"Getting a child to school is the responsibility of the parents. The communes only provide support if the route to school is very long or too dangerous."
+
+"Gifted children have the option of starting school earlier or skipping a grade. In addition to the curriculum, children speaking a foreign language can take intensive language courses."
+
+"If integration into a normal class is not possible or sensible, children are placed in a special class or schools tailored to their needs."
+
+STRUCTURE CONTEXT (ch.ch "School and education" index, https://www.ch.ch/en/school-and-education/): the theme has five sub-pages — "Apprenticeship or school?", "Compulsory education", "Higher education", "Lifelong learning for adults", "Living in Switzerland without gainful employment". "Compulsory education" itself has two sub-pages — "What comes after compulsory education" and "School and kindergarten".
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Compulsory education is a CANTONAL responsibility, not a federal one — there is no federal school system; rules and information must be checked with the canton. — evidence quote: "Compulsory education is the responsibility of the cantons. This is why it is important to check the information on your canton's website."
+
+F2. Compulsory schooling lasts 11 years in most cantons, including the two years of kindergarten. — evidence quote: "In most cantons, children are required to attend school for 11 years, including the two years they attend kindergarten." / "Compulsory education lasts 11 years."
+
+F3. CANTONAL VARIABLE — The usual structure is 8 years of primary (incl. kindergarten) and 3 years of secondary, but Ticino splits it 7 years primary / 4 years secondary. — evidence quote: "Primary school, including kindergarten, usually comprises eight years. Secondary education usually comprises three years. In Ticino, primary school lasts seven years and secondary school four years."
+
+F4. CANTONAL/COMMUNAL VARIABLE — Kindergarten entry age is 4, with an enrolment deadline usually of 31 July, but "Some cantons in eastern and central Switzerland have a different cut-off date." — evidence quote: "The deadline for enrolment is usually 31 July. ... Some cantons in eastern and central Switzerland have a different cut-off date."
+
+F5. CANTONAL VARIABLE — School holidays are set per canton/commune (the school year generally starts in August); exact dates come from the commune or the school, not from federal law. — evidence quote: "The school year starts in August." / "The following chart lists school holidays for all cantons. School holidays for your specific school are available on the website of your commune or of the school."
+
+F6. COMMUNE VARIABLE — Getting children to school is a parental duty; communes only step in where the route is very long or dangerous (e.g. the Pedibus scheme). — evidence quote: "Getting a child to school is the responsibility of the parents. The communes only provide support if the route to school is very long or too dangerous."
+
+F7. CANTONAL VARIABLE — homeschooling is permitted, but the applicable rules and conditions are set by the canton. — evidence quote: "Children can be sent to a public school or they can be homeschooled. Contact your canton for the specific rules and conditions."
+
+F8. Support for gifted pupils (starting school earlier or skipping a grade) and for pupils with special needs (special classes/schools if integration is not possible or sensible) exists within the cantonal school system. — evidence quote: "Gifted children have the option of starting school earlier or skipping a grade." / "If integration into a normal class is not possible or sensible, children are placed in a special class or schools tailored to their needs."
+
+CAVEATS / NOT FOUND ON THIS PAGE:
+- The page does not mention "gymnasium", an academic baccalaureate, or an apprenticeship; those are on the sibling page "What comes after compulsory education" (harvested as S034).
+- It does not state a federal school system exists or is absent in those words — the cantonal responsibility statement is the verbatim basis for that inference, so MCQs must not overstate it.
+- Upper-secondary (gymnasium / baccalaureate / apprenticeship) division is not covered here.

@@ -1,0 +1,29 @@
+SOURCE_ID: S012
+URL: https://www.bk.admin.ch/en/federal-council-affairs
+TITLE: Federal Council affairs
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON DISCOVERY: The requested URL https://www.admin.ch/gov/en/start/federal-council/members-of-the-federal-council.html returned HTTP 403 (bot-blocked) on every attempt, as did https://www.admin.ch/gov/en/start/federal-council.html and https://www.admin.ch/gov/en/start.html. Also 404: https://www.bk.admin.ch/bk/en/home.html. Working substitute: the Federal Chancellery's own English pages on bk.admin.ch, which state Federal Council composition and working directly. This file covers the Federal Council; the Federal Chancellery role is saved as S012b.
+
+=== VERBATIM SOURCE QUOTES ===
+"Almost every week the seven federal councillors convene for their regular meeting, which usually lasts about three hours."
+
+"Each year the Federal Council deals with around 2,500 items of business."
+
+"For this to be possible, the decisions must be well prepared and the processes in the Federal Administration must function smoothly."
+
+"It is the Federal Chancellery's task to help prepare the items of business and the documents that are presented to the federal councillors, making adjustments to the text on the legal and linguistic levels."
+
+"The Federal Chancellery organises the meetings in conjunction with the department of the current president. For example, it draws up the agenda, coordinates the joint reporting procedure and formalises the Federal Council decisions with legally binding decrees."
+
+"The Federal Council deals with about 2,500 items of business per year. Before each meeting the ushers set out all the required documents."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The Federal Council is made up of seven federal councillors. — evidence quote: "Almost every week the seven federal councillors convene for their regular meeting, which usually lasts about three hours."
+F2. The Federal Council's regular meeting usually lasts about three hours. — evidence quote: "Almost every week the seven federal councillors convene for their regular meeting, which usually lasts about three hours."
+F3. The Federal Council deals with around 2,500 items of business each year. — evidence quote: "Each year the Federal Council deals with around 2,500 items of business."
+F4. Federal Council meetings take place almost every week. — evidence quote: "Almost every week the seven federal councillors convene for their regular meeting."
+F5. The Federal Chancellery organises Federal Council meetings together with the department of the current president, draws up the agenda, coordinates the joint reporting procedure and formalises Federal Council decisions as legally binding decrees. — evidence quote: "The Federal Chancellery organises the meetings in conjunction with the department of the current president. For example, it draws up the agenda, coordinates the joint reporting procedure and formalises the Federal Council decisions with legally binding decrees."
+F6. Preparing Federal Council business and documents, including adjustments on the legal and linguistic levels, is the Federal Chancellery's task. — evidence quote: "It is the Federal Chancellery's task to help prepare the items of business and the documents that are presented to the federal councillors, making adjustments to the text on the legal and linguistic levels."

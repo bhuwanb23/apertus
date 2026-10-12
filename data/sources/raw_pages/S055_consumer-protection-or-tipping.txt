@@ -1,0 +1,75 @@
+SOURCE_ID: S055
+URL: https://www.swissinfo.ch/eng/best-of-srg-content/opinions-divided-on-taxing-tips/90990050
+TITLE: Opinions divided on taxing tips (SWI swissinfo.ch — a branch of the Swiss Broadcasting Corporation SRG SSR), published 6 March 2026
+CATEGORY: services
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+SOURCE_TRUST: non-ministerial
+
+*** IMPORTANT TRUST NOTE — READ BEFORE USING ANY FACT IN THIS FILE ***
+This is a COMPOSITE of three sources with DIFFERENT trust levels. None of them is a ministerium.
+  (a) www.swissinfo.ch  — Swiss Broadcasting Corporation (SRG SSR), i.e. a state-funded public broadcaster.
+                        TRUST: non-ministerial (state broadcaster / news). Not an official legal statement.
+  (b) www.myswitzerland.com — Switzerland Tourism, the national tourism organisation. It is the closest
+                        thing found to an OFFICIAL statement of service custom, and it states the rule in
+                        plain terms ("the guest is not obliged to tip"). TRUST: official-portal (tourism
+                        body, NOT a government ministry; it is not a legal source).
+  (c) www.gastrosuisse.ch — GastroSuisse, the SWISS TRADE ASSOCIATION for the hospitality industry.
+                        TRUST: trade-body. NOT a ministry, NOT a regulator, NOT law. Recorded here ONLY
+                        because it is the industry body's own statement of practice. It cannot be used to
+                        assert what the law is.
+No ministerium, no fedlex.admin.ch, no ch.ch and no BAZG/ESTV page stating Swiss tipping law was found.
+The legal substance below (tax/contribution treatment) comes from a NEWS report quoting the Federal
+Council's statement — it is NOT the Federal Council statement itself, which was not reachable.
+
+LANGUAGE CAVEAT: the GastroSuisse quotes are GERMAN. English renderings in the FACT CANDIDATES section
+are the harvester's translations and are marked as such. They must be checked by a German reader.
+
+=== VERBATIM SOURCE QUOTES ===
+[swissinfo.ch]
+"Under current rules, voluntary tips are generally exempt from tax and contributions. However, if a tip forms an integral part of an employee's salary, it is treated as income and is therefore subject to tax and social security deductions. The law does not clearly define what constitutes a "substantial part" of salary."
+
+"The catering industry is one of those sectors in which service is actually included in the price. Nevertheless, some customers add a tip when paying for good service."
+
+"This lack of clarity creates legal uncertainty, says Beat Imhof, president of GastroSuisse."
+
+"Government focuses on pensions"
+"The Swiss government is considering a different approach. Interior Minister Elisabeth Baume-Schneider wants to examine whether electronically paid tips should in principle be subject to tax and contributions."
+
+"There is plenty of tipping in Switzerland. The federal government estimates an immense amount: up to CHF1 billion ($1.29 billion) per year. But nobody knows exactly how much."
+
+"In a statement, the government described the current situation as unsatisfactory and said it intends to clarify the definition of a "substantial part of salary". At the same time, it wants to close gaps in the contribution system, meaning more tips could become subject to social security payments."
+
+"The main objective is to ensure employees' social security coverage and to make sure that every franc earned is included in pension calculations, particularly in low-wage sectors," the government wrote.
+
+"Whether tips should remain tax-free or become fully subject to contributions will now be decided by parliament. The proposal is scheduled to be discussed in the Senate in early March."
+
+[myswitzerland.com — Switzerland Tourism]
+"In Switzerland, the guest is not obliged to tip. In many restaurants, however, it is customary to pay a tip. This amounts to approximately 10 percent or it is rounded up to a round amount."
+
+[gastrosuisse.ch — TRADE ASSOCIATION, German, quotes verbatim]
+"Im Gastgewerbe ist das Trinkgeld seit 1974 im Preis inbegriffen. Die Abgabe eines sogenannten Overtip ist eine freiwillige Angelegenheit zwischen dem Gast und dem Mitarbeitenden. Die Gäste entscheiden selbst, ob sie etwas geben möchten und wenn ja, wieviel und wem."
+
+"In manchen Restaurants werden die Trinkgelder unter den Mitarbeitenden aufgeteilt. Allgemein gültige Regelungen gibt es nicht, die betriebliche Praxis ist unterschiedlich."
+
+"Grundsätzlich sind Trinkgelder kein Lohn und auch kein Bestandteil davon. Das Gastgewerbe verfügt über einen guten Landes-Gesamtarbeitsvertrag."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. TIPPING IS NOT OBLIGATORY in Switzerland. This is stated outright by Switzerland Tourism (the national tourism organisation): the guest is not obliged to tip, although paying one is customary in many restaurants, at roughly 10 percent or by rounding up. — evidence quote: "In Switzerland, the guest is not obliged to tip. In many restaurants, however, it is customary to pay a tip. This amounts to approximately 10 percent or it is rounded up to a round amount." [myswitzerland.com]
+
+F2. The customary amount, where a tip is given, is approximately 10 percent or a round-up to a round figure. — evidence quote: "This amounts to approximately 10 percent or it is rounded up to a round amount." [myswitzerland.com]
+
+F3. The reason a tip is optional is that service is already included in the price in the hospitality sector. — evidence quote: "The catering industry is one of those sectors in which service is actually included in the price. Nevertheless, some customers add a tip when paying for good service." [swissinfo.ch] / "Im Gastgewerbe ist das Trinkgeld seit 1974 im Preis inbegriffen." [gastrosuisse.ch, DE — translation: in the hospitality industry the tip has been included in the price since 1974]
+
+F4. Under the current rules, VOLUNTARY TIPS ARE GENERALLY EXEMPT FROM TAX AND SOCIAL SECURITY CONTRIBUTIONS. But if a tip forms an integral/substantial part of an employee's salary it is treated as income and is subject to tax and social security deductions. — evidence quote: "Under current rules, voluntary tips are generally exempt from tax and contributions. However, if a tip forms an integral part of an employee's salary, it is treated as income and is therefore subject to tax and social security deductions." [swissinfo.ch]
+
+F5. The law does NOT define what counts as a "substantial part" of salary — the Swissinfo report explicitly characterises this as a legal grey area / legal uncertainty. (Note: this is a news characterisation; the underlying statute was not retrievable.) — evidence quote: "The law does not clearly define what constitutes a "substantial part" of salary." / "This lack of clarity creates legal uncertainty, says Beat Imhof, president of GastroSuisse." [swissinfo.ch]
+
+F6. There is NO generally applicable rule on how tips are distributed among staff; operational practice varies from establishment to establishment. Source is the trade association (GastroSuisse), German. — evidence quote: "In manchen Restaurants werden die Trinkgelder unter den Mitarbeitenden aufgeteilt. Allgemein gültige Regelungen gibt es nicht, die betriebliche Praxis ist unterschiedlich." [gastrosuisse.ch, DE — translation: in many restaurants tips are shared among the staff. There are no generally applicable rules; operational practice differs.]
+
+F7. The hospitality trade association's stated legal position is that tips are neither wages nor part of wages. This is the association's own view and is contested by labour-law academics — it must NOT be presented as settled Swiss law. — evidence quote: "Grundsätzlich sind Trinkgelder kein Lohn und auch kein Bestandteil davon." [gastrosuisse.ch, DE — translation: as a rule, tips are neither wages nor part of wages.]
+
+F8. Government position as of 6 March 2026: the Federal Council has described the situation as unsatisfactory and intends to clarify the definition of a "substantial part of salary"; the Interior Minister wants to examine whether electronically paid tips should in principle be subject to tax and contributions; the decision now rests with PARLIAMENT (Senate debate scheduled for early March 2026). The stated objective is social security coverage, especially in low-wage sectors. — evidence quote: "In a statement, the government described the current situation as unsatisfactory and said it intends to clarify the definition of a "substantial part of salary"." / "Interior Minister Elisabeth Baume-Schneider wants to examine whether electronically paid tips should in principle be subject to tax and contributions." / "Whether tips should remain tax-free or become fully subject to contributions will now be decided by parliament." / ""The main objective is to ensure employees' social security coverage and to make sure that every franc earned is included in pension calculations, particularly in low-wage sectors," the government wrote." [swissinfo.ch]
+
+F9. The Federal government's own estimate of tipping volume is up to CHF 1 billion per year, while acknowledging that nobody knows the exact figure. — evidence quote: "There is plenty of tipping in Switzerland. The federal government estimates an immense amount: up to CHF1 billion ($1.29 billion) per year. But nobody knows exactly how much." [swissinfo.ch]

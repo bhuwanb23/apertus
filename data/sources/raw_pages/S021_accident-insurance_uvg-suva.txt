@@ -1,0 +1,117 @@
+SOURCE_ID: S021
+URL: https://www.ch.ch/en/insurance/accident-insurance/
+TITLE: Accident insurance
+CATEGORY: health
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON REQUESTED URL: https://www.suva.ch/en returned HTTP 200 but is a navigation stub only
+(it states "For more content, please visit suva.ch in German, French or Italian" and carries
+no premium/threshold figures). https://www.suva.ch/en/insurance/accident-insurance returned
+HTTP 404. Replaced by the ch.ch official-portal accident insurance page above, which
+references Suva by name and link and carries the coverage/threshold/benefit figures.
+
+COVERAGE GAP NOTE: This page does NOT state the UVG salary threshold (the CHF 22,050 /
+CHF 22,680 compulsory-cover salary limit) and does NOT state the employer/employee premium
+split percentage. Those were therefore NOT extracted. Do not infer them from this file.
+
+=== VERBATIM SOURCE QUOTES ===
+"In Switzerland, employers must take out accident insurance for all of their employees.
+However, this occupational insurance does not always cover non-occupational accidents."
+
+"If you have full accident cover via your employer, to save on premiums we recommend
+excluding accident insurance from your basic health insurance."
+
+"In Switzerland, every individual must be insured against accidents. There are a variety of
+ways of doing this:
+
+- If you are a salaried employee, your employer is obliged to take out accident insurance
+for you, and a premium is deducted from your salary. The same system applies to employees
+who work from home and to trainees.
+
+- If you are registered unemployed, providing you receive unemployment benefits you are
+automatically insured via the Swiss National Accident Insurance Fund (Suva) in case of
+accident. The premium is deducted from your benefits.
+
+- It you are self-employed you must take out personal accident insurance.
+
+- In all other cases you are not covered by accident insurance specifically. Instead,
+accidents are covered as a risk under your compulsory private health insurance. This
+applies to stay-at-home partners, children, students and retirees, etc."
+
+"If you work at least eight hours a week for your employer, your accident insurance covers
+occupational accidents and illnesses, and non-occupational accidents occurring during your
+leisure time.
+
+If you work for less than eight hours a week for your employer, your accident insurance
+covers occupational accidents and occupational illnesses only. Accidents that occur on your
+way to and from work are considered to be occupational accidents."
+
+"Your accident insurance will reimburse accident-related medical expenses. You do not have
+to pay a deductible or retention fee yourself. However, if you are insured against
+accidents through your health insurance provider, you will have to pay the deductible and
+retention fee."
+
+"If you are unable to work as the result of an accident, as of the third day following your
+accident you are entitled to a daily allowance corresponding to 80% of your salary."
+
+"If the allowance paid by your accident insurance is lower than this figure, your employer
+must make up the difference. If your insurance benefits correspond to 80% of your salary or
+more, your employer does not have to continue paying your salary."
+
+"The insurer may pay you a disability pension if continuing medical treatment does not offer
+the prospect of a significant improvement in your health. You must be classified as at least
+10% disabled to qualify. This pension may be awarded in addition to a pension under the
+state disability insurance (IV/AI) scheme."
+
+"The insurer may also pay you an integrity and/or helplessness allowance if you need
+permanent assistance to complete everyday tasks."
+
+"If you have had an accident you must notify your employer as soon as possible. The employer
+must in turn notify their insurance company immediately."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Employers in Switzerland are obliged to take out accident insurance for all of their
+    employees, and the premium is deducted from the employee's salary. — evidence quote:
+    "If you are a salaried employee, your employer is obliged to take out accident
+    insurance for you, and a premium is deducted from your salary."
+
+F2. Employees working at least eight hours a week for their employer get cover for
+    occupational accidents and illnesses plus non-occupational accidents in leisure time,
+    whereas those working under eight hours per week get occupational cover only (commuting
+    accidents count as occupational). — evidence quote: "If you work at least eight hours a
+    week for your employer, your accident insurance covers occupational accidents and
+    illnesses, and non-occupational accidents occurring during your leisure time. If you
+    work for less than eight hours a week for your employer, your accident insurance covers
+    occupational accidents and occupational illnesses only."
+
+F3. The accident daily allowance equals 80% of salary and becomes payable from the third
+    day after the accident. — evidence quote: "as of the third day following your accident
+    you are entitled to a daily allowance corresponding to 80% of your salary."
+
+F4. The employer must top up the salary to 80% if the accident insurer's daily allowance is
+    lower than 80%, but need not continue paying salary once benefits reach 80% or more. —
+    evidence quote: "If the allowance paid by your accident insurance is lower than this
+    figure, your employer must make up the difference. If your insurance benefits correspond
+    to 80% of your salary or more, your employer does not have to continue paying your
+    salary."
+
+F5. An accident disability pension requires a minimum assessed disability of 10% and can be
+    paid in addition to the state IV/AI disability pension. — evidence quote: "You must be
+    classified as at least 10% disabled to qualify. This pension may be awarded in addition
+    to a pension under the state disability insurance (IV/AI) scheme."
+
+F6. Accident-related medical costs are reimbursed without any deductible or retention fee
+    where cover comes through accident insurance (unlike cover via health insurance). —
+    evidence quote: "You do not have to pay a deductible or retention fee yourself. However,
+    if you are insured against accidents through your health insurance provider, you will
+    have to pay the deductible and retention fee."
+
+F7. Jobseekers receiving unemployment benefits are automatically accident-insured by the
+    Swiss National Accident Insurance Fund (Suva), with the premium deducted from their
+    benefits. — evidence quote: "If you are registered unemployed, providing you receive
+    unemployment benefits you are automatically insured via the Swiss National Accident
+    Insurance Fund (Suva) in case of accident. The premium is deducted from your benefits."
+
+F8. Self-employed persons must arrange their own personal accident insurance. — evidence
+    quote: "It you are self-employed you must take out personal accident insurance."

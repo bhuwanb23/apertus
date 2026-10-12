@@ -1,0 +1,38 @@
+SOURCE_ID: S008
+URL: https://www.ch.ch/en/political-system/cantons/cantonal-government-role-and-composition/
+TITLE: Cantonal government: role and composition
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON DISCOVERY: https://www.ch.ch/en/political-system/cantons/ returned HTTP 200 but is a hub/index page listing three sub-pages (Calendar of cantonal votes; Cantonal government: role and composition; Cantonal parliament: role and composition) with no facts of its own. This file covers the cantonal government sub-page; the cantonal parliament sub-page is saved separately as S008b.
+
+=== VERBATIM SOURCE QUOTES ===
+"As at the federal level, the cantons also maintain a separation of powers between the legislature, the executive and the judiciary. The executive at cantonal level is the cantonal government."
+
+"Terminology: the official name given to the cantonal government varies from canton to canton."
+
+"There are between five and seven members in each cantonal government."
+
+"Each council member usually runs a department (such as the department of finance, department of health, department of education, etc.), just as at federal level."
+
+"The cantonal government's main task is to manage cantonal affairs. It plans and implements cantonal projects and activities, while coordinating these with the activities of the Confederation and the communes."
+
+"It is also responsible for implementing cantonal and federal legislation and runs the cantonal administration by exercising the powers it is assigned by the Federal Constitution."
+
+"The cantonal government is also responsible for preparing and managing the canton's budget."
+
+"The members of the cantonal government hold regular scheduled meetings, usually behind closed doors. During these meetings, they reach decisions as a collegial body on the administration of the canton. All members of the cantonal government must defend the position of the collegial body, regardless of their personal opinion."
+
+"Cantonal governments usually have a different president each year - the position rotating according to the length of time the government members have been in office. The president does not enjoy any special privileges or status, apart from chairing cantonal government meetings."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Each cantonal government has between five and seven members. — evidence quote: "There are between five and seven members in each cantonal government."
+F2. At cantonal level the executive branch is the cantonal government, and cantons maintain a separation of powers between legislature, executive and judiciary. — evidence quote: "As at the federal level, the cantons also maintain a separation of powers between the legislature, the executive and the judiciary. The executive at cantonal level is the cantonal government."
+F3. CANTONAL-VARIABLE: The official name of the cantonal government varies from canton to canton. — evidence quote: "Terminology: the official name given to the cantonal government varies from canton to canton."
+F4. Each cantonal government member usually runs a department, just as at federal level. — evidence quote: "Each council member usually runs a department (such as the department of finance, department of health, department of education, etc.), just as at federal level."
+F5. The cantonal government's main task is to manage cantonal affairs, coordinating them with the Confederation and the communes. — evidence quote: "The cantonal government's main task is to manage cantonal affairs. It plans and implements cantonal projects and activities, while coordinating these with the activities of the Confederation and the communes."
+F6. The cantonal government is responsible for preparing and managing the canton's budget. — evidence quote: "The cantonal government is also responsible for preparing and managing the canton's budget."
+F7. Cantonal government members decide collegially and must defend the collegial body's position regardless of their personal opinion. — evidence quote: "During these meetings, they reach decisions as a collegial body on the administration of the canton. All members of the cantonal government must defend the position of the collegial body, regardless of their personal opinion."
+F8. CANTONAL-VARIABLE: The presidency of a cantonal government usually rotates annually and carries no special privileges beyond chairing meetings. — evidence quote: "Cantonal governments usually have a different president each year - the position rotating according to the length of time the government members have been in office. The president does not enjoy any special privileges or status, apart from chairing cantonal government meetings."
+F9. Cantonal government meetings usually take place behind closed doors. — evidence quote: "The members of the cantonal government hold regular scheduled meetings, usually behind closed doors."

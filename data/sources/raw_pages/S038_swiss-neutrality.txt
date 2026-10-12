@@ -1,0 +1,43 @@
+SOURCE_ID: S038
+URL: https://www.bk.admin.ch/dam/en/sd-web/9OAKySUiPAfR/buku2024.pdf
+TITLE: Swiss Confederation – a brief guide 2024 (Federal Chancellery BK), sections "Switzerland / Neutrality" (pp. 8, 11, 14–15)
+CATEGORY: history
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON SUBSTITUTION: https://www.eda.admin.ch/eda/en/fdfa/foreign-policy/neutrality.html,
+https://www.eda.admin.ch/aboutswitzerland/en/home/foreign-policy.html and https://www.admin.ch/en/switzerlands-policy-of-neutrality
+all returned HTTP 403 / bot-blocked and could not be fetched (also via direct HTTP with browser UA).
+Substituted the official English-language publication of the Federal Chancellery (bk.admin.ch PDF).
+The Federal Act on Safeguarding Switzerland's Neutrality (SR 0.235) is not covered on this page.
+Line-break hyphenation in the PDF has been joined; wording is otherwise verbatim.
+
+=== VERBATIM SOURCE QUOTES ===
+"Switzerland is a small country with a population of 8.9 million people. It has 4 language regions and 26 cantons, which are largely independent and consist of numerous local authorities or communes. Multilingualism and federalism have their roots in the past, yet still shape Switzerland today. Its neutrality is recognised by all states of the world."
+
+"Switzerland developed over the centuries from a collection of different alliances to a confederation of states and finally to the federal state we know today. Its national borders and neutrality were established and recognised internationally in 1815."
+
+"1815 Federal Treaty — Neutrality and alliance of states: With the defeat of Napoleon, the great European powers recognised Swiss neutrality and set Switzerland's borders as they are today. The Federal Treaty of 1815 brought together the various federal alliances into a single confederation of states."
+
+"Switzerland is a neutral state: it may not take part in armed conflicts between two states or enter into military alliances. Switzerland's neutrality is recognised worldwide, which is why it is often asked to mediate in conflicts or exercise protective power mandates."
+
+"Switzerland is not a member of NATO, but cooperates with it within the framework of the Partnership for Peace and the Euro-Atlantic Partnership Council."
+
+"Council of Europe … Founded in 1949, Switzerland a member since 1963"
+
+"The European Free Trade Association promotes free trade between its members Switzerland, Liechtenstein, Iceland and Norway. Together with the EU countries, the EFTA countries – excluding Switzerland – form the European Economic Area (EEA)."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Switzerland's national borders and its neutrality were established and internationally recognised in 1815. — evidence quote: "Its national borders and neutrality were established and recognised internationally in 1815."
+
+F2. After Napoleon's defeat the great European powers recognised Swiss neutrality, and the Federal Treaty of 1815 united the various federal alliances into a single confederation of states. — evidence quote: "With the defeat of Napoleon, the great European powers recognised Swiss neutrality and set Switzerland's borders as they are today. The Federal Treaty of 1815 brought together the various federal alliances into a single confederation of states."
+
+F3. A neutral state may not take part in armed conflicts between two states or enter into military alliances; because its neutrality is recognised worldwide Switzerland is often asked to mediate. — evidence quote: "Switzerland is a neutral state: it may not take part in armed conflicts between two states or enter into military alliances. Switzerland's neutrality is recognised worldwide, which is why it is often asked to mediate in conflicts or exercise protective power mandates."
+
+F4. Switzerland's neutrality is recognised by all states of the world; the country has 8.9 million inhabitants, 4 language regions and 26 cantons. — evidence quote: "Switzerland is a small country with a population of 8.9 million people. It has 4 language regions and 26 cantons … Its neutrality is recognised by all states of the world."
+
+F5. Switzerland is not a member of NATO but cooperates within the Partnership for Peace and the Euro-Atlantic Partnership Council. — evidence quote: "Switzerland is not a member of NATO, but cooperates with it within the framework of the Partnership for Peace and the Euro-Atlantic Partnership Council."
+
+F6. Switzerland has been a member of the Council of Europe since 1963 (organisation founded 1949). — evidence quote: "Council of Europe … Founded in 1949, Switzerland a member since 1963"
+
+F7. Switzerland is an EFTA member together with Liechtenstein, Iceland and Norway; only the EFTA states excluding Switzerland form the European Economic Area with the EU countries. — evidence quote: "The European Free Trade Association promotes free trade between its members Switzerland, Liechtenstein, Iceland and Norway. Together with the EU countries, the EFTA countries – excluding Switzerland – form the European Economic Area (EEA)."

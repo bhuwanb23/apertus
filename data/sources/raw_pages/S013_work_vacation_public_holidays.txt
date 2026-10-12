@@ -1,0 +1,74 @@
+SOURCE_ID: S013
+URL: https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/
+TITLE: Right to holidays, annual leave and public holidays in Switzerland
+CATEGORY: law
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON URL DISCOVERY:
+- /en/employment/ -> HTTP 404. The live ch.ch English top-level theme slug is /en/work/
+  ("Work"), reached from https://www.ch.ch/en/ .
+- /en/work/working-hours-and-vacation/ -> HTTP 404. Correct hub is /en/work/working-hours/ .
+- Page fetched is the "Vacation, public holidays and absences from work" sub-page of that hub.
+
+=== VERBATIM SOURCE QUOTES ===
+
+"In Switzerland, all workers are entitled to at least 4 weeks' holidays per year. You can take days or hours off for special events."
+
+"### How many weeks?
+Regardless of whether you work full or part-time, you are entitled to at least four weeks' vacation per year.
+Up to the age of 20, you are entitled to at least five weeks' vacation.
+However, if your employer agrees, or under a collective employment agreement, you may be given even more vacation time."
+
+"### When can you take your vacation days?
+You need your employer's approval to take time off. If your holidays are not compatible with the needs or interests of the company, your boss can ask you to change them."
+
+"### Vacation time and illness
+The purpose of vacation time is to allow you to rest. If, during your vacation, you fall ill or have a serious accident that prevents you from relaxing, you are entitled to postpone your vacation provided you present a medical certificate."
+
+"### Taking vacation when you are about to quit your job
+Generally, if you have given notice that you are quitting your job, you can take any outstanding days of vacation during the period of notice. However, your employer can refuse to allow you to take time off if you are needed at work because of an exceptional situation.
+In some cases, you can agree with your employer on a cash payment in lieu of any remaining vacation days."
+
+"Public holidays
+The first of August - Swiss national day - is Switzerland's only national public holiday.
+The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton.
+If a public holiday falls on a non-working day, such as a Saturday or Sunday, you cannot redeem the holiday time during the week.
+If a public holiday falls during your vacation, that day does not count as a day of vacation."
+
+"In the cases listed below, you can take time off work without having to make up the hours/days that you are absent from work:
+- A court appearance or similar legal appointment
+- Public duties (working as a member of Parliament, local councillor, etc.)
+- Marriage
+- Death of a close relative
+- Moving house
+- Birth of your child
+- Care of a close relative
+- Looking after a sick child
+The law does not clearly define how many hours or days you can take off. Ask your employer about the rules that apply in your company."
+
+"Please note: if you are absent from work or get to work late for a non-work-related reason, such as a traffic jam or a cancelled train, your employer is not required to count the time lost as working hours and you will need to make them up."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. All workers in Switzerland are entitled to at least 4 weeks of vacation per year, regardless of full-time or part-time. — evidence quote: "Regardless of whether you work full or part-time, you are entitled to at least four weeks' vacation per year."
+
+F2. Workers up to the age of 20 are entitled to at least 5 weeks of vacation per year. — evidence quote: "Up to the age of 20, you are entitled to at least five weeks' vacation."
+
+F3. 1 August is the only national public holiday in Switzerland. — evidence quote: "The first of August - Swiss national day - is Switzerland's only national public holiday."
+
+F4. CANTONAL VARIABLE — each canton may add up to eight further public holidays, so the total number of public holidays differs by canton. Do NOT present "8 additional public holidays" or any total public-holiday count as a nationwide figure. — evidence quote: "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton."
+
+F5. Vacation must be approved by the employer, and the employer may ask the employee to change vacation dates that clash with company needs. — evidence quote: "You need your employer's approval to take time off. If your holidays are not compatible with the needs or interests of the company, your boss can ask you to change them."
+
+F6. A public holiday that falls during vacation does not reduce the vacation entitlement (it does not count as a vacation day). — evidence quote: "If a public holiday falls during your vacation, that day does not count as a day of vacation."
+
+F7. A public holiday falling on a non-working day such as a Saturday or Sunday cannot be redeemed during the week. — evidence quote: "If a public holiday falls on a non-working day, such as a Saturday or Sunday, you cannot redeem the holiday time during the week."
+
+F8. The law does not fix a number of days for absences such as marriage, moving house, or caring for a sick child; the employer sets the rules. — evidence quote: "The law does not clearly define how many hours or days you can take off. Ask your employer about the rules that apply in your company."
+
+=== COVERAGE GAPS (facts requested by the brief but NOT on this page — do not source from memory) ===
+- Maximum weekly working hours: not stated on this page.
+- Written employment contract requirement: not stated on this page.
+- Notice periods: only referenced by link to /en/work/termination-or-dismissal/ , no figures given here.
+- Salary payment: not on this page.
+(Sibling pages fetched in the same session and available for a follow-up source ID: /en/work/working-hours/rest-periods-and-breaks-at-work/ )

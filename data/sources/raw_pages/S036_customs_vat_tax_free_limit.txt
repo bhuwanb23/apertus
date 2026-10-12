@@ -1,0 +1,57 @@
+SOURCE_ID: S036
+URL: https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit
+TITLE: Value added tax (VAT): CHF 150 tax-free limit (Federal Office for Customs and Border Security FOCBS / BAZG)
+CATEGORY: services
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"When you return from abroad or enter Switzerland, goods up to a total value of CHF 150 may be imported VAT-free (tax-free limit), provided they are intended for your personal use or as gifts."
+
+"The tax-free limit can be claimed only once per person and per day. It applies also for children."
+
+"Goods that are not intended for your personal use or as gifts are subject to VAT."
+
+"If the total value exceeds CHF 150, you must pay VAT on the total value of the imported goods."
+
+"Individual items worth more than CHF 150 are always subject to VAT, regardless of the number of people."
+
+"VAT is 8.1%. A reduced rate of 2.6% applies for certain goods (e.g. foodstuffs, including non-alcoholic beverages, books, magazines and medicines)."
+
+"It is calculated on the amount you paid for the goods. The basis for this is the invoice, receipt or purchase contract. Otherwise, the market value is taxed, e.g. in the case of gifts. The market value refers to the sum a third party would have had to pay to buy the item."
+
+"If the total value exceeds CHF 150, you must pay VAT on the total value of the imported goods. Example: The total value is CHF 400. The threshold of CHF 150 is exceeded. The VAT calculation is therefore based on CHF 400."
+
+"In principle, all goods carried are taken into account for the granting of the tax-free limit, including duty-free foodstuffs, tobacco products, alcoholic beverages, household pets and repairs or maintenance work carried out abroad on your own private vehicle."
+
+"The value of personal effects, travelling provisions and fuel for your vehicle is not included."
+
+"Please note: In addition to VAT, you must pay customs duties if the goods you are carrying exceed the duty-free allowances for alcohol, tobacco products and certain foodstuffs."
+
+"Different regulations apply to goods that are ordered abroad (e.g. online) and delivered to you by post or courier service."
+
+"To calculate the amount of VAT, we recommend our QuickZoll app."
+
+"Information office for customs regulations +41 58 467 15 15"
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The Swiss import VAT de-minimis (tax-free limit) for goods carried in by travellers is CHF 150 of total value, not CHF 100 — goods up to CHF 150 may be imported VAT-free if for personal use or as gifts. — evidence quote: "goods up to a total value of CHF 150 may be imported VAT-free (tax-free limit), provided they are intended for your personal use or as gifts."
+
+F2. Standard Swiss VAT rate is 8.1%, with a reduced rate of 2.6% for certain goods (foodstuffs incl. non-alcoholic beverages, books, magazines, medicines). — evidence quote: "VAT is 8.1%. A reduced rate of 2.6% applies for certain goods (e.g. foodstuffs, including non-alcoholic beverages, books, magazines and medicines)."
+
+F3. The CHF 150 allowance is per person, per day, only once, and includes children; it does not apply to goods not intended for personal use or as gifts. — evidence quote: "The tax-free limit can be claimed only once per person and per day. It applies also for children." / "Goods that are not intended for your personal use or as gifts are subject to VAT."
+
+F4. Above the threshold, VAT is charged on the TOTAL value, not just the excess — worked example: CHF 400 goods → VAT computed on CHF 400. A single item worth more than CHF 150 is always taxable regardless of the number of travellers. — evidence quote: "If the total value exceeds CHF 150, you must pay VAT on the total value of the imported goods. Example: The total value is CHF 400." / "Individual items worth more than CHF 150 are always subject to VAT, regardless of the number of people."
+
+F5. VAT for gifts and free-of-charge items is assessed on the market value (what a third party would have had to pay), while purchases are taxed on the invoice/receipt/purchase-contract amount. — evidence quote: "Otherwise, the market value is taxed, e.g. in the case of gifts. The market value refers to the sum a third party would have had to pay to buy the item."
+
+F6. Personal effects, travelling provisions and vehicle fuel are excluded from the tax-free-limit calculation, whereas duty-free foodstuffs, tobacco, alcohol, pets and repairs performed abroad are counted. — evidence quote: "In principle, all goods carried are taken into account for the granting of the tax-free limit, including duty-free foodstuffs, tobacco products, alcoholic beverages, household pets and repairs or maintenance work carried out abroad on your own private vehicle." / "The value of personal effects, travelling provisions and fuel for your vehicle is not included."
+
+F7. VAT is separate from customs duties: duties fall due if the goods exceed the duty-free allowances for alcohol, tobacco and certain foodstuffs; duty-free allowances are the "allowance" regime whereas CHF 150 is the VAT "tax-free limit". — evidence quote: "In addition to VAT, you must pay customs duties if the goods you are carrying exceed the duty-free allowances for alcohol, tobacco products and certain foodstuffs."
+
+F8. Different rules apply to goods ordered abroad and delivered by post or courier, and the FOCBS QuickZoll app can be used to calculate and pay import VAT in advance. — evidence quote: "Different regulations apply to goods that are ordered abroad (e.g. online) and delivered to you by post or courier service." / "we recommend our QuickZoll app"
+
+CAVEATS / NOT FOUND:
+- The brief's "CHF 100 de-minimis threshold" does NOT match the official page: the stated VAT tax-free limit is CHF 150. Any MCQ must use CHF 150.
+- No Swiss Post page was harvested: this source covers customs/VAT only; post.ch was not used for S036, so no claim about Swiss Post's corporate or ownership status is made here.
+- The reduced 2.6% rate applies to a listed set of goods; the specific full list is on the related BAZG page "Import tax: taxable objects and tax rates".

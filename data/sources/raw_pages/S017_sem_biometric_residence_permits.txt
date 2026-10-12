@@ -1,0 +1,90 @@
+SOURCE_ID: S017
+URL: https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/biometr_auslaenderausweis.html
+TITLE: Biometric residence permits for foreign nationals
+CATEGORY: law
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON URL DISCOVERY:
+- Requested https://www.sem.admin.ch/sem/en/home/themen/aufenthalt.html returned HTTP 200 but is a thin
+  navigation page whose only substantive sentence is the >3-month / working permit threshold; it does not
+  describe permit categories. Its sub-navigation pointed to the page saved here, which names the L, B and C
+  permit categories explicitly.
+- Related confirmed-200 sibling pages (useful for a follow-up source ID):
+  /sem/en/home/themen/aufenthalt/eu_efta.html and
+  /sem/en/home/themen/aufenthalt/nicht_eu_efta.html
+  (the latter lists Permit Ci, F, G, N and S for third-state nationals).
+
+=== VERBATIM SOURCE QUOTES ===
+
+"# Biometric residence permits for foreign nationals
+
+### Recipients of biometric residence permits for foreigners
+- Third-state nationals
+- Third-state nationals who are family members of Swiss citizens
+- Third-state nationals who are family members of EU/EFTA citizens
+
+Biometric residence permits shall be issued to holders of the following categories of residence permit:
+- Short-term residence permits (L)
+- Residence permits (B)
+- Settlement permits (C)"
+
+"### Compliance with EU requirements
+When it signed the Schengen Agreement on 12 December 2008, Switzerland began issuing a new residence permit in credit-card format to foreign nationals. In a subsequent development in early 2011, a microchip was added to these residence permits for the purpose of storing biometric data."
+
+"Switzerland introduced these biometric residence permits as part of a further development of Schengen acquis and to keep up with the global trend of using state-of-the-art technology to enhance document security and prevent fraudulent use."
+
+"The new biometric residence permit indicates the foreigner's status in Switzerland. When presented with a valid national passport, the biometric residence permit entitles the holder to travel throughout the Schengen area without a visa."
+
+"### Chip
+A symbol on the upper left-hand side of the front of the card indicates that the residence permit contains an embedded microchip with biometric data: two digital fingerprints and a facial image. The data are stored for five years and may only be used for the purpose of issuing a new biometric residence permit without the need for additional data processing."
+
+"The biometric residence permit for foreign nationals meets stringent international standards. The data are protected by a secure access control and an electronic key. The fingerprints are especially protected. The microchip does not allow a person to be located or monitored."
+
+"### Application procedure
+The application procedure and issuance of a biometric residence permit are decided by the Canton of residence. Biometric data are obtained from the person by the corresponding authority in the Canton of residence. Identification of the applicant is based on his/her passport."
+
+"Biometric residence permits for foreigners are produced centrally by a single company and are delivered or issued to the applicant by the usual means. Residence permit fees cover the following: application processing, issuance of residence permit and capture of biometric data."
+
+"First-generation residence permits for foreign nationals (i.e. no biometric data stored) shall remain valid until the expiry date. The new biometric residence permit shall only be issued after the previous residence permit has expired or if changes in personal data require issuance of a new residence permit."
+
+=== VERBATIM FROM THE PARENT "Residence" PAGE (sem/en/home/themen/aufenthalt.html, HTTP 200) ===
+Anyone who works during his/her stay in Switzerland or who remains in Switzerland for longer than three
+months requires a permit. Residence permits are issued by the Cantonal Migration Offices. A distinction is made
+between short-term residence permits (less than 1 year), annual residence permits (limited) and permanent
+residence permits (unlimited).
+
+"Third-state nationals (L, B, C) see Biometric residence permits for foreign nationals."
+  -- from /sem/en/home/themen/aufenthalt/nicht_eu_efta.html
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The three residence permit categories that receive a biometric permit are: Short-term residence permit (L), Residence permit (B) and Settlement permit (C). — evidence quote: "Biometric residence permits shall be issued to holders of the following categories of residence permit: - Short-term residence permits (L) - Residence permits (B) - Settlement permits (C)"
+
+F2. Holders of an L, B or C permit who are third-state nationals — or family members of Swiss or EU/EFTA citizens — are the recipients of biometric residence permits. — evidence quote: "Third-state nationals / Third-state nationals who are family members of Swiss citizens / Third-state nationals who are family members of EU/EFTA citizens"
+
+F3. Switzerland signed the Schengen Agreement on 12 December 2008 and began issuing the new credit-card-format residence permit then; a microchip for biometric data was added in early 2011. — evidence quote: "When it signed the Schengen Agreement on 12 December 2008, Switzerland began issuing a new residence permit in credit-card format to foreign nationals. In a subsequent development in early 2011, a microchip was added to these residence permits for the purpose of storing biometric data."
+
+F4. The biometric chip stores two digital fingerprints and a facial image, and the data are retained for five years, usable only to issue a new permit. — evidence quote: "an embedded microchip with biometric data: two digital fingerprints and a facial image. The data are stored for five years and may only be used for the purpose of issuing a new biometric residence permit without the need for additional data processing."
+
+F5. A valid biometric residence permit, presented with a valid national passport, entitles the holder to travel throughout the Schengen area without a visa. — evidence quote: "When presented with a valid national passport, the biometric residence permit entitles the holder to travel throughout the Schengen area without a visa."
+
+F6. CANTONAL VARIABLE — the application procedure and issuance of a biometric residence permit are decided by the CANTON of residence, and biometric data are captured by that canton's authority. Do NOT present a single nationwide procedure or fee. — evidence quote: "The application procedure and issuance of a biometric residence permit are decided by the Canton of residence. Biometric data are obtained from the person by the corresponding authority in the Canton of residence."
+
+F7. Residence permit fees cover application processing, issuance of the permit and capture of biometric data; the permit fee is therefore a single bundle rather than separate items. — evidence quote: "Residence permit fees cover the following: application processing, issuance of residence permit and capture of biometric data."
+
+F8. Parent-page threshold: anyone who works during their stay in Switzerland, or who remains in Switzerland for longer than three months, requires a permit; permits are issued by the Cantonal Migration Offices. — evidence quote: "Anyone who works during his/her stay in Switzerland or who remains in Switzerland for longer than three months requires a permit. Residence permits are issued by the Cantonal Migration Offices." (URL: https://www.sem.admin.ch/sem/en/home/themen/aufenthalt.html)
+
+F9. Parent-page duration tiers: residence permits are distinguished as short-term (less than 1 year), annual (limited) and permanent (unlimited). — evidence quote: "A distinction is made between short-term residence permits (less than 1 year), annual residence permits (limited) and permanent residence permits (unlimited)." (URL: https://www.sem.admin.ch/sem/en/home/themen/aufenthalt.html)
+
+F10. Permits for third-state nationals also include categories Ci (residence permit with gainful employment), F (provisionally admitted foreigners), G (cross-border commuter permit), N (permit for asylum-seekers) and S (people in need of protection). — evidence quote: "Permit Ci (residence permit with gainful employment) / Permit F (provisionally admitted foreigners) / Permit G (cross-border commuter permit) / Permit N (permit for asylum-seekers) / Permit S (people in need of protection)" (URL: https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/nicht_eu_efta.html)
+
+=== COVERAGE GAPS / DO NOT OVER-CLAIM ===
+- This source does NOT state the substantive eligibility criteria for permit B, C, L or G (e.g. how many years of
+  residence earn a C permit). Only the category NAMES and the biometric-document rules are stated here.
+  Any MCQ item about "who qualifies for a C permit" is NOT supported by this page.
+- Sibling page states the new credit-card format without a chip applies to EU/EFTA members from November 2019
+  (rollout ended February 2022) and to third-country holders of Category G, and working spouses/children of
+  foreign representations and international organisations (Category Ci); the S card was issued from February 2022,
+  with F and N cards in a staggered manner as of December 2022
+  (URL: https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/nicht_eu_efta.html).
+- CANTONAL VARIABLE: issuing authority is the cantonal Migration Office / canton of residence.

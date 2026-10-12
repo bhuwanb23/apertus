@@ -1,0 +1,172 @@
+SOURCE_ID: S023
+URL: https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan
+TITLE: Old-age provision in occupational benefits plans (Federal Social Insurance Office FSIO / BSV)
+CATEGORY: health
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON REQUESTED URL: https://www.bsv.admin.ch/bsv/en/home/themen/sozialversicherung/berufliche-vorsorge.html
+returned HTTP 404. BSV has migrated to a new URL scheme. Replacement found and verified at
+the URL above (page published on 5 January 2026).
+
+=== VERBATIM SOURCE QUOTES ===
+"Occupational pension funds, also called the 2nd pillar, complete the basic 1st pillar
+AVS/AI/APG system (old age, disability, loss of income). Together, these two insurance
+systems should ensure that retired people to a large extent maintain their former standard
+of living"
+
+"The LPP/BVG is mandatory for salaried persons already subject to the AVS, with an annual
+income of at least CHF 22'680 from 2025. This is the threshold of the compulsory
+occupational benefits scheme and corresponds to 3/4 of the maximum AVS/AHV retirement
+pension (2026: CHF 2,520 x 12 = CHF 30,240; 3/4 of this = CHF 22,680)."
+
+"The obligation to take out insurance sets in with gainful employment, after reaching 17 at
+the earliest. Until the employee reaches the age of 24, contributions only cover the risks
+of death and disability. From 1 January after the employee reaches the age of 24,
+additional savings are made for the retirement pension."
+
+"Certain groups of people are not subject to the mandatory scheme: the self-employed,
+salaried persons with a job contract that does not exceed three months, family members of a
+person operating an agricultural establishment in which they are employed, persons who are
+disabled to at least 70 % according to the provisions of the AI. If they want to, such
+persons may take out minimal insurance on an optional basis."
+
+"Capital constituted in order to finance old age benefits is called old age assets. These
+assets are made up of annual old age bonuses on which an interest rate of at least 1.25 %
+from 2024 is paid (2017-2023: 1 %; 2016: 1.25%; 2015: 1.75 %). These old age bonuses are
+calculated as a percentage of the coordinated salary according to the age and sex of the
+insured person."
+
+"The LPP/BVG is based on the principle of collective financing: the contribution of the
+employer must be at least equal to the sum of contributions paid by all the employees.
+Similarly as for the AVS, all payments are made by employers (their own part, and the
+employee's part, which is deducted directly from the salary)."
+
+"Old age insurance under the 2nd pillar is based on individual savings. The savings process
+sets in when the insured person reaches the age of 25 and presupposes an annual income over
+the established threshold of CHF 21'510 until 2022, CHF 22'050 until 2024 and CHF 22'680
+from 2025. ... The constituted capital is converted to an annual old age pension on the
+basis of a conversion factor of 6,80% for men and women."
+
+"Since the introduction of the AVS/AHV 21 reform (January 1, 2024), a flexible pension
+system has been in place in the 1st and 2nd pillars.
+
+The reform replaces the current different ordinary retirement ages for men (65) and women
+(64) with an identical reference age of 65 for all insured persons.
+
+The reference age for women will be gradually increased as follows:
+
+- women born in 1961: 64 years and 3 months;
+- women born in 1962: 64 years and 6 months;
+- women born in 1963: 64 years and 9 months;
+- women born in 1964 or later: 65 years."
+
+"Early retirement: Early retirement is possible from the age of 63. Occupational benefits
+institutions may stipulate a lower age at which benefits can be received (but no earlier
+than 58)."
+
+"Deferred retirement: If members continue to work after the age of 65, they have the option
+of deferring their retirement benefits until the end of their working life, but no later
+than the age of 70."
+
+"Partial retirement: allows insured persons to receive their retirement benefits in the
+form of a pension in up to three stages. The pension fund may authorise more than three
+stages. If the retirement benefit is in the form of a lump-sum payment, it may be
+withdrawn in no more than three stages."
+
+"The insured may also request that a quarter of their assets be paid out as capital. The
+pension fund may also rule that all old age, survivors' or disability benefits may, upon
+request, be paid as capital, even if the sum is more than one fourth of the assets."
+
+"In the event of the death of the old age pension recipient, the child or children qualify
+for an orphan's pension
+
+The pension is paid until age 18 or 25 at the latest if studies or apprenticeship
+
+The child's pension is equivalent to 20% of the retirement pension for each child per year."
+
+"2nd pillar is financed through capitalisation. Throughout their actives lives, all age
+categories constitute a capital. A cover capital is invested to guarantee the payment of
+future benefits. The state contributes only indirectly to the financing of pension funds, by
+granting tax exemption on the contributions and 2nd pillar assets."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+
+NOTE: This page does NOT state pillar 3a contribution limits. Those are on source S022
+(BSV "Old-age insurance system": CHF 7,258 for 2025, or 20% of earnings up to CHF 36,288
+without occupational cover).
+
+F1. BVG/LPP compulsory occupational pension cover starts at an annual income of at least
+    CHF 22,680 from 2025. (TIME-SENSITIVE: page states the threshold history — CHF 21,510
+    until 2022, CHF 22,050 until 2024, CHF 22,680 from 2025.) — evidence quote: "The
+    LPP/BVG is mandatory for salaried persons already subject to the AVS, with an annual
+    income of at least CHF 22'680 from 2025."
+
+F2. The BVG entry threshold is defined as three quarters of the maximum AVS/AHV retirement
+    pension: for 2026, CHF 2,520 x 12 = CHF 30,240, and 3/4 of that = CHF 22,680.
+    (TIME-SENSITIVE: the maximum pension component CHF 2,520 is the 2026 figure.) — evidence
+    quote: "This is the threshold of the compulsory occupational benefits scheme and
+    corresponds to 3/4 of the maximum AVS/AHV retirement pension (2026: CHF 2,520 x 12 =
+    CHF 30,240; 3/4 of this = CHF 22,680)."
+
+F3. The BVG compulsory-coverage salary threshold history is CHF 21,510 until 2022, CHF 22,050
+    until 2024, and CHF 22,680 from 2025. (TIME-SENSITIVE: explicit year series.) — evidence
+    quote: "presupposes an annual income over the established threshold of CHF 21'510 until
+    2022, CHF 22'050 until 2024 and CHF 22'680 from 2025."
+
+F4. Since the AVS/AHV 21 reform (1 January 2024), the differing ordinary retirement ages for
+    men (65) and women (64) are replaced by an identical reference age of 65 for all insured
+    persons. (TIME-SENSITIVE: reform in force since 1 January 2024.) — evidence quote: "The
+    reform replaces the current different ordinary retirement ages for men (65) and women
+    (64) with an identical reference age of 65 for all insured persons."
+
+F5. The female reference age is raised in three-month steps by birth year: 1961 = 64 years 3
+    months; 1962 = 64 years 6 months; 1963 = 64 years 9 months; 1964 or later = 65 years.
+    (TIME-SENSITIVE: applies to fixed birth cohorts.) — evidence quote: "women born in 1961:
+    64 years and 3 months; women born in 1962: 64 years and 6 months; women born in 1963: 64
+    years and 9 months; women born in 1964 or later: 65 years."
+
+F6. In the 2nd pillar, age at entry is after 17; until age 24 contributions cover only death
+    and disability risks, and retirement savings begin on 1 January after the employee turns
+    25. — evidence quote: "The obligation to take out insurance sets in with gainful
+    employment, after reaching 17 at the earliest. Until the employee reaches the age of 24,
+    contributions only cover the risks of death and disability. From 1 January after the
+    employee reaches the age of 24, additional savings are made for the retirement pension."
+
+F7. Second-pillar old-age savings are converted into an annual pension using a conversion
+    factor of 6.80% for both men and women. — evidence quote: "The constituted capital is
+    converted to an annual old age pension on the basis of a conversion factor of 6,80% for
+    men and women."
+
+F8. In the 2nd pillar, early retirement is possible from age 63, but a fund may set a lower
+    minimum, not earlier than 58; deferred retirement may run until no later than age 70. —
+    evidence quote: "Early retirement is possible from the age of 63. Occupational benefits
+    institutions may stipulate a lower age at which benefits can be received (but no
+    earlier than 58). ... they have the option of deferring their retirement benefits until
+    the end of their working life, but no later than the age of 70."
+
+F9. Persons excluded from mandatory BVG cover are: the self-employed, employees on contracts
+    of three months or less, family members working on an agricultural establishment, and
+    persons at least 70% disabled under AI provisions. — evidence quote: "Certain groups of
+    people are not subject to the mandatory scheme: the self-employed, salaried persons with
+    a job contract that does not exceed three months, family members of a person operating an
+    agricultural establishment in which they are employed, persons who are disabled to at
+    least 70 % according to the provisions of the AI."
+
+F10. The 2nd pillar is financed by capitalisation with a collective-financing principle: the
+    employer's contribution must be at least equal to the sum of all employee contributions.
+    — evidence quote: "The LPP/BVG is based on the principle of collective financing: the
+    contribution of the employer must be at least equal to the sum of contributions paid by
+    all the employees."
+
+F11. The 2nd pillar is funded (capitalisation), and the state supports it only indirectly
+    through tax exemption of contributions and assets. — evidence quote: "2nd pillar is
+    financed through capitalisation. ... The state contributes only indirectly to the
+    financing of pension funds, by granting tax exemption on the contributions and 2nd
+    pillar assets."
+
+F12. A child's orphan's pension under the occupational pension scheme equals 20% of the
+    retirement pension per child per year, paid until age 18 or 25 at the latest if in
+    studies or apprenticeship. — evidence quote: "The child's pension is equivalent to 20% of
+    the retirement pension for each child per year. ... The pension is paid until age 18 or
+    25 at the latest if studies or apprenticeship"

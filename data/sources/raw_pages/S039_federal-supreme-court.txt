@@ -1,0 +1,55 @@
+SOURCE_ID: S039
+URL: https://www.bger.ch/files/live/sites/tfl/files/pdf/Divers/Flyer_150_Years_SFSC.pdf
+TITLE: An anniversary for the people – The Swiss Federal Supreme Court celebrates its 150th anniversary in 2025 (Bundesgericht / Federal Supreme Court, official brochure)
+CATEGORY: history
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON SUBSTITUTION: https://www.bger.ch/en/home.html could not be fetched — the HTML site is behind an Incapsula
+challenge (HTTP 200 with an empty JS challenge body). Used the Federal Supreme Court's own official
+150-year anniversary brochure (PDF on bger.ch), downloaded successfully. Supplementary official source
+fetched in the same session: https://www.bstger.ch/en/il-tribunale/cronistoria.html (Federal Criminal Court,
+History) — quote included as F9. The court's official languages are not stated on either page (gap noted).
+Line-break hyphenation in the PDF has been joined; wording is otherwise verbatim.
+
+=== VERBATIM SOURCE QUOTES ===
+"Although the modern federal state of 1848 already had a supreme court, its powers were extremely modest, which is why it was only called upon to rule in a limited number of cases. That supreme court also had no fixed location and only convened as and when required."
+
+"It was only with the 1874 Constitution, which came into force in 1875, that the Swiss Federal Supreme Court became a permanent court, which, as the supreme judicial authority of the Confederation, had to ensure the civil liberties and fundamental rights of citizens as well as the uniform application of federal law."
+
+"As a concession to the French-speaking liberals, the seat of the Swiss Federal Supreme Court was assigned to Lausanne. At the beginning of its existence, a total of nine federal judges worked in a room of the former casino, the 'Casino de Derrière-Bourg'. These regular judges were prohibited from engaging in any other activity. They were supported by two court clerks."
+
+"In 1887, the Swiss Federal Supreme Court therefore moved into a purpose-built structure on the Esplanade de Montbenon."
+
+"Due to the outbreak of the First World War, the new courthouse could not be built until 1922. The striking Neoclassical building in the Mon-Repos park still shapes our image of the Swiss Federal Supreme Court today."
+
+"The independence and role of the Swiss Federal Supreme Court was further strengthened by the new Federal Constitution of 1999. In 2007, the former Swiss Federal Insurance Court (EVG) was integrated into the Swiss Federal Supreme Court."
+
+"The Swiss Federal Supreme Court, with its sites in Lausanne and Lucerne, is now the workplace of 40 federal judges and around 375 employees. These include around 175 court clerks."
+
+"The tasks of the Swiss Federal Supreme Court — The Swiss Federal Supreme Court is Switzerland's highest court."
+
+"In 2025, the Swiss Federal Supreme Court will celebrate its 150th anniversary."
+
+"The Swiss Federal Supreme Court rules that women from the canton of Appenzell Innerrhoden be granted the right to vote at the cantonal assembly. On 28 April 1991, women in Appenzell Innerrhoden were also able to vote in cantonal elections for the first time. BGE 116 Ia 359"
+
+[Secondary, bstger.ch/en/il-tribunale/cronistoria.html] "The Federal Supreme Court was established under the Federal Constitution of 1874, replacing the previous Federal Supreme Court created under the Federal Constitution of 1848, which had no permanent seat."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The Swiss Federal Supreme Court became a permanent court only with the 1874 Constitution, which came into force in 1875. — evidence quote: "It was only with the 1874 Constitution, which came into force in 1875, that the Swiss Federal Supreme Court became a permanent court…"
+
+F2. The supreme court existing under the 1848 federal state had no fixed location and only convened as and when required. — evidence quote: "Although the modern federal state of 1848 already had a supreme court, its powers were extremely modest… That supreme court also had no fixed location and only convened as and when required."
+
+F3. The Court's seat was assigned to Lausanne as a concession to the French-speaking liberals. — evidence quote: "As a concession to the French-speaking liberals, the seat of the Swiss Federal Supreme Court was assigned to Lausanne."
+
+F4. At the beginning the Court had nine federal judges supported by two court clerks, working in the former casino 'Casino de Derrière-Bourg'. — evidence quote: "At the beginning of its existence, a total of nine federal judges worked in a room of the former casino, the 'Casino de Derrière-Bourg'. These regular judges were prohibited from engaging in any other activity. They were supported by two court clerks."
+
+F5. The Court moved into the purpose-built Montbenon building in 1887, and its Neoclassical Mon-Repos courthouse could not be built until 1922 because of the First World War. — evidence quote: "In 1887, the Swiss Federal Supreme Court therefore moved into a purpose-built structure on the Esplanade de Montbenon." + "Due to the outbreak of the First World War, the new courthouse could not be built until 1922."
+
+F6. The new Federal Constitution of 1999 strengthened the Court's independence and role; in 2007 the former Swiss Federal Insurance Court (EVG) was integrated into it. — evidence quote: "The independence and role of the Swiss Federal Supreme Court was further strengthened by the new Federal Constitution of 1999. In 2007, the former Swiss Federal Insurance Court (EVG) was integrated into the Swiss Federal Supreme Court."
+
+F7. Today the Court, with sites in Lausanne and Lucerne, employs 40 federal judges and around 375 staff (including around 175 court clerks), and is Switzerland's highest court. — evidence quote: "The Swiss Federal Supreme Court, with its sites in Lausanne and Lucerne, is now the workplace of 40 federal judges and around 375 employees. These include around 175 court clerks." + "The Swiss Federal Supreme Court is Switzerland's highest court."
+
+F8. The Court marked its 150th anniversary in 2025 (i.e. its founding is dated to 1875). — evidence quote: "The Swiss Federal Supreme Court celebrates its 150th anniversary in 2025." + "In 2025, the Swiss Federal Supreme Court will celebrate its 150th anniversary."
+
+F9. In 1990 the Federal Supreme Court ruled that women in Appenzell Innerrhoden must be granted the right to vote at the cantonal assembly (BGE 116 Ia 359); from 28 April 1991 they could vote in cantonal elections. — evidence quote: "The Swiss Federal Supreme Court rules that women from the canton of Appenzell Innerrhoden be granted the right to vote at the cantonal assembly. On 28 April 1991, women in Appenzell Innerrhoden were also able to vote in cantonal elections for the first time. BGE 116 Ia 359" (source: bger.ch brochure; corroborated by bstger.ch: "The Federal Supreme Court was established under the Federal Constitution of 1874, replacing the previous Federal Supreme Court created under the Federal Constitution of 1848, which had no permanent seat.")

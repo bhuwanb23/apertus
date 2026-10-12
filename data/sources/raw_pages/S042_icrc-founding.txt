@@ -1,0 +1,48 @@
+SOURCE_ID: S042
+URL: https://www.icrc.org/en/document/history-icrc
+TITLE: History of the ICRC (International Committee of the Red Cross)
+CATEGORY: history
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON SUBSTITUTION: https://www.icrc.org/en/document/icrc-historical-overview returned HTTP 404; used the
+current official ICRC history page. Nobel Peace Prize facts (F7–F8) come from a second official ICRC page
+fetched in the same session (https://www.icrc.org/en/document/humanitarian-action-and-pursuit-peace-speech-anniversary-nobel-peace-prize)
+and are labelled. NOTE: the ICRC page does not explain the emblem as an "inverse of the Swiss flag", so
+that claim is not asserted here.
+
+=== VERBATIM SOURCE QUOTES ===
+"Since its creation in 1863, the ICRC's sole objective has been to ensure protection and assistance for victims of armed conflict and strife."
+
+"What was to become the International Committee of the Red Cross met for the first time in February 1863 in Geneva, Switzerland. Among its five members was a local man named Henry Dunant who, the year before, had published a book (A Souvenir of Solferino) calling for improved care for wounded soldiers in wartime."
+
+"By the end of the year the committee had brought together government representatives to agree on Dunant's proposal for national relief societies, to help military medical services. And in August 1864 it persuaded governments to adopt the first Geneva Convention. This treaty obliged armies to care for wounded soldiers, whatever side they were on, and introduced a unified emblem for the medical services: a red cross on a white background."
+
+"Over the following 50 years, the ICRC expanded its work while national societies were established (the first in the German State of Württemberg in November 1863) and the Geneva Convention was adapted to include warfare at sea."
+
+"In 1919, they founded the League of Red Cross Societies, intended as the future coordinating and support body for the Movement."
+
+"In 1949, at the ICRC's initiative, states agreed on the revision of the existing three Geneva Conventions (covering wounded and sick on the battlefield, victims of war at sea, prisoners of war) and the addition of a fourth: to protect civilians living under enemy control."
+
+"And in 1977, two Protocols to the Conventions were adopted, the first applicable to international armed conflicts, the second to internal ones – a major breakthrough."
+
+[Secondary ICRC page] "In 1901, the first ever Nobel Peace Prize was awarded to Henry Dunant, founder of the Red Cross… The ICRC was then awarded the Nobel Prize in 1917 and 1944, as a tribute to its humanitarian activities during the two World Wars, and again in 1963, together with the International Federation of Red Cross and Red Crescent Societies."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The ICRC met for the first time in February 1863 in Geneva, Switzerland. — evidence quote: "What was to become the International Committee of the Red Cross met for the first time in February 1863 in Geneva, Switzerland."
+
+F2. The founding committee had five members, one of them the Genevan Henry Dunant. — evidence quote: "Among its five members was a local man named Henry Dunant"
+
+F3. Dunant had published "A Souvenir of Solferino" the year before (1862), calling for improved care for wounded soldiers in wartime. — evidence quote: "who, the year before, had published a book (A Souvenir of Solferino) calling for improved care for wounded soldiers in wartime."
+
+F4. In August 1864 the first Geneva Convention was adopted; it introduced the emblem "a red cross on a white background" for medical services. — evidence quote: "And in August 1864 it persuaded governments to adopt the first Geneva Convention. This treaty obliged armies to care for wounded soldiers, whatever side they were on, and introduced a unified emblem for the medical services: a red cross on a white background."
+
+F5. The first national Red Cross society was founded in the German State of Württemberg in November 1863. — evidence quote: "national societies were established (the first in the German State of Württemberg in November 1863)"
+
+F6. In 1949, at the ICRC's initiative, the three existing Geneva Conventions were revised and a fourth was added to protect civilians; two Additional Protocols were adopted in 1977. — evidence quote: "In 1949, at the ICRC's initiative, states agreed on the revision of the existing three Geneva Conventions … and the addition of a fourth: to protect civilians living under enemy control." + "And in 1977, two Protocols to the Conventions were adopted, the first applicable to international armed conflicts, the second to internal ones"
+
+F7. Henry Dunant received the first Nobel Peace Prize ever awarded, in 1901. — evidence quote: "In 1901, the first ever Nobel Peace Prize was awarded to Henry Dunant, founder of the Red Cross" [source: ICRC Nobel speech page]
+
+F8. The ICRC itself received the Nobel Peace Prize in 1917 and 1944, and again in 1963 together with the International Federation of Red Cross and Red Crescent Societies. — evidence quote: "The ICRC was then awarded the Nobel Prize in 1917 and 1944, as a tribute to its humanitarian activities during the two World Wars, and again in 1963, together with the International Federation of Red Cross and Red Crescent Societies." [source: ICRC Nobel speech page]
+
+F9. In 1919 the national societies founded the League of Red Cross Societies as the coordinating and support body of the Movement. — evidence quote: "In 1919, they founded the League of Red Cross Societies, intended as the future coordinating and support body for the Movement."

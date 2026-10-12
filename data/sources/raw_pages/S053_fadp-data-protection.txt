@@ -1,0 +1,97 @@
+SOURCE_ID: S053
+URL: https://www.edoeb.admin.ch/en/faq-data-protection
+TITLE: Frequently asked questions on data protection concerns (Federal Data Protection and Information Commissioner FDPIC / edoeb.admin.ch)
+CATEGORY: privacy
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+SOURCE_TRUST: agency
+
+RELATED PAGES FETCHED FROM THE SAME SITE (all quoted below):
+- https://www.edoeb.admin.ch/en                     (FDPIC home — role of the authority)
+- https://www.edoeb.admin.ch/en/legal-basis-data-protection   (legal instruments, abrogation of old DPA)
+- https://www.edoeb.admin.ch/en/basic-knowledge     (index, incl. duty to provide information)
+- https://www.edoeb.admin.ch/en/new-fdpics-role     (institutional reform, criminal law, powers)
+- https://www.edoeb.admin.ch/en/duty-to-provide-information      (Art. 19 / Art. 20 FADP)
+- https://www.edoeb.admin.ch/en/7-questions-about   (state vs. private sector; consent)
+- https://www.edoeb.admin.ch/en/monitoring-systems-in-the-workplace (purpose limitation, proportionality, EmpO 3)
+- https://www.edoeb.admin.ch/en/knowing-and-asserting-my-rights   (data minimisation, Art. 6 para. 4 FADP)
+
+NOTE ON WHAT COULD NOT BE HARVESTED:
+- fedlex.admin.ch (SR 235.1, the FADP text itself) is JavaScript-only and returned NO article text to an
+  HTTP fetch. Only the JS-required notice was returned. All FADP article references below are therefore
+  taken from the FDPIC's own English-language paraphrase of the articles, NOT from the statute text.
+  The statute wording itself is still unverified from an accessible page.
+- No accessible official page states the word "opt-in"/"opt-out" for Swiss data protection. The
+  opt-in/opt-out contrast is recorded below only in the form the FDPIC actually uses it
+  ("in principle, this is permitted in Switzerland" for the private sector), and flagged as such.
+
+=== VERBATIM SOURCE QUOTES ===
+"Data protection law does not protect data as such, but rather the persons about whom data is processed."
+[faq-data-protection]
+
+"It contains legal norms that serve the protection of personality and informational self-determination and regulate the processing of personal data carried out by federal authorities or private individuals or legal entities (e.g. associations or commercial enterprises)."
+[faq-data-protection]
+
+"The central data protection law enactment at the federal level is the Federal Data Protection Act, but there are also data protection provisions in many other federal laws that must be observed, e.g. in federal social security or police law."
+[faq-data-protection]
+
+"The situation is different for the processing of personal data by private entities. In principle, this is permitted in Switzerland. Data protection law – which is based on principles – only provides a general, abstract answer as to when the invasion of an individual's privacy reaches a level that cannot be justified by consent or overriding interests."
+[7-questions-about]
+
+"The protection of privacy is a constitutionally guaranteed fundamental right (Art. 13 of the Federal Constitution). In principle, there is no voluntary waiver of data protection rights with regard to the processing of personal data by the State."
+[7-questions-about]
+
+"The duty to provide information ensures that data processing is transparent and that the data subject's rights are respected. Without information, the data subject is not necessarily aware that their personal data is being processed and cannot therefore exercise their rights under the FADP. The FADP therefore requires the data controller to inform the data subject that their data is being gathered, no matter the type of data concerned."
+[duty-to-provide-information / basic-knowledge]
+
+"Whenever personal data is gathered, the data controller must inform the data subject in advance and in an adequate manner that their data is to be gathered, even if the data are not gathered directly from the data subject concerned."
+[duty-to-provide-information]
+
+"Moreover, the exceptions mentioned in Article 20 FADP limit or remove the duty to provide information, for example if a data subject already has the information (because they previously consented to their data being processed) or if the processing of personal data is required by law. These exceptions must be narrowly interpreted: the data controller should not assume that they will apply."
+[duty-to-provide-information]
+
+"it may be that the data are no longer required for the original purpose, you can request that your personal data be deleted based on the principle of proportionality or data minimisation (Art. 6 para. 4 FADP)."
+[knowing-and-asserting-my-rights]
+
+"Under Article 6 paragraph 3 FADP), personal data may only be processed for the purposes stated at the time of collection."
+[monitoring-systems-in-the-workplace]
+
+"Compliance with the principle of proportionality (Art. 6 para. 2 FADP) plays a decisive role in the context of monitoring. Indeed, before resorting to a monitoring system, the company must clarify whether it is not possible to achieve the intended purpose in a way that is less intrusive to the private sphere of the employees. The principle of proportionality also implies that only the required data are processed. Access to the data should be regulated and limited to those authorised to analyse it."
+[monitoring-systems-in-the-workplace]
+
+"The use of surveillance systems to monitor employee behaviour is prohibited." / "The protection of the employee's personality rights is enshrined in Article 328 of the Swiss Code of Obligations (CO) and Article 26 of Ordinance 3 to the Employment Act (EmpO 3)."
+[monitoring-systems-in-the-workplace]
+
+"As an independent authority, the Federal Data Protection and Information Commissioner (FDPIC) is responsible for matters relating to data protection and freedom of information."
+[edoeb home]
+
+"As the data protection supervisory authority, he protects the right of every person to privacy by ensuring that federal bodies and private companies do not process personal data unlawfully."
+[edoeb home]
+
+"As before, unlike his EU counterparts, the FDPIC has no power to impose sanctions under the new law. However, the supplementary criminal provisions in the FADP have been extended. The wilful disregard of notification, disclosure and reporting obligations and the intentional violation of due diligence obligations are punishable. ... Fines of up to CHF250,000 may be imposed on the natural person responsible for the offence. Legal persons can be fined up to CHF50,000, only as a subsidiary measure."
+[new-fdpics-role]
+
+"Today, the new entirely revised Federal Act on Data Protection (FADP) enters into force. Thereby, the Schengen Data Protection Law, which implemented the Regulation (EU) 2016/680, is being abrogated. The rules of Regulation (EU) are included in the new FADP."
+[legal-basis-data-protection]
+
+"The new Federal Act on Data Protection will come into force on 1 September 2023."
+[new-fdpics-role]
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The FADP regulates the processing of personal data by BOTH federal authorities and private individuals or legal entities — it is not confined to the public sector, and data protection law protects the persons concerned rather than the data itself. — evidence quote: "It contains legal norms that serve the protection of personality and informational self-determination and regulate the processing of personal data carried out by federal authorities or private individuals or legal entities (e.g. associations or commercial enterprises)." / "Data protection law does not protect data as such, but rather the persons about whom data is processed."
+
+F2. Unlike the GDPR, private-sector processing of personal data is permitted IN PRINCIPLE in Switzerland without a general prior-consent requirement; the FDPIC frames the test as whether the invasion of privacy can be justified by consent or by overriding interests. (This is the opt-in/opt-out contrast, expressed in the FDPIC's own words — no official page uses the words "opt-in"/"opt-out".) — evidence quote: "The situation is different for the processing of personal data by private entities. In principle, this is permitted in Switzerland. Data protection law – which is based on principles – only provides a general, abstract answer as to when the invasion of an individual's privacy reaches a level that cannot be justified by consent or overriding interests."
+
+F3. By contrast, where the STATE is the processor there is no voluntary waiver of data protection rights: the purpose, scope and extent of state data processing is fixed by statute and the authorities cannot release themselves from it in individual cases. — evidence quote: "The protection of privacy is a constitutionally guaranteed fundamental right (Art. 13 of the Federal Constitution). In principle, there is no voluntary waiver of data protection rights with regard to the processing of personal data by the State. The purpose, scope and extent of data processing by the State are determined by statutory provisions that are binding for the authorities and from which they cannot be legally released in specific cases."
+
+F4. Duty to inform: whenever personal data are gathered the controller must inform the data subject IN ADVANCE and in an adequate manner, and this applies no matter the type of data concerned and even where the data are not collected from the data subject directly. — evidence quote: "Whenever personal data is gathered, the data controller must inform the data subject in advance and in an adequate manner that their data is to be gathered, even if the data are not gathered directly from the data subject concerned." / "The FADP therefore requires the data controller to inform the data subject that their data is being gathered, no matter the type of data concerned."
+
+F5. Exemptions from the information duty are limited to the Article 20 FADP cases (data subject already informed, or processing required by law) and must be interpreted narrowly; where there is an overriding public or private interest the controller may restrict, delay or dispense with the information. — evidence quote: "Moreover, the exceptions mentioned in Article 20 FADP limit or remove the duty to provide information, for example if a data subject already has the information (because they previously consented to their data being processed) or if the processing of personal data is required by law. These exceptions must be narrowly interpreted: the data controller should not assume that they will apply."
+
+F6. Purpose limitation and data minimisation: under Art. 6 para. 3 FADP personal data may only be processed for the purposes stated at the time of collection; proportionality (Art. 6 para. 2) requires that the less intrusive route be ruled out first and that only the required data be processed. — evidence quote: "Under Article 6 paragraph 3 FADP), personal data may only be processed for the purposes stated at the time of collection." / "Compliance with the principle of proportionality (Art. 6 para. 2 FADP) plays a decisive role in the context of monitoring. Indeed, before resorting to a monitoring system, the company must clarify whether it is not possible to achieve the intended purpose in a way that is less intrusive to the private sphere of the employees. The principle of proportionality also implies that only the required data are processed."
+
+F7. Workplace monitoring sits under BOTH data protection law and employment law: the FADP applies where personal data within Art. 5 letter d FADP are processed, while Art. 328 CO / Art. 26 EmpO 3 independently PROHIBIT surveillance or control systems used to monitor employee behaviour. — evidence quote: "The use of surveillance systems to monitor employee behaviour is prohibited." / "The protection of the employee's personality rights is enshrined in Article 328 of the Swiss Code of Obligations (CO) and Article 26 of Ordinance 3 to the Employment Act (EmpO 3)."
+
+F8. The FDPIC is an independent authority acting as data protection supervisory authority over both federal bodies and private companies — but, unlike its EU counterparts, it has NO power to impose administrative sanctions. Enforcement runs through binding orders under Art. 5 APA plus criminal provisions in the FADP (fines up to CHF 250,000 for natural persons, CHF 50,000 for legal persons as a subsidiary measure). — evidence quote: "As the data protection supervisory authority, he protects the right of every person to privacy by ensuring that federal bodies and private companies do not process personal data unlawfully." / "As before, unlike his EU counterparts, the FDPIC has no power to impose sanctions under the new law. ... Fines of up to CHF250,000 may be imposed on the natural person responsible for the offence. Legal persons can be fined up to CHF50,000, only as a subsidiary measure."
+

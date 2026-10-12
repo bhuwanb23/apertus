@@ -1,0 +1,28 @@
+SOURCE_ID: S043
+URL: https://ethz.ch/en/the-eth-zurich/portrait/history/overview.html
+TITLE: A brief overview of more than 150 years of ETH Zurich history
+CATEGORY: history
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE: Optional 7th source (ID beyond the requested S037–S042 range). The requested URL
+https://ethz.ch/en/the-eth-zurich/organisation/history.html returned HTTP 404; the current official
+ETH Zurich history overview page was fetched instead.
+
+=== VERBATIM SOURCE QUOTES ===
+"Established in 1855 as the Federal Polytechnic School, ETH Zurich has, from the outset, been a national centre for education with international appeal, attracting talent from all over the world."
+
+"ETH Zurich was given its present name, Swiss Federal Institute of Technology (Eidgenössische Technische Hochschule), in 1911."
+
+"The university grew steadily and in 1961 it embarked on the first stage of constructing its second site on the Hönggerberg, on the outskirts of Zurich."
+
+"The successful combination of a cosmopolitan outlook with national roots made the young educational institution one of the driving forces behind industrialisation in Switzerland."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. ETH Zurich was established in 1855 as the Federal Polytechnic School. — evidence quote: "Established in 1855 as the Federal Polytechnic School, ETH Zurich has, from the outset, been a national centre for education with international appeal, attracting talent from all over the world."
+
+F2. ETH Zurich received its current name, Swiss Federal Institute of Technology (Eidgenössische Technische Hochschule), in 1911. — evidence quote: "ETH Zurich was given its present name, Swiss Federal Institute of Technology (Eidgenössische Technische Hochschule), in 1911."
+
+F3. ETH Zurich began constructing its second site on the Hönggerberg in 1961. — evidence quote: "in 1961 it embarked on the first stage of constructing its second site on the Hönggerberg, on the outskirts of Zurich."
+
+F4. ETH Zurich was one of the driving forces behind Swiss industrialisation, bringing expertise into the country and training technical specialists. — evidence quote: "The successful combination of a cosmopolitan outlook with national roots made the young educational institution one of the driving forces behind industrialisation in Switzerland: it brought the necessary expertise into the country, trained technical specialists and helped set up groundbreaking national infrastructures."

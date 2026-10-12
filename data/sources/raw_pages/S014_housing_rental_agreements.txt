@@ -1,0 +1,80 @@
+SOURCE_ID: S014
+URL: https://www.ch.ch/en/housing/rent/rental-and-leasing-agreements/
+TITLE: Rental and leasing agreement in Switzerland
+CATEGORY: law
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON URL DISCOVERY:
+- The requested https://www.ch.ch/en/housing/ resolves (HTTP 200) but is a JavaScript navigation hub only;
+  it contains no substantive facts. Real content sits at the third level:
+  /en/housing/ -> /en/housing/rent/ -> /en/housing/rent/rental-and-leasing-agreements/  (all HTTP 200).
+- The linked sibling page on rent increases/tenant rights is /en/housing/rent/noise--damage-and-rent/
+
+=== VERBATIM SOURCE QUOTES ===
+
+"Rental and leasing agreements regulate the rights and obligations of tenants and landlords. Subletting is permitted in Switzerland. The notice period must be respected when terminating an agreement."
+
+"### What must be included in the rental agreement?
+1. The names of the contracting parties:
+   - When renting as a family, the other spouse should be mentioned in the agreement.
+   - When a group of individuals or an unmarried couple rent an apartment, all parties listed in the agreement are collectively responsible for the monthly rent.
+2. Rented property: The property that the landlord allows the tenant to use should be defined, including premises such as the attic, cellar, laundry room, etc.
+3. Term of rental: Rental agreements may be limited or open-ended. Most are open-ended. In this case, both parties may give notice of termination subject to rules and deadlines.
+4. Notice period and fixed dates for terminating the agreement.
+5. Rent and additional charges: If additional charges are not mentioned in the contract, it may be assumed they are included in the rent."
+
+"Rental agreements may be limited or open-ended. Most are open-ended."
+
+"Concluding a rental agreement
+A rental agreement is normally made in writing, and there are certain elements that must be included. Anything else can be freely decided by the parties involved"
+
+"Rental deposit, also known as a security deposit: This must only be paid when required in the agreement. For residential rentals, this is a maximum of three months' rent."
+
+"A tenant may sublet all or part of their property, but they must inform the landlord about it.
+Subletting may be refused only if:
+- the tenant refuses to disclose the details of the subletting agreement.
+- the apartment is sublet for an inflated monthly rent. A maximum surcharge of 20% may be added to the monthly rent on a furnished apartment, to compensate for wear and tear on furnishings. In all other cases, tenants may only charge what they themselves pay for the apartment (incl. additional charges).
+- the subletting places the landlord at a distinct disadvantage, for example if a room in an otherwise quiet house is rented to a music band as practice space."
+
+"Depending on what is stated in the agreement, there may be different fixed termination dates or longer notice periods than set out in law. However, it is also possible to terminate the agreement outside of these periods. In such a case, the current tenant must either find a new tenant or pay rent until the next official termination date."
+
+"All parties who signed the rental agreement must sign the letter of termination. Tenants who are renting with a spouse or registered partner must have the approval of the other person to terminate the agreement, even if only one party has signed the agreement as the tenant. Tenants are not required to provide a reason for terminating the agreement. The letter of termination should be sent to the landlord by registered mail."
+
+"In Switzerland, landlords are generally allowed to terminate a rental agreement for any reason. They are nevertheless required to observe the notice periods stated in law or in the agreement, and to use an official form to terminate the agreement."
+
+"Tenants have the right to know the reason for the termination, and they can contest a termination that contravenes the principle of good faith. Such cases include termination after the tenant requested a rent decrease or repairs, or if the tenant's family situation changes. Tenants have 30 days to contact their commune's conciliation authority to contest the termination."
+
+"In case of hardship, tenants have the right to prolong the rental even if the termination is lawful, for example if they have very limited financial resources, if they are ill or due to conditions on the rental market."
+
+"Cantonal conciliation authorities are available to mediate when tenants and landlords cannot settle their disputes."
+
+"### Disputes between tenants and landlords
+Cantonal conciliation authorities are available to mediate when tenants and landlords cannot settle their disputes."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. For residential rentals in Switzerland, the rental deposit (security deposit) is capped at a maximum of three months' rent, and may be demanded only if the agreement provides for it. — evidence quote: "Rental deposit, also known as a security deposit: This must only be paid when required in the agreement. For residential rentals, this is a maximum of three months' rent."
+
+F2. A tenant who sublets a furnished apartment may add a maximum surcharge of 20% to the monthly rent; in all other cases the subletting tenant may only charge what they themselves pay. — evidence quote: "A maximum surcharge of 20% may be added to the monthly rent on a furnished apartment, to compensate for wear and tear on furnishings. In all other cases, tenants may only charge what they themselves pay for the apartment (incl. additional charges)."
+
+F3. A tenant contesting a landlord's termination has 30 days to contact the commune's conciliation authority. — evidence quote: "Tenants have 30 days to contact their commune's conciliation authority to contest the termination."
+
+F4. CANTONAL VARIABLE — dispute resolution for tenancy is handled by CANTONAL conciliation authorities, and the body is reached via the tenant's commune. The existence, name and competence of the conciliation body differ by canton/commune; do not present a single national conciliation body or a fixed canton-wide deadline as universal. — evidence quote: "Cantonal conciliation authorities are available to mediate when tenants and landlords cannot settle their disputes."
+
+F5. Swiss landlords are generally allowed to terminate a rental agreement for any reason, but must observe the statutory/contractual notice periods and use an official form. — evidence quote: "In Switzerland, landlords are generally allowed to terminate a rental agreement for any reason. They are nevertheless required to observe the notice periods stated in law or in the agreement, and to use an official form to terminate the agreement."
+
+F6. Tenants may contest a landlord's termination where it violates the principle of good faith, e.g. after the tenant requested a rent reduction or repairs, or if the tenant's family situation changes; tenants must be told the reason. — evidence quote: "Such cases include termination after the tenant requested a rent decrease or repairs, or if the tenant's family situation changes."
+
+F7. Terminating outside the contractual/legal notice deadlines is possible, but then the outgoing tenant must either find a replacement tenant or keep paying rent until the next official termination date. — evidence quote: "In such a case, the current tenant must either find a new tenant or pay rent until the next official termination date."
+
+F8. The letter of termination must be signed by everyone who signed the rental agreement and should be sent to the landlord by registered mail; no reason has to be given by the tenant. — evidence quote: "Tenants are not required to provide a reason for terminating the agreement. The letter of termination should be sent to the landlord by registered mail."
+
+=== COVERAGE GAPS (facts requested by the brief but NOT on this page — do not source from memory) ===
+- The specific notice period length (the "1 month" rule and its end-of-month deadline alignment) is NOT stated
+  numerically anywhere on this page. The page only says notice periods "stated in law or in the agreement"
+  must be observed. Any MCQ item about a 1-month notice period needs a different source page.
+- How to challenge a RENT INCREASE specifically: not covered on this page (only rent-decrease requests are
+  mentioned in passing, in the good-faith contest examples). Sibling page
+  /en/housing/rent/noise--damage-and-rent/ is the likely location.
+- CANTONAL VARIABLE to preserve: no statement on this page gives a nationwide notice period or a nationwide
+  rent-increase formula. Do not generalise cantonal conciliation deadlines beyond the 30-day figure above.

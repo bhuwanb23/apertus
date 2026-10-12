@@ -1,0 +1,51 @@
+SOURCE_ID: S002
+URL: https://www.ch.ch/en/political-system/parliament/swiss-parliament/
+TITLE: Composition of the Swiss Parliament — Swiss Parliament
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"The Swiss Parliament is primarily responsible for debating and adopting laws that are valid throughout the country. It consists of two chambers: the National Council and the Council of States."
+
+"The Swiss Parliament is a semi-professional parliament. This means that, in theory, parliamentarians are not professional politicians. In fact, however, for most of them parliamentary work is their main activity."
+
+"The Swiss Parliament has its seat in the Federal Palace in Bern. It consists of two chambers: the National Council with 200 members and the Council of States with 46 members."
+
+"Members of parliament are elected by the people and remain in office for four years. They can run again and be re-elected for new terms."
+
+"The two chambers of Parliament have the same powers and decide on the same items of business. Their main tasks are to:
+- discuss and adopt federal acts, valid throughout the country. This is why parliament is called the 'legislative power';
+- elect federal authorities, including the seven members of the Federal Council, the President of the Confederation, the Federal Chancellor and the judges of the Federal Supreme Court;
+- define the finances available to the federal government to fulfil its tasks;
+- monitor the activities of the Federal Council, the Federal Administration, the Federal Supreme Court and other bodies that perform federal tasks, e.g. the Swiss Post or the Swiss Federal Railways."
+
+"The National Council and the Council of States take most decisions separately. Only for some decisions, e.g. elections, do the parliamentarians sit and decide all together in united chambers (also called the United Federal Assembly)."
+
+"Parliament's decisions are only final if the National Council and the Council of States reach the same conclusion. Otherwise, the two chambers must follow the 'resolution of differences procedure' in an attempt to reach an agreement."
+
+"The members of the two chambers meet during parliamentary sessions, which take place four times a year. Each session lasts three weeks. In addition, special sessions, lasting several days, may also be held."
+
+"The debates of the Federal Assembly are public."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The Federal Assembly has 200 members in the National Council and 46 in the Council of States. — evidence quote: "It consists of two chambers: the National Council with 200 members and the Council of States with 46 members."
+
+F2. The Swiss Parliament sits in the Federal Palace in Bern. — evidence quote: "The Swiss Parliament has its seat in the Federal Palace in Bern."
+
+F3. Both chambers have equal powers and decide on the same items of business. — evidence quote: "The two chambers of Parliament have the same powers and decide on the same items of business."
+
+F4. Parliament elects the seven Federal Council members, the President, the Federal Chancellor AND the judges of the Federal Supreme Court. — evidence quote: "elect federal authorities, including the seven members of the Federal Council, the President of the Confederation, the Federal Chancellor and the judges of the Federal Supreme Court"
+
+F5. Parliamentary decisions are only final when both chambers agree; otherwise a "resolution of differences procedure" is used. — evidence quote: "Parliament's decisions are only final if the National Council and the Council of States reach the same conclusion. Otherwise, the two chambers must follow the 'resolution of differences procedure'"
+
+F6. Parliament convenes four sessions per year, each lasting three weeks, plus occasional special sessions of several days. — evidence quote: "parliamentary sessions, which take place four times a year. Each session lasts three weeks."
+
+F7. Parliamentary sessions are public and livestreamed. — evidence quote: "The debates of the Federal Assembly are public."
+
+F8. The Swiss Parliament is legally a semi-professional parliament. — evidence quote: "The Swiss Parliament is a semi-professional parliament. This means that, in theory, parliamentarians are not professional politicians."
+
+F9. Parliament supervises bodies that perform federal tasks, such as the Swiss Post and the Swiss Federal Railways. — evidence quote: "monitor the activities of the Federal Council, the Federal Administration, the Federal Supreme Court and other bodies that perform federal tasks, e.g. the Swiss Post or the Swiss Federal Railways."
+
+=== MCQ NOTE ===
+The "200 vs 46" pair is a strong MCQ because the Council of States figure (46, not 50, not 26, not 2×26) is counter-intuitive and derived from 20 cantons × 2 seats + 6 half-cantons × 1 seat. See also S003.

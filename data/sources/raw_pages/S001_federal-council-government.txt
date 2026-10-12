@@ -1,0 +1,66 @@
+SOURCE_ID: S001
+URL: https://www.ch.ch/en/political-system/government/
+TITLE: The federal government — The Federal Council, the federal government of Switzerland
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"The federal government of Switzerland consists of the seven members of the Federal Council."
+
+"One member of the Federal Council serves as President of the Swiss Confederation for one year at a time. He or she chairs the meetings of the Federal Council. This person also represents the federal government externally, for example at international meetings. In contrast to other countries, the President of the Confederation in Switzerland has hardly any more decision-making power than the other members of the Federal Council."
+
+"There is often talk of an 'eighth Federal Councillor', the Federal Chancellor, who has a supporting and advisory role for the Federal Council."
+
+"Parliament elects the members of the Federal Council every four years. It may re-elect a member of the Federal Council as often as it wishes. Re-election is the normal course of action. In most cases, members end their time on the Federal Council by resigning on a voluntary basis. If this does not take place at the end of their four-year term of office, Parliament elects a successor in a by-election."
+
+"According to the Constitution, it must take into account that the regions of the country and the language regions are adequately represented. In addition, the strength of the political parties is usually taken into account. Another electoral criterion is that men and women should be represented in the Federal Council in roughly equal numbers."
+
+"The Federal Council's duties include:
+- preparing new laws and submitting them to Parliament;
+- implementing the laws passed by Parliament. To this end, it issues ordinances, which elaborate on the legal provisions. That is why the federal government is also called the 'executive power';
+- leading the Federal Administration with its seven departments. Each member of the Federal Council heads a department;
+- representing Switzerland abroad; and
+- planning for the long term."
+
+"The Federal Council usually meets once a week in the Federal Council chamber, also known as the 'Chalet fédéral', in the Federal Palace. This session is always held on Wednesday - except during parliamentary sessions, when it is held on Friday."
+
+"A total of ten people take part in the meeting: the seven members of the Federal Council, the Federal Chancellor and the two vice chancellors."
+
+"At its weekly meeting, the Federal Council discusses a full agenda of items of business, which amount to more than 2,500 per year."
+
+"At the meeting itself, only the seven members of the Federal Council may take decisions. They have equal rights and always make their decisions together. They discuss the items on the agenda at the Federal Council meeting and seek a common solution. Only if it does not reach a solution, does the Federal Council vote."
+
+"Once the decision has been taken, all members must stand by it on a united front in their external dealings, even if it may not accord with their personal views or the policy of their party. This principle of collegiality..."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The Federal Council has seven members. — evidence quote: "The federal government of Switzerland consists of the seven members of the Federal Council."
+
+F2. The President of the Confederation is a rotating one-year role held by one of the seven Federal Councillors. — evidence quote: "One member of the Federal Council serves as President of the Swiss Confederation for one year at a time."
+
+F3. The President of the Confederation has hardly any more decision-making power than the other Federal Councillors. — evidence quote: "the President of the Confederation in Switzerland has hardly any more decision-making power than the other members of the Federal Council"
+
+F4. The Federal Chancellor is colloquially called the "eighth Federal Councillor" but has only a supporting and advisory role. — evidence quote: "There is often talk of an 'eighth Federal Councillor', the Federal Chancellor, who has a supporting and advisory role"
+
+F5. Members of the Federal Council are elected by Parliament every four years, not by the population. — evidence quote: "Parliament elects the members of the Federal Council every four years."
+
+F6. Re-election of a sitting Federal Councillor is the normal course of action. — evidence quote: "It may re-elect a member of the Federal Council as often as it wishes. Re-election is the normal course of action."
+
+F7. Federal Council election criteria: adequate representation of the country's regions and language regions, plus the strength of the political parties, plus roughly equal numbers of men and women. — evidence quote: "According to the Constitution, it must take into account that the regions of the country and the language regions are adequately represented... the strength of the political parties is usually taken into account. Another electoral criterion is that men and women should be represented in the Federal Council in roughly equal numbers."
+
+F8. The Federal Council implements parliament's laws by issuing ordinances, which is why it is called the executive power. — evidence quote: "implementing the laws passed by Parliament. To this end, it issues ordinances... That is why the federal government is also called the 'executive power'"
+
+F9. There are seven federal departments, each headed by one member of the Federal Council. — evidence quote: "leading the Federal Administration with its seven departments. Each member of the Federal Council heads a department"
+
+F10. The Federal Council sits in the Federal Palace and normally meets weekly on Wednesday (Friday during parliamentary sessions). — evidence quote: "The Federal Council usually meets once a week in the Federal Council chamber... This session is always held on Wednesday - except during parliamentary sessions, when it is held on Friday."
+
+F11. Ten people attend the Federal Council meeting: seven members, the Federal Chancellor and two vice chancellors — but only the seven members may decide. — evidence quote: "A total of ten people take part in the meeting: the seven members of the Federal Council, the Federal Chancellor and the two vice chancellors." / "only the seven members of the Federal Council may take decisions"
+
+F12. The Federal Council handles more than 2,500 items of business per year. — evidence quote: "an agenda of items of business, which amount to more than 2,500 per year"
+
+F13. Decisions are made by consensus first; the Federal Council only votes if no common solution is reached. — evidence quote: "They ... seek a common solution. Only if it does not reach a solution, does the Federal Council vote."
+
+F14. Collegiality: all seven members must publicly support a decision even if they personally disagree. — evidence quote: "all members must stand by it on a united front in their external dealings, even if it may not accord with their personal views or the policy of their party. This principle of collegiality"
+
+=== MCQ NOTE ===
+Do not build a question on "how many members does the Federal Council have" as a headline item — it is trivially searchable. Prefer F3, F4, F5, F7, F11, F13 which test the consensus/collegiality system that is genuinely Swiss-specific and commonly confused with presidential systems.

@@ -1,0 +1,41 @@
+SOURCE_ID: S003
+URL: https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/
+TITLE: Number of seats in Parliament — How many seats does each canton have in Parliament?
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"The more populated a canton is, the more seats it is entitled to in the National Council. In the Council of States, on the other hand, each canton has one or two seats."
+
+"The Swiss Parliament has 200 seats in the National Council and 46 seats in the Council of States."
+
+"In the National Council, seats are allocated in proportion to the resident population of a canton. This means that the more populated a canton is, the more seats it has in the National Council. Seats per canton range from 36 seats to only 1 seat. Each canton always has at least one seat in the National Council."
+
+"In the Council of States, 20 cantons are entitled to two seats. The former half-cantons of Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft are only entitled to one. This difference is due to historical reasons"
+
+"Seat allocation in the National Council is based on population and reviewed every four years."
+
+"In the National Council elections on 24 October 2027, the cantons of Lucerne and Fribourg will each have an additional seat to fill – bringing the total number of seats up to 10 and 8, respectively. The cantons of Bern and Graubünden will each have one seat fewer to fill (down to 23 and 4)."
+
+"**Two seats:** Aargau, Bern, Freiburg, Geneva, Glarus, Graubünden, Jura, Luzern, Neuchâtel, Schaffhausen, Schwyz, Solothurn, St. Gallen, Thurgau, Ticino, Uri, Vaud, Valais, Zug, Zurich."
+
+"**One seat:** Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel-Landschaft, Basel-Stadt, Nidwalden, Obwalden."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. National Council allocation is proportional to resident population, ranging from 36 seats (largest canton) down to 1 seat (smallest), with every canton guaranteed at least one. — evidence quote: "Seats per canton range from 36 seats to only 1 seat. Each canton always has at least one seat in the National Council."
+
+F2. Council of States: 20 cantons have two seats, the six former half-cantons have one each, for a total of 46. — evidence quote: "In the Council of States, 20 cantons are entitled to two seats... [total] 46 seats"
+
+F3. The six former half-cantons are Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft. — evidence quote: "The former half-cantons of Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft are only entitled to one."
+
+F4. National Council seat allocation is reviewed every four years. — evidence quote: "Seat allocation in the National Council is based on population and reviewed every four years."
+
+F5. From the 2027 elections Lucerne rises to 10 seats and Fribourg to 8, while Bern falls to 23 and Graubünden to 4. — evidence quote: "the cantons of Lucerne and Fribourg will each have an additional seat... up to 10 and 8, respectively. The cantons of Bern and Graubünden will each have one seat fewer... down to 23 and 4."
+
+F6. Only Appenzell Innerrhoden, Appenzell Ausserrhoden, Basel-Landschaft, Basel-Stadt, Nidwalden and Obwalden have a single Council of States seat. — evidence quote: "**One seat:** Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel-Landschaft, Basel-Stadt, Nidwalden, Obwalden."
+
+F7. Glarus has two Council of States seats despite being one of the smallest and least populated cantons — an exception to population-proportional logic. — evidence quote: "**Two seats:** Aargau, Bern, Freiburg, Geneva, Glarus, Graubünden, Jura, Luzern, Neuchâtel, Schaffhausen, Schwyz, Solothurn, St. Gallen, Thurgau, Ticino, Uri, Vaud, Valais, Zug, Zurich."
+
+=== MCQ NOTE ===
+Strong distractor design here: for "which canton has only one Council of States seat", plausible-but-wrong options include Ticino (large but Italian-speaking) and Jura (newest canton). For "how many Council of States seats", use 46 / 52 (=26×2) / 26 / 40 as distractors.

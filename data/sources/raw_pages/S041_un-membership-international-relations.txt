@@ -1,0 +1,44 @@
+SOURCE_ID: S041
+URL: https://www.bk.admin.ch/dam/en/sd-web/9OAKySUiPAfR/buku2024.pdf
+TITLE: Swiss Confederation – a brief guide 2024 (Federal Chancellery BK), section "International agreements and memberships" (pp. 14–15)
+CATEGORY: history
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON SUBSTITUTION: https://www.eda.admin.ch/eda/en/fdfa/foreign-policy.html, the FDFA UN pages
+(eda.admin.ch/en/un) and the FDFA UN factsheet all returned HTTP 403 (bot-blocked) and could not be fetched,
+including via direct HTTP with a browser user agent. Substituted the Federal Chancellery's official English
+publication (bk.admin.ch PDF). This page gives the year 2002 and the 55% referendum result but NOT the exact
+referendum date (10 March 2002) or the admission date (10 September 2002) — those EDA factsheet figures could
+not be verified from an accessible official page in this session and are therefore NOT included as facts.
+Line-break hyphenation in the PDF has been joined; wording is otherwise verbatim.
+
+=== VERBATIM SOURCE QUOTES ===
+"Together with the EU countries, the EFTA countries – excluding Switzerland – form the European Economic Area (EEA). Swiss voters rejected membership of the EEA in 1992."
+
+"Switzerland is not a member of the EU, but has close relations with it. These are governed by over 100 bilateral agreements primarily concluded in two packages: The first series of bilateral agreements was accepted by 67% of Swiss voters in 2000. The 7 agreements mainly cover economic matters."
+
+"The second series of bilateral agreements governs further economic aspects, as well as cooperation in the fields of asylum, security, the environment and culture. There are 9 agreements, including the Schengen-Dublin agreement, which was approved by 55 % of voters in 2005. Schengen facilitates transnational mobility and cooperation on justice and police. Dublin facilitates coordination on asylum proceedings."
+
+"Switzerland has been a member of the UN since 2002: In a referendum, accession was accepted by 55 % of Swiss voters. Switzerland is member of the UN Security Council in 2023/2024."
+
+"•194 member states •Main headquarters in New York, European headquarters in Geneva and Vienna •Founded in 1945, Switzerland a member since 2002"
+
+"Switzerland is not a member of NATO, but cooperates with it within the framework of the Partnership for Peace and the Euro-Atlantic Partnership Council."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Swiss voters rejected membership of the European Economic Area (EEA) in 1992. — evidence quote: "Swiss voters rejected membership of the EEA in 1992."
+
+F2. Switzerland is not an EU member; its close relations with the EU are governed by over 100 bilateral agreements concluded primarily in two packages. — evidence quote: "Switzerland is not a member of the EU, but has close relations with it. These are governed by over 100 bilateral agreements primarily concluded in two packages"
+
+F3. The first series of bilateral agreements (7 agreements, mainly economic) was accepted by 67% of Swiss voters in 2000. — evidence quote: "The first series of bilateral agreements was accepted by 67% of Swiss voters in 2000. The 7 agreements mainly cover economic matters."
+
+F4. The second series of bilateral agreements comprises 9 agreements including Schengen-Dublin and was approved by 55% of voters in 2005. — evidence quote: "There are 9 agreements, including the Schengen-Dublin agreement, which was approved by 55 % of voters in 2005."
+
+F5. Switzerland has been a member of the United Nations since 2002, with accession accepted by 55% of Swiss voters in a referendum. — evidence quote: "Switzerland has been a member of the UN since 2002: In a referendum, accession was accepted by 55 % of Swiss voters."
+
+F6. Switzerland was a member of the UN Security Council in 2023/2024. — evidence quote: "Switzerland is member of the UN Security Council in 2023/2024."
+
+F7. The UN has 194 member states, was founded in 1945, and its main headquarters is in New York with European headquarters in Geneva and Vienna. — evidence quote: "•194 member states •Main headquarters in New York, European headquarters in Geneva and Vienna •Founded in 1945, Switzerland a member since 2002"
+
+F8. Switzerland is not a NATO member but cooperates within the Partnership for Peace and the Euro-Atlantic Partnership Council (NATO founded 1949, 31 members). — evidence quote: "Switzerland is not a member of NATO, but cooperates with it within the framework of the Partnership for Peace and the Euro-Atlantic Partnership Council."

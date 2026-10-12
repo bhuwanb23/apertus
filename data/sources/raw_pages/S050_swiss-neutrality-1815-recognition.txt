@@ -1,0 +1,57 @@
+SOURCE_ID: S050
+URL: https://ch-info.swiss/en/die-schweiz/geschichte
+TITLE: History | CH Info (Federal Chancellery / The Swiss Confederation – a brief guide, web edition)
+CATEGORY: history
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+RELATED PAGE FETCHED (same publisher, complementary):
+- https://www.swissinfo.ch/eng/swiss-politics/neutrality/29289102
+  ("Neutrality", SWI swissinfo.ch, Swiss Broadcasting Corporation)
+
+NOTE ON THE PREMISE OF THE GAP:
+This gap asked for TWO things: (a) the "Federal Act on Safeguarding Switzerland's Neutrality",
+and (b) Congress of Vienna 1815 recognition. Only (b) could be verified from an accessible
+official page, and it is recorded below.
+
+(a) IS NOT RECORDED AS FACT. A dedicated federal-law neutrality statute was NOT verified on any
+accessible official page. Notably, the accessible official sources point the OTHER WAY: the
+Federal Chancellery and swissinfo state that Swiss neutrality is anchored in international
+law and in the Federal Constitution, and no federal statute codifying neutrality was verified.
+Treating "Federal Act on Safeguarding Switzerland's Neutrality" as an established fact would
+contradict the sources below.
+
+=== VERBATIM SOURCE QUOTES ===
+[ch-info.swiss/en/die-schweiz/geschichte]
+"Switzerland developed over the centuries from a collection of different alliances to a confederation of states and finally to the federal state we know today. Its national borders and neutrality were established and recognised internationally in 1815. Its political system dates back to the Federal Constitution of 1848."
+
+[ch-info.swiss/en/die-schweiz/geschichte]
+"1815 Federal Treaty: Neutrality and alliance of states"
+
+"With the defeat of Napoleon, the great European powers recognised Swiss neutrality and set Switzerland's borders as they are today. The Federal Treaty of 1815 brought together the various federal alliances into a single confederation of states."
+
+[swissinfo.ch]
+"Neutrality is part and parcel of Swiss identity. It was recognised in 1815 by the Great Powers at the Congress of Vienna. For the architects of the Swiss constitution of 1848, neutrality was a tool for maintaining the country's independence."
+
+[swissinfo.ch]
+"In 1907, the Hague Conventions set out in writing the rights and duties of neutral states for the first time. In exchange for the inviolability of their territory, such countries were, among other things, bound to stay out of wars, to treat all belligerents equally and not to supply them with arms or troops."
+
+[swissinfo.ch]
+"A survey conducted in 2024 showed that over 91% of respondents reported a wish to preserve neutrality, and said they believed it is an integral part of Swiss identity."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Switzerland's national borders and its neutrality were both established and internationally recognised in 1815. — evidence quote: "Its national borders and neutrality were established and recognised internationally in 1815."
+
+F2. Swiss neutrality was recognised in 1815 by the Great Powers at the Congress of Vienna. — evidence quote: "Neutrality is part and parcel of Swiss identity. It was recognised in 1815 by the Great Powers at the Congress of Vienna."
+
+F3. Following Napoleon's defeat, the great European powers recognised Swiss neutrality and fixed Switzerland's borders as they are today. — evidence quote: "With the defeat of Napoleon, the great European powers recognised Swiss neutrality and set Switzerland's borders as they are today."
+
+F4. The Federal Treaty of 1815 united the various federal alliances into a single confederation of states. — evidence quote: "The Federal Treaty of 1815 brought together the various federal alliances into a single confederation of states."
+
+F5. For the architects of the 1848 Swiss constitution, neutrality was a TOOL for maintaining the country's independence. — evidence quote: "For the architects of the Swiss constitution of 1848, neutrality was a tool for maintaining the country's independence."
+
+F6. The 1907 Hague Conventions were the first to set out in writing the rights and duties of neutral states. — evidence quote: "In 1907, the Hague Conventions set out in writing the rights and duties of neutral states for the first time."
+
+F7. Neutral states owe duties in exchange for the inviolability of their territory: to stay out of wars, treat all belligerents equally, and not supply arms or troops. — evidence quote: "In exchange for the inviolability of their territory, such countries were, among other things, bound to stay out of wars, to treat all belligerents equally and not to supply them with arms or troops."
+
+F8. In a 2024 survey, over 91 per cent of respondents wished to preserve neutrality and believe it is an integral part of Swiss identity. — evidence quote: "A survey conducted in 2024 showed that over 91% of respondents reported a wish to preserve neutrality, and said they believed it is an integral part of Swiss identity."

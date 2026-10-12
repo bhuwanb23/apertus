@@ -1,0 +1,97 @@
+SOURCE_ID: S054
+URL: https://www.edoeb.admin.ch/en/video-surveillance-of-public-places-by-private-individuals
+TITLE: Video Surveillance of Public Places by Private Individuals (Federal Data Protection and Information Commissioner FDPIC / edoeb.admin.ch)
+CATEGORY: privacy
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+SOURCE_TRUST: agency
+
+RELATED PAGES FETCHED (all quoted below):
+EN — same site (www.edoeb.admin.ch):
+- /en/video-surveillance-by-private-individuals   (8 numbered compliance conditions, signage, retention)
+- /en/video-surveillance-in-the-workplace        (signage duty, commune permission, 24-72h retention)
+- /en/video-surveillance-in-the-neighbourhood    (no special permit; communal mediation offices)
+
+FR — cantonal / municipal authorities (quotes below are FRENCH; translations marked):
+- https://www.vs.ch/web/prepose-cantonal-a-la-protection-des-donnees-et-a-la-transparence/vid%C3%A9osurveillance
+  (Canton Valais, Préposé cantonal à la protection des données)
+- https://www.lausanne.ch/portrait/carte-identite/videosurveillance/lieux-videosurveillance.html
+  (Ville de Lausanne)
+
+NOTE ON WHAT COULD NOT BE HARVESTED:
+- fedlex.admin.ch (SR 235.1) and bger.ch are JavaScript/Incapsula-gated; the statute text and the Federal
+  Court judgment 1C_315/2009 could not be fetched directly. The Valais page quotes the Federal Court
+  (TF 1C_315/2009, 13 October 2010) verbatim; that is an authority quotation of a judgment, not the judgment.
+- The Canton Bern Data Protection Authority page (dsa.be.ch, DE/FR) loads its body via JavaScript and returned
+  a navigation-only shell to an HTTP fetch. It is therefore NOT used as evidence here.
+- ch.ch has no page on video surveillance in public space (confirmed: no such path under ch.ch).
+
+=== VERBATIM SOURCE QUOTES ===
+"Generally speaking, private individuals are not permitted to operate CCTV systems on public property. There are some exceptions to this rule, but only in a very limited number of cases."
+[video-surveillance-of-public-places-by-private-individuals]
+
+"A CCTV system that monitors a public area in order to safeguard private interests will record images of countless people and thus infringe their rights to privacy. The persons concerned often have no choice but to enter the monitored area, and are therefore compelled to accept this infringement of their rights to privacy. This is difficult to justify by private interests."
+[video-surveillance-of-public-places-by-private-individuals]
+
+"Interest in crime prevention: the preservation of security and order in public areas is not the responsibility of private individuals, but a task for the police. For this reason, protecting his or her own security is not a legitimate reason for a private individual to monitor a public area."
+[video-surveillance-of-public-places-by-private-individuals]
+
+"As a result, private CCTV systems in public areas are normally regarded as an excessive and unlawful measure and their installation is prohibited."
+[video-surveillance-of-public-places-by-private-individuals]
+
+"There are possible exceptions to this rule: When legitimate video surveillance of private property is conducted, images of public areas are also recorded. If the extent of this intrusion is negligible and the surveillance of the private property would otherwise be impossible, common sense dictates that surveillance will normally be allowed."
+[video-surveillance-of-public-places-by-private-individuals]
+
+"If public places are involved, it must be clarified in advance with the commune whether permission is required. Monitored areas must be clearly signposted."
+[video-surveillance-in-the-workplace]
+
+"Recordings should only be retained for a limited period. The length of time the data is kept depends on the purpose of the monitoring. As a general rule, recordings should be deleted within 24 to 72 hours."
+[video-surveillance-in-the-workplace]
+
+"Video surveillance must be transparent, i.e. clearly recognisable. The persons concerned must be informed that they are being filmed before they enter the camera's recording area."
+[video-surveillance-by-private-individuals]
+
+"Information about video surveillance should be provided by means of a clearly visible sign. If this is not already clear from the circumstances, the sign should also state who is responsible for the video surveillance, i.e. where the persons concerned can exercise their rights, e.g. obtain information about the data collected. .The installation of video cameras to monitor one's own property is neither regulated by building law nor does it require a special permit (not even from the FDPIC)."
+[video-surveillance-by-private-individuals]
+
+"Video surveillance must be proportionate and appropriate. That is, the interference with the privacy of the persons filmed must be in reasonable proportion to the purpose. Thus, only those data may be collected that are necessary for the latter. Also, the images may only be stored for as long as they are actually needed to fulfil the purpose of the video surveillance (usually 24 hours). Measures that have a lesser impact on the private lives of the persons concerned, such as additional locks, reinforcements of entrance doors or alarm systems, are preferable to video surveillance."
+[video-surveillance-by-private-individuals]
+
+"Some communes have data protection offices that help mediate if there are questions or disputes regarding video surveillance of private property by private individuals. Contact your communal authority to find out if they offer such a service."
+[video-surveillance-in-the-neighbourhood]
+
+[FR — Canton Valais, Préposé cantonal à la protection des données; translation by the harvester, marked]
+"A teneur des articles 28 et 28a LIPDA, la surveillance des lieux publics par des appareils de prise de vues et d'enregistrement d'images doit respecter un certain nombre de conditions."
+[EN: Under Articles 28 and 28a of the Valais Act on Information Protection (LIPDA), the surveillance of public places by image-capture and image-recording devices must comply with a number of conditions.]
+
+"Les autorités ne peuvent donc restreindre cette garantie constitutionnelle que si la pose d'une caméra est justifiée par un règlement communal et qu'elle constitue l'ultime moyen pour assurer l'ordre ou la sécurité contre une menace ou un trouble concret."
+[EN: Authorities may therefore restrict this constitutional guarantee only if the installation of a camera is justified by a communal ordinance (règlement communal) and constitutes the ultimate means of ensuring order or security against a concrete threat or disturbance.]
+
+"Ainsi, si une autorité juge que la vidéosurveillance peut être évitée par des mesures telles que le renforcement de l'éclairage, la multiplication des rondes par la police de proximité, la mise à ban d'un endroit, alors aucune vidéosurveillance ne doit être installée dans ce cadre."
+[EN: Thus, if an authority judges that video surveillance can be avoided by measures such as increased lighting, more frequent patrols by community police, or banning a place, then no video surveillance may be installed in that context.]
+
+"La vidéosurveillance, quel que soit son type, cause une atteinte au respect de la vie privée. Le degré de cette atteinte peut certes varier en fonction des différentes techniques utilisées - vidéosurveillance en temps réel, avec enregistrement, avec traitement informatisé des données - mais l'atteinte existe dans tous les cas. [...] En définitive, comme les autres types de vidéosurveillance, la surveillance en temps réel cause une atteinte au respect de la vie privée, de sorte qu'elle doit reposer sur une base légale."
+[EN (Canton Valais quoting Federal Court, TF 1C_315/2009 of 13 October 2010, consid. 2.2): "Video surveillance, whatever its type, constitutes an interference with respect for private life. The degree of this interference may of course vary depending on the different techniques used — real-time video surveillance, with recording, with computerised processing of data — but the interference exists in all cases. [...] In short, like other types of video surveillance, real-time surveillance constitutes an interference with respect for private life, so that it must rest on a legal basis."]
+
+[FR — Ville de Lausanne; translation by the harvester, marked]
+"La loi vaudoise sur la protection des données personnelles (LPrD) oblige les communes pratiquant la vidéosurveillance dissuasive à se doter d'un règlement pour filmer leur domaine public. Lausanne remplit cette obligation. Son règlement a été validé par les autorités cantonales."
+[EN: The Vaud Act on Personal Data Protection (LPrD) obliges communes operating deterrent video surveillance to adopt an ordinance in order to film their public domain. Lausanne complies with this obligation. Its ordinance was validated by the cantonal authorities.]
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. PRIVATE INDIVIDUALS ARE GENERALLY BARRED from operating CCTV on public property: such systems are treated as an excessive and unlawful measure and their installation is prohibited, because passers-by have no choice but to enter the monitored area. — evidence quote: "Generally speaking, private individuals are not permitted to operate CCTV systems on public property." / "As a result, private CCTV systems in public areas are normally regarded as an excessive and unlawful measure and their installation is prohibited."
+
+F2. Crime prevention is a POLICE responsibility, not a private one — so "protecting my own security" is NOT a legitimate reason for a private individual to monitor a public area, and pure advertising/entertainment webcams go too far. — evidence quote: "Interest in crime prevention: the preservation of security and order in public areas is not the responsibility of private individuals, but a task for the police. For this reason, protecting his or her own security is not a legitimate reason for a private individual to monitor a public area."
+
+F3. The narrow private exception is INCIDENTAL capture: where legitimate surveillance of one's own property unavoidably records a public area, the intrusion must be negligible and the surveillance of the private property otherwise impossible. — evidence quote: "There are possible exceptions to this rule: When legitimate video surveillance of private property is conducted, images of public areas are also recorded. If the extent of this intrusion is negligible and the surveillance of the private property would otherwise be impossible, common sense dictates that surveillance will normally be allowed."
+
+F4. NOTICE / SIGNAGE is a hard duty: monitored areas must be clearly signposted, persons must be informed before they enter the recording area, and the sign should identify who is responsible and where rights can be exercised. — evidence quote: "If public places are involved, it must be clarified in advance with the commune whether permission is required. Monitored areas must be clearly signposted." / "Video surveillance must be transparent, i.e. clearly recognisable. The persons concerned must be informed that they are being filmed before they enter the camera's recording area." / "Information about video surveillance should be provided by means of a clearly visible sign."
+
+F5. RETENTION LIMITS: as a general rule surveillance recordings should be deleted within 24 to 72 hours; for private systems images may only be kept as long as actually needed to fulfil the purpose (usually 24 hours). — evidence quote: "Recordings should only be retained for a limited period. The length of time the data is kept depends on the purpose of the monitoring. As a general rule, recordings should be deleted within 24 to 72 hours." / "the images may only be stored for as long as they are actually needed to fulfil the purpose of the video surveillance (usually 24 hours)"
+
+F6. NECESSITY AND PROPORTIONALITY: surveillance is lawful only if the interference with privacy is in reasonable proportion to the purpose, only necessary data may be collected, and less intrusive alternatives (extra locks, reinforced doors, alarm systems) are preferable. — evidence quote: "Video surveillance must be proportionate and appropriate. That is, the interference with the privacy of the persons filmed must be in reasonable proportion to the purpose. Thus, only those data may be collected that are necessary for the latter. ... Measures that have a lesser impact on the private lives of the persons concerned, such as additional locks, reinforcements of entrance doors or alarm systems, are preferable to video surveillance."
+
+F7. WHICH LEVEL OF GOVERNMENT DECIDES: for PUBLIC-BODY surveillance the decision is CANTONAL/COMMUNAL, not federal — a communal ordinance (règlement communal) is required, the camera must be the ULTIMATE means against a concrete threat or disturbance, and if alternatives such as better lighting, more community-police patrols or banning a place would avoid it, no camera may be installed at all. Cantonal data-protection law (e.g. Valais Arts. 28/28a LIPDA) supplies the substantive conditions. — evidence quote (FR, Valais): "Les autorités ne peuvent donc restreindre cette garantie constitutionnelle que si la pose d'une caméra est justifiée par un règlement communal et qu'elle constitue l'ultime moyen pour assurer l'ordre ou la sécurité contre une menace ou un trouble concret." / "Ainsi, si une autorité juge que la vidéosurveillance peut être évitée par des mesures telles que le renforcement de l'éclairage, la multiplication des rondes par la police de proximité, la mise à ban d'un endroit, alors aucune vidéosurveillance ne doit être installée dans ce cadre."
+
+F8. COMMERCIAL/MUNICIPAL EXAMPLE of that level: under the Vaud LPrD, communes running deterrent video surveillance must have a public-space surveillance ordinance, and it is the CANTON that validates it (Lausanne's ordinance "a été validé par les autorités cantonales"). Note: this is a French-language cantonal/municipal source, not a federal one. — evidence quote (FR, Ville de Lausanne): "La loi vaudoise sur la protection des données personnelles (LPrD) oblige les communes pratiquant la vidéosurveillance dissuasive à se doter d'un règlement pour filmer leur domaine public. Lausanne remplit cette obligation. Son règlement a été validé par les autorités cantonales."
+

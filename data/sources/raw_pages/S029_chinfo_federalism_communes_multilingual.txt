@@ -1,0 +1,40 @@
+SOURCE_ID: S029
+URL: https://www.ch-info.swiss/en/die-schweiz/foederalismus
+TITLE: Federalism | CH Info
+CATEGORY: geography
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"The Confederation is made up of 26 cantons."
+
+"2110 — The 26 cantons are divided into 2110 communes."
+
+"4 cantons are officially multilingual: Bern, Fribourg and Valais have two official languages, Graubünden even has three."
+
+"People's assemblies (Landsgemeinde) are still held in the cantons of Appenzell Innerrhoden and Glarus."
+
+"The most populous commune is the city of Zurich, where around 437,000 people live. The least populous is Kammersrohr in the canton of Solothurn (32 people)"
+
+"Switzerland, which is also referred to as the Swiss Confederation, has been a federal state since 1848."
+
+"Switzerland's Parliament, the Federal Assembly, is made up of the National Council and the Council of States; the government comprises seven federal councillors, and the Federal Supreme Court is responsible for national jurisprudence."
+
+"The federal government and nine of the cantons are net contributors: ZH, SZ, OW, NW, ZG, BS, SH, AI, GE. The remaining 17 cantons receive equalisation payments (net beneficiaries)."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The 26 cantons are divided into 2,110 communes. — evidence quote: "The 26 cantons are divided into 2110 communes."
+
+F2. Four cantons are officially multilingual: Bern, Fribourg and Valais have two official languages each, while Graubünden has three. — evidence quote: "4 cantons are officially multilingual: Bern, Fribourg and Valais have two official languages, Graubünden even has three."
+
+F3. People's assemblies (Landsgemeinde) are still held only in the cantons of Appenzell Innerrhoden and Glarus. — evidence quote: "People's assemblies (Landsgemeinde) are still held in the cantons of Appenzell Innerrhoden and Glarus."
+
+F4. The most populous Swiss commune is the city of Zurich (around 437,000 inhabitants); the least populous is Kammersrohr in the canton of Solothurn with 32 people. — evidence quote: "The most populous commune is the city of Zurich, where around 437,000 people live. The least populous is Kammersrohr in the canton of Solothurn (32 people)"
+
+F5. Nine cantons are net contributors to the National Fiscal Equalisation system (ZH, SZ, OW, NW, ZG, BS, SH, AI, GE); the remaining 17 cantons receive equalisation payments. — evidence quote: "The federal government and nine of the cantons are net contributors: ZH, SZ, OW, NW, ZG, BS, SH, AI, GE. The remaining 17 cantons receive equalisation payments (net beneficiaries)." [REGIONAL VARIABLE: fiscal equalisation figures are year-dependent]
+
+F6. Switzerland has been a federal state since 1848. — evidence quote: "Switzerland, which is also referred to as the Swiss Confederation, has been a federal state since 1848."
+
+F7. The federal government comprises seven federal councillors. — evidence quote: "the government comprises seven federal councillors"
+
+NOTE: Source domain ch-info.swiss (CH Info, official Swiss information portal accompanying the Federal Chancellery's "The Swiss Confederation – a brief guide"). Used as the accessible substitute for the blocked BFS/EDA pages.

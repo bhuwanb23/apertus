@@ -1,0 +1,40 @@
+SOURCE_ID: S026
+URL: https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/
+TITLE: How many seats does each canton have in Parliament? / Number of seats in Parliament
+CATEGORY: geography
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"The Swiss Parliament has 200 seats in the National Council and 46 seats in the Council of States."
+
+"In the Council of States, 20 cantons are entitled to two seats. The former half-cantons of Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft are only entitled to one. This difference is due to historical reasons"
+
+"In the National Council, seats are allocated in proportion to the resident population of a canton. This means that the more populated a canton is, the more seats it has in the National Council. Seats per canton range from 36 seats to only 1 seat. Each canton always has at least one seat in the National Council."
+
+"Two seats:
+Aargau, Bern, Freiburg, Geneva, Glarus, Graubünden, Jura, Luzern, Neuchâtel, Schaffhausen, Schwyz, Solothurn, St. Gallen, Thurgau, Ticino, Uri, Vaud, Valais, Zug, Zurich."
+
+"One seat:
+Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel-Landschaft, Basel-Stadt, Nidwalden, Obwalden."
+
+"The more populated a canton is, the more seats it is entitled to in the National Council. In the Council of States, on the other hand, each canton has one or two seats."
+
+"In the National Council elections on 24 October 2027, the cantons of Lucerne and Fribourg will each have an additional seat to fill – bringing the total number of seats up to 10 and 8, respectively. The cantons of Bern and Graubünden will each have one seat fewer to fill (down to 23 and 4)."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Switzerland's six former half-cantons are Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft. — evidence quote: "The former half-cantons of Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft are only entitled to one."
+
+F2. In the Council of States, 20 cantons are entitled to two seats, while the six former half-cantons have only one. — evidence quote: "In the Council of States, 20 cantons are entitled to two seats."
+
+F3. The Swiss Parliament has 200 seats in the National Council and 46 seats in the Council of States. — evidence quote: "The Swiss Parliament has 200 seats in the National Council and 46 seats in the Council of States."
+
+F4. The six cantons with only one Council of States seat are Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel-Landschaft, Basel-Stadt, Nidwalden and Obwalden. — evidence quote: "One seat: Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel-Landschaft, Basel-Stadt, Nidwalden, Obwalden."
+
+F5. The 20 cantons with two Council of States seats are Aargau, Bern, Freiburg, Geneva, Glarus, Graubünden, Jura, Luzern, Neuchâtel, Schaffhausen, Schwyz, Solothurn, St. Gallen, Thurgau, Ticino, Uri, Vaud, Valais, Zug and Zurich. — evidence quote: "Two seats: Aargau, Bern, Freiburg, Geneva, Glarus, Graubünden, Jura, Luzern, Neuchâtel, Schaffhausen, Schwyz, Solothurn, St. Gallen, Thurgau, Ticino, Uri, Vaud, Valais, Zug, Zurich."
+
+F6. National Council seats are allocated in proportion to resident population, ranging from 36 seats down to 1, with every canton guaranteed at least one seat. — evidence quote: "Seats per canton range from 36 seats to only 1 seat. Each canton always has at least one seat in the National Council."
+
+F7. In the 24 October 2027 National Council elections, Lucerne and Fribourg each gain a seat (to 10 and 8), while Bern and Graubünden each lose one (to 23 and 4). — evidence quote: "the cantons of Lucerne and Fribourg will each have an additional seat to fill – bringing the total number of seats up to 10 and 8, respectively. The cantons of Bern and Graubünden will each have one seat fewer to fill (down to 23 and 4)." [REGIONAL VARIABLE: seat totals are election-cycle dependent]
+
+NOTE: Source domain ch.ch (Federal Chancellery). Canton names are quoted verbatim as printed on the page ("Freiburg", "Luzern" appear in the German form in the English list).

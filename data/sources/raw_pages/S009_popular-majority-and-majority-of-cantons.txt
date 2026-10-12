@@ -1,0 +1,26 @@
+SOURCE_ID: S009
+URL: https://www.ch.ch/en/votes-and-elections/votes/popular-majority-and-majority-of-the-cantons/
+TITLE: Popular majority and majority of the cantons
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"A proposal submitted to the vote of the People is adopted if it receives more yes votes than no votes. In the case of constitutional amendments, the majority of the cantons must also vote in favour."
+
+"A popular majority is sufficient for a vote on a law or on certain international treaties, which are adopted if the majority of voters vote yes."
+
+"Most international treaties only require a popular majority. But the decision to amend the constitution or join a supranational community requires a so-called double majority. Such a proposal is accepted only if both the majority of voters (popular majority) as well as the majority of cantons say yes."
+
+"To determine the majority of cantons, each canton provides a Yes or No vote based on its individual voting results. If the majority of voters in a canton voted Yes, the popular vote of that canton counts as a Yes. A cantonal majority means that a majority of the cantons voted Yes."
+
+"The votes of the former half-cantons of Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden and Appenzell Innerrhoden each count as half a vote."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. A proposal submitted to the vote of the People is adopted if it receives more yes votes than no votes. — evidence quote: "A proposal submitted to the vote of the People is adopted if it receives more yes votes than no votes."
+F2. Constitutional amendments additionally require a majority of the cantons to vote in favour. — evidence quote: "In the case of constitutional amendments, the majority of the cantons must also vote in favour."
+F3. A popular majority alone suffices for a vote on a law or on certain international treaties. — evidence quote: "A popular majority is sufficient for a vote on a law or on certain international treaties, which are adopted if the majority of voters vote yes."
+F4. A "double majority" is required to amend the constitution or to join a supranational community; such a proposal passes only if both a popular majority and a majority of cantons say yes. — evidence quote: "But the decision to amend the constitution or join a supranational community requires a so-called double majority. Such a proposal is accepted only if both the majority of voters (popular majority) as well as the majority of cantons say yes."
+F5. For the cantonal majority, each canton casts a Yes or No based on its own popular vote: if a majority of voters in a canton voted Yes, that canton counts as a Yes. — evidence quote: "To determine the majority of cantons, each canton provides a Yes or No vote based on its individual voting results. If the majority of voters in a canton voted Yes, the popular vote of that canton counts as a Yes."
+F6. Each of the six former half-cantons — Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden and Appenzell Innerrhoden — counts as half a vote in the cantonal majority. — evidence quote: "The votes of the former half-cantons of Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden and Appenzell Innerrhoden each count as half a vote."
+F7. Most international treaties require only a popular majority. — evidence quote: "Most international treaties only require a popular majority."

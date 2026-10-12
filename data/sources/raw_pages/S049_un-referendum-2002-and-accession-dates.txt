@@ -1,0 +1,54 @@
+SOURCE_ID: S049
+URL: https://www.swissinfo.ch/eng/swiss-politics/moving-towards-the-un-in-slow-motion/291972
+TITLE: Moving towards the UN in slow motion (SWI swissinfo.ch, Swiss Broadcasting Corporation)
+CATEGORY: history
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+RELATED OFFICIAL PAGE FETCHED (same fact, federal administration):
+- https://www.parlament.ch/de/services/volksabstimmungen/fruehere-volksabstimmungen/volksabstimmungen-2002/volksabstimmung-2002-03-03
+  ("Volksabstimmung vom 3. März 2002", Parliamentary Services, parliament.ch)
+
+NOTE ON THE PREMISE OF THE GAP:
+The gap asked for referendum date 10 March 2002 and accession 10 September 2002. Verified: the
+referendum was held on 3 March 2002 (not 10 March), and accession followed on 10 September
+2002. Both dates are recorded exactly as the sources state them. The parliament.ch page is
+the federal administration's own record of the 3 March 2002 popular vote on the UN accession
+initiative.
+
+=== VERBATIM SOURCE QUOTES ===
+[swissinfo.ch]
+"When, on March 3, 2002, the Swiss were again called upon to vote on joining the world body, the decision turned out to be quite close. Just 55 per cent were in favour of joining."
+
+"After the successful referendum in 2002, the government submitted an official membership application to the UN General-Secretary. On September 10, 2002, the UN General Assembly in New York accepted Switzerland as the 190th member state. This left the Vatican as the only state outside the United Nations."
+
+[swissinfo.ch]
+"At the ballot box on March 16, 1986 they clearly rejected the initiative."
+
+"Switzerland became the 190th member of the UN in 2002. A nationwide referendum was needed to join the world body and some 55 per cent voted in favour."
+
+"Switzerland has enjoyed observer status in the main organs of the UN since 1948."
+
+"When the UN was founded in 1945, the Swiss government ruled out membership. It saw the organisation as incompatible with neutrality."
+
+[parlament.ch]
+"Volksabstimmung vom 3. März 2002"
+
+"Volksinitiative «für den Beitritt der Schweiz zur Organisation der Vereinten Nationen (UNO)»"
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The Swiss referendum on joining the United Nations was held on 3 March 2002. — evidence quote: "When, on March 3, 2002, the Swiss were again called upon to vote on joining the world body, the decision turned out to be quite close."
+
+F2. Roughly 55 per cent of Swiss voters were in favour of joining the UN in the 3 March 2002 referendum. — evidence quote: "Just 55 per cent were in favour of joining." / "A nationwide referendum was needed to join the world body and some 55 per cent voted in favour."
+
+F3. Switzerland became a member of the United Nations on 10 September 2002, when the UN General Assembly in New York accepted it as the 190th member state. — evidence quote: "On September 10, 2002, the UN General Assembly in New York accepted Switzerland as the 190th member state."
+
+F4. After Switzerland's accession, the Vatican was the only state outside the United Nations. — evidence quote: "This left the Vatican as the only state outside the United Nations."
+
+F5. Switzerland had already rejected UN membership in a referendum on 16 March 1986. — evidence quote: "At the ballot box on March 16, 1986 they clearly rejected the initiative."
+
+F6. When the UN was founded in 1945, the Swiss government ruled out membership, considering the organisation incompatible with neutrality. — evidence quote: "When the UN was founded in 1945, the Swiss government ruled out membership. It saw the organisation as incompatible with neutrality."
+
+F7. Switzerland had observer status in the main organs of the UN since 1948, before becoming a full member. — evidence quote: "Switzerland has enjoyed observer status in the main organs of the UN since 1948."
+
+F8. The official instrument submitted was a popular initiative, not a parliamentary act: «Volksinitiative «für den Beitritt der Schweiz zur Organisation der Vereinten Nationen (UNO)»». — evidence quote: "Volksinitiative «für den Beitritt der Schweiz zur Organisation der Vereinten Nationen (UNO)»"

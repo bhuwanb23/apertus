@@ -1,0 +1,55 @@
+SOURCE_ID: S005
+URL: https://www.ch.ch/en/political-system/political-rights/right-to-vote/
+TITLE: Voting rights in Switzerland
+CATEGORY: politics
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES ===
+"Swiss citizens aged 18 and over are entitled to vote at federal level. Half of the cantons grant the right to vote at cantonal level to Swiss citizens abroad."
+
+"Foreign nationals only have the right to vote in cantonal and communal ballots, and only in some cantons and communes."
+
+"If you have Swiss citizenship, are at least 18 years of age and live in Switzerland, you can vote at federal, cantonal and communal level and also launch and sign referendums and initiatives."
+
+"Some people are excluded from voting because of a disability. The Federal Act on Political Rights specifies the conditions for this exclusion."
+
+"If you live in Switzerland, you do not need to register to vote: you will be added to the electoral register of your commune of residence as a matter of course as soon as you fulfil the conditions for being eligible to vote."
+
+"At the federal level, only people of age can vote, each canton is free to give minors voting rights at cantonal level. Currently Glarus is the only canton to allow 16- and 17-year-olds to vote at cantonal and communal level, but not to stand for election."
+
+"If you are a Swiss citizen abroad, you can vote at federal level. If you wish to do so, you must
+- register with the relevant Swiss representation to be registered on the Register of the Swiss abroad,
+- be registered on the electoral roll of your last commune of residence or, if you have never lived in Switzerland, in your place of origin."
+
+"In some cantons, Swiss citizens abroad can vote at communal and cantonal level."
+
+"Dual nationality has no effect on your voting rights. Dual nationals have the right to vote in elections and popular votes, like other Swiss citizens."
+
+"In Switzerland, foreign nationals do not have the right to vote at federal level. In some cantons and communes, they do have the right to vote in cantonal and communal ballots."
+
+"At the cantonal level, Jura and Neuchâtel grant the right to vote (but not to stand for election) to foreign nationals."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The federal voting age in Switzerland is 18. — evidence quote: "Swiss citizens aged 18 and over are entitled to vote at federal level."
+
+F2. Glarus is the only canton that lets 16- and 17-year-olds vote at cantonal and communal level (but not stand for election). — evidence quote: "Currently Glarus is the only canton to allow 16- and 17-year-olds to vote at cantonal and communal level, but not to stand for election."
+
+F3. Foreign nationals have NO right to vote at federal level. — evidence quote: "In Switzerland, foreign nationals do not have the right to vote at federal level."
+
+F4. Foreign nationals can vote in cantonal and communal ballots in some cantons; Jura and Neuchâtel grant cantonal voting rights (not candidacy). — evidence quote: "At the cantonal level, Jura and Neuchâtel grant the right to vote (but not to stand for election) to foreign nationals."
+
+F5. Swiss citizens living abroad can vote at federal level if they register with a Swiss representation and are on the electoral roll of their last commune of residence or place of origin. — evidence quote: "If you are a Swiss citizen abroad, you can vote at federal level."
+
+F6. Half of the cantons allow Swiss citizens abroad to vote at cantonal level too. — evidence quote: "Half of the cantons grant the right to vote at cantonal level to Swiss citizens abroad."
+
+F7. Dual nationality has no effect on voting rights. — evidence quote: "Dual nationality has no effect on your voting rights. Dual nationals have the right to vote in elections and popular votes, like other Swiss citizens."
+
+F8. People living in Switzerland do not need to register to vote; they are added to the electoral roll of their commune automatically. — evidence quote: "If you live in Switzerland, you do not need to register to vote: you will be added to the electoral register of your commune of residence as a matter of course"
+
+F9. Voting rights can be withdrawn from people with disabilities; the conditions are set in the Federal Act on Political Rights. — evidence quote: "Some people are excluded from voting because of a disability. The Federal Act on Political Rights specifies the conditions for this exclusion."
+
+F10. At federal level minors cannot vote, but each canton may extend cantonal voting rights to minors. — evidence quote: "At the federal level, only people of age can vote, each canton is free to give minors voting rights at cantonal level."
+
+=== MCQ NOTE ===
+Glarus being the sole canton allowing 16/17-year-olds is an excellent MCQ: high search cost, unambiguous, and tests real federalism. Plausible distractors: Bern, Basel-Stadt, Vaud.

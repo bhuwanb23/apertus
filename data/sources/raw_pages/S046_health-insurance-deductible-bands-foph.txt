@@ -1,0 +1,75 @@
+SOURCE_ID: S046
+URL: https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment
+TITLE: Health insurance: Premiums and co-payment (Federal Office of Public Health FOPH / bag.admin.ch)
+CATEGORY: health
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+RELATED PAGES FETCHED FROM THE SAME SITE:
+- https://www.bag.admin.ch/en/health-insurance-optional-deductibles
+- https://www.bag.admin.ch/en/health-insurance-co-payment-for-persons-resident-in-switzerland
+
+NOTE ON THE PREMISE OF THE GAP:
+The gap brief asked for "CHF 1,000 / 1,500 / 2,000 bands" and a rule based on "age, residence in a
+rural area, or choice of deductible level". Verified against the FOPH pages:
+- The CHOICE OF DEDUCTIBLE LEVEL is the actual rule; it is not determined by age or rural
+  residence. The only age-related element is that insurers MAY offer different deductibles
+  for young adults aged 19-25.
+- CHF 1,000 is NOT a deductible band. It is the maximum annual cost share (standard deductible
+  CHF 300 + maximum retention fee CHF 700) for an adult holding the standard CHF 300
+  deductible.
+- The intermediate deductible levels below are 500, 1000, 1500, 2000 and 2500 for adults, and
+  100, 200, 300, 400, 500 and 600 for children. The 1,500 and 2,000 levels are therefore
+  confirmed; the "1,000" is confirmed as an optional adult deductible level, not as a band
+  with a special eligibility rule.
+- The page's CHF 1,500 / CHF 2,000 "rural area" idea is NOT stated anywhere on these pages and
+  is not recorded as fact.
+
+=== VERBATIM SOURCE QUOTES ===
+"The standard deductible amounts to CHF 300 per calendar year and the maximum annual retention fee to CHF 700 for an adult. In other words, for an insured person with an annual deductible of CHF 300, the maximum cost share is CHF 1000 per calendar year. Children up to their 18th birthday do not pay a deductible and the maximum retention fee is CHF 350. However, the deductible can be increased voluntarily."
+
+"By opting for an increased annual deductible, I do bear some financial risk in the event of illness, but I also save on my premium payments. For adults, the available deductibles are 500, 1000, 1500, 2000 and 2500 francs, and for children 100, 200, 300, 400, 500 and 600 francs. The health insurer does not have to offer the full range of deductibles. It may offer different deductibles for adults and young adults (between the ages of 19 and 25)."
+
+"The health insurer is required to charge a minimum premium equivalent to 50 per cent of the ordinary premium with accident cover for the age group and premium region of the person concerned. This amount cannot be reduced even in the case of insurance policies without accident cover, or combined with a policy limiting the choice of service provider. In addition, a discount amounting to not more than 70 per cent of the additional risk accepted may be granted."
+
+"Standard deductible: CHF 300 per year. Children and adolescents under 18 are exempt."
+"Retention fee: 10% of the costs exceeding the deductible, up to a maximum of CHF 700 per year (CHF 350 for children and adolescents under 18)."
+"Contribution to the costs of a hospital stay: CHF 15 per day. Children and adolescents under 18, young adults up to the age of 25 in education/training, and women receiving maternity-related services are exempt."
+
+[health-insurance-optional-deductibles]
+"In the compulsory health insurance it is possible to choose between the standard deductible or the higher optional deductible."
+
+"The standard deductible is CHF 300 for adults and CHF 0 for children."
+
+"If a deductible higher than the standard CHF 300 is chosen, the premium will be reduced. The reduction depends on the level of the deductible and is limited by law. A maximum of 70 percent reduction on the additional risk assumed by the policyholder may be granted."
+
+"Health insurers are not required to offer all the optional deductible levels. They may offer different deductibles for young adults (aged 19–25)."
+
+"A change in the level of the deductible can only take effect at the beginning of a calendar year."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The standard annual deductible is CHF 300; children and adolescents under 18 are exempt from it. — evidence quote: "Standard deductible: CHF 300 per year. Children and adolescents under 18 are exempt."
+
+F2. The maximum annual cost share for an adult with the standard CHF 300 deductible is CHF 1000 per calendar year (CHF 300 deductible + CHF 700 maximum retention fee). — evidence quote: "The standard deductible amounts to CHF 300 per calendar year and the maximum annual retention fee to CHF 700 for an adult. In other words, for an insured person with an annual deductible of CHF 300, the maximum cost share is CHF 1000 per calendar year."
+
+F3. Children up to their 18th birthday pay no deductible and the maximum retention fee is CHF 350. — evidence quote: "Children up to their 18th birthday do not pay a deductible and the maximum retention fee is CHF 350."
+
+F4. Adults may choose optional deductibles of 500, 1000, 1500, 2000 and 2500 francs. — evidence quote: "For adults, the available deductibles are 500, 1000, 1500, 2000 and 2500 francs, and for children 100, 200, 300, 400, 500 and 600 francs."
+
+F5. Children may choose optional deductibles of 100, 200, 300, 400, 500 and 600 francs. — evidence quote: "For adults, the available deductibles are 500, 1000, 1500, 2000 and 2500 francs, and for children 100, 200, 300, 400, 500 and 600 francs."
+
+F6. The deductible is increased voluntarily, as a trade-off of bearing financial risk in the event of illness against saving on premiums. — evidence quote: "By opting for an increased annual deductible, I do bear some financial risk in the event of illness, but I also save on my premium payments. ... However, the deductible can be increased voluntarily."
+
+F7. Insurers are NOT obliged to offer the full range of deductible levels. — evidence quote: "The health insurer does not have to offer the full range of deductibles."
+
+F8. Insurers may offer different deductibles for young adults aged between 19 and 25. — evidence quote: "It may offer different deductibles for adults and young adults (between the ages of 19 and 25)."
+
+F9. The premium reduction for an increased deductible is capped at 70 per cent of the additional risk assumed. — evidence quote: "A maximum of 70 percent reduction on the additional risk assumed by the policyholder may be granted."
+
+F10. The insurer must charge a minimum premium of 50 per cent of the ordinary premium with accident cover for the relevant age group and premium region. — evidence quote: "The health insurer is required to charge a minimum premium equivalent to 50 per cent of the ordinary premium with accident cover for the age group and premium region of the person concerned."
+
+F11. A change in the level of the deductible can only take effect at the beginning of a calendar year. — evidence quote: "A change in the level of the deductible can only take effect at the beginning of a calendar year."
+
+F12. The retention fee is 10 per cent of the costs exceeding the deductible, capped at CHF 700 per year (CHF 350 for children and adolescents under 18). — evidence quote: "Retention fee: 10% of the costs exceeding the deductible, up to a maximum of CHF 700 per year (CHF 350 for children and adolescents under 18)."
+
+F13. The contribution to the costs of a hospital stay is CHF 15 per day; children and adolescents under 18, young adults up to age 25 in education or training, and women receiving maternity-related services are exempt. — evidence quote: "Contribution to the costs of a hospital stay: CHF 15 per day. Children and adolescents under 18, young adults up to the age of 25 in education/training, and women receiving maternity-related services are exempt."

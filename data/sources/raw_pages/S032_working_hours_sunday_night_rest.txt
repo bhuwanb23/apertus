@@ -1,0 +1,74 @@
+SOURCE_ID: S032
+URL: https://www.ch.ch/en/work/working-hours/working-on-sundays-and-at-night/
+SUPPLEMENT_URL (same theme, also fetched 2026-10-12): https://www.ch.ch/en/work/working-hours/rest-periods-and-breaks-at-work/
+TITLE: Working on Sundays and at night / Rest periods and breaks at work (ch.ch, Federal Chancellery)
+CATEGORY: services
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+=== VERBATIM SOURCE QUOTES (page A: Working on Sundays and at night) ===
+"For most people in Switzerland, working on Sundays and at night is prohibited. Some sectors are not subject to the ban. In other sectors, employers can apply for authorisation to work on Sundays and at night, either for a limited period or permanently."
+
+"Working on Sundays is generally prohibited in Switzerland. However, working on Sundays is possible, subject to special authorisation and the employee's consent."
+
+"In Switzerland, the law prohibits work between 11pm and 6am."
+
+"Night workers may not work for more than 9 hours in any 10-hour period, including breaks."
+
+"Temporary night work is of a fixed duration not to exceed six months per case." / "Temporary Sunday work is of a fixed duration not to exceed six months per case."
+
+"Working on Sundays and at night is possible in some professions and types of work without the need for authorisation. These include the health sector, the hospitality industry, certain shops such as newsstands and bakeries, theatres and cinemas and the media."
+
+"A supplement of at least 25% must be paid for work between 11pm and 6am carried out for less than 25 nights per calendar year."
+
+"Time off equal to 10% of the hours of night work performed must be provided for night work carried out on 25 or more nights per calendar year."
+
+"Persons working up to six Sundays per year are entitled to a 50% wage supplement as well as time off in compensation that varies depending on the number of hours worked:"
+
+"Persons working on Sundays for more than five hours are entitled to one day of rest of at least 24 consecutive hours (in addition to the daily rest, i.e. the resting time of at least 11 hours between two working days, amounting to time off of a total of 35 hours), during the current or the following week."
+
+"Please note: workers who work at least 25 nights per year are entitled to undergo a medical examination every two years to prove that they are fit to work at night. ... From the age of 45, workers are entitled to this examination every year."
+
+"To employ workers for occasional work on Sundays, employers must submit a request to the competent cantonal authority explaining why the work is necessary." / "To employ workers for occasional night work, employers must contact the competent cantonal authority to apply for authorisation." / "To apply for an authorisation to employ workers for regular work on Sundays, employers need to contact the State Secretariat for Economic Affairs."
+
+"It is against the law to pay cash compensation instead of allowing time off, as the purpose of the time off is to allow workers to rest and make up for lack of sleep."
+
+=== VERBATIM SOURCE QUOTES (page B supplement: Rest periods and breaks at work) ===
+"15 minutes if you work more than 5 1/2 hours a day"
+"30 minutes if you work more than 7 hours a day"
+"1 hour if you work more than 9 hours a day; in this case you may take more than one break."
+
+"Breaks are not considered working time so they are not remunerated."
+
+"The daily rest period is the mandatory rest period after a working day: - it must last at least 11 consecutive hours - it starts when you leave the workplace and ends when you return"
+
+"Once a week, your employer has the right to reduce the rest period to 8 hours but only if you have been given an average daily rest period of 11 hours over two weeks."
+
+"NB: For employees under 18, the daily rest period must always be at least 12 hours."
+
+"Smokers are not entitled to additional breaks to smoke."
+
+PAGE B NAVIGATION CONTEXT (working hours index, https://www.ch.ch/en/work/working-hours/): the "Working hours" section of ch.ch lists exactly five sub-pages — "Contractual and statutory overtime", "Rest periods and breaks at work", "Short-time working", "Vacation, public holidays and absences from work", "Working on Sundays and at night".
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Sunday work is generally prohibited in Switzerland by law; it requires a special authorisation from the competent authority plus the employee's consent, with sectoral exemptions. — evidence quote: "Working on Sundays is generally prohibited in Switzerland. However, working on Sundays is possible, subject to special authorisation and the employee's consent."
+
+F2. Work between 23:00 and 06:00 is prohibited by law (night work ban), also subject to special authorisation and employee consent. — evidence quote: "In Switzerland, the law prohibits work between 11pm and 6am."
+
+F3. Night workers may not work more than 9 hours in any 10-hour period, breaks included. — evidence quote: "Night workers may not work for more than 9 hours in any 10-hour period, including breaks."
+
+F4. Pay premium for occasional night work (fewer than 25 nights/calendar year, 23:00–06:00) is at least 25%; for regular night work (25+ nights/calendar year) the compensation is time off equal to 10% of night hours worked, and cash payment in lieu is illegal. — evidence quote: "A supplement of at least 25% must be paid for work between 11pm and 6am carried out for less than 25 nights per calendar year." / "Time off equal to 10% of the hours of night work performed must be provided for night work carried out on 25 or more nights per calendar year."
+
+F5. Occasional Sunday work (up to six Sundays per year) carries a 50% wage supplement plus compensatory time off; more than 5 hours on a Sunday yields a rest day of at least 24 consecutive hours, i.e. 35 hours in total when combined with the 11-hour daily rest. — evidence quote: "Persons working up to six Sundays per year are entitled to a 50% wage supplement as well as time off in compensation" / "amounting to time off of a total of 35 hours), during the current or the following week."
+
+F6. The statutory daily rest period between two working days is at least 11 consecutive hours; it may be shortened to 8 hours once a week if the average over two weeks is 11 hours; for employees under 18 it must always be at least 12 hours. — evidence quote: "it must last at least 11 consecutive hours" / "Once a week, your employer has the right to reduce the rest period to 8 hours but only if you have been given an average daily rest period of 11 hours over two weeks." / "For employees under 18, the daily rest period must always be at least 12 hours."
+
+F7. Minimum break entitlement scales with daily hours: 15 min (>5½ h/day), 30 min (>7 h/day), 1 hour (>9 h/day); breaks are unpaid. — evidence quote: "15 minutes if you work more than 5 1/2 hours a day" / "30 minutes if you work more than 7 hours a day" / "1 hour if you work more than 9 hours a day" / "Breaks are not considered working time so they are not remunerated."
+
+F8. CANTONAL VARIABLE — Authorisations for occasional night/Sunday work are issued by the competent CANTONAL authority (a list of all 26 cantonal permit offices is published on the page); only long-term/regular night and Sunday work authorisations are issued by SECO. — evidence quote: "employers must contact the competent cantonal authority to apply for authorisation" / "To apply for an authorisation to employ workers for regular work on Sundays, employers need to contact the State Secretariat for Economic Affairs."
+
+CAVEATS / NOT FOUND ON EITHER PAGE:
+- No maximum weekly working time figure appears on these pages (the "41 hours" value in the brief is NOT stated by ch.ch here and must not be attributed to this source).
+- The term "statutory day of rest" for Sunday is not used; the page frames Sunday as generally prohibited work rather than as a named rest day.
+- Exempt sectors without authorisation: "the health sector, the hospitality industry, certain shops such as newsstands and bakeries, theatres and cinemas and the media."
+- Temporary night/Sunday work is capped at "a fixed duration not to exceed six months per case"; beyond that it counts as regular.

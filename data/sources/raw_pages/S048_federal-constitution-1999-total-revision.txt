@@ -1,0 +1,61 @@
+SOURCE_ID: S048
+URL: https://ch-info.swiss/en/die-schweiz/geschichte
+TITLE: History | CH Info (Federal Chancellery / The Swiss Confederation – a brief guide, web edition)
+CATEGORY: history
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+RELATED PAGE FETCHED (same site, same publisher):
+- https://www.parlament.ch/en/%C3%BCber-das-parlament/Pages/bundesverfassung.aspx
+  ("Federal Constitution", Parliamentary Services, parliament.ch — federal administration)
+
+NOTE ON THE PREMISE OF THE GAP:
+The gap asked for "the Constitution was completely revised in 1999 and came into force
+1 Jan 2000". Two independent official pages confirm this. ch-info.swiss gives the year-level
+facts; parlament.ch (Parliamentary Services) gives the exact day and the vote margins. Both
+are quoted verbatim below and neither is inferred.
+
+=== VERBATIM SOURCE QUOTES ===
+[ch-info.swiss/en/die-schweiz/geschichte]
+"2000 Third Federal Constitution: Separation of powers"
+
+"The totally revised Federal Constitution regulates the division of powers between the federal government and the cantons: more responsibilities are transferred to the federal government and the Federal Administration is expanded. In 1999, voters approved the third Federal Constitution. It came into force in 2000 and is still in force today."
+
+[ch-info.swiss/en/die-schweiz/geschichte]
+"Switzerland developed over the centuries from a collection of different alliances to a confederation of states and finally to the federal state we know today. Its national borders and neutrality were established and recognised internationally in 1815. Its political system dates back to the Federal Constitution of 1848."
+
+[ch-info.swiss/en/die-schweiz/geschichte]
+"With the defeat of Napoleon, the great European powers recognised Swiss neutrality and set Switzerland's borders as they are today. The Federal Treaty of 1815 brought together the various federal alliances into a single confederation of states."
+
+[ch-info.swiss/en/die-schweiz/geschichte]
+"1874, 1891 Expanded democracy: Initiative, referendum — The revised Federal Constitution transferred more tasks to the federal government and broadened democratic rights at federal level. The referendum was introduced in 1874 and the popular initiative in 1891."
+
+[parlament.ch — Federal Constitution]
+"In 1990s, the Federal Constitution was revised and updated, with the codification of unwritten constitutional law (contained in decisions of the Federal Supreme Court) and the 'downgrading' of provisions that did not belong at constitutional level (e.g. the ban on absinthe). This total revision was approved by the People and the cantons on 18 April 1999 by majorities of 59.2% and 14 out of 26 cantons respectively. It replaced the previous Federal Constitution of 29 May 1874 and among other new provisions contained articles on fundamental rights that had previously only been set out in decisions of the Federal Supreme Court and legal commentaries. It came into force on 1 January 2000."
+
+[parlament.ch — Federal Constitution]
+"In 1866, the Constitution of 1848 underwent a partial revision. The first total revision came into force in 1874. It introduced wider powers for the federal government and gave more democratic rights to the electorate. This total revision also introduced the referendum at federal level."
+
+[parlament.ch — Federal Constitution]
+"The basis for the present day Federal Constitution is the Constitution of 12 September 1848, which established the Swiss federal state."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. The current Swiss Federal Constitution is the THIRD total revision of the Constitution. — evidence quote: "2000 Third Federal Constitution: Separation of powers" and "In 1999, voters approved the third Federal Constitution."
+
+F2. The totally revised (third) Federal Constitution was approved by the people and the cantons on 18 April 1999. — evidence quote: "This total revision was approved by the People and the cantons on 18 April 1999 by majorities of 59.2% and 14 out of 26 cantons respectively."
+
+F3. The 1999 total revision was approved by 59.2 per cent of the people and by 14 out of 26 cantons. — evidence quote: "This total revision was approved by the People and the cantons on 18 April 1999 by majorities of 59.2% and 14 out of 26 cantons respectively."
+
+F4. The 1999 Constitution came into force on 1 January 2000. — evidence quote: "It came into force on 1 January 2000."
+
+F5. The 1999 total revision REPLACED the previous Federal Constitution of 29 May 1874. — evidence quote: "It replaced the previous Federal Constitution of 29 May 1874"
+
+F6. The first total revision of the Federal Constitution came into force in 1874, introduced wider federal powers and more democratic rights, and introduced the referendum at federal level. — evidence quote: "In 1866, the Constitution of 1848 underwent a partial revision. The first total revision came into force in 1874. It introduced wider powers for the federal government and gave more democratic rights to the electorate. This total revision also introduced the referendum at federal level."
+
+F7. The present political system of Switzerland dates back to the Federal Constitution of 12 September 1848, which established the Swiss federal state. — evidence quote: "The basis for the present day Federal Constitution is the Constitution of 12 September 1848, which established the Swiss federal state."
+
+F8. The 1999 total revision introduced articles on fundamental rights that had previously only existed as unwritten constitutional law in Federal Supreme Court decisions. — evidence quote: "among other new provisions contained articles on fundamental rights that had previously only been set out in decisions of the Federal Supreme Court and legal commentaries"
+
+F9. The referendum was introduced in 1874 and the popular initiative in 1891. — evidence quote: "The referendum was introduced in 1874 and the popular initiative in 1891."
+
+F10. The 1999 Constitution is still in force today and transfers more responsibilities to the federal government. — evidence quote: "The totally revised Federal Constitution regulates the division of powers between the federal government and the cantons: more responsibilities are transferred to the federal government and the Federal Administration is expanded. In 1999, voters approved the third Federal Constitution. It came into force in 2000 and is still in force today."

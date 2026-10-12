@@ -1,0 +1,111 @@
+SOURCE_ID: S015
+URL: https://www.ch.ch/en/foreign-nationals-in-switzerland/naturalisation/
+TITLE: Application for simplified or ordinary naturalisation in Switzerland
+CATEGORY: law
+LANGUAGE: en
+DATE_ACCESSED: 2026-10-12
+
+NOTE ON URL DISCOVERY:
+- Requested https://www.ch.ch/en/swiss-citizenship/ -> HTTP 404.
+- Correct parent index: https://www.ch.ch/en/foreign-nationals-in-switzerland/ ("Foreign nationals in
+  Switzerland", HTTP 200), which lists a "Naturalisation" sub-page. Final working URL as above (HTTP 200).
+- German-language equivalents referenced by the page: /de/auslander-in-der-schweiz/einburgerung/
+
+=== VERBATIM SOURCE QUOTES ===
+
+"Naturalisation allows a foreign citizen to obtain Swiss citizenship. The procedure varies from case to case."
+
+"### Good to know
+Each commune can make its own rules on ordinary naturalisation, within the bounds of cantonal and federal law."
+
+"What is naturalisation?
+Naturalisation is the final step in the process of integrating into the Swiss way of life. It gives you the right to vote and to stand for election."
+
+"Since Switzerland recognises dual nationality, applicants for a Swiss passport do not risk losing their original nationality, provided their country of origin also permits dual nationality."
+
+"Ordinary naturalisation
+### Who can apply?
+Holders of a settlement permit (C permit)
+
+### What are the residence requirements?
+Federal law requires you to have lived in Switzerland for at least ten years, including three of the five years prior to the application being made.
+
+The time spent in Switzerland between the ages of 8 and 18 counts double, but you cannot apply for naturalisation until you have lived in the country for at least six years.
+
+Depending on the canton, you must also have lived for between two and five years in your commune or canton of residence before you can apply for naturalisation."
+
+"### What are the individual requirements?
+Swiss law provides that Swiss citizenship may be granted to persons:
+- who are successfully integrated into Swiss society,
+- who are familiar with the way of life in Switzerland,
+- who do not pose a danger to Switzerland's internal or external security."
+
+"The requirements for obtaining citizenship rights in a canton or a commune vary considerably from one canton and commune to another."
+
+"### How much does it cost?
+The bill can vary substantially depending on the commune and canton, but on average the fees are as follows:
+- Commune: from 500 to 1,000 francs per person
+- Canton: up to 2,000 francs per person
+- Confederation:
+  - Couple with or without minor children: 150 francs
+  - Single person with or without minor children: 100 francs
+  - Single minor: 50 francs
+In addition, there is a charge for the required documents (residence certificate, extract from criminal records, extract from the debt enforcement register, etc.)."
+
+"### What is the procedure?
+You have to apply in the canton or commune where you live."
+
+"Once you have submitted your application, you will be invited for a personal interview where you will be told what the next steps are.
+
+The procedures vary considerably from canton to canton, but you will need to prove that you have sufficient language skills to communicate in a national language. Some authorities require you to take written or oral naturalisation tests to check your knowledge of Switzerland and your canton."
+
+"### How long does the procedure take?
+The length of the naturalisation process varies greatly. For more information, please contact your local cantonal or communal authority."
+
+"Simplified naturalisation
+### Who can apply?
+- The spouse of a Swiss citizen
+- The child of a Swiss citizen
+- A person under the age of 25 who is a member of a foreign family that has lived in Switzerland for three generations
+- A stateless minor child
+- A person who has lost their Swiss citizenship (e.g. by marrying a foreign national)
+
+### What are the residence requirements?
+To apply for simplified naturalisation, you do not need to have lived in Switzerland for as long as for ordinary naturalisation. The period of residence required varies from case to case."
+
+"### How much does it cost?
+The cost of simplified naturalisation in Switzerland varies according to age:
+- 250 francs for minors under the age of 12
+- 650 francs for minors aged 12 and over
+- 900 francs for adults.
+For spouses of Swiss citizens residing abroad, simplified naturalisation costs 600 francs.
+The full amount must be paid in advance and is not refunded if the application is refused."
+
+"The application for simplified naturalisation must be sent to the State Secretariat for Migration using the official form."
+
+"### How long does the procedure take?
+The simplified naturalisation procedure takes an average of one and a half years."
+
+=== FACT CANDIDATES (for MCQ generation) ===
+F1. Ordinary naturalisation requires at least 10 years of residence in Switzerland, including 3 of the 5 years immediately preceding the application. — evidence quote: "Federal law requires you to have lived in Switzerland for at least ten years, including three of the five years prior to the application being made."
+
+F2. Time spent in Switzerland between ages 8 and 18 counts double for naturalisation purposes, but no application is possible until at least 6 years of total residence. — evidence quote: "The time spent in Switzerland between the ages of 8 and 18 counts double, but you cannot apply for naturalisation until you have lived in the country for at least six years."
+
+F3. CANTONAL VARIABLE — an additional 2 to 5 years of residence in the specific commune or canton is required before applying, and the exact figure is set cantonally. Do NOT present "two to five years" as a single universal requirement; it is a range whose applicable value differs per canton. — evidence quote: "Depending on the canton, you must also have lived for between two and five years in your commune or canton of residence before you can apply for naturalisation."
+
+F4. Only holders of a settlement permit (C permit) can apply for ordinary naturalisation. — evidence quote: "Holders of a settlement permit (C permit)"
+
+F5. Switzerland recognises dual nationality: applicants for a Swiss passport do not lose their original nationality, provided their country of origin also allows dual nationality. — evidence quote: "Since Switzerland recognises dual nationality, applicants for a Swiss passport do not risk losing their original nationality, provided their country of origin also permits dual nationality."
+
+F6. Ordinary naturalisation fees average: commune CHF 500-1,000 per person, canton up to CHF 2,000 per person, and a Confederation fee of CHF 150 for a couple (with or without minor children), CHF 100 for a single person, or CHF 50 for a single minor. — evidence quote: "- Commune: from 500 to 1,000 francs per person / - Canton: up to 2,000 francs per person / - Confederation: - Couple with or without minor children: 150 francs - Single person with or without minor children: 100 francs - Single minor: 50 francs"
+
+F7. CANTONAL VARIABLE — simplified naturalisation fees are fixed by age: CHF 250 for minors under 12, CHF 650 for minors aged 12 and over, CHF 900 for adults, and CHF 600 for spouses of Swiss citizens residing abroad. The fee is non-refundable if the application is refused. — evidence quote: "250 francs for minors under the age of 12 / 650 francs for minors aged 12 and over / 900 francs for adults. ... The full amount must be paid in advance and is not refunded if the application is refused."
+
+F8. CANTONAL VARIABLE — the commune sets its own ordinary-naturalisation rules within cantonal and federal limits, the application is filed in the canton or commune of residence, procedures "vary considerably from canton to canton", and some authorities require written or oral naturalisation tests. Ordinary naturalisation has no stated nationwide processing time; only simplified naturalisation has a figure (average 1.5 years). — evidence quote: "Each commune can make its own rules on ordinary naturalisation, within the bounds of cantonal and federal law." / "The procedures vary considerably from canton to canton"
+
+F9. Simplified naturalisation applies to, among others, the spouse and child of a Swiss citizen, a stateless minor child, and a person under 25 from a foreign family resident in Switzerland for three generations. — evidence quote: "The spouse of a Swiss citizen / The child of a Swiss citizen / A person under the age of 25 who is a member of a foreign family that has lived in Switzerland for three generations / A stateless minor child"
+
+=== COVERAGE GAPS ===
+- No cantonal/municipal ballot requirement is described as a formal vote on this page; the page only says
+  communes/cantons set their own rules and that citizenship confers the right to vote. Do not assert a
+  mandatory popular vote from this source.
