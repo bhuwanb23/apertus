@@ -169,7 +169,65 @@ deliberately, since audio items need real recorded Swiss German.
 > `python eval/baseline_report.py` **refuses to certify mock results** and exits
 > non-zero — that refusal is correct behaviour, not a bug.
 
-### Phase 2.5 — two defects its 41-check suite caught
+### Phase 3 — Failure analysis & improvement
+
+**3.1 · Error taxonomy — ✅ built and tested; content blocked on B2**
+- [x] `fix/analyze_errors.py` — layered classification engine
+- [x] `fix/test_error_taxonomy.py` — **67 checks**
+- [x] `fix/error_taxonomy.md` + `fix/weakest_area_analysis.md` (3.2) generated
+- [x] Classified data written back with `error_code` per item
+- [!] **Populated taxonomy — blocked on B2** (needs a real baseline)
+
+> **Three design decisions that differ from `phase_3.md` §3.1:**
+>
+> 1. **Parse errors are never counted as model errors.** They are measurement
+>    failures. Adding them to the wrong-answer count makes the taxonomy describe
+>    the instrument. Reported in a separate row with its own total.
+> 2. **An MCQ cannot classify its own errors.** The baseline response is a
+>    letter — *"Switzerland's rules differ here, so I would choose A."* says
+>    nothing about why A. The plan's classifier prompt would hand that to a
+>    model and get a confident DE-CONF/HALLUC/NUMERIC label with no evidence
+>    behind it. So errors are re-asked on a **separate diagnostic run** with a
+>    reasoning prompt; those records are stamped `diagnostic: true` and are
+>    never merged into a score table.
+> 3. **`UNCLASSIFIED` is not an error type.** It has no description, no
+>    fixability score, and is never reported as the dominant pattern. A
+>    category whose errors are unclassified is **not ranked** for a Phase 3
+>    fix — 3.2 picks its target from that table.
+
+**3.2 · Weakest-area selection — table generated; 🔒 decision blocked on 3.1**
+- [x] Selection scoring implemented (with `error_count` folded into priority —
+      the plan's `impact × fixability` rewards a category at 0% whose dominant
+      error is unfixable over one at 30% that RAG would fix)
+- [x] `fix/weakest_area_analysis.md` generated
+- [!] **Pick one target — blocked.** Choosing from a mock baseline would pick a
+      target on noise.
+
+**3.3 · Improvement — not started**
+- [ ] 3.3a System prompt (Option A) · 3.3b RAG (Option B, highest ROI) · 3.3c LoRA (stretch)
+- [ ] `fix/rag/embeddings.py`, `retriever.py`, `rag_prompt.py`, `run_rag_eval.py`
+
+**3.4 · Dev-set validation — not started**
+
+**Current total: 10,785 automated checks across six suites.**
+
+## Phase 3.1 — defects its 67-check suite caught
+
+1. **A hallucinated figure was being labelled NUMERIC** — and that is correct
+   behaviour, not a bug, which is the point: `28 cantons` vs `26 cantons` is
+   indistinguishable from a genuine miscount in the artefacts. Recorded as a
+   limitation rather than guessed around.
+2. **Number *words* were not normalised**, so `"Three months for residential
+   premises"` against `"One month for residential premises"` did not collapse —
+   the plural `-s` broke the comparison after the digits normalised.
+3. **`UNCLASSIFIED` was winning the "dominant error" slot** at 78%, producing
+   *"the dominant error pattern is UNCLASSIFIED"*. That reads as a finding and
+   is the exact opposite: it means nobody has looked yet.
+4. **`UNCLASSIFIED` was inheriting a fixability score of 5**, which put
+   unexamined categories into the 3.2 ranking on a number nobody has evidence
+   for.
+
+## Phase 2.5 — defects its 41-check suite caught
 
 1. **A check renamed itself when it failed** — "8B: no api errors" when passing,
    "8B: api errors" when failing. Impossible to assert on, and impossible to
