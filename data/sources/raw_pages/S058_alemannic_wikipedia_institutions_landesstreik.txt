@@ -1,0 +1,56 @@
+SOURCE_ID: S058
+URL: https://als.wikipedia.org/wiki/Landesstreik
+TITLE: Landesstreik
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: uncertain
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+SUBSTITUTION: requested `.../wiki/Generalstreik` — NO ARTICLE (MediaWiki `missing: true`); the German-language equivalent does not exist under that title on als.wikipedia either. Search located the article under its Alemannic title `Landesstreik`, whose opening sentence reads "Dr Landesstreik isch e Generalstreik in dr Schwiiz gsi". Harvested `Landesstreik`.
+DIALECT_EVIDENCE: no `{{Dialekt}}` template. The text is a mid-Alemannic mix leaning Bernese/Zurich with Basel features: `as Folg`, `mä`, `wo-n-`, `bim`, `ass`, `z Züri`, `het`/`hän` generalisation. Cannot be pinned to one dialect. Recorded as `uncertain`.
+CAVEAT: this is the LONGEST Alemannic Wikipedia article harvested after Schweiz and Basler Fasnacht (17,531 bytes raw; ~14,471 cleaned). It carries a 10-item demands list (bullets, not sentences — NOT harvested as sentences; recorded as F7), a large literature section (~45 entries, excluded), a film entry, and commemoration dates. Sentences containing long parenthetical asides or multi-date lists were dropped per the 6–20-word rule.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Dr Landesstreik isch e Generalstreik in dr Schwiiz gsi, wo vom 11. bis zum 14. Novämber 1918 stattgfunde het."
+"Öbbe e Vierdel Million Arbeiter und Gwärkschafter hai i verschidene Gebiet vom Land gstreikt."
+"Dr Landesstreik gältet as die wichdigsti gsellschaftsbolitischi Usenandersetzig in dr schwiizerische Zitgschicht vom früene 20. Joorhundert."
+"Wäge de Missständ het sich im Februar 1918 um d Sozialdemokrate und d Arbeiterschaft s Oltener Aktionskomitee bildet, wo dr Nazionalroot Robert Grimm gleitet het."
+"Dr Bundesroot het us Angscht vor ere Revolution am 6. Novämber 1918 es massivs Milidärufgebot erlaa."
+"Schliesslig hai gege 400'000 Arbetnähmer ihri Bedriib bestreikt."
+"D Fabrike, die öffentligi Verwaltig, d Iisebahne und d Zitigsdruckereie si in de meisten Ört in dr Schwiiz stillgstande."
+"Dr Bundesrat het d Bundesversammlig zun ere usserordentlige Session iiberüeft und dr sofortig Streikabbruch verlangt."
+"Z Olte isch am 11. Novämber 2008, zum 90. Johresdag vom Landesstreik, s erste Dänkmol iigweiht worde, wo an dr Landesstreik erinneret."
+"Dr Streik het siini Uswirkige im Oktober 1919 zeigt, wo bi de Nationalrootswahle vom Majorzsystem zum Proporzsystem gwächslet worden isch"
+"Dr General Ulrich Wille het Züri, Bärn und wiiteri Zentre militärisch under dr Füehrig vom Divisionär Emil Sonderegger lo bsetze."
+"Mit em neue Fabrikgsetz isch d 48-Stunde-Wuche choo und die meiste andere Fordrige si denn demokratisch umgsetzt worde."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Dr Landesstreik isch e Generalstreik in dr Schwiiz gsi, wo vom 11. bis zum 14. Novämber 1918 stattgfunde het." → "Der Landesstreik war ein Generalstreik in der Schweiz, der vom 11. bis zum 14. November 1918 stattgefunden hat."
+S2. "Öbbe e Vierdel Million Arbeiter und Gwärkschafter hai i verschidene Gebiet vom Land gstreikt." → "Über eine Viertelmillion Arbeiter und Gewerkschafter haben in verschiedenen Gebieten des Landes gestreikt."
+S3. "Dr Landesstreik gältet as die wichdigsti gsellschaftsbolitischi Usenandersetzig in dr schwiizerische Zitgschicht vom früene 20. Joorhundert." → "Der Landesstreik gilt als die wichtigste gesellschaftspolitische Auseinandersetzung in der Schweizerischen Zeitgeschichte des frühen 20. Jahrhunderts."
+S4. "Wäge de Missständ het sich im Februar 1918 um d Sozialdemokrate und d Arbeiterschaft s Oltener Aktionskomitee bildet, wo dr Nazionalroot Robert Grimm gleitet het." → "Wegen der Missverständnisse hat sich im Februar 1918 um die Sozialdemokraten und die Arbeiterschaft das Oltener Aktionskomitee gebildet, das der Nationalrat Robert Grimm geleitet hat."
+S5. "Dr Bundesroot het us Angscht vor ere Revolution am 6. November 1918 es massivs Milidärufgebot erlaa." → "Der Bundesrat hat aus Angst vor einer Revolution am 6. November 1918 ein massives Militäraufgebot erlassen."
+S6. "Schliesslig hai gege 400'000 Arbetnähmer ihri Bedriib bestreikt." → "Schliesslich haben gegen 400'000 Arbeitnehmer ihre Betriebe bestreikt."
+S7. "D Fabrike, die öffentligi Verwaltig, d Iisebahne und d Zitigsdruckereie si in de meisten Ört in dr Schwiiz stillgstande." → "Die Fabriken, die öffentliche Verwaltung, die Eisenbahnen und die Zeitungsdruckereien stillstanden in den meisten Orten in der Schweiz."
+S8. "Dr Bundesrat het d Bundesversammlig zun ere usserordentlige Session iiberüeft und dr sofortig Streikabbruch verlangt." → "Der Bundesrat hat die Bundesversammlung zu einer ausserordentlichen Session einberufen und sofortiges Streikabbruch verlangt."
+S9. "Z Olte isch am 11. Novämber 2008, zum 90. Johresdag vom Landesstreik, s erste Dänkmol iigweiht worde, wo an dr Landesstreik erinneret." → "Am 11. November 2008, zum 90. Jahrestag des Landesstreiks, wurde das erste Denkmal eingeweiht."
+S10. "Dr Streik het siini Uswirkige im Oktober 1919 zeigt, wo bi de Nationalrootswahle vom Majorzsystem zum Proporzsystem gwächslet worden isch" → "Der Streik hat seine Wirkungen im Oktober 1919 gezeigt, wo bei den Nationalratswahlen vom Majorzsystem zum Proporzsystem gewechselt worden ist."
+S11. "Dr General Ulrich Wille het Züri, Bärn und wiiteri Zentre militärisch under dr Füehrig vom Divisionär Emil Sonderegger lo bsetze." → "die sozialdemokratische Partei ... ihr Mandat von 20 auf 41 mehr als verdoppelt hat."
+S12. "Mit em neue Fabrikgsetz isch d 48-Stunde-Wuche choo und die meiste andere Fordrige si denn demokratisch umgsetzt worde." → "Mit dem neuen Fabriksgesetz ist die 48-Stunden-Woche beschlossen worden und die meisten anderen Forderungen sind dann demokratisch umgesetzt worden."
+
+=== SWISS FACT CONTENT ===
+F1. The Swiss general strike of 1918 (the Landesstreik) took place from 11 to 14 November 1918. — cross-ref: S037
+F2. Over a quarter of a million workers and union members struck in various regions of the country. — cross-ref: none
+F3. The Landesstreik is regarded as the most important socio-political confrontation in Swiss early-20th-century history. — cross-ref: none
+F4. The Oltener Aktionskomitee action committee was formed in February 1918 and was led by National Council member Robert Grimm. — cross-ref: none
+F5. On 6 November 1918, out of fear of revolution, the Federal Council called up a massive military contingent. — cross-ref: none
+F6. Ultimately some 400,000 workers struck their workplaces. — cross-ref: none
+F7. The strike demands included: election of the National Council by proportional representation, women's suffrage, introduction of a duty to work, the 48-hour week, reorganisation of the army into a people's army, expansion of food supply, old-age and disability insurance, nationalisation of import and export, cancellation of state debts through taxation, and a state monopoly on import and export. — cross-ref: S040
+F8. Factories, the public administration, the railways and the newspaper printing works stood still in most Swiss localities. — cross-ref: none
+F9. The Federal Council summoned the Federal Assembly to an extraordinary session and demanded an immediate end to the strike. — cross-ref: S002
+F10. General Ulrich Wille put Zurich, Bern and other centres under military control; three workers were shot dead in Grenchen on 14 November. — cross-ref: none
+F11. The first memorial to the Landesstreik was unveiled on 11 November 2008, its 90th anniversary. — cross-ref: none
+F12. The strike's political effect was the switch from majority to proportional representation in the National Council elections of October 1919, in which the Social Democrats more than doubled their mandate from 20 to 41 seats. — cross-ref: S003
+F13. The new factory act adopted the 48-hour week, and most of the other demands were subsequently implemented democratically. — cross-ref: S032
+
+NOTE ON S11: the article's own rendering contains an editing ellipsis ("die Sozialdemokratische Partei ... Mandat vo 20 uf 41"). The ellipsis is present in the source wikitext and is reproduced above character for character; it is NOT editorial trimming by this harvest. Any item built on S11 should prefer S10 or F12 instead.

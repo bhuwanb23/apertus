@@ -1,0 +1,45 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Ayent
+TITLE: Ayent
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: valais
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Walliserdeutsch|Wallisertiitsch|Wallisertitsch}}
+SUBDIALECT_NOTE: WALLISERTIITSCH (Höchstalemannisch, Valais German) - NOT Walser German. "valais" is used as the DIALECT value because the harvest brief's enum (bern|zurich|aargau|walser) has no slot for Wallisertiitsch and mislabelling it as "walser" would corrupt a dialect-variation test item.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Zer Gmei Ayent gcheerunt di Deerfer Botyre, Luc, Saxonne, La Place, Blignou, Fortunau, Saint-Romain, Signèse, Villa, Argnou und Anzère."
+"Im Noordu geit ds Gmeigibiet bis uf ds Wildhooru emüf."
+"Im Taal vaner Lienne isch dr See Lac de Tseuzier."
+"Üser Lienne löift sit Jaarhunnertu Wasser in d Süona va Ayent."
+"Dur ds Taal vaner Lienne fiert der Füesswäg zum Rawilpass."
+"D Naachpürgmeinde va Ayent sind di Bäärner Gmeinde Lengg und Lauenu und d Walliser Gmeinde Icogne."
+"Ayent isch zum eerschtu Mal im Jaar 1052 als Agent erwäänts cho."
+"Dr Gmeipresidänt va Ayent isch dr Marco Aymon (Stand Oktoober 2017)."
+"Dr tradizionell Dialäkt va Ayent gcheert zum Frankoprovenzalischu."
+"Di Gmei gcheert als einzigi Gmei vaner rächt Sita vam Rhonetaal zum Bizirk Ering."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Zur Gemeinde Ayent gehören die Dörfer Botyre, Luc, Saxonne, La Place, Blignou, Fortunau, Saint-Romain, Signèse, Villa, Argnou und Anzère."
+S2. "Im Norden geht das Gemeindegebiet bis hinauf zum Wildhorn empor."
+S3. "Im Tal der Lienne liegt der See Lac de Tseuzier."
+S4. "Unsere Lienne fliesst seit Jahrhunderten Wasser in die Sonnen von Ayent."
+S5. "Durch das Tal der Lienne führt der Fussweg zum Rawilpass."
+S6. "Die Nachbargemeinden von Ayent sind die Berner Gemeinden Lenk und Lauenen und die Walliser Gemeinde Icogne."
+S7. "Ayent ist zum ersten Mal im Jahr 1052 als Agent erstmals erwähnt."
+S8. "Der Gemeindepräsident von Ayent ist Marco Aymon (Stand Oktober 2017)."
+S9. "Der traditionelle Dialekt von Ayent gehört zum Frankoprovenzalischen."
+S10. "Die Gemeinde gehört als einzige Gemeinde der rechten Seite des Rhonetals zum Bezirk Hérens."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "vaner"/"vanu" = von. This is the single most distinctive Wallisertiitsch feature in the article: "vaner Lienne", "vanu Iwonru", "vaner Chinigi", "vam Rottu". GENUINELY UNIQUE - zero occurrences of "vaner"/"vanu" in the Basel, Bern, Zürich or Walser samples (where "vo" dominates: Bernese "vo de Nachtschattegwächs", Zürich "vo de Gmeindrat", Basel "vo de Bezirker", Walser "vù"/"vam"). Strong, safely usable as a Walser-vs-Basel contrast item.
+C2. "Jaarhunnertu" = Jahrhunderte, showing the uncontaminated /u/ in the -eu ending. Contrast with Bernese "bbruucht"/"bruucht" and Zürich "bruucht", where final devoicing has applied. VERIFIED three-way: Wallisertiitsch "Jaarhunnertu" (devoicing ABSENT), Basel "Joor" (devoicing PRESENT, 17 occurrences), Bernese "Jahr" (devoicing ABSENT). This is the cleanest possible test of the final-devoicing variable the brief asked about: Basel devoices, Wallisertiitsch does not, Bern and Zürich do not.
+C3. "Zer" = zur. Not attested in the other samples. Wallisertiitsch-attested.
+C4. "gcheerunt" (gehören), "gcheert" (gehört). Not attested in Bern/Zürich/Basel (which use "ghöred"/"ghört"/"bäherred"). VERIFIED three-way: Wallisertiitsch "gcheerunt" vs Bernese "bäherred"/"ghöred" vs Zürich "bähered". Strong lexical contrast.
+C5. "deerfer" = Dörfer. Not attested in the other samples. Wallisertiitsch-attested.
+C6. "Füesswäg" = Fussweg. Zürich has "Fussweg" in the same document family but the -wäg element matches Bernese "Wäg" ("Wäg sym Gruch", "der Wäg afa äbne"). So "wäg" is NOT exclusively Bernese - it is shared Bernese/Wallisertiitsch, and it is Zürich which lacks it. IMPORTANT CORRECTION to any assumption that "Wäg" marks Bernese specifically.
+C7. "mu" = man - also present in the Blatten file ("wa mu zum Aletschgletscher emubergeit"). Shared within Wallisertiitsch; contrast with Zürich "mer", Bernese "Me"/"me", Basel "me". Strong.
+C8. "eerschtu"/"erschtu" = erste. Note the final -u, again showing no final devoicing; Bernese writes "erscht" (final -t, devoiced). VERIFIED: Bernese "der erscht Vokal", "di erschte Sohn" vs Wallisertiitsch "zum eerschtu Mal". A minimal-pair devoicing test item.
+C9. REGISTER WARNING: this article is short and many proper nouns are French-speaking valley settlements. The German dialect text is limited. Kept because it is unambiguously Wallisertiitsch and short clean sentences are valuable, but Ayent is the weakest of the 14 items on dialect density.

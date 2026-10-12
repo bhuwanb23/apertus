@@ -1,0 +1,69 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Ausl%C3%A4nder
+TITLE: Ausländer (display title: Ussländer)
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: zurich
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Zürichdeutsch|Züritüütsch|Züridütsch}}
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Bsunders bi statistische Grössene isch daher di genaui Aagab vo dr jewiils verwendete Wortbedüütig unerlässlich."
+"In viile Schprache vo dr Welt hät das Wort Ussländer e negativi Konnotation."
+"Dr Begriff (Intention/Extension) vom Wort Ussländer erschlüüsst sich us dr Perschpektive vomene Inland."
+"Sone Person gilt im Allgmeine als Doppelbürger."
+"Si sind aber im Ussländerrecht de Ussländer gliichgschtellt."
+"Die Iiordnig bestaht unabhängig vo dr Schtaatsaaghörigkeit."
+"Es derigs, nöd zueverlässig eidüütigs Merchmaal, isch daher nur iigschränkt als Grundlaag vonere Definition geignet."
+"E Person chann sich au mehrere Ethnie zueghörig fühle und sich gliichziitig als Ussländer und Inländer betrachte."
+"In aller Regel wird daas Kriterium nöd stringent aagwendet, so dass es nur iigschränkt sinnvoll und logisch inkonsequent isch."
+"Schpaatussiidler gelted dernaa nöd als Ussländer."
+"Die Definition findet nur für Düütschland Aawendig."
+"Obwohl em Spraachgebruuch i dr Semantik Definitionsmacht zuechunnt, isch e dernigi Verwendig i mehrerlei Hinsicht problematisch."
+"Im düütsche Spraachgebruuch wird oft s Wort Migrant als Synonym für Ussländer bruucht."
+"Hüüfig wird au vo Iiwanderer oder Zuewanderer gredt."
+"In jüngschter Zit wird au vermehrt vo Persone mit Migrationshindergrund gredt."
+"Je nach Uufnahmeland muess defür u. U. d Schtaatsaaghörigkeit vom ussländische Schtaat ufgeeh werde."
+"Ussländer, wo gege d Gsetz vo ihrem Gaschtland verstossed, chönnd under Umstände uusgwiese werde."
+"D Schwiiz het hüüt zämme mit Luxeburg dr höchschti Ussländerbeschtand in ganz Europa."
+"25 Prozent vo allne IiwohnerInne händ en ussländische Pass."
+"Vor allem, wenn mer si in Europa betrachtet, isch si keis Mitgliid vo de Europäische Union."
+"D Schwiiz nimmt international e Sonderrolle ii."
+"Drum isch dr Umgang mit de andere EU-Schtaate über bilaterali Verträäg greglet."
+"Mit dr Iibürgerig erhaltet en Ussländer di volle Bürgerrecht vo siim Uufnahmeland."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Besonders bei statistischen Grössen ist daher die genaue Angabe der jeweils verwendeten Wortbedeutung unerlässlich."
+S2. "In vielen Sprachen der Welt hat das Wort Ausländer eine negative Konnotation."
+S3. "Der Begriff (Intension/Extension) des Wortes Ausländer erschliesst sich aus der Perspektive eines Inlandes."
+S4. "Eine solche Person gilt im Allgemeinen als Doppelbürger."
+S5. "Sie sind aber im Ausländerrecht den Ausländern gleichgestellt."
+S6. "Die Einordnung besteht unabhängig von der Staatsangehörigkeit."
+S7. "Es taugt nicht als zuverlässiges eindeutiges Merkmal, ist daher nur eingeschränkt als Grundlage einer Definition geeignet."
+S8. "Eine Person kann sich auch mehreren Ethnien zugehörig fühlen und sich gleichzeitig als Ausländer und Inländer betrachten."
+S9. "In aller Regel wird dieses Kriterium nicht streng angewendet, so dass es nur eingeschränkt sinnvoll und logisch inkonsequent ist."
+S10. "Spätaussiedler gelten demnach nicht als Ausländer."
+S11. "Die Definition findet nur für Deutschland Anwendung."
+S12. "Obwohl im Sprachgebrauch in der Semantik Definitionsmacht zukommt, ist eine derartige Verwendung in mehrfacher Hinsicht problematisch."
+S13. "Im deutschen Sprachgebrauch wird oft das Wort Migrant als Synonym für Ausländer gebraucht."
+S14. "Häufig wird auch von Einwanderern oder Zuwanderern gesprochen."
+S15. "In jüngster Zeit wird auch zunehmend von Menschen mit Migrationshintergrund gesprochen."
+S16. "Je nach Aufnahmeland muss dafür unter Umständen die Staatsangehörigkeit des ausländischen Staates aufgegeben werden."
+S17. "Ausländer, die gegen das Gesetz ihres Gastlandes verstossen, können unter Umständen ausgewiesen werden."
+S18. "Die Schweiz hat heute zusammen mit Luxemburg den höchsten Ausländerbestand in ganz Europa."
+S19. "25 Prozent aller Einwohnerinnen haben einen ausländischen Pass."
+S20. "Vor allem, wenn man sie in Europa betrachtet, ist sie kein Mitglied der Europäischen Union."
+S21. "Die Schweiz nimmt international eine Sonderrolle ein."
+S22. "Deshalb ist der Umgang mit den anderen EU-Staaten über bilaterale Verträge geregelt."
+S23. "Mit der Einbürgerung erlangt ein Ausländer die vollen Bürgerrechte seines Aufnahmelandes."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "nöd" for "nicht" - occurs six times here ("nöd zueverlässig", "nöd stringent aagwendet", "nöd als Ussländer", "muess defür ... nöd zwingend"). VERIFIED CONTRAST: Bernese and Basel both use "nid" (Bern 30 / nid, 0 nöd; Basel 15 / nid, 0 nöd in my samples). Zürich "nöd" 40 vs "nid" 1. This is the strongest single lexical Basel+Bern vs Zürich opposition in the corpus.
+C2. "Uusländer" with double-u. Not attested in the Basel sample under this spelling; recorded as Zürich-attested, no Basel claim.
+C3. "Iiordnig" / "iiordnig" - the geminate ii- (in contrast to Bernese "Iiordnig"? my Bernese sample has none). Recorded as Zürich-attested only.
+C4. "Zit" vs Bernese "Zyt". This article has "In jüngschter Zit" - ZIT, not zyt. Basel also uses "Zit" (6 occurrences). So "Zit" is shared between Basel and this Zürich article, and Bernese uses "Zyt" (2 occurrences, 0 "Zit"). VERIFIED three-way: Basel=Zit, Zürich=Zit (at least sometimes - the Zürich corpus has "Zyt" 6 and "Zit" 3, so Zürich is genuinely mixed), Bern=Zyt. Reported as a partial/variable difference, NOT a categorical one.
+C5. "gits" - Bernese has "Es git aber e Verein" (unprefixed g-); Zürich "D Schwiiz nimmt ... " and "gits" appear in the Zürgermeister article ("I der Schwiz gits d Bezeichnig"). Shared. Recorded to prevent a false contrast.
+C6. "mer" (man) - "Vor allem, wenn mer si in Europa betrachtet". Bernese "Me" ("bezeichnet me im wytere Sinn"). VERIFIED on both non-Basel sides; Basel not attested.
+C7. "Schtaatsaaghörigkeit" - the aa- diphthong in the extended form. Basel uses "Staatsbürgerschaft"/"Schtaatsbürger" ("d Staatsbürgerschaft ... Staatseigetum" appears in my Basel Fischmarkt sample) with single a. VERIFIED: Basel has "Staats" (single a) and Zürich has "Schtaats" (aa). Bernese: my Bernese sample has neither form. Recorded as Zürich-vs-Basel, not Zürich-vs-Bern.
+C8. "chönnd" (können) - shared with Bernese "chöme"/"chöi", so NOT a discriminator. Recorded to prevent a false contrast.

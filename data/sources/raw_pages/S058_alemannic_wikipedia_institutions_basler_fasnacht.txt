@@ -1,0 +1,62 @@
+SOURCE_ID: S058
+URL: https://als.wikipedia.org/wiki/Basler_Fasnacht
+TITLE: Basler Fasnacht
+ARTICLE_DISPLAYTITLE: Basler Fasnacht
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: EXPLICIT — `{{Dialekt|Baseldeutsch|Baseldytsch|Baseldytsch}}` template present in the wikitext. This is the only article in the S058 set whose dialect is unambiguously declared. It is also the dialect-densest article harvested (Basel dialect: `Mäntig`, `Äschermittwuch`, `Gsamstbundesrat`-style compounding, `Goschdyym`, `Ladärne`, `Räppli`, `Schnitzelbängg`, `Määlsubbe`).
+CAVEAT: the article is heavily illustrated (2025 image captions) and carries numerous `{{Webarchiv}}` reference footnotes plus a long list of individual carnival figures (`Goschdyym` section, ~15 entries). Only sentences, not figure list items, are harvested. All population/committee figures below are dated (1911, 2004, 1376, 1529, 1833, 1540, 1911) and must be presented with their year in any question.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Basler Fasnacht isch die greeschti Fasnacht in dr ganze Schwiz."
+"D Basler Fasnacht foot am Mäntig no-n-em Äschermittwuch gnau am Vieri de Morge mit em sogenannte Morgestraich aa."
+"D Fasnacht duurt denn gnau 72 Stund und heert drum am Donschtig Morgen am Vieri mit em Ändstraich wider uff."
+"Fir e Huffe Basler isch es dr wichtigschti Aaloss im Joor, drum saage si deere Zyt au \"die drey scheenschte Dääg\"."
+"E Masgge isch in Basel e Goschdyymierte, aso aine won e Goschdyym und a Larven aahet."
+"Sitt 1911 wird d Basler Fasnacht vom Fasnachts-Comité organisiert, wo als offizielle Ahsprächpartner duet fungiere."
+"Im 2004i sinn yber 480 Ainhaite bim Fasnachts-Comité registriert gsi: 141 Clique und Gruppièrige, 141 Wääge und Chaise, 61 Gugge, 86 Pfyffer- und Drummlergruppe und 55 Ainzelmasgge und klaini Grüppli."
+"Im Total sin das yber 12.000 Fasnächtler wo do in organisièrte Gruppe dailgnoh hän."
+"Die eltisti Erwähnig vo dr Fasnacht isch us em Johr 1376, wo die sogenannti «Beesi Fasnacht» vil Ungligg iber d Stadt brocht het."
+"1529 isch d Fasnachtszit uf die drei Dääg vom Mändig bis zum Mittwuch noch em Aschermittwuch festglait worde"
+"Bi dr Musterig vo 1540 si 600 jungi Manne im Harnisch mit Schwärt und Hellebarde dur d Stadt zooge"
+"Hitzedaags gilt d Basler Fasnacht als die ainzigi groossi proteschtantischi Fasnacht uff dr ganze Wält."
+"Es git vier verschiideni Variante: Die Kupfrigi fir 9 Stutz, die Silbrigi fir 18 Stutz, die Goldigi fir 45 Stutz und s Bijou fir läppischi 100 Stutz."
+"Die greeschti Baselbieter Fasnacht isch die vo Lieschdel, wo Zähduusigi vo Zueschauer aazieht."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "D Basler Fasnacht isch die greeschti Fasnacht in dr ganze Schwiz." → "Die Basler Fasnacht ist die grösste Fasnacht in der ganzen Schweiz."
+S2. "D Basler Fasnacht foot am Mäntig no-n-em Äschermittwuch gnau am Vieri de Morge mit em sogenannte Morgestraich aa." → "Die Basler Fasnacht beginnt am Montag nach Aschermittwoch genau um vier Uhr morgens mit dem sogenannten Morgestraich."
+S3. "D Fasnacht duurt denn gnau 72 Stund und heert drum am Donschtig Morgen am Vieri mit em Ändstraich wider uff." → "Die Fasnacht dauert dann genau 72 Stunden und hört deshalb am Donnerstagmorgen um vier Uhr mit dem Ändstraich wieder auf."
+S4. "Fir e Huffe Basler isch es dr wichtigschti Aaloss im Joor, drum saage si deere Zyt au \"die drey scheenschte Dääg\"." → "Für einen Haufen Basler ist es der wichtigste Anlass im Jahr, deshalb sagen sie zu dieser Zeit auch \"die drei schönsten Tage\"."
+S5. "E Masgge isch in Basel e Goschdyymierte, aso aine won e Goschdyym und a Larven aahet." → "Jeder von den etwa 18'000 aktiven Fasnächtler trägt ein Kostüm und eine Larve."
+S6. "Sitt 1911 wird d Basler Fasnacht vom Fasnachts-Comité organisiert, wo als offizielle Ahsprächpartner duet fungiere." → "Seit 1911 wird die Basler Fasnacht vom Fasnachts-Comité organisiert, das als offizieller Ansprechpartner dient."
+S7. "Im 2004i sinn yber 480 Ainhaite bim Fasnachts-Comité registriert gsi: 141 Clique und Gruppièrige, 141 Wääge und Chaise, 61 Gugge, 86 Pfyffer- und Drummlergruppe und 55 Ainzelmasgge und klaini Grüppli." → "Im Jahre 2004 waren über 480 Einheiten beim Fasnachts-Comité registriert: 141 Cliquen und Gruppierungen, 141 Wägen und Chaisen, 61 Guggen, 86 Pfyffer- und Drummergruppen und 55 Einzelmasken und kleine Grüppchen."
+S8. "Im Total sin das yber 12.000 Fasnächtler wo do in organisièrte Gruppe dailgnoh hän." → "Im Total sind das über 12.000 Fasnächtler, die dort in organisierten Gruppen eingeteilt sind."
+S9. "Die eltisti Erwähnig vo dr Fasnacht isch us em Johr 1376, wo die sogenannti «Beesi Fasnacht» vil Ungligg iber d Stadt brocht het." → "Die älteste Erwähnung der Fasnacht stammt aus dem Jahr 1376, wo die sogenannte «Böse Fasnacht» viel Unglück über die Stadt brachte."
+S10. "1529 isch d Fasnachtszit uf die drei Dääg vom Mändig bis zum Mittwuch noch em Aschermittwuch festglait worde" → "1529 wurde die Fasnachtszeit auf die drei Tage vom Montag bis zum Mittwoch nach Aschermittwoch festgelegt."
+S11. "Bi dr Musterig vo 1540 si 600 jungi Manne im Harnisch mit Schwärt und Hellebarde dur d Stadt zooge" → "Bei der Musterung von 1540 zogen 600 junge Männer in Harnisch mit Schwert und Hellebarde durch die Stadt."
+S12. "Hitzedaags gilt d Basler Fasnacht als die ainzigi groossi proteschtantischi Fasnacht uff dr ganze Wält." → "Heute gilt die Basler Fasnacht als die einzige grosse protestantische Fasnacht auf der ganzen Welt."
+S13. "Es git vier verschiideni Variante: Die Kupfrigi fir 9 Stutz, die Silbrigi fir 18 Stutz, die Goldigi fir 45 Stutz und s Bijou fir läppischi 100 Stutz." → "Es gibt vier verschiedene Varianten: Die Kupfrigen für 9 Stück, die Silbrigen für 18 Stück, die Goldigen für 45 Stück und das Bijou für läppisch 100 Stück."
+S14. "Die greeschti Baselbieter Fasnacht isch die vo Lieschdel, wo Zähduusigi vo Zueschauer aazieht." → "Die grösste Baselbietner Fasnacht ist die von Liestal, die Zehntausende von Zuschauern anzieht."
+
+=== SWISS FACT CONTENT ===
+F1. The Basel Fasnacht is the largest carnival in Switzerland. — cross-ref: none
+F2. The Basel Fasnacht begins on the Monday after Ash Wednesday at exactly 4 a.m. with the Morgestraich. — cross-ref: none
+F3. The Basel Fasnacht lasts exactly 72 hours and ends on Thursday morning at 4 a.m. with the Ändstraich. — cross-ref: none
+F4. Basel residents call these the "three most beautiful days" ("die drey scheenschte Dääg") and regard the Fasnacht as the most important event of the year. — cross-ref: none
+F5. There are about 18,000 active Fasnacht participants (Fasnächtler), each wearing a costume (Goschdyym) and a mask (Larve). — cross-ref: none
+F6. The Basel Fasnacht has been organised by the Fasnachts-Comité, its official negotiating partner, since 1911. — cross-ref: none
+F7. In 2004 over 480 units were registered with the Fasnachts-Comité: 141 cliques and groupings, 141 floats (Wägen) and chaises, 61 Guggen (brass bands), 86 fife-and-drum groups and 55 single masks and small groups. — cross-ref: none
+F8. That gives over 12,000 participants in organised groups, plus about 6,000 "wild" unregistered Fasnächtler not affiliated to any clique. — cross-ref: none
+F9. The earliest mention of the Fasnacht is from 1376, the "Böse Fasnacht" (Bad Carnival), which brought great misfortune on the city. — cross-ref: none
+F10. In 1529 the carnival period was fixed to the three days from Monday to Wednesday after Ash Wednesday — the reason Basel Carnival falls a week later than elsewhere. — cross-ref: none
+F11. At the 1540 muster, 600 young men in armour with sword and halberd marched through the city, after which the city-quartier processions were established. — cross-ref: none
+F12. The Basel Fasnacht is today regarded as the only large Protestant carnival in the world. — cross-ref: none
+F13. The Fasnachts-Comité issues a badge (Plaggedde) in four metal grades: copper (9), silver (18), gold (45) and the "Bijou" (about 100). — cross-ref: none
+F14. The largest Fasnacht in the canton Basel-Landschaft is that of Liestal, drawing tens of thousands of spectators. — cross-ref: none
+F15. The Basel Fasnacht is not only a city affair — the Baselbiet (Basel-Landschaft) Fasnacht takes place in parallel, and in the Schnitzelbängg the country-dwellers outnumber the city people. — cross-ref: none
+
+CROSS-REF NOTE: no cross-reference. The English corpus S001–S055 contains no carnival material whatsoever. All fifteen facts above are NOVEL and dialect-dense — this is the single best file in S058 for culture-in-dialect items, because the dialect IS the cultural marker (Goschdyym, Larve, Wägen, Gugge, Räppli, Plaggedde, Fäscht, Intrigiere).

@@ -1,0 +1,49 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Blatten_(L%C3%B6tschen)
+TITLE: Blatten (Lötschen) (display title: Uf der Blattun / uf dr Blattun)
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: valais
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Walliserdeutsch|Wallisertiitsch|Wallisertitsch}}
+SUBDIALECT_NOTE: WALLISERTIITSCH (Höchstalemannisch, Valais German) - NOT Walser German. These are two different dialects (Walser is West-Alpine settlement dialect; Wallisertiitsch is the Valais subdialect of Höchstalemannisch). The harvest brief's DIALECT enum offered only bern|zurich|aargau|walser; "valais" is used here deliberately rather than mislabel these articles as "walser".
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Uf dr Blattun, offiziell Blatten, isch en Gmei im Bizirk Weschtli Araro im Wallis."
+"Ds Dorf liggut z obrusch im Leetschentaal."
+"Dir ds Taal fliesst d Lonza, e Situffluss vam Rottu."
+"Zer Gmei gcheerunt d Wiilra Eistn, Ried und Wiissuried."
+"D Chilchu, wa anu 1985 gibüwwti cho ischt, het ds Patrozinium vaner Chinigi vam Roosuchranz."
+"Obuna am Langgletscher steit am Bäärggraat über der Leetscherlicka, wa mu zum Aletschgletscher emubergeit d Hollandiahitta vam SAC."
+"Uf dr Blattun ischt zum eerschtu Mal im Jaar 1433 als uffen der Blattun erwäänts cho."
+"Ds Dorf uf der Blattun und dr Wiiler Ried sind Ändi Mai 2025 zum grossu Teil vama Bäärgsturz verschittuti cho."
+"98,2 % vanu Iwonru sint im Jaar 2000 remisch-katholischi gsii."
+"Der Gmeipresidänt uf der Blattun ischt dr Matthias Bellwald (Stand Mai 2025)."
+"Bi der Volchszellig 2000 heint vanu 281 Iwonru 99,6 % Titsch als Höiptspraach agigää und 0,4 % anneri Spraache."
+"Der heggschtalemannisch Dialäkt va Blattu gcheert ze weschtlichu Dialäktu vam Wallisertiitsch."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Uf der Blattun, offiziell Blatten, ist eine Gemeinde im Bezirk Westlich Raron im Wallis."
+S2. "Das Dorf liegt ganz oben im Lötschental."
+S3. "Durch das Tal fliesst die Lonza, ein Seitenfluss der Rhone."
+S4. "Zur Gemeinde gehören die Weiler Eistn, Ried und Weissuried."
+S5. "Die Kirche, die 1985 eingeweiht wurde, hat das Patrozinium des Heiligen Franziskus vom Rosenkranz."
+S6. "Ganz oben am Längsgletscher steht am Berggrat über der Lötschcherlücke, wo man zum Aletschgletscher hinübergeht, die Hollandiahütte des SAC."
+S7. "Uf der Blattun ist zum ersten Mal im Jahr 1433 als uffen der Blattun erstmals erwähnt."
+S8. "Das Dorf Uf der Blattun und der Weiler Ried sind Ende Mai 2025 zum grössten Teil vom Bergsturz verschüttet."
+S9. "98,2 % von 281 Einwohnern waren im Jahr 2000 römisch-katholisch."
+S10. "Der Gemeindepräsident Uf der Blattun ist Matthias Bellwald (Stand Mai 2025)."
+S11. "Bei der Volkszählung 2000 haben von 281 Einwohnern 99,6 % Deutsch als Hauptsprache angegeben und 0,4 % eine andere Sprache."
+S12. "Der höchstalemannische Dialekt von Blatten gehört zum westlichen Teil des Wallisertitsch."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "ischt" for "ist". Appears four times here ("gibüwwti cho ischt", "ischt zum eerschtu Mal", "Der Gmeipresidänt ... ischt"). VERIFIED CONTRAST: Basel, Bern and Zürich use "isch" exclusively in my samples (156/156/354, zero "ischt"); Wallisertiitsch has "ischt" 8 and "isch" 187 in its overall sample but uses ischt heavily in the highly-Valais-pronounced texts. Walser uses "ischt" 38. The devoicing is therefore an alpine (Walser + Wallis) feature and absent from Basel/Bern/Zürich.
+C2. "Chilchu" = Kirche (long /uː/). CONTRAST WITHIN THE ALPINE GROUP, verified across two files: Walser (Issime) writes "Chilche"/"Chilhu", while my Wallisertiitsch sample elsewhere writes "Chirche" ("Evangelisch-reformiertu Chirche" in Kanton Wallis, "der christlichu Chirche" in Mittelalter). Here in Blatten it is "Chilchu", i.e. this article sits with the Walser-type form, not the type-typical Wallisertiitsch form. Genuine dialect variation inside the highest-Alemannic area - excellent test material.
+C3. "Gmei" = Gemeinde (monophthong). Contrast: Bernese "Gmeind" and Zürich "Gmeind" (diphthong), Walser "Gmäind" (umlauted diphthong). THREE-WAY VERIFIED from the sample: Wallisertiitsch "Gmei", Walser "Gmäind", Bern/Zürich "Gmeind". This is the clearest three-way vowel contrast in the corpus.
+C4. "Rottu" = Rhône. Local hydronym substitution; Basel sample also uses "Rottu" ("di Rottu") - shared, not a contrast.
+C5. "mu" = man (indeinite pronoun), with final -u. Zürich uses "mer", Bernese "Me"/"me", Basel "me". VERIFIED across the sample set. This is a strong Wallisertiitsch marker.
+C6. "z obrusch" = ganz oben, with the locative preposition "z" + adverb. Basel "z obe"/"zue"; not verified precisely - recorded as Wallisertiisch-attested.
+C7. "heggschtalemannisch" - note the doubled g. The standard German term is "höchstalemannisch". This orthographic doubling appears throughout Wallisertiitsch text ("hegschdalemanisch" in the Walser Issime article). Worth flagging: Éischemtöitschu uses single g, Wallisertiitsch tends to double. Verified across both alpine files.
+C8. PROVENANCE WARNING: this article documents the Blatten village destruction by rockfall in May 2025 and is therefore a recent, editorially-worked text. Register is more polished/standard Alemannic than the 2005-era Blatten prose would be. Dialectally still unambiguous (ischt, Gmei, mu), but treat style as "edited wiki prose", not spontaneous speech.
+C9. IMPORTANT: the topic (alpine village geography) is the most distant possible from the Basel German material in the other agent's set. This is the highest-value item for maximum dialect contrast.

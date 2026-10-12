@@ -1,0 +1,50 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Bauern-Tabak
+TITLE: Bauern-Tabak (display title: Buure-Tabak)
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: bern
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Berndeutsch|Bärndütsch|Bärndütsch}}
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Der Buure-Tabak (Nicotiana rustica), isch e Art us der Familie vo de Nachtschattegwächs."
+"Me seit im ou Randblatt-Tabak."
+"Er chunnt ursprünglech us em Amazonasgebiet z Südamerika."
+"Wäg sym Gruch wird är ou als Veielitabak bezeichnet."
+"Der Buure-Tabak isch e eijährigi chrutigi Pflanze, wo 40 bis 60, ganz sälte 120 cm höch wird."
+"D Pfanze hei chläbrigi Drüsehaar bedeckt."
+"Am Ändi vo der Röhre bilde d Chronbletter churzi, stumpf zuegspitzti Lappe."
+"Der Buure-Tabak wird syt em Drissgjährige Chrieg z Euroba about u exischtiert i zahlryche Sorte."
+"Meischtens wird der Buure-Tabak im Amazonasgebiet zum obe erwähnte Zwäck als mapacho (filderlosi Zigarette), ganz sälte innere Pfyffe groukt."
+"Hüt isch är allerdings nur no z Russland, einige oschteuropäische Länder u z Südameika vo Bedütig."
+"Der Buure-Tabak gedeit am beschte uf sandigem Bode mit em ne gwüsse Lehmateil."
+"Es isch z empfähle, mindischtens alli zwöi Jahr neu z säje, wil d Gfahr besteit, dass d Tabakqualität lydet."
+"D Bletter wärde zur Verarbeitig mit heissem Wasser gwässche, tröchnet u verchlyneret."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Der Bauern-Tabak (Nicotiana rustica) ist eine Art aus der Familie der Nachtschattengewächse."
+S2. "Man sagt im auch Bauerntabak."
+S3. "Er kommt ursprünglich aus dem Amazonasgebiet in Südamerika."
+S4. "Wegen seines scharfen Geschmacks wird er auch als Veielitabak bezeichnet."
+S5. "Der Bauern-Tabak ist eine einjährige krautige Pflanze, die 40 bis 60, ganz selten 120 cm hoch wird."
+S6. "Die Pflanze ist mit klebrigen Drüsenhaaren bedeckt."
+S7. "Am Ende der Röhre bilden die Kronblätter kurze, stumpf zugespitzte Lappen."
+S8. "Der Bauern-Tabak wurde seit dem Dreißigjährigen Krieg nach Europa eingeführt und in zahlreichen Sorten gezüchtet."
+S9. "Meistens wird der Bauern-Tabak im Amazonasgebiet zu dem oben genannten Zweck als Mapacho (filtarloser Zigarettenstummel), ganz selten innere Pfeifen geraucht."
+S10. "Heute ist er allerdings nur noch in Russland, einigen osteuropäischen Ländern und Südamerika von Bedeutung."
+S11. "Der Bauern-Tabak gedeiht am besten auf sandigem Boden mit einem gewissen Lehmanteil."
+S12. "Es ist zu empfehlen, mindestens alle zwei Jahre neu zu säen, weil sonst die Gefahr besteht, dass die Tabakqualität leidet."
+S13. "Die Blätter werden zur Verarbeitung mit heißem Wasser gewaschen, getrocknet und verkleineret."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "Buure" = Bauern. Bernese has this word in ordinary use (13 occurrences across my Bernese sample). Basel side: my Basel sample contains "Buure" once and "Buur" zero times, so the Basel form is NOT verifiably different here - do not use this as a Basel contrast.
+C2. "sälte" = selten. Occurs three times in this article ("ganz sälte 120 cm höch wird"). Basel "selte" does not occur anywhere in my 16-article Basel sample - but absence in a sample is not proof, so this is recorded as Bernese-only-attested, not as a proven Basel contrast.
+C3. "üblech" = oben, attested here in "nid üblech" (nicht nur). Basel "obe" does not occur in my Basel sample. Again: Bernese-only-attested.
+C4. "zuegspitzti" (zugespitzte) - the prefix "zue-" shows in the infinitive; the Zürich texts use the plain "zue" particle too ("zuechunnt", "zuegordnet"), so this is shared high-Alemannic morphology rather than a Bernese-specific marker.
+C5. "zwöi" = zwei, in "alli zwöi Jahr". VERIFIED CONTRAST: my Zürich corpus uses "zwei" in the same function ("eine, zwei oder drüü Vizebürgermeischter") and contains zero instances of "zwöi". Bernese /øː/ vs Zürich /uː/ diphthong.
+C6. "Jahr" vs Basel "Joor". VERIFIED CONTRAST: this article has "alli zwöi Jahr", my Bernese corpus has "Jahr" 25 times and "Joor" zero times; my Basel corpus has "Joor" 17 times ("Si häi zwäimol im Joor an Sünoode müesse däilnee"). Zürich uses "Jaarhundert"/"Jahr" - no devoiced "Joor". So Basel keeps the devoiced form, Bern and Zürich do not.
+C7. "gwässche" (gewaschen) - Bernese short/umlaut form. Basel "gwäsche" not attested in my sample. Bernese-only-attested.
+C8. "chunnt" = kommt. Basel "chunnt" also attested (2x), so shared, not a contrast.
+C9. "Me seit" (man sagt) - Bernese "Me" for the indefinite pronoun. Zürich uses "mer" ("bezeichnet mer beschtimmti Persone") and also bare "me" ("findt me zum eerschte Maal"). So Bernese "Me" is capitalised and initial, Zürich "mer" is the everyday form - a real surface difference between the two non-Basel dialects, verified on both sides. Basel not verified.

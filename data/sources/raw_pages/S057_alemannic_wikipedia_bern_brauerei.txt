@@ -1,0 +1,63 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Brauerei
+TITLE: Brauerei
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: bern
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Berndeutsch|Bärndütsch|Bärndütsch}}
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Brauerei isch der Ort wo ds Brauhuus steit, wo Bier oder anderi Gärgetränk brout wärde."
+"Als Brauerei bezeichnet me ou ds Undernähme, i däm ds Bier härgstellt u vertrybe wird."
+"Der Ort, wo di broutechnischi Alag steit, wird i der Branche als Braustett bezeichnet."
+"Ou Sojasauce u gwüssi alkaholfrei Erfrüschigsgetränk wärde nach em Brauereiverfahre härgstellt."
+"Wil ou Wy wird fermentiert u trotzdäm wird Wy nid brout sondern kelteret."
+"Für d Froue isch ds Braue den so Sälbstverständlech gsi, wi ds Bache vo Brot."
+"Bärn het nämlech erstmals e Gnämigung zur Gwärbsmäsige Härstellig vo Bier erteilt."
+"Das het du der Wäg afa äbne für di moderni Brauerei."
+"Der gröschti Technologischueb het d Brauereitechnologie 1876 mit der Yfüehrig Lindi’sche Ammoniakkompressore bracht."
+"Mit dere Maschine hei d Brauereie jitz z ganze Jahr chönne Bier i gueter Qualität lifere."
+"1885 hei d Schwyzer Brauereie der Wy als Nationalgetränk dür ds Bier verdrängt."
+"Ihri Gschicht geit bis i ds Jahr 1300 zrügg."
+"I der Schwyz het der Buur Matthias Wüethrich us Olsbärg di bekannti Brauerei Fäldschlössli gründet."
+"Die Brauerei isch hüt e Tochter vo Carlsbärg."
+"I der Schwyz stärbe wäret dere Zyt einigi Brauereie will si nümm konkuränzfähig si."
+"Trotzdäm isch bi necherer Betrachtig e Umschichtig dütlech erchenbar."
+"Deilwys chöme ihri Bier soger e Alemannische Name über wi zum Byspil der Brandlöscher."
+"Di gröschti Azahl vo Brauereie git’s z Grossbritannie."
+"Gurte u Cardinal überläben nur als Marge, will Carlsbärg d Härstellig bis hüt garantiert."
+"Informatione zu de härgstellte Sorde finde sech im Artikel Bier."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Die Brauerei ist der Ort, wo das Brauhaus steht, wo Bier oder andere Gärgetränke gebraut werden."
+S2. "Als Brauerei bezeichnet man außerdem das Unternehmen, bei dem das Bier hergestellt und verkauft wird."
+S3. "Der Ort, wo die brautechnische Anlage steht, wird in der Branche als Braustätte bezeichnet."
+S4. "Auch Sojasauce und gewisse alkoholfreie Erfrischungsgetränke werden nach dem Brauverfahren hergestellt."
+S5. "Auch Wein wird fermentiert und trotzdem wird Wein nicht gebraut, sondern gekellert."
+S6. "Für die Frauen war das Brauen so selbstverständlich wie das Backen von Brot."
+S7. "Bern erteilte nämlich erstmals eine Bewilligung zur gewerbsmässigen Herstellung von Bier."
+S8. "Das hat den Weg für die moderne Brauerei geebnet."
+S9. "Den grössten technischen Fortschritt brachte die Brauereitechnologie 1876 mit der Einführung der Lindeschen Ammoniak-Kompressoren."
+S10. "Mit dieser Maschine können die Brauereien nun das ganze Jahr Bier in guter Qualität liefern."
+S11. "1885 verdrängten die Schweizer Brauereien den Wein als Nationalgetränk durch das Bier."
+S12. "Ihre Geschichte reicht bis ins Jahr 1300 zurück."
+S13. "In der Schweiz gründete der Bauer Matthias Wüthrich aus Olsberg die bekannte Brauerei Feldschlössli."
+S14. "Die Brauerei ist heute eine Tochter von Carlsberg."
+S15. "In der Schweiz starben zu dieser Zeit einige Brauereien, weil sie nicht mehr konkurrenzfähig sind."
+S16. "Trotzdem ist bei näherer Betrachtung ein Umschichtig deutlich erkennbar."
+S17. "Teilsweise bekommen ihre Biere sogar einen alemannischen Namen über, wie zum Beispiel der Brandlöscher."
+S18. "Die grösste Anzahl Brauereien gibt es in Grossbritannien."
+S19. "Gurte und Cardinal überleben nur als Marken, weil Carlsberg die Herstellung bis heute garantiert."
+S20. "Informationen zu den hergestellten Sorten finden sich im Artikel Bier."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "Brot" in "wi ds Bache vo Brot" is the key contrast with Basel. VERIFIED: my Basel corpus writes the same word "Broot" ("S Basler Laibli isch e Broot us Heefidaig") - the final devoicing of /d/ to /t/. Bernese retains "Brot". Zürich has neither form in my sample, so the Zürich side is unverified for this word.
+C2. "der Wäg" = der Weg. VERIFIED CONTRAST: Bernese /ɛː/ "Wäg"; Zürich uses plain "Weg" ("für en beschtimmte Weg", "zrugggleite Weg"). Basel side not attested in my sample.
+C3. "geit" = geht, in "Ihri Gschicht geit bis i ds Jahr 1300 zrügg". VERIFIED CONTRAST: Zürich uses "gaat" for the same verb ("Im Norde gaat si zum Täil na bis an Schanzegrabe"); the Zürich corpus contains "geit" zero times, while the Bernese corpus has it 7 times. Basel side not attested.
+C4. "Zyt" = Zeit, in "dere Zyt". VERIFIED CONTRAST: Basel uses "Zit" ("Wie dr Gottesdienst in dere Zit usgsee het"; "e langi Zit"), 6 occurrences vs "Zyt" 1. Bernese has "Zyt" 2 and "Zit" 0. So this is a genuine Basel-vs-Bern opposition on the vowel.
+C5. "Buur" = Bauer, in "der Buur Matthias Wüethrich". The same article set elsewhere has "Buure-Tabak" (with -e). Basel: "Buur" zero occurrences, "Buure" one, in my sample - Basel side underdetermined, no claim made.
+C6. "Bärn" = Bern - the standard exonym is "Bern". This is an endonym; it is used throughout the Alemannic Wikipedia house system for all dialects (Zürich articles also write "Bärn" when naming the city), so it is not a dialect marker per se.
+C7. "Froue" = Frauen, plural. VERIFIED CONTRAST between the two non-Basel dialects: Bernese "Froue" (6 occurrences, "dene beidne Froue") vs Zürich "frau" (1 occurrence, "synere Frau Mathilde"). Basel side not attested in my sample.
+C8. "hüt" = heute, shared by Basel ("Hüt isch si offe für alli Bruefsständ"), Bern ("Die Brauerei isch hüt e Tochter") and Zürich ("is hüt di am beste erhalteni"). Recorded as SHARED, not a contrast - important because it is often wrongly listed as dialectal.

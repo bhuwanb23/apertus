@@ -1,0 +1,51 @@
+SOURCE_ID: S058
+URL: https://als.wikipedia.org/wiki/Bundesversammlung_(Schweiz)
+TITLE: Bundesversammlung (Schweiz)
+ARTICLE_DISPLAYTITLE: Bundesversammlig vo de Schwiiz
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: uncertain
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+SUBSTITUTION: requested `.../wiki/Bundestag` — no such article on als.wikipedia (Bundestag is the German lower house). Substituted with `Bundesversammlung (Schweiz)`, the correct Alemannic title for the Swiss Federal Assembly. `.../wiki/Parlament` exists but is the generic concept article — harvested separately.
+DIALECT_EVIDENCE: no `{{Dialekt}}` template. Orthography is Basel-leaning Alemannic (`Bärn`, `Gämf`, `Vereinigti Bundesversammlig`, `Buursitz`) but not determinable to a specific dialect; recorded as `uncertain`.
+NOTE: the article's 200 / 46 chamber sizes are bullet list items, not prose; they are carried by the two lines below marked LIST.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Bundesversammlig isch gmäss dr Bundesvrfassig s Parlamänt vo de Schwiiz.
+
+was si isch
+
+Si isch di legislatyvi Gwalt vom Land."
+"Si isch di legislatyvi Gwalt vom Land."
+"D Rootsmitglieder wäärde all vier Joor vom Volch gwählt."
+"Wenn die beide Greemie zämme taage, was öppe bi de Wahl vom Bundesroot und de Bundesrichter de Fall isch, isch si die Vereinigti Bundesversammlig."
+"De Presidänt oder d Presidänti vom Nazionalroot leitet d Tagige vo der Vereinigte Bundesversammlig und heisst drum au „dr höchscht Schwiizer“ – odr „di högscht Schwiizeri“."
+"Di Vereinigti Bundesversammlig wählt d Bundesrööt, de Bundespräsident oder d Bundespresidänti, d Bundesrichter, de Bundeskanzler oder d Bundeskanzlerin und im ene Fall, wo s zum Chrieg chönt cho und mä öppe müesst s Militäär uufbiete, de General as Oberbefäälshaber vo dämm."
+"Wenn öpper vom Bundesgricht verurteilt worde-n-isch, chaner es Gsuech uf Begnadigung iireiche, wo vo de Rööt beurteilt wärde muess."
+"D Bundesversammlig git’s sit de Gründig vom Schwiizer Bundesstaat im Joor 1848."
+"Si trifft sech z Bärn, wo drum au «Bundesstadt» heisst."
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "D Bundesversammlig isch gmäss dr Bundesvrfassig s Parlamänt vo de Schwiiz.
+
+was si isch
+
+Si isch di legislatyvi Gwalt vom Land." → "Die Bundesversammlung ist gemäss der Bundesverfassung das Parlament der Schweiz."
+S2. "Si isch di legislatyvi Gwalt vom Land." → "Sie ist die gesetzgebende Gewalt des Landes."
+S3. "D Rootsmitglieder wäärde all vier Joor vom Volch gwählt." → "Die Ratsmitglieder werden alle vier Jahre vom Volk gewählt."
+S4. "Wenn die beide Greemie zämme taage, was öppe bi de Wahl vom Bundesroot und de Bundesrichter de Fall isch, isch si die Vereinigti Bundesversammlig." → "Wenn die beiden Gremien zusammen tagen, was etwa bei der Wahl vom Bundesrat und der Bundesrichter der Fall ist, ist es die Vereinigte Bundesversammlung."
+S5. "De Presidänt oder d Presidänti vom Nazionalroot leitet d Tagige vo der Vereinigte Bundesversammlig und heisst drum au „dr höchscht Schwiizer“ – odr „di högscht Schwiizeri“." → "Der Präsident oder die Präsidentin vom Nationalrat leitet die Tagungen der Vereinigten Bundesversammlung und heisst darum auch „der höchste Schweizer“ – oder „die höchste Schweizeri“."
+S6. "Di Vereinigti Bundesversammlig wählt d Bundesrööt, de Bundespräsident oder d Bundespresidänti, d Bundesrichter, de Bundeskanzler oder d Bundeskanzlerin und im ene Fall, wo s zum Chrieg chönt cho und mä öppe müesst s Militäär uufbiete, de General as Oberbefäälshaber vo dämm." → "Die Vereinigte Bundesversammlung wählt die Bundesräte, den Bundespräsidenten oder die Bundespräsidentin, die Bundesrichter, den Bundeskanzler oder die Bundeskanzlerin und im einen Fall, wo es zum Krieg kommen könnte und man gegebenenfalls das Militär aufbieten müsste, den General als Oberbefehlshaber von dem."
+S7. "Wenn öpper vom Bundesgricht verurteilt worde-n-isch, chaner es Gsuech uf Begnadigung iireiche, wo vo de Rööt beurteilt wärde muess." → "Wenn jemand vom Bundesgericht verurteilt worden ist, kann er ein Gesuch um Begnadigung einreichen, wo von den Räten beurteilt werden muss."
+S8. "D Bundesversammlig git’s sit de Gründig vom Schwiizer Bundesstaat im Joor 1848." → "Die Bundesversammlung gibt es seit der Gründung des Schweizer Bundesstaates im Jahr 1848."
+S9. "Si trifft sech z Bärn, wo drum au «Bundesstadt» heisst." → "Sie trifft sich in Bern, weshalb es darum auch «Bundesstadt» heisst."
+=== SWISS FACT CONTENT ===
+F1. The Federal Assembly (Bundesversammlung) is the Swiss parliament, established by the Federal Constitution. — cross-ref: S002
+F2. The Federal Assembly is the legislative branch of the state. — cross-ref: S006
+F3. Parliamentary members are elected by the people every four years. — cross-ref: S002
+F4. When the two chambers sit together they constitute the United Federal Assembly (Vereinigti Bundesversammlig), as happens for the Federal Council and Federal Supreme Court elections. — cross-ref: S002
+F5. The President of the National Council chairs the United Federal Assembly and is therefore also styled 'der höchscht Schwiizer' — but this is purely honorific and ranks ninth in protocol. — cross-ref: S002
+F6. Parliament elects the Federal Councillors, the President of the Confederation, the federal judges and the Federal Chancellor — and in the case of war, the general as supreme commander. — cross-ref: S002
+F7. A person convicted by the Federal Supreme Court may lodge a pardon application, which is judged by the chambers. — cross-ref: S002
+F8. The Federal Assembly has existed since the founding of the Swiss federal state in 1848. — cross-ref: S048
+F9. Bern is called the 'Bundesstadt' (federal city) because the Federal Assembly sits there. — cross-ref: S002

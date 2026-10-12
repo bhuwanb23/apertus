@@ -1,0 +1,78 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Kloster_Einsiedeln
+TITLE: Kloster Einsiedeln (display title: Chloschter Eisidle)
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: zurich
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Zürichdeutsch|Züritüütsch|Züridütsch (See)}}
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"S Chloschter Eisidle isch e Benediktinerabtei z Eisidle im Kanton Schwyz."
+"S Chloschter isch e wichtigi Stazion am oberdütsche Jakobswäg."
+"S isch aber au s Ziil vo vilne Pilger, wo uf Eisidle gönd."
+"Di Schwarzi Madonna vo Eisidle i dr Gnadekapälle isch en Aaziehigspunkt für d Pilger und d Turischte."
+"Won er umbracht worden isch, sind anderi Eisidler da ane cho."
+"Wies amisgs Bruuch gsi isch, häds neui Chloschter no Land gschänkt übercho."
+"S Stift hät ano di freii Abtwahl und Immunität (abbatia nullius) überchoo."
+"E zwäiti Basilika (s Undere Münschter) isch 1230 im Hof bout worde."
+"Nach eme Brand im Jahr 1465 isch s undere Münschter iigwölbt worde."
+"De Huldrych Zwingli isch vo 1516 bis 1518 Lüütprieschter im Chloschter gsii."
+"Er hät di erschte Bürgerliche is Chloschter uufgnaah und hät dr Konvänt wider ufbout."
+"S barocki Chloschter isch vo 1674 bis 1735 vollschtändig neu bout worde."
+"Die Plän sind vom Caspar Moosbrugger gsi und mer hät s neui Chloschter i drü Etape bout."
+"Wo d Franzose im Mai 1798 uf Eisidle cho sind, sind alli Bewohner vom Chloschter gflüchtet."
+"D Gnadekapelle isch vo de Besatzer zerschtört worde, s Gnadebild aber händ d Mönch chönne rette."
+"Während em Schpaatmittelalter sind d Pilger sogar us Norddüütschland und de Niderlande choo."
+"Nume i de Ziit vo dr Reformation häts en Rückgang vo de Pilgerschtröm gee."
+"Normalerwiis isch si für d Öffentlichkeit nöd zuegänglich."
+"Wämmer die prächtig Bibliothek wett gse, cha mer an e Chloschterfüerig."
+"Im Chloschter wird under anderem au Wii kelteret und es wärde Ross züchter."
+"Dr barocki Marschtall isch 1765 pout worde."
+"Es sind öppe 230'000 truckti Büecher, 1230 Handschrifte und 1040 Bänd vo Inkunable und Früedruck."
+"Jedes Jahr chömed 500 bis 800 Büecher dezue."
+"Es wird je nach em Momänt vom Chilejahr gwächslet."
+"Am Aafang vom 17. Jaarhundert hät d Statue es spanisches Gwand, wo i dr Gloggeform gmacht isch, überchoo."
+"Di Schwarz Madonna vo Eisidle isch dur Pilger über d Landesgränze use bekannt worde."
+"S Chloschter häd sit alte Ziit vil Ländereie."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Das Kloster Einsiedeln ist eine Benediktinerabtei in Einsiedeln im Kanton Schwyz."
+S2. "Das Kloster ist eine wichtige Station am oberdeutschen Jakobsweg."
+S3. "Es ist aber auch ein Ziel von vielen Pilgern, die nach Einsiedeln gehen."
+S4. "Die Schwarze Madonna von Einsiedeln in der Gnadenkapelle ist ein Anziehungspunkt für die Pilger und die Touristen."
+S5. "Als er umgebracht worden war, kamen andere Einsiedler dorthin."
+S6. "Wie es Brauch war, hat er dem neuen Kloster noch Land geschenkt."
+S7. "Das Stift hat die freie Abtwahl und die Immunität (abbatia nullius) erhalten."
+S8. "Eine zweite Basilika (das Untere Münster) wurde 1230 im Hof gebaut."
+S9. "Nach einem Brand im Jahr 1465 wurde das untere Münster eingewölbt."
+S10. "Huldrych Zwingli war von 1516 bis 1518 Leutpriester im Kloster."
+S11. "Er nahm die erste bürgerliche ins Kloster auf und liess den Konvent wieder aufbauen."
+S12. "Das barocke Kloster wurde von 1674 bis 1735 vollständig neu gebaut."
+S13. "Die Pläne waren von Caspar Moosbrugger, und man baute das neue Kloster in drei Etappen."
+S14. "Als die Franzosen im Mai 1798 nach Einsiedeln kamen, flohen alle Bewohner des Klosters."
+S15. "Die Gnadenkapelle wurde von den Besetzern zerstört, das Gnadenbild aber konnten die Mönche retten."
+S16. "Während des Spätmittelalters kamen die Pilger sogar aus Norddeutschland und den Niederlanden."
+S17. "Nur in der Zeit der Reformation gab es einen Rückgang des Pilgerstroms."
+S18. "Normalerweise ist sie für die Öffentlichkeit nicht zugänglich."
+S19. "Wenn man die prächtige Bibliothek sehen will, kann man an einer Klosterführung teilnehmen."
+S20. "Im Kloster wird unter anderem auch Wein gekeltert und es werden Pferde gezüchtet."
+S21. "Der barocke Marstall wurde 1765 gebaut."
+S22. "Es sind etwa 230'000 gedruckte Bücher, 1230 Handschriften und 1040 Bände von Inkunabeln und Frühdruck."
+S23. "Jedes Jahr kommen 500 bis 800 Bücher dazu."
+S24. "Es wird je nach einem Moment des Kirchenjahres angebaut."
+S25. "Zu Beginn des 17. Jahrhunderts bekam die Statue ein spanisches Gewand, das in Glockenform gemacht ist, geschenkt."
+S26. "Die Schwarze Madonna von Einsiedeln wurde durch Pilger über die Landesgrenze hinaus bekannt."
+S27. "Das Kloster hatte seit alter Zeit viele Landbesitzungen."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "nöd" for "nicht". VERIFIED CONTRAST: "Normalerwiis isch si für d Öffentlichkeit nöd zuegänglich". Zürich has "nöd" 40 times and "nid" once across my Zürich corpus; Bern has "nid" 30 and "nöd" 0; Basel has "nid" 15 and "nöd" 0. This is the cleanest single lexical Basel/Bern-vs-Zürich opposition I can evidence.
+C2. "zuegänglich" vs Bernese "zuegspitzti" - both show the zue- prefix; shared morphology, not a contrast.
+C3. "mer" = man (indefinite pronoun), attested twice ("mer hät s neui Chloschter i drü Etape bout", "cha mer an e Chloschterfüerig"). Bernese uses "me" ("bezeichnet me im wytere Sinn", "Me seit im ou Randblatt-Tabak"). VERIFIED on both non-Basel sides: Zürich "mer" is the standard everyday form, Bernese "me" the initial/singular form. Basel side not attested in my sample.
+C4. "Chloschter" = Kloster. Bernese has "Chlöschter" ("In 9. Jahrhundert hei du d Chlöschter i der Schwyz afa Bier härstelle"). VERIFIED CONTRAST with the rounded vowel and plural -e: Zürich "Chloschter", Bern "Chlöschter". Basel side not attested.
+C5. "Chile" = Kirche, short form. Bernese uses "Chilche" for the same word? My Bernese sample shows no church word. Walser uses "Chilche"/"Chilhu" and Wallisertiitsch "Chirche" - see the Walser/Valais files. Recorded here only as an attested Zürich form; the Zürich-vs-alpine comparison is evidenced in those files.
+C6. "Büecher" (Bücher) with the ü-marked length vs my Bernese corpus, which shows "Büecher" only in Einsiedeln and no competing form; no cross-dialect claim made.
+C7. "iigwölbt" (eingewölbt) and "uufgnaah" (aufgenommen) - doubled-vowel prefix on past participles. This prefix pattern also appears in the Bernese texts ("ufgna", "iigführt" is Zürich). Shared Alemannic morphology; NOT a discriminator. Recorded to prevent a false contrast.
+C8. "Züridütsch (See)" - the page's own dialect tag. Important: this article is NOT city Zürich. It is the Seedialect of the canton Schwyz (Untervariante of Züritüütsch), at a monastery in Einsiedeln. It is legitimately Züritüütsch by the wiki's own classification, but it must not be used as evidence for "city Zürich German" feature claims. Use the Bürgermeister article for city Zürich.
+C9. "Münschter" = Münster. Not attested in Bern/Basel samples; no contrast claimed.

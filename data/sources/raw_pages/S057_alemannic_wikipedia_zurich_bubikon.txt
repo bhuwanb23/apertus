@@ -1,0 +1,53 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Bubikon
+TITLE: Bubikon (display title: Buebike)
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: zurich
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Zürichdeutsch|Züritüütsch|Züritütsch}}
+SUBDIALECT_NOTE: The page's own Dialäkt section states "De züritüütsch Dialäkt vo Buebike ghört zue de Seemundarte" - i.e. Zürcher Oberland / Seemundart, not city Zürich. Use the Bürgermeister article for city Zürich.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Buebike isch e politischi Gmeind im Bezirk Hiwiil im Kanton Züri i de Schwiiz."
+"S wiissi Balkechrüüz uf rotem Grund staht für d Johanniterritter."
+"Uf de Chrüüzzüüg isch das Zeiche als Symbol für de Kampf für Christus uf em Wafferock treit worde."
+"S wiissi Schwalbeschwanzchrüüz uf schwarzem Grund bedüütet de Kampf vo de Ritter gäge d Chranket."
+"Di erschte Sidler, d Sippe vom Alemann Buobo, d Buobinger, wärded dur di beide schwarze B uf goldigem Grund dargstellt."
+"Zur Gmeind Buebike ghört au der Ortsteil Wolfhuuse."
+"D Laag vo Buebike wiist en uusgsprochni Passlaag uuf."
+"S Wasser vo Buebike lauft i d Jona und schliesslich in Obersee, em östliche Tail vom Zürisee."
+"Buebike isch zum eschte Mal gnamset worde im Jaar 811 als Puapinchova."
+"Uf emene Nagelfluespore im Südoste vo de Gmeind staht s Ritterhuus Buebike."
+"1570 isch s Huus s letscht Mal erwiiteret worde und isch hüt di am beste erhalteni Johanniterkomturei vo Europa."
+"De züritüütsch Dialäkt vo Buebike ghört zue de Seemundarte."
+"De Uusländeraatäil liit bi 10 % (Stand 2011)."
+"D Arbetslosigkäit isch im Jaar 2010 bi 2,2 % gläge."
+"Gmeindspresidäntin isch d Andrea Keller (sit Juni 2018)."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Bubikon ist eine politische Gemeinde im Bezirk Hinwil im Kanton Zürich in der Schweiz."
+S2. "Das weisse Balkenkreuz auf rotem Grund steht für die Johanniterritter."
+S3. "Auf den Kreuzzügen wurde das Zeichen als Symbol für den Kampf für Christus auf einem Waffenrock getragen."
+S4. "Das weisse Schwalbenschwanzkreuz auf schwarzem Grund bedeutet den Kampf der Ritter gegen die Krankheit."
+S5. "Die ersten Siedler, die Sippe des Alemannen Buobo, die Buobinger, werden durch die beiden schwarzen B auf goldenem Grund dargestellt."
+S6. "Zur Gemeinde Bubikon gehört auch der Ortsteil Wolfhausen."
+S7. "Die Lage von Bubikon weist eine ausgesprochene Passlage auf."
+S8. "Das Wasser von Bubikon fliesst in die Jona und schliesslich in den Obersee, dem östlichen Teil vom Zürichsee."
+S9. "Bubikon ist zum ersten Mal im Jahr 811 als Puapinchova urkundlich erwähnt."
+S10. "Auf einem Nagelfluéspore im Südosten der Gemeinde steht das Ritterhaus Bubikon."
+S11. "1570 wurde das Haus das letzte Mal erweitert und ist heute die am besten erhaltene Johanniterkommende Europas."
+S12. "Der zürichdeutsche Dialekt von Bubikon gehört zu den Seemundarten."
+S13. "Der Ausländeranteil liegt bei 10 % (Stand 2011)."
+S14. "Die Arbeitslosigkeit liegt im Jahr 2010 bei 2,2 %."
+S15. "Gemeindepräsidentin ist Andrea Keller (seit Juni 2018)."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "Züri" = Zürich (the standard exonym is "Zürich"). Shared house-system endonym used for the city across all dialects of this wiki; NOT a dialect discriminator. Recorded to prevent a false contrast.
+C2. "ghört zue de Seemundarte" shows the "zue" preposition before consonants, shared with Bernese ("z Kanaan", "z Galiläa"). Not a discriminator.
+C3. "Buebike"/"Buobinger"/"Buobo" - the reduced diphthong /uə/ written "ue". Not attested in the Bernese or Basel samples. Recorded as Zürcher Oberland-attested; no contrast claimed.
+C4. "gläge" (gelegen) - the g- prefix on a past participle. Shared with Bernese ("irrefüeherende", "begrenzt" aside) and Zürich elsewhere; NOT a discriminator. Recorded to prevent a false contrast.
+C5. "liit" (liegt) - triple ii. Not attested in the Bernese/Basel samples. Zürich-attested.
+C6. IMPORTANT LIMIT: This article's most distinctive feature is lexical (place names, -liit, Buebike diphthong), not the shared grammar. It contributes Seemundart vocabulary. Do NOT use it to evidence Zürich-vs-Basel grammatical contrasts - the city-Zürich articles (Bürgermeister, Ausländer) are the correct source for those.
+C7. "hüt" appears ("is hüt di am beste erhalteni"), shared with Basel and Bern. Recorded as SHARED - it is a common misconception that "hüt" is Zürich-specific.

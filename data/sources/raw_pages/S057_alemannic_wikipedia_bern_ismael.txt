@@ -1,0 +1,71 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Ismael
+TITLE: Ismael
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: bern
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Berndeutsch|Bärndütsch|Bärndütsch}}
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Är isch der erschti Sohn vom Abraham u der Hagar u isch der Halbbrueder vom Isaak."
+"Em Abraham isch versproche worde, dass syni Nachkomme so zahlrych, wi d Stärne am Himmel sölle wärde."
+"Wo der Abraham genau 10 Jahr z Kanaan läbt, geit är uf dä Vorschlag y."
+"Wo d Hagar merkt das si schwanger isch, fat si a d Sara z verachte."
+"Das füehrt zum krach zwüsche dene beidne Froue wo mit der Flucht vo der Hagar ändet."
+"I der Wüschti Schur trifft d Hagar amene Brunne uf e Ängel Gottes."
+"Dä seit ihre, das si wider zrügg zum Abraham söll."
+"Der Ängel Gottes verspricht ihre aber, ihri Nachkomme so z vermehre, dass me se nid cha zelle."
+"Si chunnt ou der Uftrag über em Chind der Name Ismael z gä."
+"Der Grund isch das Gott se i ihrem Eländ erhört het."
+"So geit d Hagar zrügg u bringt der Ismael uf d Wält."
+"Im Kapitel 17 chöme die zwöi e neue Name, also Abraham und Sara über."
+"Bi dere Namesänderig, wird em Abraham verheisse das der Ismael zwölf Fürschte wird Züge."
+"Der Bund zwüsche Gott u em Abraham söll allerdings nur übere Isaak loufe."
+"Der Abraham isch aber nid sonderlech begeischteret über die Vorderig vo syre erschte Frou."
+"Drum setzt är das ersch um, nach däm Gott ihm der Uftrag git der Ismael u d Hagar z vertrybe."
+"Är tuet das nur wil är druuf vertrout, das Gott die beide nid im stich lat."
+"Si cha nid zue luege wi ihre Sohn stirbt."
+"U dä isch e guete Jeger worde u het sech i der Wüeschti Pharan nider gla."
+"Doch das glingt ne syner Läbdig nie."
+"Är het ds Gebiet vo Hawila bis Assur kontroliert wo ou d Handelsverbindig zwüsche Ägypte u Assur düren isch."
+"Bibel seit das d Brüetsche vom Ismael der versuech underno hei, ne us sym agstammte Land z vertrybe."
+"Der Ismael stirbt im Alter vo 137i."
+"Der Ismael isch somit der Stammvater vo de Ismaeliter u de Araber."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Er ist der erste Sohn von Abraham und Hagar und ist der Halbbruder Isaaks."
+S2. "Abraham wurde versprochen, dass seine Nachkommen so zahlreich wie die Sterne am Himmel werden sollen."
+S3. "Als Abraham genau 10 Jahre in Kanaan lebt, geht er auf den Vorschlag ein."
+S4. "Als die Hagar merkt, dass sie schwanger ist, fasst sie die Sara gegenüber verachtet an."
+S5. "Das führt zum Krach zwischen den beiden Frauen, der mit der Flucht der Hagar endet."
+S6. "In der Wüste Schur trifft die Hagar an einer Quelle auf einen Engel Gottes."
+S7. "Der sagt ihr, dass sie wieder zum Abraham zurückkehren soll."
+S8. "Der Engel Gottes verspricht ihr aber, ihre Nachkommen so zu vermehren, dass man sie nicht zählen kann."
+S9. "Sie bekommt auch den Auftrag, einem Kind den Namen Ismael zu geben."
+S10. "Der Grund ist, dass Gott sie in ihrem Land erhört hat."
+S11. "So geht die Hagar zurück und bringt den Ismael auf die Welt."
+S12. "Im Kapitel 17 bekommen die zwei neue Namen, also Abraham und Sara."
+S13. "Bei dieser Namensänderung wird Abraham verheissen, dass der Ismael zwölf Fürsten werden wird."
+S14. "Der Bund zwischen Gott und Abraham soll allerdings nur über Isaak laufen."
+S15. "Abraham ist aber nicht sonderlich begeistert über die Forderung seiner ersten Frau."
+S16. "Darum setzt er es um, nachdem Gott ihm den Auftrag gibt, den Ismael und die Hagar zu vertreiben."
+S17. "Er tut das nur, weil er darauf vertraut, dass Gott die beiden nicht in der Wildnis lässt."
+S18. "Sie kann nicht zusehen, wie ihr Sohn stirbt."
+S19. "Und so wurde er ein guter Jäger und liess sich in der Wüste Pharan nieder."
+S20. "Doch das gelingt ihm sein Leben lang nicht."
+S21. "Er kontrollierte das Gebiet von Hawila bis Assur, wo auch die Handelsverbindung zwischen Ägypten und Assur stark ist."
+S22. "Die Bibel sagt, dass die Nachkommen des Ismael später versuchen, aus ihrem angestammten Land vertrieben zu werden."
+S23. "Der Ismael stirbt im Alter von 137 Jahren."
+S24. "Der Ismael ist somit der Stammvater der Ismaeliter und der Araber."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "Frou(e)" = Frau. VERIFIED CONTRAST between the two non-Basel dialects: Bernese plural "Froue" ("zwüsche dene beidne Froue") and singular "Frou" ("vo syre erschte Frou"); Zürich writes the unaltered "Frau" ("synere Frau Mathilde"). Bernese drops the -w- in the plural. Basel side not attested in my Basel sample - no Basel claim.
+C2. "geit" = geht. VERIFIED CONTRAST: Bernese "geit" appears twice here ("geit är uf dä Vorschlag y", "So geit d Hagar zrügg"), 7 times in my Bernese corpus, and 0 times in my Zürich corpus, where the verb appears as "gaat". Basel side not attested.
+C3. "zwöi" = zwei. VERIFIED CONTRAST: "die zwöi e neue Name" here; 8 occurrences in the Bernese corpus, 0 in Zürich, which uses "zwei".
+C4. "tuet" = tut. Bernese spells the short-u infinitive with -e ("Är tuet das nur"). Zürich shows "tuet" as well ("Ich tuet...": the Zürich corpus has "tuet" 5 and "tue" 3), so this is SHARED, not a contrast. Recorded to prevent a false contrast.
+C5. "Jahr" not "Joor". VERIFIED: this article has "10 Jahr"; the Bernese corpus has "Jahr" 25 and "Joor" 0, while the Basel corpus has "Joor" 17. Basel keeps final devoicing, Bernese does not.
+C6. "nid" for "nicht". VERIFIED: "dass me se nid cha zelle", "Si cha nid zue luege". Basel and Bern both use "nid" (Basel 15, Bern 30 in my samples); Zürich uses "nöd" (40 occurrences, "sind nöd vollschtändig deckigsgliich") with "nid" only 1. So the real contrast is Bern/Basel vs Zürich.
+C7. "Wüschti Schur", "Felsi" type landscape vocabulary - Bernese/Biblical setting lexicon. Basel side unverified; no contrast claimed.
+C8. "Är" for "er" (3sg masculine pronoun) - attested throughout this article. Zürich uses "er" ("Er wird je nach Land diräkt vo de Bürger ... gwählt", "Er vertritt d Gmeind au nach usse"). So Bernese "Är" vs Zürich "er" is a surface difference verified on both non-Basel sides. Basel side not attested in my sample.

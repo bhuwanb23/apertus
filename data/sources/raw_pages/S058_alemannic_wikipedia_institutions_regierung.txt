@@ -1,0 +1,48 @@
+SOURCE_ID: S058
+URL: https://als.wikipedia.org/wiki/Regierung_(Schweiz)
+TITLE: Regierung (Schweiz)
+ARTICLE_DISPLAYTITLE: D Regierigsform vo dr Schwiiz
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: uncertain
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: no `{{Dialekt}}` template. Orthography is a patchwork — heavy Alemannic morphology (`diezentralisiert`, `Pfuegungs`, `verschaffe`, `bassiert`) mixed with untranslated Standard German vocabulary and even untranslated spelling slips (`Börde` for *Behörde*, `das` for *dass*). Recorded as `uncertain`.
+CAVEAT: two facts make this article valuable despite its dialect shallowness. (1) It is the ONLY Alemannic Wikipedia article located that enumerates the federal monopolies (Regale). (2) It is the only one documenting the federal "intervention" (eidgenössische Intervention) — the army being sent into a canton to restore order — including the 1918 Zurich general strike and the 1974 Jura referendum. Both are absent from the English corpus S001–S055 and are therefore genuinely new dialect-encoded facts.
+NOTE: one section heading is malformed in the source (`== Die kommunali Exekutive ==` retains literal `==`); the heading text is otherwise normal.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Regierig vo dr Schwiiz isch stark dezentralisiert."
+"Es git exekutivi Institutione uf drei Ebene: dr federale, dr kantonale und dr kommunale"
+"Syt dr Iifüehrig vo der Verfassig vo 1848 noch em Ändi vom Sonderbundchrieg, wird d Schwiiz vo siibe Bundesröt regiert"
+"Anderi Regal (Bundesmonopol) si d Post, Telekommunikation, d Bundesbahne, s Alkoholmonopol und s Pulverregal."
+"d Bundespost git s zum Bispil scho sit 1849 und dr neu Franke isch 1851 in Umlauf cho"
+"Die gschichtlige Mass- und Gwichteiheite aber si vo Kanton zu Kanton verschiide bliibe, bis 1877 s französische metrische System iigfüehrt worden isch."
+"Die Röt hai im Allgemeine fümf bis nüün Mitgliider, wo meistens näbenamtlig dätig si und noch em Majorzsystem gwehlt wärde."
+"Die wälsche Kantön hai Conseils d’État, Staatsröt, usser em Jura mit eme Gouvernement, und dr Tessin het e Consiglio di Stato."
+"D Kantonalregierige si verantwortlig für d Polizei, d Justiz, d Erziehig, d Wohlfahrt, d Chillepolitik in ihre Kantön."
+"1974 het dr Bundesrot 50 eidgenössischi Beobachter in Jura gschickt für zum d Volksabstimmig im Jura-Plebiszit z überwache."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "D Regierig vo dr Schwiiz isch stark dezentralisiert." → "Die Regierung der Schweiz ist stark dezentralisiert."
+S2. "Es git exekutivi Institutione uf drei Ebene: dr federale, dr kantonale und dr kommunale" → "Es gibt exekutive Institutionen auf drei Ebenen: die federale, die kantonale und die kommunale."
+S3. "Syt dr Iifüehrig vo der Verfassig vo 1848 noch em Ändi vom Sonderbundchrieg, wird d Schwiiz vo siibe Bundesröt regiert" → "Seit der Einführung der Verfassung von 1848 bis zum Ende des Sonderbundskrieges wird die Schweiz von sieben Bundesräten regiert."
+S4. "Anderi Regal (Bundesmonopol) si d Post, Telekommunikation, d Bundesbahne, s Alkoholmonopol und s Pulverregal." → "Andere Regale (Bundesmonopole) sind die Post, die Telekommunikation, die Bundesbahnen, das Alkoholmonopol und das Pulverregal."
+S5. "d Bundespost git s zum Bispil scho sit 1849 und dr neu Franke isch 1851 in Umlauf cho" → "Die Bundespost gibt es zum Beispiel schon seit 1849 und der neue Franken ist 1851 in Umlauf gekommen."
+S6. "Die gschichtlige Mass- und Gwichteiheite aber si vo Kanton zu Kanton verschiide bliibe, bis 1877 s französische metrische System iigfüehrt worden isch." → "Die geschichtlichen Mass- und Gewichtseinheiten aber sind von Kanton zu Kanton verschieden geblieben, bis 1877 das französische metrische System eingeführt worden ist."
+S7. "Die Röt hai im Allgemeine fümf bis nüün Mitglider, wo meistens näbenamtlig dätig si und noch em Majorzsystem gwehlt wärde." → "Die Räte haben im Allgemeinen fünf bis neun Mitglieder, die meistens nebenamtlich tätig sind und nach dem Mehrheitssystem gewählt werden."
+S8. "In de dütschsprochige Kantön heischt die kantonali Exekutive Regierigsrot" → "In den deutschsprachigen Kantonen heisst die kantonale Exekutive Regierungsrat."
+S9. "D Kantonalregierige si verantwortlig für d Polizei, d Justiz, d Erziehig, d Wohlfahrt, d Chillepolitik in ihre Kantön." → "Die Kantonsregierungen sind verantwortlich für die Polizei, die Justiz, die Erziehung, die Wohlfahrt und die Schulpolitik in ihren Kantonen."
+S10. "1974 het dr Bundesrot 50 eidgenössischi Beobachter in Jura gschickt für zum d Volksabstimmig im Jura-Plebiszit z überwache." → "1974 hat der Bundesrat 50 eidgenössische Beobachter ins Jura geschickt, um die Volksabstimmung im Jura-Plebiszit zu überwachen."
+
+=== SWISS FACT CONTENT ===
+F1. Swiss government is strongly decentralised. — cross-ref: S025
+F2. Switzerland has three levels of executive institution: federal, cantonal and communal. — cross-ref: S025
+F3. Since the 1848 Constitution came into force, Switzerland has been governed by seven Federal Councillors. — cross-ref: S001
+F4. Swiss federal monopolies ("Regale") are the post, telecommunications, the federal railways, the alcohol monopoly and the gunpowder monopoly. — cross-ref: none
+F5. The federal post exists from 1849; the Swiss franc entered circulation in 1851. — cross-ref: S018
+F6. Historical Swiss units of measure and weight remained cantonal until the French metric system was introduced in 1877. — cross-ref: none
+F7. Communal executive councils have five to nine members, mostly serving in an honorary capacity and elected by majority vote. — cross-ref: S030
+F8. In the German-speaking cantons the cantonal executive is called Regierungsrat (with naming variants in Graubünden, St Gallen and Appenzell Innerrhoden). — cross-ref: S008
+F9. Cantonal governments are responsible for police, justice, education, welfare and schooling in their cantons. — cross-ref: S008
+F10. In 1974 the Federal Council sent 50 federal observers into the Jura to supervise the vote in the Jura plebiscite. — cross-ref: none

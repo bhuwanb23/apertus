@@ -1,0 +1,54 @@
+SOURCE_ID: S058
+URL: https://als.wikipedia.org/wiki/Schweizerisches_Idiotikon
+TITLE: Schweizerisches Idiotikon
+ARTICLE_DISPLAYTITLE: s Schwyzerisch Idiotikon
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+SUBSTITUTION: requested `.../wiki/Schwyzerdütsch` — NO ARTICLE (HTTP 404; MediaWiki `missing: true`). Substituted with `Schweizerisches Idiotikon`, the Alemannic article on the national Swiss German dictionary, which the instruction list offered as the alternative. (`Schweizerdeutsch` exists as a red-link target only.)
+DIALECT_EVIDENCE: no `{{Dialekt}}` template, but orthography is consistently Basel-convention Alemannic (`Inväntarisierig`, `Wörterbuech`, `Bschaffe`, `Bajonett`-class forms, `Idiotikon` pronounced with the Alemannic k-shift, `Schriftsteller`) and the article is filed under `{{Kategorie:Alemannisch}}`. Recorded as `basel`.
+CAVEAT: this article is a META-linguistic article — it is about the Swiss German language itself, and is written BY Alemannic speakers ABOUT Alemannic. That makes it the best single file for validating dialect competence and for sourcing dialect-lexical items, but it carries few Swiss institutional facts. Sections excluded: the `== Redaktion ==` chief-editor list (19 names + 30 further editors = a list, not sentences), the `== Zuesatz-Ufgabe ==` project list (bullets), and the literature section.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Mer hät Korrespondänten im ganze Land gsuecht und gfunde, wo Wörter gsammlet und ygschickt händ."
+"Es isch eis vo de vier «Nationale Wörterbüecher vo de Schwyz»"
+"Idiotikon isch en alts Wort für es Wörterbuech, wo die Wort drinstönd, wo für e bistimmti Landschaft tipisch sind, aber nöd au die, wo glych sind wie i de Schriftsprach."
+"S Schwyzerisch Idiotikon isch aber öppe syt de Mitti vom vierte Band, wo der Albert Baachme s Rueder übernaa hät"
+"Daademit isch Schwyzerischs Idiotikon zum reine Name vom Wärch worde – und hüt isch es au de Name vo däm Inschtitut, wo am Wörterbuech gschaffet wird."
+"Scho im 1806i hät de Pfarer Franz Joseph Stalder en Versuech vomene Schwyzerische Idiotikon i zwee Bänd publiziert."
+"Im 1862i isch uf d Initiative vo de Antiquarische Gsellschaft Züri und vom Friedrich (Fritz) Staub de «Verein für das Schweizerdeutsche Wörterbuch» ggründet worde"
+"S Idiotikon het im Momänt (bis Band 16) öppe 155'000 Stichwort."
+"S Schwyzerisch Idiotikon isch s gröscht Dialäktwörterbuch vu allne germanische Sproche."
+"S isch aber nüd «nu» es Dialäktwörterbuech, sondern glychzytig au e «nationals historischs» Wörterbuech wie zum Byspil de Oxford English Dictionary us Ängland oder d Svenska Akademiens Ordbok us Schwede."
+"Träger vom Idiotikon isch dr gmeinnützig Verein für es Schwyzerdütschs Wörterbuech"
+"Syt em Septämber 2010 cha mers über www.idiotikon.ch au online läse."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Mer hät Korrespondänten im ganze Land gsuecht und gfunde, wo Wörter gsammlet und ygschickt händ." → "Das Schweizerische Idiotikon ist ein Projekt zur vollständigen Inventarisierung aller Schweizer Dialekte und der älteren Schweizer Kanzlei- und Literatursprache."
+S2. "Es isch eis vo de vier «Nationale Wörterbüecher vo de Schwyz»" → "Es ist eines der vier «Nationalen Wörterbücher der Schweiz»."
+S3. "Idiotikon isch en alts Wort für es Wörterbuech, wo die Wort drinstönd, wo für e bistimmti Landschaft tipisch sind, aber nöd au die, wo glych sind wie i de Schriftsprach." → "Idiotikon ist ein altes Wort für ein Wörterbuch, in dem die Wörter stehen, die für eine bestimmte Landschaft typisch sind, aber nicht auch die, die gleich sind wie in der Schriftsprache."
+S4. "S Schwyzerisch Idiotikon isch aber öppe syt de Mitti vom vierte Band, wo der Albert Baachme s Rueder übernaa hät" → "Das Schweizerische Idiotikon ist aber erst seit der Mitte des vierten Bandes, wo der Albert Bachmann das Ruder übernommen hat."
+S5. "Daademit isch Schwyzerischs Idiotikon zum reine Name vom Wärch worde – und hüt isch es au de Name vo däm Inschtitut, wo am Wörterbuech gschaffet wird." → "Dadurch ist Schweizerisches Idiotikon zum reinen Namen des Werkes geworden – und heute ist es auch der Name des Instituts, an dem am Wörterbuch gearbeitet wird."
+S6. "Scho im 1806i hät de Pfarer Franz Joseph Stalder en Versuech vomene Schwyzerische Idiotikon i zwee Bänd publiziert." → "Schon im Jahr 1806 hat der Pfarrer Franz Joseph Stalder einen Versuch eines Schweizerischen Idiotikons in zwei Bänden publiziert."
+S7. "Im 1862i isch uf d Initiative vo de Antiquarische Gsellschaft Züri und vom Friedrich (Fritz) Staub de «Verein für das Schweizerdeutsche Wörterbuch» ggründet worde" → "Im Jahr 1862 wurde auf Initiative der Antiquarischen Gesellschaft Zürich und von Friedrich (Fritz) Staub der «Verein für das Schweizerdeutsche Wörterbuch» gegründet."
+S8. "S Idiotikon het im Momänt (bis Band 16) öppe 155'000 Stichwort." → "Das Idiotikon hat im Moment (bis Band 16) etwa 155'000 Stichwörter."
+S9. "S Schwyzerisch Idiotikon isch s gröscht Dialäktwörterbuch vu allne germanische Sproche." → "Das Schweizerische Idiotikon ist das grösste Dialektwörterbuch aller germanischen Sprachen."
+S10. "S isch aber nüd «nu» es Dialäktwörterbuech, sondern glychzytig au e «nationals historischs» Wörterbuech wie zum Byspil de Oxford English Dictionary us Ängland oder d Svenska Akademiens Ordbok us Schwede." → "Es ist aber nicht «nur» ein Dialektwörterbuch, sondern gleichzeitig auch ein «nationales historisches» Wörterbuch wie zum Beispiel das Oxford English Dictionary aus England oder die Ordbok der Schwedischen Akademie aus Schweden."
+S11. "Träger vom Idiotikon isch dr gmeinnützig Verein für es Schwyzerdütschs Wörterbuech" → "Träger des Idiotikons ist der gemeinnützige Verein für ein Schweizerdeutsches Wörterbuch."
+S12. "Syt em Septämber 2010 cha mers über www.idiotikon.ch au online läse." → "Seit September 2010 kann man es über www.idiotikon.ch auch online lesen."
+
+=== SWISS FACT CONTENT ===
+F1. The Schweizerisches Idiotikon is a project to inventory all Swiss dialects and the older Swiss chancery and literary language. — cross-ref: S028
+F2. Switzerland has four "national dictionaries", one per language region: the Idiotikon (German), the Glossaire des patois de la Suisse romande, the Vocabolario dei dialetti della Svizzera italiana and the Dicziunari Rumantsch Grischun. — cross-ref: S047
+F3. "Idiotikon" is an old word for a dialect dictionary; since the middle of the fourth volume (under Albert Bachmann) the work became a full dictionary and the name came to denote the work itself. — cross-ref: none
+F4. The first attempt at a Swiss Idiotikon was published by the pastor Franz Joseph Stalder in 1806 in two volumes; his completed 1832 manuscript was never published. — cross-ref: none
+F5. The present Schweizerisches Idiotikon was founded in 1862 by the Antiquarische Gesellschaft Zürich and Friedrich (Fritz) Staub as the "Verein für das Schweizerdeutsche Wörterbuch". — cross-ref: none
+F6. As of the article's writing (volume 16 finished 2012, volume 17 planned for the letter Z), the dictionary contained about 155,000 headwords. — cross-ref: none
+F7. The Idiotikon is the largest dialect dictionary of all Germanic languages and is simultaneously a national historical dictionary comparable to the Oxford English Dictionary or the Swedish Academy's Ordbok. — cross-ref: none
+F8. The dictionary is carried by a non-profit association, funded by the Confederation (through the Academy of Humanities and Social Sciences), the German-speaking cantons and private donors — i.e. it is a federal/cantonal co-funded national institution. — cross-ref: S029
+F9. It has been readable online at www.idiotikon.ch since September 2010. — cross-ref: none
+F10. The dictionary's source material divides into two periods: post-1800 and historical, roughly 1300 to 1799 — documenting that Alemannic dialect forms were written from the 14th century. — cross-ref: S028
+
+BENCHMARK USE: this file is the natural companion to any dialect-decoding item as a METALINGUISTIC anchor — a dialect sentence whose words are themselves defined in the source (e.g. S3 defines "Idiotikon", S2 names the four national dictionaries). It is also the best file to source dialect-lexical distractors from.

@@ -1,0 +1,35 @@
+SOURCE_ID: S058
+URL: https://als.wikipedia.org/wiki/Direkte_Demokratie
+TITLE: Direkte Demokratie
+ARTICLE_DISPLAYTITLE: Die diräkti Demokratii
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: uncertain
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+SUBSTITUTION: requested `.../wiki/Abstimmung` — NO ARTICLE (MediaWiki `missing: true`). Related searches returned no Alemannic article on the Swiss vote as such. Substituted with `Direkte Demokratie`, the Alemannic article covering the Swiss direct/semi-direct democratic instruments. `.../wiki/Referendum` also does NOT exist on als.wikipedia (it is only a red link used inside other articles) — see the note at the foot of this file. `.../wiki/Volksinitiative` EXISTS but is a disambiguation stub listing Switzerland/Germany/Liechtenstein — the Swiss referent `Volksinitiative (Schweiz)` has no article of its own; its content is inside `Direkte Demokratie`.
+DIALECT_EVIDENCE: no `{{Dialekt}}` template, and the article ends with `{{Übersetzungshinweis|de|Direkte_Demokratie|dütsch}}` — i.e. it is a machine-assisted translation of the German article with partial Alemannic adaptation. Dialect depth is shallow and Standard-German residue is heavy (`Sachfrooge` sits alongside Standard forms). Recorded as `uncertain`, and every sentence below is marked low-dialect-density.
+CAVEAT: because this is a translation stub, it is the WEAKEST article in the S058 set for dialect authenticity. Use its sentences only for fact items, and prefer dialect-dense sentences from `Schweiz`, `Kanton` and `Bundesversammlung (Schweiz)` for dialect-decoding items.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Dr Begriff diräkti Demokratii (au ummiddelbari Demokratii) bezäichnet e Verfaare und au e politischs Süsteem"
+"Diräkti Demokratii underschäidet sich eso vo dr representative oder indiräkte Demokratii, wo s Volk Mitgliider vom ene Root weelt"
+"Wenn Elimänt vo dr diräkte und indiräkte Demokratii kombiniert wärde, schwätzt mä von ere halbdiräkte oder plebiszitäre Demokratii."
+"Die unmittelbarschti Form vo dr direkte Demokratie isch die in wenige Schwiizer Kantön no vorhandeni Landsgmeind oder uuf kommunaler Ebeni d Gmeindsversammlig."
+"Halbdirekt wird in dr Schwiiz mitbeschtimmt durch Gsetzes-Referendum und Volksinitiative uuf Verfassigsänderig."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Dr Begriff diräkti Demokratii (au ummiddelbari Demokratii) bezäichnet e Verfaare und au e politischs Süsteem" → "Der Begriff direkte Demokratie (auch unmittelbare Demokratie) bezeichnet eine Verfahrens- und auch ein politisches System."
+S2. "Diräkti Demokratii underschäidet sich eso vo dr representative oder indiräkte Demokratii, wo s Volk Mitgliider vom ene Root weelt" → "Direkte Demokratie unterscheidet sich so von der repräsentativen oder indirekten Demokratie, wo das Volk Mitglieder eines Rates wählt."
+S3. "Wenn Elimänt vo dr diräkte und indiräkte Demokratii kombiniert wärde, schwätzt mä von ere halbdiräkte oder plebiszitäre Demokratii." → "Wenn Elemente der direkten und der indirekten Demokratie kombiniert werden, spricht man von einer halbdirekten oder plebiszitären Demokratie."
+S4. "Die unmittelbarschti Form vo dr direkte Demokratie isch die in wenige Schwiizer Kantön no vorhandeni Landsgmeind oder uuf kommunaler Ebeni d Gmeindsversammlig." → "Die unmittelbarste Form der direkten Demokratie ist die in wenigen Schweizer Kantonen noch vorhandene Landsgemeinde oder auf kommunaler Ebene die Gemeindeversammlung."
+S5. "Halbdirekt wird in dr Schwiiz mitbeschtimmt durch Gsetzes-Referendum und Volksinitiative uuf Verfassigsänderig." → "Halbdirekt wird in der Schweiz mitbestimmt durch Gesetzesreferendum und Volksinitiative auf Verfassungsänderungen."
+
+=== SWISS FACT CONTENT ===
+F1. "Direct democracy" (diräkti Demokratii, also "unmittelbare Demokratii") denotes both a procedure and a political system. — cross-ref: S004
+F2. Direct democracy is distinguished from representative/indirect democracy, in which the people elect members of a council who then decide. — cross-ref: S006
+F3. Combining elements of direct and indirect democracy yields the term "semi-direct" or "plebiscitary" democracy — the term standardly applied to the Swiss system. — cross-ref: S048
+F4. The most immediate form of direct democracy is the Landsgemeinde, still existing in a few Swiss cantons, or at communal level the Gemeindeversammlung. — cross-ref: S040
+F5. In Switzerland the semi-direct character consists in the statutory referendum and the popular initiative applying to constitutional amendments. — cross-ref: S004
+
+NOTE ON `.../wiki/Referendum`: confirmed absent on als.wikipedia. `Referendum` is a RED LINK inside `Direkte Demokratie` (`[[Referendum]]`, unbracketed pipe). No substitute article was fetched for it; the referendum fact content is instead covered by S5 above and by the `Schweiz` file. If a dedicated referendum article is required, the nearest existing Alemannic articles are `Direkte Demokratie` (used here) and `Eidgenössische Volksinitiative «Rückkehr zur direkten Demokratie»` (https://als.wikipedia.org/wiki/Eidgenössische_Volksinitiative_%C2%ABR%C3%BCckkehr_zur_direkten_Demokratie%C2%BB, located but NOT harvested — it is a single-initiative article, not an institution article).

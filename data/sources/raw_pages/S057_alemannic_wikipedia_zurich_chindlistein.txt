@@ -1,0 +1,39 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Chindlistein
+TITLE: Chindlistein (display title: Chindlistäi)
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: zurich
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Zürichdeutsch|Züritüütsch| Züritüütsch}}
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Chindlistäi chan es Gattigswoort sy (aso äifach für d Sach staa) oder aber au uustrückli de Name vo somene Stäi."
+"Mängmaal sind s glychzytig au Rutschstäi, aso Stäi, wo d Fraue druf abegrutscht segid, zum iri Fruchtbaarkäit verbessere."
+"Vil wiird dëë Glaube bis wyt i d Früegschicht zrugg gfüert, öppe zu de Kelte."
+"Aber das sind Projäkzioone, wil me ja gaar nöd cha wüsse, was die für es Bruuchtum ghaa händ."
+"S Woort und de Glaube häts natüürli scho vorane ggëë, aber über söttigi Sache hät mer halt früener chuum gschribe."
+"Chindlistäi gits ämel rächt vil, so lyschtet s Idiotikon unter de Stichwöörter Chind, Chindlistäi e ganzi Räien uuf."
+"Chind hät me nöd nu «vo unter de Felse hëër gholt»."
+"Wyteri gchänt de Karl Ludwig Schmalz spezyfisch für s Bëërnpiet."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Chindlistäi kann ein Gattungswort sein (also äifach für die Sache selbst) oder aber auch ausdrücklich der Name von einem Stein."
+S2. "Manchmal sind es gleichzeitig auch Rutschsteine, also Steine, auf welche die Frauen abgerutscht sind, um ihre Fruchtbarkeit zu verbessern."
+S3. "Viel wird dieser Glaube weit in die Frühzeit zurückgeführt, vielleicht zu den Kelten."
+S4. "Aber das sind Projektionen, weil man ja gar nicht wissen kann, was sie für ein Brauchtum gehabt hätten."
+S5. "Das Wort und der Glaube hätten natürlich schon vorher existiert, aber über solches wurde halt früher kaum geschrieben."
+S6. "Chindlistäi gibt es sehr oft, so listet das Idiotikon unter den Stichwörtern Kind, Chindlistäi eine ganze Reihe auf."
+S7. "Ein Kind hat man ja nicht nur «unter den Felsen hervor geholt»."
+S8. "Weiter gedenkt Karl Ludwig Schmalz speziell für das Bärenfest."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "äi" as a written long /aː/ (Chindlistäi, Rutschstäi, Wöörter, ggëë, ghaa, Segid/Fruchtbaarkäit). This is the single most distinctive orthographic signature of this article. The user asked specifically about "ä vs aa vowel length marking" - VERIFIED here as a REAL contrast: this Zürich article uses "äi" and "ää" for /aː/ ("ghaa", "ggëë", "Fruchtbaarkäit"). The Bernese corpus in my sample uses plain "a" for the same slot ("Frou", "Bache", "säje") and never "äi". Basel not verified for this pattern - no Basel claim made.
+C2. "nöd" for "nicht" - "me ja gaar nöd cha wüsse", "Chind hät me nöd nu". VERIFIED CONTRAST with Bernese/Basel "nid".
+C3. "me" vs "mer" - this article uses BOTH ("Aber das sind Projäkzioone, wil me ja gaar nöd cha wüsse" and "hät mer halt früener chuum gschribe"). The city-Zürich articles (Ausländer, Bürgermeister) consistently use "mer". So "me/mer" is variable even within one Zürich register; do not treat "me" as exclusively Bernese. This CORRECTS an over-general reading of C3 in the Kloster Einsiedeln and Bürgermeister files.
+C4. "gits" (gibt es) vs Bernese "Es git aber e Verein". Both attested in the samples; the Zürich corpus has "gits" 8 and the Bernese "git" 3. NOT a clean contrast - recorded as variable across dialects.
+C5. "lyschtet" (listet) - Swiss-German-wide verb, not dialect-specific. Recorded so it is not mistaken for a marker.
+C6. "uusgsprochni", "Fruchtbaarkäit" - lexical/compound-forming vocabulary. Basel side not attested; no contrast claimed.
+C7. Non-standard orthography note: this page's Dialekt template has a stray leading space in the third field (" Züritüütsch"). Cosmetic only, but recorded as evidence that the dialect tag was hand-entered.
+C8. IMPORTANT: this is a folklore/ethnology article quoting Schwyzerisches Idiotikon. Some of its vocabulary ("Früegschicht", "Bruuchtum", "Kelte") is scholarly Alemannic rather than spontaneous speech. It is valid documentary Zürich German but is a more formal register than the Bauern-Tabak/Kaffeeratte class.

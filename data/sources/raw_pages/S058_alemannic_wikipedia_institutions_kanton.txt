@@ -1,0 +1,46 @@
+SOURCE_ID: S058
+URL: https://als.wikipedia.org/wiki/Kanton
+TITLE: Kanton
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: uncertain
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: no `{{Dialekt}}` template. Orthography follows the Basel Alemannic house convention consistently (Züri, Bärn, Soledurn, Frybùrg, Nöieburg, Gämf, Losann, Schafuuse, Appizäll; `zueverlässig` for *zuverlässig* is a Basel marker), but this is an inference, not a template declaration — recorded as `uncertain`.
+CAVEAT: the article contains a large canton statistics table (population, area, municipalities, official languages, figures dated 2016). Table rows are deliberately NOT harvested as sentences: they are unreadable out of context and year-locked. The table's counts (26 cantons, 2'889 municipalities, 41'285 km²) are nonetheless the English-corpus cross-ref targets in F2/F6.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"En Kanton (au: Stand, früehner au Ort) isch en Gliidstaat vo de Schwiizerische Eidgnosseschaft."
+"D Helvetik het 1798 d Begriff Stand und Ort abgschafft und «Kanton» as Bezeichnig für die oberste Verwaltigseinheite iigfüehrt."
+"D Parlamänt händ je nach Grössi zwüsche 49 bis 180 Sitz, d Kantonsregierige zelet je nach Kanton föif odr sibe Mitglidr."
+"By vilne vo dene Berych hätt de Bund aber glych nones Wörtli mitzrede."
+"I de beide Kantön Glarus und Appizell Innerrhode git’s no bis hütt einisch im Jahr d Landsgmeind"
+"De jüngscht, de 23., isch de Kanton Jura, wo sich 1979 vom Kanton Bern abgspalte hätt."
+"Im Ständerat hän alli sächs jeweils numen ein Sitz, di andere händ zwei."
+"Obwaldä und Nidwaudä sind „Halbkantön“, obwohl si nie zäme ein Kanton gsi sind."
+"Di sogenannten Urkantön, wo ane 1291 (odr wahrschinli au früehner) en erschte Bund mit enand gschlosse händ, sind Uri, Schwyz und Underwalde."
+"Mit dr Mediationsverfassig 1803 sind s denn 19 Kantön gsi, wo wider e gwüssi Autonomii gha hän, und nach em Wiener Kongress 1815 22."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "En Kanton (au: Stand, früehner au Ort) isch en Gliidstaat vo de Schwiizerische Eidgnosseschaft." → "Ein Kanton (auch: Stand, früher auch Ort) ist ein Gliedstaat der Schweizerischen Eidgenossenschaft."
+S2. "D Helvetik het 1798 d Begriff Stand und Ort abgschafft und «Kanton» as Bezeichnig für die oberste Verwaltigseinheite iigfüehrt." → "Jeder der 26 Kantone hat eine eigene Verfassung, ein eigenes Parlament, eine eigene Regierung und eigene Gerichte."
+S3. "D Parlamänt händ je nach Grössi zwüsche 49 bis 180 Sitz, d Kantonsregierige zelet je nach Kanton föif odr sibe Mitglidr." → "Die Parlamente haben je nach Grösse zwischen 49 und 180 Sitze, die Kantonsregierungen zählen je nach Kanton fünf oder sieben Mitglieder."
+S4. "By vilne vo dene Berych hätt de Bund aber glych nones Wörtli mitzrede." → "Bei vielen von diesen Bereichen hat der Bund aber gleich ein Wort mitzureden."
+S5. "I de beide Kantön Glarus und Appizell Innerrhode git’s no bis hütt einisch im Jahr d Landsgmeind" → "In den beiden Kantonen Glarus und Appenzell Innerrhoden gibt es noch bis heute einmal im Jahr die Landsgemeinde."
+S6. "De jüngscht, de 23., isch de Kanton Jura, wo sich 1979 vom Kanton Bern abgspalte hätt." → "Der jüngste, der 23., ist der Kanton Jura, der sich 1979 vom Kanton Bern abgespalten hat."
+S7. "Im Ständerat hän alli sächs jeweils numen ein Sitz, di andere händ zwei." → "Im Ständerat haben alle sechs jeweils nur einen Sitz, die anderen haben zwei."
+S8. "Obwaldä und Nidwaudä sind „Halbkantön“, obwohl si nie zäme ein Kanton gsi sind." → "Obwalden und Nidwalden sind «Halbkantone», obwohl sie nie zusammen ein Kanton gewesen sind."
+S9. "Di sogenannten Urkantön, wo ane 1291 (odr wahrschinli au früehner) en erschte Bund mit enand gschlosse händ, sind Uri, Schwyz und Underwalde." → "Die sogenannten Urkantone, die 1291 (oder wahrscheinlich noch früher) einen ersten Bund miteinander geschlossen haben, sind Uri, Schwyz und Unterwalden."
+S10. "Mit dr Mediationsverfassig 1803 sind s denn 19 Kantön gsi, wo wider e gwüssi Autonomii gha hän, und nach em Wiener Kongress 1815 22." → "Mit der Mediationsverfassung 1803 waren es denn 19 Kantone, die wieder gewisse Autonomien hatten, und nach dem Wiener Kongress 1815 [waren es] 22."
+
+=== SWISS FACT CONTENT ===
+F1. A canton is a member state (Gliedstaat) of the Swiss Confederation; "Stand" and formerly "Ort" are alternative historical names for the same unit. — cross-ref: S025
+F2. Switzerland has 26 cantons, and each has its own constitution, parliament, government and courts. — cross-ref: S025
+F3. Cantonal parliaments have between 49 and 180 seats; cantonal governments consist of five or seven members depending on the canton. — cross-ref: S008
+F4. The federal government retains a say in many matters that are nominally cantonal competences (the article calls this the "Kompetänzwirrwarr", competence confusion). — cross-ref: S025
+F5. Only Glarus and Appenzell Innerrhoden still hold an annual Landsgemeinde where the citizenry votes by show of hands. — cross-ref: S040
+F6. Jura is the youngest canton, the 23rd, split off from the canton of Bern in 1979. — cross-ref: S030
+F7. The six half-cantons each hold one Council of States seat; the other cantons hold two. — cross-ref: S026
+F8. Obwalden and Nidwalden are half-cantons although they were never a single canton. — cross-ref: S026
+F9. Uri, Schwyz and Unterwalden are the founding cantons (Urkantön) that concluded the first alliance in 1291. — cross-ref: S037
+F10. Under the Mediation Act of 1803 there were 19 cantons with restored autonomy; after the Congress of Vienna in 1815 there were 22. — cross-ref: S037

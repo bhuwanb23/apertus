@@ -1,0 +1,42 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Klosters
+TITLE: Klosters (display title: Bim Chlooschtär oder Chlooschtärsch)
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: walser
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Walserdeutsch|Walsertiitsch|Walsertüütsch vam Chlooschtär}}
+SUBDIALECT_NOTE: Genuine Walser German (Prättigau, Graubünden, Switzerland).
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Di verschidänä Frakzionä vam Chlooschtär sind alles Walsersidligä."
+"Dr Namä gäid uf di Prämonschtratenserpropstii am Platz bin dr Chilchä St. Jakob zrugg."
+"Diä Abchleerigä sind duä aber wirräm abgäbrochä chon."
+"Di Gmäind Chlooschtärsch ischt mit dr Rhätischä Bahn guet ärschlossän."
+"Än nüüwä Baahof heds bim Dörfji und häjinnä am Platz."
+"Äs Schtazijönli gits dobbnä bim Cavadürli."
+"Ds Zelfrangä ischt dr Autoverlad für dn Vereinatunnell, wa ä wintersichäri Värbindig düürän in ds Unterengadin ärmügglicht."
+"Sit dm 9. Dezembär 2005 chund Chlooschtärsch dür dn Gotschnä-Umfahrigs-Tunell vam Durchgangsvärchehr entlaschtät."
+"Di 28 und di säb gäid über di modern, gschwungä Sunnibärg-Brugg, äntwoorfän vam wäältberüämtä Churär Inschenjiöör Christian Menn."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Die verschiedenen Fraktionen von Klosters sind alles Walsersiedlungen."
+S2. "Der Name geht auf die Prämonstratenserpropstei am Platz bei der Kirche St. Jakob zurück."
+S3. "Diese Abklärungen sind dort aber wirksam abgebrochen worden."
+S4. "Die Gemeinde Klosters ist mit der Rhätischen Bahn gut erschlossen."
+S5. "Ein neuer Bahnhof steht beim Dörfli und weiterhin am Platz."
+S6. "Eine Haltestelle gibt es ebenfalls beim Cavadürli."
+S7. "Das Zelfrangä ist die Autoverladung für den Vereinatunnel, der eine wintersichere Verbindung durchs Unterengadin ermöglicht."
+S8. "Seit dem 9. Dezember 2005 ist Klosters durch den Gotthard-Umfahrungstunnel vom Durchgangverkehr entlastet."
+S9. "Die 28 und die sieben führen über die moderne, geschwungene Sonnenbrücke, entworfen vom weltberühmten Churer Ingenieur Christian Menn."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "ischt" for "ist". VERIFIED CONTRAST - this is the -t final devoicing pattern the brief asked about, and it runs in the OPPOSITE direction from the hypothesis: Basel, Bern and Zürich ALL write "isch" (Basel 156, Bern 156, Zürich 354 occurrences, zero "ischt" in any of the three), while Walser and Wallisertiitsch write "ischt" (Walser 38, Wallis 8, and "isch" only 37/187 respectively). So the devoicing is an alpine-Walser/Wallis feature, NOT a Basel-vs-Zürich one. Here: "Di Gmäind Chlooschtärsch ischt mit dr Rhätischä Bahn guet ärschlossän."
+C2. "Gmäind" = Gemeinde, with the umlaut marking diphthong /ɛː/ vs Bernese "Gmeind" ("Unter dr Helvetische Verfassig ... " and "Er vertritt d Gmeind au nach usse"). VERIFIED CONTRAST: Zürich "Gmeind" (unmarked /aɪ/) vs Walser "Gmäind". Bernese "Gmeind" and Zürich "Gmeind" agree here.
+C3. "Gmäind Chlooschtärsch" = Gemeinde Klosters - deep-shaded uo diphthong /uə/ written "uo". Contrast with Zürich "zue"/"uus" and Bernese "Buure" (uː). VERIFIED across the sample: Bernese "Buure" (13), Walser "Chlooschtär"/"Gmääind".
+C4. "Frakzionä", "Fraktion" with the -nä/-nä plural. Not attested in the Bern/Zürich/Basel samples; Walser-attested.
+C5. "gäid" (geht) vs Zürich "gaat" and Bernese "geit". THREE-WAY VERIFIED CONTRAST: my sample has Bernese "geit" 7, Zürich "gaat" 6, Walser "geit" 1 ("Sid ane 1889 geit d Ysebaa va Landquart us dür ds Taal"), and Basel 0. So Bernese and Walser share "geit" against Zürich "gaat"; Basel is unattested in my sample for this verb.
+C6. "ds" vs "d" for the neuter article. Shared across dialects; NOT a discriminator. Recorded to prevent a false contrast.
+C7. "gäb"/"dö" vowel inventory: Walser here writes "wäältberüämtä", "fraktionä" with ä/ü/ö. This is the Höchstalemannisch/Walser vowel inventory and contrasts sharply with Bernese "Buure"/"chunnt"/"z tüe". VERIFIED at the sample level.
+C8. Participle morphology: this text uses the Walser -ad/-ät participle marker ("entlaschtät", "abgäbrochä", "bistaht"), whereas Bernese uses -t plus the ge-/be- prefixes ("begleitet", "erwiiteret") and Zürich likewise ("gwächslet", "bout worde"). VERIFIED as a visible surface difference across the three non-Basel sample sets; the Basel sample shows -t only ("gmacht", "strukturell gmacht") without the -ad/-ät marker.

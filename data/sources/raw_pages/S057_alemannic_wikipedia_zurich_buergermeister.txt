@@ -1,0 +1,61 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/B%C3%BCrgermeister
+TITLE: Bürgermeister (display title: Bürgermeischter)
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: zurich
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch}}
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"En Bürgermeischter isch s Oberhaupt von ere Stadt oder Gmeind."
+"Er wird je nach Land diräkt vo de Bürger oder vom Stadt-/Gmeindrat gwählt."
+"In menke Gegende vum Alemannische sait mer zun em au Burgermeischter oder Vogt, z Frankriich maire und z Italie sindaco."
+"In frühere Jahrhunderte het s Stedt gee, wo gliichzytig meh as ei Bürgermeischter gha händ."
+"Si händ denn eine as dr wortfüehrend Bürgermeischter bestimmt."
+"Als Bürgermeischter, wo vilfach au no s Richteramt bechleidet händ, sind jahrhundertelang usschliesslich Volljurischte gwählt worde."
+"I der Schwiz gits d Bezeichnig Bürgermeischter eso nümme."
+"Under dr Helvetische Verfassig isch s Amt vom Bürgermeister ufghobe und 1803 mit dr Mediation vilerorts wider iigfüehrt worde."
+"Hützutag isch die analogi Bezeichnig je nach Ort Stadtpräsident, Stadtammä, Ammä, Gmeindammä oder Gmeindspräsidänt."
+"I nöd dütsche Spoochregione Syndic, Maire oder Sindaco."
+"Öfters isch Der Bürgermeischter au d Bezeichnig für d Bhörde, wo am Bürgermeister understaaht."
+"Wenn der Bürgermeischter nöd diräkt gwählt wird, dänn schtellt meischtens aber nöd unbedingt d Mehrheitspartei de Bürgermeischter."
+"Das isch aber vo de jewiilige Mehrheitsverhältnis abhängig."
+"Der Bürgermeischter isch s Organ, wo d Gmeindratsbeschlüss usfüert."
+"Usserdem füehrt er Bundes- und Landeswiisige us."
+"Er vertritt d Gmeind au nach usse."
+"In Bauaaglegeheite isch er die ersti Inschtanz."
+"In Statutarstädt füehrt er ebeso d Agende vom Bezirkshauptmaa us."
+"I jedere Gmeind gits als Vertretig eine, zwei oder drüü Vizebürgermeischter, je nach Wahlergebnis und der Gmeindgrössi."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Ein Bürgermeister ist das Oberhaupt einer Stadt oder Gemeinde."
+S2. "Er wird je nach Land direkt von den Bürgern oder vom Stadt-/Gemeinderat gewählt."
+S3. "In manchen Gegenden des Alemannischen sagt man zum einem auch Burgermeister oder Vogt, in Frankreich maire und in Italien sindaco."
+S4. "In früheren Jahrhunderten hatte es Städte gegeben, die gleichzeitig mehr als einen Bürgermeister hatten."
+S5. "Sie haben denn einen von ihnen zum wortführenden Bürgermeister bestimmt."
+S6. "Als Bürgermeister, die vielfach auch noch das Richteramt bekleideten, wurden jahrhundertelang ausschliesslich Volljuristen gewählt."
+S7. "In der Schweiz gibt es die Bezeichnung Bürgermeister nicht mehr."
+S8. "Unter der Helvetischen Verfassung wurde das Amt vom Bürgermeister aufgehoben und 1803 mit der Mediation vielerorts wieder eingeführt."
+S9. "Heutzutage ist die analoge Bezeichnung je nach Ort Stadtpräsident, Stadtammann, Ammann, Gemeindeammann oder Gemeindepräsident."
+S10. "In nicht deutschen Sprachregionen Syndic, Maire oder Sindaco."
+S11. "Öfters ist Der Bürgermeister auch die Bezeichnung für die Behörde, die dem Bürgermeister untersteht."
+S12. "Wenn der Bürgermeister nicht direkt gewählt wird, dann stellt meistens aber nicht unbedingt die Mehrheitspartei den Bürgermeister."
+S13. "Das ist aber von der jeweiligen Mehrheitsverhältnis abhängig."
+S14. "Der Bürgermeister ist das Organ, das die Gemeindebeschlüsse ausführt."
+S15. "Ausserdem führt er Bundes- und Landesweisungen aus."
+S16. "Er vertritt die Gemeinde auch nach aussen."
+S17. "In Bauangelegenheiten ist er die erste Instanz."
+S18. "In Statutarstädten führt er ebenso die Agende des Bezirkshauptmannes aus."
+S19. "In jeder Gemeinde gibt es als Vertretung einen, zwei oder drei Vizebürgermeister, je nach Wahlergebnis und der Gemeindegrösse."
+
+=== DIALECT CONTRAST NOTES ===
+C1. This is the CITY Zürich article (dialect tag "Züritüütsch" without the "(See)" qualifier), so it is the reference point for urban Zürich German, unlike Kloster Einsiedeln which is Seedialect.
+C2. "zwei" and "drüü" (three). VERIFIED CONTRAST: here "eine, zwei oder drüü Vizebürgermeischter". Bernese uses "zwöi" for zwei (8 occurrences in my Bernese corpus, "alli zwöi Jahr", "die zwöi e neue Name") and "zwöi" appears 0 times in the Zürich corpus. Bernese "drüü" not attested in my sample; recorded as Zürich-attested.
+C3. "nöd" for "nicht" - three times here ("I nöd dütsche Spoochregione", "nöd diräkt gwählt", "aber nöd unbedingt"). VERIFIED CONTRAST with Bernese/Basel "nid".
+C4. "mer" (man) - "In menke Gegende vum Alemannische sait mer zun em au Burgermeischter". Bernese "Me" ("Me seit im ou Randblatt-Tabak", "bezeichnet me im wytere Sinn"). Verified on both non-Basel sides; Basel not attested.
+C5. "Stedt" = Stadt. Not attested in the Bernese or Basel samples, so no contrast claimed - recorded as Zürich-attested urban vocabulary.
+C6. "gwählt" retains the umlaut (vs Alemannic "gwählt"). Shared across dialects in the Alemannic Wikipedia house orthography; NOT a discriminator.
+C7. "Bürgermeischter" - the -eischter suffix is a Zürich/Bern-shared hypocoristic-style formation and appears in my Bernese corpus too ("Braumeischter" in the Bernese Brauerei article). Shared, not a contrast. Recorded to prevent a false contrast.
+C8. "dänn" (dann) - Zürich. The Bernese corpus shows "dänn" as well ("D Schwyzer händ dänn en neue Abt beruefe" is Zürich; Bernese shows "dänn" 0 in my sample). No Bern contrast verified; recorded as Zürich-attested.

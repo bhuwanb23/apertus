@@ -1,0 +1,59 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Kaffeeratte
+TITLE: Kaffeeratte
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: bern
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Berndeutsch|Bärndütsch|Bärndütsch}}
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Kaffiratte (Golunda ellioti) isch e Nager, wo z Südasie verbreitet isch u dert mal als Kaffischädling isch gfürchtet gsi."
+"D Ratte het e Chopfrumpflengi zwüschen 11 u 15 Zentimeter."
+"Der Schwanz isch zwüsche 9 u 13 Zentimeter läng."
+"Es git graui, bruuni, gälbbruuni u rotbruuni Ratte."
+"Einigi Exemplar erinnere mit ihrer Fällfarb an es Kaffigrem."
+"Ou d Struktur vom Fälli isch je nach Region sehr underschidlech."
+"Gwüssi Kaffiratte hei es relativ weichs, anderi es borstigs bis stachligs Fäll."
+"D Kaffiratte het e breide Körberbou, genau so wi d Wüehlmuus."
+"Ds Verbreitigsgebiet erstreckt sech vom üsserschten Oschte vom Iran über Pakischtan bis nach Indie."
+"Ou Nepal u Sri Lanka ghöre derzue."
+"Dört läbt d Kaffiratte i underschidleche Läbesrüüm wi di grasigi Steppe, d Sümpf u d Rägewälder."
+"Si chöme aber ou am Rand vo Fälder u Plantasche vor."
+"Obwohl si chöi chlättere, halte si sech meischtens uf em Boden uf."
+"Bsunders guet vermehrt sech d Kaffiratten i der Neechi vo Kaffiplantasche."
+"Dert frisst si d Chnoschpen u d Blüete vo der Kaffipflanze."
+"Syt me der Kaffiabou z Sri Lanka ufgä het, het d Zahl vo de Kaffiratte wider abgno."
+"Dert schynt si sech aber nid derart explosionsartig z vermehre wi denn z Sri Lanka."
+"Z Indie gilt si nach wi vor als Kaffischädling."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Die Kaffiratte (Golunda ellioti) ist ein Nager, das in Südasien verbreitet ist und dort als Kaffeeschädling gefürchtet war."
+S2. "Die Ratte hat eine Kopfrumpflänge zwischen 11 und 15 Zentimeter."
+S3. "Der Schwanz ist zwischen 9 und 13 Zentimeter lang."
+S4. "Es gibt graue, braune, gelbbraune und rotbraune Ratten."
+S5. "Einige Exemplare erinnern mit ihrer Fellfarbe an einen Kaffee crem."
+S6. "Auch die Struktur vom Fell ist je nach Region sehr unterschiedlich."
+S7. "Gewisse Kaffiratten haben ein relativ weiches, andere ein borstiges bis stacheliges Fell."
+S8. "Die Kaffiratte hat einen breiten Körperbau, genau so wie die Wühlmaus."
+S9. "Das Verbreitungsgebiet erstreckt sich vom äussersten Osten vom Iran über Pakistan bis nach Indien."
+S10. "Auch Nepal und Sri Lanka gehören dazu."
+S11. "Dort lebt die Kaffiratte in unterschiedlichen Lebensräumen wie die grasige Steppe, die Sümpfe und die Regenwälder."
+S12. "Sie kommt aber auch am Rand von Feldern und Plantagen vor."
+S13. "Obwohl sie klettern können, halten sie sich meistens auf dem Boden auf."
+S14. "Besonders gut vermehrt sich die Kaffiratte im Schatten von Kaffeepflanzen."
+S15. "Dort frisst sie die Knospen und die Blüten von der Kaffeepflanze."
+S16. "Seit der Kaffeeanbau in Sri Lanka zunahm, hat die Zahl der Kaffiratten wieder abgenommen."
+S17. "Dort scheint sie sich aber nicht so explosionsartig zu vermehren wie damals in Sri Lanka."
+S18. "In Indien gilt sie nach wie vor als Kaffeeschädling."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "Wiil" does not occur here; instead "wi" (as) appears repeatedly: "genau so wi d Wüehlmuus", "wi di grasigi Steppe", "nach wi vor". Bernese "wi" is the standard Alemannic form and my Zürich corpus shows the same ("genau so wi d Formelzeichen" is not attested, but Zürich does show "wi" zero times - actually the Zürich corpus in my sample has no "wi"). No cross-dialect claim is made; the item is recorded as Bernese-attested.
+C2. "gwüssi" (gewisse) - the g- prefix. Zürich uses the same prefix ("gwüssi", "gwisse"), so shared, not a Bernese marker. Noted to prevent a false contrast being recorded.
+C3. "underschidlech" (unterschiedlich) - the ch-digraph. Shared with Zürich ("underschiidlechei", "underschidleche Gärgetränk"), so shared.
+C4. "het" (hat, 3sg) - the unprefixed possessive. Shared across Basel, Bern and Zürich in my samples. NOT a dialect discriminator; recorded to prevent false positives.
+C5. "chöme/können" - Bernese writes k- as ch- in infinitive ("chöme"). Zürich also writes "chönne" ("hei d Brauereie jitz z ganze Jahr chönne Bier"). Shared.
+C6. "wider" = wieder. Zürich uses "wider" too ("wider iigfüehrt worde", "wider ufbout"). Shared, not a contrast.
+C7. "Südasie", "Indie" (Südostasien, Indien) - Bernese drops the final -n in "Indien" > "Indie". Zürich shows "Indie" absent and "Indien" absent in my sample too; Basel not verified. Recorded as Bernese-attested only.
+C8. IMPORTANT NON-FINDING: this article contains no lexeme that contrasts with Basel. It is included because it is clean, long, unambiguously Bernese everyday prose (animal behaviour vocabulary) rather than because it carries dialect contrast. Do not construct contrast items from it.

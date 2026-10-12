@@ -1,0 +1,45 @@
+SOURCE_ID: S058
+URL: https://als.wikipedia.org/wiki/Verfassung
+TITLE: Verfassung
+ARTICLE_DISPLAYTITLE: Verfassig
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: no `{{Dialekt}}` template, but the Alemannic form is unambiguously Basel: `Biischpil` (for *Beispiel*), `Gsundheitswäse` class forms, `Verfassig` / `Rächtswäse` / `Schriftsprach`, `Kantonsverträtter` patterns, `Zuecherich`-style `d Chnobli`. Basel Alemannic is distinguished by *Biischpil* (Bernese/Zurich use *Bspeil* / *Bsüechpil*), and this article uses *Biischpil* three times. Recorded as `basel`.
+CAVEAT — IMPORTANT: this is the WEAKEST article in the whole S058 set for Swiss political fact content, and this file is deliberately thin as a result.
+  * The article ends with `{{Übersetzungshinweis|de|Verfassung|dütsch}}` — it is a translated German concept article, not a Swiss-constitution article.
+  * The ONLY Switzerland-specific content in the entire article is a single list item: `* [[Schweiz|Schwyz]]: [[Bundesverfassung (Schweiz)|D Schwyzer Bundesverfassig]]`. The linked target `Bundesverfassung (Schweiz)` was NOT harvested (it is the natural next fetch if Swiss constitutional fact content in Alemannic is required).
+  * The prose is almost entirely comparative/foreign (Poland, Great Britain, Israel, Iran) — none of it encodes a Swiss institutional fact.
+  * Per hard rule 3 ("prefer sentences that encode a concrete, checkable Swiss fact"), only 2 of the 7 sentences below qualify as Swiss-fact-bearing. Both other files harvested for the same requested topics (`Bundesrat (Schweiz)`, `Regierung (Schweiz)`) carry the Swiss constitutional fact content instead.
+This file is retained because the task listed `.../wiki/Verfassung` explicitly and a complete report of substitutions is required — but it should NOT be used to build Swiss-fact items.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Verfassig vomne Schtaat tuet d rächtlichi Grundlag vo däm Schtaat feschtlege."
+"D Verfassig schriibt zum Biischpil vor, weli Regierigs- und Verwaltigsform de Schtaat hät."
+"I einige Schtaate isch d Verfassig es schriftlichs Dokumänt, i andere, zum Biischpil in Großbritannie, beschtaht sie us einere Folg vo gschichtlich gwachsene Gsetztegscht"
+"E Verfassig im formelle Sinn isch e zivilisatorischi Errungeschaft, wo grundlegändi Rächt und Pflichte im Gmeinwese mit Rächtssicherheit tuet regle."
+"Schwyz: D Schwyzer Bundesverfassig"
+"Am 3. Mai 1791 isch z Pole d erschti demokratischi Verfassig in Europa verabschiedet worde, d zweiti uf de Wält nach de Vereinigte Schtaate."
+"De 3. Mai isch in Pole immer no en nationale Fiirtyg."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "D Verfassig vomne Schtaat tuet d rächtlichi Grundlag vo däm Schtaat feschtlege." → "Die Verfassung eines Staates legt die rechtliche Grundlage dieses Staates fest."
+S2. "D Verfassig schriibt zum Biischpil vor, weli Regierigs- und Verwaltigsform de Schtaat hät." → "Die Verfassung schreibt zum Beispiel vor, welche Regierungs- und Verwaltungsform der Staat hat."
+S3. "I einige Schtaate isch d Verfassig es schriftlichs Dokumänt, i andere, zum Biischpil in Großbritannie, beschtaht sie us einere Folg vo gschichtlich gwachsene Gsetztegscht" → "In einigen Staaten ist die Verfassung ein schriftliches Dokument, in anderen, zum Beispiel in Grossbritannien, besteht sie aus einer Folge historisch gewachsener Gesetzessammlungen."
+S4. "E Verfassig im formelle Sinn isch e zivilisatorischi Errungeschaft, wo grundlegändi Rächt und Pflichte im Gmeinwese mit Rächtssicherheit tuet regle." → "Eine Verfassung im formalen Sinn ist eine zivilisatorische Errungenschaft, die grundlegende Rechte und Pflichten im Gemeinwesen mit Rechtssicherheit regelt."
+S5. "Schwyz: D Schwyzer Bundesverfassig" → "Schweiz: Die Schweizer Bundesverfassung"
+S6. "Am 3. Mai 1791 isch z Pole d erschti demokratischi Verfassig in Europa verabschiedet worde, d zweiti uf de Wält nach de Vereinigte Schtaate." → "Am 3. Mai 1791 wurde in Polen die erste demokratische Verfassung in Europa verabschiedet, die zweite in der Welt nach den Vereinigten Staaten."
+S7. "De 3. Mai isch in Pole immer no en nationale Fiirtyg." → "Der 3. Mai ist in Polen immer noch ein nationaler Feiertag."
+
+=== SWISS FACT CONTENT ===
+F1. Switzerland's constitution is called the "Schwyzer Bundesverfassig" (Swiss Federal Constitution) — the Alemannic name is the target of the article's single Swiss list entry. — cross-ref: S048
+F2. A constitution establishes the legal basis of a state and prescribes its form of government and administration. — cross-ref: S006
+F3. Some states have a written constitution, others (e.g. Great Britain) have one consisting of historically grown statute collections. — cross-ref: none
+F4. A constitution in the formal sense is a civilisational achievement regulating fundamental rights and duties in the community with legal certainty. — cross-ref: none
+F5. Poland's constitution of 3 May 1791 was Europe's first democratic constitution, the second worldwide after the United States; 3 May is still a Polish national holiday. — cross-ref: none
+
+SWISS-FACT YIELD: 1 of 7 sentences (S5) encodes a checkable Swiss fact. All other content is foreign or generic. DO NOT build Swiss-fact items from this file.
+
+RECOMMENDED NEXT FETCH: `https://als.wikipedia.org/wiki/Bundesverfassung_(Schweiz)` — linked from this article, confirmed to exist on als.wikipedia (it is the target of the link in the `Schwyz` section), and is the correct source for Swiss constitutional fact content in Alemannic. It was not harvested here because it fell outside the 8–12 article breadth target and the target topics were already covered by other files; recorded here as a known open gap.

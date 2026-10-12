@@ -1,0 +1,34 @@
+SOURCE_ID: S058
+URL: https://als.wikipedia.org/wiki/Parlament
+TITLE: Parlament
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: uncertain
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: no `{{Dialekt}}` template. Uses the Alemannic plural `-e` (`d Kantöön`, `d Landesparlemänt`) and Basel-ish `Bärn`, but is substantially a comparative/jurisprudential article with much Standard German residue (`Unterredig` gloss, `Bürgerschaft`, `Abgordnetehus`) — recorded as `uncertain`.
+CAVEAT: this is a general concept article (parliament as an institution worldwide), NOT a Swiss-parliament article. Swiss-German parliament substance is harvested from `Bundesversammlung (Schweiz)` and `Schweiz`. Yield here is low and general-purpose; several sentences were dropped for exceeding 20 words or for being non-Swiss.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"I de mäiste Länder het s Parlemänt äi oder zwoo Kammere."
+"I dr Schwiiz heisse d Parlemänt vo de Kantöön nid glyych: es git Kantoonsrööt und Grossrööt und Landrööt"
+"I dr alte Äiggnosseschaft isch drum d Zämekumft vo de Kantonsverträtter d Daagsatzig gsii."
+"Das alte dütsche Wort «Daag» het früener algemein s Zämechoo zun ere politische Versammlig bedüütet"
+"Bi der UNO heisst di volli Zämekumft vo de Delegierte vo de Mitgliidsländer Gäneralversammlig."
+"Im überdragene Sinn wärde hüte au anderi politischi Versammlige mit däm Begriff bezäichnet."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "I de mäiste Länder het s Parlemänt äi oder zwoo Kammere." → "In den meisten Ländern hat das Parlament eine oder zwei Kammern."
+S2. "I dr Schwiiz heisse d Parlemänt vo de Kantöön nid glyych: es git Kantoonsrööt und Grossrööt und Landrööt" → "In der Schweiz heissen die Parlamente der Kantone nicht gleich: es gibt Kantonsräte, Grossräte und Landräte."
+S3. "I dr alte Äiggnosseschaft isch drum d Zämekumft vo de Kantonsverträtter d Daagsatzig gsii." → "In der alten Eidgenossenschaft war deshalb die Gesamtheit der Kantonsvertreter die Tagsatzung."
+S4. "Das alte dütsche Wort «Daag» het früener algemein s Zämechoo zun ere politische Versammlig bedüütet" → "Das alte deutsche Wort «Tag» bedeutete früher allgemein die Gesamtheit zu einer politischen Versammlung."
+S5. "Bi der UNO heischt di volli Zämekumft vo de Delegierte vo de Mitgliidsländer Gäneralversammlig." → "Bei der UNO heisst die volle Gesamtheit der Delegierten der Mitgliedstaaten Generalversammlung."
+S6. "Im überdragene Sinn wärde hüte au anderi politischi Versammlige mit däm Begriff bezäichnet." → "Im übertragenen Sinn würden heute auch andere politische Versammlungen mit diesem Begriff bezeichnet."
+
+=== SWISS FACT CONTENT ===
+F1. Most countries' parliaments have one or two chambers. — cross-ref: S002
+F2. In Switzerland the cantonal parliaments do not share a single name: there are Kantonsräte, Grossräte and Landräte. — cross-ref: S008b
+F3. In the Old Swiss Confederacy the full assembly of the canton delegates was the Tagsatzung (Diet). — cross-ref: S037
+F4. In Swiss German dialect the political assembly word "Daag" (Tag) meant the full body gathered for a political assembly — a dialectal calque still in use for a discussion round ("si tüend daage"). — cross-ref: S037
+F5. In the UN the full assembly of the delegates of the member states is the General Assembly — same dialectal root as the Swiss "Daagsatzig". — cross-ref: none
+F6. The word "parliament" is also used figuratively today for political assemblies that are not directly representative. — cross-ref: none

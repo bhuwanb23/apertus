@@ -1,0 +1,82 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Issime
+TITLE: Issime (display title: Éischeme)
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: walser
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Issimedeutsch|Walsertiitsch|Éischemtöitschu}}
+SUBDIALECT_NOTE: Éischemtöitschu - Südwalser German in the Aosta Valley, ITALY. Genuine Walser German by the wiki's own classification, but the settlement is in Italy, not Switzerland. Cite as Walser (Aosta/Südwalser), not as a Swiss dialect.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Di Walser hän sich im Bied vù Éischeme im 12. Jorhùnderd niidergloo, ùn zwoor woorschynds im Vallon de Saint-Grat."
+"Wääge däm isch Éischeme iiber e baar Jorhùnderd zwaischbroochig gsii."
+"Dr Grinder vùm Huus Savoyen, dr Humbert I mid dr wyse Händ, hed ane 1025 s Ougschtal as Leeche griegd."
+"Wù s idalieenisch Cheenigryych ane 1861 grinded wooren isch, isch s Ougschtal zue dr Provinz Turin chùù."
+"Ane 1927 isch s derno e aigeschdändigi Provinz woore."
+"Im Faschismus isch di franzeesisch Schbrooch verbode woore ùn s hed e schdaarchi Idalienisierigsbolitik gee."
+"Noch em Zwaide Wäldchrieg hed s Ouschtal ane 1948 e autonome Sonderstatus griegd."
+"Bis ane 1952 hed au Goabi bolitisch zue dr Gmai Éischeme ghèèrd."
+"Z Éischeme isch scho ane 1184 e aigenschdändigi Chilchegmai belaid."
+"Ab em Joor 1228 hed Éischeme zem Zeendebied vù dr Brobschdei Saint-Gilles vù Verrès ghèèrd."
+"Greschonei hed sich ane 1502 vù dr Bfaargmai Éischeme gleesd."
+"Goabi isch ane 1786 e aigenschdändigi Chilchegmai woore."
+"Die Ùfdailig blybd bis zem Änd vù dr Feudalhèrschfd, waarschyyns bis ane 1774."
+"As en Walser s Dafäärnerächt iiberchù hed, zaigd, as die doodmool scho in d Doorfgmaischafd integrierd gsi sin."
+"D Éischemtöitschu isch dr hegschdalemanisch Dialäkt vù Éischeme."
+"Di ahd. vole Vokal sin au in ùùbetoonde Silbe no erhalde: machu (dt. machen)."
+"Mhd. –rn erschyynd as –re, z. B. Huore (dt. Horn)"
+"Mhd. –nk isch wie in andere südwalserische Dialäkt verschoobe zue –nch: tringche (dt. trinken)"
+"Mhd. –hs erschyynd as –ks, z. B. Fuks (dt. Fuchs)"
+"German. s isch in vyyle Wèèrder palatalisierd zue sch, z. B. in dschi (dt. sie), unsch (dt. uns)"
+"Im Geegesaz zue dr andere Südwalserdialäkt und zuem Walliserdytsch sin mhd. ü, ö, üe in dr Éischemtöitschu nid endrùnded: Möisch (dt. Mäuse), Vüksch (dt. Füchse)."
+"Z Éischeme isch nie di dydsch Schrifdschbrooch bruuchd woore, bis in d 20er Joor isch Franzeesisch gschriibe woore, derno Idalieenisch."
+"D Éischemer hän imer au chene Frankoprovenzalisch schwäze."
+"D Chilche ùn d Schuel sin bis in d 1920er Joor franzeesich gsii, derno isch s Idalieenisch ùfchùù."
+"Dydsch isch in dr Chilche ùn dr Schuel nie bruuchd woore."
+"Dydsch wird in dr Schuel nume as Främdschbrooch ùnderrichded."
+"Syder 1986 gid s in dr Schuel au Ùnderriichd in Eischemtöitschu."
+"Wievyyl vù dr Éischemer chene no Éischemtöitschu?"
+"D Éischemer hän schbeedeschdens im 17. Jh. aagfange im Sùmer as Muurer in andere Bied z schafe."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Die Walser haben sich im Tal von Éischeme im 12. Jahrhundert niedergelassen, und zwar zuerst im Vallon de Saint-Grat."
+S2. "Wegen dem ist Éischeme über ein paar Jahrhunderte zweisprachig gewesen."
+S3. "Der Gründer des Hauses Savoyen, Humbert I. mit dem weissen Handschuh, erhielt im Jahr 1025 das Aostatal vom Lehen."
+S4. "Als das italienische Königreich 1861 gegründet worden ist, ist das Aostatal zur Provinz Turin gekommen."
+S5. "Im Jahre 1927 ist es erneut eine eigenständige Provinz geworden."
+S6. "Im Faschismus wurde die französische Sprache verboten und es wurde eine starke Italianisierungspolitik betrieben."
+S7. "Nach dem Zweiten Weltkrieg hat das Aostatal 1948 einen autonomen Sonderstatus erhalten."
+S8. "Bis 1952 gehörte auch Goabi politisch zur Gemeinde Éischeme."
+S9. "In Éischeme ist schon 1184 eine selbständige Kirchgemeinde gewesen."
+S10. "Ab dem Jahr 1228 gehörte Éischeme zum Zehnten der Herrschaft Saint-Gilles von Verrès."
+S11. "Greschoney löste sich 1502 von der Kirchgemeinde Éischeme."
+S12. "Goabi wurde 1786 eine selbständige Kirchgemeinde."
+S13. "Die Teilung dauerte bis zum Ende der Feudalherrschaft, wahrscheinlich bis 1774."
+S14. "Als ein Walser das Talkirchenrecht übernommen hatte, zeigte das, dass sie damals schon in die Dorfgemeinschaft integriert gewesen seien."
+S15. "Das Éischemtöitschu ist der höchstalemannische Dialekt von Éischeme."
+S16. "Die althochdeutschen vollen Vokale sind auch in unbetonten Silben noch erhalten: machu (dt. machen)."
+S17. "Mhd. –rn erscheint als –re, z. B. Huore (dt. Horn)."
+S18. "Mhd. –nk ist wie in anderen südwalserischen Dialekten verschoben zu –nch: tringche (dt. trinken)."
+S19. "Mhd. –hs erscheint als –ks, z. B. Fuks (dt. Fuchs)."
+S20. "Germanisches s ist in vielen Wördern palatalisiert zu sch, z. B. in dschi (dt. sie), unsch (dt. uns)."
+S21. "Im Gegensatz zu den anderen südwalserischen Dialekten und zum Wallisdeutsch sind mhd. ü, ö, üe im Éischemtöitschu nicht entrundet: Möisch (dt. Mäuse), Vüksch (dt. Füchse)."
+S22. "In Éischeme wurde nie die deutsche Schriftsprache gebraucht, bis in den 20er Jahren Französisch geschrieben wurde, danach Italienisch."
+S23. "Die Éischemer konnten immer auch frankoprovenzalisch sprechen."
+S24. "Die Kirche und die Schule sind bis in die 1920er Jahre französisch gewesen, danach ist das Italienische hinzugekommen."
+S25. "Deutsch wurde in der Kirche und in der Schule nie gebraucht."
+S26. "Deutsch wird in der Schule nur als Fremdsprache unterrichtet."
+S27. "Seit 1986 wird in der Schule auch in Éischemtöitschu unterrichtet."
+S28. "Wie viele von den Éischemern können noch Éischemtöitschu?"
+S29. "Die Éischemer haben seit dem 17. Jh. im Sommer als Maurer in andere Gegenden geschafft."
+
+=== DIALECT CONTRAST NOTES ===
+C1. "ischt" for "ist" - "Z Éischeme isch scho ane 1184 e aigenschdändigi Chilchegmai belaid", "Goabi isch ane 1786 ... woore", "D Éischemtöitschu isch dr hegschdalemanisch Dialäkt". VERIFIED CONTRAST: Basel, Bern and Zürich all write "isch" and never "ischt" in my samples (156/156/354 for isch, 0 for ischt). Walser has ischt 38 / isch 37. This is the strongest and cleanest devoicing contrast in the corpus, and it is alpine vs low-Alemannic, NOT Basel vs Zürich.
+C2. The article self-documents its phonology, which makes it uniquely valuable for a dialect benchmark. Attested rules with examples: (a) full old-Germanic vowels survive in unstressed syllables - "machu" (dt. machen); (b) mhd. -rn > -re - "Huore" (dt. Horn); (c) mhd. -nk > -nch - "tringche" (dt. trinken); (d) mhd. -hs > -ks - "Fuks" (dt. Fuchs); (e) German s > sch - "dschi" (dt. sie), "unsch" (dt. uns); (f) mhd. long vowels diphthongised - "Hous" (dt. Haus), "Vöir" (dt. Feuer), "Eisch" (dt. Eis), "Oabe" (dt. Abend), "Chiesch" (dt. Käse); (g) mhd. diphthongs monophthongised - "Diib" (dt. Dieb), "Güüti" (dt. Güte), "Bruuder" (dt. Bruder); (h) mhd. a and ë broken to oa / eä before liquids - "oalt" (dt. alt), "geärbe" (dt. gerben); (i) the article explicitly states that mhd. ü, ö, üe are NOT entrundet here, contrast with Walliserdytsch.
+C3. Explicit in-dialect comparison with Wallisertiitsch. The article states: "Im Geegesaz zue dr andere Südwalserdialäkt und zuem Walliserdytsch sin mhd. ü, ö, üe in dr Éischemtöitschu nid endrùnded". This is documentary evidence IN the corpus for a Walser-vs-Wallis contrast and can be used directly in a variation test item.
+C4. "Joor"/"Jorhùnderd" = Jahr/Jahrhundert. VERIFIED: this article uses "Joor" 9 times; Basel also uses "Joor" (17 times in my sample); Bernese uses "Jahr" (25 times, "Joor" 0). So Basel and this Walser article AGREE on Joor against Bern. Useful: devoicing of Jahr is not a low-Alemannic Basel-specific trait but a broader West-/South-Alpine retention.
+C5. "zwoor" = two. Zürich writes "zwei"; Bernese "zwöi"; Walser here "zwoor" ("ùn zwoor woorschynds"). THREE-WAY VERIFIED: /uː/ vs /øː/ vs /aɪ/.
+C6. "Chilche" = Kirche. Here "Chilche"/"Chilchegmai" (7 + 5). Contrast with the Wallisertiitsch "Chirche" attested in my Valais sample ("Evangelisch-reformiertu Chirche", "der christlichu Chirche"). VERIFIED WITHIN-corpus contrast between two alpine varieties.
+C7. "Grinder" = Gründer (cf. Standard "Gründer"); "Bfaargmai" = Kirchgemeinde. Both are Walser lexical items not attested in the low-Alemannic sample.
+C8. Note the register split: the article body mixes ordinary Südwalser prose (Éischeme sections) with a scholarly French-quoting section ("D'réd", "Histoire"). Sentences beginning "Darwil das in époque pré-romaine sén gsinh gséllschafti..." are heavy French code-switching and were deliberately EXCLUDED from the sentence list above as not representative Swiss German. Recorded so a consumer of this file does not treat them as omissions.

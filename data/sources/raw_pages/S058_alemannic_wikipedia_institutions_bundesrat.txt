@@ -1,0 +1,46 @@
+SOURCE_ID: S058
+URL: https://als.wikipedia.org/wiki/Bundesrat_(Schweiz)
+TITLE: Bundesrat (Schweiz)
+ARTICLE_DISPLAYTITLE: Schwiizer Bundesrat
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: zürich
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+SUBSTITUTION: requested `.../wiki/Bundesrat` — that page EXISTS but is a disambiguation for the German/Austrian *Landes* governments ("dr Bundesrat z'Dütschland", "z'Öschtrîch", "im Dütsche Rîch"), not the Swiss Federal Council. Substituted with the article the disambiguation points to.
+DIALECT_EVIDENCE: explicit `{{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch (See)}}` template in the wikitext.
+CAVEAT: the article's lead sentence cannot be quoted as a contiguous string because the language glosses sit inside it ("Dr Bundesrat (Conseil fédéral, Consiglio federale, Cussegl federal) isch d Regierig ..."); all sentences below are contiguous runs of the rendered article.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Dr Bundesrat hät sibe Mitgliider, wo jedes für sich au wider Bundesrat oder Bundesrätin gheisst."
+"Si werded vo de Vereinigte Bundesversammlig amig uf vier Jahr use gwählt."
+"Er isch zuegliich s Schtaatsoberhaupt vo dr Schwiiz."
+"Die sibe Bundesröt regiered eigetli zäme über alli Gschäft, aber tatsächlich stönd si je eim Departement vor; das isch s Departemäntalprinzip."
+"De Bundespräsident hät als «erschte under Gliiche» (primus inter pares) kei wiiteri Rächt, sondern erfüllt Repräsentationsuufgabe und leitet d Bundesratssitzige."
+"Gmäss de Tradition werded die Positione de Reihe naa allne Mitgliider vom Bundesrat überträit."
+"Dr Bundesrat wird vom Bundeskanzler oder de Bundeskanzleri understützt."
+"Dä leitet d Bundeskanzlei, wo als Staabsstell vom Bundesrat dienet."
+"Nach de Bundesratswahl verteiled d Bundesröt d Departemänt sälber under enand, es git uusdrücklich keis Mitwürkigsrecht vom Parlamänt."
+"Dä Grundsatz basiert allerdings nu uf ungschribener Tradition und isch nöd gsetzlich greglet."
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Dr Bundesrat hät sibe Mitgliider, wo jedes für sich au wider Bundesrat oder Bundesrätin gheisst." → "Der Bundesrat hat sieben Mitglieder, die jedes für sich auch wieder Bundesrat oder Bundesrätin heisst."
+S2. "Si werded vo de Vereinigte Bundesversammlig amig uf vier Jahr use gwählt." → "Sie werden von der Vereinigten Bundesversammlung jeweils auf vier Jahre hinaus gewählt."
+S3. "Er isch zuegliich s Schtaatsoberhaupt vo dr Schwiiz." → "Er ist zugleich das Staatsoberhaupt der Schweiz."
+S4. "Die sibe Bundesröt regiered eigetli zäme über alli Gschäft, aber tatsächlich stönd si je eim Departement vor; das isch s Departemäntalprinzip." → "Die sieben Bundesräte regieren eigentlich zusammen über alle Geschäfte, aber tatsächlich stehen sie je einem Departement vor; das ist das Departementalprinzip."
+S5. "De Bundespräsident hät als «erschte under Gliiche» (primus inter pares) kei wiiteri Rächt, sondern erfüllt Repräsentationsuufgabe und leitet d Bundesratssitzige." → "Der Bundespräsident hat als «Erster unter Gleichen» (primus inter pares) keine weiteren Rechte, sondern erfüllt Repräsentationsaufgaben und leitet die Bundesratssitzung."
+S6. "Gmäss de Tradition werded die Positione de Reihe naa allne Mitgliider vom Bundesrat überträit." → "Gemäss der Tradition werden die Positionen der Reihe nach allen Mitgliedern des Bundesrates übertragen."
+S7. "Dr Bundesrat wird vom Bundeskanzler oder de Bundeskanzleri understützt." → "Der Bundesrat wird vom Bundeskanzler oder der Bundeskanzlerin unterstützt."
+S8. "Dä leitet d Bundeskanzlei, wo als Staabsstell vom Bundesrat dienet." → "Diese leitet die Bundeskanzlei, die als Stabsstelle vom Bundesrat dient."
+S9. "Nach de Bundesratswahl verteiled d Bundesröt d Departemänt sälber under enand, es git uusdrücklich keis Mitwürkigsrecht vom Parlamänt." → "Nach der Bundesratswahl verteilen die Bundesräte die Departamente selbst untereinander, es gibt ausdrücklich kein Mitwirkungsrecht des Parlaments."
+S10. "Dä Grundsatz basiert allerdings nu uf ungschribener Tradition und isch nöd gsetzlich greglet." → "Dieser Grundsatz beruht allerdings nur auf ungeschriebener Tradition und ist nicht gesetzlich geregelt."
+=== SWISS FACT CONTENT ===
+F1. The Federal Council has exactly seven members; each member is individually called a Federal Councillor (Bundesrat/Bundesrätin). — cross-ref: S001
+F2. Federal Councillors are elected by the United Federal Assembly for a four-year term. — cross-ref: S001
+F3. The Federal Council is simultaneously the collective head of state of Switzerland. — cross-ref: S001
+F4. The seven Federal Councillors govern collegially; each nonetheless heads one department (departmental principle, Departemäntalprinzip). — cross-ref: S001
+F5. The President of the Confederation is 'primus inter pares', has no rights beyond the other Federal Councillors, and merely represents the country and chairs the Federal Council meeting. — cross-ref: S001
+F6. The presidency passes through all Federal Councillors in order of seniority. — cross-ref: S001
+F7. The Federal Chancellor supports the Federal Council in an advisory capacity and is distinct from the seven decision-makers. — cross-ref: S001
+F8. The Federal Chancellery is the Federal Council's staff office (Stabsstelle). — cross-ref: S012b
+F9. After their election the Federal Councillors allocate the federal departments among themselves; Parliament has formally no say in the allocation. — cross-ref: S001
+F10. The principle of collegiality rests on unwritten tradition, not on statute. — cross-ref: S001

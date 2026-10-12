@@ -1,0 +1,49 @@
+SOURCE_ID: S057
+URL: https://als.wikipedia.org/wiki/Mattenenglisch
+TITLE: Mattenenglisch
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: bern
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
+DIALECT_TAG_ON_PAGE: {{Dialekt|Berndeutsch|Bärndütsch|Bärndütsch}}
+SUBDIALECT_NOTE: Standard Bärndütsch (city of Bern sociolect article), not a regional variant.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Ds Mattenänglisch isch e Soziolekt vom Bärndütsche."
+"Die mattenänglischi Gheimsprach glycht em Pig Latin, wo im änglische Sprachruum verbreitet isch."
+"Es zeichnet sech aber bsunders derdür uus, das der erscht Vokal immer ganz ersetzt wird."
+"Teil Lüt bezeichne nume die Gheimsprach als Mattenänglisch."
+"Der mattenänglisch Soziolekt het e Huuffe spezielli Usdrück gha."
+"Es git aber e Verein, wo's bis hüt pflegt."
+"Hindedra chunt es ee, u der erscht Vokal wird ersetzt dür nes i."
+"E Groossteil vo däm Wortschatz wird hüt zwar nümm bbruucht, aber es paar mattenänglischi Wörter sy i ds normale Bärndütsch ufgnoh worde."
+"Unbetonti Partikle blyben entweder unveränderet, oder si wärden als Bestandteil vo anderne Wörter behandlet."
+"Jiu 'ja'"
+"Gieu (Giel) 'Bueb'"
+"Modi 'Meitschi'"
+"Chemp 'Stei'"
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Das Mattenänglisch ist ein Soziolekt des Berndeutschen."
+S2. "Die mattenänglische Geheimsprache gleicht dem Pig Latin, das im englischen Sprachraum verbreitet ist."
+S3. "Sie zeichnet sich aber besonders dadurch aus, dass der erste Vokal immer ganz ersetzt wird."
+S4. "Teile Leute bezeichnen die Geheimsprache lediglich als Mattenänglisch."
+S5. "Der mattenänglische Soziolekt hat eine Fülle spezieller Ausdrücke gehabt."
+S6. "Es gibt aber einen Verein, der ihn bis heute pflegt."
+S7. "Hinterher kommt ein ee, und der erste Vokal wird durch ein i ersetzt."
+S8. "Der grösste Teil dieses Wortschatzes wird heute zwar nicht mehr gebraucht, aber einige mattenänglische Wörter sind ins normale Berndeutsch übernommen worden."
+S9. "Unbetonte Partikel bleiben entweder unverändert, oder sie werden als Bestandteil anderer Wörter behandelt."
+S10. "Jiu = 'ja'"
+S11. "Gieu (Giel) = 'Junge'"
+S12. "Modi = 'Mädchen'"
+S13. "Chemp = 'Stein'"
+
+=== DIALECT CONTRAST NOTES ===
+C1. "z tüe" (in the page: "Sy Name het nüt mit Änglisch z tüe") is Bernese for "zu tun". Zürich uses "z tue" in the same function - verified in my Zürich corpus ("hät mit öisem Bünzli nüüt z tue", "händ die früene Mäntschen äinewääg nüüt z tue"). The difference is the vowel: Bernese /yː/, Zürich /uː/. Basel side not verified in my sample - do not assume.
+C2. "bbruucht" shows geminate bb- before /r/. Basel and Zürich write the un-geminated "bruucht" (verified: Basel "als Lager bruucht"; Zürich "als Synonym für Ussländer bruucht"). NOTE: this gemination is register-dependent even within Bernese - the same article set also has plain "bruucht" in a more formal botanical text ("wo wärde für d Härstellig vo Tabakware bruucht"). Treat "bbruucht" as colloquial Bernese, not universal.
+C3. "erscht" for "erst" - verified in this article ("der erscht Vokal"). Basel also has "erscht"; I did not verify a Basel/Zürich contrast, so record the shared form, not a contrast.
+C4. "glycht" for "gilt" - distinctive Bärndütsch, seen here. Basel equivalent (gligt/gilt) not present in my Basel sample, so the Basel side is unverified.
+C5. "Hindera" / "Hindedra" plus verb-final order ("Hindedra chunt es ee") shows Bernese preterite-present with subject inversion; the Zürich texts show the same pattern ("Won er umbracht worden isch, sind anderi Eisidler da ane cho") - so this is shared, not a Bernese-specific marker.
+C6. "Rotschoss"/"Gieu (Giel) 'Bueb'" - the article glosses the child-word as "Bueb" in Bernese. Basel "Bueb" is what my Basel sample shows, so this is shared, not a contrast. Recorded as shared.
+C7. "Matte"/"Mattenängi" - Bernese city-quarter vocabulary. Not attested in my Basel sample, so no cross-dialect claim is made.
