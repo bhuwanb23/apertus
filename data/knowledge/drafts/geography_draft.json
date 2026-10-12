@@ -1,0 +1,362 @@
+[
+  {
+    "id": "K061",
+    "category": "geography",
+    "question": "How many national languages does Switzerland have, and what are they?",
+    "options": {
+      "A": "Three — German, French and Italian",
+      "B": "Four — German, French, Italian and Romansh",
+      "C": "Four — German, French, Italian and English",
+      "D": "Five — German, French, Italian, Romansh and English"
+    },
+    "correct_answer": "B",
+    "source_id": "S047",
+    "source_url": "https://www.bk.admin.ch/en/romansh",
+    "source_quote": "Since 1938 Romansh has been recognised in the Swiss Constitution as a national language along with German, French and Italian.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "The 'four national languages' count must not be confused with the three official languages of the Confederation; the Romansh semi-official status is tested separately at K075."
+  },
+  {
+    "id": "K062",
+    "category": "geography",
+    "question": "Which four cantons of Switzerland are French-speaking?",
+    "options": {
+      "A": "Geneva, Jura, Neuchâtel and Vaud",
+      "B": "Geneva, Jura, Neuchâtel and Valais",
+      "C": "Geneva, Ticino, Neuchâtel and Vaud",
+      "D": "Vaud, Valais, Fribourg and Geneva"
+    },
+    "correct_answer": "A",
+    "source_id": "S028",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/language-distribution/",
+    "source_quote": "Four cantons are French-speaking: Geneva, Jura, Neuchâtel and Vaud.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Named-canton item. Valais and Fribourg are bilingual (not monoliguously French); Ticino is Italian-speaking."
+  },
+  {
+    "id": "K063",
+    "category": "geography",
+    "question": "Is English an official language of Switzerland?",
+    "options": {
+      "A": "Yes — English became an official language of the Confederation in the 1938 constitutional revision that also recognised Romansh",
+      "B": "Yes — English is an official language of the Confederation alongside German, French and Italian",
+      "C": "No — it is not an official language, although it is widely used to bridge the country's linguistic divides",
+      "D": "No — it is not an official language and is used in Switzerland only in the tourism sector"
+    },
+    "correct_answer": "C",
+    "source_id": "S047",
+    "source_url": "https://www.bk.admin.ch/en/romansh",
+    "source_quote": "Although it is not an official language, English is often used to bridge the divides, and a significant proportion of official documentation is available in English.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Switzerland is not in the EU, and English has no federal status of any kind; the source is SWI swissinfo.ch quoted in the S047 file."
+  },
+  {
+    "id": "K064",
+    "category": "geography",
+    "question": "What is the lowest point in Switzerland, and in which canton is it located?",
+    "options": {
+      "A": "Lake Constance, in the canton of Thurgau, at 395 m",
+      "B": "Lake Maggiore (Ticino), at 193 m",
+      "C": "The Rhine gorge in the canton of Schaffhausen, at 302 m",
+      "D": "Lake Neuchâtel, in the canton of Neuchâtel, at 372 m"
+    },
+    "correct_answer": "B",
+    "source_id": "S027",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/geography",
+    "source_quote": "Lowest point: Lake Maggiore (Ticino) 193 m (633 feet)",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "German-language readers often assume Lake Constance (Bodensee) is Switzerland's lowest point. The lowest point lies in Italian-speaking Ticino."
+  },
+  {
+    "id": "K065",
+    "category": "geography",
+    "question": "Which is the newest canton of Switzerland, and how did it come into being?",
+    "options": {
+      "A": "Jura — admitted to the Confederation by a national vote in 1979 after splitting off from Bern",
+      "B": "Ticino — admitted to the Confederation by a national vote in 1803 after splitting off from Lombardy",
+      "C": "Graubünden — admitted to the Confederation by a national vote in 1803 after splitting off from Tyrol",
+      "D": "Jura — admitted to the Confederation by a national vote in 1848 after splitting off from Bern"
+    },
+    "correct_answer": "A",
+    "source_id": "S030",
+    "source_url": "https://www.swissinfo.ch/eng/swiss-politics/cantons-and-municipalities/29289028",
+    "source_quote": "The newest canton, Jura, was admitted to the Confederation by a national vote in 1979. It split off from Bern",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Jura is both the newest canton and one of the four French-speaking cantons (see K062). The distractor D confuses 1979 with 1848, the year Switzerland became a federal state."
+  },
+  {
+    "id": "K066",
+    "category": "geography",
+    "question": "Switzerland shares a land border with five countries. Which of them accounts for the longest stretch of Swiss border?",
+    "options": {
+      "A": "France — 573 km",
+      "B": "Italy — 740 km",
+      "C": "Germany — 334 km",
+      "D": "Austria — 164 km"
+    },
+    "correct_answer": "B",
+    "source_id": "S027",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/geography",
+    "source_quote": "Borders: altogether: 1852 km/Austria 164 km/France 573 km/Germany 334 km/Italy 740 km/Liechtenstein 41 km",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Total border length 1,852 km; Liechtenstein is the shortest at 41 km. Per-country border lengths vary by measurement/border-survey basis (registry note)."
+  },
+  {
+    "id": "K067",
+    "category": "geography",
+    "question": "Apart from the canton of Ticino, in which part of Switzerland is Italian spoken?",
+    "options": {
+      "A": "In four southern valleys of the canton of Graubünden",
+      "B": "In four southern valleys of the canton of Valais",
+      "C": "In two southern valleys of the canton of Ticino and around the city of Lugano",
+      "D": "In the Italian-speaking minority areas of the cantons of Fribourg and Geneva"
+    },
+    "correct_answer": "A",
+    "source_id": "S028",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/language-distribution/",
+    "source_quote": "Italian is spoken in Ticino and four southern valleys of Canton Graubünden.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Same source file flags this fact REGIONAL VARIABLE (language shares are population-statistics dependent); the named location itself is stable. Distinct from the Graubünden trilingual-canton fact."
+  },
+  {
+    "id": "K068",
+    "category": "geography",
+    "question": "According to the Swiss federal information portal, approximately what share of the population primarily speaks (Swiss-)German as its main language?",
+    "options": {
+      "A": "0.5 per cent",
+      "B": "8 per cent",
+      "C": "23 per cent",
+      "D": "62 per cent"
+    },
+    "correct_answer": "D",
+    "source_id": "S047",
+    "source_url": "https://www.bk.admin.ch/en/romansh",
+    "source_quote": "62 per cent of the population primarily speak (Swiss-)German, 23 per cent French, 8 per cent Italian and 0.5 per cent Romansh.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractors are the neighbouring shares in the same sentence (French / Italian / Romansh) — the classic mix-up. Figures are rounded; Switzerland Tourism (S028) gives 62.6 % German, 22.9 % French, 8.2 % Italian, 0.5 % Romansh. Shares are population-statistics dependent and REGIONAL VARIABLE."
+  },
+  {
+    "id": "K069",
+    "category": "geography",
+    "question": "Under Switzerland's National Fiscal Equalisation system, how many cantons are net contributors, and how many receive equalisation payments?",
+    "options": {
+      "A": "9 cantons are net contributors; the remaining 17 cantons receive equalisation payments",
+      "B": "17 cantons are net contributors; the remaining 9 cantons receive equalisation payments",
+      "C": "13 cantons are net contributors; the remaining 13 cantons receive equalisation payments",
+      "D": "9 cantons are net contributors; the remaining 16 cantons receive equalisation payments"
+    },
+    "correct_answer": "A",
+    "source_id": "S029",
+    "source_url": "https://www.ch-info.swiss/en/die-schweiz/foederalismus",
+    "source_quote": "The federal government and nine of the cantons are net contributors: ZH, SZ, OW, NW, ZG, BS, SH, AI, GE. The remaining 17 cantons receive equalisation payments (net beneficiaries).",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "REGIONAL VARIABLE: the source file flags this fact as year-dependent. The nine net-contributor cantons are Zürich, Schwyz, Obwalden, Nidwalden, Zug, Basel-Stadt, Schaffhausen, Appenzell Innerrhoden and Geneva. The federal government is also a net contributor, so the question asks about cantons only."
+  },
+  {
+    "id": "K070",
+    "category": "geography",
+    "question": "According to SWI swissinfo.ch, how many municipalities (communes) did Switzerland have as of 1 January 2025, and what trend explains the change?",
+    "options": {
+      "A": "2,121 municipalities; the number is rising because new communes are being created",
+      "B": "2,121 municipalities; the number is falling because communes are being merged to improve administrative efficiency",
+      "C": "2,100 municipalities; the number has remained more or less constant for over two centuries",
+      "D": "2,121 municipalities; the number is falling because communes are being dissolved into their cantons"
+    },
+    "correct_answer": "B",
+    "source_id": "S030",
+    "source_url": "https://www.swissinfo.ch/eng/swiss-politics/cantons-and-municipalities/29289028",
+    "source_quote": "As of January 1, 2025, there are 2,121 municipalities.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Trap 1 — the figure is date-specific. ch.ch (S025) rounds to 'around 2,100' and CH Info (S029) gives 2,110; all describe the same declining total at different reference dates. The merger trend is in the preceding sentence of the same file."
+  },
+  {
+    "id": "K071",
+    "category": "geography",
+    "question": "How many members does a cantonal government in Switzerland have, and how is it chosen?",
+    "options": {
+      "A": "Three to five members, appointed by the federal parliament",
+      "B": "Five to seven members, appointed by the cantonal parliament",
+      "C": "Nine members, elected by the people",
+      "D": "Five to seven members, elected by the people"
+    },
+    "correct_answer": "D",
+    "source_id": "S030",
+    "source_url": "https://www.swissinfo.ch/eng/swiss-politics/cantons-and-municipalities/29289028",
+    "source_quote": "Cantonal governments have five to seven members and are elected by the people.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Cantonal variation is the point: the size of a cantonal executive is not fixed, which is why no single federal figure exists. The same source notes cantonal parliaments are unicameral and named differently in each canton."
+  },
+  {
+    "id": "K072",
+    "category": "geography",
+    "question": "Roughly what proportion of Swiss communes have their own parliament?",
+    "options": {
+      "A": "Around a fifth",
+      "B": "Around a third",
+      "C": "Around a half",
+      "D": "Around a tenth"
+    },
+    "correct_answer": "A",
+    "source_id": "S030",
+    "source_url": "https://www.swissinfo.ch/eng/swiss-politics/cantons-and-municipalities/29289028",
+    "source_quote": "Around a fifth of Switzerland's communes have their own parliaments, and local laws relating to matters such as streets, school buildings, water and energy prices, as well as parking regulations.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Where a commune has no parliament, the commune assembly decides in its place — the source page does not state this, so it is not asserted here."
+  },
+  {
+    "id": "K073",
+    "category": "geography",
+    "question": "Communes are the smallest political units in Switzerland. Which of the following is an example of a power that communes exercise as delegated by the federal and cantonal governments?",
+    "options": {
+      "A": "Adjudicating criminal cases at first instance",
+      "B": "Fixing the rates of federal income taxes approved by the Federal Assembly",
+      "C": "Maintaining a register of the resident population and ensuring civil protection",
+      "D": "Issuing cantonal constitutions, which must be approved by the federal parliament"
+    },
+    "correct_answer": "C",
+    "source_id": "S025",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/federalism/",
+    "source_quote": "They exercise the powers delegated to them by the federal and cantonal governments, such as maintaining a register of the resident population and ensuring civil protection.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractors are all level-confusion errors (a cantonal, a federal, and a cantonal-constitutional task presented as communal powers)."
+  },
+  {
+    "id": "K074",
+    "category": "geography",
+    "question": "What is the highest point in Switzerland, and in which mountain range is it located?",
+    "options": {
+      "A": "Dufour Peak, 4,634 m, in the Bernese Alps",
+      "B": "Monte Rosa, 4,634 m, in the Pennine Alps",
+      "C": "The Jungfrau, 4,158 m, in the Monte Rosa Mountains",
+      "D": "Dufour Peak, 4,634 m, in the Monte Rosa Mountains"
+    },
+    "correct_answer": "D",
+    "source_id": "S027",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/geography",
+    "source_quote": "Highest point: Dufour Peak, in the Monte Rosa Mountains, 4,634 m (15,203 feet)",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "German- and Austrian-language readers commonly assume the Bernese Alps (Jungfrau/Zermatt area). The peak sits in the Monte Rosa massif on the Italian border."
+  },
+  {
+    "id": "K075",
+    "category": "geography",
+    "question": "What is the constitutional status of Romansh at the level of the Confederation?",
+    "options": {
+      "A": "Romansh is one of the three fully official languages of the Confederation",
+      "B": "Romansh is a cantonal language only, recognised by the cantons that use it but not by the Federal Constitution",
+      "C": "Romansh is a national language and a semi-official language of the Confederation",
+      "D": "Romansh is an official language of the Confederation, but only where a canton grants it cantonal official status"
+    },
+    "correct_answer": "C",
+    "source_id": "S047",
+    "source_url": "https://www.bk.admin.ch/en/romansh",
+    "source_quote": "Romansh is a national language and a semi-official language of the Confederation.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Highest-value item in the set: the four-national / three-official split. The same file adds that Romansh IS official 'when communicating with persons who speak Romansh', which is why option D's cantonal-conditional framing is wrong — the condition is linguistic, not cantonal."
+  },
+  {
+    "id": "K076",
+    "category": "geography",
+    "question": "In which Swiss cantons are people's assemblies, known as Landsgemeinde, still held?",
+    "options": {
+      "A": "Appenzell Ausserrhoden and St. Gallen",
+      "B": "Appenzell Innerrhoden and Glarus",
+      "C": "Glarus and Obwalden",
+      "D": "Appenzell Innerrhoden, Glarus and Nidwalden"
+    },
+    "correct_answer": "B",
+    "source_id": "S029",
+    "source_url": "https://www.ch-info.swiss/en/die-schweiz/foederalismus",
+    "source_quote": "People's assemblies (Landsgemeinde) are still held in the cantons of Appenzell Innerrhoden and Glarus.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "A Swiss institution with no foreign analogue; models routinely name Appenzell Ausserrhoden (the other Appenzell) and the two half-cantons Obwalden and Nidwalden."
+  },
+  {
+    "id": "K077",
+    "category": "geography",
+    "question": "What is the least populous commune in Switzerland, and in which canton is it located?",
+    "options": {
+      "A": "Kammersrohr, in the canton of Appenzell Innerrhoden",
+      "B": "Rheinau, in the canton of Zurich",
+      "C": "Rivaz, in the canton of Vaud",
+      "D": "Kammersrohr, in the canton of Solothurn"
+    },
+    "correct_answer": "D",
+    "source_id": "S029",
+    "source_url": "https://www.ch-info.swiss/en/die-schweiz/foederalismus",
+    "source_quote": "The least populous is Kammersrohr in the canton of Solothurn (32 people)",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "32 residents. Counter-intuitive: the least populous commune is in Solothurn, not in an Appenzell or Graubünden mountain canton. Population figures are year-dependent and will drift."
+  },
+  {
+    "id": "K078",
+    "category": "geography",
+    "question": "Under Swiss federalism, which level of government is responsible for any task that does not fall within the remit of the federal government?",
+    "options": {
+      "A": "The communes, as the smallest political units",
+      "B": "The Federal Assembly, through its Federal Chancellery",
+      "C": "The cantons",
+      "D": "An association of municipalities, in consultation with the cantons"
+    },
+    "correct_answer": "C",
+    "source_id": "S025",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/federalism/",
+    "source_quote": "Any tasks that do not fall under the remit of the federal government are the responsibility of the cantons.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Trap 4: residuary competence sits with the cantons, not with an EU-style supranational layer and not with the communes. In the EU the equivalent residue belongs to the member states; in Switzerland the member units are the cantons."
+  },
+  {
+    "id": "K079",
+    "category": "geography",
+    "question": "The Alps make up a large part of Switzerland's territory. Approximately what share of the country's total population lives in the Alps?",
+    "options": {
+      "A": "About 30 per cent",
+      "B": "About 55 per cent",
+      "C": "About 10 per cent",
+      "D": "About 45 per cent"
+    },
+    "correct_answer": "C",
+    "source_id": "S027",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/geography",
+    "source_quote": "The Alps, which make up a large part of the country in terms of area, are home to only 10% of the total population.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Counter-intuitive inversion of area-versus-population; the same page gives a national density of 215 inhabitants per square kilometre. Population figure is date-dependent."
+  },
+  {
+    "id": "K080",
+    "category": "geography",
+    "question": "Which six cantons are the former half-cantons of Switzerland?",
+    "options": {
+      "A": "Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Geneva",
+      "B": "Schwyz, Uri, Glarus, Zug, Thurgau and Solothurn",
+      "C": "Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, St. Gallen and Basel Landschaft",
+      "D": "Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft"
+    },
+    "correct_answer": "D",
+    "source_id": "S026",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/",
+    "source_quote": "The former half-cantons of Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft are only entitled to one.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Deliberately tests only the canton-identity half of the S026 fact, framed as the 6/20 structure behind the number 26. The Council of States seat arithmetic (20 cantons with two seats, 46 seats total) is owned by the politics category via S003 and is not asked here. Canton names appear in the German forms printed on the source page."
+  }
+]

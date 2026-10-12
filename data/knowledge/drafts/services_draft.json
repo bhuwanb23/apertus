@@ -1,0 +1,362 @@
+[
+  {
+    "id": "K081",
+    "category": "services",
+    "question": "How many public holidays are observed nationwide across Switzerland, and which one is it?",
+    "options": {
+      "A": "Exactly one — 1 August, Swiss National Day",
+      "B": "Two — 1 January (New Year's Day) and 1 August (Swiss National Day)",
+      "C": "Three — 1 January, 1 May (Labour Day) and 1 August (Swiss National Day)",
+      "D": "None — Switzerland has no nationwide public holidays at all; each canton sets its own calendar entirely"
+    },
+    "correct_answer": "A",
+    "source_id": "S031",
+    "source_url": "https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/",
+    "source_quote": "The first of August – Swiss national day – is Switzerland's only national public holiday.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Distinctive because 1 January, Easter Monday, Ascension Day and 1 May are statutory holidays in neighbouring EU states but carry no nationwide status in Switzerland. The cantonal layer is covered separately in K082."
+  },
+  {
+    "id": "K082",
+    "category": "services",
+    "question": "Beyond Switzerland's single nationwide public holiday, what is the maximum number of additional public holidays a canton may declare on its own territory?",
+    "options": {
+      "A": "Up to two",
+      "B": "Up to four",
+      "C": "Up to eight",
+      "D": "Unlimited"
+    },
+    "correct_answer": "C",
+    "source_id": "S031",
+    "source_url": "https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/",
+    "source_quote": "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "CANTONAL-VARIABLE — the holiday calendar differs by canton and within a canton by commune. Framed as a cantonal power, not a federal rule."
+  },
+  {
+    "id": "K083",
+    "category": "services",
+    "question": "In Switzerland, a public holiday falls during an employee's annual leave. How is that day treated?",
+    "options": {
+      "A": "It counts against the employee's vacation entitlement, so the employee effectively loses one day of leave",
+      "B": "It must be added to the following year's leave entitlement",
+      "C": "It is compensated with a wage supplement of at least 25%",
+      "D": "It does not count as a day of vacation"
+    },
+    "correct_answer": "D",
+    "source_id": "S031",
+    "source_url": "https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/",
+    "source_quote": "If a public holiday falls during your vacation, that day does not count as a day of vacation.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractor A is the German rule, where public holidays falling inside the leave period reduce the annual leave entitlement. Deliberate German/Austrian-import trap."
+  },
+  {
+    "id": "K084",
+    "category": "services",
+    "question": "What is the general rule under Swiss law on working on a Sunday?",
+    "options": {
+      "A": "Sunday work is freely permitted for any employee who has consented to it",
+      "B": "Sunday work is generally prohibited, and is possible only subject to a special authorisation and the employee's consent",
+      "C": "Sunday work is generally prohibited, but a simple notification to the employer is sufficient to make it lawful",
+      "D": "Sunday work is generally prohibited and can never be authorised, in any sector"
+    },
+    "correct_answer": "B",
+    "source_id": "S032",
+    "source_url": "https://www.ch.ch/en/work/working-hours/working-on-sundays-and-at-night/",
+    "source_quote": "Working on Sundays is generally prohibited in Switzerland. However, working on Sundays is possible, subject to special authorisation and the employee's consent.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "D is false: the health sector, hospitality, newsstands and bakeries, theatres, cinemas and the media may work Sundays without authorisation."
+  },
+  {
+    "id": "K085",
+    "category": "services",
+    "question": "Between which hours of the day is work prohibited by the Swiss night-work ban?",
+    "options": {
+      "A": "23:00 to 06:00",
+      "B": "22:00 to 05:00",
+      "C": "21:00 to 06:00",
+      "D": "00:00 to 07:00"
+    },
+    "correct_answer": "A",
+    "source_id": "S032",
+    "source_url": "https://www.ch.ch/en/work/working-hours/working-on-sundays-and-at-night/",
+    "source_quote": "In Switzerland, the law prohibits work between 11pm and 6am.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Note the source spells the window as 11pm to 6am. No national maximum weekly working time is stated on the source pages and none is asserted here."
+  },
+  {
+    "id": "K086",
+    "category": "services",
+    "question": "Under Swiss law, what is the maximum number of hours a night worker may work in any 10-hour period, counting breaks?",
+    "options": {
+      "A": "8 hours",
+      "B": "10 hours",
+      "C": "9 hours",
+      "D": "11 hours"
+    },
+    "correct_answer": "C",
+    "source_id": "S032",
+    "source_url": "https://www.ch.ch/en/work/working-hours/working-on-sundays-and-at-night/",
+    "source_quote": "Night workers may not work for more than 9 hours in any 10-hour period, including breaks.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Unusual as a rule: the maximum is expressed as a ceiling inside a rolling window rather than as a daily hour total."
+  },
+  {
+    "id": "K087",
+    "category": "services",
+    "question": "In Switzerland, what is the minimum daily rest period an employer must grant to an employee aged 20 or over between two working days?",
+    "options": {
+      "A": "8 hours",
+      "B": "11 consecutive hours",
+      "C": "12 hours",
+      "D": "10 hours"
+    },
+    "correct_answer": "B",
+    "source_id": "S032",
+    "source_url": "https://www.ch.ch/en/work/working-hours/working-on-sundays-and-at-night/",
+    "source_quote": "it must last at least 11 consecutive hours",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractor C is the rule for employees under 18 ('the daily rest period must always be at least 12 hours'); distractor A is the once-a-week reduction the employer may grant if the two-week average is 11 hours."
+  },
+  {
+    "id": "K088",
+    "category": "services",
+    "question": "An employee works between 11pm and 6am on fewer than 25 nights per calendar year. What must the employer pay for those nights?",
+    "options": {
+      "A": "Time off equal to 10% of the night hours worked",
+      "B": "A wage supplement of at least 10%",
+      "C": "A wage supplement of at least 50%",
+      "D": "A wage supplement of at least 25%"
+    },
+    "correct_answer": "D",
+    "source_id": "S032",
+    "source_url": "https://www.ch.ch/en/work/working-hours/working-on-sundays-and-at-night/",
+    "source_quote": "A supplement of at least 25% must be paid for work between 11pm and 6am carried out for less than 25 nights per calendar year.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Distractor A is the regime for regular night work (25 or more nights per calendar year), where the compensation is time off equal to 10% of night hours; distractor C is the 50% supplement for occasional Sunday work. Cash payment in lieu of compensatory time off is prohibited."
+  },
+  {
+    "id": "K089",
+    "category": "services",
+    "question": "Under Swiss law, which authority must an employer approach to obtain authorisation to employ workers for occasional night work?",
+    "options": {
+      "A": "The competent cantonal authority",
+      "B": "The State Secretariat for Economic Affairs (SECO)",
+      "C": "The Federal Office for Customs and Border Security (FOCBS)",
+      "D": "The commune in which the workplace is situated"
+    },
+    "correct_answer": "A",
+    "source_id": "S032",
+    "source_url": "https://www.ch.ch/en/work/working-hours/working-on-sundays-and-at-night/",
+    "source_quote": "To employ workers for occasional night work, employers must contact the competent cantonal authority to apply for authorisation.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Distractor B is correct only for authorisations for regular Sunday work, which go to SECO — the cantonal/federal competence split is the point being tested."
+  },
+  {
+    "id": "K090",
+    "category": "services",
+    "question": "In Switzerland, which level of government is responsible for compulsory education?",
+    "options": {
+      "A": "The Confederation, acting through a federal education ministry",
+      "B": "The communes, which set the school system and appoint the teachers",
+      "C": "The cantons",
+      "D": "The cantons jointly with the Confederation, under federal supervision"
+    },
+    "correct_answer": "C",
+    "source_id": "S033",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/school-and-kindergarten/",
+    "source_quote": "Compulsory education is the responsibility of the cantons. This is why it is important to check the information on your canton's website.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Switzerland has no federal school system — the structural opposite of Germany, Austria and France. Distractor B is scope confusion: communes run individual schools, but the responsibility statement sits with the cantons."
+  },
+  {
+    "id": "K091",
+    "category": "services",
+    "question": "How many years of compulsory schooling do children in most Swiss cantons have to attend, and how is that total made up?",
+    "options": {
+      "A": "9 years in total: 7 years of primary school followed by 2 years of secondary school",
+      "B": "11 years in total, including the two years of kindergarten",
+      "C": "11 years in total: 9 years of primary school followed by 2 years of secondary school",
+      "D": "13 years in total: 11 years of primary school followed by 2 years of secondary school"
+    },
+    "correct_answer": "B",
+    "source_id": "S033",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/school-and-kindergarten/",
+    "source_quote": "In most cantons, children are required to attend school for 11 years, including the two years they attend kindergarten.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "CANTONAL-VARIABLE in the details. Distractor C keeps the total but wrongly moves the two kindergarten years out of primary school."
+  },
+  {
+    "id": "K092",
+    "category": "services",
+    "question": "How is compulsory schooling normally split between primary and secondary level in Switzerland, and which canton departs from that pattern?",
+    "options": {
+      "A": "Eight years of primary school including kindergarten and three years of secondary; Ticino instead has seven years of primary and four years of secondary",
+      "B": "Six years of primary and five years of secondary; Ticino instead has five years of primary and six years of secondary",
+      "C": "Nine years of primary and two years of secondary; Ticino instead has eight years of primary and three years of secondary",
+      "D": "Eight years of primary and three years of secondary; Ticino follows the same 8+3 split as the other cantons"
+    },
+    "correct_answer": "A",
+    "source_id": "S033",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/school-and-kindergarten/",
+    "source_quote": "Primary school, including kindergarten, usually comprises eight years. Secondary education usually comprises three years. In Ticino, primary school lasts seven years and secondary school four years.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "CANTONAL-VARIABLE — 8+3 is the usual structure and is NOT a federal rule; naming Ticino is required to keep the question unambiguous."
+  },
+  {
+    "id": "K093",
+    "category": "services",
+    "question": "Kindergarten in Switzerland generally starts at age four, with an enrolment deadline that is usually 31 July. What does the official guidance say about that deadline?",
+    "options": {
+      "A": "The deadline of 31 July applies in every canton without exception",
+      "B": "The deadline is set nationally at 15 September",
+      "C": "The deadline is set by each individual school, so it varies from school to school within every canton",
+      "D": "Some cantons in eastern and central Switzerland have a different cut-off date"
+    },
+    "correct_answer": "D",
+    "source_id": "S033",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/school-and-kindergarten/",
+    "source_quote": "Some cantons in eastern and central Switzerland have a different cut-off date.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "CANTONAL-VARIABLE — 'most children' start at four, but the entry cut-off is not uniform. A model asserting a single national school-start rule has imported a foreign assumption."
+  },
+  {
+    "id": "K094",
+    "category": "services",
+    "question": "Which three parties share responsibility for maintaining standards in the Swiss vocational education and training (VET) system and for ensuring an adequate number of apprenticeship places?",
+    "options": {
+      "A": "The Confederation, the cantons and the trade unions",
+      "B": "The Confederation, the Cantons and professional organisations",
+      "C": "The Confederation, the cantons and the chambers of commerce and industry",
+      "D": "The cantons, the communes and the professional organisations"
+    },
+    "correct_answer": "B",
+    "source_id": "S034",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/what-comes-after-compulsory-education/",
+    "source_quote": "The Confederation, the Cantons and professional organisations all contribute to maintaining the high standard of vocational education and training and strive to ensure that there is an adequate number of apprenticeship positions available.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Distractor C is the German model (IHK/HWK chambers); there is no chamber tier in Swiss VET. Distractor D drops the Confederation, a deliberate scope-confusion."
+  },
+  {
+    "id": "K095",
+    "category": "services",
+    "question": "In the Swiss VET system, which qualification follows from which programme length?",
+    "options": {
+      "A": "A two-year programme leads to a Federal VET Diploma; three- and four-year programmes lead to a Federal VET Certificate",
+      "B": "A two-year programme leads to a specialised school certificate; three- and four-year programmes lead to a specialised baccalaureate",
+      "C": "A two-year programme leads to a Federal VET Certificate; three- and four-year programmes lead to a Federal VET Diploma",
+      "D": "Two-, three- and four-year VET programmes all lead to the same Federal VET Diploma"
+    },
+    "correct_answer": "C",
+    "source_id": "S034",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/what-comes-after-compulsory-education/",
+    "source_quote": "Two-year VET programmes lead to the award of a Federal VET Certificate; three-year and four-year VET programmes lead to the award of a Federal VET Diploma.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractor B belongs to the separate specialised-school route (three-year certificate, then a one-year specialised baccalaureate), which is easy to conflate with VET."
+  },
+  {
+    "id": "K096",
+    "category": "services",
+    "question": "Roughly what share of young people in Switzerland takes the dual vocational education and training route rather than an academic upper-secondary school?",
+    "options": {
+      "A": "About one in four",
+      "B": "About one in two",
+      "C": "About three in four",
+      "D": "About two in three"
+    },
+    "correct_answer": "D",
+    "source_id": "S034",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/what-comes-after-compulsory-education/",
+    "source_quote": "Two-thirds of young people in Switzerland benefit from the solid foundation provided by vocational education and training.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractor B mirrors the German apprenticeship uptake of roughly one in two. The Swiss dual-route share is markedly higher."
+  },
+  {
+    "id": "K097",
+    "category": "services",
+    "question": "Switzerland recycles a high share of its waste, yet materials recovered from waste form only a small share of the country's total material consumption. What are the two figures?",
+    "options": {
+      "A": "70% of total waste volume recycled, but secondary raw materials at 14% of total material consumption",
+      "B": "70% of total waste volume recycled, and secondary raw materials at 70% of total material consumption",
+      "C": "14% of total waste volume recycled, and secondary raw materials at 70% of total material consumption",
+      "D": "53% of municipal solid waste recycled, and secondary raw materials at 14% of total material consumption"
+    },
+    "correct_answer": "A",
+    "source_id": "S035",
+    "source_url": "https://www.bafu.admin.ch/en/state-wastemanagement",
+    "source_quote": "At present, over two thirds (70%) of Switzerland's total waste volume is recycled. Measured against total material consumption, materials recovered from waste (known as secondary raw materials) make up only a small proportion: 14% in 2019",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The 14% figure is from 2019; the 70% recycling rate is 'at present' as published by FOEN. Distractor D uses the municipal-solid-waste rate (53% in 2020), which measures a different quantity. MUNICIPAL-WASTE-VARIABLE: municipal waste figures are administered at commune level."
+  },
+  {
+    "id": "K098",
+    "category": "services",
+    "question": "According to the Federal Office for the Environment, which of these four materials had the highest recycling rate in Switzerland in 2020?",
+    "options": {
+      "A": "Aluminium",
+      "B": "PET",
+      "C": "Glass",
+      "D": "Paper"
+    },
+    "correct_answer": "C",
+    "source_id": "S035",
+    "source_url": "https://www.bafu.admin.ch/en/state-wastemanagement",
+    "source_quote": "Recycling focuses on established materials such as glass (recycling rate in 2020: 99%), PET (recycling rate in 2020: 82%), aluminium (recycling rate in 2020: 97%), paper (recycling rate in 2020: 82%).",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The published rates are glass 99%, aluminium 97%, PET 82% and paper 82%. The top two are only two points apart, so intuition about 'metal vs glass' is not sufficient — the exact figures are required."
+  },
+  {
+    "id": "K099",
+    "category": "services",
+    "question": "A traveller returning to Switzerland carries goods for personal use with a total value of CHF 400. The tax-free import limit is CHF 150. On what amount is the Swiss import VAT calculated?",
+    "options": {
+      "A": "On the excess only — the CHF 250 by which the total value exceeds the CHF 150 limit",
+      "B": "On the whole value — CHF 400",
+      "C": "On the first CHF 150 only",
+      "D": "On nothing, because all the goods are for personal use"
+    },
+    "correct_answer": "B",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "If the total value exceeds CHF 150, you must pay VAT on the total value of the imported goods. Example: The total value is CHF 400.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Distractor A is the intuitive 'excess only' rule used in many other countries. The verified Swiss tax-free limit is CHF 150 per person per day."
+  },
+  {
+    "id": "K100",
+    "category": "services",
+    "question": "What are the Swiss standard VAT rate and the reduced rate that applies to goods such as foodstuffs, books, magazines and medicines?",
+    "options": {
+      "A": "6.7% standard, 2.1% reduced",
+      "B": "8.1% standard, 3.8% reduced",
+      "C": "10.0% standard, 2.6% reduced",
+      "D": "8.1% standard, 2.6% reduced"
+    },
+    "correct_answer": "D",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "VAT is 8.1%. A reduced rate of 2.6% applies for certain goods (e.g. foodstuffs, including non-alcoholic beverages, books, magazines and medicines).",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractor A is the pre-2001 Swiss rate pair. Figures as published by the Federal Office for Customs and Border Security at access date 2026-10-12."
+  }
+]

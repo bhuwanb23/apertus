@@ -1,0 +1,362 @@
+[
+  {
+    "id": "K041",
+    "category": "health",
+    "question": "Switzerland's old-age insurance system is built on a three-pillar structure. Which combination correctly names the three pillars?",
+    "options": {
+      "A": "State provision (OASI) and occupational provision (pension funds) only",
+      "B": "State provision, occupational provision, private provision, and a fourth universal pillar for low-income households",
+      "C": "State provision (OASI), occupational provision (pension funds) and private provision",
+      "D": "State provision (OASI), mandatory employer pensions and mandatory private savings for every employee"
+    },
+    "correct_answer": "C",
+    "source_id": "S022",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-insurance-system",
+    "source_quote": "The Swiss old-age insurance system is based on three pillars: state provision (OASI),\noccupational provision (pension funds) and private provision.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Swiss-specific: the AHV / BVG / Pillar-3a triad has no direct EU equivalent. Germany has state plus occupational pensions only and no third pillar."
+  },
+  {
+    "id": "K042",
+    "category": "health",
+    "question": "A person who has just moved to Switzerland and is not yet enrolled with a Swiss health insurer must arrange compulsory basic health insurance cover within what period?",
+    "options": {
+      "A": "Within one month of arriving",
+      "B": "Within two months of arriving",
+      "C": "Within six months of arriving",
+      "D": "Within three months of arriving"
+    },
+    "correct_answer": "D",
+    "source_id": "S019",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-taking-out--changing--cancelling/",
+    "source_quote": "If you have just moved to Switzerland, you have three months in which to arrange",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "The same three-month deadline applies to new-borns, and the person or baby is already insured during that period. This is a Swiss KVG rule, not an EU social-security coordination rule (do not import the EU three-month rule or the EU residence-condition logic)."
+  },
+  {
+    "id": "K043",
+    "category": "health",
+    "question": "In Switzerland, a policyholder who wants to switch compulsory basic health insurer for the following calendar year must have the cancellation letter received by their current insurer by which date?",
+    "options": {
+      "A": "15 October",
+      "B": "30 November",
+      "C": "15 December",
+      "D": "31 December"
+    },
+    "correct_answer": "B",
+    "source_id": "S019",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-taking-out--changing--cancelling/",
+    "source_quote": "Your letter must reach your current health insurer by 30 November.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "The 'Stichtag 30. November' is uniquely Swiss. Note the separate mid-year cancellation right that only holders of the CHF 300 standard deductible enjoy (tested separately in this category)."
+  },
+  {
+    "id": "K044",
+    "category": "health",
+    "question": "In Switzerland, a healthy adult who chooses the highest available compulsory basic health insurance deductible should set aside how much per year in order to be able to cover their own maximum share of healthcare costs?",
+    "options": {
+      "A": "CHF 3,200",
+      "B": "CHF 2,500",
+      "C": "CHF 2,700",
+      "D": "CHF 3,000"
+    },
+    "correct_answer": "A",
+    "source_id": "S020",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-costs/",
+    "source_quote": "You should still put CHF 3,200 aside in case you do fall ill\n(CHF 2,500 deductible and CHF 700 retention fee).",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "CHF 3,200 = highest adult deductible CHF 2,500 + CHF 700 maximum annual retention fee. A German/EU reader is likely to think only of a deductible."
+  },
+  {
+    "id": "K045",
+    "category": "health",
+    "question": "Under Swiss compulsory basic health insurance, an adult holds the standard annual deductible of CHF 300. What is the maximum that this adult can end up paying out of pocket for healthcare in one calendar year?",
+    "options": {
+      "A": "CHF 700",
+      "B": "CHF 1,300",
+      "C": "CHF 1,000",
+      "D": "CHF 1,500"
+    },
+    "correct_answer": "C",
+    "source_id": "S046",
+    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
+    "source_quote": "In other words, for an insured person with an annual deductible of CHF 300, the maximum cost share is CHF 1000 per calendar year.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Key anti-trap item: CHF 1,000 is the MAXIMUM ANNUAL COST SHARE (CHF 300 deductible + CHF 700 maximum retention fee), not a deductible band. Distractor A is the retention-fee cap alone."
+  },
+  {
+    "id": "K046",
+    "category": "health",
+    "question": "In Swiss compulsory basic health insurance, which set of optional annual deductible levels may adults choose from?",
+    "options": {
+      "A": "300, 600, 900, 1,200 and 1,500 francs",
+      "B": "100, 200, 300, 400, 500 and 600 francs",
+      "C": "1,000, 1,500, 2,000, 2,500 and 3,000 francs",
+      "D": "500, 1,000, 1,500, 2,000 and 2,500 francs"
+    },
+    "correct_answer": "D",
+    "source_id": "S046",
+    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
+    "source_quote": "For adults, the available deductibles are 500, 1000, 1500, 2000 and 2500 francs, and for children 100, 200, 300, 400, 500 and 600 francs.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Levels are chosen voluntarily; there is no age / income ('affluence') / rural-residence rule assigning a band. Distractor B is the children's list."
+  },
+  {
+    "id": "K047",
+    "category": "health",
+    "question": "Under Swiss compulsory basic health insurance, a policyholder wants to raise their deductible to CHF 1,500. Which statement correctly describes the insurer's legal obligation here?",
+    "options": {
+      "A": "The insurer must offer the CHF 1,500 level, because it is one of the standard adult deductible levels",
+      "B": "The insurer is not required to offer the full range of deductible levels and may offer only some of them",
+      "C": "The insurer must offer it, but only if the policyholder is under 25 years old",
+      "D": "The insurer must offer it, but may charge an additional administration fee"
+    },
+    "correct_answer": "B",
+    "source_id": "S046",
+    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
+    "source_quote": "The health insurer does not have to offer the full range of deductibles.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Insurers MAY also differentiate for young adults aged 19-25. Corrects the widespread misconception that Swiss deductible levels are assigned by rule."
+  },
+  {
+    "id": "K048",
+    "category": "health",
+    "question": "A Swiss compulsory health insurance policyholder opts for a deductible higher than the standard CHF 300, which reduces his premium. The premium reduction is capped by law at what share of the additional risk the policyholder assumes?",
+    "options": {
+      "A": "70 per cent",
+      "B": "50 per cent",
+      "C": "90 per cent",
+      "D": "100 per cent"
+    },
+    "correct_answer": "A",
+    "source_id": "S046",
+    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
+    "source_quote": "A maximum of 70 percent reduction on the additional risk assumed by the policyholder may be granted.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Statutory ceiling on the additional-risk discount. It is a separate rule from the statutory minimum-premium floor and must not be conflated with it."
+  },
+  {
+    "id": "K049",
+    "category": "health",
+    "question": "Swiss law requires every compulsory health insurer to charge a floor below which the premium may not fall. What is that statutory minimum premium set at, relative to the premium the insurer would ordinarily charge?",
+    "options": {
+      "A": "30 per cent of the ordinary premium with accident cover for the relevant age group and premium region",
+      "B": "70 per cent of the ordinary premium with accident cover for the relevant age group and premium region",
+      "C": "80 per cent of the ordinary premium with accident cover for the relevant age group and premium region",
+      "D": "50 per cent of the ordinary premium with accident cover for the relevant age group and premium region"
+    },
+    "correct_answer": "D",
+    "source_id": "S046",
+    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
+    "source_quote": "The health insurer is required to charge a minimum premium equivalent to 50 per cent of the ordinary premium with accident cover for the age group and premium region of the person concerned.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The floor cannot be undercut even by policies excluding accident cover or restricting the choice of service provider. Prevents insurers competing on restricted-benefit products."
+  },
+  {
+    "id": "K050",
+    "category": "health",
+    "question": "In Swiss compulsory basic health insurance, a policyholder wants to move from the standard CHF 300 deductible to a higher optional deductible. When can that change take effect?",
+    "options": {
+      "A": "At any time during the year, on 30 days' notice",
+      "B": "Only at the beginning of a calendar year",
+      "C": "From 1 April, when insurers recalculate their premiums",
+      "D": "Immediately, provided the policyholder has had no treatment in the current year"
+    },
+    "correct_answer": "B",
+    "source_id": "S046",
+    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
+    "source_quote": "A change in the level of the deductible can only take effect at the beginning of a calendar year.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The deductible level is locked to the calendar year, unlike, for example, switching insurers. Do not confuse with the separate end-of-June cancellation right for CHF 300 deductible holders (S019)."
+  },
+  {
+    "id": "K051",
+    "category": "health",
+    "question": "A holder of the CHF 300 deductible under a 'regular' insurance model in Switzerland wants to leave their current compulsory basic health insurer outside the ordinary year-end round. When can the cancellation take effect, and on what notice?",
+    "options": {
+      "A": "End of March, on one month's notice",
+      "B": "End of July, on three months' notice",
+      "C": "End of June, on three months' notice",
+      "D": "End of September, on six months' notice"
+    },
+    "correct_answer": "C",
+    "source_id": "S019",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-taking-out--changing--cancelling/",
+    "source_quote": "cancel your basic insurance with effect from the end of June. A three-month notice period",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "This mid-year cancellation window is tied specifically to holding the CHF 300 standard deductible; it is an exception to the ordinary 30 November deadline. No foreign analogue exists."
+  },
+  {
+    "id": "K052",
+    "category": "health",
+    "question": "In Switzerland, a daily contribution towards the cost of a hospital stay is payable by the patient. Which groups are exempt from that contribution?",
+    "options": {
+      "A": "Children, young adults in education and training, and pregnant women",
+      "B": "Children and pensioners",
+      "C": "Everyone under the age of 25",
+      "D": "Only women receiving maternity-related services"
+    },
+    "correct_answer": "A",
+    "source_id": "S020",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-costs/",
+    "source_quote": "Children, young adults in education and training\nand pregnant women do not pay any contribution to hospital costs.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The contribution itself is CHF 15 per day. Distractor C over-extends the 'young adults in education and training' exemption (which is not simply 'under 25')."
+  },
+  {
+    "id": "K053",
+    "category": "health",
+    "question": "In Switzerland, an employee is unable to work because of an accident. From when, and at what level, is an accident daily allowance payable?",
+    "options": {
+      "A": "From the first day after the accident, at 100 per cent of salary",
+      "B": "From the third day after the accident, at 80 per cent of salary",
+      "C": "From the eighth day after the accident, at 90 per cent of salary",
+      "D": "From the fifteenth day after the accident, at 80 per cent of salary"
+    },
+    "correct_answer": "B",
+    "source_id": "S021",
+    "source_url": "https://www.ch.ch/en/insurance/accident-insurance/",
+    "source_quote": "as of the third day following your\naccident you are entitled to a daily allowance corresponding to 80% of your salary.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Swiss UVG accident insurance. If the insurer's allowance is below 80%, the employer must make up the difference. German sickness-benefit schedules (e.g. the 6-week Lohnfortzahlung) are not the relevant frame."
+  },
+  {
+    "id": "K054",
+    "category": "health",
+    "question": "In Switzerland, a person works 5 hours a week for an employer and is covered by the compulsory accident insurance scheme. What does that accident cover include?",
+    "options": {
+      "A": "Occupational accidents and occupational illnesses only; accidents during leisure time are not covered",
+      "B": "Occupational accidents and occupational illnesses as well as non-occupational accidents occurring in leisure time",
+      "C": "No accident cover at all, because anyone working under eight hours a week must insure privately",
+      "D": "All accidents, including those during private leisure activities"
+    },
+    "correct_answer": "A",
+    "source_id": "S021",
+    "source_url": "https://www.ch.ch/en/insurance/accident-insurance/",
+    "source_quote": "If you work for less than eight hours a week for your employer, your accident insurance",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The 8-hours-per-week threshold is the UVG dividing line: at or above it, leisure-time accidents are also covered. Accidents on the way to and from work count as occupational. This is a Swiss statutory test, not an EU social-security coordination rule."
+  },
+  {
+    "id": "K055",
+    "category": "health",
+    "question": "Under Swiss compulsory accident insurance, what minimum degree of disability must be assessed before an injured person can qualify for an accident disability pension?",
+    "options": {
+      "A": "At least 5 per cent",
+      "B": "At least 20 per cent",
+      "C": "At least 10 per cent",
+      "D": "At least 70 per cent"
+    },
+    "correct_answer": "C",
+    "source_id": "S021",
+    "source_url": "https://www.ch.ch/en/insurance/accident-insurance/",
+    "source_quote": "You must be classified as at least\n10% disabled to qualify.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The accident disability pension may be awarded in addition to a pension under the state IV/AI disability scheme. Distractor D (70%) is the separate BVG exclusion threshold for compulsory occupational pension cover."
+  },
+  {
+    "id": "K056",
+    "category": "health",
+    "question": "According to the Federal Social Insurance Office, what was the maximum annual tax-deductible Pillar 3a contribution in 2025 for a self-employed person who has compulsory occupational pension (BVG) cover?",
+    "options": {
+      "A": "CHF 36,288",
+      "B": "CHF 22,680",
+      "C": "CHF 21,510",
+      "D": "CHF 7,258"
+    },
+    "correct_answer": "D",
+    "source_id": "S022",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-insurance-system",
+    "source_quote": "- CHF 7,258 for employees/self-employed persons with occupational pension cover;",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "TIME-SENSITIVE: figure explicitly labelled 2025, so the year is stated in the stem. For a person WITHOUT occupational cover the 2025 limit is 20% of earnings up to CHF 36,288. Distractors B and C are BVG entry-threshold figures from other years, not Pillar 3a limits."
+  },
+  {
+    "id": "K057",
+    "category": "health",
+    "question": "Under the AVS/AHV 21 reform in force in Switzerland since 1 January 2024, the ordinary retirement age for women is being raised in three-month steps by birth cohort. What reference age applies to a woman born in 1962?",
+    "options": {
+      "A": "64 years and 6 months",
+      "B": "64 years and 3 months",
+      "C": "64 years and 9 months",
+      "D": "65 years"
+    },
+    "correct_answer": "A",
+    "source_id": "S023",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
+    "source_quote": "- women born in 1962: 64 years and 6 months;",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "TIME-SENSITIVE and cohort-locked: born 1961 = 64y3m, 1962 = 64y6m, 1963 = 64y9m, born 1964 or later = 65. The reference age is 65 for men and for women born 1964 or later; the former general women's age of 64 is superseded and must never be presented as the current rule."
+  },
+  {
+    "id": "K058",
+    "category": "health",
+    "question": "Under the Swiss compulsory occupational pension (2nd pillar), a member's accumulated old-age assets are converted into an annual old-age pension using a conversion factor that applies identically to men and women. What is that conversion factor?",
+    "options": {
+      "A": "4,80%",
+      "B": "6,80%",
+      "C": "8,80%",
+      "D": "3,80%"
+    },
+    "correct_answer": "B",
+    "source_id": "S023",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
+    "source_quote": "basis of a conversion factor of 6,80% for men and women.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Swiss decimal-comma notation. A single gender-neutral conversion factor is a distinctive feature of the reformed BVG and has no direct EU analogue."
+  },
+  {
+    "id": "K059",
+    "category": "health",
+    "question": "In Switzerland, what is the maternity allowance during the 14 weeks of maternity leave following a birth?",
+    "options": {
+      "A": "80 per cent of the mother's earnings, with no upper daily limit",
+      "B": "90 per cent of the mother's earnings, but no more than CHF 300 per day",
+      "C": "80 per cent of the mother's earnings, but no more than CHF 220 per day",
+      "D": "100 per cent of the mother's earnings, but no more than CHF 220 per week"
+    },
+    "correct_answer": "C",
+    "source_id": "S024",
+    "source_url": "https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/",
+    "source_quote": "Maternity allowance amounts to 80% of your\nearnings, but no more than CHF 220 per day.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Highly Swiss-specific 14-week / 80% / CHF 220-per-day package. Cantonal provisions, personnel regulations and collective employment contracts may provide more generous arrangements. Do not substitute EU maternity-benefit rates."
+  },
+  {
+    "id": "K060",
+    "category": "health",
+    "question": "How does Swiss second-parent (co-parental) leave differ from maternity leave in the way it may be taken?",
+    "options": {
+      "A": "It must be taken as one uninterrupted block within three months of the child's birth",
+      "B": "It is flexible: it may be taken all at once or as individual days, but must be taken within two years of the child's birth",
+      "C": "It must be taken in full before the mother returns to work",
+      "D": "It is flexible: it may be taken all at once or as individual days, but must be taken within six months of the child's birth"
+    },
+    "correct_answer": "D",
+    "source_id": "S024",
+    "source_url": "https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/",
+    "source_quote": "Unlike maternity leave, paternity/co-parental leave is flexible. You can take\nit all at once, or as individual days as long as it is taken within the",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Co-parental leave runs for two weeks: 14 daily allowances and ten days off work, paid at 80% of earnings capped at CHF 220/day. It must be used within six months of the birth."
+  }
+]

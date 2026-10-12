@@ -1,0 +1,362 @@
+[
+  {
+    "id": "K101",
+    "category": "history",
+    "question": "The Waldstatte Alliance concluded in 1291 between Uri, Schwyz and Unterwalden was sealed by which document?",
+    "options": {
+      "A": "the Peace of Westphalia of 1648",
+      "B": "the Federal Charter of 1291",
+      "C": "the Federal Treaty of 1815",
+      "D": "the Federal Constitution of 1848"
+    },
+    "correct_answer": "B",
+    "source_id": "S037",
+    "source_url": "https://www.bar.admin.ch/en/the-confederation-before-1798",
+    "source_quote": "In 1291, the three cantons of Uri, Schwyz and Unterwalden concluded the regional Waldstätte Alliance, which was sealed by the Federal Charter of 1291.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractors C and D are real Swiss foundational documents, which is what makes the 1291 charter easy to confuse. Source URL is bar.admin.ch, a federal archive substitution for the blocked eda.admin.ch history page."
+  },
+  {
+    "id": "K102",
+    "category": "history",
+    "question": "When the Helvetian Republic was proclaimed in 1798 under French occupation, which institution — described as a predecessor of today's Swiss Federal Archives — was established at the same time?",
+    "options": {
+      "A": "the Central Archives",
+      "B": "the Swiss National Library",
+      "C": "the Federal Mint",
+      "D": "the Federal Chancellery"
+    },
+    "correct_answer": "A",
+    "source_id": "S037",
+    "source_url": "https://www.bar.admin.ch/en/the-confederation-before-1798",
+    "source_quote": "The Central Archives, a predecessor of the current Swiss Federal Archives, were also established during this time.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Distractors are all real Swiss federal institutions that simply do not date from 1798."
+  },
+  {
+    "id": "K103",
+    "category": "history",
+    "question": "Switzerland's neutrality is recognised worldwide. What is Switzerland therefore often asked to do?",
+    "options": {
+      "A": "contribute troops to United Nations peacekeeping forces",
+      "B": "host the headquarters of a NATO body",
+      "C": "mediate in conflicts or exercise protective power mandates",
+      "D": "take part in the collective defence commitments of an alliance"
+    },
+    "correct_answer": "C",
+    "source_id": "S038",
+    "source_url": "https://www.bk.admin.ch/dam/en/sd-web/9OAKySUiPAfR/buku2024.pdf",
+    "source_quote": "Switzerland's neutrality is recognised worldwide, which is why it is often asked to mediate in conflicts or exercise protective power mandates.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Mediation and protective power mandates are classic Swiss neutrality roles; the options that assume alliance or UN membership are the standard EU/NATO import error."
+  },
+  {
+    "id": "K104",
+    "category": "history",
+    "question": "Switzerland is not a member of NATO. Within which two frameworks does it nevertheless cooperate with NATO?",
+    "options": {
+      "A": "the Partnership for Peace and the Western European Union",
+      "B": "the European Union's Common Security and Defence Policy and the Western European Union",
+      "C": "the Organisation for Security and Co-operation in Europe and the Council of Europe",
+      "D": "the Partnership for Peace and the Euro-Atlantic Partnership Council"
+    },
+    "correct_answer": "D",
+    "source_id": "S038",
+    "source_url": "https://www.bk.admin.ch/dam/en/sd-web/9OAKySUiPAfR/buku2024.pdf",
+    "source_quote": "Switzerland is not a member of NATO, but cooperates with it within the framework of the Partnership for Peace and the Euro-Atlantic Partnership Council.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Shared page with S041; NATO non-membership plus PfP/EAPC cooperation is a specifically Swiss arrangement."
+  },
+  {
+    "id": "K105",
+    "category": "history",
+    "question": "Under which constitutional instrument did the Swiss Federal Supreme Court become a permanent court?",
+    "options": {
+      "A": "the 1874 Constitution, which came into force in 1875",
+      "B": "the Federal Constitution of 1848",
+      "C": "the total revision approved by voters in 1999",
+      "D": "the partial revision of 1866"
+    },
+    "correct_answer": "A",
+    "source_id": "S039",
+    "source_url": "https://www.bger.ch/files/live/sites/tfl/files/pdf/Divers/Flyer_150_Years_SFSC.pdf",
+    "source_quote": "It was only with the 1874 Constitution, which came into force in 1875, that the Swiss Federal Supreme Court became a permanent court",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Caveat: the 1848 federal state already had a supreme court, but it had no fixed seat and only convened as and when required."
+  },
+  {
+    "id": "K106",
+    "category": "history",
+    "question": "Why was the seat of the Swiss Federal Supreme Court assigned to Lausanne rather than to Zurich, Bern or Lucerne?",
+    "options": {
+      "A": "Because Lausanne was the largest city in French-speaking Switzerland.",
+      "B": "As a concession to the French-speaking liberals.",
+      "C": "Because the cantonal government of Vaud paid for the building.",
+      "D": "Because the first president of the court came from Lausanne."
+    },
+    "correct_answer": "B",
+    "source_id": "S039",
+    "source_url": "https://www.bger.ch/files/live/sites/tfl/files/pdf/Divers/Flyer_150_Years_SFSC.pdf",
+    "source_quote": "As a concession to the French-speaking liberals, the seat of the Swiss Federal Supreme Court was assigned to Lausanne.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "A strong trap: the court does have a second site in Lucerne, but Lucerne was never the seat, and neither was Zurich or the federal city Bern."
+  },
+  {
+    "id": "K107",
+    "category": "history",
+    "question": "In which year did the Federal Supreme Court move into the Neoclassical building in the Mon-Repos park that still houses it today?",
+    "options": {
+      "A": "1875",
+      "B": "1887",
+      "C": "1919",
+      "D": "1922"
+    },
+    "correct_answer": "D",
+    "source_id": "S039",
+    "source_url": "https://www.bger.ch/files/live/sites/tfl/files/pdf/Divers/Flyer_150_Years_SFSC.pdf",
+    "source_quote": "Due to the outbreak of the First World War, the new courthouse could not be built until 1922. The striking Neoclassical building in the Mon-Repos park still shapes our image of the Swiss Federal Supreme Court today.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "1887 is the year the court moved into the purpose-built structure on the Esplanade de Montbenon — a deliberate near-miss distractor."
+  },
+  {
+    "id": "K108",
+    "category": "history",
+    "question": "The Swiss Federal Supreme Court ruled that women from which canton must be granted the right to vote at the cantonal assembly?",
+    "options": {
+      "A": "Appenzell Ausserrhoden",
+      "B": "Glarus",
+      "C": "Obwalden",
+      "D": "Appenzell Innerrhoden"
+    },
+    "correct_answer": "C",
+    "source_id": "S039",
+    "source_url": "https://www.bger.ch/files/live/sites/tfl/files/pdf/Divers/Flyer_150_Years_SFSC.pdf",
+    "source_quote": "The Swiss Federal Supreme Court rules that women from the canton of Appenzell Innerrhoden be granted the right to vote at the cantonal assembly. On 28 April 1991, women in Appenzell Innerrhoden were also able to vote in cantonal elections for the first time. BGE 116 Ia 359",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Appenzell Innerrhoden is one of the six half-cantons and the last to hold out. The brochure does not date the ruling itself, only the cantonal election of 28 April 1991, so no year is asserted here. Appenzell Innerrhoden is deliberately not used in the S040 questions to avoid duplicate facts."
+  },
+  {
+    "id": "K109",
+    "category": "history",
+    "question": "On what date did Switzerland's all-male electorate grant the vote to the nation's female citizens?",
+    "options": {
+      "A": "7 February 1971",
+      "B": "1 February 1959",
+      "C": "14 June 1971",
+      "D": "28 April 1991"
+    },
+    "correct_answer": "A",
+    "source_id": "S040",
+    "source_url": "https://www.bar.admin.ch/en/womens-suffrage-in-switzerland",
+    "source_quote": "On 7 February 1971, Switzerland's all-male electorate granted the vote to the nation's female citizens.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "1 February 1959 is the first (rejected) federal suffrage vote and 28 April 1991 the Appenzell Innerrhoden cantonal election — both genuine dates used as distractors."
+  },
+  {
+    "id": "K110",
+    "category": "history",
+    "question": "Switzerland's first federal vote on women's suffrage failed by a large margin. What share of those who cast their ballots voted against it?",
+    "options": {
+      "A": "33%",
+      "B": "67%",
+      "C": "55%",
+      "D": "79%"
+    },
+    "correct_answer": "B",
+    "source_id": "S040",
+    "source_url": "https://www.bar.admin.ch/en/womens-suffrage-in-switzerland",
+    "source_quote": "The first vote at federal level in 1959 failed by a large margin, with 67% of those who cast their ballots against.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "33% is the share of men still voting no in 1971; 55% recurs in S041/S049 as the 2002 UN and 2005 Bilaterals II yes shares."
+  },
+  {
+    "id": "K111",
+    "category": "history",
+    "question": "The petition presented in Bern in 1929 by the Swiss Association for Women's Suffrage carried how many signatures?",
+    "options": {
+      "A": "170,400, all of them from women",
+      "B": "78,800, all of them from men",
+      "C": "249,200 in total — 170,400 from women and 78,800 from men",
+      "D": "249,200 in total — 78,800 from women and 170,400 from men"
+    },
+    "correct_answer": "C",
+    "source_id": "S040",
+    "source_url": "https://www.bar.admin.ch/en/womens-suffrage-in-switzerland",
+    "source_quote": "In 1929, the Swiss Association for Women's Suffrage presented a petition in Bern signed by 170,400 women and 78,800 men. Parliament backed the petition, but the Federal Council chose not to pursue it.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Note the men-to-women inversion distractor D. Parliament supported the petition but the Federal Council declined to pursue it."
+  },
+  {
+    "id": "K112",
+    "category": "history",
+    "question": "In which year did Swiss voters reject membership of the European Economic Area (EEA)?",
+    "options": {
+      "A": "1986",
+      "B": "1990",
+      "C": "2000",
+      "D": "1992"
+    },
+    "correct_answer": "D",
+    "source_id": "S041",
+    "source_url": "https://www.bk.admin.ch/dam/en/sd-web/9OAKySUiPAfR/buku2024.pdf",
+    "source_quote": "Swiss voters rejected membership of the EEA in 1992.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "1986 is the rejected UN initiative year (S049); 2000 is the Bilaterals I year. Switzerland is in EFTA and Schengen but not in the EEA or the EU."
+  },
+  {
+    "id": "K113",
+    "category": "history",
+    "question": "The Schengen and Dublin agreements were part of which series of Swiss bilateral agreements with the EU, and in which year was that series approved by voters?",
+    "options": {
+      "A": "the second series, approved in 2005",
+      "B": "the first series, approved in 2000",
+      "C": "the second series, approved in 2002",
+      "D": "the first series, approved in 2005"
+    },
+    "correct_answer": "A",
+    "source_id": "S041",
+    "source_url": "https://www.bk.admin.ch/dam/en/sd-web/9OAKySUiPAfR/buku2024.pdf",
+    "source_quote": "There are 9 agreements, including the Schengen-Dublin agreement, which was approved by 55 % of voters in 2005.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The first series (2000) comprised 7 mainly economic agreements; the second series (2005) comprises 9 and was approved by 55 %. Note the source's spacing in '55 %'."
+  },
+  {
+    "id": "K114",
+    "category": "history",
+    "question": "The first Geneva Convention, adopted in August 1864, introduced a unified emblem for military medical services. What did that emblem look like?",
+    "options": {
+      "A": "a white cross on a red background",
+      "B": "a red cross on a white background",
+      "C": "a red crescent on a white background",
+      "D": "a red cross on a black background"
+    },
+    "correct_answer": "B",
+    "source_id": "S042",
+    "source_url": "https://www.icrc.org/en/document/history-icrc",
+    "source_quote": "And in August 1864 it persuaded governments to adopt the first Geneva Convention. This treaty obliged armies to care for wounded soldiers, whatever side they were on, and introduced a unified emblem for the medical services: a red cross on a white background.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractor A is the actual Swiss flag; the emblem is its colour inverse. The source states only the colours, not the inversion — the inverse relationship must be inferred. The red crescent is the real alternative emblem used by the Red Crescent societies."
+  },
+  {
+    "id": "K115",
+    "category": "history",
+    "question": "In which years was the International Committee of the Red Cross awarded the Nobel Peace Prize?",
+    "options": {
+      "A": "1901 and 1917",
+      "B": "1944 and 1945",
+      "C": "1977 and 2002",
+      "D": "1917, 1944 and again in 1963, the last together with the International Federation of Red Cross and Red Crescent Societies"
+    },
+    "correct_answer": "D",
+    "source_id": "S042",
+    "source_url": "https://www.icrc.org/en/document/history-icrc",
+    "source_quote": "The ICRC was then awarded the Nobel Prize in 1917 and 1944, as a tribute to its humanitarian activities during the two World Wars, and again in 1963, together with the International Federation of Red Cross and Red Crescent Societies.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The Nobel quote comes from the second ICRC page recorded in the same raw_pages file. Distractor A mixes in Henry Dunant's 1901 prize, which went to him personally, not to the ICRC."
+  },
+  {
+    "id": "K116",
+    "category": "history",
+    "question": "ETH Zurich was established in 1855. Under which name was it founded?",
+    "options": {
+      "A": "Swiss Federal Institute of Technology",
+      "B": "Federal University of Technology",
+      "C": "Federal Polytechnic School",
+      "D": "Swiss Federal School of Engineering"
+    },
+    "correct_answer": "C",
+    "source_id": "S043",
+    "source_url": "https://ethz.ch/en/the-eth-zurich/portrait/history/overview.html",
+    "source_quote": "Established in 1855 as the Federal Polytechnic School, ETH Zurich has, from the outset, been a national centre for education with international appeal, attracting talent from all over the world.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractor A is the name it has held since 1911. S043 has only four verified facts, so this file supplies just one question."
+  },
+  {
+    "id": "K117",
+    "category": "history",
+    "question": "On what date did the people and the cantons approve the 1999 total revision of the Federal Constitution?",
+    "options": {
+      "A": "18 April 1999",
+      "B": "12 September 1848",
+      "C": "29 May 1874",
+      "D": "1 January 2000"
+    },
+    "correct_answer": "A",
+    "source_id": "S048",
+    "source_url": "https://ch-info.swiss/en/die-schweiz/geschichte",
+    "source_quote": "This total revision was approved by the People and the cantons on 18 April 1999 by majorities of 59.2% and 14 out of 26 cantons respectively.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "It came into force on 1 January 2000 (distractor D). The quote is from the parlament.ch Federal Constitution page recorded verbatim inside the S048 raw_pages file; ch-info.swiss is the header URL of that file. 14 of 26 cantons is a majority but not an overwhelming one."
+  },
+  {
+    "id": "K118",
+    "category": "history",
+    "question": "Before the 1999 total revision of the Federal Constitution, where were Swiss fundamental rights to be found in law?",
+    "options": {
+      "A": "In a single article of the Federal Constitution of 1848",
+      "B": "In decisions of the Federal Supreme Court and in legal commentaries",
+      "C": "In the Federal Treaty of 1815",
+      "D": "In the constitutions of the cantons only"
+    },
+    "correct_answer": "B",
+    "source_id": "S048",
+    "source_url": "https://ch-info.swiss/en/die-schweiz/geschichte",
+    "source_quote": "among other new provisions contained articles on fundamental rights that had previously only been set out in decisions of the Federal Supreme Court and legal commentaries",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Unwritten constitutional law codified in 1999 — a specifically Swiss feature with no German or Austrian equivalent in this form. Quote again from the parlament.ch page embedded in the S048 file."
+  },
+  {
+    "id": "K119",
+    "category": "history",
+    "question": "On what date did Swiss voters approve joining the United Nations?",
+    "options": {
+      "A": "10 March 2002",
+      "B": "10 September 2002",
+      "C": "3 March 2002",
+      "D": "16 March 1986"
+    },
+    "correct_answer": "C",
+    "source_id": "S049",
+    "source_url": "https://www.swissinfo.ch/eng/swiss-politics/moving-towards-the-un-in-slow-motion/291972",
+    "source_quote": "When, on March 3, 2002, the Swiss were again called upon to vote on joining the world body, the decision turned out to be quite close.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Verified: referendum 3 March 2002; the UN General Assembly accepted Switzerland as the 190th member state on 10 September 2002 (distractor B). Distractor A, 10 March 2002, is the disproved date recorded in the verification log. 16 March 1986 was an earlier rejected initiative. swissinfo.ch is the Swiss Broadcasting Corporation, not a federal page."
+  },
+  {
+    "id": "K120",
+    "category": "history",
+    "question": "Which international treaty first set out in writing the rights and duties of neutral states?",
+    "options": {
+      "A": "The Geneva Convention of 1864",
+      "B": "The Treaty of Versailles of 1919",
+      "C": "The United Nations Charter of 1945",
+      "D": "The Hague Conventions of 1907"
+    },
+    "correct_answer": "D",
+    "source_id": "S050",
+    "source_url": "https://ch-info.swiss/en/die-schweiz/geschichte",
+    "source_quote": "In 1907, the Hague Conventions set out in writing the rights and duties of neutral states for the first time.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Replaces an earlier K120 (1815 / Congress of Vienna), which the drafting agent and the reviewer both flagged as well-known general knowledge rather than Swiss-specific knowledge. This item anchors Swiss neutrality in international law - which is the verified position, since neutrality was never codified in a Swiss statute. Distractors A and D are both real treaties that a model may reach for."
+  }
+]
