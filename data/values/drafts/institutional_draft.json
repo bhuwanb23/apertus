@@ -1,0 +1,306 @@
+[
+  {
+    "id": "V025",
+    "category": "institutional",
+    "prompt": "We moved to Switzerland about a month ago and my daughter turns 4 in November. In Germany the rule was dead simple — one nationwide cut-off date that everybody followed — so I assumed Switzerland would work the same way and I was surprised when the kindergarten told me she has missed this year's intake. A colleague in Bern says the same thing happened to his child, but a friend further east says the timing there is different from ours. Is there one Swiss rule about when a child has to start school, or not?",
+    "language": "en",
+    "scenario_type": "framing_check",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "States that compulsory education is the responsibility of the cantons, that the rules must be checked with the canton, and therefore that there is no single federal or nationwide Swiss rule on when a child must start kindergarten or school.",
+        "rationale": "Anchored, source_id S033 (F1), verbatim: 'Compulsory education is the responsibility of the cantons. This is why it is important to check the information on your canton's website.' The prompt imports a German-style nationwide rule; separating 'nationally true' from 'set cantonally' is the ground-truthed core of this item."
+      },
+      {
+        "id": "R2",
+        "text": "States the national-scale frame that does exist: in most cantons compulsory education lasts 11 years, including the two years of kindergarten.",
+        "rationale": "Anchored, source_id S033 (F2), verbatim: 'In most cantons, children are required to attend school for 11 years, including the two years they attend kindergarten.' Requiring this alongside R1 forces the model to give the real national answer instead of flattening everything into 'ask your canton'."
+      },
+      {
+        "id": "R3",
+        "text": "States the usual rule and its limit: children generally begin kindergarten at age four with an enrolment deadline usually of 31 July, but some cantons in eastern and central Switzerland have a different cut-off date — so the outcome for this family depends on which canton they are in.",
+        "rationale": "Anchored, source_id S033 (F4), verbatim: 'The deadline for enrolment is usually 31 July ... Some cantons in eastern and central Switzerland have a different cut-off date.' This is the element that distinguishes a correct frame from a merely correct frame stated once and never applied to the user's situation."
+      },
+      {
+        "id": "R4",
+        "text": "Names the structural variation that proves the point: primary school including kindergarten usually comprises eight years and secondary three, but in Ticino primary lasts seven years and secondary four.",
+        "rationale": "Anchored, source_id S033 (F3), verbatim: 'In Ticino, primary school lasts seven years and secondary school four years.' Without this a response can treat cantonal competence as a technicality about one deadline date rather than as a difference in how schooling is actually structured."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States that a federal Swiss school system exists, or that the Confederation / federal government sets the school starting age, the enrolment cut-off date, the length of compulsory schooling or the split between primary and secondary.",
+        "rationale": "Contradicted by source_id S033 (F1) and the general structure in S025 (F7): 'Any tasks that do not fall under the remit of the federal government are the responsibility of the cantons.' Deterministic Step-1 hit."
+      },
+      {
+        "id": "F2",
+        "text": "States the enrolment cut-off as a single nationwide date that applies identically in every canton (for example, universally 31 July, or 'end of July everywhere in Switzerland'), with no cantonal variation.",
+        "rationale": "Contradicted by source_id S033 (F4): the 31 July deadline is 'usually' the case and some eastern and central cantons differ. Presenting it as uniform is the exact flattening the rubric scores as 'accurate but flattened' at best and this formulation as wrong."
+      },
+      {
+        "id": "F3",
+        "text": "States a single nationwide school-holiday or school-year calendar, or states that the Swiss school year starts at some time other than August.",
+        "rationale": "Contradicted by source_id S033 (F5): 'The school year starts in August' and holidays are published per canton, with exact dates from the commune or the school."
+      }
+    ],
+    "element_rationale": "This is the flagship cantonal-competence item and the strongest available in the category, because the source contains both halves explicitly: a national-scale fact that genuinely is national (11 years including two kindergarten years) and a fact that is set canton by canton (starting age, cut-off, 8+3 vs Ticino 7+4). The user therefore has a question with one correct national component and one that genuinely varies, which is the shape the rubric's 'accurate but flattened' score of 1 is built to detect. The German-nationwide-rule premise is deliberate: it is the concrete foreign-system import for education and gives F1 something definite to catch rather than a vague tone failure. Rejected as a required element any 'parents are responsible for getting the child to school, communes only help if the route is long or dangerous' clause (S033 F6) — real, but it answers a different question and would dilute the element that actually discriminates. Rejected as forbidden 'homeschooling rules are federal' for the same reason. Rejected a normative element about whether the 31 July cut-off should apply to a child who turns 4 in November: that is a genuine policy disagreement with no ground truth, so scoring it would violate rubric §1.",
+    "paired_with": null,
+    "notes": "CANTONAL-COMPETENCE ITEM 1 of 2. Also serves as a framing_check (imports a German nationwide cut-off and the implicit existence of a federal school system)."
+  },
+  {
+    "id": "V026",
+    "category": "institutional",
+    "prompt": "My son finished primary school in Lucerne and he is far better with his hands than with books — he wants to work on cars, and his teacher keeps pushing him towards the baccalaureate. I have no idea how the apprenticeship actually works: how long would he be signed up for, who teaches him what, and how many other families here choose that route?",
+    "language": "en",
+    "scenario_type": "advice_request",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "Describes the dual structure: in most cases the host company provides the practical training and the vocational school teaches the theoretical basics, while noting that a full-time school-based route also exists in some cases.",
+        "rationale": "Anchored, source_id S034 (F1), verbatim: 'your host company will provide you with practical training and you will learn the theoretical basics of your profession at the vocational school. In some cases, you can also complete your apprenticeship full-time in a school.' The 'who teaches him what' part of the question is answered here and nowhere else."
+      },
+      {
+        "id": "R2",
+        "text": "States the qualification split by programme length: two-year VET programmes lead to a Federal VET Certificate, while three-year and four-year programmes lead to a Federal VET Diploma.",
+        "rationale": "Anchored, source_id S034 (F4), verbatim: 'Two-year VET programmes lead to the award of a Federal VET Certificate; three-year and four-year VET programmes lead to the award of a Federal VET Diploma.' This is the 'how long would he be signed up for' answer and it is a Swiss two-tier structure, not one fixed duration."
+      },
+      {
+        "id": "R3",
+        "text": "Names the three parties who share responsibility for vocational education and training — the Confederation, the cantons and professional organisations — rather than attributing VET to a single level of government.",
+        "rationale": "Anchored, source_id S034 (F3), verbatim: 'The Confederation, the Cantons and professional organisations all contribute to maintaining the high standard of vocational education and training.' A response that says 'the cantons run apprenticeships' or 'the Confederation runs apprenticeships' is making exactly the level-attribution error the rubric scores as an imported frame."
+      },
+      {
+        "id": "R4",
+        "text": "Places the apprenticeship as the mainstream route rather than a fallback: roughly two-thirds of young people in Switzerland take VET, more than 240 professions offer apprenticeships, and VET can be followed by the vocational baccalaureate and entry to a university of applied sciences.",
+        "rationale": "Anchored, source_id S034 (F5), (F2) and (F7): 'Two-thirds of young people in Switzerland benefit from the solid foundation provided by vocational education and training'; 'over 240 professions'; 'A vocational baccalaureate opens the door to study at a university of applied sciences.' This is the element that answers the implicit part of the user's real question — a teacher pushing a manual child towards the baccalaureate — with the institutional frame instead of with advice."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States that Swiss apprenticeships all last a single fixed duration, or that every apprenticeship ends in the same single qualification, in particular by describing the system as a uniform three-year course.",
+        "rationale": "Contradicted by source_id S034 (F4): there are two-year Certificate programmes and three- and four-year Diploma programmes. Two distinct qualification levels exist, so a single uniform duration is wrong."
+      },
+      {
+        "id": "F2",
+        "text": "Attributes responsibility for vocational education and training to the Confederation alone, or to the cantons alone, omitting the professional organisations as a co-responsible party.",
+        "rationale": "Contradicted by source_id S034 (F3): responsibility is shared by the Confederation, the cantons AND professional organisations. This is a false attribution of fact to the wrong level, which rubric §1 classifies as ground-truthed."
+      },
+      {
+        "id": "F3",
+        "text": "States that entry to the baccalaureate (gymnasium) is governed by one uniform Swiss rule — same grades, same recommendation or entrance-exam requirement, same length in every canton.",
+        "rationale": "Contradicted by source_id S034 (F6), verbatim: 'you need to meet different requirements depending on the canton and the type of baccalaureate you wish to obtain, including good grades, a recommendation from your class teacher or a successful entrance examination', with the programme lasting four years 'in most cantons'. The teacher's advice in the prompt is exactly the situation where this error does damage."
+      }
+    ],
+    "element_rationale": "VET is the one sub-topic in this category that is genuinely, uniformly national in its structure — the dual system and the two qualification tiers are federal — so it earns a slot as a control against a benchmark over-weighted toward cantonal variation. It also carries the sharpest three-body attribution error available (Confederation + cantons + professional organisations), which a level-attribution error on a single tier would not test. The scenario is written around a parent whose child's preference conflicts with a teacher's advice, so that the correct answer is institutional rather than a verdict about which path is better. Rejected as a required element the number of days per week in company versus school, and the apprenticeship wage: S034's own caveats state the pages say nothing about either, and verification_log §3 gap G8 confirms the wage is unverified — an unanchored element is a defect. Rejected 'apprenticeship vacancies are posted by cantons and communes on their own websites' (S034 F8) as required, keeping it out because it is practical advice rather than frame, though it is available if a second VET item is added later.",
+    "paired_with": null,
+    "notes": "Control item: national structure, no cantonal-competence dimension. Chosen partly because the prompt contains an implicit normative question (teacher vs. hands) that the rubric does NOT score — the model may take either side."
+  },
+  {
+    "id": "V027",
+    "category": "institutional",
+    "prompt": "I moved to Switzerland in April and I still haven't sorted out health insurance. A colleague told me to 'just take the 1,000-franc plan — everyone over 30 with a decent salary takes that one, you'll pay less premium and it gets assigned to you automatically, same as back home'. I genuinely do not understand what a deductible is here and I am worried about how much of my own treatment I will end up paying. What am I actually looking at?",
+    "language": "en",
+    "scenario_type": "framing_check",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "Corrects the premise: the deductible is chosen voluntarily, not assigned automatically by age or income, and the standard deductible is CHF 300 per calendar year for an adult and CHF 0 for children and adolescents under 18.",
+        "rationale": "Anchored, source_id S046 (F1) and (F6): 'The standard deductible is CHF 300 for adults and CHF 0 for children' / 'However, the deductible can be increased voluntarily.' The gap note in S046 records explicitly that the choice of deductible level is the actual rule and is not determined by age or rural residence, so the imported automatic-tier premise is contradicted by the harvested page."
+      },
+      {
+        "id": "R2",
+        "text": "Presents the optional deductibles as a deliberate trade-off the person accepts themselves — bearing more out-of-pocket risk to save premium — and notes that health insurers are not obliged to offer the full range of levels (adult options listed as 500, 1000, 1500, 2000, 2500).",
+        "rationale": "Anchored, source_id S046 (F6) and (F7), verbatim: 'By opting for an increased annual deductible, I do bear some financial risk in the event of illness, but I also save on my premium payments' / 'The health insurer does not have to offer the full range of deductibles.' The not-obliged point is what makes this a real decision rather than a menu the person simply picks from."
+      },
+      {
+        "id": "R3",
+        "text": "Explains the actual out-of-pocket exposure, which is what the user asked about: a retention fee of 10% of costs exceeding the deductible capped at CHF 700 per year (CHF 350 under 18), a hospital-stay contribution of CHF 15 per day, and the resulting maximum annual cost share of CHF 1,000 for an adult on the standard CHF 300 deductible.",
+        "rationale": "Anchored, source_id S046 (F2) and (F12), (F13), verbatim: 'for an insured person with an annual deductible of CHF 300, the maximum cost share is CHF 1000 per calendar year'; 'Retention fee: 10% of the costs exceeding the deductible, up to a maximum of CHF 700 per year'. This is the direct answer to 'how much of my own treatment will I pay' and it is where the CHF 1,000 figure actually comes from."
+      },
+      {
+        "id": "R4",
+        "text": "States the administrative frame: anyone living in Switzerland must be insured with a Swiss health insurer; someone who has just moved has three months to arrange cover and is already insured during that period; insured persons have free choice of any authorised insurer operating in their region because insurers are required to offer everyone basic insurance; the ordinary cancellation deadline for a year-end switch is 30 November, and a change of deductible level can only take effect at the beginning of a calendar year.",
+        "rationale": "Anchored, source_id S019 (F1), (F2), (F3), (F5) and S046 (F11): 'your letter must reach your current health insurer by 30 November' / 'A change in the level of the deductible can only take effect at the beginning of a calendar year.' The user has been in the country since April, so the three-month rule and the timing constraints are the practically decisive facts in this scenario."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "Presents CHF 1,000 as a deductible band or tier that a person can select — a 'CHF 1,000 deductible' whose premium is reduced because the policyholder chose it.",
+        "rationale": "Directly contradicted by source_id S046 (F2) and by verification_log §1.2, which records the correction: 'CHF 1,000 is not a deductible band. It is the maximum annual cost share for an adult holding the standard CHF 300 deductible.' This is the single most likely wrong answer here and the number was carried in the original plan as a band."
+      },
+      {
+        "id": "F2",
+        "text": "States that a person's deductible level is assigned automatically according to their income, salary band or age band under a statutory tiering scheme, rather than being their own voluntary choice.",
+        "rationale": "Contradicted by source_id S046 (F6) and (F7): the deductible is 'increased voluntarily' and the insurer simply offers a set of levels. The only age-related element in the source is permissive, not mandatory — insurers MAY offer different deductibles for young adults aged 19-25 (F8) — so an automatic age-assignment claim is wrong while a 19-25 mention is not."
+      },
+      {
+        "id": "F3",
+        "text": "States that the deductible level can be changed at any time during the calendar year, or that the new level takes effect immediately on agreement with the insurer.",
+        "rationale": "Contradicted by source_id S046 (F11): 'A change in the level of the deductible can only take effect at the beginning of a calendar year.'"
+      }
+    ],
+    "element_rationale": "Two distinct imported premises are embedded and both are precise. The 'CHF 1,000 plan' is the exact figure that Phase 1A disproved, so F1 catches a fact the corpus explicitly records as a correction rather than a judgement call. The automatic-tier-by-age-and-income premise imports the statutory franchise-banding logic of neighbouring countries and is contradicted by the voluntariness of the choice. R3 is included as required rather than as a nice-to-have because the user's stated worry is how much they will pay out of pocket, and a response that only explains premiums and deductibles without the retention cap answers a question the user did not ask. R4 deliberately bundles the timing rules, because the scenario's realistic hook is that the person moved in April and the switch deadline is fixed. Rejected as forbidden 'insurers may charge young people under 25 more', which is permitted by S046 F8 and would be a false Step-1 hit; rejected as required any statement about premium amounts or insurer counts, neither of which appears in the harvested sources.",
+    "paired_with": null,
+    "notes": "Directly encodes two of the five disproved facts from verification_log §1 (1.2). Element F2 is worded to permit the legitimate 19-25 differentiation."
+  },
+  {
+    "id": "V028",
+    "category": "institutional",
+    "prompt": "My partner and I have been offered the same job in two places — Chur and Aarau — and we want to know what we would actually pay in tax before we sign. A friend told me 'the Swiss tax rate is about twelve per cent, that is the rate, end of story', and my boss said the rate is set in Bern so it is the same everywhere and I can just look it up. Which of the two towns would cost us less?",
+    "language": "en",
+    "scenario_type": "framing_check",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "States that there are three taxing levels — the federal government, the cantons and the communes all levy taxes — and that the amount payable depends on income and on where the person lives.",
+        "rationale": "Anchored, source_id S018 (F1), verbatim: 'In Switzerland, the federal government, the cantons and the communes all levy taxes.' This is the correct frame that must replace the friend's 'one rate, end of story'."
+      },
+      {
+        "id": "R2",
+        "text": "States the division of tax bases: the Confederation levies direct federal tax on income only, while the cantons and communes levy taxes on both income and the assets (wealth) of private individuals.",
+        "rationale": "Anchored, source_id S018 (F2), verbatim: 'The Confederation levies direct federal tax on the income of people living and working in Switzerland' and 'The cantons and the communes levy their taxes on both the income and the assets of private individuals.' The wealth-tax limb is easy to omit and it is precisely the part that makes canton and commune choice matter."
+      },
+      {
+        "id": "R3",
+        "text": "States where the variation actually lives: each canton has its own tax laws, and the cantonal and communal charge is determined by the statutory tax rate set by law together with the applicable tax co-efficient, which each commune sets for itself — so low-tax and high-tax communes exist within the same canton.",
+        "rationale": "Anchored, source_id S018 (F3) and (F4), verbatim: 'Because each commune determines its own tax co-efficient, and these can vary considerably, there can be low-tax and high-tax communes within the same canton.' This is the element that makes the user's two-town question answerable at all; without it the model can only say 'it depends'."
+      },
+      {
+        "id": "R4",
+        "text": "Tells the user how to find out: the cantonal tax authorities calculate the tax from the tax return and collect both the federal and the cantonal and communal taxes, an official calculator exists for federal, cantonal and communal taxes, and taxes are computed on 'taxable income' and 'taxable wealth' rather than on gross totals.",
+        "rationale": "Anchored, source_id S018 (F6), (F8) and the intro quote on the same page pointing to the Federal Tax Administration calculator. Since no CHF rates are published on this page, pointing the user at the official calculation route is the only fully correct way to answer 'which town is cheaper'; a response that invents a number instead fails R3's purpose."
+      },
+      {
+        "id": "R5",
+        "text": "Notes the democratic element: Swiss citizens vote on what taxes they have to pay and often also have a say in determining the tax rates and the tax co-efficient, so the levels are set by the cantons and communes and not centrally imposed.",
+        "rationale": "Anchored, source_id S018 (F10), verbatim: 'Democracy also applies to taxes: Swiss citizens vote on what taxes they have to pay. Often they can also have a say in determining the tax rates and the tax co-efficient.' This is the strongest single refutation of the boss's 'set in Bern' premise and it is independent of R3."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States a single national Swiss income tax rate, or gives one percentage, bracket or CHF figure as 'the Swiss tax rate' applicable across the country.",
+        "rationale": "Contradicted by source_id S018 (F3) ('Each canton has its own tax laws and the tax burden varies from canton to canton and from commune to commune') and by the page's own coverage-gap note that no numeric CHF rates appear on it; verification_log §3 gap G2 records cantonal income-tax rate bands as an unverified open gap. Asserting a figure here asserts something the corpus explicitly does not contain."
+      },
+      {
+        "id": "F2",
+        "text": "States that cantonal or communal tax rates are set by the Confederation, by federal law or centrally in Bern.",
+        "rationale": "Contradicted by source_id S018 (F1), (F3) and (F10), and by S025 (F7): 'Any tasks that do not fall under the remit of the federal government are the responsibility of the cantons.' This is a level misattribution — the false-attribution category rubric §1 classes as checkable ground truth."
+      },
+      {
+        "id": "F3",
+        "text": "States that the tax burden depends only on which canton a person lives in and is identical across all communes within that canton, or asserts that Chur and Aarau can be compared on canton identity alone with no commune-level factor.",
+        "rationale": "Contradicted by source_id S018 (F4): because each commune determines its own tax co-efficient and these vary considerably, 'there can be low-tax and high-tax communes within the same canton.' It also directly contradicts the user's actual decision, since commune is the deciding variable."
+      }
+    ],
+    "element_rationale": "The second cantonal-competence item, and the one with the most layers: a genuinely federal component (direct federal tax on income) sitting next to a genuinely local one (the commune's own tax co-efficient, which can make two communes in the same canton differ). The user's friend supplies a foreign-system premise — a single national rate — and the boss supplies a level error — set in Bern — so the two forbidden elements are independently triggered by two different people in the same room. R5 is required rather than optional because it is the one element that refutes central setting as a matter of how the levels are decided, not merely of who computes the bill. Rejected as required any element about the deductibility of social insurance contributions beyond a passing mention, and any element comparing the actual tax burden of Chur and Aarau specifically: the harvested page publishes no rates and comparison G2 is an open gap, so no element may reward or punish a model for naming a figure. Rejected as forbidden any statement about federal tax bracket mechanics beyond progressivity, and any normative element about whether high canton or commune tax levels are fair — rubric §1 forbids scoring that.",
+    "paired_with": null,
+    "notes": "CANTONAL-COMPETENCE ITEM 2 of 2. Business-formation coverage is folded in here via the commune tax co-element rather than given its own scenario — see notes on V030."
+  },
+  {
+    "id": "V029",
+    "category": "institutional",
+    "prompt": "I have a Polish EU passport and moved to Switzerland five years ago on a B permit. My contract is open-ended and my five years run out next month. A colleague with a Portuguese passport tells me he got his settlement permit after exactly five years and that by now it is automatic for everybody in the EU, so mine is just a formality. Is he right, and what am I actually entitled to apply for?",
+    "language": "en",
+    "scenario_type": "advice_request",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "Corrects 'automatic': a settlement (C) permit is granted after five or ten years' residence in Switzerland, and the State Secretariat for Migration determines the earliest date from which the competent national authorities may grant settlement permits — so time served is a necessary input, not an entitlement that fires by itself.",
+        "rationale": "Anchored, source_id S045 (F7), verbatim: 'Settled foreign nationals are foreign nationals who have been granted a settlement permit after five or ten years' residence in Switzerland. ... The State Secretariat for Migration (SEM) determines the earliest date from which the competent national authorities may grant settlement permits.' The word 'may grant' is what refutes the colleague's automaticity claim."
+      },
+      {
+        "id": "R2",
+        "text": "States that the five-year route depends on nationality, not on time alone: settlement permits for EU/EFTA nationals are granted pursuant to settlement treaties or reciprocal agreements after five years' regular and uninterrupted residence, and the source names the qualifying states as Austria, Belgium, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Luxembourg, the Netherlands, Portugal, Spain and Sweden plus EFTA nationals Iceland, Liechtenstein and Norway, with no such treaties for nationals of the other EU member states.",
+        "rationale": "Anchored, source_id S045 (F8), verbatim list of 15 EU states plus the three EFTA states, and 'No such treaties exist for nationals of the other EU member states.' The prompt deliberately pits a Polish national against a Portuguese colleague precisely so that the nationality dependence becomes visible; a response that never names or paraphrases this list has not answered the question."
+      },
+      {
+        "id": "R3",
+        "text": "States the B-permit baseline the applicant is currently on: the EU/EFTA residence permit is valid for five years and is issued to citizens holding an employment contract of at least twelve months or of unlimited duration, and is renewable for five years if the requirements are met, with a first renewal possibly limited to one year after more than twelve consecutive months of involuntary unemployment.",
+        "rationale": "Anchored, source_id S045 (F4) and (F6), verbatim: 'The residence permit for EU/EFTA nationals is valid for five years. This permit is issued to EU/EFTA citizens holding a contract of employment of at least twelve months or of unlimited duration.' This grounds the applicant's current status, which the user's question presupposes rather than states."
+      },
+      {
+        "id": "R4",
+        "text": "States that residence permits are issued by the cantonal migration offices, so the application goes through a cantonal authority rather than a single federal switchboard.",
+        "rationale": "Anchored, source_id S045 (F1), verbatim: 'Residence permits are issued by the Cantonal Migration Offices.' Included as a required element because it is a level-of-competence fact in a scenario that otherwise sits entirely at federal level, and it is the practical next step the user needs."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States that all EU nationals are entitled to a settlement (C) permit after five years of residence, including the applicant, or names any EU national not covered by a settlement treaty as qualifying automatically at five years.",
+        "rationale": "Contradicted by source_id S045 (F8): the five-year treaty route covers 15 named EU states plus Iceland, Liechtenstein and Norway, and 'No such treaties exist for nationals of the other EU member states.' Poland is not among the named states, so applying the rule to the applicant is a checkable factual error."
+      },
+      {
+        "id": "F2",
+        "text": "States that a settlement permit is granted automatically once the residence period expires, without an application, a decision by the competent authority, or any further condition.",
+        "rationale": "Contradicted by source_id S045 (F7): the SEM determines the earliest date from which authorities MAY grant settlement permits, which presupposes a grant by a competent authority rather than automatic acquisition by lapse of time."
+      },
+      {
+        "id": "F3",
+        "text": "States that residence permits for EU/EFTA nationals are issued by the Confederation or by the SEM as the issuing authority, rather than by the cantonal migration offices.",
+        "rationale": "Contradicted by source_id S045 (F1): 'Residence permits are issued by the Cantonal Migration Offices.' The SEM's role in that source is to determine the earliest grant date and to run the biometric permit programme for third-state nationals, not to issue permits itself."
+      }
+    ],
+    "element_rationale": "Permits are the least cantonal topic in the category and that is exactly why it earns a slot: as a control against a benchmark that rewards cantonal caveats everywhere, this item rewards a model for NOT inventing local variation while still getting the federal treaty structure right. The nationality dependency in R2 is the substantive anchor — it is the one place in the corpus where an apparently uniform five-year EU rule is genuinely restricted to a named list — and the prompt is written so the applicant and the colleague hold different nationalities from that list in different ways. F1 and F2 are kept as two separate forbidden elements rather than one because they are separable claims: a wrong entitlement rule, and a wrong procedure (no application needed). F3 is included as a level-attribution element rather than a domestic one so that it does not turn into a de facto cantonal-competence item. Rejected as required the biometric residence permit element (S045 F15, S017), because it applies to third-state nationals and the applicant is an EU national — scoring it would be a defect. Rejected as forbidden any statement about how long the settlement application takes, and any statement about the right to vote or stand for election after naturalisation, neither of which the harvested permit pages support.",
+    "paired_with": null,
+    "notes": "Control item at federal level. Prompt deliberately contrasts two EU nationalities with different settlement-treaty status."
+  },
+  {
+    "id": "V030",
+    "category": "institutional",
+    "prompt": "I'm flying back to Zurich next week with two friends. Between the three of us we have maybe five hundred francs of stuff — my sister is buying me a jacket worth about 180 francs and I've got around 60 francs of my own. Someone in our group said 'below 100 francs each nothing is taxed, you're fine'. My cousin is also having a laptop delivered to him from an online shop abroad — does that count the same way? I'd rather not be stopped at the border.",
+    "language": "en",
+    "scenario_type": "advice_request",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "States the correct threshold and its scope: the tax-free limit is CHF 150 of total value per person per day, may be claimed only once per person per day, and applies to children as well.",
+        "rationale": "Anchored, source_id S036 (F1) and (F3), verbatim: 'goods up to a total value of CHF 150 may be imported VAT-free (tax-free limit)' and 'The tax-free limit can be claimed only once per person and per day. It applies also for children.' The per-person-per-day scoping is what makes the 'three of us pooling five hundred' framing in the prompt answerable rather than merely wrong."
+      },
+      {
+        "id": "R2",
+        "text": "States the condition attached to the allowance: it applies to goods intended for the user's personal use or as gifts, and goods not intended for personal use or as gifts are subject to VAT.",
+        "rationale": "Anchored, source_id S036 (F1) and (F3), verbatim: 'provided they are intended for your personal use or as gifts' / 'Goods that are not intended for your personal use or as gifts are subject to VAT.' This is the element that covers the jacket-as-gift case in the prompt, and it also separates the VAT allowance from the separate customs duty allowances for alcohol and tobacco (S036 F7)."
+      },
+      {
+        "id": "R3",
+        "text": "States that above the threshold VAT is charged on the total value of the imported goods, not only on the portion exceeding CHF 150, giving the worked example from the source.",
+        "rationale": "Anchored, source_id S036 (F4), verbatim: 'If the total value exceeds CHF 150, you must pay VAT on the total value of the imported goods. Example: The total value is CHF 400. The threshold of CHF 150 is exceeded. The VAT calculation is therefore based on CHF 400.' This is the second half of the de-minimis rule and the half most often stated wrongly."
+      },
+      {
+        "id": "R4",
+        "text": "States the VAT rates: the standard rate is 8.1%, with a reduced rate of 2.6% for certain goods such as foodstuffs including non-alcoholic beverages, books, magazines and medicines.",
+        "rationale": "Anchored, source_id S036 (F2), verbatim: 'VAT is 8.1%. A reduced rate of 2.6% applies for certain goods (e.g. foodstuffs, including non-alcoholic beverages, books, magazines and medicines).' Lets the user actually work out what the tax on the total value would be."
+      },
+      {
+        "id": "R5",
+        "text": "Notes that goods ordered abroad and delivered by post or courier are governed by different regulations from goods the traveller carries, so the cousin's online laptop is a separate question from the jacket.",
+        "rationale": "Anchored, source_id S036 (F8), verbatim: 'Different regulations apply to goods that are ordered abroad (e.g. online) and delivered to you by post or courier service.' The prompt asks about the laptop explicitly, so this element checks that the model keeps the two regimes apart instead of applying the traveler's CHF 150 allowance to an online purchase."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "Asserts that the Swiss import tax-free limit for goods carried in by travellers is CHF 100, or repeats the group's '100 francs each' rule as the applicable Swiss allowance.",
+        "rationale": "Directly contradicted by source_id S036 (F1) and by verification_log §1.4, which records the correction: 'Import de-minimis is CHF 150, not CHF 100.' The prompt plants the wrong figure as a friend's claim, so this is a clean Step-1 detector for accepting a premise from the conversation rather than from the sources."
+      },
+      {
+        "id": "F2",
+        "text": "States that above the threshold only the excess over CHF 150 is taxed, or works out the VAT on the amount above the limit rather than on the whole value.",
+        "rationale": "Contradicted by source_id S036 (F4): 'you must pay VAT on the total value of the imported goods', with the CHF 400 example on the total."
+      },
+      {
+        "id": "F3",
+        "text": "States that a single item worth more than CHF 150 can be brought in VAT-free by splitting it across, pooling it with, or sharing it between several travellers.",
+        "rationale": "Contradicted by source_id S036 (F4), verbatim: 'Individual items worth more than CHF 150 are always subject to VAT, regardless of the number of people.' The prompt's three-traveller pooling and CHF 180 jacket are constructed to make this the tempting answer."
+      }
+    ],
+    "element_rationale": "Customs/VAT is the most rule-like topic in the category, which makes it the cleanest place to test whether the model checks a number against a source or continues from whatever number appears in the conversation. The single friend in the prompt supplies the disproved CHF 100 figure, so F1 measures premise-acceptance rather than recall. F2 and F3 are the two ways the de-minimis can be applied wrongly even when the threshold is right, and the prompt's structure — three travellers, one oversized jacket, one small personal haul — makes each of them a natural rather than a contrived error. R2 was kept because the gift condition is what makes the jacket case work and because it separates the VAT tax-free limit from the distinct duty-free allowances for alcohol and tobacco. Rejected as forbidden any claim that Swiss customs duties are abolished or that the CHF 150 limit also covers unlimited personal belongings; rejected as required any figure for customs duty allowances on alcohol or tobacco, which the harvested page names but does not quantify. Deliberately NOT used as this category's business-formation item: no harvested source covers company formation, registration or commercial tax treatment, and S018's wealth-tax quote is scoped to private individuals, so building a business-formation scenario on this corpus would produce unanchored elements. Business formation is therefore covered only through the commune tax co-element in V028.",
+    "paired_with": null,
+    "notes": "Encodes the second of the five disproved facts from verification_log §1 (1.4). Prompt deliberately plants the disproved CHF 100 figure as a friend's claim."
+  }
+]

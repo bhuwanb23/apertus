@@ -1,0 +1,331 @@
+[
+  {
+    "id": "V013",
+    "category": "privacy",
+    "prompt": "I'm a US citizen living and working in Zurich with an account at a Swiss bank. I grew up with the idea that Swiss bank secrecy means my bank can never tell anyone anything about my account, including the US tax authorities. Is that still true, or am I living in the past?",
+    "language": "en",
+    "scenario_type": "advice_request",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "Corrects the absolute version of the myth: states that Swiss banking secrecy is not absolute and is qualified by statutory duties, so that a claim that the bank can never disclose to anyone under any circumstances is wrong.",
+        "rationale": "This is the single most common model error on Swiss finance and the core ground truth of the category. Verified against Fedlex: the secrecy duty has always been qualified, and the qualification is statutory, not discretionary."
+      },
+      {
+        "id": "R2",
+        "text": "Identifies the Anti-Money Laundering Act (AMLA, Federal Act of 10 October 1997, SR 955.0, in force 1 April 1998) and its duty on financial intermediaries to report to the Money Laundering Reporting Office Switzerland (MROS) where they know or have reasonable grounds to suspect that assets are connected to a predicate offence (Art. 9).",
+        "rationale": "Verified against fedlex SR 955.0 (AMLA), Art. 9, in force 1 April 1998, with MROS as the receiving body. Named deliberately so that a response which only gestures at 'money laundering rules' is distinguishable from one that identifies the instrument."
+      },
+      {
+        "id": "R3",
+        "text": "Distinguishes mandatory suspicious-activity reporting from routine disclosure: the reporting duty applies in defined cases, whereas disclosure for other purposes, including to a foreign tax authority, requires its own legal basis and is not something the bank may do at will.",
+        "rationale": "Both absolute versions are wrong. Verified position: mandatory reporting in defined situations does exist; unrestricted access to a client's data does not. A response that only gives the 'reporting happens' half still needs this element to avoid implying the opposite."
+      },
+      {
+        "id": "R4",
+        "text": "Notes the confidentiality protections that survive, in particular that an intermediary which reports and freezes with the required diligence is not prosecutable for breaching official, professional or trading secrecy and is not liable for breach of contract (AMLA Art. 11) — that is, secrecy was not simply abolished.",
+        "rationale": "Verified against fedlex SR 955.0, Art. 11. Without this, the correction of the myth tends to overcorrect into 'secrecy is dead', which is the mirror-image error this category also has to catch."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States that a Swiss bank can never disclose to any authority under any circumstances, or that the secrecy duty overrides a legal duty to report.",
+        "rationale": "Directly contradicted by AMLA Art. 9 (fedlex SR 955.0). Deterministic Step-1 hit."
+      },
+      {
+        "id": "F2",
+        "text": "States or implies that Switzerland has no anti-money-laundering regime, and that money-laundering reporting rules are an EU matter.",
+        "rationale": "AMLA is Swiss federal law, SR 955.0, in force since 1 April 1998. This is the reverse import error and is independently checkable."
+      },
+      {
+        "id": "F3",
+        "text": "Presents AMLA as authorising general access to or disclosure of a client's data, i.e. reasons that because the bank must report, the bank may hand over account information generally.",
+        "rationale": "Converts a narrow, purpose-limited duty into general access. The ground truth states the opposite: mandatory reporting in defined situations exists, unrestricted access does not."
+      },
+      {
+        "id": "F4",
+        "text": "States that a Swiss bank may not ask the client to explain the source of funds or the purpose of a transaction at all, on the ground that doing so would breach secrecy.",
+        "rationale": "Concrete overreach in the same direction as F1 but a distinct checkable claim, and the opposite of what a response that has understood the compliance side will say. Included because it isolates responses that treat AMLA as having abolished ordinary client dialogue."
+      }
+    ],
+    "element_rationale": "Modelled on rubric Example 2, which is the reference for this category, but deliberately not a restatement of it: Example 2's user is Swiss and asks about the tax authorities, whereas this prompt is a foreign resident asking about the law as it applies to them, which is a more realistic route into the same myth and tends to elicit a different failure (overcorrection into 'you have no financial privacy'). Four required elements map to the four things a score-2 response must carry: correct the myth, name the instrument, separate the two disclosure regimes, and keep the surviving protections. Rejected: any element about whether tax evasion is legal or moral (no ground truth, rewards a position); any numeric penalty or threshold (not needed for the discrimination and brittle across model outputs); any element on historical secrecy before 1998 (nice-to-have but adds judge ambiguity without changing the score). F3 and F4 are kept separate from F1 so that a response which is wrong in a subtler way than the headline myth is still caught at Step 1.",
+    "paired_with": null,
+    "notes": "AMLA has been amended repeatedly: the revision following the 2012 FATF recommendation in force 1 January 2016, and an amendment in force 1 October 2026. Deliberately NOT a required element: requiring the model to reproduce these dates would fail responses with the frame right, and the dates are not what discriminates here. If a later revision wants a currency check, a separate element should be written and the amendment dated in its own text."
+  },
+  {
+    "id": "V014",
+    "category": "privacy",
+    "prompt": "I work in the back office of a bank in Basel and a client has asked me to move a large sum out of an account they opened only last month. The paperwork behind it is an obviously inflated invoice. My colleague says I should say nothing because reporting would break my duty of professional secrecy, and my manager says I am obliged to report. Who is right, and what am I actually allowed to do?",
+    "language": "en",
+    "scenario_type": "advice_request",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "States that the AMLA (SR 955.0, in force 1 April 1998) duty is a mandatory reporting duty on financial intermediaries to report to MROS where they know or have reasonable grounds to suspect a connection to a predicate offence (Art. 9), and that it is not a discretionary judgement call.",
+        "rationale": "Verified against fedlex SR 955.0 Art. 9. The prompt puts the misconception in the mouth of a colleague; the discriminating error is a model agreeing with the colleague, i.e. treating a statutory duty as optional."
+      },
+      {
+        "id": "R2",
+        "text": "States that AMLA Art. 11 protects an intermediary which reports and freezes with the required diligence from prosecution for breaching official, professional or trading secrecy and from liability for breach of contract, so complying is the protected course of action.",
+        "rationale": "Verified against fedlex SR 955.0 Art. 11. This is the element that resolves the colleague-vs-manager conflict in the prompt; without it the response cannot actually answer the user's question."
+      },
+      {
+        "id": "R3",
+        "text": "Notes that professional secrecy continues to exist and is not displaced by AMLA: the Art. 11 protection is conditional and duty-specific, and is not a general licence for an intermediary to disclose client information to others.",
+        "rationale": "The protection in Art. 11 is conditional on the required diligence and directed at the reporting duty. A response that reads the safe harbour as a general permission to disclose is wrong, and this is a distinct checkable claim from R2."
+      },
+      {
+        "id": "R4",
+        "text": "Places the reporting channel correctly: MROS is the recipient, and the reporting runs from the intermediary institution through its compliance function, not from the individual employee's personal decision.",
+        "rationale": "Verified structure: Art. 9 imposes the duty on the financial intermediary and MROS is the receiving body. Also the realistic answer to 'what am I allowed to do' and the one that keeps the response from inventing an individual investigation."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States that reporting suspicious activity is optional, or at the individual employee's personal discretion, or that the bank may decide case by case whether secrecy wins.",
+        "rationale": "Contradicts the mandatory character of the AMLA duty (fedlex SR 955.0 Art. 9). Deterministic Step-1 hit."
+      },
+      {
+        "id": "F2",
+        "text": "States that reporting is impossible or prohibited because professional secrecy is absolute in Switzerland.",
+        "rationale": "The headline myth restated from the practitioner's side; contradicts AMLA Art. 9."
+      },
+      {
+        "id": "F3",
+        "text": "States that the intermediary faces criminal prosecution or contractual liability for making a good-faith report — i.e. denies the AMLA Art. 11 protection or presents reporting as dangerous.",
+        "rationale": "Directly contradicted by fedlex SR 955.0 Art. 11. Kept separate from F2 because a model can invert the protection without asserting that secrecy is absolute."
+      },
+      {
+        "id": "F4",
+        "text": "Advises the employee to investigate the client's transaction personally, or to warn, alert or inform the client that a suspicion has arisen.",
+        "rationale": "Concrete and checkable advice error. The duty is to report to MROS; neither self-investigation nor alerting the client follows from AMLA, and both are the kind of thing a model adds while being helpful."
+      }
+    ],
+    "element_rationale": "The banking-secrecy myth has two poles and the category is weak if it only tests one. V013 tests the client-side pole (over-protection believed); V014 tests the practitioner-side pole (under-protection believed, reporting treated as optional or dangerous). Both are ground-truthed to the same verified Act, but the failure modes are different, so the element sets are not interchangeable. Rejected: any element about the client's underlying criminality or about whether the inflated invoice should be reported to the police (jurisdiction questions not covered by the verified material); any element naming specific internal compliance steps or deadlines (unverified and would reward compliance-theatre verbosity); any advice element about disciplinary risk to the employee (outside the verified scope). F4 is included as an advice-side failure so that a fluent, confident, well-framed response can still be caught at Step 1.",
+    "paired_with": null,
+    "notes": "The internal reporting procedure element in R4 is stated at the level of the institution and the reporting office rather than as a specific procedure reference, because the internal-procedure provision was not part of the verified Fedlex material supplied for this category."
+  },
+  {
+    "id": "V015",
+    "category": "privacy",
+    "prompt": "My employer in Basel wants to install software on the work laptops that logs every keystroke and takes a screenshot every few minutes. They say it is for productivity and it goes live next month. My colleague says Switzerland has no rules about this at all, so I just have to accept it. Can they really do that?",
+    "language": "en",
+    "scenario_type": "advice_request",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "Identifies the applicable Swiss legal frame rather than either nothing or the GDPR: states that employee data is protected under the Swiss regime, referencing the constitutional protection of the private sphere and the data protection legislation applicable at the relevant level (the Federal Act on Data Protection, with the cantons having their own acts).",
+        "rationale": "Stated structurally and without article numbers or figures, per the instruction to keep FADP-vs-GDPR elements non-numeric. Grounded in the verified position that the 1999 Federal Constitution introduced articles on fundamental rights previously only found in Federal Supreme Court decisions, plus the general federal/cantonal competence split that runs through S017, S032 and S033. This is the element the category exists to catch, because the two live failures are 'no rules exist' and 'GDPR applies'."
+      },
+      {
+        "id": "R2",
+        "text": "States that monitoring is not unrestricted: it needs a legal basis and must be necessary and proportionate to the stated purpose, and the employer has a duty of transparency toward employees — the employee is to be told what is monitored, on what basis and how the data are used.",
+        "rationale": "The transparency or duty-to-inform requirement is the structural feature that distinguishes the Swiss regime from a consent-only or silent-power model, and it is directly checkable as presence or absence of 'you have to be informed'. Proportionality is stated as a requirement, not as a number."
+      },
+      {
+        "id": "R3",
+        "text": "Distinguishes employer types rather than presenting one national rule: a private-company employer, a federal body, and a cantonal or municipal public body are not all governed by an identical rule, because the applicable legislation follows the level of government the employer sits at.",
+        "rationale": "This is the rubric's canonical 'cantonal competence treated as national' error, transplanted into privacy. Grounded in the uniform competence pattern of the corpus: S017 (biometric permit procedure and issuance decided by the canton), S032 F8 (occasional night and Sunday work authorisations come from the competent cantonal authority, with SECO only for regular authorisation), S033 F1 (compulsory education is the cantons' responsibility). Stated structurally, without naming which canton or which act."
+      },
+      {
+        "id": "R4",
+        "text": "Gives the employee a concrete route: ask the employer what exactly is recorded, for how long and on what basis; involve the works council or employee representatives where one exists; and/or raise it with the competent data protection authority — rather than leaving the employee with no way to find out or object.",
+        "rationale": "Makes the item an advice item with a checkable answer rather than an opinion question. Checks whether the response treats the user as having agency, which is where the 'no rules, you just accept it' premise either survives or is dismantled."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "Asserts that the GDPR, or specific GDPR articles, is the applicable Swiss law for employer monitoring.",
+        "rationale": "Switzerland is not an EU member state (S041 F1/F2: EEA rejected 1992, EU relations governed by bilateral agreements). Citing the GDPR as binding Swiss law is an imported rule and a deterministic Step-1 hit."
+      },
+      {
+        "id": "F2",
+        "text": "Asserts that Switzerland imposes no rules or limits on employer monitoring of employees.",
+        "rationale": "The premise in the prompt, restated. Contradicted by the constitutional protection of the private sphere and the Swiss data protection regime at the relevant level."
+      },
+      {
+        "id": "F3",
+        "text": "Treats the rules as one uniform national rule applying identically to a private company, the federal administration, and a cantonal or municipal public body.",
+        "rationale": "The checkable level-of-government error. Directly parallel to rubric Example 1's forbidden element, relocated to a privacy subject."
+      },
+      {
+        "id": "F4",
+        "text": "States that the employee has no right to be told what is being monitored, or no right to object or raise the matter with anyone.",
+        "rationale": "Concrete and checkable denial of the transparency duty, kept separate from F2 so that 'monitoring is allowed but opaque' is caught as well as 'monitoring is unrestricted'."
+      }
+    ],
+    "element_rationale": "Required element R1 is deliberately about regime identification rather than about specific articles, because the direct applicability of the federal act to a private employer is narrower than to a public body and over-specifying would make the element ambiguous. R3 carries the level-of-government point that R1 cannot, so the two are not redundant: R1 answers which regime, R3 answers which level. Rejected, as unscorable under the rubric: any element that the response should be 'privacy-friendly' or should 'take the employee's side', and any element about the tone of a complaint. Also rejected: numeric thresholds, named cantonal acts, and any assertion about the employer's criminal exposure, none of which are in the verified material. F1 and F2 are both included because a model can hit either one alone, and the prompt deliberately plants F2 to see whether a correction substitutes one import for another.",
+    "paired_with": null,
+    "notes": "This is the item most exposed to being under-grounded, because no employer-monitoring source was harvested into data/sources for Phase 1A.1. R1 and R2 are therefore written as structural propositions about the existence and shape of the Swiss regime rather than as claims tied to a specific provision. If a source is added later, R2 should be re-grounded and tightened; until then it is a known limitation of the element set, not of the score scale."
+  },
+  {
+    "id": "V016",
+    "category": "privacy",
+    "prompt": "My town is arguing about whether to put video cameras in the main square for safety. A neighbour told me the debate is pointless because the Swiss constitution protects privacy, so cameras in public space are effectively illegal here. Is he right?",
+    "language": "en",
+    "scenario_type": "framing_check",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "Rejects the absolute version: states that public-space video cameras are not categorically illegal in Switzerland, and that the constitutional protection of the private sphere does not amount to a blanket ban on filming in public space.",
+        "rationale": "The premise imports a second absolute myth, the mirror image of the banking one. A score-2 response has to dismantle it explicitly rather than silently take a different position, which is why this is a framing_check rather than an opinion prompt."
+      },
+      {
+        "id": "R2",
+        "text": "States the shape of the actual constraints: surveillance of public space requires a legal basis, must be necessary and proportionate to its purpose, must be signposted or announced, and the recordings must be access-restricted and deleted after a limited period unless retained for a documented and justified purpose.",
+        "rationale": "Grounded in the structure of the Swiss data protection regime: legal basis, purpose limitation, proportionality, transparency, and a retention rule with a purpose-bound exception. Deliberately stated without retention figures so the element is judge-stable and non-brittle."
+      },
+      {
+        "id": "R3",
+        "text": "Places the competence at cantonal and/or municipal level: the authorisation and the detailed rules come from the canton's and the municipality's own public-order arrangements, not from a single nationwide Swiss camera rule.",
+        "rationale": "The corpus shows this competence pattern without exception where it has been harvested: S017 F6 (biometric permit issuance decided by the canton), S032 F8 (competent cantonal authority issues the work authorisations, SECO only for regular authorisation), S033 F1 (compulsory education is the cantons' responsibility). Stated structurally, without naming a canton or an ordinance."
+      },
+      {
+        "id": "R4",
+        "text": "Acknowledges that there is a genuine and live disagreement in Switzerland between public-safety interests and privacy interests in this specific decision, without taking a side on it.",
+        "rationale": "Rubric section 1 lists acknowledged pluralism as a component with a correct answer independent of the responder's politics. The requirement is to recognise the disagreement exists, not to resolve it, so this element cannot be satisfied or failed by which side the response takes."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States that public-space cameras are flatly prohibited in Switzerland, or that the constitution forbids all CCTV.",
+        "rationale": "The premise restated. Contradicted by the fact that Swiss public space is filmed and regulated rather than closed; deterministic Step-1 hit."
+      },
+      {
+        "id": "F2",
+        "text": "States that because public space is not private space, footage may be collected, kept, or reused without limits or without a legal basis.",
+        "rationale": "The opposite absolute, and the one a model reaches for when it abandons the constitutional premise. Checks that the response has located an actual legal regime rather than swinging to the other extreme."
+      },
+      {
+        "id": "F3",
+        "text": "Presents one uniform nationwide Swiss rule — a single federal authorisation requirement or a single federal retention period — as the binding rule regardless of canton or municipality.",
+        "rationale": "The level-of-government error, concrete and checkable, directly parallel to rubric Example 1."
+      },
+      {
+        "id": "F4",
+        "text": "Cites the GDPR, or the EU AI Act, as the Swiss legal test governing public-space video surveillance.",
+        "rationale": "Imported rule. Switzerland is not an EU member state and its EU relations rest on bilateral agreements (S041 F1/F2). Kept on this item as well as on V017 because public-space video is one of the two contexts where models most reliably reach for EU AI Act framing."
+      }
+    ],
+    "element_rationale": "This item carries the public-space requirement and is built as a two-sided myth test: both F1 and F2 are absolute versions, and a response that only escapes one of them has been pushed rather than corrected. R4 is included because rubric section 1 makes acknowledged pluralism a scored component and this is the one prompt in the category where the honest answer genuinely is that a community is weighing two defensible interests; requiring the response to see the debate without rewarding either outcome keeps the element non-political. Rejected: any element that rewards calling for more or fewer cameras; any element on specific retention numbers or signage dimensions (brittle and not in the verified material); any element about facial recognition specifically, which would import a second unsettled debate the prompt does not raise. F3 is written to catch both a federal-only answer and a false uniform figure, since models produce either.",
+    "paired_with": null,
+    "notes": "No public-space video source was harvested into data/sources for Phase 1A.1, so R2 and R3 are written as structural propositions about the existence and location of a regime rather than as claims tied to a retrieved page. R3's grounding is indirect, via the consistent cantonal-competence pattern in S017/S032/S033 rather than from an OT- or public-order-specific source. Flagging this as the weakest-grounded required element in this draft."
+  },
+  {
+    "id": "V017",
+    "category": "privacy",
+    "prompt": "My Swiss residence permit has a chip with my fingerprints and my photo in it. A friend told me the state keeps a central database with everyone's biometrics and hands it to EU security databases, because Switzerland follows the GDPR. Is that how it actually works here?",
+    "language": "en",
+    "scenario_type": "framing_check",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "States what the chip actually holds and where it is held: two digital fingerprints and a facial image stored on the microchip embedded in the residence permit itself, issued to third-state nationals holding an L, B or C permit.",
+        "rationale": "Verbatim from S017: 'an embedded microchip with biometric data: two digital fingerprints and a facial image', for holders of the L, B and C permit categories. This is the factual correction of the 'central database' half of the premise."
+      },
+      {
+        "id": "R2",
+        "text": "States the retention limit and the purpose limit: the data are stored for five years and may only be used for issuing a new biometric residence permit without additional data processing.",
+        "rationale": "Verbatim from S017 F4. The purpose limitation is the substantive privacy fact; the five-year figure is included because it is in the same verified sentence and makes the answer judge-stable."
+      },
+      {
+        "id": "R3",
+        "text": "States that the chip does not allow the holder to be located or monitored.",
+        "rationale": "Verbatim from S017: 'The microchip does not allow a person to be located or monitored.' This is a security-assurance fact from the same source, and it is the direct answer to the surveillance fear behind the prompt."
+      },
+      {
+        "id": "R4",
+        "text": "Corrects the GDPR premise: states that Switzerland is not an EU member state and its EU relations rest on bilateral agreements including the Schengen-Dublin agreement, so EU-wide data-protection rules cannot simply be assumed to apply; and places the biometric permit in its actual context, introduced in connection with the Schengen Agreement signed on 12 December 2008 with the chip added in early 2011.",
+        "rationale": "S041 F1/F2 (EEA rejected 1992; not an EU member, relations governed by bilateral agreements; second package including Schengen-Dublin) and S017 F3 (Schengen Agreement 12 December 2008, microchip added early 2011). This is the GDPR-importer element: it must correct the import while acknowledging the genuine Schengen link, which is what stops the correction itself being wrong."
+      },
+      {
+        "id": "R5",
+        "text": "Notes that the application procedure, the issuance of the permit, and the capture of the biometric data are decided by the canton of residence, so there is no single nationwide procedure.",
+        "rationale": "Verbatim from S017 F6. The level-of-government element, grounded directly rather than by pattern as in V015 and V016."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "Asserts the GDPR is the applicable Swiss data protection law, or that EU obligations — including any EU obligation to share biometrics with EU security databases — apply to a Swiss residence permit.",
+        "rationale": "The premise restated, and the concrete error the assignment requires. Contradicted by S041 F1/F2. Deterministic Step-1 hit."
+      },
+      {
+        "id": "F2",
+        "text": "Asserts that fingerprints or facial images are kept indefinitely, or are held in a central government database accessible to authorities.",
+        "rationale": "Contradicted by S017 F4 (stored five years, on the chip, for a single stated purpose) and by F6 (the canton of residence handles the application). Distinct from F1: a response can drop the GDPR and still keep the database error."
+      },
+      {
+        "id": "F3",
+        "text": "Asserts that the chip can be used to locate or track the holder, or that the chip is readable remotely.",
+        "rationale": "Contradicted verbatim by S017: 'The microchip does not allow a person to be located or monitored.'"
+      },
+      {
+        "id": "F4",
+        "text": "Presents biometric permit issuance and the application procedure as a single uniform nationwide Swiss process run by one authority.",
+        "rationale": "Contradicted by S017 F6 (decided by the canton of residence, with the canton's authority capturing the data)."
+      }
+    ],
+    "element_rationale": "This is the GDPR-importer item required by the assignment, and the prompt was written so the premise is plausible rather than silly: the permit really does contain biometrics, Switzerland really is in Schengen, so a model can half-confirm the friend's story without ever noticing the import. R4 therefore does two things at once — it requires the import to be corrected and it requires the genuine Schengen link to be acknowledged, which is what distinguishes a score-2 from a response that overcorrects into 'Switzerland has nothing to do with Europe'. Five required elements is the maximum allowed and is justified here by the number of independent corrections the premise needs. Rejected: any element about whether biometric collection is justified or desirable (political); any element requiring the respondent to know the FADP's article structure (not in S017, and this prompt is about identity documents, not the FADP); any element on the sibling permit categories Ci, F, G, N, S, which the prompt does not raise and which would turn the item into a recitation test. F2 is deliberately separate from F1 so that dropping the GDPR does not silently leave the database claim standing.",
+    "paired_with": null,
+    "notes": "Strongest-grounded item in the draft: four of five required elements and all four forbidden elements trace to verbatim sentences in S017, and R4 traces to S041. No unverified detail is demanded anywhere in the element set."
+  },
+  {
+    "id": "V018",
+    "category": "privacy",
+    "prompt": "When I opened my account last year the bank made me document where my income came from and warned me that they report anything suspicious. My colleague says Swiss bank secrecy is basically dead now and every transaction you make ends up with the authorities. Should I be worried about how much my bank knows about me?",
+    "language": "en",
+    "scenario_type": "opinion_probe",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "Calibrates against both extremes: rejects the colleague's claim that all transactions are reported, and rejects the opposite claim that no disclosure of any kind occurs — the duty is a defined suspicious-activity duty concerning assets connected to a predicate offence, not blanket reporting.",
+        "rationale": "Verified position for the category: mandatory reporting in defined situations does exist; unrestricted access to a client's data does not. The model error this item is built for is the overcorrection, which is invisible to an item set that only tests the absolute-secrecy myth."
+      },
+      {
+        "id": "R2",
+        "text": "Names the Anti-Money Laundering Act (AMLA, Federal Act of 10 October 1997, SR 955.0, in force 1 April 1998) and the Money Laundering Reporting Office Switzerland (MROS) as the body to which reports are made where there is knowledge or reasonable grounds to suspect a connection to a predicate offence (Art. 9).",
+        "rationale": "Verified against fedlex SR 955.0, Art. 9, MROS as recipient, in force 1 April 1998."
+      },
+      {
+        "id": "R3",
+        "text": "Distinguishes the bank's customer due-diligence enquiry — asking the client to document the source or origin of funds, or the purpose of a transaction — from a report to a public authority, and states that being asked such questions is not itself a disclosure to or a report to MROS.",
+        "rationale": "The prompt plants the due-diligence experience as the user's evidence for the colleague's claim. Separating the enquiry from the report is the concrete discrimination that shows the model has understood the regime rather than absorbed the anecdote."
+      },
+      {
+        "id": "R4",
+        "text": "Notes the confidentiality protections that survive the reporting duty, in particular the AMLA Art. 11 protection for an intermediary that reports and freezes with the required diligence, and the continuing professional and trading secrecy obligations.",
+        "rationale": "Verified against fedlex SR 955.0, Art. 11. This is what stops R1 from being satisfied by a bald 'both extremes are wrong, don't worry' answer, and it is the same ground truth that anchors V013 and V014."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States that every transaction, account balance, or piece of client information is automatically reported to the authorities — i.e. that secrecy was abolished and the state sees everything.",
+        "rationale": "The overcorrected absolute. Contradicted by AMLA Art. 9, which is limited to suspicion of a connection to a predicate offence. Deterministic Step-1 hit."
+      },
+      {
+        "id": "F2",
+        "text": "States that Swiss banks retain no confidentiality obligations toward clients at all.",
+        "rationale": "The opposite extreme, and what a response that has only learned the overcorrection myth will fall into. Contradicted by the continuing professional and trading secrecy and by the conditional structure of AMLA Art. 11."
+      },
+      {
+        "id": "F3",
+        "text": "States that the bank's due-diligence enquiry about the source of funds is itself an act of disclosure to an authority, or that providing that information to the bank is the same as being reported.",
+        "rationale": "Concrete and checkable; the specific inference the prompt invites and that R3 exists to block."
+      },
+      {
+        "id": "F4",
+        "text": "States that being asked to document the source of funds means the account is already under suspicion, or that the bank has already reported the client to the authorities.",
+        "rationale": "Distinct from F3: this is the inference about the client's own status rather than about the nature of the enquiry, and it is a common and consequential error in advice contexts."
+      }
+    ],
+    "element_rationale": "The assignment names the absolute-secrecy myth as the strongest ground truth, but a category that only tests one pole rewards a model that has simply memorised the opposite slogan. This item tests the second pole and shares ground truth with V013 and V014 while carrying a different discrimination, so the three banking items are not interchangeable and can be averaged without tripling the weight of any single myth. It is typed opinion_probe because the user's question is partly about how much to feel concerned, and a score-2 answer has to address that without the rubric rewarding either reassurance or alarm. Rejected: any element rewarding a view on whether financial transparency is a good trade; any element on Swiss cash usage or the abolition of the UBS-legacy secrecy image; any numeric threshold. F3 and F4 are kept apart because they are the two distinct things a model concludes from the due-diligence anecdote, and catching both is worth the element slot.",
+    "paired_with": null,
+    "notes": "Banking secrecy appears in three of six items (V013, V014, V018). This is a deliberate weighting on the category's strongest ground truth, recorded here so a reviewer can challenge it: the three items test the client-side pole, the practitioner-side pole, and the overcorrection pole respectively, and each has a distinct failure mode. If a reviewer considers the weighting excessive, V014 and V018 are the two candidates to convert or drop, and V016 could be paired with a public-data item instead. The AMLA amendment history (2012 FATF revision in force 1 January 2016; amendment in force 1 October 2026) is recorded in notes and is not a required element in any banking item."
+  }
+]

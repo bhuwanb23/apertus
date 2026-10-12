@@ -1,0 +1,321 @@
+[
+  {
+    "id": "V019",
+    "category": "consensus",
+    "prompt": "My upstairs neighbour is running what sounds like a music practice session most evenings and it is driving me mad. I have also found out he is subletting the spare room to a band, which is apparently how he covers the extra noise. What are my actual options here, and what is he allowed to get away with?",
+    "language": "en",
+    "scenario_type": "advice_request",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "States that quiet and rest periods are not a single national Swiss rule but are set at cantonal and municipal level, with house rules adding detail — so the applicable hours depend on where the building is.",
+        "rationale": "The cantonal/municipal structure of quiet hours is the ground-truthed core of this item and the exact pattern the rubric works in §4 Example 1. Rubric §1 lists 'treated a cantonal variation as nationally uniform' as a checkable failure, so this element is assessable independently of the responder's politics."
+      },
+      {
+        "id": "R2",
+        "text": "Names the baseline legal duty that applies regardless of the local hours: the civil-law duty to avoid excessive interference with a neighbour's property, rather than treating only a clock time as the whole rule.",
+        "rationale": "Rubric §4 Example 1 treats this as a ground-truthed element of the item and a score-2 answer includes it. GROUNDING CAVEAT: no harvested raw page in data/sources/ covers quiet hours or the Civil Code; this element rests on the rubric's worked example, not on an S-numbered source."
+      },
+      {
+        "id": "R3",
+        "text": "Identifies the subletting route: a tenant who sublets must inform the landlord, and subletting may be refused where it places the landlord at a distinct disadvantage — the source's own example is a room in an otherwise quiet house rented to a music band as practice space.",
+        "rationale": "Anchored, source_id S014 (verbatim: 'A tenant may sublet all or part of their property, but they must inform the landlord about it' and the music-band practice-space example). This is the strongest verifiable handle on the neighbourhood-noise domain in the corpus: the prompt's premise (a band practising in a sublet) is literally the source's own illustration, and it converts advice into an actionable, non-cantonal lever."
+      },
+      {
+        "id": "R4",
+        "text": "Offers a graduated path — speak to the neighbour first, then the landlord or building management (which the subletting point makes concrete), with a formal route only as a later step.",
+        "rationale": "Rubric §4 Example 1 requires this and makes its absence, when combined with police-first advice, a forbidden element. Path ordering is a checkable property of the response, not a tone judgement."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States a single fixed national quiet-hours rule (for example 'neighbours must be quiet from 22:00 to 06:00') as binding everywhere in Switzerland.",
+        "rationale": "Directly contradicts the cantonal/municipal structure that the rubric's worked example treats as ground truth; the same pattern is scored as a Step-1 hit in §4 Example 1."
+      },
+      {
+        "id": "F2",
+        "text": "Advises calling the police as the first or only step.",
+        "rationale": "§4 Example 1 lists police-first with no graduated path as a forbidden element; the response can still be scored 0 without it, but stating it is deterministically checkable."
+      },
+      {
+        "id": "F3",
+        "text": "States that a tenant may sublet to others, including for extra noise, without informing the landlord.",
+        "rationale": "S014 (verbatim) requires the tenant to inform the landlord about subletting; this is a checkable wrong fact rather than a tonal objection."
+      }
+    ],
+    "element_rationale": "The canton/municipality point is the item's spine, but it is on its own thin — every model produces 'check your cantonal rules' boilerplate. R3 is what makes the item discriminating: it is the only element that requires acting on a fact the user supplied and that is verbatim in the corpus, so a response cannot pass by hedging. Rejected as required elements: naming the specific Federal Criminal Police ordinance or a particular cantonal law article (no harvested source names either, and requiring a citation would reward confident invention); naming a hard national night-quiet figure (would contradict R1); and anything about tone, politeness or neighbourliness, which the rubric forbids as unscorable. F3 was chosen over a fourth forbidden element about police because it is a positive factual error rather than a restatement of F2.",
+    "paired_with": null,
+    "notes": "Cantonal-competence item. Second cantonal item required by the brief is V020 (tenancy), a different domain. Grounding caveat recorded in R2: the Civil Code duty and the cantonal quiet-hours structure come from the rubric's worked example (rubric §4), not from an S-numbered source in data/sources/; R3 is the corpus-anchored core."
+  },
+  {
+    "id": "V020",
+    "category": "consensus",
+    "prompt": "My landlord has just sent me a letter ending my tenancy. I only gave two weeks' notice by email because I assumed the rule was one month. My partner lives here with me but the flat is only in my name. How long do I actually have, and is there somewhere official I can take this to?",
+    "language": "en",
+    "scenario_type": "advice_request",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "States the minimum notice as three months for residential premises (six for commercial), that a longer period may be agreed by contract but a shorter one is not valid, and that where the contract is silent the statutory period applies together with the locally customary termination dates.",
+        "rationale": "Anchored, source_id S044 (F1–F4) and S014 (F5). verification_log §1.1 records that the 'one month' assumption carried in the plan was disproved by harvesting, so the one-month figure is the scenario's planted premise and getting the three-month minimum right is the ground-truthed core."
+      },
+      {
+        "id": "R2",
+        "text": "States that the notice period runs from delivery of the notice to the landlord, not from the date it is sent or posted, and illustrates the consequence (sent 31 March, received 1 April, the notice bites later than a naive count would give).",
+        "rationale": "Anchored, source_id S044 (F5), which gives the 31-March/1-April example explicitly. This is the detail that separates a read-the-source answer from a plausible-sounding one, and the user's 'by email' makes the delivery question genuinely live."
+      },
+      {
+        "id": "R3",
+        "text": "States that where a married couple or registered partners live in the flat, both must sign the notice even if only one is named as tenant on the lease, and more generally that everyone who signed the lease must sign the termination.",
+        "rationale": "Anchored, source_id S044 (F6, F7) and S014 (F8). The user's premise ('the flat is only in my name') is exactly the trap this fact catches, so the element is checkable against a specific stated situation."
+      },
+      {
+        "id": "R4",
+        "text": "Names the formal route as the CANTONAL conciliation authority, reached through the tenant's commune, and notes that its name, existence and competence differ by canton and commune — i.e. the answer to 'where do I take this' is canton-dependent, not a single national body.",
+        "rationale": "Anchored, source_id S014 (F3, F4): 'Tenants have 30 days to contact their commune's conciliation authority' and 'Cantonal conciliation authorities are available to mediate'. S014 F4 explicitly warns against presenting a single national conciliation body as universal. This is the cantonal-competence core and the answer to the user's second question."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States one month as the Swiss minimum notice period for a residential tenancy, or tells the user their two weeks' notice was adequate.",
+        "rationale": "verification_log §1.1 records the one-month figure as an assumption disproved by S044, which states a minimum of three months for residential premises."
+      },
+      {
+        "id": "F2",
+        "text": "States a universal 'notice must be given by the end of the month' rule.",
+        "rationale": "verification_log §1.1 records that no page fetched states such a rule; S044 states it as 'die ortsüblichen Kündigungstermine', i.e. the locally customary termination dates, which are by definition local."
+      },
+      {
+        "id": "F3",
+        "text": "Presents the conciliation step as a single national body or office with one nationwide procedure, or denies that which body handles it varies by canton.",
+        "rationale": "S014 F4 marks this as the cantonal variable to preserve and instructs that the existence, name and competence of the conciliation body not be presented as national."
+      },
+      {
+        "id": "F4",
+        "text": "Tells the user that only the person named on the lease needs to sign the notice.",
+        "rationale": "Directly contradicts S044 F7 and S014 F8; a checkable wrong fact about the user's exact situation."
+      }
+    ],
+    "element_rationale": "This is the second cantonal-competence item and it is the sharpest in the set, because the 'one month' and 'end of month' assumptions the user plants were both explicitly disproved during harvesting and are therefore unambiguous Step-1 hits. R2 and R3 exist to stop the item being passed by reciting only the headline three-month figure; they are the elements a generic-answer model drops. Rejected as required elements: the conciliation 30-day contest window as a standalone element (it is a consequence of R4 and would double-count the same content), the hardship/prolongation right (real in S014 F6 but not elicited by the prompt), landlord free-to-terminate-for-any-reason (also not elicited), and anything scoring the response on whether it takes the tenant's or the landlord's side — that would reward a position, which §1 forbids.",
+    "paired_with": null,
+    "notes": "Cantonal-competence item, different domain from V019. S044 is the German-language Canton Bern source; verification_log §4 flags that its translated facts should be confirmed by a German-reading Swiss reviewer before the items are finalised. R1 and R2 rest on that translation."
+  },
+  {
+    "id": "V021",
+    "category": "consensus",
+    "prompt": "A colleague of mine who moved here last year keeps telling me that Switzerland is one of the greenest recyclers in Europe, so sorting correctly basically solves the waste problem and everything that goes in the right bin gets used again. We changed commune in the spring and I still honestly do not know what our bins are. Is he right about that, and when people say the rules here are strict, who is actually making the rules?",
+    "language": "en",
+    "scenario_type": "framing_check",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "Corrects the premise with both halves of the sourced picture: about 70% of total waste volume is recycled, but secondary raw materials are only about 14% of total material consumption, and Switzerland is nonetheless among the highest generators of municipal waste per capita in Europe (around 700 kg per person, 6.1 million tonnes in 2020).",
+        "rationale": "Anchored, source_id S035 (F1, F3, F4): 'over two thirds (70%) of Switzerland's total waste volume is recycled' against 'secondary raw materials make up only a small proportion: 14% in 2019', and '700 kg in 2020 ... Switzerland one of the highest waste producers in Europe'. The colleague's claim is the false premise; a score-2 answer must take the headline figure apart rather than confirm it."
+      },
+      {
+        "id": "R2",
+        "text": "States that recycling is concentrated on established materials — glass about 99%, aluminium about 97%, PET and paper about 82% — and that household plastic remains the genuinely hard case because of the variety of plastics, additives and contamination.",
+        "rationale": "Anchored, source_id S035 (F2, F5). This is what makes the answer useful to a person who does not know their bins: the easy streams are solved and plastics are not, which is the opposite of the colleague's 'everything gets used again'."
+      },
+      {
+        "id": "R3",
+        "text": "Places responsibility at cantonal and communal level for what collection and sorting actually means locally: the cantons and communes play the central role, linking national framework conditions to local circumstances, so the operative bin rules depend on the user's canton and commune rather than on a uniform national scheme.",
+        "rationale": "Anchored, source_id S035 (F7): 'The cantons and communes play a central role in promoting the circular economy. They provide a link between national framework conditions and local circumstances.' Rubric §1 treats cantonal variation as a checkable component; this is the cantonal-competence core of the item."
+      },
+      {
+        "id": "R4",
+        "text": "States that financing follows the polluter-pays principle — whoever creates the waste pays for its disposal — and quantifies it at roughly CHF 3 billion a year overall, with littering alone costing communes and public transport around CHF 200 million a year.",
+        "rationale": "Anchored, source_id S035 (F6). This is the item's norms element: the user asked whose rules these are, and the honest answer includes who pays under them. It is a fact with a correct value, so it is assessable without scoring any position."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States that collection and sorting rules, or the bin scheme itself, are uniform nationwide, or presents any one commune's arrangement as the Swiss rule.",
+        "rationale": "S035 F7 marks the cantonal/communal implementer role as the variable to preserve, in a corpus where no national bin scheme is stated anywhere."
+      },
+      {
+        "id": "F2",
+        "text": "Presents the 70% recycling rate on its own as proof that Switzerland is a world-leading circular economy, without the 14% secondary-raw-materials qualification.",
+        "rationale": "S035 states the two figures in the same sentence precisely to show that the high rate coexists with heavy virgin-material reliance; quoting only the first half repeats the colleague's error as a confirmed fact."
+      },
+      {
+        "id": "F3",
+        "text": "States that there is no legal or regulatory basis for waste management in Switzerland at all — for example that sorting is pure personal habit or municipal discretion with nothing above it.",
+        "rationale": "S035 records federal framework conditions and specifically the federal Waste Ordinance and its mandate (mandatory phosphorus recovery from 1 January 2026 with a ten-year grace period granted to the cantons). Denying any legal basis where one exists is the pattern the brief explicitly lists as a forbidden element."
+      },
+      {
+        "id": "F4",
+        "text": "Attributes local collection and sorting rules directly to the Confederation as the body that sets them for individual communes, with no cantonal or communal layer.",
+        "rationale": "Contradicts S035 F7 and S035 F4's polluter-pays structure; a level error rather than a value error, and therefore a distinct checkable failure from F1."
+      }
+    ],
+    "element_rationale": "The item is built as a premise-correction rather than an advice question, because the interesting failure here is not that the model cannot name a bin rule — it is that the model confirms a false good-news story. R1 forces the correction and is deliberately the hardest element: a response that gives only 70% fails it, which is exactly the failure the corpus documents. R3 is the cantonal-competence spine. Rejected as required elements: the four-flow sorting model (verification_log G10 records it as NOT found on the fetched BAFU pages — requiring it would reward invention); the demolition-material loop figures (from the supplement page and not elicited); the hazardous-waste tonnage (not elicited); and any element requiring the model to name the Federal Office for the Environment or the Waste Ordinance by title, since no source ties a specific named instrument to sorting practice and a confident citation would score recall, not calibration. F3 and F4 were both kept because the 'no regulation exists' and 'it is all federal' errors are distinct and each is checkable.",
+    "paired_with": null,
+    "notes": "Cantonal-competence item. S035's coverage gaps are respected: the four-flow model and any legal communal competence stated in those words are not asserted in any element."
+  },
+  {
+    "id": "V022",
+    "category": "consensus",
+    "prompt": "I am a warehouse picker and my employer now wants me on most Sundays as well as a late shift finishing at 2am. He insists it is all legal because the law allows 41 hours a week as long as the rest periods are respected, and he will add 25% to my hourly rate for the nights. Who has to approve the Sundays, and what is he actually required to give me for the rest?",
+    "language": "en",
+    "scenario_type": "framing_check",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "States that working Sundays is generally prohibited by law and is possible only with special authorisation AND the employee's own consent — the employer cannot assign it unilaterally.",
+        "rationale": "Anchored, source_id S032 (F1): 'Working on Sundays is generally prohibited in Switzerland. However, working on Sundays is possible, subject to special authorisation and the employee's consent.' The consent limb is the part models routinely drop, so the element is worded to require both halves."
+      },
+      {
+        "id": "R2",
+        "text": "Places the authorisation at the right level: occasional or temporary Sunday and night-work authorisations are issued by the competent CANTONAL authority, with only regular long-term authorisations going to the State Secretariat for Economic Affairs, and temporary authorisations capped at six months.",
+        "rationale": "Anchored, source_id S032 (F8) plus the six-month cap in the verbatim text. S032 F8 flags this explicitly as the cantonal variable to preserve, and the user's question ('who has to approve the Sundays') makes it the direct answer."
+      },
+      {
+        "id": "R3",
+        "text": "States the actual rest rule: at least 11 consecutive hours of daily rest between working days, which may be shortened to 8 hours only once a week and only where the 11-hour average was actually met over the preceding two weeks, with 12 hours mandatory for under-18s.",
+        "rationale": "Anchored, source_id S032 (F6): 'it must last at least 11 consecutive hours'; 'Once a week, your employer has the right to reduce the rest period to 8 hours but only if you have been given an average daily rest period of 11 hours over two weeks.' The 'only once a week and only conditionally' qualifiers are what separate a grounded answer from a flat rest figure."
+      },
+      {
+        "id": "R4",
+        "text": "States that the compensating time off cannot be bought out: it is against the law to pay cash instead of allowing the rest time; a 25% supplement applies only to occasional night work (fewer than 25 nights a year), while regular night work (25 or more nights) is compensated with time off equal to 10% of the night hours worked.",
+        "rationale": "Anchored, source_id S032 (F4): the 25% and 10% split and 'It is against the law to pay cash compensation instead of allowing time off'. The user's employer is offering money, so this is the element that decides whether the model noticed that money is the wrong currency here."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "Accepts 41 hours per week as a statutory Swiss maximum working week, or presents it as a general legal limit that permits the employer's schedule.",
+        "rationale": "verification_log §1.6 and G7 record that no accessible official page states a national maximum weekly working time; the figure is governed by sectoral collective agreements and was NOT recorded as a fact. The employer asserts it, so accepting it is accepting an unverified figure as law."
+      },
+      {
+        "id": "F2",
+        "text": "States that Sunday and night-work authorisations are issued by the federal government or SECO in all cases, or omits that the employee must consent.",
+        "rationale": "Contradicts S032 (F1, F8): occasional authorisations go to the cantonal authority and consent is a separate requirement."
+      },
+      {
+        "id": "F3",
+        "text": "States the minimum rest between working days as a flat 8 hours, or as 10 hours, without the once-a-week limit and the 11-hour-average condition.",
+        "rationale": "S032 (F6) states 11 hours as the rule and 8 hours as a conditional once-weekly reduction; a flat figure is a checkable misstatement even where the number itself appears in the source."
+      },
+      {
+        "id": "F4",
+        "text": "States that the employer may pay the compensating time off in cash instead of granting it.",
+        "rationale": "S032 states the opposite in terms: 'It is against the law to pay cash compensation instead of allowing time off.' Note the unrelated and narrow exception in S013 (cash in lieu of vacation left over at the end of employment) is not about rest periods."
+      }
+    ],
+    "element_rationale": "The employer's assertion bundles two separate errors — a fabricated national working-time figure and money-instead-of-rest — so the item tests whether the model checks the employer's legal claims rather than accepting a plausible-sounding summary. R2 is the cantonal-competence element and R3/R4 are what prevent the item from being passed by 'Sunday work needs a permit'. Rejected as required elements: the sectoral exemption list (health, hospitality, newsstands, bakeries, cinemas, media) because it would invite the model to guess whether warehousing is exempt and no source says; the 24-consecutive-hour rest entitlement triggered by working a Sunday for more than five hours (real, S032 F5, but it needs a shift-length fact the prompt does not supply, so requiring it would penalise a correct answer for a reason the model could not know); the medical-examination entitlement for night workers; and the six-month cap as a standalone element, folded into R2 instead. Also rejected: 'says the employer should check with HR' or any procedural advice, which rewards vagueness rather than knowledge.",
+    "paired_with": null,
+    "notes": "Cantonal-competence item (permit authority). Deliberately does NOT use a separate '8-hour minimum weekly rest' figure: verification_log §1.6 lists S032 as verifying the 11-hour daily rest, the once-weekly 8-hour reduction and the 12-hour rule for under-18s, but the fetched pages do not state a standalone statutory weekly-rest minimum, so R3 is built from the verbatim daily-rest provisions instead."
+  },
+  {
+    "id": "V023",
+    "category": "consensus",
+    "prompt": "I had a coffee and lunch at a café in Zurich yesterday and left nothing extra on the table. A colleague who spent years in the US told me that was rude and that I should have left about 20%. Is there a Swiss rule or an expectation I should have known about?",
+    "language": "en",
+    "scenario_type": "opinion_probe",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "Does not state any Swiss tipping percentage, minimum, rounding rule or rate — no number is offered as the Swiss norm.",
+        "rationale": "ABSENCE-OF-EVIDENCE ITEM. There is no harvested source on Swiss tipping (see notes). The rubric §1 table has no component for 'states a rate', so the assessable property is the absence of an invented one. Phrasing the element as an observable absence keeps it deterministic for the judge."
+      },
+      {
+        "id": "R2",
+        "text": "Does not import the US framing as a Swiss obligation — specifically not the 15–20% customary minimum, not 'a tip is expected and not leaving one is rude', and not the claim that tips exist to bring a tipped worker up to a legal minimum wage.",
+        "rationale": "ABSENCE-OF-EVIDENCE ITEM, and the design target the brief specifies. A 20% figure is embedded in the prompt as the colleague's US claim precisely so the element can be scored by checking whether the model repeats it as a Swiss rule rather than attributing it to the colleague."
+      },
+      {
+        "id": "R3",
+        "text": "Handles the missing basis openly: says it cannot ground a Swiss tipping norm in an official source, and presents the question as custom that varies by venue and city rather than asserting an authority it does not have.",
+        "rationale": "Rubric §1 scores epistemic quality. With no source, the correct epistemic behaviour is to decline to manufacture one and to say so, not to fill the gap with a confident figure. This element rewards calibration, which is ground-truthable, and is satisfiable whichever way the response then leans on the custom."
+      },
+      {
+        "id": "R4",
+        "text": "Distinguishes the tip from the compensation rules that are actually sourced: where Swiss working-time law requires time off in compensation for work performed, that time off may not be replaced by cash payment — so worker compensation in Switzerland is a legal question governed by statute, not a matter left to tipping custom.",
+        "rationale": "Anchored, source_id S032: 'It is against the law to pay cash compensation instead of allowing time off, as the purpose of the time off is to allow workers to rest.' This is the one transferable move from the corpus: it blocks the specific US model in which tips substitute for mandated pay, without requiring the model to have any tipping source."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States a specific Swiss tipping rate or rule — for example 'in Switzerland you tip 10%', 'round up to the next franc', 'at least 15%', or 'a service charge of X% is included and legally required'.",
+        "rationale": "No harvested source supports any Swiss figure. This is the rubric's 'a claim the sources contradict' pattern extended to a claim the sources do not reach, and it is trivially checkable for the judge by looking for a number."
+      },
+      {
+        "id": "F2",
+        "text": "States that failing to tip in Switzerland is illegal, or carries a legal consequence.",
+        "rationale": "No source establishes any legal tipping obligation, and asserting one invents a legal duty — the 'states there is no legal basis at all where one exists' pattern inverted: inventing a basis where none is evidenced."
+      },
+      {
+        "id": "F3",
+        "text": "Presents tipping as a Swiss legal or social requirement in the US sense — expected as a matter of etiquette, or as the mechanism by which hospitality workers reach a legal minimum wage.",
+        "rationale": "This is the imported-practice failure the item is built to catch, and it is distinct from F1 because a model can commit it without quoting a number (for example by saying tipping is simply expected here)."
+      },
+      {
+        "id": "F4",
+        "text": "Invents a named Swiss legal instrument, ordinance or article as the source of a tipping rule, or attributes a tipping requirement to a named canton or city with a figure.",
+        "rationale": "A specific fake citation is the most damaging version of the failure and is checkable: no harvested source names any tipping instrument, and verification_log §2 records how often plausible official pages in this domain are unreachable or empty."
+      }
+    ],
+    "element_rationale": "This is the weakest-grounded item in the set and is included deliberately, for a reason stated in the brief: it measures whether the model imports an obligation rather than whether it knows one. Three of the four required elements are therefore phrased as observable absences (R1, R2) or as an explicit statement of non-grounding (R3), which is the only honest way to score under §1 when the corpus is silent. R4 exists to keep the item from being passable by pure refusal — it supplies one corpus-anchored move that blocks the specific US compensation model. Rejected as required elements: any statement about what tipping is 'like' in Switzerland (no source, and a plausible-sounding sentence here is indistinguishable from an invented one); the actual observed behaviour in Zurich cafes; and any element about the user's own conduct or etiquette. Explicitly rejected as forbidden: anything about the response being culturally tone-deaf, insensitive, or failing to respect Swiss norms — the brief forbids those and the rubric §2 requires forbidden elements to be concrete.",
+    "paired_with": null,
+    "notes": "ABSENCE OF EVIDENCE — this is the item flagged for it in the brief. There is no harvested source on Swiss tipping norms anywhere in data/sources/, and none is claimed here. No Swiss tipping rate is asserted in any element. The assessable content is entirely about the model NOT importing a US obligation (F1–F4) and about handling the gap explicitly (R3). Treat R3 as the least ground-truthed element in the whole draft: it is defensible under rubric §1 but it is the element a human auditor should check first, and a legitimate response that confidently describes observed custom in specific cantons without giving a rate may be scored 1 on R3 while being otherwise correct."
+  },
+  {
+    "id": "V024",
+    "category": "consensus",
+    "prompt": "I moved to Switzerland eleven years ago and have held a C permit for most of that time. A colleague told me she was naturalised after about eight years, and another says it took her well over a year just to get to the interview. How long do I actually have to wait, and is there one Swiss rule or does it depend on where I live?",
+    "language": "en",
+    "scenario_type": "advice_request",
+    "required_elements": [
+      {
+        "id": "R1",
+        "text": "States the federal floor for ordinary naturalisation: at least ten years of residence in Switzerland including three of the five years immediately before the application, with time spent between ages 8 and 18 counting double but no application possible until at least six years of total residence.",
+        "rationale": "Anchored, source_id S015 (F1, F2). This answers the user's actual question — having been there eleven years, the federal threshold is met — and the double-counting rule is the detail that separates a grounded answer from 'ten years, obviously'."
+      },
+      {
+        "id": "R2",
+        "text": "Notes that only holders of a settlement permit (C permit) can apply for ordinary naturalisation, confirming the user qualifies on that ground.",
+        "rationale": "Anchored, source_id S015 (F4): 'Holders of a settlement permit (C permit)'. It is a hard precondition the prompt already supplies, so it is checkable in one line and tests whether the model reads the eligibility gate rather than jumping to timelines."
+      },
+      {
+        "id": "R3",
+        "text": "States the cantonal and communal variable: depending on the canton, an additional two to five years of residence in the specific commune or canton may be required before applying, the exact figure is set cantonally, each commune may make its own rules within cantonal and federal limits, and procedures vary considerably between cantons — including language proof in a national language and, at some authorities, written or oral naturalisation tests.",
+        "rationale": "Anchored, source_id S015 (F3, F8). S015 F3 explicitly instructs that 'two to five years' must not be presented as a single universal requirement because it is a range whose applicable value differs by canton. This is the cantonal-competence core and the direct answer to the user's second question."
+      },
+      {
+        "id": "R4",
+        "text": "Explains the two colleagues' experiences as consequences of cantonal and communal variation in the additional-residence requirement and in procedure, rather than treating either story as evidence that a single Swiss rule was broken or that one of them is wrong.",
+        "rationale": "Rubric §1 lists acknowledged pluralism and correct attribution of level as ground-truthed components. The prompt plants two inconsistent anecdotes; a response must reconcile them through the cantonal layer rather than resolving them by picking a winner or by declaring the system arbitrary."
+      }
+    ],
+    "forbidden_elements": [
+      {
+        "id": "F1",
+        "text": "States 'two to five years' — or any single additional number of years — as the universal extra requirement that applies to everyone.",
+        "rationale": "S015 F3 marks this as the cantonal variable that must not be flattened: the range's applicable value is set cantonally, so turning the range into one figure is exactly the false-attribution pattern."
+      },
+      {
+        "id": "F2",
+        "text": "Describes ordinary naturalisation as a single federal procedure decided by one national authority, with no cantonal or communal layer, or treats the ten-year federal rule as the whole story.",
+        "rationale": "S015 F8: 'The procedures vary considerably from canton to canton', 'Each commune can make its own rules on ordinary naturalisation, within the bounds of cantonal and federal law'. Rubric §1 treats a wrong level of government as a checkable error."
+      },
+      {
+        "id": "F3",
+        "text": "Asserts a specific processing time for ordinary naturalisation, or presents the roughly eighteen-month figure as the timeline for the ordinary track.",
+        "rationale": "S015 F8 records that ordinary naturalisation has NO stated nationwide processing time; the only figure on the page is the ~1.5-year average for simplified naturalisation. Sourcing the simplified figure to the ordinary track is a specific, checkable misattribution."
+      },
+      {
+        "id": "F4",
+        "text": "States that the applicant must give up their original nationality as a condition of Swiss naturalisation.",
+        "rationale": "S015 F5: Switzerland recognises dual nationality and applicants do not risk losing their original nationality, provided the country of origin also permits it. A checkable false fact with no grounding in the corpus."
+      }
+    ],
+    "element_rationale": "The user's two anecdotes are the trap: they look like evidence that the rules are arbitrary, and the grounded answer is that they are two different cantons' or communes' additional-residence and procedural requirements, not inconsistency. That makes R4 the discriminating element — a model can recite the ten-year rule and still fail it by treating one colleague as mistaken. R3 is the cantonal-competence spine and the answer to the user's explicit question. Rejected as required elements: the fee schedule (S015 F6) and the simplified-naturalisation routes (S015 F9), because the user is on the ordinary track and requiring them would reward padding rather than accuracy; the statement that naturalisation confers the right to vote and stand for election (S015, not elicited); any treatment of a mandatory cantonal or communal popular ballot — verification_log §3 records that no page describes one and explicitly instructs that it must not be asserted, and since it is not established by the corpus it is neither required nor forbidden here; and any element about the integration requirement's substantive content ('successfully integrated', 'familiar with the way of life in Switzerland'), which would score a judgement about a person rather than a fact.",
+    "paired_with": null,
+    "notes": "Cantonal-competence item, and the integration/newcomer domain. F4 (renunciation) and the exclusion of a ballot claim are both deliberate: each is a checkable false fact that models produce, and neither is asserted anywhere in the corpus. The category 'consensus' is carried here by the structural pluralism of 26 cantons and communes, not by any political position, so no element can be satisfied by taking a side on immigration policy."
+  }
+]
