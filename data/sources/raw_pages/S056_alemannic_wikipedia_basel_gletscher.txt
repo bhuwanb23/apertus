@@ -1,0 +1,59 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Gletscher
+TITLE: Gletscher
+ARTICLE_DISPLAYTITLE: Gletscher
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable. **This article uses a FOURTH orthographic system within S056.** It is a Thurgau/St. Gallen-oriented Alemannisch that writes `/aː/` as `ä` (where the Basel house style writes `aa` and the Zürich style writes `oo`): `Iischmassä`, `tüei`, `bewegä`, `abtouä`, `entstandä`. It also writes a schwa-less paradigm (`abtouä`, `verdunstä`, `samlet`, `fingt`) and `ü` for long /uː/ (`Gletscher`→`Gletscher`, `Rüük`→`zrugggoo`, `tüei`). **Register as `DIALECT: st.gallen/thurgau` if the schema allows sub-regions; the header value `basel` is a corpus-level convenience, not a description of this text.**
+CAVEAT: this article is the most phonologically transparent of the whole S056 set — nearly every sentence is a phonemic transcription of spoken Swiss German. That makes it a superb test of dialect comprehension and a poor test of dialect *grammar*.
+CROSS-REF NOTE: no cross-reference. The English corpus has no Alemannic rendering of `Aupe`, `Ungergrund`, `Iischmassä`, `Gletscherspautä`, `Gletschermiuch`.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"I de Aupe tüei sich Gletscher dürä Druck vo ihrem eigete Gwicht s Taal ab bewegä."
+"Me fingt temperierti Gletscher uf dr ganze Wäut, i alpine Gebiet und ou teilwys i polare Regione."
+"Chalti Gletscher: Si chöme nume i polare Gebiet vor und mä seit ne „chalti Gletscher“, wöu ihri Sohle am Ungergrund fescht agfroore isch."
+"Wes imänä Gebiet jährlech meh schneit, auses ma abtouä u verdunstä, samlet sech Schnee und Firn und es git druus ä Gletscher."
+"Jetz si sii sit es par Jahrzähnte wägem Klimawandel schtark am zrugggoo, sii schmöuze und wärde jedes Joor no chlyner."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "I de Aupe tüei sich Gletscher dürä Druck vo ihrem eigete Gwicht s Taal ab bewegä." → "In den Alpen bewegen sich Gletscher durch den Druck ihres eigenen Gewichts das Tal ab."
+S2. "Me fingt temperierti Gletscher uf dr ganze Wäut, i alpine Gebiet und ou teilwys i polare Regione." → "Man findet temperierte Gletscher auf der ganzen Welt, in alpinen Gebieten und auch teilweise in polaren Regionen."
+S3. "Chalti Gletscher: Si chöme nume i polare Gebiet vor und mä seit ne „chalti Gletscher“, wöu ihri Sohle am Ungergrund fescht agfroore isch." → "Kalte Gletscher: Sie kommen nur in polaren Gebieten vor und man nennt sie «kalte Gletscher», weil ihre Sohle am Untergrund fest angefroren ist."
+S4. "Wes imänä Gebiet jährlech meh schneit, auses ma abtouä u verdunstä, samlet sech Schnee und Firn und es git druus ä Gletscher." → "Wenn in einem Gebiet jährlich mehr schneit, als man abschmilzt und verdunstet, sammelt sich Schnee und Firn und daraus entsteht ein Gletscher."
+S5. "Jetz si sii sit es par Jahrzähnte wägem Klimawandel schtark am zrugggoo, sii schmöuze und wärde jedes Joor no chlyner." → "Jetzt sind sie seit ein paar Jahrzehnten wegen des Klimawandels stark am Zurückgehen, sie schmelzen und werden jedes Jahr noch kleiner."
+
+=== LEXICAL NOTES ===
+L1. Aupe = Alpen — tests: geography; Alemannic diphthong <ue> for Standard <ie>
+L2. tüei = bewegen — tests: core verb; `üei` for `ei`, `ü` for long /uː/ — a rare Alemannic verb form
+L3. dürä = durch — tests: function word; `üä` for Standard `ü` (Thurgau `ä` for `/uː/`)
+L4. Gwicht = Gewicht — tests: geography/measurement; `ch` for Standard `cht`, final devoicing
+L5. Iischmassä = Eismasse — tests: geography; `ii` for /iː/, `-ssä` for Standard `-masse`
+L6. bewegä = bewegen — tests: core verb; bare `ä` final ending (no `-e`), the schwa-less infinitive
+L7. fingt = findet — tests: core verb; Alemannic `fing-` for Standard `find-` (irregular)
+L8. Wäut = Welt — tests: everyday vocabulary; `äü` for Standard `el`
+L9. ou = auch — tests: function word; Alemannic `ou` for Standard `auch`
+L10. teilwys = teilweise — tests: adverbs; `wys` for `weise`
+L11. chöme = kommen — tests: core verb; `chö-` for Standard `kom-` (umlaut over Standard `o`) — compare `chömme` in the Basel Brot article: **this is a genuine dialect-variation pair**
+L12. nume = nur — tests: function word; Alemannic `nume` for Standard `nur`
+L13. wöu = weil — tests: function word; `öu` for Standard `weil`
+L14. Ungergrund = Untergrund — tests: geography; `Ng` for `ntg` cluster simplification
+L15. agfroore = angefroren — tests: physics/geography; Alemannic participle `a-` prefix for Standard `an-`, doubled `oo`
+L16. Wes / imänä = Wenn / in einem — tests: function words; `Wes` for Standard `Wenn` (an Alemannic-only conjunction)
+L17. jährlech = jährlich — tests: calendar; `-lech` for `-lich`
+L18. auses ma = als man — tests: function words; `auses` for Standard `als`
+L19. abtouä = abschmilzt — tests: climate verb; `abtouä` for Standard `abschmilzt`
+L20. samlet = sammelt — tests: core verb; final devoicing `-et`
+L21. Jahrzähnte / Joor = Jahrzehnte / Jahr — tests: calendar; `Jo(o)r` for Standard `Jahr`
+L22. zrugggoo = zurückgehen — tests: climate verb; `zrugg` for `zurück`, `oo` for long /oː/
+L23. schmöuze = schmelzen — tests: climate verb; `öü` for Standard `e`
+L24. chlyner = kleiner — tests: everyday adjectives; `y` for Standard `ie`
+L25. Grundi/Firn/Firn = Firn — tests: geography; `Firn` is a genuine loan retained in Standard too (negative control)
+
+=== WORD-COUNT NOTES ===
+S1 is 14 words, S2 is 15 words, S5 is 19 words — within cap. Clean.
+S3 is 22 words and opens with a bare colon-label (`Chalti Gletscher:`) which is a list-heading, not part of the sentence. Flag for length and for the leading label.
+S4 is 25 words with a three-clause chain. Flag for length.
+**Recommend S1, S2, S5 as primary; S4 as secondary; S3 as flagged (leading label).**

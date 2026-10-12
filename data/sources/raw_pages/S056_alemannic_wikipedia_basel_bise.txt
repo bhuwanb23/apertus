@@ -1,0 +1,51 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Bise
+TITLE: Bise
+ARTICLE_DISPLAYTITLE: Bise
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable, but the article's alternate headword is given IN the text: `D Biise oder au de Biiswind`. The doubled `ii` (`Biise`, `Biiswind`, `Ostbiise`, `Nordbiise`) is a long-vowel marker. The article's own etymology section notes the word is French (`la bise`) borrowed into Alemannic — a fact worth keeping, since it shows Alemannic lexicon is not purely native.
+CAVEAT: the article is written in an Upper-Alemannisch / Zürich-leaning register (`bloost`, `chalti`, `richtig`→`Richtig`) rather than strict Basel. Flag.
+CROSS-REF NOTE: this is the WEATHER file of choice over Wetter (see S056_alemannic_wikipedia_basel_wetter.txt). All five items are within the 6-20 word target, unlike that file's two of four.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Biise oder au de Biiswind isch en zimli chalte unagneeme Wind, wo im Winter us nordöstliche Richtig bloost und chalti Kontinentalluft is Alpegibiet bringt."
+"Dur d Alpe und em Jura iigengt, cha d Biise im Schwizerische Mittelland recht heftig werde."
+"D Biise chan bis zom Französische Zentralmassiv goo."
+"D Ostbiise gelt as chüeler und tröchner as d Nordbiise."
+"S Wort Biise (altalem. bîsa) chunnt nu im Alemannische vor, isch aber vom Französische as la bise  öbernoo worde."
+"Staut si dai oder au im Jura dunkli Wolke uuf, haisst si «la bise noire» (di schwaarzi Biise)."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "D Biise oder au de Biiswind isch en zimli chalte unagneeme Wind, wo im Winter us nordöstliche Richtig bloost und chalti Kontinentalluft is Alpegibiet bringt." → "Die Bise oder auch der Bisenwind ist ein ziemlich kalter unangenehmer Wind, der im Winter aus nordöstlicher Richtung bläst und kalte Kontinentalluft ins Alpengebiet bringt."
+S2. "Dur d Alpe und em Jura iigengt, cha d Biise im Schwizerische Mittelland recht heftig werde." → "Durch die Alpen und den Jura hindurch kann die Bise im Schweizer Mittelland recht heftig werden."
+S3. "D Biise chan bis zom Französische Zentralmassiv goo." → "Die Bise kann bis zum französischen Zentralmassiv gelangen."
+S4. "D Ostbiise gelt as chüeler und tröchner as d Nordbiise." → "Die Ostbise gilt als kühler und trockener als die Nordbise."
+S5. "S Wort Biise (altalem. bîsa) chunnt nu im Alemannische vor, isch aber vom Französische as la bise  öbernoo worde." → "Das Wort Bise (altalemannisch bîsa) kommt nur im Alemannischen vor, ist aber vom Französischen <la bise> übernommen worden."
+S6. "Staut si dai oder au im Jura dunkli Wolke uuf, haisst si «la bise noire» (di schwaarzi Biise)." → "Staut sie dort oder auch im Jura dunkle Wolken auf, heisst sie «la bise noire» (die schwarze Bise)."
+
+=== LEXICAL NOTES ===
+L1. Biise / Biiswind = Bise / Bisenwind — tests: weather; `ii` for long /iː/
+L2. chalte / chalti = kalte / kalte — tests: weather; `ch` for Standard `k`
+L3. unagneeme = unangenehme — tests: everyday adjectives; `-eeme` inflection
+L4. Richtig = Richtung — tests: weather/navigation; Alemannic `richtig` for Standard `Richtung` (a Swiss-German lexical substitution, NOT a standardisation)
+L5. bloost = bläst — tests: weather verb; `oo` for long /oː/, `-oo-` for `-ä-`
+L6. Alpegibiet = Alpengebiet — tests: geography; `biet` for Standard `gebiet`
+L7. iigengt = hindurch — tests: geography; Alemannic separable-prefix participle in `ii-` form (Standard `hindurch`)
+L8. chan = kann — tests: modal verb; `ch` for Standard `k`
+L9. zom = zum — tests: function words; `zom` for Standard `zum` (Basel marker: `em`/`zom`/`vo`)
+L10. goo = gelangen — tests: core verb; `oo` for long /oː/
+L11. gelt / tröchner = gilt / trockener — tests: weather; `tröchner` for Standard `trockener` (umlaut over Standard `o`)
+L12. chunnt nu vor = kommt nur vor — tests: lexicography register
+L13. öbernoo worde = übernommen worden — tests: passive participle; `oo` + `worde` for `genommen`
+L14. staut ... uuf / haisst = staut ... auf / heisst — tests: weather idiom; `uuf` for `auf`; `haisst` for Standard `heisst`
+L15. schwaarzi = schwarze — tests: weather; `aa` for `a`
+
+=== WORD-COUNT NOTES ===
+S1 is 23 words (target 6-20). Kept whole: it is the article's lead sentence and the `Biise`/`Biiswind` headword alternation is the whole lexical test. Flag if the benchmark requires a hard 20-word cap.
+S5 contains a DOUBLE SPACE inside the quoted French source (`as la bise  öbernoo worde`). This is reproduced verbatim from the Alemannic Wikipedia and must NOT be normalised — a string-matching verifier will reject a cleaned-up version.
+S6 is 21 words and contains a parenthetical. Flag for both length and the parenthetical.
+S2 (14 words), S3 (8 words), S4 (10 words) are all clean and are the recommended primary items from this file.

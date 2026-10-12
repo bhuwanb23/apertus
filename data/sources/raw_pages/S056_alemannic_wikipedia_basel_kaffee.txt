@@ -1,0 +1,53 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Kaffee
+TITLE: Kaffee
+ARTICLE_DISPLAYTITLE: Kaffee
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable. The requested URL `/wiki/Kafi` DOES NOT EXIST on als.wikipedia (confirmed via the API: no page, no redirect). The correct title is `Kaffee`, and the Alemannic headword given IN the article's own first sentence is `Kaffi`. That headword substitution is itself the lexical test and is recorded as L1 below.
+CAVEAT: the article deliberately retains Standard German drink nouns (`Filterkaffi`, `Espresso`, `Instantkaffi`, `Neskaffi`, `Malzkaffi`) alongside Alemannic grammar. Items S6 and S7 are therefore dialect-grammar-only, not dialect-lexis.
+CROSS-REF NOTE: S057_alemannic_wikipedia_bern_kaffeeratte.txt covers the `Kaffee`-drinking social institution in Bern Alemannisch. No overlap at the item level; Kafferatte tests the social/slang register, this file tests the commodity/beverage register.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Kaffiboone wärde us Stäifrücht vo verschiidene Pflanzenarte us dr Familie vo de Rubiaceae gwunne."
+"Wie fest d Boone grööstet und gmaale wärde, isch je noch dr Art vo dr Zueberäitig verschiide."
+"Kaffi isch ursprünglig seer düür gsi, und nume die Meebessere häi sich das chönne läiste."
+"In westlige Länder wird Kaffi vor allem as gmaalene Filterkaffi verchauft und drunke."
+"Ermeri Lüt und in Krisezite fast die ganzi Bevölkerig häi Ersatzkaffi drunke wie Malzkaffi oder Schiggoree."
+"Kaffi wird hüte in mee as 50 Länder aabaut, vor allem in Entwiggligsländer, und für e baar von ene ghöört er zu de wichdigste Exportbrodukt."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "D Kaffiboone wärde us Stäifrücht vo verschiidene Pflanzenarte us dr Familie vo de Rubiaceae gwunne." → "Die Kaffeebohnen werden aus Samen (Stärf/früchten) verschiedener Pflanzenarten aus der Familie der Rubiaceae gewonnen."
+S2. "Wie fest d Boone grööstet und gmaale wärde, isch je noch dr Art vo dr Zueberäitig verschiide." → "Wie fest die Bohnen geröstet und gemahlen werden, ist je nach der Art der Zubereitung verschieden."
+S3. "Kaffi isch ursprünglig seer düür gsi, und nume die Meebessere häi sich das chönne läiste." → "Kaffee ist ursprünglich sehr teuer gewesen, und nur die Reichen konnten sich das leisten."
+S4. "In westlige Länder wird Kaffi vor allem as gmaalene Filterkaffi verchauft und drunke." → "In westlichen Ländern wird Kaffee vor allem als gemahlener Filterkaffee verkauft und getrunken."
+S5. "Ermeri Lüt und in Krisezite fast die ganzi Bevölkerig häi Ersatzkaffi drunke wie Malzkaffi oder Schiggoree." → "Ärmere Leute und in Krisenzeiten fast die ganze Bevölkerung haben Ersatzkaffee getrunken wie Malzkaffee oder Zichorienkaffee."
+S6. "Kaffi wird hüte in mee as 50 Länder aabaut, vor allem in Entwiggligsländer, und für e baar von ene ghöört er zu de wichdigste Exportbrodukt." → "Kaffee wird heute in mehr als 50 Ländern angebaut, vor allem in Entwicklungsländern, und für einige von ihnen gehört er zu den wichtigsten Exportprodukten."
+
+=== LEXICAL NOTES ===
+L1. Kaffi = Kaffee (the Alemannic headword; the Standard `Kaffee` is the article title but is never used as the running headword) — tests: food/drink; single `f` for Standard double `ff`
+L2. gmaal(e) = gemahlen — tests: food processing; `aa` for long /aː/, `gm-` prefix instead of Standard `gem-`
+L3. grööstet = geröstet — tests: food processing; `öö` for long /øː/, a Swiss-German-only vowel
+L4. Kaffiboon = Kaffeebohne — tests: food; `oo` for long /oː/
+L5. Zueberäitig = Zubereitung — tests: food; `zue-` for Standard `zu-`, `äi` for `-ei`
+L6. düür = teuer — tests: everyday adjectives; `üü` for long /yː/
+L7. läiste = leisten — tests: everyday verb; `äi` diphthong
+L8. drunke = getrunken — tests: everyday verb; past participle without ge-/`-e` irregularity
+L9. verchauft = verkauft — tests: everyday commerce; Alemannic `ch` for Standard `k`
+L10. Schiggoree = Zichorienkaffee (regional: `[ʃiˈkoːʀə]` or `[ʃiˈkoːʁə]`) — tests: food; genuinely dialectal, no Standard counterpart
+L11. Malzkaffi = Malzkaffee — tests: food; `ffi` for Standard `ffee`
+L12. Süürigsmiddel = Säuerungsmittel — tests: food industry; `üü` + `-igs-` suffix
+L13. iigsetzt = zugesetzt — tests: food industry; `ii-` for Standard `zu-` in `ein-`
+L14. Rampf = Krume (bread crumb) — tests: baking; Alemannic-only word, Standard `Krume` has no dialect counterpart in most Swiss German
+L15. bilde = bilden — tests: everyday verb
+L16. Entwiggligsländer = Entwicklungsländer — tests: economics; Alemannic `g-` where Standard has `ck`
+L17. Exportbrodukt = Exportprodukt — tests: economics; final devoicing `-kt`
+L18. wie/wuo/wüü = wie/wo/würde — tests: function words, especially `wüü` for conditional `würde`
+
+=== WORD-COUNT NOTES ===
+S6 is 24 words (target 6-20) and contains the numeral `50`. Kept whole: it is the only item testing the trade register. Flag — a model could plausibly guess from the numeral alone, so S6 is the weakest item in this file.
+S5 is 18 words — within cap.
+S1 contains the Latin taxonomic family name `Rubiaceae`, which is recoverable from Standard German and should not be treated as evidence of dialect competence.

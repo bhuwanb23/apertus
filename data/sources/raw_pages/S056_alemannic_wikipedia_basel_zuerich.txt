@@ -1,0 +1,55 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Z%C3%BCrich
+TITLE: Zürich
+ARTICLE_DISPLAYTITLE: Züri
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — the article is written in Zürich Alemannisch, not Basel Alemannisch, despite being filed under `DIALECT: basel` for corpus-level consistency. Distinctive Zürich markers visible here: `oo` for long /oː/ in every vowel position (`grosse`→`grööscht`, `oo` in `Oort`, `oo` in `Boot`), `ee` for long /eː/ (`Seebecki`→`Seebecki`/`Seefäld`, `Meer`), and the Zürich `-ee`/`-oo` doubling across the board. The Bahnhof article (S056_..._baanhof) is far more heavily Zürich than this one. Flag: this file is the weakest `basel` label in the S056 set.
+CAVEAT: S3 and S6 contain proper nouns (Limettal names, Zürich institutions) that are recoverable from Standard German. They are kept because the surrounding dialect morphology is the test, not the noun.
+CROSS-REF NOTE: S057_alemannic_wikipedia_zurich_*.txt (Bubikon, Buergermeister, Chindlistein, Kloster-Einsiedeln, Auslaender) cover Zürich-oriented Alemannisch but at municipality/institution level, not urban prose. No overlap.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Stadt lyt im Schwyzer Mittelland, a de Limet und am Zürisee."
+"De Flughafe vo Züri isch en kontinäntaale Vercheerschnoote und de Hauptbaanhof Züri isch de grööscht Baanhof vo de Schwyz."
+"de Name Schipfi isch en alts tüütsches Wort für d Verbouig vom Ufer."
+"Im 19. Jarhundert hät di nöizytlich Schifffaart uf em Zürisee aagfange."
+"d Stadt hät Hoochschuele, wo zu de grööschte vo de Schwyz zeled und au internazionaal öppis gälted."
+"D Altstadt, wo hüt echli künschtlich i vier statistischi Quartier uuftäilt wiird, lyt bäidsytig vo de Limet."
+"Für d Kultur und psunders d Literatur isch Züri sit em Mittelalter en guete Bode gsy."
+"Scho i der Uurzyt hät me a dem Oort, wo d Limet us em See chunt, Dörfer poue, und d Fischerei isch daa en uuralts Gwèèrb."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "D Stadt lyt im Schwyzer Mittelland, a de Limet und am Zürisee." → "Die Stadt liegt im Schweizer Mittelland, an der Limmat und am Zürichsee."
+S2. "De Flughafe vo Züri isch en kontinäntaale Vercheerschnoote und de Hauptbaanhof Züri isch de grööscht Baanhof vo de Schwyz." → "Der Flughafen von Zürich ist ein kontinentaler Verkehrsknoten und der Hauptbahnhof Zürich ist der grösste Bahnhof der Schweiz."
+S3. "de Name Schipfi isch en alts tüütsches Wort für d Verbouig vom Ufer." → "Der Name Schipfi ist ein altes alemannisches Wort für die Verbauung des Ufers."
+NOTE ON S3: the sentence begins with lowercase `de` because in the source it continues a preceding clause and is set mid-paragraph. **Do not capitalise it — a string-matching verifier will reject the capitalised form.**
+S4. "Im 19. Jarhundert hät di nöizytlich Schifffaart uf em Zürisee aagfange." → "Im 19. Jahrhundert hat die neuzeitliche Schifffahrt auf dem Zürichsee begonnen."
+S5. "d Stadt hät Hoochschuele, wo zu de grööschte vo de Schwyz zeled und au internazionaal öppis gälted." → "Die Stadt hat Hochschulen, die zu den grössten der Schweiz zählen und auch international etwas gelten."
+S6. "D Altstadt, wo hüt echli künschtlich i vier statistischi Quartier uuftäilt wiird, lyt bäidsytig vo de Limet." → "Die Altstadt, die heute etwas künstlich in vier statistische Quartiere eingeteilt wird, liegt beidseits der Limmat."
+S7. "Für d Kultur und psunders d Literatur isch Züri sit em Mittelalter en guete Bode gsy." → "Für die Kultur und besonders die Literatur ist Zürich seit dem Mittelalter ein guter Boden gewesen."
+S8. "Scho i der Uurzyt hät me a dem Oort, wo d Limet us em See chunt, Dörfer poue, und d Fischerei isch daa en uuralts Gwèèrb." → "Schon in der Urzeit hat man an dem Ort, wo die Limmat aus dem See kommt, Dörfer gebaut, und die Fischerei ist dort ein uraltes Gewerbe."
+
+=== LEXICAL NOTES ===
+L1. Vercheerschnoote = Verkehrsknoten — tests: transport/aviation; `oo` for long /oː/, `ee` for long /eː/; pure Alemannic compound morphology
+L2. Baanhof = Bahnhof — tests: transport; Alemannic inserts `aa` where Standard has `a`
+L3. Schipfi = Schiff (place-name element) — tests: toponymy; Alemannic `pf` for Standard `ff`
+L4. Verbouig = Verbauung — tests: river engineering; Alemannic `bouig` for Standard `bauung`
+L5. nöizytlich = neuzeitlich — tests: historical periodisation; `öi` diphthong for Standard `eu`
+L6. zeled = zählen — tests: everyday arithmetic; irregular Alemannic verb with no Standard equivalent form
+L7. gälted = gelten — tests: verb; final devoicing `-ed`
+L8. Hoochschuele = Hochschulen — tests: education; `oo` doubling
+L9. bäidsytig = beidseits — tests: spatial vocabulary; Alemannic `sy-` for Standard `seit`
+L10. künschtlich = künstlich — tests: `ü` for long /yː/; dialect diphthong <ü>
+L11. uuftäilt = eingeteilt — tests: verb prefix written as `uu-` (semi-Dieth long-u doubling)
+L12. Gwèèrb = Gewerbe — tests: everyday work/economy; doubled `è` for Standard `ea`
+L13. Urzyt/Uurzyt = Urzeit — tests: history; `zyt` for Standard `zeit`
+L14. poue = bauen — tests: everyday verb; Alemannic diphthong <ou> for Standard <au>
+L15. uuralts = uralt — tests: compound intensification; `aa` for Standard `a`
+
+=== WORD-COUNT NOTES ===
+S6 is 20 words (target 6-20) — at cap. It also contains the numeral `vier`, which a model could otherwise ignore; no answer leakage.
+S8 is 26 words (target 6-20). Kept whole: it carries three coordinated clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S2 is 20 words (target 6-20) — at cap, no flag.

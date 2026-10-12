@@ -1,0 +1,51 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/R%C3%B6sti
+TITLE: Rösti
+ARTICLE_DISPLAYTITLE: Rösti
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable, but the article's own lead sentence gives FIVE regional Alemannic names for the dish: `Röschti` (general), `Brägel`/`Brägu` (Seisler), `Brausi` (Luzärner), `Bräusi` (Aargauer), `Häärpflchoch` (Walliser). This is a dialect-variation goldmine and is listed in the lexical notes.
+CAVEAT: the article's register is loose and informal — `wome` (wo man), `weles`, `si`, `de` all appear uncontracted. This is genuinely village speech as written by a native, but it is NOT a clean edited Alemannisch and a verifier should not treat the informality as an extraction error.
+CAVEAT: the lead sentence (not taken as an item) is 48 words and contains an IPA transcription; it is unusable as a benchmark item.
+CROSS-REF NOTE: no cross-reference. The English corpus has no Alemannic rendering of `Röschti`, `Brägel`, `Häärpflchoch`, `Gussisepfanne` or `raschple`.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Röschti isch e Zuebereitigsart vo Härdöpfu, wome zersch tuet im heisse Wasser choche u de e Nacht i Chüeuschrank schteut."
+"Am nächschte Tag tuet me si schinte u nähr di gschintete Härdöpfle raschple."
+"Ire Gussisepfanne tuet me de mit e chly Anke d Röschti aabrätle."
+"Es isch sehr umschtritte, weles die originale Art zum Röschti choche isch."
+"Das isch die bärnischi Zuebereitigsart."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "D Röschti isch e Zuebereitigsart vo Härdöpfu, wome zersch tuet im heisse Wasser choche u de e Nacht i Chüeuschrank schteut." → "Die Rösti ist eine Zubereitungsart von Kartoffeln, die man zuerst im heissen Wasser kocht und die eine Nacht im Kühlschrank stellt."
+S2. "Am nächschte Tag tuet me si schinte u nähr di gschintete Härdöpfle raschple." → "Am nächsten Tag schneidet man sie und schabt die geschnittenen Kartoffeln rasch ab."
+S3. "Ire Gussisepfanne tuet me de mit e chly Anke d Röschti aabrätle." → "In der Gussepfanne röstet man dann die Rösti mit etwas Butter an."
+S4. "Es isch sehr umschtritte, weles die originale Art zum Röschti choche isch." → "Es ist sehr verbreitet, welche die originale Art zum Rösten der Rösti ist."
+S5. "Das isch die bärnischi Zuebereitigsart." → "Das ist die bernische Zubereitungsart."
+
+=== LEXICAL NOTES ===
+L1. Röschti = Rösti — tests: food; Alemannic-only form, Standard `Rösti`; `ö` for Standard `ö`, `-schti` for `-sti`
+L2. Härdöpfu / Härdöpfle = Kartoffeln — tests: food; **Alemannic `Härdöpfel` is the single most characteristic Swiss German food word**; `ä` for Standard `a`, diminutive `-le`
+L3. Zuebereitigsart / Zuebereitig = Zubereitungsart / Zubereitung — tests: cooking; `zue-` for Standard `zu-`, `-igs-`
+L4. choche = kochen — tests: cooking; `ch` for Standard `k`
+L5. Chüeuschrank = Kühlschrank — tests: household/appliances; `chü-` for `kühl-`, `schrank` for `schrank`
+L6. schteut = stellt — tests: household verb; `scht` for Standard `st`
+L7. schinte = schneidet — tests: cooking verb; `schin-` for Standard `schnei-`
+L8. raschple = rasch(ab)schabt — tests: cooking verb; **Alemannic-only verb, Standard `schaben`.** Distinct from Standard `raspeln`.
+L9. gschintete = geschnittenen — tests: cooking; `gsch-` for Standard `ge-`
+L10. Gussisepfanne = Gussepfanne / Bratpfanne — tests: cooking equipment; `sse` doubling for Standard `ss`
+L11. aabrätle = anbrätelt / röstet an — tests: cooking verb; `bä-` for Standard `brä-`
+L12. umschtritte = verbreitet — tests: everyday adjectives; `-schtr-` for Standard `-breit-`
+L13. weles = welche — tests: function word; `weles` for Standard `welche`
+L14. Anke = Butter — tests: food; Alemannic-only word, Standard `Butter` has no dialect counterpart in most Swiss German
+L15. Brägel / Brägu / Brausi / Bräusi / Häärpflchoch = regional names for Rösti — tests: dialect geography; **use as a dialect-variation item, not a translation item** — Standard German has no single equivalent for the set
+L16. bärnischi = bernische — tests: regional adjectives; `-schi` for Standard `-ische`
+L17. Härdöpfu (sg.) vs Härdöpfle (pl.) = irregular Alemannic plural — tests: morphology
+
+=== WORD-COUNT NOTES ===
+S1 is 21 words — marginal (one over the 20-word target). Flag.
+S2 (13 words), S3 (13 words), S4 (13 words), S5 (6 words) are all within cap. **Recommend S2, S3, S4 as primary.**
+S5 is exactly 6 words — at the floor. It is retained because `bärnischi` and `Zuebereitigsart` are both load-bearing and it is the shortest clean dialect item in the file.

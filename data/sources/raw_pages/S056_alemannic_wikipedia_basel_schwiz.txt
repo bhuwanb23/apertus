@@ -1,0 +1,53 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Schweiz
+TITLE: Schwiz
+ARTICLE_DISPLAYTITLE: Schwiz
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template was readable in the plain-text extract. The Sprooch section is written in a conservative Alemannisch orthography (ü for /ʌ/, ù in unstressed syllables, e.g. `Bùndesverfassig`, `Amtssprooch`, `Sproochgränz`) that differs from the article's own lead, which is in the plainer house style (`Schwiz`, `Bundesrat`, `Kantön`). This article is therefore internally orthographically INCONSISTENT. Flag per-sentence.
+CAVEAT: S2, S5, S6 and S7 come from the `== Sprooch ==` section, which uses `ü` and `ù` throughout. A model that has been calibrated on the lead paragraph alone will mis-score these.
+CAVEAT: numerals present in S3 (`62`, `23`, `8`, `0,5`) — retained deliberately, because the numerals are percentages of language speakers and would give the answer away. Flag if the benchmark requires numeral-free items; S3 is the only such item and can be dropped without loss.
+CROSS-REF NOTE: no cross-reference. S025/S029/S047/S058 cover Swiss institutions in Standard German, never the Alemannic rendering of `Amtssprooch`, `Sproochgränz`, `Minderheitesprooch`.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Religion het lang e grossi Rolle gspiilt in dr Schwiiz und nid numme im Positive."
+"D Schwiz isch e Schtaat, wo als e föderalistisch organisierti direkti Demokratii funkzioniert."
+"D Schwyz het luut Bùndesverfassig vier Landes- ùn Amtssprooche: Dütsch mit eme Aadeil vo öbe 62 Prozänt, Französisch mit 23 Prozänt, Italiänisch mit 8 Prozänt ùn Rätoromanisch mit 0,5 Prozänt."
+"Viersproochig isch aber nùmme de Bùndestaat als Institution: Di meischte Kantön hen dergäge nùmme ei Amtssprooch."
+"D Sproochgränze sin mee oder weeniger stabil; nùmme im Bündnerland verschiebt sich d Sproochgränz syt lengrem zuungùnschte vùm Rätoromanische."
+"E Minderheitesprooch, wo territorial nit bùnde isch, isch s Jenisch."
+"I der Umgangssprach wird d Zentralschwiiz als Innerschwiiz bezeichnet."
+"D Region zwüsche Bärn und Züri seit me ou Mittuland und dr französischsprächende Teil vor Schwiz isch under em Name Romandie, Wälschland oder Weschtschwiiz bekannt."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "D Religion het lang e grossi Rolle gspiilt in dr Schwiiz und nid numme im Positive." → "Die Religion hat lange eine grosse Rolle gespielt in der Schweiz und nicht nur im Positiven."
+S2. "D Schwiz isch e Schtaat, wo als e föderalistisch organisierti direkti Demokratii funkzioniert." → "Die Schweiz ist ein Staat, der als föderalistisch organisierte direkte Demokratie funktioniert."
+S3. "D Schwyz het luut Bùndesverfassig vier Landes- ùn Amtssprooche: Dütsch mit eme Aadeil vo öbe 62 Prozänt, Französisch mit 23 Prozänt, Italiänisch mit 8 Prozänt ùn Rätoromanisch mit 0,5 Prozänt." → "Die Schweiz hat laut Bundesverfassung vier Landes- und Amtssprachen: Deutsch mit einem Anteil von über 62 Prozent, Französisch mit 23 Prozent, Italienisch mit 8 Prozent und Rätoromanisch mit 0,5 Prozent."
+S4. "Viersproochig isch aber nùmme de Bùndestaat als Institution: Di meischte Kantön hen dergäge nùmme ei Amtssprooch." → "Viersprachig ist aber nur der Bund als Institution: Die meisten Kantone haben demgegenüber nur eine Amtssprache."
+S5. "D Sproochgränze sin mee oder weeniger stabil; nùmme im Bündnerland verschiebt sich d Sproochgränz syt lengrem zuungùnschte vùm Rätoromanische." → "Die Sprachgrenzen sind mehr oder weniger stabil; nur im Graubünden verschiebt sich die Sprachgrenze seit längerem zugunsten des Rätoromanischen."
+S6. "E Minderheitesprooch, wo territorial nit bùnde isch, isch s Jenisch." → "Eine Minderheitensprache, die territorial nicht gebunden ist, ist das Jenisch."
+S7. "I der Umgangssprach wird d Zentralschwiiz als Innerschwiiz bezeichnet." → "In der Umgangssprache wird die Zentralschweiz als Innerschweiz bezeichnet."
+S8. "D Region zwüsche Bärn und Züri seit me ou Mittuland und dr französischsprächende Teil vor Schwiz isch under em Name Romandie, Wälschland oder Weschtschwiiz bekannt." → "Die Region zwischen Bern und Zürich nennt man auch Mittelland, und der französischsprachige Teil der Schweiz ist unter dem Namen Romandie, Wälschland oder Westschweiz bekannt."
+
+=== LEXICAL NOTES ===
+L1. Bùndesverfassig = Bundesverfassung — tests: official/legal vocabulary; also the `ü`-for-/ʌ/ spelling
+L2. Amtssprooch / Amtssprooche = Amtssprache / Amtssprachen — tests: institutional vocabulary; `-ooch` for long /oː/
+L3. Sproochgränz = Sprachgrenze — tests: geography/politics; `-ooch`
+L4. Minderheitesprooch = Minderheitensprache — tests: sociolinguistics; compound formation
+L5. Jenisch = Jenisch (Yiddish-derived) — tests: loanword survival in Swiss German; the item that Standard German does not have as a dialectal word
+L6. Mündart / Mùndart = Mundart — tests: the single most central Alemannic lexical item
+L7. Römischaround/Rätoromanisch = Rätoromanisch — tests: proper-noun-adjacent technical vocabulary (guessable, low information)
+L8. hem/si/chasch = haben/ist/kannst — tests: 2nd/3rd person singular paradigm; note `sii` for `sie`
+L9. het/gspiilt = hat/gespielt — tests: final devoicing + irregular verb forms
+L10. föderalistisch organisierti = föderalistisch organisiert — tests: final devoicing of adjectival/participial endings
+L11. Amtsstaat/Bündestaat = Bundesstaat — tests: `Bünd` for `Bund` (consonantal cluster simplification, a Basel-dialect trait: Standard `Bund` → `Bünd`/`Bund`)
+L12. Johr = Jahr — tests: everyday vocabulary, `-h` cluster reduction
+L13. Bärn/Züri/Gämf = Bern/Zürich/Genf — tests: proper nouns; NOTE all three are guessable from Standard German, so avoid building items around them alone
+L14. Wiss/Sproochgränze etc. — tests: plural formation with zero ending
+
+=== WORD-COUNT NOTES ===
+S8 is 24 words (target 6-20). Kept whole: it carries two coordinated clauses and a three-item synonym list that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap; S8 can be dropped with S7 retained.
+S3 is 20 words but contains four percentage figures; a model could plausibly guess by frequency rather than comprehension.

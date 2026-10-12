@@ -1,0 +1,47 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Wetter
+TITLE: Wetter
+ARTICLE_DISPLAYTITLE: Wetter
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable. IMPORTANT: the Alemannic headword given in the article's own first sentence is `Wätter`, not `Wetter`; the article title keeps the Standard `Wetter`. The Alemannic Wikipedia has NO article titled `Wägle` (confirmed: `/wiki/Wägle` does not resolve; prefix search for `Wä` returns only `Wädenswil … Wängle`, i.e. no `Wägle`).
+CAVEAT: this article is a translation of a German meteorology textbook (H. Barten et al., *Der Mensch in seinem Lebensraum* — credited in the `== Quelle ==` section). The physics is Standard German throughout; only the grammar and a handful of words (`Wätter`, `Feschtland`, `Johresziite`, `schtärcher`) are Alemannic. Do not treat this file as idiomatic dialect data.
+CAVEAT: only four items below meet the 6-20 word target without markup problems. S2 and S4 exceed it and are flagged.
+CROSS-REF NOTE: no cross-reference. S056_alemannic_wikipedia_basel_bise.txt is the natural companion file (weather-adjacent, genuinely dialectal, 5 clean items) and should be preferred over this one for weather items.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D Erwärmigs-Grade vom Meer oder vom Feschtland variiere bekanntlech mit de Johresziite."
+"D Windsyschtem verfrachte die Wulke ufs Feschtland, und wenn si i chüeleri Luftmasse oder Luftschichte ine chöme, kondensiere si no schtärcher und rägne denn uus."
+"Das wird denn vo üüs als chälter wahrgno."
+"S Wätter uf em Planet Ärde isch e Mix vo physikalische Phänomen, wo sich i der Ärd-Atmosphäre, em Luftgürtel um d Ärde, abschpile."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "D Erwärmigs-Grade vom Meer oder vom Feschtland variiere bekanntlech mit de Johresziite." → "Die Erwärmungsgrade des Meeres oder des Festlands variieren bekanntlich mit den Jahreszeiten."
+S2. "D Windsyschtem verfrachte die Wulke ufs Feschtland, und wenn si i chüeleri Luftmasse oder Luftschichte ine chöme, kondensiere si no schtärcher und rägne denn uus." → "Das Windsystem verfrachtet die Wolken aufs Festland, und wenn sie in kühlere Luftmassen oder Luftschichten ineinander kommen, kondensieren sie noch stärker und regnen dann aus."
+S3. "Das wird denn vo üüs als chälter wahrgno." → "Das wird dann von uns als kälter wahrgenommen."
+S4. "S Wätter uf em Planet Ärde isch e Mix vo physikalische Phänomen, wo sich i der Ärd-Atmosphäre, em Luftgürtel um d Ärde, abschpile." → "Das Wetter auf dem Planeten Erde ist ein Gemisch physikalischer Phänomene, die sich in der Erd-Atmosphäre, dem Luftgürtel um die Erde, abspielen."
+
+=== LEXICAL NOTES ===
+L1. Wätter = Wetter — tests: weather; the Alemannic headword; `ä` for Standard `e`
+L2. Feschtland = Festland — tests: weather/geography; Alemannic `sch` where Standard has `st`
+L3. Johresziit = Jahreszeit — tests: weather; `ziit` for Standard `zeit`, `oo` for long /oː/
+L4. Erwärmigs-Grade = Erwärmungsgrade — tests: science register; compound with `-igs-` linking morpheme
+L5. variiere = variieren — tests: science verb; final devoicing `-e` for `-en`
+L6. bekanntlech = bekanntlich — tests: adverbial `-lich`; Alemannic `ei`
+L7. verfrachte = verfrachten — tests: physics verb; `ch` for Standard `ft`
+L8. chöme = kommen — tests: core verb; `ö` for Standard `o` in this dialect (contrast: `chomme` appears elsewhere)
+L9. kondensiere = kondensieren — tests: science verb; loan verb with dialect inflection
+L10. schtärcher = stärker — tests: weather; `scht` for Standard `st` + `-cher` adverb
+L11. rägne denn uus = regnen dann aus — tests: weather idiom; `ä` for `e`, `denn` for `dann`
+L12. chälter = kälter — tests: weather; `ä` for `a`
+L13. üüs = uns — tests: pronoun paradigm; `üü` for long /yː/
+L14. wahrgno = wahrgenommen — tests: perception verb; Alemannic participle prefix `gno-` for Standard `ge-`
+L15. abschpile = abspielen — tests: core verb; `sch` for Standard `sp`
+
+=== WORD-COUNT NOTES ===
+S2 is 27 words (target 6-20). Kept whole: it is the article's central explanatory sentence about cloud formation and the three subordinate clauses cannot be dropped. Flag — this is the weakest item in the file for length.
+S4 is 24 words (target 6-20) and contains a parenthetical apposition (`em Luftgürtel um d Ärde`). Kept whole because it is the definitional sentence. Flag for both length and the apposition.
+S1 is 12 words, S3 is 8 words — both clean. **Recommend S1 and S3 as the primary weather items from this file; S2 and S4 as secondary/flagged.**

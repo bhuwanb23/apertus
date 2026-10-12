@@ -1,0 +1,51 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Basel
+TITLE: Basel
+ARTICLE_DISPLAYTITLE: Basel
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable in the extract, but the article is demonstrably Basel-oriented: `Bruttoregisterdonne`/`GRZ` discussion aside, the lexical set (`Brugg`, `Dårtschu`→`Daig`, `Quardier`, `Gundeli`, `Bachlätte`) and the `Süüde`/`rächts` forms are High Alemannic with Basel markers (`Brugge`, `Gündeli`, `Wyder`→`wider`). Basel is the article's own subject.
+CAVEAT: S1 contains an ordinal (`drittgreeschti`) and a proper noun; the ordinal is load-bearing, the proper noun is not.
+CAVEAT: S7 contains a typographic apostrophe (`d’Basler`) copied exactly as it appears in the source.
+CROSS-REF NOTE: no cross-reference. The English corpus has no Alemannic rendering of `Brugg` (bridge), `Quardier` (quarter), `Stadtpiet` (city boundary) or `Verbindig` (connection).
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Basel isch die drittgreeschti Stadt vo dr Schwyz."
+"Es isch e Gränzstadt, s Stadtpiet chunt an Dytschland und an Frankrych aa."
+"Es het i dr Stadt vili Bruggen übere Rhy."
+"Der Fähri-Verein luegt für die Verbindigen vo Grossbasel zum Glaibasel."
+"Basel isch e wichtigs wirtschaftlichs Zäntrum fyr die chemischi und pharmazeutischi Industry."
+"Usserdäm het me bi de bessere Byrger z Basel fryener allewyl Franzeesch greedet, wenn me sich het welle fyrnähm ussdrugge."
+"Für viili Basler isch d’Basler Fasnacht dr wichtigschti Aaloss im Yoor, und au diè gröschti Fasnacht vo der Schwyz."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Basel isch die drittgreeschti Stadt vo dr Schwyz." → "Basel ist die drittgrösste Stadt der Schweiz."
+S2. "Es isch e Gränzstadt, s Stadtpiet chunt an Dytschland und an Frankrych aa." → "Es ist eine Grenzstadt, das Stadtgebiet stösst an Deutschland und an Frankreich an."
+S3. "Es het i dr Stadt vili Bruggen übere Rhy." → "Es hat in der Stadt viele Brücken über den Rhein."
+S4. "Der Fähri-Verein luegt für die Verbindigen vo Grossbasel zum Glaibasel." → "Die Fähri-Verein sorgt für die Verbindungen von Grossbasel nach Kleinbasel."
+S5. "Basel isch e wichtigs wirtschaftlichs Zäntrum fyr die chemischi und pharmazeutischi Industry." → "Basel ist ein wichtiges wirtschaftliches Zentrum für die chemische und pharmazeutische Industrie."
+S6. "Usserdäm het me bi de bessere Byrger z Basel fryener allewyl Franzeesch greedet, wenn me sich het welle fyrnähm ussdrugge." → "Ausserdem hat man bei den besseren Bürgern in Basel früher immer Französisch gesprochen, wenn man sich hat auszeichnen wollen."
+S7. "Für viili Basler isch d’Basler Fasnacht dr wichtigschti Aaloss im Yoor, und au diè gröschti Fasnacht vo der Schwyz." → "Für viele Basler ist die Basler Fasnacht das wichtigste Ereignis im Jahr, und auch die grösste Fasnacht der Schweiz."
+
+=== LEXICAL NOTES ===
+L1. Brugg / Bruggen = Brücke / Brücken — tests: urban infrastructure; the Alemannic `gg` for Standard `ck`, one of the single most characteristic orthographic markers
+L2. Stadtpiet = Stadtgebiet (lit. 'city limit') — tests: everyday civic vocabulary; not a Standard German word
+L3. Gränzstadt = Grenzstadt — tests: geography; `-änz` retained from Standard
+L4. Fähri / Fähri-Verein = Fähre / Fähri-Verein — tests: transport; `ch` for /ç/, and the whole word is Alemannic-only
+L5. Verbindig (pl. Verbindigen) = Verbindung (pl. Verbindungen) — tests: plural `-e`-less with `-n`; `ig` kept from Standard
+L6. Gmeinschaft / Quardier = Quartier — tests: urban administration; note Alemannic `Quardier` vs Standard `Quartier` (a→ua)
+L7. Industry = Industrie — tests: loanword that Alemannic keeps untranslated with `-y` for `-ie` (semi-Dieth retention)
+L8. Byrger = Bürger — tests: everyday civic vocabulary
+L9. ussdrugge = auszeichnen (reflexive) — tests: idiomatic phrasal verb
+L10. Aaloss = Ereignis — tests: everyday vocabulary; Alemannic `-oos` for long /oː/
+L11. Yoor = Jahr — tests: `-h`-cluster reduction; `oo` for long back vowel
+L12. sy/i/ä/is/isch = ist/ihr/er/sie/ihr — tests: pronoun paradigm (a real Basel feature: Standard `sie` is `si` or `sy`, and plural `sie` is `si`)
+L13. fyr/füecht/stoht = für/fängt/stoht — tests: Standard `f` retained where Alemannic often uses `p`
+L14. rächts/weschte/süüde = rechts/westliche/süde — tests: directional vocabulary; `ü` for long /uː/
+
+=== WORD-COUNT NOTES ===
+S7 is 20 words (target 6-20) — at cap, no flag.
+S5 is 15 words but contains `Industry`, an untranslated loanword that carries no dialect information; it is retained because the surrounding grammar (`Basel isch e wichtigs wirtschaftlichs Zäntrum fyr die chemischi und pharmazeutischi`) is fully dialectal and the loss of every ending is the test.

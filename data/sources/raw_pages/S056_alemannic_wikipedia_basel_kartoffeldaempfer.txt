@@ -1,0 +1,55 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Kartoffeld%C3%A4mpfer
+TITLE: Kartoffeldämpfer
+ARTICLE_DISPLAYTITLE: Kartoffeldämpfer
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable, but the article is written about a village institution (a potato-steamer co-operative in Mappach, canton Basel-Landschaft) and is narrated in **village-spoken Basel-Landschaft Alemannisch**, which is the most colloquial register in the whole S056 set: `mer` for Standard `man`, `die` for Standard `die/der` (unmarked article), `em/emene/enem` for `in einem`, `git's` for `gibt es`, `kum meh` for `kaum mehr`. This is unedited native speech, which is precisely why it is valuable and precisely why it must be flagged as non-standard register.
+CAVEAT: `Dämpfi` = potato steamer (a fixed communal appliance), NOT `Dämpfer` = steamer in general. A translation model will almost certainly mistranslate this as `Dämpfer`/`Dampfer`. Deliberate trap.
+CAVEAT: `Grumbiirre` (potatoes) is the definitive Basel-Landschaft dialect word and appears three times here. It is the single strongest lexical item in this file.
+CROSS-REF NOTE: `Härdöpfle` (S056_alemannic_wikipedia_basel_roesti.txt) is the Swiss-German-wide word for potato; `Grumbiirre` is the Basel-Landschaft regional variant. **The pair is a high-value dialect-variation contrast and must not be deduplicated.**
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"D' Dämpfi isch bis in d' sibziger Joor in de Schwiinemascht zum gare vo Grumbiire iigsetzt worde."
+"D' Säu verdraage nämli keini raui Grumbiirre."
+"Deswäge het mer die Grumbiire nochem ufläse dämpft un in enem Silo iiglagert."
+"Meischt ware des mobili Dämpfene, die vo alle Buure gmeinsam gnutzt worde sin."
+"Hüüte git's kum meh e funktionstüchtigi Dämpfi."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "D' Dämpfi isch bis in d' sibziger Joor in de Schwiinemascht zum gare vo Grumbiire iigsetzt worde." → "Die Dämpfi wurde bis in die siebziger Jahre in den Schweinemast zum Garen von Kartoffeln eingesetzt."
+S2. "D' Säu verdraage nämli keini raui Grumbiirre." → "Die Schweine vertragen nämlich keine rohen Kartoffeln."
+S3. "Deswäge het mer die Grumbiire nochem ufläse dämpft un in enem Silo iiglagert." → "Deswegen hat man die Kartoffeln nach dem Auflösen gedämpft und in einem Silo eingelagert."
+S4. "Meischt ware des mobili Dämpfene, die vo alle Buure gmeinsam gnutzt worde sin." → "Meistens waren das mobile Dämpfapparate, die von allen Bauern gemeinsam genutzt worden sind."
+S5. "Hüüte git's kum meh e funktionstüchtigi Dämpfi." → "Heute gibt es kaum noch eine funktionstüchtige Dämpfi."
+
+=== LEXICAL NOTES ===
+L1. Dämpfi = Kartoffeldämpfer (collective potato-steamer) — tests: food/agrarian; **Alemannic-only, and a sense-divergent trap against Standard `Dämpfer`.** Deliberately not transliterated from Standard.
+L2. Grumbiirre = Kartoffeln — tests: food/agrarian; **the definitive Basel-Landschaft dialect word; `Grumbiirre` has no Standard German form at all.** Highest-value lexical item in the file.
+L3. Schwiinemascht = Schweinemast — tests: agriculture; `schwiin-` for Standard `schwein-`, `-mascht` for `-mast`
+L4. gare = garen (to boil) — tests: cooking verb; Alemannic diphthong <a> for Standard <a>, distinctive Alpine cooking verb
+L5. iigsetzt worde = eingesetzt worden — tests: passive participle; `ii-` for `ein-`, `worde` for `worden`
+L6. sibziger = siebzig — tests: numerals; Alemannic `sibziger` for Standard `siebziger` (dropped diphthong)
+L7. Säu = Schweine — tests: agriculture; Alemannic-only word, `Sau` for Standard `Schwein`
+L8. verdraage = vertragen — tests: agriculture verb; `aa` for long /aː/
+L9. raui = roh — tests: food; `au` for Standard `o`
+L10. Deswäge / nochem = Deswegen / nach dem — tests: function words; `wäg` for Standard `weg`, `-e` for Standard `weil`
+L11. mer = man — tests: pronoun; Alemannic `mer` (compare Basel `mä`, Zurich `mò`) — a clean three-dialect pronoun contrast
+L12. ufläse / ufläse = auflösen / auflösen — tests: cooking verb; `ä` for `ö`
+L13. dämpft = gedämpft — tests: cooking; participle with zero prefix
+L14. iiglagert = eingelagert — tests: agriculture; `ii-` for `ein-`
+L15. Silo = Silo — tests: agriculture; UNCHANGED from Standard, negative control
+L16. Dämpfene (pl.) = Dämpfapparate — tests: morphology; Alemannic plural in `-ene` for Standard `-er`+`-n`
+L17. Buure = Bauern — tests: agriculture; **Alemannic `Buure` for Standard `Bauern` (r-migration, a signature Swiss German form).**
+L18. gmeinsam = gemeinsam — tests: function words; `gm-` for `ge-`
+L19. gnutzt worde sin = genutzt worden sind — tests: agriculture verb; `gnu-` participle prefix
+L20. git's kum meh = gibt es kaum noch — tests: function words; `git's` for `gibt es`, `kum` for `kaum`
+L21. funktionstüchtigi = funktionstüchtige — tests: everyday adjectives; `-tüchti` for Standard `-tüchtig`
+
+=== WORD-COUNT NOTES ===
+S1 is 17 words, S2 is 8 words, S3 is 13 words, S4 is 14 words, S5 is 9 words — **all within the 6-20 target. No item in this file requires a length flag.** This makes it the cleanest file in the S056 set and the recommended default source for village-register Alemannisch.
+S3 contains `enem` (Standard `einem`) — an unmarked masculine/neuter dative that only exists in Alemannisch. High diagnostic value.
+S2 is 8 words and is the shortest dialect-variation-contrast item available (`Grumbiirre` twice). Strongly recommended.

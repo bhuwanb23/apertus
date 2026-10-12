@@ -1,0 +1,65 @@
+﻿SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Fasnacht
+TITLE: Fastnacht
+ARTICLE_DISPLAYTITLE: Fastnacht
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable. **This article is ORTHOGRAPHICALLY BIMODAL and must be flagged before use.** The lead and the regional subsections are in the plain house style (`Fastnacht`, `Fasnet`, `Basel`, `Mäntig`, `Äschermittwuch`). The large `=== Schwäbesch-Alemannesche Fasnet ===` subsection is in a heavy, near-Dieth Alemannisch with `fo` (= von), `wut`/`wird` mixed, final devoicing throughout (`wut` for `wird`, `scht` for Standard `st`), and no unstressed `-e`: `Des zwoiseitege Schbil fo „guat“ ond „schläachd“`, `S Wort „Fasnet“ konnt fom ausgschdorbana mittelhaodeitscha Verb „vaselen“`. Items S2–S5 come from that subsection and are orthographically a DIFFERENT system from S1, S6, S7. A model scored on one will be unfairly scored on the other.
+CAVEAT: the requested URL `/wiki/Fasnacht` does not resolve to a standalone article; it redirects to `Fastnacht`, and there is a SEPARATE article `Basler Fasnacht` (already harvested as S058_alemannic_wikipedia_institutions_basler_fasnacht.txt). This file covers `Fastnacht`, which is the cross-regional carnival article.
+CAVEAT: the article uses STRAIGHT double quotes `"` (not German „ “) for the quoted Alemannic keywords in S2 and S3. These are reproduced verbatim; do not "correct" them to typographic quotes. A verifier must match the straight-quote form.
+CROSS-REF NOTE: **Direct overlap with S058_alemannic_wikipedia_institutions_basler_fasnacht.txt and S058_alemannic_wikipedia_institutions_fasnacht.txt.** Those two files cover the Basel-specific institutional facts (the Comité, the badge grades, the 1911/1529/1540 dates). This file deliberately takes NO dated or institutional item, so the three sets are complementary — but a de-duplication pass across S056/S058 is mandatory before any benchmark run.
+NOTE: S10 (`Es git e Zylete Fasnechtszümft.`) sits in the `== Aargau ==` subsection and was NOT available from the Jahrmarkt article; it is filed here because that is where it occurs.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Die Schwäbisch-alemannischi Fasnet stoot uf dr UNESCO-Lischte vom Nit-materielle Kulturguet."
+"Des zwoiseitege Schbil fo "guat" ond "schläachd", "alt" ond "jong", "liab" ond "bais" isch a wichdegs Brinzip fodr Fasnet, mo ma zom Beischbil edda Maska fo fillna Zimft als liabe, baise oder sogar gmischte Gsichder em Häs widergschbiaglet sit."
+"S Wort "Fasnet" konnt fom ausgschdorbana mittelhaodeitscha Verb "vaselen", mo "fruchdbar sai" bedeitet."
+"Organisator fodr Fasnet isch normalerweis a oatsasässege Narrazomft."
+"Typesch fir fill Häser isch d Ferzireng mit Schdoffblätzle ond Schälla."
+"Im Wiisedal gits au no d Buurefasnacht."
+"Z Basel goht d Basler Fasnacht drei Dääg."
+"In dr Schwiz het in de reformierte Ort nume in dr Stadt Basel und uf iirere Landschaft d Fasnacht d Reformation überläbt."
+"Am Funkesunndig oder Facklasunndig, säll isch de erschti Sunndig nochm Aschermittwuch, dien si an viele Ort Schiibeschla."
+"Es git e Zylete Fasnechtszümft."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Die Schwäbisch-alemannischi Fasnet stoot uf dr UNESCO-Lischte vom Nit-materielle Kulturguet." → "Die schwäbisch-alemannische Fasnacht steht auf der UNESCO-Liste des materiellen Kulturguts."
+S2. "Des zwoiseitege Schbil fo "guat" ond "schläachd", "alt" ond "jong", "liab" ond "bais" isch a wichdegs Brinzip fodr Fasnet, mo ma zom Beischbil edda Maska fo fillna Zimft als liabe, baise oder sogar gmischte Gsichder em Häs widergschbiaglet sit." → "Dieses zweiseitige Bild von «gut» und «schlecht», «alt» und «jung», «lieb» und «böse» ist ein wichtiges Prinzip der Fasnacht, wo man zum Beispiel gewisse Masken mit gefüllter Zimt als liebe, böse oder sogar gemischte Gesichter in das Kostüm zurückversetzt hat."
+S3. "S Wort "Fasnet" konnt fom ausgschdorbana mittelhaodeitscha Verb "vaselen", mo "fruchdbar sai" bedeitet." → "Das Wort «Fasnacht» kommt vom ausgestorbenen mittelhochdeutschen Verb «vaselen», das «fruchtbar sein» bedeutet."
+S4. "Organisator fodr Fasnet isch normalerweis a oatsasässege Narrazomft." → "Organisator der Fasnacht ist normalerweise eine ehrenamtliche Narrenzunft."
+S5. "Typesch fir fill Häser isch d Ferzireng mit Schdoffblätzle ond Schälla." → "Typisch für viele Häuser ist die Kopfbedeckung mit Kappchen und Ziergehänge."
+S6. "Im Wiisedal gits au no d Buurefasnacht." → "Im Wiesental gibt es auch noch die Bauernfastnacht."
+S7. "Z Basel goht d Basler Fasnacht drei Dääg." → "In Basel geht die Basler Fasnacht drei Tage."
+S8. "In dr Schwiz het in de reformierte Ort nume in dr Stadt Basel und uf iirere Landschaft d Fasnacht d Reformation überläbt." → "In der Schweiz hat in den reformierten Orten nur in der Stadt Basel und auf ihrer Landschaft die Fasnacht die Reformation überlebt."
+S9. "Am Funkesunndig oder Facklasunndig, säll isch de erschti Sunndig nochm Aschermittwuch, dien si an viele Ort Schiibeschla." → "Am Funkensonntag oder Fackelsonntag, das ist der erste Sonntag nach Aschermittwoch, werden in vielen Orten Scheiben eingeschlagen."
+S10. "Es git e Zylete Fasnechtszümft." → "Es gibt eine Reihe von Fastnachtszünften."
+
+=== LEXICAL NOTES ===
+L1. Fasnet = Fasnacht — tests: festival/culture; Alemannic headword, distinct from the Standard `Fastnacht` used as the title
+L2. zwoiseitege Schbil = zweiseitiges Bild — tests: abstract reasoning; `Schbil` for Standard `Bild` (B > P shift), `zwoi` for `zwei`
+L3. fo / fom / edda = von / vom / etwa — tests: function words; `fo` for `von` is the single most diagnostic Schwäbisch-Alemannisch preposition
+L4. wichdegs / widergschbiaglet = wichtiges / zurückversetzt — tests: abstract + participle morphology; `gsch-` for Standard `s-`
+L5. fodr / mo = für / wo — tests: function words; `mo` for relativiser `wo` is a heavy-dialect marker
+L6. gmischte Gsichder = gemischte Gesichter — tests: descriptive vocabulary; `Gsichder` for Standard `Gesichter` (dialectal plural in `-der`)
+L7. Häs = Kostüm / Gewand — tests: culture; Alemannic-only word for costume, Standard has no single equivalent (`Kostüm` is a loan)
+L8. Zueberäitig / Zuebereitig = Zubereitung — tests: general
+L9. Konnt / chunnt / git / wut = kommt / kommt / gibt / wird — tests: verb paradigm; note the article mixes `konnt` and `chunnt` for Standard `kommt`, showing intra-dialect variation
+L10. ausgschdorbana = ausgestorbenen — tests: lexicography; `gschdor-` for Standard `gestor-`
+L11. mittelhaodeitscha = mittelhochdeutschen — tests: philology; `-aodeitscha` is a genuine Alemannic dialectalisation of a Standard compound
+L12. Narrazomft / Zomft = Narrenzunft / Zunft — tests: civic associations; `Zomft` for Standard `Zunft` (ü > o shift)
+L13. oatsasässege = ehrenamtliche — tests: civic vocabulary; `oat-` for Standard `ehr-`
+L14. Ferzireng = Kopfbedeckung — tests: costume vocabulary; Alemannic-only
+L15. Schdoffblätzle = Kappchen / Zipfelmütze — tests: costume vocabulary; `Schdoff` for Standard `Schopf`
+L16. Buurefasnacht = Bauernfastnacht — tests: festival/agrarian; `Buure` for Standard `Bauern` (r > u-umlaut reversal)
+L17. Wiisedal = Wiesental — tests: regional geography; `ii` for long /iː/
+L18. Dääg = Tage — tests: time; `ä` for Standard `a`
+L19. Sunndig / Aschermittwuch = Sonntag / Aschermittwoch — tests: calendar; doubled consonant for short vowel
+L20. Schiibeschla = Scheiben einschlagen — tests: festival custom; `schlaa` for Standard `schlag`
+
+=== WORD-COUNT NOTES ===
+S2 is 39 words (target 6-20) — the largest single item in the S056 set. Kept whole because it is the only sentence in the corpus that demonstrates the two-sided `Schbil` concept in heavy Alemannisch, and the six-item contrast list (`guat`/`schläachd`, `alt`/`jong`, `liab`/`bais`) is irreducible. **Flag hard: this item should be excluded from any benchmark with a hard length cap.** Truncate by dropping the trailing subordinate clause only if the verifier permits trailing-clause deletion — it does NOT permit this, since verbatim contiguity is required.
+S8 is 21 words — marginal.
+S9 is 18 words, S4 is 8 words, S6 is 7 words, S7 is 8 words, S10 is 6 words — all clean. **Recommend S4, S6, S7, S9, S10 as primary; S1, S3, S5 as secondary; S2 and S8 as flagged/long.**

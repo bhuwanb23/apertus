@@ -1,0 +1,62 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Schiff
+TITLE: Schiff
+ARTICLE_DISPLAYTITLE: Schiff
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable; the article title `Schiff` is Standard and unchanged, and the Alemannic form `Schiff` is also unchanged. All Alemannicity is in `Wasserfaarzüüg`, `Wärfte`, `unterirdisch`→`unterirdisch`, `Beeke`, `aatriibe`, `Propäller`, `Boode`.
+CAVEAT: the article's nautical technical vocabulary is heavily Alemannic-transliterated and is itself the test (`Diefang` for `Tiefgang`, `Ströömigsäigeschafte` for `Strömungseigenschaften`, `Chemmi` for `Kamin`). These transliterations are semi-Dieth features, not Standard German loanwords.
+CROSS-REF NOTE: no cross-reference. The English corpus has no Alemannic rendering of `Wasserfaarzüüg`, `Wärfte`, `Bugwulscht` or `Boode`.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"E Schiff isch e grosses Wasserfaarzüüg, wo noch em archimedische Prinzip schwümmt."
+"Es underschaäidet sich vom Floss, wil s en äigene Aadriib het, und vom Boot in erster Linie wäge sinere Gröössi."
+"Schiff wärde in Wärfte baut."
+"Wenn dr Rumpf fertig isch, loot me s Schiff bim Stapellauf i s Wasser, und denn tuet me s taufe und erst nochär wird s fertig usgrüschdet."
+"Mit de spezielle Määss wird e Schiff genauer beschriibe."
+"Dr Bugwulscht verbesseret d Ströömigsäigeschafte und sänggt dr Verbruuch vo Trybstoff."
+"Mit em Anker wird s Schiff am Boode vom Wasser festgmacht, wenn s nit faart."
+"D Abgaas vom Schiffsmotor wärde über e Chemmi abgläitet."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "E Schiff isch e grosses Wasserfaarzüüg, wo noch em archimedische Prinzip schwümmt." → "Ein Schiff ist ein grosses Wasserfahrzeug, das nach dem archimedischen Prinzip schwimmt."
+S2. "Es underschaäidet sich vom Floss, wil s en äigene Aadriib het, und vom Boot in erster Linie wäge sinere Gröössi." → "Es unterscheidet sich vom Floß, weil es einen eigenen Antrieb hat, und vom Boot in erster Linie wegen seiner Grösse."
+S3. "Schiff wärde in Wärfte baut." → "Schiffe werden in Werften gebaut."
+S4. "Wenn dr Rumpf fertig isch, loot me s Schiff bim Stapellauf i s Wasser, und denn tuet me s taufe und erst nochär wird s fertig usgrüschdet." → "Wenn der Rumpf fertig ist, lässt man das Schiff beim Stapellauf ins Wasser, und dann tauft man es und erst danach wird es fertig ausgerüstet."
+S5. "Mit de spezielle Määss wird e Schiff genauer beschriibe." → "Mit den speziellen Massen wird ein Schiff genauer beschrieben."
+S6. "Dr Bugwulscht verbesseret d Ströömigsäigeschafte und sänggt dr Verbruuch vo Trybstoff." → "Der Bugwulst verbessert die Strömungseigenschaften und senkt den Verbrauch von Treibstoff."
+S7. "Mit em Anker wird s Schiff am Boode vom Wasser festgmacht, wenn s nit faart." → "Mit einem Anker wird das Schiff am Boden vom Wasser festgemacht, wenn es nicht fährt."
+S8. "D Abgaas vom Schiffsmotor wärde über e Chemmi abgläitet." → "Die Abgase vom Schiffsmotor werden über einen Schornstein abgeleitet."
+
+=== LEXICAL NOTES ===
+L1. Wasserfaarzüüg = Wasserfahrzeug — tests: transport; `fuar-` for Standard `fahr-`, `-züüg` for `-zeug`
+L2. schwümmt = schwimmt — tests: transport verb; `üü` for long /yː/, doubled `m`
+L3. underschaäidet = unterscheidet — tests: core verb; `sch-` for Standard `sch`, `äi` for `ie`
+L4. Floss = Floß — tests: nautical; **deliberate orthographic trap: Alemannic house style here uses `ss` where Standard German writes `ß`.** A normaliser must not "correct" this.
+L5. Aadriib = Antrieb — tests: transport/engineering; `aa` for long /aː/, `rii` for `ieb`
+L6. Gröössi = Grösse — tests: everyday; `öö` for long /øː/, `-ss i` for `-ße`
+L7. Wärfte = Werft — tests: shipbuilding; `ä` for Standard `e` — Alemannic-only word form
+L8. Rumpf = Rumpf — tests: shipbuilding; UNCHANGED, negative control
+L9. bim Stapellauf = beim Stapellauf — tests: shipbuilding; `bim` for `bei dem`, `Stapellauf` doubled `l` for Standard `Stapelauf`
+L10. taufe = taufen — tests: shipbuilding; Alemannic diphthong <au>
+L11. nochär = nachher — tests: everyday adverb; `ochä` for Standard `nachher`
+L12. usgrüschdet = ausgerüstet — tests: shipbuilding; `üsch` for Standard `üst`
+L13. Määss = Masse — tests: measurement; **deliberate homograph trap against Standard German `Määss`≈`Maß`/`Masse`.** Here it is the plural of `Maaß` = mass/dimension, i.e. Standard `Maße`.
+L14. beschriibe = beschrieben — tests: core verb; `-ibe` participle ending (NOTE: the source spells this `beschriibe` with a single `u`-less `i`; it is NOT `beschriube`)
+L15. Bugwulscht = Bugwulst — tests: naval architecture; **deliberate orthographic trap: `sch` for Standard `ß`, same as L4.**
+L16. Ströömigsäigeschafte = Strömungseigenschaften — tests: naval architecture; `öö`, `-igs-`, and `g-` where Standard has `ch`
+L17. sänggt = senkt — tests: core verb; `ä` for Standard `e`
+L18. Verbruuch = Verbrauch — tests: everyday; `uu` for long /uː/
+L19. Trybstoff = Treibstoff — tests: marine engineering; Alemannic `y` diphthong for Standard `ei`, `ff` for Standard `ff`
+L20. Boode = Boden / Grund — tests: nautical; Alemannic-only sense-shift (seabed)
+L21. festgmacht = festgemacht — tests: core verb; `gmacht` for Standard `gemacht`
+L22. Chemmi = Schornstein — tests: marine engineering; **deliberate sense-shift: `Kamin`/`Schornstein` → Alemannic `Chemmi`, a wholly different word.** This is the strongest lexical item in the file.
+L23. abgläitet = abgeleitet — tests: core verb; `gläi-` for Standard `geleit-`
+
+=== WORD-COUNT NOTES ===
+S4 is 27 words (target 6-20) and contains a 4-clause chain. Kept whole: `bim Stapellauf`, `taufe`, `nochär` and `usgrüschdet` are four irreducible shipbuilding tests. Flag if the benchmark requires a hard 20-word cap.
+S2 is 18 words and contains an internal comma splice plus a `wil` (= weil) that Standard spells differently — both are in the source and must be preserved.
+S1 (12 words), S3 (4 words), S5 (9 words), S6 (10 words), S7 (15 words), S8 (10 words) are within cap. **S3 is 4 words, below the 6-word floor — keep it as a minimal lexical-anchor item (`Wärfte` is unrecoverable from Standard German) or drop it.**

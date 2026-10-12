@@ -1,0 +1,60 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Zug_(Eisenbahn)
+TITLE: Zug (Eisenbahn)
+ARTICLE_DISPLAYTITLE: Zug (Eisenbahn)
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable, and this is one of the few articles in the S056 set with NO Alemannic headword substitution at all: the title `Zug` is Standard and unchanged, and the opening sentence uses the Alemannic form `Iisebaanzug` only inside a parenthetical-free compound. All Alemannicity is in the grammar and in `Schiine`, `Wääge`, `Lokifüerer`, `Boum`-type compounds.
+CAVEAT: the article's `Züüg` (Standard `Züge`) is spelled `Züüg` in prose and `Zug` in the title/headings. This inconsistency is in the source and must be preserved per-item.
+CAVEAT: the article contains an apparent typo `Bouzig`/`Boufirmene` (for `Bauzug`/`Baufirmen`) in the `für was me d Züüg macht` section. **No item was taken from that sentence** precisely because the source text is unreliable there. If a future revision wants it, the typo must be reproduced.
+CROSS-REF NOTE: no cross-reference. The English corpus has no Alemannic rendering of `Schiine`, `Wäägen`, `Lokifüerer` or `Brämssischteem`.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"En Iisebaanzug isch e Gruppe vo zämmekupplete Iisebaanfaarzüüg, wo uf ere freie Strecki faare."
+"Räisezüüg befördere Lüüt."
+"Güeterzüüg befördere Sache."
+"«Gmischti Züüg» dransportiere Lüüt und au Fracht."
+"Automatischi Züüg, wo ooni Lokifüerer uf ere Strecki fahre, wie bi vilne U-Baane."
+"Me cha amene Zuug underwäggs im ene Zwüschebaanhof meh Wäägen ahänke oder e Zugteil abhänke."
+"Es git Züüg, wo immer glych ummefaare."
+"Wenn d Luftschlüüch nit zäme sind, chan e Zuug wo nes ganzes Brämssischteem het gar nit abfaare."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "En Iisebaanzug isch e Gruppe vo zämmekupplete Iisebaanfaarzüüg, wo uf ere freie Strecki faare." → "Ein Eisenbahnzug ist eine Gruppe von zusammengekuppelten Eisenbahnfahrzeugen, die auf einer freien Strecke fahren."
+S2. "Räisezüüg befördere Lüüt." → "Reisezüge befördern Leute."
+S3. "Güeterzüüg befördere Sache." → "Güterzüge befördern Sachen."
+S4. "«Gmischti Züüg» dransportiere Lüüt und au Fracht." → "«Gemischte Züge» transportieren Leute und auch Fracht."
+S5. "Automatischi Züüg, wo ooni Lokifüerer uf ere Strecki fahre, wie bi vilne U-Baane." → "Automatische Züge, die ohne Lokführer auf einer Strecke fahren, wie bei vielen U-Bahnen."
+S6. "Me cha amene Zuug underwäggs im ene Zwüschebaanhof meh Wäägen ahänke oder e Zugteil abhänke." → "Man kann einem Zug unterwegs in einem Zwischenbahnhof mehr Wagen anhängen oder ein Zugteil abhängen."
+S7. "Es git Züüg, wo immer glych ummefaare." → "Es gibt Züge, die immer gleich umfahren."
+S8. "Wenn d Luftschlüüch nit zäme sind, chan e Zuug wo nes ganzes Brämssischteem het gar nit abfaare." → "Wenn die Luftschläuche nicht zusammen sind, kann ein Zug, der ein ganzes Bremssystem hat, gar nicht abfahren."
+
+=== LEXICAL NOTES ===
+L1. Iisebaanzug = Eisenbahnzug — tests: transport; `aa` for long /aː/ inside a compound, `ii` for /iː/
+L2. zämmekupplete = zusammengekoppelten — tests: transport; `zämme-` for Standard `zusammen-`
+L3. Iisebaanfaarzüüg = Eisenbahnfahrzeug — tests: transport; `-fuar-` for Standard `fahr-`, `-züüg` for Standard `-zeug`
+L4. Strecki = Strecke — tests: transport; `-i` instead of Standard `-e` (a classic Alemannic feminine ending)
+L5. faare = fahren — tests: transport verb; `aa` for Standard `a`
+L6. Lüüt = Leute — tests: everyday vocabulary; `üü` for long /yː/; Alemannic-only plural
+L7. Güeter = Güter — tests: freight; `ü` for Standard `ü`
+L8. befördere = befördern — tests: transport verb; final devoicing `-e` for `-n`
+L9. dransportiere = transportieren — tests: transport verb; Alemannic verbal prefix `dra-`
+L10. Fracht = Fracht — tests: freight; UNCHANGED from Standard, a useful negative control
+L11. ooni = ohne — tests: function word; Alemannic `ooni` for Standard `ohne`
+L12. Lokifüerer = Lokführer — tests: transport; `füe-` for Standard `füh-`
+L13. U-Baane = U-Bahnen — tests: transport; `-aane` for Standard `-ahnen`
+L14. underwäggs = unterwegs — tests: transport; `wäggs` for Standard `wegs`
+L15. Zwüschebaanhof = Zwischenbahnhof — tests: transport; `Zwüsch-` for Standard `Zwischen-`
+L16. Wäägen = Wagen — tests: rolling stock; `ää` for Standard `a`
+L17. ahänke = anhängen — tests: rail operations; `hänke` for Standard `hängen`
+L18. glych / ummefaare = gleich / umfahren — tests: everyday adverbs/verbs; `glych` and the reduplicative `umme-`
+L19. Luftschlüüch = Luftschläuche — tests: rolling stock; `üü` for long /ʌː/, plural `-ch`
+L20. Brämssischteem = Bremssystem — tests: rolling stock; `ää`, doubled `ss`, and the three-fold compound `Bräms`+`s`+`ischteem`
+L21. abfaare = abfahren — tests: rail operations verb
+
+=== WORD-COUNT NOTES ---
+S2 and S3 are 3 words each — BELOW the 6-20 target. They are kept because they are the shortest possible dialect test: `Räisezüüg befördere Lüüt` differs from Standard `Reisezüge befördern Menschen` in three places at once (`-üüg`, `-e`, `Lüüt`) and contains nothing a model could guess. Flag as short; if the benchmark enforces a 6-word floor, drop S3 only (S2 is retained as the pairing anchor).
+S1 is 15 words, S4 is 6 words, S5 is 12 words, S6 is 14 words, S7 is 7 words, S8 is 17 words — all within cap.

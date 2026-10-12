@@ -1,0 +1,51 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Br%C3%B6tchen
+TITLE: Brötchen
+ARTICLE_DISPLAYTITLE: Brötchen
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable. **This article uses a THIRD orthographic system within S056, distinct from the Basel house style and from the Zürich style of the Bahnhof article.** It writes long front vowels with an explicit `ü` derived from `ue`: `müüse`, `wälsche`, `römer`(→`Südtirol`), `Häfä`, `Bagtriebmittl`. Crucially it uses `-e` on EVERY final syllable (where the Basel house style uses zero ending): `mr käuft`, `mag beispielswies`, `ist ä richtigä`. The Alemannic headword is `Weckli`, not `Brötchen` — the title keeps the Standard form. Compare `Bröötli` in S056_alemannic_wikipedia_basel_brot.txt, which is the Basel spelling of the same word; the contrast `Bröötli` (Basel) vs `Brötli`/`Weckli` (this article) is itself a usable dialect-variation item.
+CAVEAT: this article's dialect leans Hochalemannisch / Oberrheinisch (`Brot`, `Bagware`, `Deig`) rather than Basel. Flag.
+CROSS-REF NOTE: partial lexical overlap with S056_alemannic_wikipedia_basel_brot.txt (both are about bread/baking; `Deig`/`Däig`, `bache`/`bache`). **Deduplicate the shared verb `bache` before benchmarking.**
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Wenn's Weckli ä weng greeßer isch, no isch's ä richtigä Weck oder äu ä Weckä."
+"Mr käuft Weckli bim Becker wu sie üs Deig bache wäre."
+"Je no Art wird Mehl, Milich, Wasser, Salz, Zucker un däzua Häfä oder ä andr Bagtriebmittl vum Becker gnuzt."
+"In Südtirol gibts äu feini Weckli mit bsundarä Name un Formä wia Mantovaner, Blätter, Zeile odr Kleini Banane."
+"Weckli sin Bagware ähnlich zum Brot, aber normalerwies kleiner, wege dem heiße sie in manche Regionä äu Brötli (uf Hochditsch Brötchen)."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Wenn's Weckli ä weng greeßer isch, no isch's ä richtigä Weck oder äu ä Weckä." → "Wenn ein Weckli etwas grösser ist, dann ist es ein richtiger Weck oder eben ein Weckchen."
+S2. "Mr käuft Weckli bim Becker wu sie üs Deig bache wäre." → "Man kauft Weckli beim Bäcker, wo sie aus Teig backen würden."
+S3. "Je no Art wird Mehl, Milich, Wasser, Salz, Zucker un däzua Häfä oder ä andr Bagtriebmittl vum Becker gnuzt." → "Je nach Art wird Mehl, Milch, Wasser, Salz, Zucker und dazu Hefe oder ein anderes Backtriebmittel vom Bäcker verwendet."
+S4. "In Südtirol gibts äu feini Weckli mit bsundarä Name un Formä wia Mantovaner, Blätter, Zeile odr Kleini Banane." → "In Südtirol gibt es feine Weckli mit besonderen Namen und Formen wie Mantovaner, Blätter, Zeile oder Kleine Banane."
+S5. "Weckli sin Bagware ähnlich zum Brot, aber normalerwies kleiner, wege dem heiße sie in manche Regionä äu Brötli (uf Hochditsch Brötchen)." → "Weckli sind Backwaren ähnlich zum Brot, aber normalerweise kleiner, weshalb sie in manchen Regionen Brötchen (hochdeutsch Brötchen) heissen."
+
+=== LEXICAL NOTES ===
+L1. Weckli / Weck / Weckä = Weck / Weck / Weckchen — tests: food/bread; Alemannic headword for the standard `Brötchen`; diminutive `-li`, lengthened `-ä`
+L2. ä / äu / u / un = ein / eben / und / und — tests: function words; the Hochalemannisch article/determiner system (`ä` for `e`), where Basel would write `e`
+L3. greeßer = grösser — tests: everyday adjectives; `ee` for long /eː/
+L4. richtigä = richtige — tests: everyday adjectives; `-ä` adjective ending (Basel uses `-i`)
+L5. mr = man — tests: pronoun; Alemannic `mr` for Standard `man` (contrast Basel `mä`)
+L6. bim Becker = beim Bäcker — tests: commerce/food; `bim` for `bei dem`, and `Becker` for Standard `Bäcker` (`ck` for `k` is the house-style Alemannic `gg`/`ck` issue)
+L7. wu = wo — tests: relativiser; Alemannic `wu`
+L8. Deig = Teig — tests: baking; `ei` for Standard `ei` (no `äi` as in Basel `Däig`) — a direct orthographic contrast with the Basel article
+L9. bache = backen — tests: baking; UNCHANGED from Standard (negative control), and identical to S056_alemannic_wikipedia_basel_brot.txt
+L10. Häfä = Hefe — tests: baking; **deliberate false-friend trap: `Häfä` looks like Standard `Hälfte`.** The correct reading is `Hefe`.
+L11. gnuzt = genutzt / verwendet — tests: everyday commerce; Alemannic `gnuzt` with `gn-` participle prefix
+L12. Bagtriebmittl = Backtriebmittel — tests: baking; `-l` diminutive suffix (Standard `-el`)
+L13. Milich = Milch — tests: food; `-ich` for Standard `-ch` (Swiss German feature, not standard German `Milch`— but note Standard German IS `Milch`; the Alemannic here adds `-i-`, which is a genuine dialectal difference)
+L14. bsundarä = besonderen — tests: everyday adjectives; `bs-` for `bes-` (two s's merged)
+L15. Südtirol gibts / äu feini = Südtirol gibt es / ebendies feine — tests: everyday commerce; `gibts` for Standard `gibt es`
+L16. normalerwies = normalerweise — tests: everyday adverbs; `-wies` for `-weise`
+L17. heiße / heisse = heissen — tests: core verb; Alemannic diphthong <ei> for Standard <ei>
+L18. Brötli = Brötchen — tests: food; contrast with Basel `Bröötli` (same word, different dialect)
+
+=== WORD-COUNT NOTES ===
+S5 is 26 words (target 6-20) and contains a parenthetical gloss `(uf Hochditsch Brötchen)`. Flag for both length and the parenthetical.
+S4 is 20 words — at cap. It contains a four-item proper-noun list (Mantovaner, Blätter, Zeile, Kleine Banane) that is guessable from Italian baking vocabulary, so the lexical test rests on `äu feini`, `bsundarä`, `odr`, `Formä` rather than on the nouns. Flag accordingly.
+S1 (15 words), S2 (11 words), S3 (20 words) are clean. **Recommend S1, S2, S3 as primary.**

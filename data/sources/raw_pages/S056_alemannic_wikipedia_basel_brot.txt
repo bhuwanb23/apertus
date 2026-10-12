@@ -1,0 +1,55 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Brot
+TITLE: Brot
+ARTICLE_DISPLAYTITLE: Brot
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable. The article is written in a plain house-style Alemannisch with a Basel/Southwest-German feel (`mäiste`, `chömme`, `halte`). Note the article title itself is the UNCHANGED Standard `Brot`; the dialect content is entirely in the grammar and in `Däig`, `Rampf`, `Bröötli`, `Grumbiire`.
+CAVEAT: the article mixes Standard German technical/food-science terminology with Alemannic in the SAME sentence (e.g. `Diacetylwiisüüriglyceride`, `MDG`, `Konservierigsstoff`). None of the items below come from those paragraphs.
+CROSS-REF NOTE: no cross-reference. `Brötli` is separately covered in S056_alemannic_wikipedia_basel_broetli.txt (Weckli article).
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Dr Däig bestoot us Määl, Salz, Wasser und Driibmiddel, wie Bachhefi und Suurdäig."
+"Es ghöört zu de Grundnaarigsmiddel."
+"Mit de mäiste Brotdäig cha mä au chliineri Bröötli bache."
+"Um s wäiche Innere isch dr Rampf, wo dünkler und fester isch."
+"Bim Bache verliert s Brot öbbe zää Brozänt vom Gwicht."
+"Acetat wärde as Süürigsmiddel iigsetzt, zum dr Gschmack z verbessere und e bessere Rampf z bilde."
+"Anstatt vom dradizionelle Suurdäig wird mänggisch au Määl brucht, wo mit Milchsüüri füecht gmacht isch, zum d Choste sänke."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Dr Däig bestoot us Määl, Salz, Wasser und Driibmiddel, wie Bachhefi und Suurdäig." → "Der Teig besteht aus Mehl, Salz, Wasser und Triebmittel, wie Hefe und Sauerteig."
+S2. "Es ghöört zu de Grundnaarigsmiddel." → "Es gehört zu den Grundnahrungsmitteln."
+S3. "Mit de mäiste Brotdäig cha mä au chliineri Bröötli bache." → "Mit dem meisten Brotteig kann man auch kleinere Brötchen backen."
+S4. "Um s wäiche Innere isch dr Rampf, wo dünkler und fester isch." → "Um die weiche Innere ist die Krume, wo dunkler und fester ist."
+S5. "Bim Bache verliert s Brot öbbe zää Brozänt vom Gwicht." → "Beim Backen verliert das Brot etwa zwei Prozent an Gewicht."
+S6. "Acetat wärde as Süürigsmiddel iigsetzt, zum dr Gschmack z verbessere und e bessere Rampf z bilde." → "Acetat wird als Säuerungsmittel zugesetzt, um den Geschmack zu verbessern und eine bessere Krume zu bilden."
+S7. "Anstatt vom dradizionelle Suurdäig wird mänggisch au Määl brucht, wo mit Milchsüüri füecht gmacht isch, zum d Choste sänke." → "Statt des traditionellen Sauerteigs wird vielfach auch Mehl verwendet, das mit Milchsäure feucht gemacht ist, um die Kosten zu senken."
+
+=== LEXICAL NOTES ===
+L1. Däig / Brotdäig = Teig / Brotteig — tests: baking; Alemannic `äi` for Standard `ei`
+L2. bestoot = besteht — tests: everyday verb; `oo` for long /oː/, `-oot` for Standard `-eht`
+L3. Määl = Mehl — tests: food; `ä` for Standard `e`
+L4. Driibmiddel = Triebmittel (raising agent) — tests: baking; `-iddel` diminutive/agent suffix
+L5. Bachhefi = Hefe — tests: baking; Alemannic-only word, Standard `Hefe` has no dialect counterpart
+L6. Suurdäig = Sauerteig — tests: baking; `Suur-` for Standard `Sauer-` (the Standard word contains a Standard German lexicalised `sauer`, Alemannic re-derives it)
+L7. Grundnaarigsmiddel = Grundnahrungsmittel — tests: everyday nutrition; `aar` for Standard `ahr`
+L8. Bröötli = Brötchen — tests: food; diminutive `-li` (Basel marker) + `öö`
+L9. bache = backen — tests: baking; Alemannic diphthong <a> for Standard <a>, zero ending
+L10. Innere = (Brotkrume) — tests: baking; homonym of Standard `Innere` ('inner'), a genuine ambiguity trap
+L11. Rampf = Krume — tests: baking; Alemannic-only word
+L12. wäiche = weiche — tests: adjectives; `äi` diphthong
+L13. zää = zwei — tests: numerals; `ä` for Standard `zw`
+L14. Brozänt / Gwicht = Prozent / Gewicht — tests: everyday quantities; final devoicing `-nt` and `-cht`
+L15. Süürigsmiddel = Säuerungsmittel — tests: food industry; `üü`
+L16. Choste = Kosten — tests: economics; `o` for Standard `o` with `ch`
+L17. sänke = senken — tests: everyday verb; `ä` for Standard `e`
+L18. mäiste/chömme/hälte = meisten/können/halten — tests: verb paradigm; `mää` for Standard `meist`, `-ömme` for `-önnen`
+
+=== WORD-COUNT NOTES ===
+S7 is 23 words (target 6-20). Kept whole: it carries three coordinated modifiers that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap; S7 can be dropped with S6 retained.
+S5 contains the numeral `zää` (two) — a dialect numeral, so it is NOT an answer-leak artefact; the lexical test is `Bim Bache` and `Brozänt`.
+S4's `Innere` is a false friend against Standard German `Innere` ('inner lining'), which is a deliberate ambiguity and not an error in the source.

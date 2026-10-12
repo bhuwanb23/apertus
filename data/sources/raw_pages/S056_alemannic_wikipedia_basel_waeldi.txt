@@ -1,0 +1,49 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/W%C3%A4ldi
+TITLE: Wäldi
+ARTICLE_DISPLAYTITLE: Wäldi
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable. **This article is written in Thurgau Alemannisch, not Basel**, despite the header label. The article's own `== Sprooch un Dialäkt ==` section states the dialect explicitly: `De hochalemannisch Dialèkt vo Wèldi ghöort zum Oschtschwizerisch.` The lexical markers are distinct: `Wèldi`/`Wäldi` (final devoicing and `è`/`ä` alternation), `Gmaind` (for `Gemeinde`), `Sidlig`, `Gschicht`, `haa`, `het`, `gäit`, `glege`. Register as `DIALECT: thurgau` if the schema allows; the header value `basel` is corpus-level bookkeeping.
+CAVEAT: MOST of this article is census statistics — percentages, election results, population counts. Only three items below avoid numerals entirely. **This is the lowest-yield article in S056 and is included primarily as a dialect-GRAMMAR control (Swiss German `sin`, `hän`, `glege`, `hend` vs Standard).**
+CAVEAT: the headword appears with BOTH spellings — `Wèldi` in the lead and most of the body, `Wäldi` in the first line (with the note `amtlich Wäldi`). This is a real dialect variation recorded in the source, not an error. Do not normalise.
+CROSS-REF NOTE: S057_alemannic_wikipedia_*.txt (Bubikon, Chindlistein, Lipperschwil-adjacent material) covers comparable Swiss-German municipality articles. No item-level overlap.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Wèldi liit am Südhang vom Seerugge."
+"De hochalemannisch Dialèkt vo Wèldi ghöort zum Oschtschwizerisch."
+"Bi de Volkszellig 2000 hend vo de 970 Iiwooner 90,7 % Dütsch as Hauptsprooch aagèè, 1,2 % Französisch 0,3 % Italienisch und 7,8 % anderi Sprooche."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Wèldi liit am Südhang vom Seerugge." → "Wäldi liegt am Südhang des Seerückens."
+S2. "De hochalemannisch Dialèkt vo Wèldi ghöort zum Oschtschwizerisch." → "Der hochalemannische Dialekt von Wäldi gehört zum Ostdschweizerischen."
+S3. "Bi de Volkszellig 2000 hend vo de 970 Iiwooner 90,7 % Dütsch as Hauptsprooch aagèè, 1,2 % Französisch 0,3 % Italienisch und 7,8 % anderi Sprooche." → "Bei der Volkszählung 2000 haben von den 970 Einwohnern 90,7 % Deutsch als Hauptsprache angegeben, 1,2 % Französisch, 0,3 % Italienisch und 7,8 % andere Sprachen."
+
+=== LEXICAL NOTES ===
+L1. Wèldi / Wäldi = Wäldi (municipality) — tests: toponymy; **both spellings appear in the same article, a genuine dialect-variation record**
+L2. liit = liegt — tests: spatial verb; `ii` for long /iː/
+L3. Südhang = Südhang — tests: geography; UNCHANGED from Standard, negative control
+L4. Seerugge = Seerücken — tests: geography; `ruegge` for Standard `rücken`
+L5. Dialèkt = Dialekt — tests: metalanguage; `è` for Standard `e`
+L6. hochalemannisch = hochalemannisch — tests: metalanguage; UNCHANGED, negative control
+L7. ghöort = gehört — tests: core verb; `ö` for `o`, `-oot` for `-t`
+L8. Oschtschwizerisch = Ostdschweizerisch — tests: regional adjective; `oscht` for Standard `ost`, `-schwizerisch` for `-schweizerisch` (`ii` for long /iː/ — a signature Swiss German spelling rule)
+L9. Gmaind = Gemeinde — tests: civic vocabulary; **Alemannic-only sense-divergent word** (`Gmeinde` → `Gmaind`)
+L10. Hend = haben (3rd plural present) — tests: verb paradigm; `hend` for Standard `haben`, Swiss German for Standard High German `haben`
+L11. Iiwooner = Einwohner — tests: civic vocabulary; `Ii-` for Standard `Ein-`
+L12. aagèè = angegeben — tests: census register; `aagèè` for Standard `angegeben`, `èè` for Standard `eben`
+L13. anderi = andere — tests: everyday adjectives
+L14. Sidlig = Siedlung — tests: land use; Alemannic `Sidlig` for Standard `Siedlung` (d < d, but `-lig` vs `-lung`)
+L15. Flechi = Fläche — tests: land use; Alemannic-only word
+L16. Gschicht = Geschichte — tests: everyday vocabulary; `gsch-` for `ge-`, `ch` for `sch`
+L17. Hauptsprooch / Sprooche = Hauptsprache / Sprachen — tests: metalanguage; `-ooch` for long /oː/
+L18. gnamset = gegründet — tests: history; `gna-` participle prefix for Standard `ge-`
+
+=== WORD-COUNT NOTES ===
+S3 is 24 words (target 6-20) and contains FOUR percentage figures and the year 2000 — heavy numeral density. **This is precisely the kind of item rule 6 warns against. It is retained ONLY because it carries `hend` and `Iiwooner`, two genuinely Alemannic grammar forms. Recommend dropping S3 entirely if a cleaner dialect-grammar item is available; do NOT use it as a comprehension item, because the answer is recoverable from the numerals.**
+S1 is 6 words — at the floor. Retained: it is the shortest clean locative item in the set and `liit` + `Seerugge` are both dialectal.
+S2 is 9 words — clean and is the only genuinely dialectal statement in the file with no numerals. **This is the primary item from this article.**
+Overall: **recommend S2 as primary; S1 as secondary; S3 as flagged/drop.**

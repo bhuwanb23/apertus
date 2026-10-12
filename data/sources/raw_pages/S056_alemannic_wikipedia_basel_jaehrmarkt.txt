@@ -1,0 +1,53 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Jahrmarkt
+TITLE: Jahrmarkt
+ARTICLE_DISPLAYTITLE: Jahrmarkt
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — no {{Dialekt}} template readable. **This file is the SUBSTITUTE for the requested `Märit`.** `/wiki/Märit` does NOT exist on als.wikipedia; nor does `/wiki/Märik`. Prefix enumeration of `Mär` returns only `Märchen, Märe, Mürklin, Märstetten, Märt(er), März, Märzrevolution` — there is no Alemannic `Märit` article. The Alemannic Wikipedia instead carries the market/fair vocabulary inside the article `Jahrmarkt`, whose own Alemannic headword is given IN the text: `E Joormärt  oder Mäss`. That triple headword is the lexical test and is recorded as L1.
+CAVEAT: the article uses TWO DIFFERENT Alemannic spellings of `beispielsweise` in the same text — `Bischpil` (S5) and `Bischbil` (S2). This inconsistency is in the source and both are reproduced verbatim. It is a genuine dialect-variation datum, not an extraction error.
+CAVEAT: `Mäss` collides with Standard German `Maß`/`Mess`; a translation model will very likely mistranslate it. This is a deliberate trap, not an error.
+CAVEAT: S1 contains a DOUBLE SPACE (`Joormärt  oder Mäss`). **Reproduced verbatim from the Alemannic Wikipedia and must NOT be normalised.** A string-matching verifier will reject a single-space version.
+EXCLUDED: the sentence beginning `Mässe wärde vilmol an eme Chillefiirdig ghalte ...` was rejected. Its full span runs to 33 words and ends with the proper nouns `Oostere-, Pfingst-, oder Wienachtsmärt bzw. s Annafest`, and any truncation would break verbatim contiguity. Not used.
+CROSS-REF NOTE: no cross-reference. The English corpus S001–S055 has no market/fair material at all.
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"E Joormärt  oder Mäss isch e meerdäägige Märt, wo vilmol scho sit em Middelalter äimol im Joor in ere Stadt stattfindet und Lüt us dr ganze Umgääbig aazieet."
+"Gwüssi Stedt wie zum Bischbil Basel häi e köönigligi Erlaubnis überchoo, mee as äi Mäss im Joor abzhalte."
+"Hüte wird d Bezäichnig au für anderi Märt brucht, wo nid ständig si, hüfig für Volksfest."
+"Veräinzelt git es au hüte no saison- oder broduktbedingte Joormärt, so wie zum Bischpil Herbstmässe und Holz-, Ross- oder Wii-Märt."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "E Joormärt  oder Mäss isch e meerdäägige Märt, wo vilmol scho sit em Middelalter äimol im Joor in ere Stadt stattfindet und Lüt us dr ganze Umgääbig aazieet." → "Ein Jahrmarkt oder eine Mäss ist ein mehrtägiger Markt, der möglicherweise schon seit dem Mittelalter einmal im Jahr in einer Stadt stattfindet und Leute aus der ganzen Umgebung anzieht."
+S2. "Gwüssi Stedt wie zum Bischbil Basel häi e köönigligi Erlaubnis überchoo, mee as äi Mäss im Joor abzhalte." → "Gewisse Städte wie zum Beispiel Basel haben eine königliche Erlaubnis erhalten, mehr als eine Mäss im Jahr abzuhalten."
+S3. "Hüte wird d Bezäichnig au für anderi Märt brucht, wo nid ständig si, hüfig für Volksfest." → "Heute wird die Bezeichnung auch für andere Märkte gebraucht, die nicht ständig sind, häufig für Volksfeste."
+S4. "Veräinzelt git es au hüte no saison- oder broduktbedingte Joormärt, so wie zum Bischpil Herbstmässe und Holz-, Ross- oder Wii-Märt." → "Vereinzelt gibt es auch heute noch saison- oder produktabhängige Jahrmärkte, wie zum Beispiel Herbstmärkte und Holz-, Ross- oder Weinmärkte."
+
+=== LEXICAL NOTES ===
+L1. Joormärt / Märt = Jahrmarkt / Markt — tests: everyday trade; **the requested `Märit` DOES NOT EXIST on als.wikipedia, and `Märt` is the working Alemannic form.** Note the `ä` for Standard `a`, and that `Märt` is not the same word as Standard `Markt` in form.
+L2. Mäss = Kirmes / Jahrmarkt (dialect sense) — tests: everyday trade/festival; **deliberate homograph trap against Standard German `Maß`/`Mess`.** The dialect sense here is 'fair', not 'measure'.
+L3. meerdäägige = mehrtägige — tests: everyday adjectives; `äi` for `ei`, `i` inflection
+L4. Umgääbig = Umgebung — tests: geography; `ää` for Standard `e`
+L5. aazieet = anzieht — tests: everyday verb; `aa-` for Standard `an-`
+L6. Gwüssi = Gewisse — tests: quantifiers; `gwüssi` for Standard `gewisse`
+L7. Bischbil / Bischpil = Beispielsweise — tests: discourse marker; **two spellings of the same word occur in the same article (S2 vs S4); use as a dialect-variation item**
+L8. köönigligi Erlaubnis = königliche Erlaubnis — tests: civic history; `öö` for long /øː/
+L9. überchoo = erhalten — tests: everyday verb; `oo` for long /oː/
+L10. abzhalte = abhalten — tests: civic vocabulary; final devoicing
+L11. Bezäichnig = Bezeichnung — tests: metalanguage; `-ig` kept, `ä` for `e`
+L12. Chillefiirdig = Schulfest (lit. school holiday) — tests: festival/custom; recorded here even though the containing sentence was EXCLUDED, because `Chillefiirdig` is a distinctive Alemannic festival term. **Alemannic `Chillefiirdig` does not simply mean Standard `Schulfreizeit`.**
+L13. Häilige / vereert = Heilige / verehrt — tests: religion/custom
+L14. Veräinzelt = Vereinzelt — tests: quantifier; `ä` for `e`
+L15. broduktbedingte = produktabhängige — tests: economics; `brodukt` for Standard `Produkt`
+L16. Wii-Märt = Weinmarkt — tests: agriculture; `Wii` for Standard `Wein` (Alemannic-only)
+L17. Zümft = Zunft — tests: civic associations; `ü` for Standard `u`
+L18. Mässe / Herbstmässe = Messe / Herbstmesse — tests: trade; plural in `-e`
+
+=== WORD-COUNT NOTES ===
+S1 is 27 words (target 6-20) and contains a DOUBLE SPACE. Flag for length.
+S4 is 21 words — marginal.
+S2 (19 words) and S3 (15 words) are clean. **Recommend S2 and S3 as the primary items from this file; S4 as secondary; S1 as flagged/long.**
+This file yields only 4 items — it is the smallest in the S056 set. If more market/fair coverage is needed, the correct additional source is the `Basler Herbstmäss` and `Mustermäss Basel` articles, which are linked from the Jahrmarkt article's `== Lueg au ==` section but were not harvested here.

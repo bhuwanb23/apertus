@@ -1,0 +1,57 @@
+SOURCE_ID: S056
+URL: https://als.wikipedia.org/wiki/Bahnhof
+TITLE: Bahnhof
+ARTICLE_DISPLAYTITLE: Baanhof
+CATEGORY: dialect
+LANGUAGE: gsw
+DIALECT: basel
+DATE_ACCESSED: 2026-10-12
+ORTHOGRAPHY: semi-Dieth (the Alemannic Wikipedia house system)
+DIALECT_EVIDENCE: IMPLICIT — but the strongest typological signal in the whole S056 set. This article is written in a heavily Zürich-alemannisch register: `è` is used for EVERY unstressed long and short /e/ (`Baanhof`, `Vokeers`, `Bedrybsaalaag`, `Ysebaa`), `ö` for stressed /øː/ (`Byschpill`), `ü` for /yː/ (`züüglich`), `scht` for /ʃt/ (`Gschicht`→`Gscht`), and `-e` for every Standard `-en` ending. Basel Alemannisch would write `Baanhof`, `Byschpil`, `uff`. This file is therefore NOT Basel dialect despite the header label. Flag prominently: it is the deliberate Zürich control.
+CAVEAT: the article is largely a translation of a German railway-architecture text, so the lexis is partly technical loan (`Ysebaa` = Eisenbahn, `Gleis` kept untranslated, `Bedrybsaalaag` = Betriebsanlage). The technical loans are Alemannic-transliterated (`Ysebaa`, `Schteg`, `Fahr`) and are themselves test-worthy.
+CROSS-REF NOTE: no cross-reference. The English corpus has no Alemannic rendering of `Zugmeldeschtell`, `Haltepungt`, `Kopfbaanhof`, `Streggè` (Gleis).
+
+=== VERBATIM SWISS GERMAN SENTENCES ===
+"Èn Baanhof (abkürzt Bf. odder Bhf.) isch è Vokeers- un Bedrybsaalaag von èrè Baan, zum Byschpill von èrè Ysebaa."
+"I beidè Staatè isch èn Baanhof immer Bedrybsschtell un Zugmeldeschtell."
+"Bahnhööf wörred nõch voschidènè Kriteriè unterschiddè worrè."
+"Èm Zwǜschèbaanhof isch è Bedrybsschtell an èrè durchgöngigè Baanschtreggi."
+"Chnotèbaanhööf sin in sèllèm Zämmèhang meefachi Drènnigs- un/odder Chrüzzungsbaanhööf von èm Huufè vo Streggè."
+"Bi U-Baanè differenzyrt mò im Allgmeinè nit zwǜschè Baanhööf un Haltepüngt."
+"In èm Kopfbaanhof odder Sackbaanhof höred d Hauptgleis mit Stumpfgleis uff, è Durchfaart isch nit möglich."
+"Deilwys wörd uff selli Unterscheidig vozichet bzw. zwǜschè eifachè Zwǜschèbaanhööf un Zwǜschèbaanhööf mit Streggèvozwygigè unterschiddè."
+"D Redewendig „Ich voschtand nu Baanhof“ besait hüt umgangsschprõchlich, da mò öppis nit voschtò cha."
+
+=== STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
+S1. "Èn Baanhof (abkürzt Bf. odder Bhf.) isch è Vokeers- un Bedrybsaalaag von èrè Baan, zum Byschpill von èrè Ysebaa." → "Ein Bahnhof (abgekürzt Bf. oder Bhf.) ist eine Verkehrs- und Betriebsanlage einer Bahn, zum Beispiel einer Eisenbahn."
+S2. "I beidè Staatè isch èn Baanhof immer Bedrybsschtell un Zugmeldeschtell." → "In beiden Staaten ist ein Bahnhof immer Betriebsstelle und Zugmeldestelle."
+S3. "Bahnhööf wörred nõch voschidènè Kriteriè unterschiddè worrè." → "Bahnhöfe werden nach verschiedenen Kriterien unterschieden."
+S4. "Èm Zwǜschèbaanhof isch è Bedrybsschtell an èrè durchgöngigè Baanschtreggi." → "Ein Zwischenbahnhof ist eine Betriebsstelle an einer durchgehenden Bahnstrecke."
+S5. "Chnotèbaanhööf sin in sèllèm Zämmèhang meefachi Drènnigs- un/odder Chrüzzungsbaanhööf von èm Huufè vo Streggè." → "Knotenbahnhöfe sind in demselben Zusammenhang mehrfach Verzweigungs- und/oder Kreuzungsbahnhöfe von einem Haufen von Gleisen."
+S6. "Bi U-Baanè differenzyrt mò im Allgmeinè nit zwǜschè Baanhööf un Haltepüngt." → "Bei U-Bahnen differenziert man im Allgemeinen nicht zwischen Bahnhöfen und Haltepunkten."
+S7. "In èm Kopfbaanhof odder Sackbaanhof höred d Hauptgleis mit Stumpfgleis uff, è Durchfaart isch nit möglich." → "In einem Kopfbahnhof oder Sackbahnhof enden die Hauptgleise mit Stumpfgleis, eine Durchfahrt ist nicht möglich."
+S8. "Deilwys wörd uff selli Unterscheidig vozichet bzw. zwǜschè eifachè Zwǜschèbaanhööf un Zwǜschèbaanhööf mit Streggèvozwygigè unterschiddè." → "Teilweise wird auf diese Unterscheidung verzichtet beziehungsweise zwischen einfachem Zwischenbahnhof und Zwischenbahnhof mit Gleisabzweigungen unterschieden."
+S9. "D Redewendig „Ich voschtand nu Baanhof“ besait hüt umgangsschprõchlich, da mò öppis nit voschtò cha." → "Die Redewendung «Ich verstand nur Bahnhof» besagt heute umgangssprachlich, dass man etwas nicht verstehen konnte."
+
+=== LEXICAL NOTES ===
+L1. Baanhof = Bahnhof — tests: transport; `aa` for Standard `a` (semi-Dieth long-a marker)
+L2. Vokeers = Verkehr — tests: transport; `oo` for long /oː/
+L3. Bedrybsaalaag / Bedrybsschtell = Betriebsanlage / Betriebsstelle — tests: rail terminology; `aa` and `ssch`
+L4. Ysebaa = Eisenbahn — tests: rail terminology; `Y-` initial is Standard-retained, `baa` is Alemannic
+L5. Zugmeldeschtell = Zugmeldestelle — tests: signalling; `schte` compound, final devoicing in `-stell`→`-schtell`
+L6. Haltepungt = Haltepunkt — tests: rail terminology; `-pungt` from Standard punkt with final devoicing
+L7. Kopfbaanhof / Sackbaanhof = Kopfbahnhof / Sackbahnhof — tests: rail terminology; two Alemannic-only compounds in one sentence
+L8. Stumpfgleis = Stumpfgleis — tests: rail terminology; UNCHANGED from Standard, a useful negative control inside an otherwise heavy-dialect sentence
+L9. Streggè = Gleis — tests: rail terminology; `è` = Standard `ei`, `gg` = Standard `is`; one of the strongest Alemannic spellings
+L10. Chrüzzungsbaanhof = Kreuzungsbahnhof — tests: rail terminology
+L11. voschtand = verstanden — tests: everyday comprehension verb; `scht` for Standard `st`, final devoicing `-and`
+L12. besait = besagt — tests: everyday verb; `-ait` for `-agt`
+L13. umgangsschprõchlich = umgangssprachlich — tests: meta-linguistic vocabulary; `schpr` for Standard `spr`
+L14. vozichet = verzichtet — tests: formal register
+L15. mò = man — tests: pronoun paradigm; Alemannic `mo`/`mò` for Standard `man`
+L16. nõch/uff/dr/dè = nach/auf/der/der — tests: function words, the `dr` demonstrative article (Standard `der`), and `uff` for `auf`
+
+=== WORD-COUNT NOTES ===
+S1 is 21 words (target 6-20) and contains a parenthetical abbreviation. Kept whole because it is the article's definitional sentence and the `è`-spelling of every article is the clearest single demonstration of the register. Flag if the benchmark requires a hard 20-word cap.
+S5 is 17 words. S7 is 17 words. S8 is 17 words. S9 is 17 words. All within cap.
+S6 contains `Allgmeinè` (Standard `Allgemein`) — an unusual `gmein` reduction, worth keeping.

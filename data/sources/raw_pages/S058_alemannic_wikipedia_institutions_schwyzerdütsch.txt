@@ -24,7 +24,8 @@ BENCHMARK USE: a dialect sentence whose words are themselves defined in the sour
 "S Schwyzerisch Idiotikon isch s gröscht Dialäktwörterbuch vu allne germanische Sproche."
 "Träger vom Idiotikon isch dr gmeinnützig Verein für es Schwyzerdütschs Wörterbuech, wo vo dr Schwyzerische Eignosseschaft (dur d Akademy vo de Geischtes- und Sozialwüsseschafte), de Dütschschwyzer Kantöön und Private finanziert wird."
 "Syt em Septämber 2010 cha mers über www."
-"Regelmèèssig tritt s Schwyzerisch Idiotikon i der Öffentlichkäit au mit syne Woortgschichte und mit synen Erchlèèrige vo Familienäme uuf."
+"S Idiotikon teilt d Quelle in zwo Zytperiode: jüngeri Sproch ab 1800 und elteri (historischi) Sproch vo öppe 1300 bis 1799)."
+"De letscht Band i truckter Form söll de 17t sy, wo s ganz Z dinen isch."
 === STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
 S1. "Es isch eis vo de vier «Nationale Wörterbüecher vo de Schwyz»; di andere sind s Glossaire des patois de la Suisse romande, s Vocabolario dei dialetti della Svizzera italiana und s Dicziunari Rumantsch Grischun." → "Es ist eines der vier «Nationalen Wörterbücher der Schweiz»."
 S2. "Idiotikon isch en alts Wort für es Wörterbuech, wo die Wort drinstönd, wo für e bistimmti Landschaft tipisch sind, aber nöd au die, wo glych sind wie i de Schriftsprach." → "Idiotikon ist ein altes Wort für ein Wörterbuch, in dem die Wörter stehen, die für eine bestimmte Landschaft typisch sind, aber nicht auch die, die gleich sind wie in der Schriftsprache."
@@ -36,7 +37,8 @@ S7. "S Idiotikon het im Momänt (bis Band 16) öppe 155'000 Stichwort." → "Das
 S8. "S Schwyzerisch Idiotikon isch s gröscht Dialäktwörterbuch vu allne germanische Sproche." → "Das Schweizerische Idiotikon ist das grösste Dialektwörterbuch aller germanischen Sprachen."
 S9. "Träger vom Idiotikon isch dr gmeinnützig Verein für es Schwyzerdütschs Wörterbuech, wo vo dr Schwyzerische Eignosseschaft (dur d Akademy vo de Geischtes- und Sozialwüsseschafte), de Dütschschwyzer Kantöön und Private finanziert wird." → "Träger des Idiotikons ist der gemeinnützige Verein für ein Schweizerdeutsches Wörterbuch."
 S10. "Syt em Septämber 2010 cha mers über www." → "Seit September 2010 kann man es über www.idiotikon.ch auch online lesen."
-S11. "Regelmèèssig tritt s Schwyzerisch Idiotikon i der Öffentlichkäit au mit syne Woortgschichte und mit synen Erchlèèrige vo Familienäme uuf." → "Regelmässig tritt das Schweizerische Idiotikon in der Öffentlichkeit auch mit seinen Wortgeschichten und mit seinen Erklärungen von Familiennamen auf."
+S11. "S Idiotikon teilt d Quelle in zwo Zytperiode: jüngeri Sproch ab 1800 und elteri (historischi) Sproch vo öppe 1300 bis 1799)." → "Das Idiotikon teilt die Quelle in zwei Zeitperioden: jüngere Sprache ab 1800 und ältere (historische) Sprache von etwa 1300 bis 1799)."
+S12. "De letscht Band i truckter Form söll de 17t sy, wo s ganz Z dinen isch." → "Der letzte Band in gedruckter Form soll der 17. sein, wo das ganze Z enthalten ist."
 === SWISS FACT CONTENT ===
 F1. Switzerland has four 'national dictionaries', one per language region: the Idiotikon (German), the Glossaire des patois de la Suisse romande, the Vocabolario dei dialetti della Svizzera italiana and the Dicziunari Rumantsch Grischun. — cross-ref: S047
 F2. 'Idiotikon' is an old word for a dialect dictionary recording region-typical words but not those identical to Standard German. — cross-ref: none
@@ -48,11 +50,12 @@ F7. As of volume 16 the dictionary contained about 155,000 headwords. — cross-
 F8. The Idiotikon is the largest dialect dictionary of all Germanic languages. — cross-ref: none
 F9. The dictionary is carried by a non-profit association — i.e. a federal/cantonal co-funded national institution. — cross-ref: S029
 F10. It has been readable online at www.idiotikon.ch since September 2010. — cross-ref: none
-F11. The institution publishes regularly in public with word stories and explanations of family names. — cross-ref: none
-F12. (From the article text, not from a harvested sentence.) The dictionary's source material divides into two periods: post-1800 and historical, roughly 1300 to 1799 — documenting that Alemannic dialect forms were written from the 14th century. — cross-ref: S028
+F11. The dictionary divides its source material into two periods: post-1800 and historical, roughly 1300 to 1799 — documenting that Alemannic dialect forms were written from the 14th century. — cross-ref: S028
+F12. The last printed volume is to be the 17th, covering the whole letter Z. — cross-ref: none
 
 === WORD-COUNT NOTES ===
 S1 is 34 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
 S2 is 30 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
 S4 is 40 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
 S9 is 31 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S11 is 21 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
