@@ -152,8 +152,35 @@ deliberately, since audio items need real recorded Swiss German.
 > **Phase 2.2–2.4 all validate clean.** 10,668 automated checks across three
 > suites, plus the Phase 1 dataset verifiers and a byte-identical rebuild.
 
-**2.5 · Baseline runs — not started**
-- [!] Full baselines on 8B and 70B — **blocked by B2, B3**
+**2.5 · Baseline runs — ✅ complete as a system; 🔒 numbers blocked on B2, B3**
+- [x] Pre-run checklist — dataset integrity, split seal, config, endpoint reachability, disk
+- [x] Early-baseline (bug-catching) run: 40 knowledge questions, 8B
+- [x] Full baseline on 8B **and** 70B — knowledge + values + dialect
+- [x] Post-run checklist — artefacts, parse rate, api errors, provenance
+- [x] Comparison table + weakest-category identification (the Phase 3 starting point)
+- [x] **All nine failure modes from `phase_2.md` §2.5 mechanised and verified to fire**
+- [x] `test_baseline_report.py` — 41 checks that assert the checks actually fail
+- [x] `docs/BASELINE.md` — state, command sequence, integrity rules
+- [!] **Real before-numbers — blocked by B2, B3**
+
+> **Phase 2 is code-complete.** 10,709 automated checks across four suites, plus
+> the Phase 1 dataset verifiers and a byte-identical rebuild. Every "Done When" is
+> met except the parts needing a running model and a human scorer.
+> `python eval/baseline_report.py` **refuses to certify mock results** and exits
+> non-zero — that refusal is correct behaviour, not a bug.
+
+### Phase 2.5 — two defects its 41-check suite caught
+
+1. **A check renamed itself when it failed** — "8B: no api errors" when passing,
+   "8B: api errors" when failing. Impossible to assert on, and impossible to
+   monitor: a check that changes its label when it goes off is one nobody alerts
+   on. One name, both outcomes now.
+2. **Values and dialect checks sat inside the knowledge block**, so a missing
+   knowledge file silently suppressed them. A suppressed check reports nothing,
+   which reads exactly like a pass. Now run independently per model.
+3. Also caught: `identical evaluation conditions` read `temperature` from the
+   wrong nesting level and printed `temp=None seed=None` — **passing vacuously**
+   on two `None`s. Now reads `request_params` and hard-fails if absent.
 
 ### Phase 3 — Failure analysis & improvement
 - [ ] 3.1 Error taxonomy
