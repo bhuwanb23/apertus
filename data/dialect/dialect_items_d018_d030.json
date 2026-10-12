@@ -2,10 +2,10 @@
   {
     "id": "D018",
     "task_type": "culture_in_dialect",
-    "dialect": "zÃ¼rich",
-    "dialect_evidence": "explicit {{Dialekt|ZÃ¼richdeutsch|ZÃ¼ritÃ¼Ã¼tsch|ZÃ¼ritÃ¼Ã¼tsch (See)}} template in the wikitext.",
+    "dialect": "zürich",
+    "dialect_evidence": "explicit {{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch (See)}} template in the wikitext.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"Dr Bundesrat hät sibe Mitgliider, wo jedes für sich au wider Bundesrat oder Bundesrätin gheisst.\"",
+    "prompt": "Dr Bundesrat hät sibe Mitgliider, wo jedes für sich au wider Bundesrat oder Bundesrätin gheisst.",
     "question": "According to this sentence, how many members does the Swiss Federal Council have?",
     "options": {
       "A": "Five",
@@ -23,23 +23,23 @@
   {
     "id": "D019",
     "task_type": "culture_in_dialect",
-    "dialect": "zÃ¼rich",
-    "dialect_evidence": "explicit {{Dialekt|ZÃ¼richdeutsch|ZÃ¼ritÃ¼Ã¼tsch|ZÃ¼ritÃ¼Ã¼tsch (See)}} template in the wikitext.",
+    "dialect": "zürich",
+    "dialect_evidence": "explicit {{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch (See)}} template in the wikitext.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"De Bundespräsident hät als «erschte under Gliiche» (primus inter pares) kei wiiteri Rächt, sondern erfüllt Repräsentationsuufgabe und leitet d Bundesratssitzige.\"",
-    "question": "According to this sentence, what extra authority does the BundesprÃ¤sident have over the other Federal Councillors?",
+    "prompt": "De Bundespräsident hät als «erschte under Gliiche» (primus inter pares) kei wiiteri Rächt, sondern erfüllt Repräsentationsuufgabe und leitet d Bundesratssitzige.",
+    "question": "According to this sentence, what extra authority does the Bundespräsident have over the other Federal Councillors?",
     "options": {
-      "A": "A casting vote, which lets the BundesprÃ¤sident break a deadlock on his own",
-      "B": "The power of veto, which lets the BundesprÃ¤sident block a decision of the other six",
+      "A": "A casting vote, which lets the Bundespräsident break a deadlock on his own",
+      "B": "The power of veto, which lets the Bundespräsident block a decision of the other six",
       "C": "The power to dismiss a Federal Councillor who disagrees with him",
-      "D": "None - the BundesprÃ¤sident is first among equals, represents the country and chairs the Federal Council meeting"
+      "D": "None - the Bundespräsident is first among equals, represents the country and chairs the Federal Council meeting"
     },
     "correct_answer": "D",
     "difficulty": "hard",
     "source_id": "S133",
     "source_url": "https://als.wikipedia.org/wiki/Bundesrat_(Schweiz)",
     "validated_by": null,
-    "notes": "Fact cross-referenced to the English corpus: S001 F3 ('the President of the Confederation in Switzerland has hardly any more decision-making power than the other members of the Federal Council'). AGREE - no conflict. This is the sharpest test of Swiss institutional specificity in the set: a German or EU reader assumes a presidential system with real power. Dialect load: erschte under Gliiche, primus inter pares, kei wiiteri RÃ¤cht, erfÃ¼llt, Bundesratssitzige. Deliberately not the trivial 'how many members' item."
+    "notes": "Fact cross-referenced to the English corpus: S001 F3 ('the President of the Confederation in Switzerland has hardly any more decision-making power than the other members of the Federal Council'). AGREE - no conflict. This is the sharpest test of Swiss institutional specificity in the set: a German or EU reader assumes a presidential system with real power. Dialect load: erschte under Gliiche, primus inter pares, kei wiiteri Rächt, erfüllt, Bundesratssitzige. Deliberately not the trivial 'how many members' item."
   },
   {
     "id": "D020",
@@ -47,8 +47,8 @@
     "dialect": "uncertain",
     "dialect_evidence": "uncertain",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"Im Ständerot git’s 46 Abgordneti, un i ihn sändet alli Kantön zwöi Ständeröt, numme die sogenannte Halbkantön sände eine.\"",
-    "question": "According to this sentence, how many members does the Swiss Council of States (StÃ¤nderot) have?",
+    "prompt": "Im Ständerot git’s 46 Abgordneti, un i ihn sändet alli Kantön zwöi Ständeröt, numme die sogenannte Halbkantön sände eine.",
+    "question": "According to this sentence, how many members does the Swiss Council of States (Ständerot) have?",
     "options": {
       "A": "46",
       "B": "50",
@@ -60,7 +60,7 @@
     "source_id": "S142",
     "source_url": "https://als.wikipedia.org/wiki/Schweiz",
     "validated_by": null,
-    "notes": "Fact cross-referenced to the English corpus: S026 F3 and S003 F3 ('The Swiss Parliament has 200 seats in the National Council and 46 seats in the Council of States') and S002 F1. AGREE - no conflict. 46 is the counter-intuitive figure: 20 cantons x 2 plus 6 half-cantons x 1. Distractors 50, 52 (=26x2, the naive count) and 26 are exactly the wrong guesses. Dialect load: StÃ¤nderot, git's, sÃ¤ndet, zwÃ¶i StÃ¤nderÃ¶t, HalbkantÃ¶n, sÃ¤nde eine. Dialect recorded as uncertain: this page is the most dialect-heterogeneous harvested, but every sentence here is taken from the Basel-leaning == Politik == section. Excluded from per-dialect reporting under protocol section 5."
+    "notes": "Fact cross-referenced to the English corpus: S026 F3 and S003 F3 ('The Swiss Parliament has 200 seats in the National Council and 46 seats in the Council of States') and S002 F1. AGREE - no conflict. 46 is the counter-intuitive figure: 20 cantons x 2 plus 6 half-cantons x 1. Distractors 50, 52 (=26x2, the naive count) and 26 are exactly the wrong guesses. Dialect load: Ständerot, git's, sändet, zwöi Ständeröt, Halbkantön, sände eine. Dialect recorded as uncertain: this page is the most dialect-heterogeneous harvested, but every sentence here is taken from the Basel-leaning == Politik == section. Excluded from per-dialect reporting under protocol section 5."
   },
   {
     "id": "D021",
@@ -68,7 +68,7 @@
     "dialect": "basel",
     "dialect_evidence": "EXPLICIT - {{Dialekt|Baseldeutsch|Baseldytsch|Baseldytsch}} template present in the wikitext; the dialect-densest article harvested.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"D Fasnacht duurt denn gnau 72 Stund und heert drum am Donschtig Morgen am Vieri mit em Ändstraich wider uff.\"",
+    "prompt": "D Fasnacht duurt denn gnau 72 Stund und heert drum am Donschtig Morgen am Vieri mit em Ändstraich wider uff.",
     "question": "According to this sentence, how long does the Basel Fasnacht last?",
     "options": {
       "A": "Exactly 48 hours",
@@ -87,9 +87,9 @@
     "id": "D022",
     "task_type": "culture_in_dialect",
     "dialect": "bern",
-    "dialect_evidence": "EXPLICIT - {{Dialekt|Berndeutsch|BÃ¤rndÃ¼tsch|BÃ¤rndÃ¼tsch}} tag on the page.",
+    "dialect_evidence": "EXPLICIT - {{Dialekt|Berndeutsch|Bärndütsch|Bärndütsch}} tag on the page.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"1885 hei d Schwyzer Brauereie der Wy als Nationalgetränk dür ds Bier verdrängt.\"",
+    "prompt": "1885 hei d Schwyzer Brauereie der Wy als Nationalgetränk dür ds Bier verdrängt.",
     "question": "According to this sentence, in which year did the Swiss breweries displace wine as the national drink?",
     "options": {
       "A": "1851",
@@ -102,7 +102,7 @@
     "source_id": "S119",
     "source_url": "https://als.wikipedia.org/wiki/Brauerei",
     "validated_by": null,
-    "notes": "Cross-ref: none - the English corpus has no brewing material. The year is stated in Alemannic word order (1885 hei d Schwyzer Brauereie der Wy als NationalgetrÃ¤nk dÃ¼r ds Bier verdrÃ¤ngt) but only reachable by decoding Schwyzer Brauereie, Wy, NationalgetrÃ¤nk and \u000berdrÃ¤ngt. Distractors are other real Swiss dates in the corpus: 1851 (the Swiss franc enters circulation, S058 regierung F5) and 1876 (Lindi ammonia compressor, same article)."
+    "notes": "Cross-ref: none - the English corpus has no brewing material. The year is stated in Alemannic word order (1885 hei d Schwyzer Brauereie der Wy als Nationalgetränk dür ds Bier verdrängt) but only reachable by decoding Schwyzer Brauereie, Wy, Nationalgetränk and \u000berdrängt. Distractors are other real Swiss dates in the corpus: 1851 (the Swiss franc enters circulation, S058 regierung F5) and 1876 (Lindi ammonia compressor, same article)."
   },
   {
     "id": "D023",
@@ -110,7 +110,7 @@
     "dialect": "basel",
     "dialect_evidence": "EXPLICIT - {{Dialekt|Baseldeutsch|Baseldytsch|Baseldytsch}} template present in the wikitext; the dialect-densest article harvested.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"D Basler Fasnacht isch die greeschti Fasnacht in dr ganze Schwiz.\"",
+    "prompt": "D Basler Fasnacht isch die greeschti Fasnacht in dr ganze Schwiz.",
     "question": "What does this sentence mean?",
     "options": {
       "A": "The Basel Fasnacht is the oldest carnival in the whole of Switzerland.",
@@ -131,7 +131,7 @@
     "dialect": "basel",
     "dialect_evidence": "EXPLICIT - {{Dialekt|Baseldeutsch|Baseldytsch|Baseldytsch}} template present in the wikitext; the dialect-densest article harvested.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"E Masgge isch in Basel e Goschdyymierte, aso aine won e Goschdyym und a Larven aahet.\"",
+    "prompt": "E Masgge isch in Basel e Goschdyymierte, aso aine won e Goschdyym und a Larven aahet.",
     "question": "What does this sentence mean?",
     "options": {
       "A": "A 'Masgge' is a plain carnival mask worn over the face.",
@@ -149,31 +149,31 @@
   {
     "id": "D025",
     "task_type": "comprehension",
-    "dialect": "zÃ¼rich",
-    "dialect_evidence": "EXPLICIT - {{Dialekt|ZÃ¼richdeutsch|ZÃ¼ritÃ¼Ã¼tsch|ZÃ¼ritÃ¼Ã¼tsch}} template present; text confirms it lexically (ZÃ¼ri, GroossmÃ¶ischter, uuffÃ¼ere, chÃ¶nte).",
+    "dialect": "zürich",
+    "dialect_evidence": "EXPLICIT - {{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch}} template present; text confirms it lexically (Züri, Groossmöischter, uuffüere, chönte).",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"Er isch au gäge d Räislöiferei ufträtte, also s Verschicke vo Landslüt as Söldner i frömdi Chrieg, wo d Innerschwyzer Arischtokraty finanziell starch devo profitiert hät.\"",
+    "prompt": "Er isch au gäge d Räislöiferei ufträtte, also s Verschicke vo Landslüt as Söldner i frömdi Chrieg, wo d Innerschwyzer Arischtokraty finanziell starch devo profitiert hät.",
     "question": "What does this sentence mean?",
     "options": {
       "A": "He fought to have Swiss men exempted from military service in foreign wars",
-      "B": "He opposed the ReislÃ¤uferei - the hiring out of Swiss men as soldiers in foreign wars - from which the Innertschwyzer aristocracy profited financially",
-      "C": "He opposed the ReislÃ¤uferei and argued for its abolition by the Confederation",
-      "D": "He supported the ReislÃ¤uferei, arguing that it gave Swiss soldiers abroad useful military experience"
+      "B": "He opposed the Reisläuferei - the hiring out of Swiss men as soldiers in foreign wars - from which the Innertschwyzer aristocracy profited financially",
+      "C": "He opposed the Reisläuferei and argued for its abolition by the Confederation",
+      "D": "He supported the Reisläuferei, arguing that it gave Swiss soldiers abroad useful military experience"
     },
     "correct_answer": "B",
     "difficulty": "hard",
     "source_id": "S145",
     "source_url": "https://als.wikipedia.org/wiki/Huldrych_Zwingli",
     "validated_by": null,
-    "notes": "The sentence glosses the dialect term in the Alemannic itself (\u0007lso s Verschicke vo LandslÃ¼t as SÃ¶ldner i frÃ¶mdi Chrieg), so the item tests the reading of RÃ¤islÃ¶iferei, uftrÃ¤tte, \frÃ¶mdi and Arischtokraty rather than recall of the word. Distractor C is the sharpest: it takes the opposition at face value and drops the profit clause that the sentence explicitly attaches to the Innertschwyzer aristocracy."
+    "notes": "The sentence glosses the dialect term in the Alemannic itself (\u0007lso s Verschicke vo Landslüt as Söldner i frömdi Chrieg), so the item tests the reading of Räislöiferei, ufträtte, \frömdi and Arischtokraty rather than recall of the word. Distractor C is the sharpest: it takes the opposition at face value and drops the profit clause that the sentence explicitly attaches to the Innertschwyzer aristocracy."
   },
   {
     "id": "D026",
     "task_type": "comprehension",
-    "dialect": "zÃ¼rich",
-    "dialect_evidence": "explicit {{Dialekt|ZÃ¼richdeutsch|ZÃ¼ritÃ¼Ã¼tsch|ZÃ¼ritÃ¼Ã¼tsch (See)}} template in the wikitext.",
+    "dialect": "zürich",
+    "dialect_evidence": "explicit {{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch (See)}} template in the wikitext.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"Die sibe Bundesröt regiered eigetli zäme über alli Gschäft, aber tatsächlich stönd si je eim Departement vor; das isch s Departemäntalprinzip.\"",
+    "prompt": "Die sibe Bundesröt regiered eigetli zäme über alli Gschäft, aber tatsächlich stönd si je eim Departement vor; das isch s Departemäntalprinzip.",
     "question": "What does this sentence mean?",
     "options": {
       "A": "The seven Federal Councillors govern together over all business, but in practice each stands in front of one department - this is the departmental principle",
@@ -186,15 +186,15 @@
     "source_id": "S133",
     "source_url": "https://als.wikipedia.org/wiki/Bundesrat_(Schweiz)",
     "validated_by": null,
-    "notes": "Tests the adversative eigetli zÃ¤me ... aber tatsÃ¤chlich against \regiered ... zÃ¤me and stÃ¶nd si je eim Departement vor. The correct option requires holding both clauses at once. Fact cross-referenced to the English corpus: S001 F9 and S006 F5 ('Each of the seven members of the Federal Council is head of one of the seven federal departments'). AGREE - no conflict."
+    "notes": "Tests the adversative eigetli zäme ... aber tatsächlich against \regiered ... zäme and stönd si je eim Departement vor. The correct option requires holding both clauses at once. Fact cross-referenced to the English corpus: S001 F9 and S006 F5 ('Each of the seven members of the Federal Council is head of one of the seven federal departments'). AGREE - no conflict."
   },
   {
     "id": "D027",
     "task_type": "comprehension",
     "dialect": "bern",
-    "dialect_evidence": "EXPLICIT - {{Dialekt|Berndeutsch|BÃ¤rndÃ¼tsch|BÃ¤rndÃ¼tsch}} tag on the page.",
+    "dialect_evidence": "EXPLICIT - {{Dialekt|Berndeutsch|Bärndütsch|Bärndütsch}} tag on the page.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"Wil ou Wy wird fermentiert u trotzdäm wird Wy nid brout sondern kelteret.\"",
+    "prompt": "Wil ou Wy wird fermentiert u trotzdäm wird Wy nid brout sondern kelteret.",
     "question": "What does this sentence mean?",
     "options": {
       "A": "Wine, too, is fermented, and nevertheless wine is not brewed - it is cellared instead",
@@ -215,49 +215,49 @@
     "dialect": "valais",
     "dialect_evidence": "EXPLICIT - {{Dialekt|Walliserdeutsch|Wallisertiitsch|Wallisertitsch}} tag on the page.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"Dr tradizionell Dialäkt va Ayent gcheert zum Frankoprovenzalischu.\"",
+    "prompt": "Dr tradizionell Dialäkt va Ayent gcheert zum Frankoprovenzalischu.",
     "question": "What does this sentence mean?",
     "options": {
       "A": "The traditional dialect of Ayent belongs to the Alemannic group",
       "B": "The traditional dialect of Ayent belongs to the Rhaeto-Romance group",
       "C": "The traditional dialect of Ayent belongs to the Lombard group of northern Italy",
-      "D": "The traditional dialect of Ayent belongs to the Franco-ProvenÃ§al group"
+      "D": "The traditional dialect of Ayent belongs to the Franco-Provençal group"
     },
     "correct_answer": "D",
     "difficulty": "medium",
     "source_id": "S123",
     "source_url": "https://als.wikipedia.org/wiki/Ayent",
     "validated_by": null,
-    "notes": "Valais / Wallisertiitsch, NOT Walser - the harvest flagged that conflating the two would corrupt a dialect item. Dialect load is concentrated in gcheert (gehÃ¶rt, an exclusive Wallisertiitsch marker), \u000ba (von) and zum. The three distractors are the neighbouring Swiss Romance and German groups; Alemannic is the plausible wrong answer for anyone who assumes all Swiss German dialects are Alemannic."
+    "notes": "Valais / Wallisertiitsch, NOT Walser - the harvest flagged that conflating the two would corrupt a dialect item. Dialect load is concentrated in gcheert (gehört, an exclusive Wallisertiitsch marker), \u000ba (von) and zum. The three distractors are the neighbouring Swiss Romance and German groups; Alemannic is the plausible wrong answer for anyone who assumes all Swiss German dialects are Alemannic."
   },
   {
     "id": "D029",
     "task_type": "comprehension",
     "dialect": "walser",
-    "dialect_evidence": "EXPLICIT - {{Dialekt|Walserdeutsch|Walsertiitsch|WalsertÃ¼Ã¼tsch vam ChlooschtÃ¤r}} tag on the page.",
+    "dialect_evidence": "EXPLICIT - {{Dialekt|Walserdeutsch|Walsertiitsch|Walsertüütsch vam Chlooschtär}} tag on the page.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"Sit dm 9. Dezembär 2005 chund Chlooschtärsch dür dn Gotschnä-Umfahrigs-Tunell vam Durchgangsvärchehr entlaschtät.\"",
+    "prompt": "Sit dm 9. Dezembär 2005 chund Chlooschtärsch dür dn Gotschnä-Umfahrigs-Tunell vam Durchgangsvärchehr entlaschtät.",
     "question": "What does this sentence mean?",
     "options": {
       "A": "Since 9 December 2005 Klosters has been relieved of through traffic by the Gotthard bypass tunnel",
       "B": "Since 9 December 2005 Klosters has been bypassed by the Vereina tunnel",
       "C": "Since 9 December 2005 the railway line through Klosters has been closed to all freight",
-      "D": "Since 9 December 2005 Klosters has been connected to the RhÃ¤tische Bahn by a new line"
+      "D": "Since 9 December 2005 Klosters has been connected to the Rhätische Bahn by a new line"
     },
     "correct_answer": "A",
     "difficulty": "hard",
     "source_id": "S126",
     "source_url": "https://als.wikipedia.org/wiki/Klosters",
     "validated_by": null,
-    "notes": "Genuine Walser (PrÃ¤ttigau, GraubÃ¼nden), the one Alpine Walser file rather than the Aosta one. Requires chund, dÃ¼r dn, GotschnÃ¤-Umfahrigs-Tunell, \u000bam DurchgangsvÃ¤rchehr and the -Ã¤t participle entlaschtÃ¤t. Distractor B is the strongest: the Vereina tunnel is the other Alpine tunnel in the same article, so it is reachable by a reader who has half-decoded the sentence."
+    "notes": "Genuine Walser (Prättigau, Graubünden), the one Alpine Walser file rather than the Aosta one. Requires chund, dür dn, Gotschnä-Umfahrigs-Tunell, \u000bam Durchgangsvärchehr and the -ät participle entlaschtät. Distractor B is the strongest: the Vereina tunnel is the other Alpine tunnel in the same article, so it is reachable by a reader who has half-decoded the sentence."
   },
   {
     "id": "D030",
     "task_type": "comprehension",
     "dialect": "basel",
-    "dialect_evidence": "No {{Dialekt}} template, but orthography is consistently Basel-convention Alemannic (InvÃ¤ntarisierig, WÃ¶rterbuech, the k-shift in Idiotikon) and the article is filed under {{Kategorie:Alemannisch}}.",
+    "dialect_evidence": "No {{Dialekt}} template, but orthography is consistently Basel-convention Alemannic (Inväntarisierig, Wörterbuech, the k-shift in Idiotikon) and the article is filed under {{Kategorie:Alemannisch}}.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
-    "prompt": "\"Idiotikon isch en alts Wort für es Wörterbuech, wo die Wort drinstönd, wo für e bistimmti Landschaft tipisch sind, aber nöd au die, wo glych sind wie i de Schriftsprach.\"",
+    "prompt": "Idiotikon isch en alts Wort für es Wörterbuech, wo die Wort drinstönd, wo für e bistimmti Landschaft tipisch sind, aber nöd au die, wo glych sind wie i de Schriftsprach.",
     "question": "What does this sentence mean?",
     "options": {
       "A": "'Idiotikon' is an old word for a dictionary that records every word spoken in a region, including those identical to Standard German",
@@ -270,6 +270,6 @@
     "source_id": "S143",
     "source_url": "https://als.wikipedia.org/wiki/Schweizerisches_Idiotikon",
     "validated_by": null,
-    "notes": "The sentence defines its own headword in Alemannic (wo die Wort drinstÃ¶nd, wo fÃ¼r e bistimmti Landschaft tipisch sind, aber nÃ¶d au die, wo glych sind wie i de Schriftsprach). The distinguishing clause is the exclusion (\nÃ¶d au die, wo glych sind), which is exactly what distractors A and B drop. Also tests WÃ¶rterbuech, drinstÃ¶nd, Landschaft, Schriftsprach."
+    "notes": "The sentence defines its own headword in Alemannic (wo die Wort drinstönd, wo für e bistimmti Landschaft tipisch sind, aber nöd au die, wo glych sind wie i de Schriftsprach). The distinguishing clause is the exclusion (\nöd au die, wo glych sind), which is exactly what distractors A and B drop. Also tests Wörterbuech, drinstönd, Landschaft, Schriftsprach."
   }
 ]

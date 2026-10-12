@@ -79,8 +79,18 @@ for it in items:
         err("SCHEMA", f"{iid}: bad task_type {it['task_type']}")
     if it["difficulty"] not in {"easy", "medium", "hard"}:
         err("SCHEMA", f"{iid}: bad difficulty")
-    if it["dialect"] not in {"basel", "zurich", "zürich", "bern", "walser", "valais", "uncertain"}:
-        err("SCHEMA", f"{iid}: unrecognised dialect label {it['dialect']!r}")
+    # Normalise the dialect label before checking it. Two drafting passes used
+    # 'zurich' and 'zürich' for the same dialect; the corpus header uses the
+    # umlaut form. Treat them as one value rather than failing the build on a
+    # spelling preference, but record which items are non-Basel.
+    canon = {"zurich": "zurich", "zürich": "zurich", "zuerich": "zurich",
+             "basel": "basel", "bern": "bern", "walser": "walser",
+             "valais": "valais", "uncertain": "uncertain"}
+    dl = it.get("dialect", "")
+    if dl not in canon:
+        err("SCHEMA", f"{iid}: unrecognised dialect label {dl!r}")
+    else:
+        it["_canon_dialect"] = canon[dl]
 
     # THE core provenance check -------------------------------------------
     text = it.get("swiss_german_text") or it.get("prompt") or ""
@@ -129,7 +139,7 @@ for t in ("translation", "comprehension", "culture_in_dialect", "dialect_identif
     if types.get(t, 0) < 3:
         err("COVERAGE", f"task_type {t}: only {types.get(t, 0)} items (need >=3)")
 
-dl = Counter(i["dialect"] for i in items)
+dl = Counter(i.get("_canon_dialect", i["dialect"]) for i in items)
 if dl.get("basel", 0) > len(items) * 0.5:
     warn("COVERAGE", f"Basel is {dl['basel']}/{len(items)} - report per dialect, never pooled")
 if len([d for d in dl if d != "basel" and d != "uncertain"]) < 3:
@@ -142,16 +152,20 @@ if letters and max(letters.values()) - min(letters.values()) > 1:
 
 # ------------------------------------------- 3. refuted assumptions must be absent
 # The harvest textually refuted these; an item relying on them would be wrong.
+# Scanned over the item's *content* only. Reviewer notes legitimately discuss the
+# refuted forms in order to explain why they were avoided - an earlier version of
+# this check fired on exactly that.
 REFUTED = [
     (r"\bChuch\b|\bKuchi\b", "Chuch/Kuchi contrast does not exist in this corpus (Basel: Broot/Laib)"),
-    (r"\bMärit\b.*\bMarkt\b|Markt.*\bMärit\b", "Märit vs Markt was unverified in the harvest"),
+    (r"\bMärit\b|\bMaerit\b", "Märit vs Markt was unverified in the harvest"),
 ]
 for it in items:
-    blob = it.get("swiss_german_text", "") + " " + it.get("prompt", "") + " " + \
-           " ".join(it.get("options", {}).values()) + " " + it["notes"]
+    content = (it.get("swiss_german_text", "") + " " + it.get("prompt", "") + " " +
+               it.get("standard_german_reference", "") + " " +
+               " ".join(it.get("options", {}).values()))
     for pat, why in REFUTED:
-        if re.search(pat, blob, re.I):
-            err("REFUTED", f"{it['id']}: relies on {pat!r} -> {why}")
+        if re.search(pat, content, re.I):
+            err("REFUTED", f"{it['id']}: item content relies on {pat!r} -> {why}")
 
 # ---------------------------------------------------------------- 4. write out
 if not errors:
