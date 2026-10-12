@@ -1,4 +1,4 @@
-SOURCE_ID: S058
+SOURCE_ID: S143
 URL: https://als.wikipedia.org/wiki/Schweizerisches_Idiotikon
 TITLE: Schweizerisches Idiotikon
 ARTICLE_DISPLAYTITLE: s Schwyzerisch Idiotikon

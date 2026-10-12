@@ -1,4 +1,4 @@
-SOURCE_ID: S058
+SOURCE_ID: S135
 URL: https://als.wikipedia.org/wiki/Direkte_Demokratie
 TITLE: Direkte Demokratie
 ARTICLE_DISPLAYTITLE: Die diräkti Demokratii

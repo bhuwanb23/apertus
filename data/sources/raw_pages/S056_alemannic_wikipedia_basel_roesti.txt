@@ -1,4 +1,4 @@
-SOURCE_ID: S056
+SOURCE_ID: S111
 URL: https://als.wikipedia.org/wiki/R%C3%B6sti
 TITLE: Rösti
 ARTICLE_DISPLAYTITLE: Rösti

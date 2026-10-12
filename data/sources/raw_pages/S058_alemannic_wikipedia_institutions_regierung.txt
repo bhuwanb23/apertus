@@ -1,4 +1,4 @@
-SOURCE_ID: S058
+SOURCE_ID: S141
 URL: https://als.wikipedia.org/wiki/Regierung_(Schweiz)
 TITLE: Regierung (Schweiz)
 ARTICLE_DISPLAYTITLE: D Regierigsform vo dr Schwiiz

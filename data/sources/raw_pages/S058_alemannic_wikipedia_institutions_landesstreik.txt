@@ -1,4 +1,4 @@
-SOURCE_ID: S058
+SOURCE_ID: S138
 URL: https://als.wikipedia.org/wiki/Landesstreik
 TITLE: Landesstreik
 ARTICLE_CATEGORIES: Schwiizer Gschicht

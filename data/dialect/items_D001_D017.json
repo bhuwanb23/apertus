@@ -1,840 +1,840 @@
 [
-    {
-        "id":  "D001",
-        "task_type":  "translation",
-        "dialect":  "basel",
-        "dialect_evidence":  "S056 header `DIALECT: basel`; the file\u0027s DIALECT_EVIDENCE block places this in village-spoken Basel-Landschaft Alemannisch (Mappach, BL) and names `Grumbiirre` as the definitive Basel-Landschaft dialect word. The file\u0027s own word-count note flags S2 as \"the shortest dialect-variation-contrast item available\".",
-        "orthography":  "semi-Dieth (the Alemannic Wikipedia house system)",
-        "swiss_german_text":  "D\u0027 Säu verdraage nämli keini raui Grumbiirre.",
-        "standard_german_reference":  "Die Schweine vertragen nämlich keine rohen Kartoffeln.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "schweine":  [
-                                                          "schweine",
-                                                          "säu",
-                                                          "ferkel",
-                                                          "schwin"
-                                                      ],
-                                         "vertragen":  [
-                                                           "vertragen",
-                                                           "verdraage",
-                                                           "verdrii",
-                                                           "erlidige"
-                                                       ],
-                                         "rohen":  [
-                                                       "rohen",
-                                                       "raui",
-                                                       "roh",
-                                                       "ungekocht",
-                                                       "rohe"
-                                                   ],
-                                         "kartoffeln":  [
-                                                            "kartoffeln",
-                                                            "grumbiirre",
-                                                            "grumbier",
-                                                            "erdäpfel",
-                                                            "härdöpfle",
-                                                            "kartoffle"
-                                                        ]
-                                     }
-                    },
-        "difficulty":  "easy",
-        "source_id":  "S056",
-        "source_url":  "https://als.wikipedia.org/wiki/Kartoffeld%C3%A4mpfer",
-        "validated_by":  null,
-        "notes":  ""
+  {
+    "id": "D001",
+    "task_type": "translation",
+    "dialect": "basel",
+    "dialect_evidence": "S056 header `DIALECT: basel`; the file's DIALECT_EVIDENCE block places this in village-spoken Basel-Landschaft Alemannisch (Mappach, BL) and names `Grumbiirre` as the definitive Basel-Landschaft dialect word. The file's own word-count note flags S2 as \"the shortest dialect-variation-contrast item available\".",
+    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "swiss_german_text": "D' Säu verdraage nämli keini raui Grumbiirre.",
+    "standard_german_reference": "Die Schweine vertragen nämlich keine rohen Kartoffeln.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "schweine": [
+          "schweine",
+          "säu",
+          "ferkel",
+          "schwin"
+        ],
+        "vertragen": [
+          "vertragen",
+          "verdraage",
+          "verdrii",
+          "erlidige"
+        ],
+        "rohen": [
+          "rohen",
+          "raui",
+          "roh",
+          "ungekocht",
+          "rohe"
+        ],
+        "kartoffeln": [
+          "kartoffeln",
+          "grumbiirre",
+          "grumbier",
+          "erdäpfel",
+          "härdöpfle",
+          "kartoffle"
+        ]
+      }
     },
-    {
-        "id":  "D002",
-        "task_type":  "translation",
-        "dialect":  "basel",
-        "dialect_evidence":  "S056 header `DIALECT: basel`; DIALECT_EVIDENCE calls this \"plain house-style Alemannisch with a Basel/Southwest-German feel\" and names `Bröötli` as a Basel `-li` diminutive. LEXICAL NOTES L1/L8/L9 cover Däig, Bröötli, bache.",
-        "orthography":  "semi-Dieth (the Alemannic Wikipedia house system)",
-        "swiss_german_text":  "Mit de mäiste Brotdäig cha mä au chliineri Bröötli bache.",
-        "standard_german_reference":  "Mit dem meisten Brotteig kann man auch kleinere Brötchen backen.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "meisten":  [
-                                                         "meisten",
-                                                         "mäiste",
-                                                         "meiste",
-                                                         "grösste"
-                                                     ],
-                                         "brotteig":  [
-                                                          "brotteig",
-                                                          "brotdäig",
-                                                          "teig",
-                                                          "däig",
-                                                          "deig",
-                                                          "brotteig"
-                                                      ],
-                                         "kleinere":  [
-                                                          "kleinere",
-                                                          "chliineri",
-                                                          "kleinere",
-                                                          "chlineri",
-                                                          "kleine"
-                                                      ],
-                                         "brötchen":  [
-                                                          "brötchen",
-                                                          "bröötli",
-                                                          "brötli",
-                                                          "weckli",
-                                                          "brötli",
-                                                          "brezel"
-                                                      ],
-                                         "backen":  [
-                                                        "backen",
-                                                        "bache",
-                                                        "bachen",
-                                                        "baken",
-                                                        "öppe"
-                                                    ],
-                                         "können":  [
-                                                        "können",
-                                                        "cha",
-                                                        "chömme",
-                                                        "chöme",
-                                                        "mä"
-                                                    ]
-                                     }
-                    },
-        "difficulty":  "easy",
-        "source_id":  "S056",
-        "source_url":  "https://als.wikipedia.org/wiki/Brot",
-        "validated_by":  null,
-        "notes":  ""
+    "difficulty": "easy",
+    "source_id": "S110",
+    "source_url": "https://als.wikipedia.org/wiki/Kartoffeld%C3%A4mpfer",
+    "validated_by": null,
+    "notes": ""
+  },
+  {
+    "id": "D002",
+    "task_type": "translation",
+    "dialect": "basel",
+    "dialect_evidence": "S056 header `DIALECT: basel`; DIALECT_EVIDENCE calls this \"plain house-style Alemannisch with a Basel/Southwest-German feel\" and names `Bröötli` as a Basel `-li` diminutive. LEXICAL NOTES L1/L8/L9 cover Däig, Bröötli, bache.",
+    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "swiss_german_text": "Mit de mäiste Brotdäig cha mä au chliineri Bröötli bache.",
+    "standard_german_reference": "Mit dem meisten Brotteig kann man auch kleinere Brötchen backen.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "meisten": [
+          "meisten",
+          "mäiste",
+          "meiste",
+          "grösste"
+        ],
+        "brotteig": [
+          "brotteig",
+          "brotdäig",
+          "teig",
+          "däig",
+          "deig",
+          "brotteig"
+        ],
+        "kleinere": [
+          "kleinere",
+          "chliineri",
+          "kleinere",
+          "chlineri",
+          "kleine"
+        ],
+        "brötchen": [
+          "brötchen",
+          "bröötli",
+          "brötli",
+          "weckli",
+          "brötli",
+          "brezel"
+        ],
+        "backen": [
+          "backen",
+          "bache",
+          "bachen",
+          "baken",
+          "öppe"
+        ],
+        "können": [
+          "können",
+          "cha",
+          "chömme",
+          "chöme",
+          "mä"
+        ]
+      }
     },
-    {
-        "id":  "D003",
-        "task_type":  "translation",
-        "dialect":  "basel",
-        "dialect_evidence":  "S056 header `DIALECT: basel`. LEXICAL NOTE L22: \"`Chemmi` = Schornstein — deliberate sense-shift, `Kamin`/`Schornstein` -\u003e Alemannic `Chemmi`, a wholly different word. The strongest lexical item in the file.\" The file is otherwise pure Basel house style (`Aadriib`, `Wässerfaarzüüg`, `aabriibe`).",
-        "orthography":  "semi-Dieth (the Alemannic Wikipedia house system)",
-        "swiss_german_text":  "D Abgaas vom Schiffsmotor wärde über e Chemmi abgläitet.",
-        "standard_german_reference":  "Die Abgase vom Schiffsmotor werden über einen Schornstein abgeleitet.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "abgase":  [
-                                                        "abgase",
-                                                        "abgas",
-                                                        "räuch",
-                                                        "usgwäich",
-                                                        "auspuffgase"
-                                                    ],
-                                         "schiffsmotor":  [
-                                                              "schiffsmotor",
-                                                              "motor",
-                                                              "maschine",
-                                                              "schiffsmotor"
-                                                          ],
-                                         "schornstein":  [
-                                                             "schornstein",
-                                                             "chemmi",
-                                                             "kamin",
-                                                             "schlot",
-                                                             "dachlüfter",
-                                                             "rauchfang",
-                                                             "abgasrohr"
-                                                         ],
-                                         "abgeleitet":  [
-                                                            "abgeleitet",
-                                                            "abgläitet",
-                                                            "gführt",
-                                                            "abgeläitet",
-                                                            "usglet",
-                                                            "weitergeleitet"
-                                                        ],
-                                         "werden":  [
-                                                        "werden",
-                                                        "wärde",
-                                                        "wärde"
-                                                    ]
-                                     }
-                    },
-        "difficulty":  "easy",
-        "source_id":  "S056",
-        "source_url":  "https://als.wikipedia.org/wiki/Schiff",
-        "validated_by":  null,
-        "notes":  "Deliberate lexical trap: a model that pattern-matches `Chemmi` to Standard `Kamin` loses the highest-weight content word. `Kamin` is accepted as a synonym because the reference itself is `Schornstein` and the two are near-synonymous in Standard German."
+    "difficulty": "easy",
+    "source_id": "S105",
+    "source_url": "https://als.wikipedia.org/wiki/Brot",
+    "validated_by": null,
+    "notes": ""
+  },
+  {
+    "id": "D003",
+    "task_type": "translation",
+    "dialect": "basel",
+    "dialect_evidence": "S056 header `DIALECT: basel`. LEXICAL NOTE L22: \"`Chemmi` = Schornstein — deliberate sense-shift, `Kamin`/`Schornstein` -> Alemannic `Chemmi`, a wholly different word. The strongest lexical item in the file.\" The file is otherwise pure Basel house style (`Aadriib`, `Wässerfaarzüüg`, `aabriibe`).",
+    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "swiss_german_text": "D Abgaas vom Schiffsmotor wärde über e Chemmi abgläitet.",
+    "standard_german_reference": "Die Abgase vom Schiffsmotor werden über einen Schornstein abgeleitet.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "abgase": [
+          "abgase",
+          "abgas",
+          "räuch",
+          "usgwäich",
+          "auspuffgase"
+        ],
+        "schiffsmotor": [
+          "schiffsmotor",
+          "motor",
+          "maschine",
+          "schiffsmotor"
+        ],
+        "schornstein": [
+          "schornstein",
+          "chemmi",
+          "kamin",
+          "schlot",
+          "dachlüfter",
+          "rauchfang",
+          "abgasrohr"
+        ],
+        "abgeleitet": [
+          "abgeleitet",
+          "abgläitet",
+          "gführt",
+          "abgeläitet",
+          "usglet",
+          "weitergeleitet"
+        ],
+        "werden": [
+          "werden",
+          "wärde",
+          "wärde"
+        ]
+      }
     },
-    {
-        "id":  "D004",
-        "task_type":  "translation",
-        "dialect":  "basel",
-        "dialect_evidence":  "S056 header `DIALECT: basel`; the file\u0027s lead sentence enumerates five regional Alemannic names for the dish (`Röschti`, `Brägel`, `Brausi`, `Häärpflchoch`), confirming Alemannic lexis rather than Standard borrowings. LEXICAL NOTE L14: \"`Anke` = Butter — Alemannic-only word, Standard `Butter` has no dialect counterpart in most Swiss German\".",
-        "orthography":  "semi-Dieth (the Alemannic Wikipedia house system)",
-        "swiss_german_text":  "Ire Gussisepfanne tuet me de mit e chly Anke d Röschti aabrätle.",
-        "standard_german_reference":  "In der Gussepfanne röstet man dann die Rösti mit etwas Butter an.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "gussepfanne":  [
-                                                             "gussepfanne",
-                                                             "gussisepfanne",
-                                                             "brätpfanne",
-                                                             "pfanne",
-                                                             "ussere"
-                                                         ],
-                                         "rösti":  [
-                                                       "rösti",
-                                                       "röschti",
-                                                       "roesti",
-                                                       "bröti",
-                                                       "brät"
-                                                   ],
-                                         "butter":  [
-                                                        "butter",
-                                                        "anke",
-                                                        "abbutter",
-                                                        "anckä",
-                                                        "ankä"
-                                                    ],
-                                         "röstet":  [
-                                                        "röstet",
-                                                        "röstet",
-                                                        "aabrätle",
-                                                        "anbrätle",
-                                                        "brätlet",
-                                                        "rösti",
-                                                        "röstet"
-                                                    ],
-                                         "man":  [
-                                                     "man",
-                                                     "me",
-                                                     "mä",
-                                                     "merr"
-                                                 ]
-                                     }
-                    },
-        "difficulty":  "medium",
-        "source_id":  "S056",
-        "source_url":  "https://als.wikipedia.org/wiki/R%C3%B6sti",
-        "validated_by":  null,
-        "notes":  "Reference renders the verb loosely as \"röstet ... an\"; `aabrätle` is specifically anbratenen/rösten. Synonyms cover both."
+    "difficulty": "easy",
+    "source_id": "S112",
+    "source_url": "https://als.wikipedia.org/wiki/Schiff",
+    "validated_by": null,
+    "notes": "Deliberate lexical trap: a model that pattern-matches `Chemmi` to Standard `Kamin` loses the highest-weight content word. `Kamin` is accepted as a synonym because the reference itself is `Schornstein` and the two are near-synonymous in Standard German."
+  },
+  {
+    "id": "D004",
+    "task_type": "translation",
+    "dialect": "basel",
+    "dialect_evidence": "S056 header `DIALECT: basel`; the file's lead sentence enumerates five regional Alemannic names for the dish (`Röschti`, `Brägel`, `Brausi`, `Häärpflchoch`), confirming Alemannic lexis rather than Standard borrowings. LEXICAL NOTE L14: \"`Anke` = Butter — Alemannic-only word, Standard `Butter` has no dialect counterpart in most Swiss German\".",
+    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "swiss_german_text": "Ire Gussisepfanne tuet me de mit e chly Anke d Röschti aabrätle.",
+    "standard_german_reference": "In der Gussepfanne röstet man dann die Rösti mit etwas Butter an.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "gussepfanne": [
+          "gussepfanne",
+          "gussisepfanne",
+          "brätpfanne",
+          "pfanne",
+          "ussere"
+        ],
+        "rösti": [
+          "rösti",
+          "röschti",
+          "roesti",
+          "bröti",
+          "brät"
+        ],
+        "butter": [
+          "butter",
+          "anke",
+          "abbutter",
+          "anckä",
+          "ankä"
+        ],
+        "röstet": [
+          "röstet",
+          "röstet",
+          "aabrätle",
+          "anbrätle",
+          "brätlet",
+          "rösti",
+          "röstet"
+        ],
+        "man": [
+          "man",
+          "me",
+          "mä",
+          "merr"
+        ]
+      }
     },
-    {
-        "id":  "D005",
-        "task_type":  "translation",
-        "dialect":  "basel",
-        "dialect_evidence":  "S056 header `DIALECT: basel`. The file\u0027s DIALECT_EVIDENCE records that `Märit`/`Märik` do not exist on als.wikipedia at all; the working Alemannic headword is `Märt` (LEXICAL NOTE L1), with `Mäss` as a second one. Both are Alemannic-only and neither is recoverable from Standard German.",
-        "orthography":  "semi-Dieth (the Alemannic Wikipedia house system)",
-        "swiss_german_text":  "Hüte wird d Bezäichnig au für anderi Märt brucht, wo nid ständig si, hüfig für Volksfest.",
-        "standard_german_reference":  "Heute wird die Bezeichnung auch für andere Märkte gebraucht, die nicht ständig sind, häufig für Volksfeste.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "bezeichnung":  [
-                                                             "bezeichnung",
-                                                             "bezäichnig",
-                                                             "benennung",
-                                                             "usdruck",
-                                                             "name"
-                                                         ],
-                                         "märkte":  [
-                                                        "märkte",
-                                                        "märt",
-                                                        "märk",
-                                                        "mässe",
-                                                        "mäs",
-                                                        "joormärt",
-                                                        "markt"
-                                                    ],
-                                         "volksfest":  [
-                                                           "volksfest",
-                                                           "volksfäscht",
-                                                           "volksfäschte",
-                                                           "volksfest",
-                                                           "mess"
-                                                       ],
-                                         "heute":  [
-                                                       "heute",
-                                                       "hüt",
-                                                       "hüte",
-                                                       "hüüt",
-                                                       "hüte"
-                                                   ],
-                                         "ständig":  [
-                                                         "ständig",
-                                                         "ständig",
-                                                         "stänig",
-                                                         "stässig",
-                                                         "stetig"
-                                                     ],
-                                         "andere":  [
-                                                        "andere",
-                                                        "anderi",
-                                                        "annere",
-                                                        "witeri"
-                                                    ]
-                                     }
-                    },
-        "difficulty":  "medium",
-        "source_id":  "S056",
-        "source_url":  "https://als.wikipedia.org/wiki/Jahrmarkt",
-        "validated_by":  null,
-        "notes":  "This file also carries the harvest note that `Märit` vs `Markt` was REFUTED as a dialect contrast. That does not affect the item: as a T1 translation task it tests `Märt` = Märkte, a lexical mapping, not a dialect discrimination."
+    "difficulty": "medium",
+    "source_id": "S111",
+    "source_url": "https://als.wikipedia.org/wiki/R%C3%B6sti",
+    "validated_by": null,
+    "notes": "Reference renders the verb loosely as \"röstet ... an\"; `aabrätle` is specifically anbratenen/rösten. Synonyms cover both."
+  },
+  {
+    "id": "D005",
+    "task_type": "translation",
+    "dialect": "basel",
+    "dialect_evidence": "S056 header `DIALECT: basel`. The file's DIALECT_EVIDENCE records that `Märit`/`Märik` do not exist on als.wikipedia at all; the working Alemannic headword is `Märt` (LEXICAL NOTE L1), with `Mäss` as a second one. Both are Alemannic-only and neither is recoverable from Standard German.",
+    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "swiss_german_text": "Hüte wird d Bezäichnig au für anderi Märt brucht, wo nid ständig si, hüfig für Volksfest.",
+    "standard_german_reference": "Heute wird die Bezeichnung auch für andere Märkte gebraucht, die nicht ständig sind, häufig für Volksfeste.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "bezeichnung": [
+          "bezeichnung",
+          "bezäichnig",
+          "benennung",
+          "usdruck",
+          "name"
+        ],
+        "märkte": [
+          "märkte",
+          "märt",
+          "märk",
+          "mässe",
+          "mäs",
+          "joormärt",
+          "markt"
+        ],
+        "volksfest": [
+          "volksfest",
+          "volksfäscht",
+          "volksfäschte",
+          "volksfest",
+          "mess"
+        ],
+        "heute": [
+          "heute",
+          "hüt",
+          "hüte",
+          "hüüt",
+          "hüte"
+        ],
+        "ständig": [
+          "ständig",
+          "ständig",
+          "stänig",
+          "stässig",
+          "stetig"
+        ],
+        "andere": [
+          "andere",
+          "anderi",
+          "annere",
+          "witeri"
+        ]
+      }
     },
-    {
-        "id":  "D006",
-        "task_type":  "translation",
-        "dialect":  "basel",
-        "dialect_evidence":  "S056 header `DIALECT: basel`, but this specific sentence sits in the `=== Schwäbesch-Alemannesche Fasnet ===` subsection, which the DIALECT_EVIDENCE block flags as orthographically a DIFFERENT system from the rest of the article (near-Dieth, `fo`, `fodr`, `mo`, final devoicing throughout, no unstressed `-e`). Orthography is recorded per item for exactly this reason. The header is a corpus-level Basel convenience label.",
-        "orthography":  "semi-Dieth (the Alemannic Wikipedia house system)",
-        "swiss_german_text":  "Organisator fodr Fasnet isch normalerweis a oatsasässege Narrazomft.",
-        "standard_german_reference":  "Organisator der Fasnacht ist normalerweise eine ehrenamtliche Narrenzunft.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "organisator":  [
-                                                             "organisator",
-                                                             "veranstalter",
-                                                             "initiant",
-                                                             "usläser"
-                                                         ],
-                                         "fasnacht":  [
-                                                          "fasnacht",
-                                                          "fasnet",
-                                                          "fastnacht",
-                                                          "schwäbisch-alemannische fasnet",
-                                                          "schwäbesch-alemannische fasnet"
-                                                      ],
-                                         "normalerweise":  [
-                                                               "normalerweise",
-                                                               "normalerwis",
-                                                               "gmeistens",
-                                                               "gwöhnlich",
-                                                               "us schtand",
-                                                               "eistims"
-                                                           ],
-                                         "ehrenamtliche":  [
-                                                               "ehrenamtliche",
-                                                               "oatsasässege",
-                                                               "oatsasässege",
-                                                               "unbezahlt",
-                                                               "freiwillig",
-                                                               "ohne bezahlung"
-                                                           ],
-                                         "narrenzunft":  [
-                                                             "narrenzunft",
-                                                             "narrazomft",
-                                                             "zunft",
-                                                             "zomft",
-                                                             "narrenzünfte",
-                                                             "zomft",
-                                                             "fasnechtszunft"
-                                                         ]
-                                     }
-                    },
-        "difficulty":  "hard",
-        "source_id":  "S056",
-        "source_url":  "https://als.wikipedia.org/wiki/Fasnacht",
-        "validated_by":  null,
-        "notes":  "Hard because it is dense heavy Alemannisch: `fodr` = für, `is normalerweis a` = ist normalerweise eine, `oatsasässege` = ehrenamtliche, `Zomft` = Zunft. Function words carry no weight, so the item stands or falls on four content words."
+    "difficulty": "medium",
+    "source_id": "S108",
+    "source_url": "https://als.wikipedia.org/wiki/Jahrmarkt",
+    "validated_by": null,
+    "notes": "This file also carries the harvest note that `Märit` vs `Markt` was REFUTED as a dialect contrast. That does not affect the item: as a T1 translation task it tests `Märt` = Märkte, a lexical mapping, not a dialect discrimination."
+  },
+  {
+    "id": "D006",
+    "task_type": "translation",
+    "dialect": "basel",
+    "dialect_evidence": "S056 header `DIALECT: basel`, but this specific sentence sits in the `=== Schwäbesch-Alemannesche Fasnet ===` subsection, which the DIALECT_EVIDENCE block flags as orthographically a DIFFERENT system from the rest of the article (near-Dieth, `fo`, `fodr`, `mo`, final devoicing throughout, no unstressed `-e`). Orthography is recorded per item for exactly this reason. The header is a corpus-level Basel convenience label.",
+    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "swiss_german_text": "Organisator fodr Fasnet isch normalerweis a oatsasässege Narrazomft.",
+    "standard_german_reference": "Organisator der Fasnacht ist normalerweise eine ehrenamtliche Narrenzunft.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "organisator": [
+          "organisator",
+          "veranstalter",
+          "initiant",
+          "usläser"
+        ],
+        "fasnacht": [
+          "fasnacht",
+          "fasnet",
+          "fastnacht",
+          "schwäbisch-alemannische fasnet",
+          "schwäbesch-alemannische fasnet"
+        ],
+        "normalerweise": [
+          "normalerweise",
+          "normalerwis",
+          "gmeistens",
+          "gwöhnlich",
+          "us schtand",
+          "eistims"
+        ],
+        "ehrenamtliche": [
+          "ehrenamtliche",
+          "oatsasässege",
+          "oatsasässege",
+          "unbezahlt",
+          "freiwillig",
+          "ohne bezahlung"
+        ],
+        "narrenzunft": [
+          "narrenzunft",
+          "narrazomft",
+          "zunft",
+          "zomft",
+          "narrenzünfte",
+          "zomft",
+          "fasnechtszunft"
+        ]
+      }
     },
-    {
-        "id":  "D007",
-        "task_type":  "translation",
-        "dialect":  "basel",
-        "dialect_evidence":  "S056 header `DIALECT: basel`; DIALECT_EVIDENCE states the article is \"demonstrably Basel-oriented\" with the lexical set `Brugg`, `Quardier`, `Gündeli`, `Süüde`/`rächts`. LEXICAL NOTES L10 (`Aaloss` = Ereignis, Alemannic `-oos` for long /o:/) and L11 (`Yoor` = Jahr) are both in this sentence. At the 20-word cap, no length flag.",
-        "orthography":  "semi-Dieth (the Alemannic Wikipedia house system)",
-        "swiss_german_text":  "Für viili Basler isch d’Basler Fasnacht dr wichtigschti Aaloss im Yoor, und au diè gröschti Fasnacht vo der Schwyz.",
-        "standard_german_reference":  "Für viele Basler ist die Basler Fasnacht das wichtigste Ereignis im Jahr, und auch die grösste Fasnacht der Schweiz.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "basler":  [
-                                                        "basler",
-                                                        "basler",
-                                                        "baslener"
-                                                    ],
-                                         "fasnacht":  [
-                                                          "fasnacht",
-                                                          "fasnet",
-                                                          "fastnacht"
-                                                      ],
-                                         "wichtigste":  [
-                                                            "wichtigste",
-                                                            "wichtigschti",
-                                                            "wichtigschti",
-                                                            "eerschti",
-                                                            "eerschti"
-                                                        ],
-                                         "ereignis":  [
-                                                          "ereignis",
-                                                          "aaloss",
-                                                          "aaloss",
-                                                          "anlass",
-                                                          "geschehnis",
-                                                          "ereignis"
-                                                      ],
-                                         "jahr":  [
-                                                      "jahr",
-                                                      "yoor",
-                                                      "joor",
-                                                      "johr"
-                                                  ],
-                                         "schweiz":  [
-                                                         "schweiz",
-                                                         "schwyz",
-                                                         "schwiz",
-                                                         "schwiiz"
-                                                     ],
-                                         "grösste":  [
-                                                         "grösste",
-                                                         "gröschti",
-                                                         "grösste",
-                                                         "grössti",
-                                                         "meeschti"
-                                                     ]
-                                     }
-                    },
-        "difficulty":  "medium",
-        "source_id":  "S056",
-        "source_url":  "https://als.wikipedia.org/wiki/Basel",
-        "validated_by":  null,
-        "notes":  "Verbatim text contains the typographic apostrophe in `d\" + [char]0x2019 + \"Basler` (U+2019). Preserved exactly as in the source; do NOT normalise to an ASCII apostrophe."
+    "difficulty": "hard",
+    "source_id": "S136",
+    "source_url": "https://als.wikipedia.org/wiki/Fasnacht",
+    "validated_by": null,
+    "notes": "Hard because it is dense heavy Alemannisch: `fodr` = für, `is normalerweis a` = ist normalerweise eine, `oatsasässege` = ehrenamtliche, `Zomft` = Zunft. Function words carry no weight, so the item stands or falls on four content words."
+  },
+  {
+    "id": "D007",
+    "task_type": "translation",
+    "dialect": "basel",
+    "dialect_evidence": "S056 header `DIALECT: basel`; DIALECT_EVIDENCE states the article is \"demonstrably Basel-oriented\" with the lexical set `Brugg`, `Quardier`, `Gündeli`, `Süüde`/`rächts`. LEXICAL NOTES L10 (`Aaloss` = Ereignis, Alemannic `-oos` for long /o:/) and L11 (`Yoor` = Jahr) are both in this sentence. At the 20-word cap, no length flag.",
+    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "swiss_german_text": "Für viili Basler isch d’Basler Fasnacht dr wichtigschti Aaloss im Yoor, und au diè gröschti Fasnacht vo der Schwyz.",
+    "standard_german_reference": "Für viele Basler ist die Basler Fasnacht das wichtigste Ereignis im Jahr, und auch die grösste Fasnacht der Schweiz.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "basler": [
+          "basler",
+          "basler",
+          "baslener"
+        ],
+        "fasnacht": [
+          "fasnacht",
+          "fasnet",
+          "fastnacht"
+        ],
+        "wichtigste": [
+          "wichtigste",
+          "wichtigschti",
+          "wichtigschti",
+          "eerschti",
+          "eerschti"
+        ],
+        "ereignis": [
+          "ereignis",
+          "aaloss",
+          "aaloss",
+          "anlass",
+          "geschehnis",
+          "ereignis"
+        ],
+        "jahr": [
+          "jahr",
+          "yoor",
+          "joor",
+          "johr"
+        ],
+        "schweiz": [
+          "schweiz",
+          "schwyz",
+          "schwiz",
+          "schwiiz"
+        ],
+        "grösste": [
+          "grösste",
+          "gröschti",
+          "grösste",
+          "grössti",
+          "meeschti"
+        ]
+      }
     },
-    {
-        "id":  "D008",
-        "task_type":  "translation",
-        "dialect":  "basel",
-        "dialect_evidence":  "S056 header `DIALECT: basel`. The Alemannic headword `Kaffi` is given in the article\u0027s own first sentence (LEXICAL NOTE L1), and L10 records `Schiggoree` = Zichorienkaffee as \"genuinely dialectal, no Standard counterpart\". 18 words, within cap, no length flag.",
-        "orthography":  "semi-Dieth (the Alemannic Wikipedia house system)",
-        "swiss_german_text":  "Ermeri Lüt und in Krisezite fast die ganzi Bevölkerig häi Ersatzkaffi drunke wie Malzkaffi oder Schiggoree.",
-        "standard_german_reference":  "Ärmere Leute und in Krisenzeiten fast die ganze Bevölkerung haben Ersatzkaffee getrunken wie Malzkaffee oder Zichorienkaffee.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "ärmere":  [
-                                                        "ärmere",
-                                                        "ärmeri",
-                                                        "arme",
-                                                        "bemittle",
-                                                        "gschachte"
-                                                    ],
-                                         "leute":  [
-                                                       "leute",
-                                                       "lüt",
-                                                       "lüüt",
-                                                       "mensch",
-                                                       "persone",
-                                                       "mensche"
-                                                   ],
-                                         "krisenzeiten":  [
-                                                              "krisenzeiten",
-                                                              "krisezite",
-                                                              "kriise",
-                                                              "notzite",
-                                                              "mangelzeiten"
-                                                          ],
-                                         "bevölkerung":  [
-                                                             "bevölkerung",
-                                                             "bevölkerig",
-                                                             "bevölcherig",
-                                                             "einwohner",
-                                                             "bevölkerig"
-                                                         ],
-                                         "ersatzkaffee":  [
-                                                              "ersatzkaffee",
-                                                              "ersatzkaffi",
-                                                              "ersatz",
-                                                              "ersatzkaffi",
-                                                              "surrogatkaffee"
-                                                          ],
-                                         "getrunken":  [
-                                                           "getrunken",
-                                                           "drunke",
-                                                           "trunk",
-                                                           "konsumiert",
-                                                           "gematet"
-                                                       ],
-                                         "malzkaffee":  [
-                                                            "malzkaffee",
-                                                            "malzkaffi",
-                                                            "malz",
-                                                            "maltkaffee"
-                                                        ],
-                                         "zichorienkaffee":  [
-                                                                 "zichorienkaffee",
-                                                                 "zichorie",
-                                                                 "schiggoree",
-                                                                 "chicorée",
-                                                                 "inulin",
-                                                                 "zichoriekaffee",
-                                                                 "chicoree",
-                                                                 "wegwarte"
-                                                             ]
-                                     }
-                    },
-        "difficulty":  "medium",
-        "source_id":  "S056",
-        "source_url":  "https://als.wikipedia.org/wiki/Kaffee",
-        "validated_by":  null,
-        "notes":  ""
+    "difficulty": "medium",
+    "source_id": "S102",
+    "source_url": "https://als.wikipedia.org/wiki/Basel",
+    "validated_by": null,
+    "notes": "Verbatim text contains the typographic apostrophe in `d\" + [char]0x2019 + \"Basler` (U+2019). Preserved exactly as in the source; do NOT normalise to an ASCII apostrophe."
+  },
+  {
+    "id": "D008",
+    "task_type": "translation",
+    "dialect": "basel",
+    "dialect_evidence": "S056 header `DIALECT: basel`. The Alemannic headword `Kaffi` is given in the article's own first sentence (LEXICAL NOTE L1), and L10 records `Schiggoree` = Zichorienkaffee as \"genuinely dialectal, no Standard counterpart\". 18 words, within cap, no length flag.",
+    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "swiss_german_text": "Ermeri Lüt und in Krisezite fast die ganzi Bevölkerig häi Ersatzkaffi drunke wie Malzkaffi oder Schiggoree.",
+    "standard_german_reference": "Ärmere Leute und in Krisenzeiten fast die ganze Bevölkerung haben Ersatzkaffee getrunken wie Malzkaffee oder Zichorienkaffee.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "ärmere": [
+          "ärmere",
+          "ärmeri",
+          "arme",
+          "bemittle",
+          "gschachte"
+        ],
+        "leute": [
+          "leute",
+          "lüt",
+          "lüüt",
+          "mensch",
+          "persone",
+          "mensche"
+        ],
+        "krisenzeiten": [
+          "krisenzeiten",
+          "krisezite",
+          "kriise",
+          "notzite",
+          "mangelzeiten"
+        ],
+        "bevölkerung": [
+          "bevölkerung",
+          "bevölkerig",
+          "bevölcherig",
+          "einwohner",
+          "bevölkerig"
+        ],
+        "ersatzkaffee": [
+          "ersatzkaffee",
+          "ersatzkaffi",
+          "ersatz",
+          "ersatzkaffi",
+          "surrogatkaffee"
+        ],
+        "getrunken": [
+          "getrunken",
+          "drunke",
+          "trunk",
+          "konsumiert",
+          "gematet"
+        ],
+        "malzkaffee": [
+          "malzkaffee",
+          "malzkaffi",
+          "malz",
+          "maltkaffee"
+        ],
+        "zichorienkaffee": [
+          "zichorienkaffee",
+          "zichorie",
+          "schiggoree",
+          "chicorée",
+          "inulin",
+          "zichoriekaffee",
+          "chicoree",
+          "wegwarte"
+        ]
+      }
     },
-    {
-        "id":  "D009",
-        "task_type":  "translation",
-        "dialect":  "zurich",
-        "dialect_evidence":  "S057 header `DIALECT: zurich` with an explicit `{{Dialekt|Zürichdeutsch|Züridütsch}}` tag; the file is a city-Zürich article, which C1 of the Brauerei file identifies as the reference point for urban Zürich German (unlike Kloster Einsiedeln, which is Seedialect). C5 (Brauerei) explicitly records `hüt` as SHARED across Basel/Bern/Zürich, so `hüüt` is NOT counted as evidence here; the item rests on Zürich compound morphology and vowel spelling.",
-        "orthography":  "semi-Dieth (Alemannic Wikipedia house system)",
-        "swiss_german_text":  "D Schwiiz het hüüt zämme mit Luxeburg dr höchschti Ussländerbeschtand in ganz Europa.",
-        "standard_german_reference":  "Die Schweiz hat heute zusammen mit Luxemburg den höchsten Ausländerbestand in ganz Europa.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "schweiz":  [
-                                                         "schweiz",
-                                                         "schwiiz",
-                                                         "schwiz",
-                                                         "schwyz"
-                                                     ],
-                                         "heute":  [
-                                                       "heute",
-                                                       "hüt",
-                                                       "hüüt",
-                                                       "hüüte",
-                                                       "hüt",
-                                                       "hüte"
-                                                   ],
-                                         "zusammen":  [
-                                                          "zusammen",
-                                                          "zämme",
-                                                          "zäme",
-                                                          "mit",
-                                                          "gsamt",
-                                                          "gemeinsam"
-                                                      ],
-                                         "luxemburg":  [
-                                                           "luxemburg",
-                                                           "luxeburg"
-                                                       ],
-                                         "höchsten":  [
-                                                          "höchsten",
-                                                          "höchschti",
-                                                          "höchstschti",
-                                                          "höchschti",
-                                                          "höchst",
-                                                          "grösste"
-                                                      ],
-                                         "ausländerbestand":  [
-                                                                  "ausländerbestand",
-                                                                  "ussländerbeschtand",
-                                                                  "bestand",
-                                                                  "ausländerzahl",
-                                                                  "ausländerpopulation",
-                                                                  "anzahl vo ussländer"
-                                                              ],
-                                         "europa":  [
-                                                        "europa",
-                                                        "euroopa",
-                                                        "üropa"
-                                                    ]
-                                     }
-                    },
-        "difficulty":  "medium",
-        "source_id":  "S057",
-        "source_url":  "https://als.wikipedia.org/wiki/Ausl%C3%A4nder",
-        "validated_by":  null,
-        "notes":  "`Ussländerbeschtand` and `Schwaarz`/`zämme` vowel spellings are the load-bearing evidence. The item deliberately does NOT rely on `hüt`/`hüüt`, which the corpus records as a shared form across Basel, Bern and Zürich."
+    "difficulty": "medium",
+    "source_id": "S109",
+    "source_url": "https://als.wikipedia.org/wiki/Kaffee",
+    "validated_by": null,
+    "notes": ""
+  },
+  {
+    "id": "D009",
+    "task_type": "translation",
+    "dialect": "zurich",
+    "dialect_evidence": "S057 header `DIALECT: zurich` with an explicit `{{Dialekt|Zürichdeutsch|Züridütsch}}` tag; the file is a city-Zürich article, which C1 of the Brauerei file identifies as the reference point for urban Zürich German (unlike Kloster Einsiedeln, which is Seedialect). C5 (Brauerei) explicitly records `hüt` as SHARED across Basel/Bern/Zürich, so `hüüt` is NOT counted as evidence here; the item rests on Zürich compound morphology and vowel spelling.",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+    "swiss_german_text": "D Schwiiz het hüüt zämme mit Luxeburg dr höchschti Ussländerbeschtand in ganz Europa.",
+    "standard_german_reference": "Die Schweiz hat heute zusammen mit Luxemburg den höchsten Ausländerbestand in ganz Europa.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "schweiz": [
+          "schweiz",
+          "schwiiz",
+          "schwiz",
+          "schwyz"
+        ],
+        "heute": [
+          "heute",
+          "hüt",
+          "hüüt",
+          "hüüte",
+          "hüt",
+          "hüte"
+        ],
+        "zusammen": [
+          "zusammen",
+          "zämme",
+          "zäme",
+          "mit",
+          "gsamt",
+          "gemeinsam"
+        ],
+        "luxemburg": [
+          "luxemburg",
+          "luxeburg"
+        ],
+        "höchsten": [
+          "höchsten",
+          "höchschti",
+          "höchstschti",
+          "höchschti",
+          "höchst",
+          "grösste"
+        ],
+        "ausländerbestand": [
+          "ausländerbestand",
+          "ussländerbeschtand",
+          "bestand",
+          "ausländerzahl",
+          "ausländerpopulation",
+          "anzahl vo ussländer"
+        ],
+        "europa": [
+          "europa",
+          "euroopa",
+          "üropa"
+        ]
+      }
     },
-    {
-        "id":  "D010",
-        "task_type":  "translation",
-        "dialect":  "zurich",
-        "dialect_evidence":  "S057 header `DIALECT: zurich`, `{{Dialekt|Zürichdeutsch|Züritüütsch| Züritüütsch}}`. CONTRAST NOTE C1: the `äi`/`ää` spelling of long /a:/ (\"Chindlistäi, Rutschstäi, Wöörter, ggëë, ghaa, Fruchtbaarkäit\") is \"the single most distinctive orthographic signature of this article\", verified against Bernese which uses plain `a` in the same slot and never `äi`. C3 warns that `me`/`mer` is variable INSIDE this article, so `mer` is not used as evidence here.",
-        "orthography":  "semi-Dieth (Alemannic Wikipedia house system)",
-        "swiss_german_text":  "S Woort und de Glaube häts natüürli scho vorane ggëë, aber über söttigi Sache hät mer halt früener chuum gschribe.",
-        "standard_german_reference":  "Das Wort und der Glaube hätten natürlich schon vorher existiert, aber über solches wurde halt früher kaum geschrieben.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "wort":  [
-                                                      "wort",
-                                                      "woort",
-                                                      "wörd",
-                                                      "woat"
-                                                  ],
-                                         "glaube":  [
-                                                        "glaube",
-                                                        "glaubens",
-                                                        "glaube",
-                                                        "guetscheme"
-                                                    ],
-                                         "existiert":  [
-                                                           "existiert",
-                                                           "existiirt",
-                                                           "vorane",
-                                                           "gsi",
-                                                           "geschebe",
-                                                           "gsi"
-                                                       ],
-                                         "natürlich":  [
-                                                           "natürlich",
-                                                           "natüürli",
-                                                           "natürliche",
-                                                           "natürli"
-                                                       ],
-                                         "geschrieben":  [
-                                                             "geschrieben",
-                                                             "gschribe",
-                                                             "gschriben",
-                                                             "ufgschribe",
-                                                             "notiert"
-                                                         ],
-                                         "solches":  [
-                                                         "solches",
-                                                         "söttigi",
-                                                         "solchi",
-                                                         "söche",
-                                                         "dergli"
-                                                     ],
-                                         "früher":  [
-                                                        "früher",
-                                                        "früener",
-                                                        "früher",
-                                                        "eher",
-                                                        "früher",
-                                                        "nit gly",
-                                                        "kaum"
-                                                    ]
-                                     }
-                    },
-        "difficulty":  "medium",
-        "source_id":  "S057",
-        "source_url":  "https://als.wikipedia.org/wiki/Chindlistein",
-        "validated_by":  null,
-        "notes":  "Note the reference double-negates (\"wurde halt früher kaum geschrieben\") which maps to `chuum gschribe`. Synonyms include `kaum`/`nit gly` so both halves of the reference are reachable. Folklore register per C5 — valid documentary Zürich German but more formal than everyday speech."
+    "difficulty": "medium",
+    "source_id": "S127",
+    "source_url": "https://als.wikipedia.org/wiki/Ausl%C3%A4nder",
+    "validated_by": null,
+    "notes": "`Ussländerbeschtand` and `Schwaarz`/`zämme` vowel spellings are the load-bearing evidence. The item deliberately does NOT rely on `hüt`/`hüüt`, which the corpus records as a shared form across Basel, Bern and Zürich."
+  },
+  {
+    "id": "D010",
+    "task_type": "translation",
+    "dialect": "zurich",
+    "dialect_evidence": "S057 header `DIALECT: zurich`, `{{Dialekt|Zürichdeutsch|Züritüütsch| Züritüütsch}}`. CONTRAST NOTE C1: the `äi`/`ää` spelling of long /a:/ (\"Chindlistäi, Rutschstäi, Wöörter, ggëë, ghaa, Fruchtbaarkäit\") is \"the single most distinctive orthographic signature of this article\", verified against Bernese which uses plain `a` in the same slot and never `äi`. C3 warns that `me`/`mer` is variable INSIDE this article, so `mer` is not used as evidence here.",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+    "swiss_german_text": "S Woort und de Glaube häts natüürli scho vorane ggëë, aber über söttigi Sache hät mer halt früener chuum gschribe.",
+    "standard_german_reference": "Das Wort und der Glaube hätten natürlich schon vorher existiert, aber über solches wurde halt früher kaum geschrieben.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "wort": [
+          "wort",
+          "woort",
+          "wörd",
+          "woat"
+        ],
+        "glaube": [
+          "glaube",
+          "glaubens",
+          "glaube",
+          "guetscheme"
+        ],
+        "existiert": [
+          "existiert",
+          "existiirt",
+          "vorane",
+          "gsi",
+          "geschebe",
+          "gsi"
+        ],
+        "natürlich": [
+          "natürlich",
+          "natüürli",
+          "natürliche",
+          "natürli"
+        ],
+        "geschrieben": [
+          "geschrieben",
+          "gschribe",
+          "gschriben",
+          "ufgschribe",
+          "notiert"
+        ],
+        "solches": [
+          "solches",
+          "söttigi",
+          "solchi",
+          "söche",
+          "dergli"
+        ],
+        "früher": [
+          "früher",
+          "früener",
+          "früher",
+          "eher",
+          "früher",
+          "nit gly",
+          "kaum"
+        ]
+      }
     },
-    {
-        "id":  "D011",
-        "task_type":  "translation",
-        "dialect":  "bern",
-        "dialect_evidence":  "S057 header `DIALECT: bern` with an explicit `{{Dialekt|Berndeutsch|Bärndütsch|Bärndütsch}}` tag. CONTRAST NOTE C1 (this file) is the key: this very sentence is the Bernese side of the VERIFIED contrast — Basel writes the same word as `Broot` and also uses the loaf-word `Laib`, while the final devoicing /d/ -\u003e /t/ is ABSENT in Bernese. C5 records `Froue` as Bernese plural with the -w- dropped. C9 records `bache`/`chunnt` as SHARED, so they are not evidence.",
-        "orthography":  "semi-Dieth (Alemannic Wikipedia house system)",
-        "swiss_german_text":  "Für d Froue isch ds Braue den so Sälbstverständlech gsi, wi ds Bache vo Brot.",
-        "standard_german_reference":  "Für die Frauen war das Brauen so selbstverständlich wie das Backen von Brot.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "frauen":  [
-                                                        "frauen",
-                                                        "froue",
-                                                        "frouen",
-                                                        "fraue",
-                                                        "damen"
-                                                    ],
-                                         "brauen":  [
-                                                        "brauen",
-                                                        "braue",
-                                                        "brau",
-                                                        "braue",
-                                                        "bierbrauen",
-                                                        "bieren"
-                                                    ],
-                                         "selbstverständlich":  [
-                                                                    "selbstverständlich",
-                                                                    "sälbstverständlech",
-                                                                    "gewohnt",
-                                                                    "gowoont",
-                                                                    "selbstverständli"
-                                                                ],
-                                         "backen":  [
-                                                        "backen",
-                                                        "bache",
-                                                        "bachen",
-                                                        "baken",
-                                                        "backe"
-                                                    ],
-                                         "brot":  [
-                                                      "brot",
-                                                      "broot",
-                                                      "laib",
-                                                      "laibli",
-                                                      "semmel",
-                                                      "weck"
-                                                  ]
-                                     }
-                    },
-        "difficulty":  "medium",
-        "source_id":  "S057",
-        "source_url":  "https://als.wikipedia.org/wiki/Brauerei",
-        "validated_by":  null,
-        "notes":  "`Brot`/`Broot`/`Laib` is a verified contrast (Brauerei C1), so a model defaulting to the Basel `Broot` still scores full credit — which is correct, since the task is translation, not dialect identification."
+    "difficulty": "medium",
+    "source_id": "S130",
+    "source_url": "https://als.wikipedia.org/wiki/Chindlistein",
+    "validated_by": null,
+    "notes": "Note the reference double-negates (\"wurde halt früher kaum geschrieben\") which maps to `chuum gschribe`. Synonyms include `kaum`/`nit gly` so both halves of the reference are reachable. Folklore register per C5 — valid documentary Zürich German but more formal than everyday speech."
+  },
+  {
+    "id": "D011",
+    "task_type": "translation",
+    "dialect": "bern",
+    "dialect_evidence": "S057 header `DIALECT: bern` with an explicit `{{Dialekt|Berndeutsch|Bärndütsch|Bärndütsch}}` tag. CONTRAST NOTE C1 (this file) is the key: this very sentence is the Bernese side of the VERIFIED contrast — Basel writes the same word as `Broot` and also uses the loaf-word `Laib`, while the final devoicing /d/ -> /t/ is ABSENT in Bernese. C5 records `Froue` as Bernese plural with the -w- dropped. C9 records `bache`/`chunnt` as SHARED, so they are not evidence.",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+    "swiss_german_text": "Für d Froue isch ds Braue den so Sälbstverständlech gsi, wi ds Bache vo Brot.",
+    "standard_german_reference": "Für die Frauen war das Brauen so selbstverständlich wie das Backen von Brot.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "frauen": [
+          "frauen",
+          "froue",
+          "frouen",
+          "fraue",
+          "damen"
+        ],
+        "brauen": [
+          "brauen",
+          "braue",
+          "brau",
+          "braue",
+          "bierbrauen",
+          "bieren"
+        ],
+        "selbstverständlich": [
+          "selbstverständlich",
+          "sälbstverständlech",
+          "gewohnt",
+          "gowoont",
+          "selbstverständli"
+        ],
+        "backen": [
+          "backen",
+          "bache",
+          "bachen",
+          "baken",
+          "backe"
+        ],
+        "brot": [
+          "brot",
+          "broot",
+          "laib",
+          "laibli",
+          "semmel",
+          "weck"
+        ]
+      }
     },
-    {
-        "id":  "D012",
-        "task_type":  "translation",
-        "dialect":  "walser",
-        "dialect_evidence":  "S057 header `DIALECT: walser` with `{{Dialekt|Issimedeutsch|Walsertiitsch|Éischemtöitschu}}`; SUBDIALECT_NOTE identifies this as Südwalser German in the Aosta Valley (Italy) — genuine Walser German by the wiki\u0027s own classification. CONTRAST NOTE C2 documents the phonology self-described in the article (`Chilche`, `Idalieenisch`, `gsii`, `ùfchùù`); C5 records `Chilche` as the Walser short form against the Wallisertiitsch `Chilchu`.",
-        "orthography":  "semi-Dieth (Alemannic Wikipedia house system)",
-        "swiss_german_text":  "D Chilche ùn d Schuel sin bis in d 1920er Joor franzeesich gsii, derno isch s Idalieenisch ùfchùù.",
-        "standard_german_reference":  "Die Kirche und die Schule sind bis in die 1920er Jahre französisch gewesen, danach ist das Italienische hinzugekommen.",
-        "scoring":  {
-                        "type":  "content_keyword_coverage",
-                        "synonyms":  {
-                                         "kirche":  [
-                                                        "kirche",
-                                                        "chilche",
-                                                        "chilchu",
-                                                        "chirche",
-                                                        "chürche"
-                                                    ],
-                                         "schule":  [
-                                                        "schule",
-                                                        "schuel",
-                                                        "schuel",
-                                                        "schuela"
-                                                    ],
-                                         "französisch":  [
-                                                             "französisch",
-                                                             "franzeesich",
-                                                             "frankoprovenzalisch",
-                                                             "französische"
-                                                         ],
-                                         "italienisch":  [
-                                                             "italienisch",
-                                                             "idalieenisch",
-                                                             "italiaanisch",
-                                                             "italienische"
-                                                         ],
-                                         "jahre":  [
-                                                       "jahre",
-                                                       "jaar",
-                                                       "joor",
-                                                       "jahr",
-                                                       "johr"
-                                                   ],
-                                         "gewesen":  [
-                                                         "gewesen",
-                                                         "gsii",
-                                                         "gsy",
-                                                         "gsi",
-                                                         "gsi"
-                                                     ],
-                                         "hinzugekommen":  [
-                                                               "hinzugekommen",
-                                                               "ufchùù",
-                                                               "ufchuu",
-                                                               "dazugekommen",
-                                                               "hinzu",
-                                                               "üfchùù"
-                                                           ]
-                                     }
-                    },
-        "difficulty":  "hard",
-        "source_id":  "S057",
-        "source_url":  "https://als.wikipedia.org/wiki/Issime",
-        "validated_by":  null,
-        "notes":  "High-alpine Südwalser register: `Chilche`/`Schuel`/`franzeesich`/`Idalieenisch`/`gsii`/`ùfchùù`. Note the settlement is in Italy — this is Walser German, not a Swiss cantonal dialect, and must be labelled as such in any reporting."
+    "difficulty": "medium",
+    "source_id": "S119",
+    "source_url": "https://als.wikipedia.org/wiki/Brauerei",
+    "validated_by": null,
+    "notes": "`Brot`/`Broot`/`Laib` is a verified contrast (Brauerei C1), so a model defaulting to the Basel `Broot` still scores full credit — which is correct, since the task is translation, not dialect identification."
+  },
+  {
+    "id": "D012",
+    "task_type": "translation",
+    "dialect": "walser",
+    "dialect_evidence": "S057 header `DIALECT: walser` with `{{Dialekt|Issimedeutsch|Walsertiitsch|Éischemtöitschu}}`; SUBDIALECT_NOTE identifies this as Südwalser German in the Aosta Valley (Italy) — genuine Walser German by the wiki's own classification. CONTRAST NOTE C2 documents the phonology self-described in the article (`Chilche`, `Idalieenisch`, `gsii`, `ùfchùù`); C5 records `Chilche` as the Walser short form against the Wallisertiitsch `Chilchu`.",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+    "swiss_german_text": "D Chilche ùn d Schuel sin bis in d 1920er Joor franzeesich gsii, derno isch s Idalieenisch ùfchùù.",
+    "standard_german_reference": "Die Kirche und die Schule sind bis in die 1920er Jahre französisch gewesen, danach ist das Italienische hinzugekommen.",
+    "scoring": {
+      "type": "content_keyword_coverage",
+      "synonyms": {
+        "kirche": [
+          "kirche",
+          "chilche",
+          "chilchu",
+          "chirche",
+          "chürche"
+        ],
+        "schule": [
+          "schule",
+          "schuel",
+          "schuel",
+          "schuela"
+        ],
+        "französisch": [
+          "französisch",
+          "franzeesich",
+          "frankoprovenzalisch",
+          "französische"
+        ],
+        "italienisch": [
+          "italienisch",
+          "idalieenisch",
+          "italiaanisch",
+          "italienische"
+        ],
+        "jahre": [
+          "jahre",
+          "jaar",
+          "joor",
+          "jahr",
+          "johr"
+        ],
+        "gewesen": [
+          "gewesen",
+          "gsii",
+          "gsy",
+          "gsi",
+          "gsi"
+        ],
+        "hinzugekommen": [
+          "hinzugekommen",
+          "ufchùù",
+          "ufchuu",
+          "dazugekommen",
+          "hinzu",
+          "üfchùù"
+        ]
+      }
     },
-    {
-        "id":  "D013",
-        "task_type":  "dialect_identification",
-        "dialect":  "zurich",
-        "dialect_evidence":  "S057 header `DIALECT: zurich`, explicit `{{Dialekt|Zürichdeutsch|Züridütsch}}`, city-Zürich article (C1 of the Brauerei file: this is the reference point for urban Zürich German).",
-        "orthography":  "semi-Dieth (Alemannic Wikipedia house system)",
-        "prompt":  "Schpaatussiidler gelted dernaa nöd als Ussländer.",
-        "question":  "Which Swiss German dialect is this sentence written in?",
-        "options":  {
-                        "A":  "Baseldytsch",
-                        "B":  "Züritüütsch",
-                        "C":  "Bärndütsch",
-                        "D":  "Walser/Wallisertiitsch"
-                    },
-        "correct_answer":  "B",
-        "difficulty":  "easy",
-        "source_id":  "S057",
-        "source_url":  "https://als.wikipedia.org/wiki/Ausl%C3%A4nder",
-        "validated_by":  null,
-        "notes":  "Verified contrast: Ausländer C1 — `nöd` for `nicht`. Zürich harvest nöd 9 / nid 0; Bernese nid 6 / nöd 0; Basel nid 14 / nöd 0. C1 calls this \"THE strongest lexical Basel+Bern vs Zürich opposition in the corpus\" and the \"headline Zürich/Bern contrast item\". Corroborated by Zurich-only `Schpaatussiidler` (= Spätaussiedler) and `dernaa` (= demnach). NOT based on `hüt`/`hüüt`, which C6 of Brauerei records as shared by all three dialects."
+    "difficulty": "hard",
+    "source_id": "S125",
+    "source_url": "https://als.wikipedia.org/wiki/Issime",
+    "validated_by": null,
+    "notes": "High-alpine Südwalser register: `Chilche`/`Schuel`/`franzeesich`/`Idalieenisch`/`gsii`/`ùfchùù`. Note the settlement is in Italy — this is Walser German, not a Swiss cantonal dialect, and must be labelled as such in any reporting."
+  },
+  {
+    "id": "D013",
+    "task_type": "dialect_identification",
+    "dialect": "zurich",
+    "dialect_evidence": "S057 header `DIALECT: zurich`, explicit `{{Dialekt|Zürichdeutsch|Züridütsch}}`, city-Zürich article (C1 of the Brauerei file: this is the reference point for urban Zürich German).",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+    "prompt": "Schpaatussiidler gelted dernaa nöd als Ussländer.",
+    "question": "Which Swiss German dialect is this sentence written in?",
+    "options": {
+      "A": "Baseldytsch",
+      "B": "Züritüütsch",
+      "C": "Bärndütsch",
+      "D": "Walser/Wallisertiitsch"
     },
-    {
-        "id":  "D014",
-        "task_type":  "dialect_identification",
-        "dialect":  "bern",
-        "dialect_evidence":  "S057 header `DIALECT: bern`, explicit `{{Dialekt|Berndeutsch|Bärndütsch|Bärndütsch}}`, standard Bärndütsch. The sentence also carries `Är`/`die`/`Name`, per Ismael C4/C1.",
-        "orthography":  "semi-Dieth (Alemannic Wikipedia house system)",
-        "prompt":  "Im Kapitel 17 chöme die zwöi e neue Name, also Abraham und Sara über.",
-        "question":  "Which Swiss German dialect is this sentence written in?",
-        "options":  {
-                        "A":  "Baseldytsch",
-                        "B":  "Züritüütsch",
-                        "C":  "Bärndütsch",
-                        "D":  "Walser/Wallisertiitsch"
-                    },
-        "correct_answer":  "C",
-        "difficulty":  "medium",
-        "source_id":  "S057",
-        "source_url":  "https://als.wikipedia.org/wiki/Ismael",
-        "validated_by":  null,
-        "notes":  "Verified contrast: `zwöi` = zwei. Bauern-Tabak C4 — Bernese harvest has `zwöi` 2 / `zwei` 0, the Zürich harvest has `zwei` 1 / `zwöi` 0, \"a clean, usable minimal pair\", both sides in-corpus. Restated as Ismael C3. Corroborated by Ismael C4 `Är` (Bernese vs Zürich `er`, both in-corpus) and C1 `Frou`/`Froue` (Bernese drops the -w-). CAVEAT: the Basel and Walser sides of the zwöi/zwei opposition are not attested in the harvest, so those two options are excluded by absence, not by a positive contrast."
+    "correct_answer": "B",
+    "difficulty": "easy",
+    "source_id": "S127",
+    "source_url": "https://als.wikipedia.org/wiki/Ausl%C3%A4nder",
+    "validated_by": null,
+    "notes": "Verified contrast: Ausländer C1 — `nöd` for `nicht`. Zürich harvest nöd 9 / nid 0; Bernese nid 6 / nöd 0; Basel nid 14 / nöd 0. C1 calls this \"THE strongest lexical Basel+Bern vs Zürich opposition in the corpus\" and the \"headline Zürich/Bern contrast item\". Corroborated by Zurich-only `Schpaatussiidler` (= Spätaussiedler) and `dernaa` (= demnach). NOT based on `hüt`/`hüüt`, which C6 of Brauerei records as shared by all three dialects."
+  },
+  {
+    "id": "D014",
+    "task_type": "dialect_identification",
+    "dialect": "bern",
+    "dialect_evidence": "S057 header `DIALECT: bern`, explicit `{{Dialekt|Berndeutsch|Bärndütsch|Bärndütsch}}`, standard Bärndütsch. The sentence also carries `Är`/`die`/`Name`, per Ismael C4/C1.",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+    "prompt": "Im Kapitel 17 chöme die zwöi e neue Name, also Abraham und Sara über.",
+    "question": "Which Swiss German dialect is this sentence written in?",
+    "options": {
+      "A": "Baseldytsch",
+      "B": "Züritüütsch",
+      "C": "Bärndütsch",
+      "D": "Walser/Wallisertiitsch"
     },
-    {
-        "id":  "D015",
-        "task_type":  "dialect_identification",
-        "dialect":  "walser",
-        "dialect_evidence":  "S057 header `DIALECT: walser`, `{{Dialekt|Walserdeutsch|Walsertiitsch|Walsertüütsch vam Chlooschtär}}`, SUBDIALECT_NOTE: genuine Walser German (Prättigau, Graubünden, Switzerland).",
-        "orthography":  "semi-Dieth (Alemannic Wikipedia house system)",
-        "prompt":  "Di Gmäind Chlooschtärsch ischt mit dr Rhätischä Bahn guet ärschlossän.",
-        "question":  "Which Swiss German dialect is this sentence written in?",
-        "options":  {
-                        "A":  "Baseldytsch",
-                        "B":  "Züritüütsch",
-                        "C":  "Bärndütsch",
-                        "D":  "Walser"
-                    },
-        "correct_answer":  "D",
-        "difficulty":  "medium",
-        "source_id":  "S057",
-        "source_url":  "https://als.wikipedia.org/wiki/Klosters",
-        "validated_by":  null,
-        "notes":  "Two verified contrasts on one sentence. (1) Klosters C1: `ischt` for `ist` occurs ONLY in the alpine dialects (walser 2, valais 3) and is entirely absent from basel (156 `isch`), bern (24) and zurich (33). C1 explicitly states this CONTRADICTS the harvest brief\u0027s Basel-vs-Zürich devoicing hypothesis and is the cleanest devoicing contrast in the corpus. (2) Klosters C2: `Gmäind` = Gemeinde is a THREE-WAY contrast — Wallis `Gmei` 3 / `Gmeind` 0, Zürich `Gmeind` 6 / `Gmäind` 0, Walser `Gmäind`. Basel is excluded as unusable here (infobox noise). The second marker rules out the Wallisertiitsch reading of `ischt`."
+    "correct_answer": "C",
+    "difficulty": "medium",
+    "source_id": "S120",
+    "source_url": "https://als.wikipedia.org/wiki/Ismael",
+    "validated_by": null,
+    "notes": "Verified contrast: `zwöi` = zwei. Bauern-Tabak C4 — Bernese harvest has `zwöi` 2 / `zwei` 0, the Zürich harvest has `zwei` 1 / `zwöi` 0, \"a clean, usable minimal pair\", both sides in-corpus. Restated as Ismael C3. Corroborated by Ismael C4 `Är` (Bernese vs Zürich `er`, both in-corpus) and C1 `Frou`/`Froue` (Bernese drops the -w-). CAVEAT: the Basel and Walser sides of the zwöi/zwei opposition are not attested in the harvest, so those two options are excluded by absence, not by a positive contrast."
+  },
+  {
+    "id": "D015",
+    "task_type": "dialect_identification",
+    "dialect": "walser",
+    "dialect_evidence": "S057 header `DIALECT: walser`, `{{Dialekt|Walserdeutsch|Walsertiitsch|Walsertüütsch vam Chlooschtär}}`, SUBDIALECT_NOTE: genuine Walser German (Prättigau, Graubünden, Switzerland).",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+    "prompt": "Di Gmäind Chlooschtärsch ischt mit dr Rhätischä Bahn guet ärschlossän.",
+    "question": "Which Swiss German dialect is this sentence written in?",
+    "options": {
+      "A": "Baseldytsch",
+      "B": "Züritüütsch",
+      "C": "Bärndütsch",
+      "D": "Walser"
     },
-    {
-        "id":  "D016",
-        "task_type":  "dialect_identification",
-        "dialect":  "valais",
-        "dialect_evidence":  "S057 header `DIALECT: valais`, explicit `{{Dialekt|Walliserdeutsch|Wallisertiitsch|Wallisertitsch}}`. SUBDIALECT_NOTE: WALLISERTIITSCH (Höchstalemannisch, Valais German) — NOT Walser German; `valais` used deliberately rather than mislabelling it `walser`.",
-        "orthography":  "semi-Dieth (Alemannic Wikipedia house system)",
-        "prompt":  "Dur ds Taal vaner Lienne fiert der Füesswäg zum Rawilpass.",
-        "question":  "Which Swiss German dialect is this sentence written in?",
-        "options":  {
-                        "A":  "Wallisertiitsch",
-                        "B":  "Baseldytsch",
-                        "C":  "Bärndütsch",
-                        "D":  "Züritüütsch"
-                    },
-        "correct_answer":  "A",
-        "difficulty":  "medium",
-        "source_id":  "S057",
-        "source_url":  "https://als.wikipedia.org/wiki/Ayent",
-        "validated_by":  null,
-        "notes":  "Verified contrast: Ayent C1 — `vaner`/`vanu` = von. C1: \"THE most exclusive lexical marker in the corpus\"; the forms occur only in the Wallisertiitsch harvest and are absent from basel, bern, zurich and walser, all of which use `vo` (Basel 242, Bern 23, Zürich 37) or, for Walser, `vù`/`vam` (8, per Issime C7). Restated as Blatten C3. All four distractors are therefore excluded by a POSITIVE contrast on the same slot, not by absence. Deliberately NOT using `Füesswäg`, which Ayent C6 corrects as SHARED Bernese/Wallisertiitsch rather than a Bernese marker."
+    "correct_answer": "D",
+    "difficulty": "medium",
+    "source_id": "S126",
+    "source_url": "https://als.wikipedia.org/wiki/Klosters",
+    "validated_by": null,
+    "notes": "Two verified contrasts on one sentence. (1) Klosters C1: `ischt` for `ist` occurs ONLY in the alpine dialects (walser 2, valais 3) and is entirely absent from basel (156 `isch`), bern (24) and zurich (33). C1 explicitly states this CONTRADICTS the harvest brief's Basel-vs-Zürich devoicing hypothesis and is the cleanest devoicing contrast in the corpus. (2) Klosters C2: `Gmäind` = Gemeinde is a THREE-WAY contrast — Wallis `Gmei` 3 / `Gmeind` 0, Zürich `Gmeind` 6 / `Gmäind` 0, Walser `Gmäind`. Basel is excluded as unusable here (infobox noise). The second marker rules out the Wallisertiitsch reading of `ischt`."
+  },
+  {
+    "id": "D016",
+    "task_type": "dialect_identification",
+    "dialect": "valais",
+    "dialect_evidence": "S057 header `DIALECT: valais`, explicit `{{Dialekt|Walliserdeutsch|Wallisertiitsch|Wallisertitsch}}`. SUBDIALECT_NOTE: WALLISERTIITSCH (Höchstalemannisch, Valais German) — NOT Walser German; `valais` used deliberately rather than mislabelling it `walser`.",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+    "prompt": "Dur ds Taal vaner Lienne fiert der Füesswäg zum Rawilpass.",
+    "question": "Which Swiss German dialect is this sentence written in?",
+    "options": {
+      "A": "Wallisertiitsch",
+      "B": "Baseldytsch",
+      "C": "Bärndütsch",
+      "D": "Züritüütsch"
     },
-    {
-        "id":  "D017",
-        "task_type":  "dialect_identification",
-        "dialect":  "basel",
-        "dialect_evidence":  "S056 header `DIALECT: basel`; DIALECT_EVIDENCE places the article in village-spoken Basel-Landschaft Alemannisch (Mappach, canton Basel-Landschaft).",
-        "orthography":  "semi-Dieth (the Alemannic Wikipedia house system)",
-        "prompt":  "D\u0027 Dämpfi isch bis in d\u0027 sibziger Joor in de Schwiinemascht zum gare vo Grumbiire iigsetzt worde.",
-        "question":  "Which Swiss German dialect is this sentence written in?",
-        "options":  {
-                        "A":  "Bärndütsch",
-                        "B":  "Baseldytsch",
-                        "C":  "Züritüütsch",
-                        "D":  "Wallisertiitsch"
-                    },
-        "correct_answer":  "B",
-        "difficulty":  "medium",
-        "source_id":  "S056",
-        "source_url":  "https://als.wikipedia.org/wiki/Kartoffeld%C3%A4mpfer",
-        "validated_by":  null,
-        "notes":  "Verified contrast: `Joor` = Jahr, i.e. final devoicing of /r/. Bauern-Tabak C5: Bernese harvest `Jahr` 4 / `Joor` 0, Basel comparison sample `Joor` 17; Klosters C4 repeats it and states \"the devoicing of Jahr is a shared West-/South-Alpine retention, not a Basel peculiarity\"; Ayent C4 places the Wallisertiitsch on the OPPOSITE side (`eerschtu`, i.e. devoicing absent). Corroborated by Basel-only `Grumbiire`, `gare` and `Schwiinemascht` (LEXICAL NOTES L2, L3, L4). CAVEAT: Walser also writes `Joor` (Klosters C4, Issime C4), which is why Walser is NOT offered as an option here — including it would make the item ambiguous. The Wallisertiitsch distractor is excluded positively by the `eerschtu`/`Jahr` evidence in Ayent C4 and Blatten C8."
-    }
+    "correct_answer": "A",
+    "difficulty": "medium",
+    "source_id": "S123",
+    "source_url": "https://als.wikipedia.org/wiki/Ayent",
+    "validated_by": null,
+    "notes": "Verified contrast: Ayent C1 — `vaner`/`vanu` = von. C1: \"THE most exclusive lexical marker in the corpus\"; the forms occur only in the Wallisertiitsch harvest and are absent from basel, bern, zurich and walser, all of which use `vo` (Basel 242, Bern 23, Zürich 37) or, for Walser, `vù`/`vam` (8, per Issime C7). Restated as Blatten C3. All four distractors are therefore excluded by a POSITIVE contrast on the same slot, not by absence. Deliberately NOT using `Füesswäg`, which Ayent C6 corrects as SHARED Bernese/Wallisertiitsch rather than a Bernese marker."
+  },
+  {
+    "id": "D017",
+    "task_type": "dialect_identification",
+    "dialect": "basel",
+    "dialect_evidence": "S056 header `DIALECT: basel`; DIALECT_EVIDENCE places the article in village-spoken Basel-Landschaft Alemannisch (Mappach, canton Basel-Landschaft).",
+    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "prompt": "D' Dämpfi isch bis in d' sibziger Joor in de Schwiinemascht zum gare vo Grumbiire iigsetzt worde.",
+    "question": "Which Swiss German dialect is this sentence written in?",
+    "options": {
+      "A": "Bärndütsch",
+      "B": "Baseldytsch",
+      "C": "Züritüütsch",
+      "D": "Wallisertiitsch"
+    },
+    "correct_answer": "B",
+    "difficulty": "medium",
+    "source_id": "S110",
+    "source_url": "https://als.wikipedia.org/wiki/Kartoffeld%C3%A4mpfer",
+    "validated_by": null,
+    "notes": "Verified contrast: `Joor` = Jahr, i.e. final devoicing of /r/. Bauern-Tabak C5: Bernese harvest `Jahr` 4 / `Joor` 0, Basel comparison sample `Joor` 17; Klosters C4 repeats it and states \"the devoicing of Jahr is a shared West-/South-Alpine retention, not a Basel peculiarity\"; Ayent C4 places the Wallisertiitsch on the OPPOSITE side (`eerschtu`, i.e. devoicing absent). Corroborated by Basel-only `Grumbiire`, `gare` and `Schwiinemascht` (LEXICAL NOTES L2, L3, L4). CAVEAT: Walser also writes `Joor` (Klosters C4, Issime C4), which is why Walser is NOT offered as an option here — including it would make the item ambiguous. The Wallisertiitsch distractor is excluded positively by the `eerschtu`/`Jahr` evidence in Ayent C4 and Blatten C8."
+  }
 ]

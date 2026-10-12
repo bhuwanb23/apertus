@@ -1,4 +1,4 @@
-SOURCE_ID: S057
+SOURCE_ID: S130
 URL: https://als.wikipedia.org/wiki/Chindlistein
 TITLE: Chindlistein (display title: Chindlistäi)
 CATEGORY: dialect

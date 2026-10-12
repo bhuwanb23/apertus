@@ -1,4 +1,4 @@
-SOURCE_ID: S058
+SOURCE_ID: S134
 URL: https://als.wikipedia.org/wiki/Bundesversammlung_(Schweiz)
 TITLE: Bundesversammlung (Schweiz)
 ARTICLE_DISPLAYTITLE: Bundesversammlig vo de Schwiiz

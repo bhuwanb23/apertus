@@ -1,4 +1,4 @@
-SOURCE_ID: S057
+SOURCE_ID: S124
 URL: https://als.wikipedia.org/wiki/Blatten_(L%C3%B6tschen)
 TITLE: Blatten (Lötschen) (display title: Uf der Blattun / uf dr Blattun)
 CATEGORY: dialect

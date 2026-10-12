@@ -1,4 +1,4 @@
-SOURCE_ID: S057
+SOURCE_ID: S126
 URL: https://als.wikipedia.org/wiki/Klosters
 TITLE: Klosters (display title: Bim Chlooschtär oder Chlooschtärsch)
 CATEGORY: dialect

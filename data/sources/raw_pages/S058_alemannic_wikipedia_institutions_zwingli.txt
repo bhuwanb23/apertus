@@ -1,4 +1,4 @@
-SOURCE_ID: S058
+SOURCE_ID: S145
 URL: https://als.wikipedia.org/wiki/Huldrych_Zwingli
 TITLE: Huldrych Zwingli
 ARTICLE_CATEGORIES: Person (Alti Eidgnosseschaft) | Reformator | Zürcher | Maas

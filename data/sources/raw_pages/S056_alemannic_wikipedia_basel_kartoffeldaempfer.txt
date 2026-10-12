@@ -1,4 +1,4 @@
-SOURCE_ID: S056
+SOURCE_ID: S110
 URL: https://als.wikipedia.org/wiki/Kartoffeld%C3%A4mpfer
 TITLE: Kartoffeldämpfer
 ARTICLE_DISPLAYTITLE: Kartoffeldämpfer
