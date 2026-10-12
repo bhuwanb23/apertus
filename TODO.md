@@ -195,13 +195,50 @@ deliberately, since audio items need real recorded Swiss German.
 >    category whose errors are unclassified is **not ranked** for a Phase 3
 >    fix — 3.2 picks its target from that table.
 
-**3.2 · Weakest-area selection — table generated; 🔒 decision blocked on 3.1**
-- [x] Selection scoring implemented (with `error_count` folded into priority —
-      the plan's `impact × fixability` rewards a category at 0% whose dominant
-      error is unfixable over one at 30% that RAG would fix)
-- [x] `fix/weakest_area_analysis.md` generated
-- [!] **Pick one target — blocked.** Choosing from a mock baseline would pick a
-      target on noise.
+**3.2 · Weakest-area selection — ✅ engine + decision doc; 🔒 selection blocked**
+- [x] `fix/select_target.py` — all five decision questions answered programmatically
+- [x] `fix/test_select_target.py` — **96 checks**
+- [x] Selection matrix with `error_count` folded into priority
+- [x] Hard gates that refuse to name a target on inadequate evidence
+- [x] **Q3 (source material) answered now** — 100 sources, 933 facts, 45 dialect files
+- [x] **Q5 (measurability) answered now, quantitatively** — see below
+- [x] `fix/weakest_area_analysis.md` generated with the full reasoning
+- [!] **Pick one target — blocked by B2.** Three gates fire.
+
+> ### 🔒 Why no target is selected
+>
+> | gate | fires because |
+> |---|---|
+> | `G1-baseline-is-mock` | every score is a hash of the prompt |
+> | `G2-error-taxonomy-unresolved` | 78% of content errors are `UNCLASSIFIED`, so there is no dominant error to route by |
+> | `G3-single-model` | the project premise is 8B **vs** 70B; one model is not a target |
+>
+> A selection made past these is a selection made on noise, and it would send
+> 3.3 after the wrong thing for the remaining budget. `--force` overrides, and
+> records that it was overridden.
+
+> ### ⚡ The finding that changes how Phase 3 is measured
+>
+> **Visibility is not significance.** The plan's Q5 asks whether an improvement
+> will look dramatic. Before/after on the same questions is a **paired**
+> comparison, so only items that flip carry information. Exact McNemar at
+> **n=14 per category**:
+>
+> | improved | regressed | category Δ | p | significant |
+> |---|---|---|---|---|
+> | 6 | 0 | +42.9 pts | 0.031 | **yes** |
+> | 5 | 2 | +21.4 pts | 0.453 | no |
+> | 4 | 3 | +7.1 pts | 1.000 | no |
+>
+> A per-category claim needs **6 of 14 to flip with zero regressions** — and once
+> 2 items regress, **nothing is detectable at all** at n=14. At n=84 the same
+> net change (+7.1 points overall) reaches p=0.031.
+>
+> **So: one intervention (golden rule 1), measured on the whole dev set, with
+> the category used to find the mechanism — not to carry the significance
+> claim.** A RAG fix aimed at one category moves others too, because the corpus
+> is not partitioned; restricting the test to that category would discard most
+> of the effect *and* most of the power.
 
 **3.3 · Improvement — not started**
 - [ ] 3.3a System prompt (Option A) · 3.3b RAG (Option B, highest ROI) · 3.3c LoRA (stretch)
@@ -209,7 +246,21 @@ deliberately, since audio items need real recorded Swiss German.
 
 **3.4 · Dev-set validation — not started**
 
-**Current total: 10,785 automated checks across six suites.**
+**Current total: 10,881 automated checks across seven suites.**
+
+## Phase 3.2 — defects its 96-check suite caught
+
+1. **`_load` read `by_category` from the wrong nesting level**, so the real
+   score file produced an **empty matrix** — a baseline table with headers and
+   no rows. The tests missed it because my fixture shaped `scores` flat while
+   the file nests as `{"run":…, "scores":{…}}`. A fixture that disagrees with the
+   real shape is worse than no fixture.
+2. **A `HALLUC`-dominated category was still marked viable.** It routes to
+   Option C (LoRA), which an 8 GB card cannot build — so the matrix would have
+   selected the one category whose only route is infeasible. Now flagged
+   `infeasible_on_hardware` and excluded, with the reason in the rejection table.
+3. **At n=14 with 2 regressions, nothing is detectable at all** — stronger and
+   more alarming than "needs more improvements". Asserted rather than assumed.
 
 ## Phase 3.1 — defects its 67-check suite caught
 
