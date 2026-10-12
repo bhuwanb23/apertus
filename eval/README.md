@@ -1,6 +1,8 @@
 # Phase 2 — Evaluation Harness
 
-**Status: Phase 2.1 complete.** Phases 2.2 (partial), 2.3 and 2.4 are open — see *Status* below.
+**Status: Phase 2.1 complete. Phase 2.2 code complete — live baselines blocked on
+model access.** Phases 2.3 and 2.4 are not started. See project status in
+`../TODO.md`.
 
 `docs/plans/phase_2.md` §2.1 defines the golden rules. The two that shaped this
 code most:
@@ -21,8 +23,9 @@ cp eval/.env.example eval/.env      # then edit
 python -m venv .venv && source .venv/bin/activate
 pip install -r eval/requirements.txt
 
-python eval/smoke_test.py           # acceptance check, works offline
-python eval/check_http_backend.py   # proves the wire format
+python eval/smoke_test.py             # 2.1 acceptance check, runs offline
+python eval/test_knowledge_scoring.py # 2.2 verification: 9,928 checks
+python eval/check_http_backend.py     # proves the wire format
 python eval/run_all.py --model 8b --task knowledge --limit 5
 ```
 
@@ -39,15 +42,96 @@ step succeeds.
 |---|---|---|
 | `config.py` | 2.1 | Every setting. Models are config entries, not code branches. Loads `.env`. |
 | `client.py` | 2.1 | One interface, three backends, retries, logging, raw-response persistence. |
-| `prompts.py` | 2.1 | All templates, versioned. `PROMPT_VERSION` stamped into every artefact. |
+| `prompts.py` | 2.1 | All templates, versioned, plus the parse-error escalation ladder. |
 | `scoring.py` | 2.2 | Accuracy + breakdowns. No I/O, unit-testable. |
-| `run_knowledge.py` | 2.2 | MCQ evaluation and `extract_answer()`. |
+| `run_knowledge.py` | 2.2 | MCQ evaluation, `extract_answer()`, `explain_answer()`. |
+| `analyse_parses.py` | 2.2 | Diagnoses parse failures from disk and prescribes the fix. |
+| `rescore.py` | 2.2 | Re-scores saved responses under a new parser, without the model. |
 | `run_all.py` | 2.1 | Master runner. Unimplemented tasks skip cleanly. |
 | `smoke_test.py` | 2.1 | The 2.1 acceptance checklist as an executable test. |
-| `check_http_backend.py` | 2.1 | Captures the literal JSON sent to a server and asserts on it. |
+| `test_knowledge_scoring.py` | 2.2 | 9,928 checks over the parser and the aggregation. |
+| `check_http_backend.py` | 2.1 | Captures literal JSON sent and asserts on it. |
 | `requirements.txt` | 2.1 | Per plan. |
 | `.env` | 2.1 | **Gitignored.** Secrets and endpoints live here only. |
 | `results/` | — | **Gitignored.** Generated. |
+
+---
+
+## Phase 2.2 — parsing and scoring
+
+### The parse-error budget
+
+> *"If your parse error rate exceeds 10%, fix the prompt."*
+
+A parse error is scored **incorrect**, the same as a wrong answer, so there is no
+incentive to guess. But the count is reported separately, because a 10% parse
+rate means 10% of the accuracy figure is measuring the parser rather than the
+model.
+
+`analyse_parses.py` closes the loop:
+
+```bash
+python eval/analyse_parses.py
+```
+
+It reads the saved responses — no model calls, so the diagnosis cannot depend on
+a second generation — buckets every failure by cause, and prints the next
+command to run. Crucially it **prefers the parser's own recorded reason** over
+re-deriving one, because a diagnostic that re-guesses can disagree with the
+scorer and then be diagnosing a system nobody is running.
+
+### The prompt escalation ladder
+
+Changing the prompt mid-baseline would confound the intervention with the
+measurement, so the escalation is defined in advance in `prompts.py` and
+selected **by name**:
+
+| Variant | When |
+|---|---|
+| `v1_letter_only` | default baseline. Do not change. |
+| `v1_strict` | parse rate > 10%. Adds an explicit output contract. |
+| `v1_json` | parse rate still > 10%. Structured output. Last resort. |
+
+```bash
+EVAL_KNOWLEDGE_VARIANT=v1_strict python eval/run_all.py --model 8b --task knowledge
+```
+
+Every run records `prompt_variant`, so two runs can be told apart.
+
+### Why the parser is the delicate part
+
+A silent misparse turns a correct answer into a wrong one with no visible
+symptom. So it is tested two ways: hand-written cases for output shapes and
+hedges, and **9,480 cases generated from the 120 real questions**. The
+generated cases are what matter — they found four defects that abstract
+reasoning had missed:
+
+1. **The article "A" read as an answer.** 207 of the 480 options are full
+   sentences and many open with "A" — `K002`'s option B reads *"A voting member
+   of the Federal Council…"*. A model restating that was scored **A**.
+2. **Hedging read as commitment.** *"Both A and B could be correct"* returned A.
+3. **Numbers split apart.** `"100,000"` tokenised to `100` + `000`, so options
+   differing by one number looked identical — `K007`'s A and D.
+4. **A clause cut at the wrong comma.** `"The answer is 4,80%"` was truncated to
+   `"80%"`.
+
+One rule was **removed** rather than added: a catch-all "any standalone B–D in
+the first 40 characters". It fired on prose that merely contained a capital B,
+returning a confident wrong letter where a parse error would have been honest.
+In a benchmark a false positive is worse than a parse error, because it silently
+inflates accuracy. `test_false_positive_guards` exists to keep every new rule
+honest.
+
+### Re-scoring without the model
+
+```bash
+python eval/rescore.py --model 8b --split dev
+```
+
+Raw responses are written before parsing, so a parser fix costs seconds instead
+of a full re-run — which matters on an 8 GB card. The output is marked
+`"rescored": true` and carries `parser_revision`, because a re-derivation of
+existing observations is not a new observation.
 
 ---
 
@@ -217,12 +301,16 @@ no check at all.
 | Item | State |
 |---|---|
 | 2.1 — all nine checklist items | **done** |
-| 2.2 — `extract_answer`, `scoring.py`, knowledge runner | **done** |
-| 2.2 — full 84-question dev run on both models | **open** (needs live model) |
-| 2.2 — `compare_models` / `compare_before_after` in a report script | **open** |
-| 2.3 — `run_values.py`, `judge.py`, `crosscheck.py` | not started |
+| 2.2 — parser, scoring, breakdown, artefacts | **done** |
+| 2.2 — 9,928 automated checks | **done** |
+| 2.2 — parse-failure diagnosis + escalation ladder | **done** |
+| 2.2 — live 84-question baseline, 8B **and** 70B | **blocked on model access** |
+| 2.2 — `<5%` parse-error target | **blocked** — unmeasurable on `mock` |
+| 2.3 — `run_values.py`, `judge.py`, `crosscheck.py` | not started (data ready) |
 | 2.4 — `run_dialect.py` | not started (Phase 1C has no data yet) |
 | Phase 3.3b — `rag.py` (`retrieve`) | not started |
 
 `run_all.py --task values` and `--task dialect` currently print which phase owns
 them and exit 0, so a half-built Phase 2 never blocks the part that works.
+
+Project-level status and blockers are tracked in `../TODO.md`.

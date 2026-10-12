@@ -36,6 +36,37 @@ D) {option_d}
 Answer (A, B, C, or D):"""
 
 
+# --------------------------------------------------------------- prompt variants
+# Phase 2.2 rule: if the parse error rate exceeds 10%, fix the prompt. A fix
+# improvised mid-run would confound the baseline with the intervention, so the
+# escalation is defined here in advance and selected by name. Every run records
+# which variant it used, and changing variant invalidates comparison against any
+# run that used a different one.
+#
+#   v1_letter_only  default. The baseline. Do not change it mid-project.
+#   v1_strict       step 1. Adds an explicit output contract and a restatement.
+#   v1_json         step 2. Requests structured output. Last resort: it is the
+#                   largest change to the prompt and the easiest to notice as a
+#                   confound, so it is only reached if v1_strict fails.
+KNOWLEDGE_SYSTEM_VARIANTS = {
+    "v1_letter_only": KNOWLEDGE_SYSTEM,
+    "v1_strict": (
+        "You are answering multiple-choice questions about Switzerland.\n"
+        "Choose the single best option. There is exactly one correct answer.\n"
+        "Respond with a single character: A, B, C or D. Nothing else - no "
+        "explanation, no restatement of the question, no punctuation, no "
+        "markdown."
+    ),
+    "v1_json": (
+        "You are answering multiple-choice questions about Switzerland. Choose "
+        "the single best option; there is exactly one correct answer.\n"
+        "Respond with a JSON object and nothing else:\n"
+        '{"answer": "<A|B|C|D>", "reason": "<one short sentence>"}\n'
+        "The answer field must contain exactly one letter from A, B, C, D."
+    ),
+}
+
+
 # ----------------------------------------------- knowledge MCQ with RAG context
 # Phase 3.3b. Defined now so prompt_version stays comparable across the run:
 # the Phase 3 improvement must not also change the question wording, or the
@@ -58,6 +89,26 @@ C) {option_c}
 D) {option_d}
 
 Based on the context above, answer (A, B, C, or D):"""
+
+KNOWLEDGE_RAG_VARIANTS = {
+    "v1_letter_only": KNOWLEDGE_RAG_SYSTEM,
+    "v1_strict": (
+        "You are answering multiple-choice questions about Switzerland, using "
+        "the supplied official context.\n"
+        "Choose the single best option. There is exactly one correct answer.\n"
+        "Respond with a single character: A, B, C or D. Nothing else - no "
+        "explanation, no restatement of the question, no punctuation, no "
+        "markdown."
+    ),
+    "v1_json": (
+        "You are answering multiple-choice questions about Switzerland, using "
+        "the supplied official context. Choose the single best option; there is "
+        "exactly one correct answer.\n"
+        "Respond with a JSON object and nothing else:\n"
+        '{"answer": "<A|B|C|D>", "reason": "<one short sentence>"}\n'
+        "The answer field must contain exactly one letter from A, B, C, D."
+    ),
+}
 
 
 # ------------------------------------------------------------------ values scenarios
@@ -136,8 +187,10 @@ def all_templates() -> dict:
         "version": PROMPT_VERSION,
         "knowledge_system": KNOWLEDGE_SYSTEM,
         "knowledge_user": KNOWLEDGE_USER,
+        "knowledge_system_variants": KNOWLEDGE_SYSTEM_VARIANTS,
         "knowledge_rag_system": KNOWLEDGE_RAG_SYSTEM,
         "knowledge_rag_user": KNOWLEDGE_RAG_USER,
+        "knowledge_rag_variants": KNOWLEDGE_RAG_VARIANTS,
         "values_system": VALUES_SYSTEM,
         "values_user": VALUES_USER,
         "dialect_translate_system": DIALECT_TRANSLATE_SYSTEM,

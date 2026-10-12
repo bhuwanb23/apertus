@@ -153,6 +153,12 @@ class EvalConfig:
     knowledge_split: str = "dev"     # "dev" during development; "test" ONLY in Phase 4.1
     dialect_dir: Path = DATA_DIR / "dialect"
 
+    # Named prompt variant, not a free-text override. Changing this mid-project
+    # invalidates comparison against earlier runs, so it is recorded in every
+    # artefact. See prompts.py KNOWLEDGE_SYSTEM_VARIANTS for the escalation
+    # order used when the parse error rate exceeds 10%.
+    knowledge_prompt_variant: str = os.getenv("EVAL_KNOWLEDGE_VARIANT", "v1_letter_only")
+
     # ---------------------------------------------------------------- runtime
     batch_size: int = 10
     retry_attempts: int = int(os.getenv("EVAL_RETRY_ATTEMPTS", "3"))
@@ -200,6 +206,19 @@ class EvalConfig:
         if key not in self.MODELS:
             raise ValueError(f"unknown model key {key!r}; have {sorted(self.MODELS)}")
         return self.MODELS[key]
+
+    def validate(self) -> list[str]:
+        """Startup self-check. Returns a list of problems; empty means fine."""
+        problems = []
+        for key, m in self.MODELS.items():
+            if m.temperature != 0.0:
+                problems.append(f"{key}: temperature is {m.temperature}, must be 0.0 "
+                                f"- changing it invalidates existing baselines")
+            if m.backend not in {"mock", "http", "openai"}:
+                problems.append(f"{key}: unknown backend {m.backend!r}")
+            if m.backend == "openai" and not m.api_base:
+                problems.append(f"{key}: openai backend with no api_base")
+        return problems
 
     def ensure_dirs(self) -> None:
         for d in ALL_DIRS:
