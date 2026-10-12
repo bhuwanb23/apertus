@@ -44,10 +44,9 @@ S14. "Die Arbeitslosigkeit liegt im Jahr 2010 bei 2,2 %."
 S15. "Gemeindepräsidentin ist Andrea Keller (seit Juni 2018)."
 
 === DIALECT CONTRAST NOTES ===
-C1. "Züri" = Zürich (the standard exonym is "Zürich"). Shared house-system endonym used for the city across all dialects of this wiki; NOT a dialect discriminator. Recorded to prevent a false contrast.
-C2. "ghört zue de Seemundarte" shows the "zue" preposition before consonants, shared with Bernese ("z Kanaan", "z Galiläa"). Not a discriminator.
-C3. "Buebike"/"Buobinger"/"Buobo" - the reduced diphthong /uə/ written "ue". Not attested in the Bernese or Basel samples. Recorded as Zürcher Oberland-attested; no contrast claimed.
-C4. "gläge" (gelegen) - the g- prefix on a past participle. Shared with Bernese ("irrefüeherende", "begrenzt" aside) and Zürich elsewhere; NOT a discriminator. Recorded to prevent a false contrast.
-C5. "liit" (liegt) - triple ii. Not attested in the Bernese/Basel samples. Zürich-attested.
-C6. IMPORTANT LIMIT: This article's most distinctive feature is lexical (place names, -liit, Buebike diphthong), not the shared grammar. It contributes Seemundart vocabulary. Do NOT use it to evidence Zürich-vs-Basel grammatical contrasts - the city-Zürich articles (Bürgermeister, Ausländer) are the correct source for those.
-C7. "hüt" appears ("is hüt di am beste erhalteni"), shared with Basel and Bern. Recorded as SHARED - it is a common misconception that "hüt" is Zürich-specific.
+C1. [CORPUS] "Züri" = Zürich, also a shared endonym used by every dialect of this wiki (including the Bernese and Wallisertiitsch files, which write "Züri"/"Bärn" when naming cities). NOT a dialect discriminator. Recorded to prevent a false contrast.
+C2. [CORPUS] "ghört zue de Seemundarte" - the preposition "zue" before consonants is shared with Bernese ("z Kanaan", "z Galiläa"). NOT a discriminator.
+C3. [CORPUS] "gläge" = gelegen, the participle g- prefix. Bernese shows the same ("nümm bbruucht", "ufgnoh worde"). SHARED morphology, not a marker.
+C4. [UNVERIFIED] "Buebike", "Buobinger", "liit", "Bucke" vowel forms are Zürcher Oberland / Seemundart vocabulary with no attested Basel or Bern cognate in my sample. No claim made.
+C5. [CORPUS] "hüt" ("is hüt di am beste erhalteni") - SHARED with Basel and Bern. Recorded as a negative result: "hüt" is not Zürich-specific.
+C6. SCOPE LIMIT: this article's distinctive material is lexical (place names, -liit, the ue-diphthong), not grammatical. It contributes Seemundart vocabulary. Do NOT use it as evidence for Zürich-vs-Basel GRAMMATICAL contrasts - the city-Zürich articles (Bürgermeister, Ausländer) are the correct source for those.

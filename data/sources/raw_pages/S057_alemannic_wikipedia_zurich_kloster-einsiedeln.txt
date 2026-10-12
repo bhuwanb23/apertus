@@ -21,7 +21,7 @@ DIALECT_TAG_ON_PAGE: {{Dialekt|Zürichdeutsch|Züritüütsch|Züridütsch (See)}
 "De Huldrych Zwingli isch vo 1516 bis 1518 Lüütprieschter im Chloschter gsii."
 "Er hät di erschte Bürgerliche is Chloschter uufgnaah und hät dr Konvänt wider ufbout."
 "S barocki Chloschter isch vo 1674 bis 1735 vollschtändig neu bout worde."
-"Die Plän sind vom Caspar Moosbrugger gsi und mer hät s neui Chloschter i drü Etape bout."
+"D Plän sind vom Caspar Moosbrugger gsi und mer hät s neui Chloschter i drü Etape bout."
 "Wo d Franzose im Mai 1798 uf Eisidle cho sind, sind alli Bewohner vom Chloschter gflüchtet."
 "D Gnadekapelle isch vo de Besatzer zerschtört worde, s Gnadebild aber händ d Mönch chönne rette."
 "Während em Schpaatmittelalter sind d Pilger sogar us Norddüütschland und de Niderlande choo."
@@ -67,12 +67,11 @@ S26. "Die Schwarze Madonna von Einsiedeln wurde durch Pilger über die Landesgre
 S27. "Das Kloster hatte seit alter Zeit viele Landbesitzungen."
 
 === DIALECT CONTRAST NOTES ===
-C1. "nöd" for "nicht". VERIFIED CONTRAST: "Normalerwiis isch si für d Öffentlichkeit nöd zuegänglich". Zürich has "nöd" 40 times and "nid" once across my Zürich corpus; Bern has "nid" 30 and "nöd" 0; Basel has "nid" 15 and "nöd" 0. This is the cleanest single lexical Basel/Bern-vs-Zürich opposition I can evidence.
-C2. "zuegänglich" vs Bernese "zuegspitzti" - both show the zue- prefix; shared morphology, not a contrast.
-C3. "mer" = man (indefinite pronoun), attested twice ("mer hät s neui Chloschter i drü Etape bout", "cha mer an e Chloschterfüerig"). Bernese uses "me" ("bezeichnet me im wytere Sinn", "Me seit im ou Randblatt-Tabak"). VERIFIED on both non-Basel sides: Zürich "mer" is the standard everyday form, Bernese "me" the initial/singular form. Basel side not attested in my sample.
-C4. "Chloschter" = Kloster. Bernese has "Chlöschter" ("In 9. Jahrhundert hei du d Chlöschter i der Schwyz afa Bier härstelle"). VERIFIED CONTRAST with the rounded vowel and plural -e: Zürich "Chloschter", Bern "Chlöschter". Basel side not attested.
-C5. "Chile" = Kirche, short form. Bernese uses "Chilche" for the same word? My Bernese sample shows no church word. Walser uses "Chilche"/"Chilhu" and Wallisertiitsch "Chirche" - see the Walser/Valais files. Recorded here only as an attested Zürich form; the Zürich-vs-alpine comparison is evidenced in those files.
-C6. "Büecher" (Bücher) with the ü-marked length vs my Bernese corpus, which shows "Büecher" only in Einsiedeln and no competing form; no cross-dialect claim made.
-C7. "iigwölbt" (eingewölbt) and "uufgnaah" (aufgenommen) - doubled-vowel prefix on past participles. This prefix pattern also appears in the Bernese texts ("ufgna", "iigführt" is Zürich). Shared Alemannic morphology; NOT a discriminator. Recorded to prevent a false contrast.
-C8. "Züridütsch (See)" - the page's own dialect tag. Important: this article is NOT city Zürich. It is the Seedialect of the canton Schwyz (Untervariante of Züritüütsch), at a monastery in Einsiedeln. It is legitimately Züritüütsch by the wiki's own classification, but it must not be used as evidence for "city Zürich German" feature claims. Use the Bürgermeister article for city Zürich.
-C9. "Münschter" = Münster. Not attested in Bern/Basel samples; no contrast claimed.
+C1. [CORPUS] "nöd" for "nicht", twice ("Normalerwiis isch si für d Öffentlichkeit nöd zuegänglich"). Zürich harvest: nöd 9, nid 0. Bernese harvest: nid 6, nöd 0. Basel [COMPARISON]: nid 14, nöd 0. This is the single cleanest lexical Basel+Bern vs Zürich opposition available.
+C2. [CORPUS] "mer" = man, three times ("mer hät s neui Chloschter i drü Etape bout"; "cha mer an e Chloschterfüerig"). Bernese uses "me"/"Me". Caveat: the Chindlistein file shows a single Zürich article using BOTH "me" and "mer", so treat me/mer as variable within Zürich, not a hard rule.
+C3. [CORPUS] "Chloschter" = Kloster (6 occurrences). Bernese writes "Chlöschter" with the rounded vowel and plural -e ("In 9. Jahrhundert hei du d Chlöschter i der Schwyz afa Bier härstelle", in the Brauerei file). Bern "Chlöschter" vs Zürich "Chloschter" - both sides in-corpus.
+C4. [CORPUS] "Chile" = Kirche (short form), 4 occurrences. Basel and Bern church-words are unattested in my harvest, so no three-way claim. Walser "Chilche" is a further form - see the Walser files.
+C5. [CORPUS] "hüt" = heute ("is hüt di am beste erhalteni"). SHARED with Basel and Bern - explicitly recorded as NOT a marker.
+C6. [CORPUS] Participle morphology: the doubled vowel of the participle prefix is visible here ("iigwölbt", "uufgnaah", "gmacht isch") and is equally present in the Bernese harvest ("ufgnoh worde", "befleidet händ"). SHARED Alemannic morphology, NOT a dialect discriminator. Recorded to prevent a false positive.
+C7. PROVENANCE: the page's own dialect tag is "Züridütsch (See)". This article is NOT city Zürich - it is the Seedialect of the canton Schwyz. It is legitimately Züritüütsch by the wiki's own classification, but it must not be cited as evidence for city-Zürich features. Use the Bürgermeister file for those.
+C8. [UNVERIFIED] "Münschter" = Münster has no attested Basel or Bern cognate in my sample. No claim made.

@@ -19,7 +19,6 @@ DIALECT_TAG_ON_PAGE: {{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch}}
 "Under dr Helvetische Verfassig isch s Amt vom Bürgermeister ufghobe und 1803 mit dr Mediation vilerorts wider iigfüehrt worde."
 "Hützutag isch die analogi Bezeichnig je nach Ort Stadtpräsident, Stadtammä, Ammä, Gmeindammä oder Gmeindspräsidänt."
 "I nöd dütsche Spoochregione Syndic, Maire oder Sindaco."
-"Öfters isch Der Bürgermeischter au d Bezeichnig für d Bhörde, wo am Bürgermeister understaaht."
 "Wenn der Bürgermeischter nöd diräkt gwählt wird, dänn schtellt meischtens aber nöd unbedingt d Mehrheitspartei de Bürgermeischter."
 "Das isch aber vo de jewiilige Mehrheitsverhältnis abhängig."
 "Der Bürgermeischter isch s Organ, wo d Gmeindratsbeschlüss usfüert."
@@ -40,22 +39,21 @@ S7. "In der Schweiz gibt es die Bezeichnung Bürgermeister nicht mehr."
 S8. "Unter der Helvetischen Verfassung wurde das Amt vom Bürgermeister aufgehoben und 1803 mit der Mediation vielerorts wieder eingeführt."
 S9. "Heutzutage ist die analoge Bezeichnung je nach Ort Stadtpräsident, Stadtammann, Ammann, Gemeindeammann oder Gemeindepräsident."
 S10. "In nicht deutschen Sprachregionen Syndic, Maire oder Sindaco."
-S11. "Öfters ist Der Bürgermeister auch die Bezeichnung für die Behörde, die dem Bürgermeister untersteht."
-S12. "Wenn der Bürgermeister nicht direkt gewählt wird, dann stellt meistens aber nicht unbedingt die Mehrheitspartei den Bürgermeister."
-S13. "Das ist aber von der jeweiligen Mehrheitsverhältnis abhängig."
-S14. "Der Bürgermeister ist das Organ, das die Gemeindebeschlüsse ausführt."
-S15. "Ausserdem führt er Bundes- und Landesweisungen aus."
-S16. "Er vertritt die Gemeinde auch nach aussen."
-S17. "In Bauangelegenheiten ist er die erste Instanz."
-S18. "In Statutarstädten führt er ebenso die Agende des Bezirkshauptmannes aus."
-S19. "In jeder Gemeinde gibt es als Vertretung einen, zwei oder drei Vizebürgermeister, je nach Wahlergebnis und der Gemeindegrösse."
+S11. "Wenn der Bürgermeister nicht direkt gewählt wird, dann stellt meistens aber nicht unbedingt die Mehrheitspartei den Bürgermeister."
+S12. "Das ist aber von der jeweiligen Mehrheitsverhältnis abhängig."
+S13. "Der Bürgermeister ist das Organ, das die Gemeindebeschlüsse ausführt."
+S14. "Ausserdem führt er Bundes- und Landesweisungen aus."
+S15. "Er vertritt die Gemeinde auch nach aussen."
+S16. "In Bauangelegenheiten ist er die erste Instanz."
+S17. "In Statutarstädten führt er ebenso die Agende des Bezirkshauptmannes aus."
+S18. "In jeder Gemeinde gibt es als Vertretung einen, zwei oder drei Vizebürgermeister, je nach Wahlergebnis und der Gemeindegrösse."
 
 === DIALECT CONTRAST NOTES ===
-C1. This is the CITY Zürich article (dialect tag "Züritüütsch" without the "(See)" qualifier), so it is the reference point for urban Zürich German, unlike Kloster Einsiedeln which is Seedialect.
-C2. "zwei" and "drüü" (three). VERIFIED CONTRAST: here "eine, zwei oder drüü Vizebürgermeischter". Bernese uses "zwöi" for zwei (8 occurrences in my Bernese corpus, "alli zwöi Jahr", "die zwöi e neue Name") and "zwöi" appears 0 times in the Zürich corpus. Bernese "drüü" not attested in my sample; recorded as Zürich-attested.
-C3. "nöd" for "nicht" - three times here ("I nöd dütsche Spoochregione", "nöd diräkt gwählt", "aber nöd unbedingt"). VERIFIED CONTRAST with Bernese/Basel "nid".
-C4. "mer" (man) - "In menke Gegende vum Alemannische sait mer zun em au Burgermeischter". Bernese "Me" ("Me seit im ou Randblatt-Tabak", "bezeichnet me im wytere Sinn"). Verified on both non-Basel sides; Basel not attested.
-C5. "Stedt" = Stadt. Not attested in the Bernese or Basel samples, so no contrast claimed - recorded as Zürich-attested urban vocabulary.
-C6. "gwählt" retains the umlaut (vs Alemannic "gwählt"). Shared across dialects in the Alemannic Wikipedia house orthography; NOT a discriminator.
-C7. "Bürgermeischter" - the -eischter suffix is a Zürich/Bern-shared hypocoristic-style formation and appears in my Bernese corpus too ("Braumeischter" in the Bernese Brauerei article). Shared, not a contrast. Recorded to prevent a false contrast.
-C8. "dänn" (dann) - Zürich. The Bernese corpus shows "dänn" as well ("D Schwyzer händ dänn en neue Abt beruefe" is Zürich; Bernese shows "dänn" 0 in my sample). No Bern contrast verified; recorded as Zürich-attested.
+C1. PROVENANCE: this is the CITY Zürich article (dialect tag "Züritüütsch" with no "(See)" qualifier), so it is the reference point for urban Zürich German, unlike Kloster Einsiedeln which is Seedialect.
+C2. [CORPUS] "zwei" = zwei, in "I jedere Gmeind gits als Vertretig eine, zwei oder drüü Vizebürgermeischter". CONTRAST [CORPUS]: Bernese harvest "zwöi" 2 / "zwei" 0; Zürich harvest "zwei" 1 / "zwöi" 0. Bernese /øː/ vs Zürich /uː/ - a clean minimal pair, both sides in-corpus.
+C3. [CORPUS] "drüü" = drei, same sentence. The Bernese harvest contains no numeral for three, so only the Zürich side is attested.
+C4. [CORPUS] "nöd" for "nicht", three times ("I nöd dütsche Spoochregione"; "Wenn der Bürgermeischter nöd diräkt gwählt wird"; "schtellt meischtens aber nöd unbedingt"). See Ausländer C1.
+C5. [CORPUS] "gits", twice. See Ausländer C2 - Bern "git" vs Zürich "gits".
+C6. [CORPUS] "mer" = man ("In menke Gegende vum Alemannische sait mer zun em au Burgermeischter oder Vogt"). Bernese "Me"/"me"; Basel "me".
+C7. [CORPUS] "Bürgermeischter" - the -eischter suffix also appears in the Bernese harvest ("Braumeischter" in the Bernese Brauerei file), so it is SHARED, not a Zürich marker. Recorded to prevent a false contrast.
+C8. [UNVERIFIED] "Stedt" = Stadt, and the civic-vocabulary cluster (Stadtammä, Ammä, Gmeindammä), have no attested Basel or Bern cognate in my sample. No claim made.

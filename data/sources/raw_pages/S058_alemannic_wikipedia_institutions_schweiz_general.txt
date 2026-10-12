@@ -7,44 +7,48 @@ LANGUAGE: gsw
 DIALECT: uncertain
 DATE_ACCESSED: 2026-10-12
 ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
-DIALECT_EVIDENCE: no `{{Dialekt}}` template, and the article is the single most dialect-heterogeneous page harvested. Sections alternate between Basel-leaning Alemannic, Zürich Alemannic, Bernese and — notably in the `== Sprooche ==` section — a Putsch/Graubünden dialect (`ù`, `vò`, `diez`, `chönne`) that is a deliberate stylistic choice for that section. The politics section (`== Politik ==`) is Basel-leaning Alemannic. Recorded as `uncertain`; only sentences from the politics/foreign-policy sections are harvested below, and all were checked for Basel-leaning forms.
-CAVEAT: the article contains an infobox (population 8'815'385 as at 31.12.2022, area 41'291 km², official-language shares 62/23/8/0.5 %), a 26-row canton table, and long year-by-year history lists. These are year-locked or unreadable out of context and are NOT harvested as sentences. The 62/23/8/0.5 figures are the English-corpus cross-ref target in F7.
+DIALECT_EVIDENCE: no `{{Dialekt}}` template, and this is the single most dialect-heterogeneous page harvested. Sections alternate between Basel-leaning Alemannic, Zürich Alemannic, Bernese and — in the `== Sprooche ==` section — a Putsch/Graubünden dialect (`ù`, `vò`, `diez`, `chönne`) chosen deliberately for that section. The `== Politik ==` section, from which every sentence above is taken, is Basel-leaning. Recorded as `uncertain`.
+CAVEAT: infobox (population 8'815'385 at 31.12.2022, area 41'291 km², official-language shares 62/23/8/0.5 %), a 26-row canton table and long year-by-year history lists are year-locked or unreadable out of context and are NOT harvested. The 62/23/8/0.5 figures are the cross-ref target for S047.
 
 === VERBATIM SWISS GERMAN SENTENCES ===
 "D Schwiz isch e Schtaat, wo als e föderalistisch organisierti direkti Demokratii funkzioniert."
-"D Schwiz het es Parlamänt, d Bundesversammlig, mit zwöi Chammere."
 "Dr Nationalrot wo tuet s Volk röpresentiere und dr Ständerot wo tuet d Kantön röpresentiere."
-"Im Nationalrot sitze 200 Lüt, är wird alli vier Johr im Proporz gwählt"
+"Im Nationalrot sitze 200 Lüt, är wird alli vier Johr im Proporz gwählt, dass heisst dr Stimmateil wo d Parteie händ, sött so genau wie möglich i d Azahl Sitz fliesse."
 "Im Ständerot git’s 46 Abgordneti, un i ihn sändet alli Kantön zwöi Ständeröt, numme die sogenannte Halbkantön sände eine."
-"Usser im Jura (Proporz) wärde d Ständeröt überall im Majorz gwählt"
+"Usser im Jura (Proporz) wärde d Ständeröt überall im Majorz gwählt, dass heisst die Kandidate wo im erste Wahlgang s’absolute Mehr hei oder im zweite Wahlgang am meischte Stimme gmacht hei, si gwählt."
 "Im Bundesrot hets sibe Lüt, wo alli glichi Rächt hei."
 "Es git ke Presidänt, aber en Primus inter pares (en Gliiche onder Gliiche), wo dr Titel Bundespresidänt het und wo d Bundesrootssetzige leitet, Staatsgescht empfoht und zu Neujohr und am erste Ougust Rede het."
-"SVP, FDP un SP stelle je zwei Bundesrotsmitgliider, Die Mitte (ehemals CVP) eis"
+"SVP, FDP un SP stelle je zwei Bundesrotsmitgliider, Die Mitte (ehemals CVP) eis (lueg au Zauberformel)."
 "Ussepolitisch isch d Schwiz e neutrals Land."
 "Sid 2002 isch d Schwiiz Mitgliid vo der UNO."
-
+"D Bundesversamlig het am 5. Oktober 2001 d Charta vo de Veräinte Nazioone agnoo, und am 10. Septämber 2002 isch si noch ere Volksabstimmig für d Schwiiz gültig worde."
 === STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
 S1. "D Schwiz isch e Schtaat, wo als e föderalistisch organisierti direkti Demokratii funkzioniert." → "Die Schweiz ist ein Staat, der als föderalistisch organisierte direkte Demokratie funktioniert."
-S2. "D Schwiz het es Parlamänt, d Bundesversammlig, mit zwöi Chammere." → "Die Schweiz hat ein Parlament, die Bundesversammlung, mit zwei Kammern."
-S3. "Dr Nationalrot wo tuet s Volk röpresentiere und dr Ständerot wo tuet d Kantön röpresentiere." → "Der Nationalrat, der das Volk repräsentiert, und der Ständerat, der die Kantone repräsentiert."
-S4. "Im Nationalrot sitze 200 Lüt, är wird alli vier Johr im Proporz gwählt" → "Im Nationalrat sitzen 200 Leute, er wird alle vier Jahre nach dem Proporzsystem gewählt."
-S5. "Im Ständerot git’s 46 Abgordneti, un i ihn sändet alli Kantön zwöi Ständeröt, numme die sogenannte Halbkantön sände eine." → "Im Ständerat gibt es 46 Abgeordnete, und in ihn senden alle Kantone zwei Ständeräte, nur die sogenannten Halbkantone senden einen."
-S6. "Usser im Jura (Proporz) wärde d Ständeröt überall im Majorz gwählt" → "Ausser im Jura (Proporz) werden die Ständeräte überall im Majorzsystem gewählt."
-S7. "Im Bundesrot hets sibe Lüt, wo alli glichi Rächt hei." → "Im Bundesrat gibt es sieben Leute, die alle gleiche Rechte haben."
-S8. "Es git ke Presidänt, aber en Primus inter pares (en Gliiche unter Gliiche), wo dr Titel Bundespresidänt het" → "Es gibt keinen Präsidenten, sondern einen Primus inter pares (einen Gleichen unter Gleichen), der den Titel Bundespräsident hat."
-S9. "SVP, FDP un SP stelle je zwei Bundesrotsmitgliider, Die Mitte (ehemals CVP) eis" → "SVP, FDP und SP stellen je zwei Bundesratsmitglieder, Die Mitte (ehemals CVP) eines."
-S10. "Ussepolitisch isch d Schwiz e neutrals Land." → "Aussenpolitisch ist die Schweiz ein neutrales Land."
-S11. "Sid 2002 isch d Schwiiz Mitgliid vo der UNO." → "Seit 2002 ist die Schweiz Mitglied der UNO."
-
+S2. "Dr Nationalrot wo tuet s Volk röpresentiere und dr Ständerot wo tuet d Kantön röpresentiere." → "Der Nationalrat, der das Volk repräsentiert, und der Ständerat, der die Kantone repräsentiert."
+S3. "Im Nationalrot sitze 200 Lüt, är wird alli vier Johr im Proporz gwählt, dass heisst dr Stimmateil wo d Parteie händ, sött so genau wie möglich i d Azahl Sitz fliesse." → "Im Nationalrat sitzen 200 Leute, er wird alle vier Jahre nach dem Proporzsystem gewählt."
+S4. "Im Ständerot git’s 46 Abgordneti, un i ihn sändet alli Kantön zwöi Ständeröt, numme die sogenannte Halbkantön sände eine." → "Im Ständerat gibt es 46 Abgeordnete, und in ihn senden alle Kantone zwei Ständeräte, nur die sogenannten Halbkantone senden einen."
+S5. "Usser im Jura (Proporz) wärde d Ständeröt überall im Majorz gwählt, dass heisst die Kandidate wo im erste Wahlgang s’absolute Mehr hei oder im zweite Wahlgang am meischte Stimme gmacht hei, si gwählt." → "Ausser im Jura (Proporz) werden die Ständeräte überall im Majorzsystem gewählt."
+S6. "Im Bundesrot hets sibe Lüt, wo alli glichi Rächt hei." → "Im Bundesrat gibt es sieben Leute, die alle gleiche Rechte haben."
+S7. "Es git ke Presidänt, aber en Primus inter pares (en Gliiche onder Gliiche), wo dr Titel Bundespresidänt het und wo d Bundesrootssetzige leitet, Staatsgescht empfoht und zu Neujohr und am erste Ougust Rede het." → "Es gibt keinen Präsidenten, sondern einen Primus inter pares (einen Gleichen unter Gleichen), der den Titel Bundespräsident hat und der die Bundesratssitzung leitet."
+S8. "SVP, FDP un SP stelle je zwei Bundesrotsmitgliider, Die Mitte (ehemals CVP) eis (lueg au Zauberformel)." → "SVP, FDP und SP stellen je zwei Bundesratsmitglieder, Die Mitte (ehemals CVP) eines."
+S9. "Ussepolitisch isch d Schwiz e neutrals Land." → "Aussenpolitisch ist die Schweiz ein neutrales Land."
+S10. "Sid 2002 isch d Schwiiz Mitgliid vo der UNO." → "Seit 2002 ist die Schweiz Mitglied der UNO."
+S11. "D Bundesversamlig het am 5. Oktober 2001 d Charta vo de Veräinte Nazioone agnoo, und am 10. Septämber 2002 isch si noch ere Volksabstimmig für d Schwiiz gültig worde." → "Die Bundesversammlung hat am 5. Oktober 2001 die Charta der Vereinten Nationen angenommen, und am 10. September 2002 ist sie nach einer Volksabstimmung für die Schweiz gültig geworden."
 === SWISS FACT CONTENT ===
 F1. Switzerland is a state that functions as federalist-organised direct democracy. — cross-ref: S025
-F2. Switzerland's parliament is the Federal Assembly, with two chambers. — cross-ref: S002
-F3. The National Council represents the people; the Council of States represents the cantons. — cross-ref: S002
-F4. The National Council has 200 members and is re-elected by proportional representation every four years. — cross-ref: S002
-F5. The Council of States has 46 members; each canton sends two, except the so-called half-cantons which send one. — cross-ref: S026
-F6. Council of States members are elected by majority vote everywhere except the canton of Jura, which uses proportional representation. — cross-ref: S026
-F7. The Federal Council has seven members, all with equal rights. — cross-ref: S001
-F8. Switzerland has no president; the President of the Confederation is a primus inter pares (first among equals) who carries the title. — cross-ref: S001
-F9. The parties represented in the Federal Council (the "Bundesratsparteien"/magic formula) are SVP, FDP and SP with two members each, and Die Mitte (formerly CVP) with one. — cross-ref: none
-F10. Switzerland is a neutral state in foreign policy. — cross-ref: S038
-F11. Switzerland has been a member of the United Nations since 2002. — cross-ref: S049
+F2. The National Council represents the people; the Council of States represents the cantons. — cross-ref: S002
+F3. The National Council has 200 members and is re-elected by proportional representation every four years. — cross-ref: S002
+F4. The Council of States has 46 members; each canton sends two, except the so-called half-cantons which send one. — cross-ref: S026
+F5. Council of States members are elected by majority vote everywhere except the canton of Jura, which uses proportional representation. — cross-ref: S026
+F6. The Federal Council has seven members, all with equal rights. — cross-ref: S001
+F7. Switzerland has no president; the President of the Confederation is a primus inter pares who carries the title and chairs the Federal Council meeting. — cross-ref: S001
+F8. The parties represented in the Federal Council (the 'Bundesratsparteien' / magic formula) are SVP, FDP and SP with two members each, and Die Mitte (formerly CVP) with one. — cross-ref: none
+F9. Switzerland is a neutral state in foreign policy. — cross-ref: S038
+F10. Switzerland has been a member of the United Nations since 2002. — cross-ref: S049
+F11. Parliament accepted the UN Charter on 5 October 2001, and it became valid for Switzerland after the 10 September 2002 popular vote. — cross-ref: S049
+
+=== WORD-COUNT NOTES ===
+S3 is 31 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S5 is 33 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S7 is 34 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S11 is 29 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.

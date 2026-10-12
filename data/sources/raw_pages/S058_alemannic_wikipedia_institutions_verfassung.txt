@@ -43,3 +43,8 @@ F5. Poland's constitution of 3 May 1791 was Europe's first democratic constituti
 SWISS-FACT YIELD: 1 of 7 sentences (S5) encodes a checkable Swiss fact. All other content is foreign or generic. DO NOT build Swiss-fact items from this file.
 
 RECOMMENDED NEXT FETCH: `https://als.wikipedia.org/wiki/Bundesverfassung_(Schweiz)` — linked from this article, confirmed to exist on als.wikipedia (it is the target of the link in the `Schwyz` section), and is the correct source for Swiss constitutional fact content in Alemannic. It was not harvested here because it fell outside the 8–12 article breadth target and the target topics were already covered by other files; recorded here as a known open gap.
+
+=== WORD-COUNT NOTES ===
+S3 is 24 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity.
+S5 is 4 words (target 6-20): it is a list item, not prose. Flag for exclusion if prose sentences only are required.
+S6 is 24 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity.

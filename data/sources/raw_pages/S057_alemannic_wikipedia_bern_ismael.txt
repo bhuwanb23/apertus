@@ -61,11 +61,11 @@ S23. "Der Ismael stirbt im Alter von 137 Jahren."
 S24. "Der Ismael ist somit der Stammvater der Ismaeliter und der Araber."
 
 === DIALECT CONTRAST NOTES ===
-C1. "Frou(e)" = Frau. VERIFIED CONTRAST between the two non-Basel dialects: Bernese plural "Froue" ("zwüsche dene beidne Froue") and singular "Frou" ("vo syre erschte Frou"); Zürich writes the unaltered "Frau" ("synere Frau Mathilde"). Bernese drops the -w- in the plural. Basel side not attested in my Basel sample - no Basel claim.
-C2. "geit" = geht. VERIFIED CONTRAST: Bernese "geit" appears twice here ("geit är uf dä Vorschlag y", "So geit d Hagar zrügg"), 7 times in my Bernese corpus, and 0 times in my Zürich corpus, where the verb appears as "gaat". Basel side not attested.
-C3. "zwöi" = zwei. VERIFIED CONTRAST: "die zwöi e neue Name" here; 8 occurrences in the Bernese corpus, 0 in Zürich, which uses "zwei".
-C4. "tuet" = tut. Bernese spells the short-u infinitive with -e ("Är tuet das nur"). Zürich shows "tuet" as well ("Ich tuet...": the Zürich corpus has "tuet" 5 and "tue" 3), so this is SHARED, not a contrast. Recorded to prevent a false contrast.
-C5. "Jahr" not "Joor". VERIFIED: this article has "10 Jahr"; the Bernese corpus has "Jahr" 25 and "Joor" 0, while the Basel corpus has "Joor" 17. Basel keeps final devoicing, Bernese does not.
-C6. "nid" for "nicht". VERIFIED: "dass me se nid cha zelle", "Si cha nid zue luege". Basel and Bern both use "nid" (Basel 15, Bern 30 in my samples); Zürich uses "nöd" (40 occurrences, "sind nöd vollschtändig deckigsgliich") with "nid" only 1. So the real contrast is Bern/Basel vs Zürich.
-C7. "Wüschti Schur", "Felsi" type landscape vocabulary - Bernese/Biblical setting lexicon. Basel side unverified; no contrast claimed.
-C8. "Är" for "er" (3sg masculine pronoun) - attested throughout this article. Zürich uses "er" ("Er wird je nach Land diräkt vo de Bürger ... gwählt", "Er vertritt d Gmeind au nach usse"). So Bernese "Är" vs Zürich "er" is a surface difference verified on both non-Basel sides. Basel side not attested in my sample.
+C1. [CORPUS] "Frou" / "Froue" = Frau/Frauen ("vo syre erschte Frou"; "zwüsche dene beidne Froue"). Bernese harvest: Frou 1, Froue 2, Frau 0. The Zürich harvest contains neither form; Zürich "Frau" occurs only in als.wikipedia.org/wiki/Enge (comparison, not harvested). Bernese drops the -w- in the plural - record as Bernese-attested.
+C2. [CORPUS] "geit" = geht, twice ("geit är uf dä Vorschlag y"; "So geit d Hagar zrügg u bringt der Ismael uf d Wält"). Bernese harvest geit 3; Zürich harvest geit 0. See Brauerei C3 for why the Zürich side is only in-corpus for the absence.
+C3. [CORPUS] "zwöi" = zwei ("Im Kapitel 17 chöme die zwöi e neue Name"). See Bauern-Tabak C4 - clean Bern "zwöi" vs Zürich "zwei" opposition, both sides in-corpus.
+C4. [CORPUS] "Är" = er (3sg masculine pronoun) - "Är isch der erschti Sohn", "Är tuet das nur wil", "Är het ds Gebiet". The Zürich harvest uses plain "er" ("Er wird je nach Land diräkt vo de Bürger ... gwählt", "Er vertritt d Gmeind au nach usse"). Bernese vs Zürich opposition, both in-corpus. Basel side not attested.
+C5. [CORPUS] "nid" for "nicht", four times. See the Basel comparison C-notes in Ausländer C1 - this is the strongest lexical Basel/Bern vs Zürich opposition in the harvest.
+C6. [CORPUS] "Jahr" ("10 Jahr") vs Basel "Joor". See Bauern-Tabak C5.
+C7. [CORPUS] "tuet" = tut ("Är tuet das nur wil är druuf vertrout"). The Zürich harvest contains no verb of the "tun" class, so the Zürich counterpart ("z tue", Enge/Bünzli) is comparison-only.
+C8. [UNVERIFIED] "Wüschti Schur", "Pharan", "Beerscheba" - Biblical landscape lexicon with no attested Basel or Zürich cognate in my sample. No claim made.

@@ -2,6 +2,22 @@
 
 **Phase 1A.1 · Source Harvesting · Complete**
 
+> **Addendum — S058, Alemannic Wikipedia (dialect).** A 15th source family, `S058`, was harvested from
+> `als.wikipedia.org` (CC BY-SA 4.0): **14 articles, 134 verbatim Swiss German sentences, 135 fact
+> candidates.** It is the corpus's only Swiss German text and its only cultural material. All 14 files
+> declare `SOURCE_ID: S058` and are named
+> `raw_pages/S058_alemannic_wikipedia_institutions_<topic>.txt` (a multi-file source — see the registry row).
+>
+> | | |
+> |---|---|
+> | Verbatim integrity | Every sentence machine-verified as an exact contiguous substring of the rendered article. **134/134 pass.** |
+> | Translations | Authored, unvalidated, and labelled as such in every file. |
+> | Dialect | `basel` 4 files (only `Basler Fasnacht` declares `{{Dialekt|Baseldeutsch}}` explicitly), `zürich` 2 files (both declare `{{Dialekt|Zürichdeutsch}}`), `uncertain` 8 files (no template; Basel-leaning orthography but not attributable). **Alemannic Wikipedia is not uniformly Basel-leaning** — do not assume `DIALECT: basel` as a default. |
+> | Word count | Hard rule "never tidy" outranks the 6–20 word target: 45 sentences exceed 20 words because their Alemannic clauses cannot be dropped without breaking contiguity. Each file carries a `=== WORD-COUNT NOTES ===` section enumerating them. |
+> | Cross-reference value | 73 fact candidates cross-reference **23 distinct** existing sources (S001, S002, S003, S004, S005, S006, S008, S008b, S012b, S018, S025, S026, S028, S029, S030, S032, S033, S037, S038, S040, S047, S048, S049) — these are the dialect-decodes-a-fact items. |
+> | Novel facts | Carnival/Fasnacht culture, Landsgemeinde practice, the 1918 Landesstreik, Zwingli/Reformation, the Idiotikon, plus institutional facts absent from the English corpus: the Swiss federal monopolies (Regale), the federal "intervention" (eidgenössische Intervention), the Bundesratsparteien magic formula, the 1974 Jura observers, and metric weights only from 1877. |
+> | Known open gap | `Bundesverfassung (Schweiz)` exists on als.wikipedia and is the correct source for Swiss constitutional fact content; it was not harvested (`Verfassung` turned out to be a translated German concept article). Fetch next if constitutional coverage is needed. |
+
 | | |
 |---|---|
 | Sources harvested | **55** (target was 30–40) |

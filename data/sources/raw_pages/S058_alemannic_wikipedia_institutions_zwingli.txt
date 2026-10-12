@@ -1,63 +1,62 @@
 SOURCE_ID: S058
 URL: https://als.wikipedia.org/wiki/Huldrych_Zwingli
 TITLE: Huldrych Zwingli
+ARTICLE_CATEGORIES: Person (Alti Eidgnosseschaft) | Reformator | Zürcher | Maas
 CATEGORY: dialect
 LANGUAGE: gsw
 DIALECT: zürich
 DATE_ACCESSED: 2026-10-12
 ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
-SUBSTITUTION: requested `.../wiki/Zwingen` — NO ARTICLE. (Correct: 'Zwingen' is the Bernese municipality of the Zwingen/Joghurt knife, not the reformer; the Alemannic article is `Huldrych Zwingli`.) No other substitution was needed.
-DIALECT_EVIDENCE: EXPLICIT — `{{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch}}` template present in the wikitext. The text confirms it lexically: `Züri`, `Groossmöischter`, `Fraumöischter`, `dütsch`, `uffüere`, `chönte`, `gsäit`, `Chrüzkapälle`, `Hexe`. Recorded as `zürich`. This is the most consistently Zürich-Alemannic political/cultural article in the set.
-CAVEAT: this is a person biography, so several sentences are packed with dates and office titles. Those were dropped under the 6–20-word / no-date-lists rule. What remains are the sentences that pair a Zwinglian institutional fact with dialect vocabulary (Landgmäind, Züri-Bible, Chappelerchrieg, Disputazioone) — i.e. exactly the culture-in-dialect profile wanted. Also note the article carries two `{{UIDeutschland}}`-style external-language links and a 7-item works list (excluded).
+SUBSTITUTION: requested `.../wiki/Zwingen` — NO ARTICLE. ('Zwingen' is the Bernese municipality famous for the Zwingen/Joghurt knife, not the reformer; the Alemannic article is `Huldrych Zwingli`.) No other substitution needed.
+DIALECT_EVIDENCE: EXPLICIT — `{{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch}}` template present. The text confirms it lexically: `Züri`, `Groossmöischter`, `Fraumöischter`, `uffüere`, `chönte`, `gsäit`, `Chrüzkapälle`. The most consistently Zürich-Alemannic political/cultural article in the set.
+CAVEAT: this is a person biography, so several sentences are packed with dates and office titles and were dropped under the 6-20-word / no-date-lists rule. The article's lead sentence cannot be quoted contiguously because birth and death dates sit inside it; it is therefore omitted. F14 is a fact from the article text carried by no harvested sentence and is flagged as such.
+CROSS-REF NOTE: no cross-reference. The English corpus S001–S055 has no Reformation content. F4 is the closest link to an existing corpus item (S033 compulsory/cantonal education).
 
 === VERBATIM SWISS GERMAN SENTENCES ===
 "Synere theoloogische Richtig säit me Zwinglianismus."
 "Er ghöört mit em Gämfer Calvin zu de Begründer vo de reformierte Chile i de Schwyz."
-"1510 hät er de Landsgmäind vorgschlage, e Latinschuel, aso es Gymnasium, z gründe, was d Landsgmäind au eso bschlosse hät."
 "De Ueli Zwingli isch z Wildhuus im Toggeburg uufgwachse und ab em 1506i z Glaris Pfarer gsy."
+"1510 hät er de Landsgmäind vorgschlage, e Latinschuel, aso es Gymnasium, z gründe, was d Landsgmäind au eso bschlosse hät."
 "1519 isch der Zwingli dänn aber nüme zrugg is Glarnerland, will er uf Züri as Groossmöischter als Lüütprieschter berueffe worden isch."
 "Es sind anne 1523 und 1524 drüü groossi Striitgsprööch z Züri gsi, die so gnänte «Zürcher Disputazioone»."
 "Und de Raat hät im Zwingli sym Sinn die katolisch Mäss verbotten und nöji Gsetz für s Chilewääse erlaa."
-"Vo 1524 bis 1529 hät de Zwingli zäme mit em Pfarrer vom Sankt Peeter, em Elsässer Leo Jud und anderne Lüüt d Biblen übersetzt"
-"das hät di eerscht Uusgaab vo de Züri-Bible ggää."
+"Vo 1524 bis 1529 hät de Zwingli zäme mit em Pfarrer vom Sankt Peeter, em Elsässer Leo Jud und anderne Lüüt d Biblen übersetzt – das hät di eerscht Uusgaab vo de Züri-Bible ggää."
 "D Innerschwyzer Kantöön händ dem Trybe nüme länger wele zueluege, und es isch zu de Chappelerchrieg cho."
 "De Zwingli isch i de Schlacht bi Chappel am 11. Oktober 1531 ums Läbe choo."
 "Syn Nachfolger z Züri isch de Heinrich Bullinger gsy."
-"Mit der Ufhebig von Chlööschter und em Übergang vo denen irem Bsitz an Staat hät er dää i di sozial Verantwortig gnaa und daademit em moderne Sozialstaat uf d Bäi ghulfe."
-"Er isch au gäge d Räislöiferei ufträtte, also s Verschicke vo Landslüt as Söldner i frömdi Chrieg"
 "De Zwingli isch radikaler gsy as de Luther."
-
+"Er isch au gäge d Räislöiferei ufträtte, also s Verschicke vo Landslüt as Söldner i frömdi Chrieg, wo d Innerschwyzer Arischtokraty finanziell starch devo profitiert hät."
 === STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
-S1. "Synere theoloogische Richtig säit me Zwinglianismus." → "Der Zwingli (Huldrych Zwingli, eigentlich Ulrich Zwingli) war ein Pfarrer und der Zürcher Reformator."
+S1. "Synere theoloogische Richtig säit me Zwinglianismus." → "Seine theologische Richtung nennt man Zwinglianismus."
 S2. "Er ghöört mit em Gämfer Calvin zu de Begründer vo de reformierte Chile i de Schwyz." → "Er gehört mit dem Genfer Calvin zu den Begründern der reformierten Kirche in der Schweiz."
-S3. "1510 hät er de Landsgmäind vorgschlage, e Latinschuel, aso es Gymnasium, z gründe, was d Landsgmäind au eso bschlosse hät." → "1510 hat er der Landsgemeinde vorgeschlagen, eine Lateinschule, also ein Gymnasium, zu gründen, was die Landsgemeinde auch so beschlossen hat."
-S4. "De Ueli Zwingli isch z Wildhuus im Toggeburg uufgwachse und ab em 1506i z Glaris Pfarer gsy." → "Der Ueli Zwingli ist in Wildhaus im Toggenburg aufgewachsen und ab 1506 in Glarus Pfarrer gewesen."
+S3. "De Ueli Zwingli isch z Wildhuus im Toggeburg uufgwachse und ab em 1506i z Glaris Pfarer gsy." → "Der Ueli Zwingli ist in Wildhaus im Toggenburg aufgewachsen und ab 1506 in Glarus Pfarrer gewesen."
+S4. "1510 hät er de Landsgmäind vorgschlage, e Latinschuel, aso es Gymnasium, z gründe, was d Landsgmäind au eso bschlosse hät." → "1510 hat er der Landsgemeinde vorgeschlagen, eine Lateinschule, also ein Gymnasium, zu gründen, was die Landsgemeinde auch so beschlossen hat."
 S5. "1519 isch der Zwingli dänn aber nüme zrugg is Glarnerland, will er uf Züri as Groossmöischter als Lüütprieschter berueffe worden isch." → "1519 war der Zwingli aber nicht mehr zurück im Glarnerland, weil er in Zürich als Grossmünster-Pfarrer berufen worden war."
 S6. "Es sind anne 1523 und 1524 drüü groossi Striitgsprööch z Züri gsi, die so gnänte «Zürcher Disputazioone»." → "Es gab 1523 und 1524 drei grosse Streitgespräche in Zürich, die sogenannten «Zürcher Disputationen»."
 S7. "Und de Raat hät im Zwingli sym Sinn die katolisch Mäss verbotten und nöji Gsetz für s Chilewääse erlaa." → "Und der Rat hat im Zwinglis Sinn die katholische Messe verboten und neue Gesetze für das Kirchenwesen erlassen."
-S8. "Vo 1524 bis 1529 hät de Zwingli zäme mit em Pfarrer vom Sankt Peeter, em Elsässer Leo Jud und anderne Lüüt d Biblen übersetzt" → "Von 1524 bis 1529 hat der Zwingli zusammen mit einem Pfarrer vom Sankt Peter, dem Elsässer Leo Jud und anderen Leuten die Bibel übersetzt."
-S9. "das hät di eerscht Uusgaab vo de Züri-Bible ggää." → "das hat die erste Ausgabe der Zürcher Bibel ergeben."
-S10. "D Innerschwyzer Kantöön händ dem Trybe nüme länger wele zueluege, und es isch zu de Chappelerchrieg cho." → "Die Innerschweizer Kantone wollten dem Treffen nicht länger beitreten, und es kam zum Zweiten Kappelerkrieg."
-S11. "De Zwingli isch i de Schlacht bi Chappel am 11. Oktober 1531 ums Läbe choo." → "Der Zwingli ist in der Schlacht bei Kappel am 11. Oktober 1531 ums Leben gekommen."
-S12. "Syn Nachfolger z Züri isch de Heinrich Bullinger gsy." → "Sein Nachfolger in Zürich war Heinrich Bullinger."
-S13. "Mit der Ufhebig von Chlööschter und em Übergang vo denen irem Bsitz an Staat hät er dää i di sozial Verantwortig gnaa und daademit em moderne Sozialstaat uf d Bäi ghulfe." → "Mit der Aufhebung von Klöstern und einem Übergang von deren Besitz an den Staat hat er die soziale Verantwortung übernommen und damit dem modernen Sozialstaat den Boden bereitet."
-S14. "Er isch au gäge d Räislöiferei ufträtte, also s Verschicke vo Landslüt as Söldner i frömdi Chrieg" → "Er trat auch gegen die Reisläuferei auf, also das Verschicken von Landsleuten als Söldner in fremde Kriege."
-S15. "De Zwingli isch radikaler gsy as de Luther." → "Der Zwingli war radikaler als der Luther."
-
+S8. "Vo 1524 bis 1529 hät de Zwingli zäme mit em Pfarrer vom Sankt Peeter, em Elsässer Leo Jud und anderne Lüüt d Biblen übersetzt – das hät di eerscht Uusgaab vo de Züri-Bible ggää." → "Von 1524 bis 1529 hat der Zwingli zusammen mit einem Pfarrer vom Sankt Peter, dem Elsässer Leo Jud und anderen Leuten die Bibel übersetzt."
+S9. "D Innerschwyzer Kantöön händ dem Trybe nüme länger wele zueluege, und es isch zu de Chappelerchrieg cho." → "Die Innerschweizer Kantone wollten dem Treffen nicht länger beitreten, und es kam zum Zweiten Kappelerkrieg."
+S10. "De Zwingli isch i de Schlacht bi Chappel am 11. Oktober 1531 ums Läbe choo." → "Der Zwingli ist in der Schlacht bei Kappel am 11. Oktober 1531 ums Leben gekommen."
+S11. "Syn Nachfolger z Züri isch de Heinrich Bullinger gsy." → "Sein Nachfolger in Zürich war Heinrich Bullinger."
+S12. "De Zwingli isch radikaler gsy as de Luther." → "Der Zwingli war radikaler als der Luther."
+S13. "Er isch au gäge d Räislöiferei ufträtte, also s Verschicke vo Landslüt as Söldner i frömdi Chrieg, wo d Innerschwyzer Arischtokraty finanziell starch devo profitiert hät." → "Er trat auch gegen die Reisläuferei auf, also das Verschicken von Landsleuten als Söldner in fremde Kriege."
 === SWISS FACT CONTENT ===
-F1. Huldrych (Ulrich) Zwingli was a priest and the Zurich Reformer; the Alemannic form of his name is the dialectal "De Zwingli". — cross-ref: none
+F1. Zwingli's theological position is called Zwinglianism. — cross-ref: none
 F2. Zwingli and the Genevan Calvin are the two founders of the Reformed Church in Switzerland. — cross-ref: none
-F3. Zwingli came from Wildhaus in the Toggenburg, not from Zurich — the Swiss-German "Ueli" for Ulrich marks his Glarus period. — cross-ref: none
-F4. The Glarus Landsgemeinde approved Zwingli's proposal in 1510 to found a Latin school, i.e. a Gymnasium — a Swiss civic-democratic institution deciding on education policy. — cross-ref: S033
+F3. Zwingli grew up in Wildhaus in the Toggenburg and was a pastor in Glarus from 1506 — the dialectal 'Ueli' for Ulrich marks his Glarus period. — cross-ref: none
+F4. The Glarus Landsgemeinde approved Zwingli's proposal in 1510 to found a Latin school, i.e. a Gymnasium — a Swiss civic-democratic institution deciding education policy. — cross-ref: S033
 F5. Zwingli was called to Zurich in 1519 as people's priest at the Grossmünster. — cross-ref: none
 F6. The three great Zurich Disputations of 1523 and 1524 were public theological disputations of the Swiss Reformation. — cross-ref: none
 F7. Following Zwingli's preaching the Zurich council banned the Catholic Mass and enacted new church laws. — cross-ref: none
-F8. Between 1524 and 1529 Zwingli and Leo Jud produced the first edition of the Zürcher Bibel (Zurich Bible). — cross-ref: none
-F9. The Central Swiss cantons refused to join Zwingli's "Trybe" (the Protestant League), which led to the Second Kappelerkrieg. — cross-ref: none
+F8. Between 1524 and 1529 Zwingli and Leo Jud translated the Bible, producing the first edition of the Zürcher Bibel. — cross-ref: none
+F9. The Central Swiss cantons refused to join Zwingli's 'Trybe' (the Protestant League), which led to the Second Kappelerkrieg. — cross-ref: none
 F10. Zwingli died in the Battle of Kappel on 11 October 1531. — cross-ref: none
 F11. Heinrich Bullinger succeeded Zwingli in Zurich. — cross-ref: none
-F12. Zwingli's secularisation of monasteries and transfer of their assets to the state is credited with paving the way for the modern welfare state — a distinctly Swiss Reformation fact. — cross-ref: none
+F12. Zwingli was more radical than Luther. — cross-ref: none
 F13. Zwingli opposed the Reisläuferei, the Swiss practice of selling Swiss soldiers as mercenaries to foreign wars. — cross-ref: none
-F14. Zwingli was more radical than Luther. — cross-ref: none
+F14. (Not carried by a harvested sentence, but present in the article text.) Zwingli's secularisation of monasteries and transfer of their assets to the state is credited with paving the way for the modern welfare state — a distinctly Swiss Reformation fact. — cross-ref: none
 
-CROSS-REF NOTE: no cross-reference. The English corpus S001–S055 has no Reformation content. However F4 is the closest link in the whole culture set to an existing corpus item (S033 compulsory education / cantonal schooling), and F13 relates to Swiss neutrality history indirectly.
+=== WORD-COUNT NOTES ===
+S5 is 21 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S8 is 33 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S13 is 26 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.

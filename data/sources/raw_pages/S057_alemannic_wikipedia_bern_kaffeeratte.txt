@@ -49,11 +49,11 @@ S17. "Dort scheint sie sich aber nicht so explosionsartig zu vermehren wie damal
 S18. "In Indien gilt sie nach wie vor als Kaffeeschädling."
 
 === DIALECT CONTRAST NOTES ===
-C1. "Wiil" does not occur here; instead "wi" (as) appears repeatedly: "genau so wi d Wüehlmuus", "wi di grasigi Steppe", "nach wi vor". Bernese "wi" is the standard Alemannic form and my Zürich corpus shows the same ("genau so wi d Formelzeichen" is not attested, but Zürich does show "wi" zero times - actually the Zürich corpus in my sample has no "wi"). No cross-dialect claim is made; the item is recorded as Bernese-attested.
-C2. "gwüssi" (gewisse) - the g- prefix. Zürich uses the same prefix ("gwüssi", "gwisse"), so shared, not a Bernese marker. Noted to prevent a false contrast being recorded.
-C3. "underschidlech" (unterschiedlich) - the ch-digraph. Shared with Zürich ("underschiidlechei", "underschidleche Gärgetränk"), so shared.
-C4. "het" (hat, 3sg) - the unprefixed possessive. Shared across Basel, Bern and Zürich in my samples. NOT a dialect discriminator; recorded to prevent false positives.
-C5. "chöme/können" - Bernese writes k- as ch- in infinitive ("chöme"). Zürich also writes "chönne" ("hei d Brauereie jitz z ganze Jahr chönne Bier"). Shared.
-C6. "wider" = wieder. Zürich uses "wider" too ("wider iigfüehrt worde", "wider ufbout"). Shared, not a contrast.
-C7. "Südasie", "Indie" (Südostasien, Indien) - Bernese drops the final -n in "Indien" > "Indie". Zürich shows "Indie" absent and "Indien" absent in my sample too; Basel not verified. Recorded as Bernese-attested only.
-C8. IMPORTANT NON-FINDING: this article contains no lexeme that contrasts with Basel. It is included because it is clean, long, unambiguously Bernese everyday prose (animal behaviour vocabulary) rather than because it carries dialect contrast. Do not construct contrast items from it.
+C1. [CORPUS] "wi" = wie/as, three times in the sentence list ("genau so wi d Wüehlmuus"; "Läbesrüüm wi di grasigi Steppe"; "nach wi vor"). The Zürich harvest contains no "wi" token, but nor does it contain an alternative in this slot, so no substitution can be evidenced. Recorded as Bernese-attested only.
+C2. [CORPUS] "gwüssi" = gewisse. Zürich shows the same prefix ("Es sind öppe 230'000...", "gwüssi alkaholfrei Erfrüschigsgetränk"), so SHARED, not a marker. Recorded to prevent a false positive.
+C3. [CORPUS] "underschidlech" = unterschiedlich. Zürich uses the same ch-digraph ("underschiidlechei", "underschidlechem"), so SHARED.
+C4. [CORPUS] "het" = hat (3sg). Basel, Bern and Zürich all use unprefixed "het". NOT a discriminator; recorded to prevent a false positive.
+C5. [CORPUS] "chöme/chöi" = können, with k- spelled ch-. Zürich uses the same ("chönne Bier i gueter Qualität lifere"). SHARED.
+C6. [CORPUS] "wider" = wieder. Zürich uses "wider" too ("wider iigfüehrt worde", "wider ufbout"). SHARED.
+C7. [UNVERIFIED] "Südasie", "Indie" - the final-n deletion in "Indien". No Basel or Zürich cognate was found in my sample, so no cross-dialect claim is made.
+C8. IMPORTANT NEGATIVE FINDING: this article contains NO lexeme that contrasts with Basel. It is included as clean, long, unambiguously Bernese everyday prose, not as dialect-contrast material. Do not build contrast items from it.

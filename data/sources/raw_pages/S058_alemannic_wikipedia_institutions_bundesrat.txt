@@ -44,3 +44,6 @@ F7. The Federal Chancellor supports the Federal Council in an advisory capacity 
 F8. The Federal Chancellery is the Federal Council's staff office (Stabsstelle). — cross-ref: S012b
 F9. After their election the Federal Councillors allocate the federal departments among themselves; Parliament has formally no say in the allocation. — cross-ref: S001
 F10. The principle of collegiality rests on unwritten tradition, not on statute. — cross-ref: S001
+
+=== WORD-COUNT NOTES ===
+S4 is 21 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.

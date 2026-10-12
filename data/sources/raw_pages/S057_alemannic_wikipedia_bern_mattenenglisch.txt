@@ -17,12 +17,6 @@ SUBDIALECT_NOTE: Standard Bärndütsch (city of Bern sociolect article), not a r
 "Der mattenänglisch Soziolekt het e Huuffe spezielli Usdrück gha."
 "Es git aber e Verein, wo's bis hüt pflegt."
 "Hindedra chunt es ee, u der erscht Vokal wird ersetzt dür nes i."
-"E Groossteil vo däm Wortschatz wird hüt zwar nümm bbruucht, aber es paar mattenänglischi Wörter sy i ds normale Bärndütsch ufgnoh worde."
-"Unbetonti Partikle blyben entweder unveränderet, oder si wärden als Bestandteil vo anderne Wörter behandlet."
-"Jiu 'ja'"
-"Gieu (Giel) 'Bueb'"
-"Modi 'Meitschi'"
-"Chemp 'Stei'"
 
 === STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
 S1. "Das Mattenänglisch ist ein Soziolekt des Berndeutschen."
@@ -32,18 +26,14 @@ S4. "Teile Leute bezeichnen die Geheimsprache lediglich als Mattenänglisch."
 S5. "Der mattenänglische Soziolekt hat eine Fülle spezieller Ausdrücke gehabt."
 S6. "Es gibt aber einen Verein, der ihn bis heute pflegt."
 S7. "Hinterher kommt ein ee, und der erste Vokal wird durch ein i ersetzt."
-S8. "Der grösste Teil dieses Wortschatzes wird heute zwar nicht mehr gebraucht, aber einige mattenänglische Wörter sind ins normale Berndeutsch übernommen worden."
-S9. "Unbetonte Partikel bleiben entweder unverändert, oder sie werden als Bestandteil anderer Wörter behandelt."
-S10. "Jiu = 'ja'"
-S11. "Gieu (Giel) = 'Junge'"
-S12. "Modi = 'Mädchen'"
-S13. "Chemp = 'Stein'"
 
 === DIALECT CONTRAST NOTES ===
-C1. "z tüe" (in the page: "Sy Name het nüt mit Änglisch z tüe") is Bernese for "zu tun". Zürich uses "z tue" in the same function - verified in my Zürich corpus ("hät mit öisem Bünzli nüüt z tue", "händ die früene Mäntschen äinewääg nüüt z tue"). The difference is the vowel: Bernese /yː/, Zürich /uː/. Basel side not verified in my sample - do not assume.
-C2. "bbruucht" shows geminate bb- before /r/. Basel and Zürich write the un-geminated "bruucht" (verified: Basel "als Lager bruucht"; Zürich "als Synonym für Ussländer bruucht"). NOTE: this gemination is register-dependent even within Bernese - the same article set also has plain "bruucht" in a more formal botanical text ("wo wärde für d Härstellig vo Tabakware bruucht"). Treat "bbruucht" as colloquial Bernese, not universal.
-C3. "erscht" for "erst" - verified in this article ("der erscht Vokal"). Basel also has "erscht"; I did not verify a Basel/Zürich contrast, so record the shared form, not a contrast.
-C4. "glycht" for "gilt" - distinctive Bärndütsch, seen here. Basel equivalent (gligt/gilt) not present in my Basel sample, so the Basel side is unverified.
-C5. "Hindera" / "Hindedra" plus verb-final order ("Hindedra chunt es ee") shows Bernese preterite-present with subject inversion; the Zürich texts show the same pattern ("Won er umbracht worden isch, sind anderi Eisidler da ane cho") - so this is shared, not a Bernese-specific marker.
-C6. "Rotschoss"/"Gieu (Giel) 'Bueb'" - the article glosses the child-word as "Bueb" in Bernese. Basel "Bueb" is what my Basel sample shows, so this is shared, not a contrast. Recorded as shared.
-C7. "Matte"/"Mattenängi" - Bernese city-quarter vocabulary. Not attested in my Basel sample, so no cross-dialect claim is made.
+C1. [CORPUS] "bbruucht" / "bbruucht" shows gemination of b before /r/. The source sentence is too long to quote whole (23 words) so it is NOT in the sentence list; it reads: "Syt sech im Louff vom 20igschte Jahrhundert d Bevölkerigsstruktur vo däm Quartier starch het veränderet, wird ds Mattenänglischen im Alltag nümm bbruucht." The same article also has the non-geminated variant "wird hüt zwar nümm bbrucht". Basel [COMPARISON] writes plain "bruucht" (e.g. als.wikipedia.org/wiki/Basel-Altstadt_(Grossbasel): "...Reformazion]] ziitwiis as Lager bruucht..."). NOTE the register split INSIDE Bernese: geminate bb- in colloquial narrative prose, plain b- in the more formal lexicographic register. Do not treat gemination as categorical.
+C2. [COMPARISON] "z tüe" (Bernese "tun") vs Zürich "z tue". Bernese occurrence is in this article ("Sy Name het nüt mit Änglisch z tüe, sondern mit sym Ursprungsort..." - sentence too long to quote whole). Zürich "z tue" is attested in als.wikipedia.org/wiki/Bünzli ("hät mit öisem Bünzli nüüt z tue") and /Enge ("händ die früene Mäntschen äinewääg nüüt z tue") - both fetched for comparison, NEITHER is part of this harvest. Basel side never observed; make no Basel claim.
+C3. [CORPUS] "erscht" for "erst" appears twice in this article's sentence list ("der erscht Vokal"). Bernese corpus total: erscht 2, eerschtu 0. Contrast with Wallisertiitsch "eerschtu" (2, zero "erscht") - see the Ayent file, C6. This is a usable minimal-pair final-devoicing item.
+C4. [CORPUS] "Hindedra chunt es ee, u der erscht Vokal wird ersetzt dür nes i." - verb-final order after an adverbial. NOT a discriminator: the Zürich sentences use the same order ("Won er umbrecht worden isch, sind anderi Eisidler da ane cho").
+C5. [UNVERIFIED] "glycht" for "gilt" is distinctive Bärndütsch and occurs here, but no Basel article in my comparison sample contains a cognate, so no cross-dialect claim is made.
+C6. [CORPUS] "Gieu (Giel) 'Bueb'" - the article glosses the child-word as "Bueb", which is also what my Basel sample shows, so it is SHARED, not a contrast. Recorded explicitly because "Bueb" is often wrongly listed as Basel-specific.
+C7. [UNVERIFIED] "Matte"/"Mattenängi" are Bernese city-quarter vocabulary with no Basel counterpart in my sample; no cross-dialect claim made.
+
+C8. LEXICON MOVED OUT OF THE SENTENCE LIST: this article's glossary items "Jiu 'ja'", "Gieu (Giel) 'Bueb'", "Modi 'Meitschi'", "Chemp 'Stei'" are 2-3 words each and therefore violate the 6-20 word sentence rule. They are the most dialectal material in the article and are recorded here instead. Use them as vocabulary items, not as sentences.

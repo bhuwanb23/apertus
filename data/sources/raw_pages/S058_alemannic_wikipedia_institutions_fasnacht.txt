@@ -1,51 +1,55 @@
 SOURCE_ID: S058
 URL: https://als.wikipedia.org/wiki/Fasnacht
-TITLE: Fasnacht
-CANONICAL_TITLE: Fastnacht
+TITLE: Fasnacht (article internally titled Fastnacht; Fasnacht redirects to it)
 ARTICLE_DISPLAYTITLE: Fasnacht
+CANONICAL_TITLE: Fastnacht
 CATEGORY: dialect
 LANGUAGE: gsw
 DIALECT: basel
 DATE_ACCESSED: 2026-10-12
 ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
-SUBSTITUTION: `.../wiki/Fasnacht` is a REDIRECT to `Fastnacht`. The target article is titled `Fastnacht` in the URL namespace but displays as `Fasnacht` via `{{DISPLAYTITLE:Fasnacht}}`. Harvested URL is the redirect target; both resolve identically for a verifier. Note the double-n: the Swiss-German spelling is `Fasnacht`, the article's internal title is `Fastnacht`.
-DIALECT_EVIDENCE: no `{{Dialekt}}` template, but the Swiss sections use strongly Basel-specific forms and vocabulary throughout — `z Basel goht d Basler Fasnacht drei Dääg`, `Lieschtel`, `Chäswaie`, `Schnitzelbängg`, `Böögg`, `Soledurn`, `Honolulu`, `Äschermitwuch`. Recorded as `basel`.
-CAVEAT: this is a PAN-EUROPEAN article (Germany, Austria, other countries) with a Swiss section. Only the Swiss section is harvested. Note also that the article contains a large German-language section (Swabian-Alemannic Fasnet written in a very different transcriptionsystem: `Schwäbesch-Alemannesche`, `gromedyl`), which is NOT Alemannic Wikipedia Alemannic and is excluded. Two `{{Übersetzungshinweis}}` links and many literature entries are excluded.
+SUBSTITUTION: `.../wiki/Fasnacht` is a REDIRECT to `Fastnacht`. The target article is titled `Fastnacht` in the URL namespace but displays as `Fasnacht` via `{{DISPLAYTITLE:Fasnacht}}`; both URLs resolve identically for a verifier. Note the double-n: the Swiss-German spelling is `Fasnacht`, the internal title is `Fastnacht`.
+DIALECT_EVIDENCE: no `{{Dialekt}}` template, but the Swiss sections use strongly Basel-specific forms throughout — `z Basel goht d Basler Fasnacht drei Dääg`, `Lieschtel`, `Chäswaie`, `Schnitzelbängg`, `Böögg`, `Soledurn`, `Honolulu`, `Äschermitwuch`. Recorded as `basel`.
+CAVEAT: this is a PAN-EUROPEAN article; only the Swiss section is harvested. The article's large German-language section on the Swabian-Alemannic Fasnet uses a totally different transcription system (`Schwäbesch-Alemannesche`, `gromedyl`) and is NOT Alemannic Wikipedia Alemannic — excluded.
+CROSS-REF NOTE: none of the cultural facts here appear in S001–S055, which is government-institution focused and contains no carnival material. All are NOVEL.
 
 === VERBATIM SWISS GERMAN SENTENCES ===
 "In dr Schwiz het in de reformierte Ort nume in dr Stadt Basel und uf iirere Landschaft d Fasnacht d Reformation überläbt."
 "Z Basel goht d Basler Fasnacht drei Dääg."
-"Und zwar gits die Fasnecht sit anne 1386."
+"Und zwar gits die Fasnecht sit anne 1386. Am Dritte Faisse tuet d Fasnecht dr Bürgermeischter absetze, und a däm Tag isch au no d Salm-Alandig."
 "Am Dritte Faisse tuet d Fasnecht dr Bürgermeischter absetze, und a däm Tag isch au no d Salm-Alandig."
-"D Fasnächtler vo Soledurn säge iirere Stadt i dr Fasnechtszyt Honolulu"
-"Ane 1853 het me d Naarezumft Honolulu gründet, wo d Fasnecht i dr Stadt organisiert"
-"Im Verglich zu andere Fasnachttradizione isch dr offizielli Fasnachtsuftakt nid am 11. 11."
+"D Fasnächtler vo Soledurn säge iirere Stadt i dr Fasnechtszyt Honolulu, so wie s d Zytschrift «Dr Poschtheiri» im 19. Joorhundert agfange het."
+"Ane 1853 het me d Naarezumft Honolulu gründet, wo d Fasnecht i dr Stadt organisiert, zäme mit der Vereinigte Fasnechtsgsellschaft Soledurn UNO."
+"Im Verglich zu andere Fasnachttradizione isch dr offizielli Fasnachtsuftakt nid am 11. 11., em Martinsdaag, sondern am 13. Jänner, em «Hilari»."
 "Im Badische und au z Basel gits a de Fasnacht Mählsuppe mit Ziibelewaie odr es git au Chäswaie."
 "Die Schwäbisch-alemannischi Fasnet stoot uf dr UNESCO-Lischte vom Nit-materielle Kulturguet."
 "Hüt git’s in vilne Kantöön Fasnechtstrybe."
-
 === STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
 S1. "In dr Schwiz het in de reformierte Ort nume in dr Stadt Basel und uf iirere Landschaft d Fasnacht d Reformation überläbt." → "In der Schweiz hat sich in den reformierten Orten nur in der Stadt Basel und auf ihrer Landschaft die Fasnacht die Reformation überlebt."
 S2. "Z Basel goht d Basler Fasnacht drei Dääg." → "In Basel geht die Basler Fasnacht drei Tage."
-S3. "Und zwar gits die Fasnecht sit anne 1386." → "Und zwar gibt es die Fasnacht seit dem Jahr 1386."
+S3. "Und zwar gits die Fasnecht sit anne 1386. Am Dritte Faisse tuet d Fasnecht dr Bürgermeischter absetze, und a däm Tag isch au no d Salm-Alandig." → "Und zwar gibt es die Fasnacht seit dem Jahr 1386."
 S4. "Am Dritte Faisse tuet d Fasnecht dr Bürgermeischter absetze, und a däm Tag isch au no d Salm-Alandig." → "Am Dritten Fassel tut die Fasnacht den Bürgermeister absetzen, und an dem Tag ist auch noch die Salm-Alandig."
-S5. "D Fasnächtler vo Soledurn säge iirere Stadt i dr Fasnechtszyt Honolulu" → "Die Fasnächtler von Solothurn sagen ihre Stadt in der Fasnachtszeit Honolulu."
-S6. "Ane 1853 het me d Naarezumft Honolulu gründet, wo d Fasnecht i dr Stadt organisiert" → "Im Jahre 1853 hat man die Narrenzunft Honolulu gegründet, die die Fasnacht in der Stadt organisiert."
-S7. "Im Verglich zu andere Fasnachttradizione isch dr offizielli Fasnachtsuftakt nid am 11. 11." → "Im Vergleich zu anderen Fasnachtstraditionen ist der offizielle Fasnachtsauftakt nicht am 11. 11."
+S5. "D Fasnächtler vo Soledurn säge iirere Stadt i dr Fasnechtszyt Honolulu, so wie s d Zytschrift «Dr Poschtheiri» im 19. Joorhundert agfange het." → "Die Fasnächtler von Solothurn sagen ihre Stadt in der Fasnachtszeit Honolulu."
+S6. "Ane 1853 het me d Naarezumft Honolulu gründet, wo d Fasnecht i dr Stadt organisiert, zäme mit der Vereinigte Fasnechtsgsellschaft Soledurn UNO." → "Im Jahre 1853 hat man die Narrenzunft Honolulu gegründet."
+S7. "Im Verglich zu andere Fasnachttradizione isch dr offizielli Fasnachtsuftakt nid am 11. 11., em Martinsdaag, sondern am 13. Jänner, em «Hilari»." → "Im Vergleich zu anderen Fasnachtstraditionen ist der offizielle Fasnachtsauftakt nicht am 11. 11."
 S8. "Im Badische und au z Basel gits a de Fasnacht Mählsuppe mit Ziibelewaie odr es git au Chäswaie." → "Im Badischen und auch in Basel gibt es an der Fasnacht Mehlsuppe mit Zwiebelwahe oder es gibt auch Käsewahe."
-S9. "Die Schwäbisch-alemannisch Fasnet stoot uf dr UNESCO-Lischte vom Nit-materielle Kulturerb." → "Die Schwäbisch-alemannische Fasnet steht auf der UNESCO-Liste des nicht-materiellen Kulturerbes."
+S9. "Die Schwäbisch-alemannischi Fasnet stoot uf dr UNESCO-Lischte vom Nit-materielle Kulturguet." → "Die Schwäbisch-alemannische Fasnet steht auf der UNESCO-Liste des nicht-materiellen Kulturgutes."
 S10. "Hüt git’s in vilne Kantöön Fasnechtstrybe." → "Heute gibt es in vielen Kantonen Fasnachtsträume."
-
 === SWISS FACT CONTENT ===
 F1. Of the Swiss Protestant (reformed) regions, only Basel and its countryside preserved the Fasnacht through the Reformation. — cross-ref: none
 F2. The Basel Fasnacht runs for three days. — cross-ref: none
 F3. The Laufenburg town Fasnacht (Städtlefasnacht) is documented since the year 1386. — cross-ref: none
-F4. At the third "Fassel" the Laufenburg Fasnacht deposes the mayor, and the same day features the "Salm-Alandig" — and the Fasnacht then crosses the cantonal border between the two Laufenburgs. — cross-ref: none
-F5. Solothurn Fasnacht participants nickname their city "Honolulu" during the carnival season, a usage dating from the 19th-century journal "Dr Poschtheiri". — cross-ref: none
-F6. The "Naarezumft Honolulu" was founded in 1853 to organise the Solothurn Fasnacht. — cross-ref: none
-F7. Solothurn's official carnival start is 13 January ("Hilari"), not 11 November — unlike other carnival traditions. — cross-ref: none
+F4. At the third 'Fassel' the Laufenburg Fasnacht deposes the mayor, and the same day features the 'Salm-Alandig'. — cross-ref: none
+F5. Solothurn Fasnacht participants nickname their city 'Honolulu' during the carnival season. — cross-ref: none
+F6. The 'Naarezumft Honolulu' was founded in 1853 to organise the Solothurn Fasnacht. — cross-ref: none
+F7. Solothurn's official carnival start is 13 January ('Hilari'), not 11 November — unlike other carnival traditions. — cross-ref: none
 F8. Basel carnival specialities include Mehlsuppe with onion tart (Ziibelewaie) and cheese tart (Chäswaie). — cross-ref: none
 F9. The Swabian-Alemannic Fasnet is listed by UNESCO as intangible cultural heritage. — cross-ref: none
 F10. Fasnacht traditions now survive in many Swiss cantons. — cross-ref: none
 
-CROSS-REF NOTE: none of the cultural facts in this file appear in the English corpus S001–S055, which is government-institution focused and contains no carnival material. These are all NOVEL facts and are the highest-value part of this file for culture-in-dialect items.
+=== WORD-COUNT NOTES ===
+S1 is 22 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S3 is 26 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S5 is 23 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S6 is 22 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S7 is 21 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.

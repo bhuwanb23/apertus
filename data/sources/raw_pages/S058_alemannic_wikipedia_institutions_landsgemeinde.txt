@@ -2,14 +2,15 @@ SOURCE_ID: S058
 URL: https://als.wikipedia.org/wiki/Landsgemeinde
 TITLE: Landsgemeinde
 ARTICLE_DISPLAYTITLE: Landsgmeind
+ARTICLE_CATEGORIES: Kantonalpolitik | Gsetzgäbendi Versammlig | Immateriels Kulturerb vo der Schwiiz
 CATEGORY: dialect
 LANGUAGE: gsw
 DIALECT: basel
 DATE_ACCESSED: 2026-10-12
 ORTHOGRAPHY: semi-Dieth (Alemannic Wikipedia house system)
-DIALECT_EVIDENCE: no `{{Dialekt}}` template. Orthography is Basel-convention Alemannic and consistent throughout (`Appizell Innerrhode`, `Appizell Usserrhode`, `Glaris`, `Sarne`, `Rooteturm`, `Schattorf`, `Hundwil`, `Korboratione`, `Inschdidution`). Recorded as `basel`.
-CAVEAT: the article ends with `{{Übersetzungshinweis|de|Landsgemeinde|dütsch}}` — a partly translated German article, so dialect depth is moderate rather than high. The `== Tradizionelli Versammligsort ==` section is a place-name list (not sentences) and is NOT harvested; it is however the reason several place names below (Rooteturm, Sarne) are Basel-form. One article category is `Immateriels Kulturerb vo der Schwiiz` — the Landsgemeinde practice is on Switzerland's intangible-heritage list; that fact is in the category markup, not in prose, so it is recorded here as metadata only and not as a sentence.
-NOTE: the article's own text is internally inconsistent between "Appizell" (prose) and "Appizäll" (list section); sentences are quoted exactly as they appear in each context.
+DIALECT_EVIDENCE: no `{{Dialekt}}` template. Orthography is Basel-convention Alemannic and consistent throughout (`Appizell Innerrhode`, `Appizell Usserrhode`, `Glaris`, `Korboratione`, `Inschdidution`). Recorded as `basel`.
+CAVEAT: the article ends with `{{Übersetzungshinweis|de|Landsgemeinde|dütsch}}` — a partly translated German article, so dialect depth is moderate rather than high. The `== Tradizionelli Versammligsort ==` section is a place-name list, not sentences, and is NOT harvested. The category `Immateriels Kulturerb vo der Schwiiz` shows the practice is on Switzerland's intangible-heritage list, but that appears only in category markup, not in prose, so it is not recorded as a sentence.
+NOTE: the article is internally inconsistent between 'Appizell' (prose) and 'Appizäll' (list section); sentences are quoted exactly as they appear in each context.
 
 === VERBATIM SWISS GERMAN SENTENCES ===
 "D Landsgemeind isch eini vo den ältischte und eifachschte Forme vo dr Demokratii."
@@ -20,9 +21,7 @@ NOTE: the article's own text is internally inconsistent between "Appizell" (pros
 "Die kantonal Landsgmeind git s nu no in Appizell Innerrhode und im Kanton Glaris."
 "Regionali Landsgmeinde gchännt me no im Kanton Appizell Innerrhode und im Kanton Schwyz; im Kanton Graubünde gits es si sit 2016 nüme."
 "In de Kantön Zug und Schwyz si si 1848 abgschafft worde, im Kanton Uri 1928, in Nidwalde 1996, s Johr druf im Appizell Usserrhode und 1998 in Obwalde."
-"Die moderne schwiizer Landsgmeinde si in dr Form ähnlich zum germanische Ding, schtamme aber nit vo dere alterdümlige Inschdidution ab, sondern vo de middelalterlige Korboratione"
-"Obwalde (abgschafft 1998): Landebärg z Sarne, ab 1973, nach der Ifüerig vom Frauestimmrächt, zwüscheddure au a andere Plätz z Sarne"
-
+"Die moderne schwiizer Landsgmeinde si in dr Form ähnlich zum germanische Ding, schtamme aber nit vo dere alterdümlige Inschdidution ab, sondern vo de middelalterlige Korboratione und si zum erschte Mol im Johr 1403 in erä Urkunde erwähnt worde."
 === STANDARD GERMAN TRANSLATIONS (author, unvalidated) ===
 S1. "D Landsgemeind isch eini vo den ältischte und eifachschte Forme vo dr Demokratii." → "Die Landsgemeinde ist eine der ältesten und einfachsten Formen der Demokratie."
 S2. "In ä baar Kantön in dr Schwiiz git s äsä als kantonali oder als regionali Inschdidution, aber in de meischte Kantön isch si abgschafft worde." → "In einer Anzahl Kantone der Schweiz gibt es sie als kantonale oder als regionale Institution, aber in den meisten Kantonen ist sie abgeschafft worden."
@@ -32,9 +31,7 @@ S5. "Abgschtimmt wird mit dr Hand, em Bajonett oder em Schtimmrächtsuuswiis." �
 S6. "Die kantonal Landsgmeind git s nu no in Appizell Innerrhode und im Kanton Glaris." → "Die kantonale Landsgemeinde gibt es nur noch in Appenzell Innerrhoden und im Kanton Glarus."
 S7. "Regionali Landsgmeinde gchännt me no im Kanton Appizell Innerrhode und im Kanton Schwyz; im Kanton Graubünde gits es si sit 2016 nüme." → "Regionale Landsgemeinden gibt es noch im Kanton Appenzell Innerrhoden und im Kanton Schwyz; im Kanton Graubünden gibt es sie seit 2016 nicht mehr."
 S8. "In de Kantön Zug und Schwyz si si 1848 abgschafft worde, im Kanton Uri 1928, in Nidwalde 1996, s Johr druf im Appizell Usserrhode und 1998 in Obwalde." → "In den Kantonen Zug und Schwyz wurden sie 1848 abgeschafft, im Kanton Uri 1928, in Nidwalden 1996, im Jahr darauf im Appenzell Ausserrhoden und 1998 in Obwalden."
-S9. "Die moderne schwiizer Landsgmeinde si in dr Form ähnlich zum germanische Ding, schtamme aber nit vo dere alterdümlige Inschdidution ab, sondern vo de middelalterlige Korboratione" → "Die moderne schweizerische Landsgemeinde ist in der Form ähnlich zum germanischen Thing, stammt aber nicht von jener altertümlichen Institution ab, sondern von den mittelalterlichen Korporationen."
-S10. "Obwalde (abgschafft 1998): Landebärg z Sarne, ab 1973, nach der Ifüerig vom Frauestimmrächt, zwüscheddure au a andere Plätz z Sarne" → "Obwalden (abgeschafft 1998): Landebärg bei Sarnen, ab 1973, nach der Einführung des Frauenstimmrechts, zwischenzeitlich auch an anderen Orten bei Sarnen."
-
+S9. "Die moderne schwiizer Landsgmeinde si in dr Form ähnlich zum germanische Ding, schtamme aber nit vo dere alterdümlige Inschdidution ab, sondern vo de middelalterlige Korboratione und si zum erschte Mol im Johr 1403 in erä Urkunde erwähnt worde." → "Die moderne schweizerische Landsgemeinde ist in der Form ähnlich zum germanischen Thing, stammt aber nicht von jener altertümlichen Institution ab, sondern von den mittelalterlichen Korporationen."
 === SWISS FACT CONTENT ===
 F1. The Landsgemeinde is one of the oldest and simplest forms of democracy. — cross-ref: S004
 F2. In a number of Swiss cantons the Landsgemeinde exists as a cantonal or regional institution, but in most cantons it has been abolished. — cross-ref: S040
@@ -44,5 +41,11 @@ F5. Voting at the Landsgemeinde is by show of hands, by small sword (Bajonett), 
 F6. The cantonal Landsgemeinde still exists only in Appenzell Innerrhoden and in the canton of Glarus. — cross-ref: S040
 F7. Regional Landsgemeinde still occur in Appenzell Innerrhoden and in the canton of Schwyz; in Graubünden they have not occurred since 2016. — cross-ref: S040
 F8. The Landsgemeinde was abolished in Zug and Schwyz in 1848, in Uri in 1928, in Nidwalden in 1996, in Appenzell Ausserrhoden the following year, and in Obwalden in 1998. — cross-ref: S037
-F9. The modern Swiss Landsgemeinde resembles the Germanic Thing but derives from the medieval corporations (Korporationen), not from the ancient assembly; it is first attested in a document of 1403. — cross-ref: none
-F10. The Obwalden Landsgemeinde sat on the Landebärg by Sarnen only from 1973, i.e. after the introduction of women's suffrage, and moved elsewhere in the interval. — cross-ref: S040
+F9. The modern Swiss Landsgemeinde resembles the Germanic Thing but derives from the medieval corporations, not from the ancient assembly. — cross-ref: none
+
+=== WORD-COUNT NOTES ===
+S2 is 25 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S3 is 24 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S7 is 22 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S8 is 28 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
+S9 is 38 words (target 6-20). Kept whole: the Alemannic Wikipedia sentence carries clauses that cannot be dropped without breaking verbatim contiguity. Flag if the benchmark requires a hard 20-word cap.
