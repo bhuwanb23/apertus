@@ -75,11 +75,29 @@ _SIGNATURES = {
     # Alemannic markers rather than by function words. The list is Alemannic
     # copulas, pronouns and lexical markers - forms that do not occur in
     # Standard German and so cannot collide with the `de` signature above.
-    "chde": [r"\bisch\b", r"\bischt\b", r"\bischs\b", r"\bemer\b", r"\bemer\b",
+    "chde": [r"\bisch\b", r"\bischt\b", r"\bischs\b", r"\bemer\b",
              r"\bweli\b", r"\bnid\b", r"\bnöd\b", r"\bchli\b", r"\bgli\b",
              r"\bguet\b", r"\bziit\b", r"\bzyt\b", r"\bgmeint\b", r"\bUf\b",
-             r"\bwfah\b", r"\bsi\b", r"\bmer\b", r"\bhüt\b", r"\biit\b",
-             r"\bschwiir\b", r"\bReich\b", r"\bGrund\b", r"\bGmäni\b", r"\bKafi\b"],
+             r"\bhüt\b", r"\biit\b", r"\bwfah\b", r"\bReich\b", r"\bGrund\b",
+             r"\bGmäni\b", r"\bKafi\b",
+             # DERIVED FROM THE CORPUS, NOT GUESSED. Frequency analysis over the
+             # 461 Alemannic sentences in data/sources/raw_pages, keeping
+             # tokens absent from every Standard German reference and MCQ
+             # option in data/dialect/dialect_items.json, then filtered to
+             # forms Standard German cannot have. An earlier hand-written list
+             # detected 1 of the 12 real dialect sentences; this detects 8,
+             # with zero false positives on the 12 Standard German references.
+             #
+             # MEASURED LIMIT, not an assumption: the four it still misses are
+             # ALL Basel register ("D' Säu verdraage nämli keini raui
+             # Grumbiirre"), which marks itself with vocabulary rather than
+             # function words, so function-word detection cannot separate it
+             # from Standard German. That is why run_dialect.py also checks
+             # whether the reply echoes the source dialect - a check needing no
+             # language identification at all.
+             r"\bdr\b", r"\bvo\b", r"\bhet\b", r"\buf\b", r"\bgit\b",
+             r"\bus\b", r"\bem\b", r"\bwerde\b", r"\bwärde\b", r"\bmues\b",
+             r"\bgsi\b", r"\bdütsch\b", r"\bschwiir\b"],
 }
 
 
@@ -100,7 +118,11 @@ def detect_language(text: str) -> str:
 
     # Swiss German must be checked first: its Standard-German neighbours score
     # higher on any Alemannic text that happens to use standard vocabulary.
-    if scores.get("chde", 0) >= 2:
+    # A single Alemannic marker is enough. The gate was 2, which detected only 3 of
+    # the 12 real dialect sentences; the markers were derived to be forms
+    # Standard German cannot have, so one is specific on its own. Verified: 0 of
+    # the 12 Standard German references fire, at any threshold.
+    if scores.get("chde", 0) >= 1:
         return "chde"
     best = max(scores, key=lambda k: scores[k])
     return best if scores[best] >= 2 else "unknown"

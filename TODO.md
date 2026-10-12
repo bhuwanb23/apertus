@@ -58,10 +58,19 @@ deliberately, since audio items need real recorded Swiss German.
 - [x] 1B.2 Scenarios — 30, 123 required + 105 forbidden elements
 - [x] 1B.3 Multilingual pairs — 10 pairs, 53 renderings, 6 languages
 
-**1C · Dialect items — not started**
-- [!] 1C.1 Native speaker recruitment — **blocked by B1**
-- [ ] 1C.2 Comprehension items — 20–30 items (Alemannic sources now in the corpus)
-- [ ] 1C.3 Validation or pilot label — **blocked by B1**
+**1C · Dialect items — ✅ built; native validation still outstanding**
+- [x] 1C.2 Items — 30 items: 12 T1 translation, 8 T2 comprehension, 5 T3
+      culture-in-dialect, 5 T4 dialect-identification, from the Alemannic
+      Wikipedia harvest. Includes `dialect_scoring_protocol.md` and
+      `VALIDATION_PACKET*.md`.
+- [x] 1C.3 Scoring protocol — content-keyword coverage + deterministic MCQ;
+      implemented and tested in `eval/run_dialect.py`
+- [!] Native-speaker validation — **still blocked by B1.** All 30 items carry
+      `validated_by: null`, which is correct and must stay until a native
+      speaker signs off.
+- [x] `dialect_scoring_protocol.md` §4 compliance — per-dialect reporting,
+      never pooled; refusal rate is a headline number; `uncertain` register
+      (D020) is bucketed separately and excluded from dialect claims
 
 **Carry-forward review flags** (from `knowledge_stats.md`, resolve before Phase 5):
 - [ ] `K070` commune count — confirm the item reads unambiguously
@@ -126,8 +135,22 @@ deliberately, since audio items need real recorded Swiss German.
 > scope. Shrink with `--fraction` if time is short, but keep every language
 > represented.
 
-**2.4 · Dialect scoring — not started** (blocked by 1C)
-- [ ] `run_dialect.py`
+**2.4 · Dialect scoring — ✅ code complete; real scores blocked on B2**
+- [x] `run_dialect.py` implementing `data/dialect/dialect_scoring_protocol.md`
+- [x] `score_translation()` — content-keyword coverage, weights, synonym matching
+- [x] `test_dialect.py` — **515 checks**; 240 of them are two invariants run on
+      all 12 real T1 items (reference→2, dialect-echo→0, gibberish→0, refusal→0)
+- [x] Dialect eval on 8B ✅ and 70B ✅ (mock backend)
+- [x] Results saved to `parsed/` + `scores/` with full provenance
+- [x] Limitations documented — see `eval/README.md` and the module docstring
+- [!] **Real dialect scores — blocked on B2**
+- [x] Manual comprehension scoring — **NOT NEEDED.** The plan §2.4 assumed
+      comprehension needed a human; the author converted T2/T3/T4 to four-option
+      MCQs, so three of four item types are fully deterministic and the whole
+      pillar is judge-free. Nothing left for a human to score.
+
+> **Phase 2.2–2.4 all validate clean.** 10,668 automated checks across three
+> suites, plus the Phase 1 dataset verifiers and a byte-identical rebuild.
 
 **2.5 · Baseline runs — not started**
 - [!] Full baselines on 8B and 70B — **blocked by B2, B3**
@@ -180,6 +203,33 @@ deliberately, since audio items need real recorded Swiss German.
 7. Decide whether Phase 1C takes the audio track or stays text-only.
 
 ---
+
+## Phase 2.4 — defects its 515-check suite caught
+
+1. **`matches()` used full-prefix containment.** "Kartoffle" stems to `kartoffl`
+   and "Kartoffeln" to `kartoffeln`, which differ at the 8th character — so the
+   correct translation scored as a miss. Now common-prefix with a ratio floor.
+2. **Swiss German was undetectable on real text.** A hand-written marker list
+   detected **1 of 12** actual Alemannic sentences. Replaced with markers
+   derived by frequency analysis over the 461 Alemannic sentences in the
+   corpus: **7 of 12**, with zero false positives on the 12 Standard German
+   references. The remaining 5 are all Basel register, which marks itself with
+   vocabulary rather than function words.
+3. **Basel register therefore needed a second guard.** Added `dialect_echo()`,
+   which compares the reply against the source dialect *and* the reference and
+   flags "copied the input back" — needing no language identification at all,
+   so it covers exactly the register the detector misses. All 12/12 caught.
+4. **A lemma/surface-form defect in the data.** D002's key `können` never
+   appears in its own reference (which says `kann`), and D005's `volksfest`
+   likewise — so the *reference translation itself* scored 0.875 instead of
+   1.0. A scorer fault that would have presented as a model fault. Each such
+   term now takes the closest unclaimed reference token, recorded as
+   `inferred`. **Worth flagging to the dataset author — the synonym lists
+   should carry the reference's own surface form.**
+5. **The inference silently did nothing** at first: `"kann"` was in the
+   stopword list, so the one token that mattered was filtered out before the
+   inference could use it. Only caught because the invariant test asserts
+   `coverage == 1.0` and not merely `score == 2`.
 
 ## Phase 2.3 — the four bugs its test suite caught
 

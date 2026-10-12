@@ -63,6 +63,14 @@ def summarise(records: list) -> dict:
     Reports COUNTS alongside means, because with 30 items one item moving two
     points moves the mean materially - multilingual_scoring_protocol.md §2
     requires the distribution, not just the average.
+
+    Also reports how many PAIRS have an undefined depth_ratio, and why. A pair
+    is undefined whenever the English baseline itself achieved zero required-
+    element coverage, because the metric is "elements present ÷ elements present
+    in English" and that has no value when the denominator is 0. Those pairs
+    drop out of the Phase 4 DSG mean, so if that drop is silent the mean is
+    computed over a different denominator than the reader assumes. Counting them
+    here makes the exclusion visible before Phase 4 quotes the figure.
     """
     scored = [r for r in records if r.get("score") is not None]
     unscored = [r for r in records if r.get("score") is None]
@@ -86,6 +94,17 @@ def summarise(records: list) -> dict:
                    "dist": {s: v.count(s) for s in (0, 1, 2)}}
                for k, v in sorted(by_lang.items())}
 
+    # pairs whose depth_ratio cannot be computed, with the cause
+    pairs_total = {r["pair_id"] for r in records if r.get("pair_id")}
+    pairs_undefined = {}
+    for r in records:
+        if not r.get("pair_id") or r.get("lang") == "en":
+            continue
+        if r.get("depth_ratio") is None:
+            pairs_undefined.setdefault(
+                r["pair_id"], r.get("depth_baseline_n_present"))
+    usable_pairs = sorted(pairs_total - set(pairs_undefined))
+
     return {
         "n_records": len(records),
         "n_scored": len(scored),
@@ -96,6 +115,12 @@ def summarise(records: list) -> dict:
         "max_possible": 2,
         "by_category": by_category,
         "by_language": by_lang,
+        # pairs available for the Phase 4 DSG mean, and those that are not
+        "pairs_total": len(pairs_total),
+        "pairs_with_depth_ratio": len(usable_pairs),
+        "pairs_unusable_for_dsg": len(pairs_undefined),
+        "pairs_unusable_detail": {k: {"english_baseline_n_present": v}
+                                  for k, v in sorted(pairs_undefined.items())},
         # judge health - these are about the instrument, not the model
         "n_borderline": sum(1 for r in scored if r.get("borderline")),
         "judge_self_report_agreement": (
@@ -217,6 +242,9 @@ def evaluate_values(model_name: str, judge_model: str | None = None,
                 rec["pair_id"] = p["pair_id"]
                 rec["pair_validation"] = v.get("validation")
                 rec["dialect_region"] = v.get("dialect_region")
+                # Recorded so an undefined depth_ratio is diagnosable rather
+                # than just absent.
+                rec["depth_baseline_n_present"] = baseline_present
                 records.append(rec)
                 time.sleep(config.request_delay_seconds)
 
@@ -236,6 +264,13 @@ def evaluate_values(model_name: str, judge_model: str | None = None,
         "prompt_version": PROMPT_VERSION,
         "n_scenarios": len(scenarios),
         "n_records": len(records),
+        # Recorded so the "identical conditions for 8B and 70B" rule in
+        # docs/plans/phase_2.md §2.1 is AUDITABLE for values, not just asserted.
+        # Without this a values run gives no way to check that the two models
+        # were actually run at the same temperature and seed.
+        "request_params": client.request_params(),
+        "generation_max_tokens": 1200,
+        "judge_max_tokens": 400,
         "protocol": "data/values/multilingual_scoring_protocol.md",
         "rubric": "data/values/values_rubric.md",
     }
@@ -280,6 +315,14 @@ def _print_summary(s: dict, run: dict) -> None:
             bar = "#" * int(d["mean"] / 2 * 20)
             print(f"    {lang:<6} {bar:<20} mean {d['mean']:.2f}  n={d['n']:<3} "
                   f"0:{d['dist'][0]} 1:{d['dist'][1]} 2:{d['dist'][2]}")
+
+    if s.get("pairs_unusable_for_dsg"):
+        print(f"\n  dialect safety gap: {s['pairs_with_depth_ratio']}/{s['pairs_total']} pairs "
+              f"have a computable depth_ratio")
+        print(f"      {s['pairs_unusable_for_dsg']} pair(s) excluded because the ENGLISH "
+              f"baseline achieved zero required-element coverage,")
+        print(f"      leaving the ratio undefined: {s['pairs_unusable_detail']}")
+        print("      *** Phase 4 must report DSG_mean over the reduced n, not over 10. ***")
 
     if run["judge_is_self_evaluated"]:
         print(f"\n  ** JUDGE == MODEL: self-evaluated scores. Disclose in the README. **")

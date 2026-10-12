@@ -137,6 +137,30 @@ DIALECT_COMPREHEND_SYSTEM = (
 
 DIALECT_COMPREHEND_USER = """{swiss_german_text}"""
 
+# T2/T3/T4 of data/dialect/dialect_scoring_protocol.md are four-option MCQs
+# about a dialect sentence, not about Switzerland generally, so they get their
+# own templates rather than borrowing the Phase 1A ones. Parse handling is
+# shared with Phase 1A (eval/run_knowledge.explain_answer), so a dialect item and
+# a knowledge item are scored by the same rules - which is what makes the two
+# pillars comparable.
+DIALECT_MCQ_SYSTEM = (
+    "You are answering multiple-choice questions about Swiss German (Alemannic "
+    "dialects) and Swiss culture. Answer with ONLY the letter of the correct "
+    "option (A, B, C, or D). Do not explain."
+)
+
+DIALECT_MCQ_USER = """Swiss German sentence:
+{dialect_text}
+
+Question: {question}
+
+A) {option_a}
+B) {option_b}
+C) {option_c}
+D) {option_d}
+
+Answer (A, B, C, or D):"""
+
 
 # ------------------------------------------------------------------ LLM judge
 # NOTE ON THE RUBRIC TEXT BELOW
@@ -219,6 +243,8 @@ def all_templates() -> dict:
         "dialect_translate_user": DIALECT_TRANSLATE_USER,
         "dialect_comprehend_system": DIALECT_COMPREHEND_SYSTEM,
         "dialect_comprehend_user": DIALECT_COMPREHEND_USER,
+        "dialect_mcq_system": DIALECT_MCQ_SYSTEM,
+        "dialect_mcq_user": DIALECT_MCQ_USER,
         "judge_system": JUDGE_SYSTEM,
         "judge_user": JUDGE_USER,
     }
