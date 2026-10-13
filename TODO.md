@@ -292,6 +292,103 @@ deliberately, since audio items need real recorded Swiss German.
 > floor. k=3 and k=5 score identically because the 2,400-char context cap
 > saturates first (only 1 of 84 items' contexts actually differ).
 
+**4.1 · Held-out test run — machinery built; ⛔ BLOCKED on B2 (do not run)**
+- [x] **0. The seal** — `eval/seal.py` records and verifies the test-set hash, logs every access
+- [x] **1. Pre-flight gate** — 13 checks, refuses on mock / unsealed / dirty tree / frozen-code change
+- [x] **2. The runner** — `eval/run_test_final.py`, reuses the Phase 2 scorers, resumable
+- [x] **3. Sanity checks** — `quick_sanity_check()` plus the project's known failure modes
+- [x] **4. Resume** — a crashed run restarts alone; completed runs are never redone
+- [x] `fix/test_phase4.py` — **99 checks**
+- [x] `fix/PHASE4_1.md` — full writeup
+- [ ] **⛔ RUN IT** — requires B2 (real 8B) *and* B3 (70B route)
+
+> ### ⚠️ The one-shot rule was breached five times — by this project's own tests
+>
+> `eval/seal.py audit`, verbatim:
+>
+> ```
+> 2026-10-13T16:47:04+00:00  user  git=547cab4015d7  test-run knowledge/8b/baseline
+> 2026-10-13T16:48:43+00:00  user  git=547cab4015d7  test-run knowledge/8b/baseline
+> 2026-10-13T16:48:43+00:00  user  git=547cab4015d7  test-run knowledge/8b/baseline
+> 2026-10-13T16:48:48+00:00  user  git=547cab4015d7  test-run knowledge/8b/baseline
+> 2026-10-13T16:48:48+00:00  user  git=547cab4015d7  test-run knowledge/8b/baseline
+> ```
+>
+> The first is the bug; the other four were my own follow-up test runs before I
+> stubbed the guard out of the test path. Each read **all 36 sealed questions
+> against the mock backend**.
+>
+> **Root cause:** `run_test_final.run_one()` had **no gate of its own** — the
+> pre-flight lived in `main()`, so any caller that skipped `main()` was
+> unguarded. The test suite was exactly such a caller.
+>
+> - Mock artefacts **deleted**; `eval/results/test_run/` does not exist.
+> - The sealed file was **never modified** — SHA-256 unchanged, `verify` passes.
+> - **All five entries were kept.** Removing them would defeat the only mechanism
+>   that caught this, and it is also why this note cannot quietly say "one".
+> - `run_one` now calls `guard()` itself. `test_phase4.py` §6b asserts a direct
+>   call is refused, makes **0 model calls**, writes **0 files**.
+>
+> The real shot is unspent — all five produced synthetic responses nobody can
+> cite — but the accesses happened and are on the record. **This is the argument
+> for the audit log:** without it the first run would have succeeded, produced a
+> plausible 27.8% table, and been quoted.
+>
+> Before the real run: `mv eval/seal/access.log eval/seal/access.log.preflight-incident`
+> so the evaluation's own record is clean. The incident log is kept alongside it.
+
+> ### ⛔ Corrections to `docs/plans/phase_4.md` (details in `fix/PHASE4_1.md`)
+>
+> 1. **The plan's runner breaks Golden Rule 3 by construction.** It reimplements
+>    parsing, judging and dialect scoring. `extract_answer(text)` without
+>    `options=` silently disables exact-phrase matching — so **test numbers would
+>    not be comparable to dev numbers**, which defeats the purpose of a held-out
+>    set. `judge_response()` bypasses the rubric; the dialect branch discards
+>    `dialect_scoring_protocol.md` entirely. Metadata hardcodes "30 sources" when
+>    the corpus has **100**. This runner calls `evaluate_knowledge` /
+>    `evaluate_values` / `evaluate_dialect` instead — the same functions that
+>    produced every Phase 2 number.
+> 2. **The sanity check needed two more failure modes**: a score *at chance* (a
+>    broken parse path still returns `ok=True`, so "the API worked" proves
+>    nothing) and a **constant prediction** ("A" × 36 scores 25% and looks
+>    plausible). Chance is computed from the data — a hardcoded 35% threshold
+>    flagged a healthy 26.7% run as broken.
+> 3. **The improved arm is retrieval only**, not the 3.3a system prompt. Recorded
+>    in `IMPROVEMENT` so `run_metadata.json` cannot be misread.
+> 4. **The expected result is "no change."** 3.4 found p=0.42. The improved arm
+>    should match baseline. That is reportable, and Golden Rule 4 forbids
+>    reacting to it — it is also not a reason to skip the arm.
+
+> ### 📋 Run order once B2 lands
+>
+> ```bash
+> # eval/.env:  APERTUS_8B_BACKEND=http
+> git add -A && git commit -m "Phase 4: final test run"
+> python eval/seal.py freeze                        # Golden Rule 4
+> python eval/run_test_final.py --preflight         # must be all PASS
+> python eval/run_test_final.py
+> ```
+
+**3.4 · Dev-set validation — built and run; verdict is a null result**
+
+> ### ⛔ THE ONE SHOT HAS NOT BEEN SPENT — and must not be, yet
+>
+> `eval/.env` still has `APERTUS_8B_BACKEND=mock` and `APERTUS_70B_BACKEND=mock`.
+> **No model has ever run.** Running the 36-item sealed set now would spend the
+> single unrepeatable evaluation of this project on synthetic responses, and
+> `run_test_final.py` **refuses on that ground** (check `P2-backend-not-mock`).
+>
+> Everything in 4.1 that does not touch the test set is built and tested on the
+> **dev** split. When B2 lands, the run is one command.
+>
+> Two further preconditions the plan does not list but which are hard blockers:
+> - **The improvement is frozen.** Golden Rule 4 forbids changing the fix after
+>   seeing test numbers. `eval/seal.py freeze` records the git hash of the
+>   improvement; the runner refuses if HEAD moved.
+> - **3.4 found no detectable effect** (p=0.42). So the "improved" arm is
+>   expected to *match* baseline. That is a legitimate, reportable outcome —
+>   it is not a reason to change the fix now and not a reason to skip the arm.
+
 **3.4 · Dev-set validation — built and run; verdict is a null result**
 - [x] `fix/validate_improvement.py` — paired first, unpaired only as fallback
 - [x] Regression detection by the **exact paired test**, not by pp and not by net
@@ -347,9 +444,9 @@ deliberately, since audio items need real recorded Swiss German.
 > a justification. 3.2 refused to name a target (G1/G2/G3 all fired), so nothing
 > here picks one automatically.
 
-**Current total: 11,031 automated checks across nine suites, all passing.**
-(10,881 through 3.2, plus 62 in `fix/test_improvement.py` and 88 in
-`fix/test_validation.py`.)
+**Current total: 11,130 automated checks across ten suites, all passing.**
+(10,881 through 3.2, plus 62 in `fix/test_improvement.py`, 88 in
+`fix/test_validation.py`, and 99 in `fix/test_phase4.py`.)
 
 ## Phase 3.3 — defects its 62-check suite caught
 
@@ -381,6 +478,26 @@ deliberately, since audio items need real recorded Swiss German.
    `run_knowledge._content_tokens` warns about, and the signal retrieval most
    needs for the signature-threshold questions. Now reuses the project's tested
    tokenizer plus a German/French supplement.
+
+## Phase 4.1 — defects its 99-check suite caught
+
+1. **The test suite read the sealed test set.** The worst one in the project, and
+   it was self-inflicted. `test_phase4.py` called `run_one()` directly to test
+   resume logic; `run_one` had **no gate of its own** — the pre-flight lived in
+   `main()` — so it read all 36 sealed questions against the mock backend. Caught
+   by the audit log, not by a test. Fixed by moving the refusal to the point of
+   use (`guard()` inside `run_one`), deleting the mock artefacts, and keeping the
+   audit entry. **The lesson: a guard at the top of the program protects the main
+   path and nothing else, and "nothing else" is where the accident happens.**
+2. **The sanity checker's threshold was a magic 35%.** It flagged a healthy 26.7%
+   run as broken, because 26.7% is *above* the 25% chance level for four-option
+   questions. Replaced with a chance level computed from the data — which also
+   makes it correct for non-MCQ tasks, where 25% is the wrong floor entirely.
+3. **A path built in a temp dir crashed on `relative_to(ROOT)`.** Only visible
+   once the resume test stopped reaching the real filesystem.
+4. **Three fixtures assumed a clean git tree**, which is false whenever the
+   suite is testing uncommitted code. Now monkeypatched, and the dirty-tree
+   branch of the freeze check is exercised deliberately rather than skipped.
 
 ## Phase 3.4 — defects its 88-check suite caught
 

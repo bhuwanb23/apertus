@@ -1,0 +1,22 @@
+{
+  "exists": true,
+  "sha256": "df819e8c1582902a23197ed2aa4ab2e9aab431f0df60d0349a9ba5c9467293e2",
+  "n_questions": 36,
+  "bytes": 38696,
+  "item_keys": [
+    "category",
+    "correct_answer",
+    "difficulty",
+    "id",
+    "language",
+    "notes",
+    "options",
+    "question",
+    "source_id",
+    "source_quote",
+    "source_url"
+  ],
+  "recorded_utc": "2026-10-13T16:43:54+00:00",
+  "git_hash": "547cab4015d7dc8a91c13f1f44d6de9c0fb511f2",
+  "previous_record": null
+}

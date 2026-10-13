@@ -53,3 +53,12 @@ huggingface/
 # ---- OS ----------------------------------------------------------------------
 .DS_Store
 Thumbs.db
+# ---- Phase 4.1 seal state ----------------------------------------------------
+# The recorded hash is tracked; the access log and freeze are run-time state that
+# must be visible to anyone auditing the run, so both are tracked too. Only the
+# crash-time backup of the preflight-incident log is ignored.
+eval/seal/access.log.preflight-incident
+eval/results/test_run/
+eval/results/final_scores/
+eval/results/charts/
+eval/results/narrative/
