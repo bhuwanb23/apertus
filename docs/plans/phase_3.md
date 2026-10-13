@@ -1260,26 +1260,74 @@ A modest honest improvement beats an over-optimized fragile one.
 
 # 📊 PHASE 3 — SUMMARY DASHBOARD
 
-| Sub-Phase | Output | Time | Priority | Status |
-|---|---|---|---|---|
-| **3.1** Error Taxonomy | Categorized failure table with examples | 1.5–2h | 🔴 CRITICAL | ⬜ |
-| **3.2** Weakest Area | Documented target selection | 30–45min | 🔴 CRITICAL | ⬜ |
-| **3.3a** System Prompt | Improved prompt + results | 1–1.5h | 🟡 HIGH | ⬜ |
-| **3.3b** RAG Pipeline ⭐ | Working RAG + results | 3–4h | 🔴 CRITICAL | ⬜ |
-| **3.3c** LoRA (Stretch) | Fine-tuned adapter + results | 3–4h | 🟢 OPTIONAL | ⬜ |
-| **3.4** Dev Validation | Before/after comparison, no regressions | 1–1.5h | 🔴 CRITICAL | ⬜ |
+| Sub-Phase | Output | Time | Priority | Status | What it actually established |
+|---|---|---|---|---|---|
+| **3.1** Error Taxonomy | Categorized failure table with examples | 1.5–2h | 🔴 CRITICAL | ✅ built · 67 checks | Layered classification: mechanical → diagnostic → human. `UNCLASSIFIED` is not an error type and is never reported as dominant. |
+| **3.2** Weakest Area | Documented target selection | 30–45min | 🔴 CRITICAL | ✅ built · 96 checks | **Refuses to name a target.** Gates G1/G2/G3 fire on a mock baseline, an unresolved taxonomy and a single model. Power table: a per-category claim needs 6/14 flips; the whole set needs 6 net. |
+| **3.3a** System Prompt | Improved prompt + results | 1–1.5h | 🟡 HIGH | ✅ built · gated · **unvalidated** | The prompt proposed in §3.3 Option A answers **25/84 dev items (30%)**. Shipped prompt is behavioural-only at **0/84**, enforced by a gate that raises. |
+| **3.3b** RAG Pipeline ⭐ | Working RAG + results | 3–4h | 🔴 CRITICAL | ✅ built · **real retrieval numbers** · no effect claim | **Source recall 83.3% @1 / 90.5% @3 / 94.0% @5**, model-free ground truth, zero dependencies. The dense retriever is not the bottleneck. |
+| **3.3c** LoRA (Stretch) | Fine-tuned adapter + results | 3–4h | 🟢 OPTIONAL | ⛔ not attempted | Infeasible on an 8 GB card. Recorded rather than half-done. Reopens if B3 yields a larger GPU. |
+| **3.4** Dev Validation | Before/after comparison, no regressions | 1–1.5h | 🔴 CRITICAL | ✅ built · 88 checks · **verdict: null** | The >5 pp regression rule is a false-positive machine (1 item = 7.1 pp at n=14), and net movement is not significance either (10↑/4↓ has net +6, p=0.18). |
 
-**Total Phase 3 time: ~6–8 hours on Wed 14 Oct**
+**Total Phase 3 time: ~6–8 hours on Wed 14 Oct** — all six sub-phases are built and
+covered by **11,031 automated checks across nine suites**, all passing.
+
+### ⚠️ Status means "built and tested", not "measured"
+
+No model has run. `eval/.env` still has `APERTUS_8B_BACKEND=mock`, so **every
+accuracy figure in Phase 3 is a pipeline self-test**. What this phase genuinely
+produced is:
+
+1. **One real finding**: retrieval finds the answer's own source 94% of the time
+   at k=5 without any third-party dependency.
+2. **One blocked finding**: the plan's Option A prompt is contaminated at 30% of
+   the dev set, so the plan's headline improvement would have been the answer key.
+3. **Two null results**: no detectable effect on 3.4's paired comparison, and no
+   weakest area nameable while G1/G2/G3 hold.
+
+`baseline_report.py` and `validate_improvement.py` both **refuse to certify**
+these runs and exit non-zero. That refusal is the correct state, not a bug to
+work around. Unblocking **B2** is what turns this phase from built into measured.
+
+### Corrections made to this plan while implementing it
+
+| Plan says | Reality | Where |
+|---|---|---|
+| System prompt lists Swiss "CRITICAL FACTS" | Answers 25/84 dev items — the answer key | §3.3a, `fix/prompts_check.py` |
+| Embed with `all-MiniLM-L6-v2`, "multilingual" | That model is **English-only**; 48% of the corpus is Alemannic | §3.3b, `fix/rag/embeddings.py` |
+| Split `raw_pages` into ~800-char paragraphs | Those files mix headers and fact-candidate scaffolding into the evidence | §3.3b, `fix/rag/prepare_corpus.py` |
+| Flag a category worse by >5 pp | One item = 7.1 pp at n=14, so it flags any single flip | §3.4, `fix/validate_improvement.py` |
+| Compare a baseline file to a RAG file | Two runs can differ for reasons the subtraction cannot see | §3.4, paired-first loading |
+| "Install sentence-transformers" | BM25 already reaches 94% recall; not worth it before a real baseline | §3.3b, `fix/rag/RESULTS.md` |
 
 ---
 
-## ⚡ How I Can Help Right Now
+## ⚡ Re-running Phase 3 by hand
 
-- **"Analyze my baseline errors"** → Paste your results JSON and I'll classify the errors
-- **"Write the RAG pipeline"** → I'll give you copy-paste-ready code customized to your setup
-- **"Help me pick the weakest area"** → Share your baseline scores and I'll run the selection matrix
-- **"My RAG isn't helping"** → Debug session: paste retrieval results and I'll diagnose
-- **"Should I do LoRA?"** → Tell me your current status and I'll give an honest go/no-go
-- **"Write the comparison document"** → Share your numbers and I'll write the narrative
+The tools exist now, so none of these need pasting results anywhere:
 
-Your call. This is where the magic happens. 🎯🏆
+```bash
+python eval/run_knowledge.py --model 8b --split dev      # baseline
+python fix/analyze_errors.py --model 8b --diagnose      # 3.1
+python fix/select_target.py                              # 3.2 (refuses while gated)
+python fix/prompts_check.py fix/system_prompt/swiss_context_v1.txt --gate   # 3.3a
+python fix/rag/prepare_corpus.py --stats                 # 3.3b
+python fix/rag/retriever.py --backend bm25               # 3.3b, model-free
+python fix/rag/run_rag_eval.py --model 8b --split dev --topk 3   # 3.3b, paired
+python fix/validate_improvement.py --model 8b --split dev --write-comparison  # 3.4
+```
+
+Verification: `python fix/test_error_taxonomy.py`, `fix/test_select_target.py`,
+`fix/test_improvement.py`, `fix/test_validation.py`.
+
+**Each tool refuses to over-claim by design.** If a run refuses, read the refusal
+before working around it — the refusals are load-bearing:
+
+| Tool | Refuses when |
+|---|---|
+| `baseline_report.py` | `is_mock` is true |
+| `select_target.py` | any gate G1/G2/G3 fires |
+| `prompts_check.py` | a prompt answers >5% of the split |
+| `run_rag_eval.py` | the system prompt is contaminated |
+| `validate_improvement.py` | mock backend, or the runs are not comparable |
+| `analyze_errors.py` | `UNCLASSIFIED` dominates — it does not guess a dominant error |

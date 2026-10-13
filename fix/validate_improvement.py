@@ -86,8 +86,35 @@ PARSED_DIR = config.results_dir / "parsed"
 PP_PER_ITEM = 100 / 14
 
 # Net item movement below this is inside the noise floor that
-# fix/select_target.py's power table establishes for this benchmark.
+# fix/select_target.py's power table establishes for this benchmark. Used for
+# REPORTING ("this run moved less than the floor") and as a cheap necessary
+# condition before running the exact test - see is_significant for why net alone
+# is not sufficient.
 NOISE_FLOOR_ITEMS = 6
+
+
+def is_significant(improved: int, regressed: int, n: int,
+                   alpha: float = 0.05) -> tuple[bool, float]:
+    """
+    Is this movement distinguishable from noise, for THIS item count?
+
+    Necessary but NOT sufficient: `improved - regressed >= 6`.
+
+        10 improved / 4 regressed   net +6   p = 0.180   not detectable
+         6 improved / 0 regressed   net +6   p = 0.031   detectable
+
+    Both have net +6, so a net-only rule calls both an improvement while one of
+    them is indistinguishable from a coin flip. The exact paired test already
+    exists in select_target.mcnemar_exact and is used rather than reimplemented,
+    because two implementations of the same statistic drift apart and then one
+    of them is wrong.
+
+    `n` is the number of PAIRED items, not the sample size, since McNemar
+    conditions on the discordant pairs.
+    """
+    from select_target import mcnemar_exact
+    p = mcnemar_exact(improved, regressed)
+    return p < alpha, round(p, 4)
 
 
 # ------------------------------------------------------------------ loading
@@ -180,6 +207,13 @@ def analyse(before: list, after: list, label_before: str, label_after: str) -> d
         cr = [i for i in sub if b[i]["is_correct"] and not a[i]["is_correct"]]
         net = len(ci) - len(cr)
         before_p, after_p = acc(b, sub), acc(a, sub)
+
+        # The exact test, not a net sum. 10 gained / 4 lost has net +6 and
+        # p = 0.18, and must not be reported as an improvement just because the
+        # arithmetic nets out.
+        sig_improved, p_up = is_significant(len(ci), len(cr), len(sub))
+        sig_regressed, p_down = is_significant(len(cr), len(ci), len(sub))
+
         per_cat[c] = {
             "n": len(sub),
             "before_pct": before_p,
@@ -189,11 +223,12 @@ def analyse(before: list, after: list, label_before: str, label_after: str) -> d
             "improved": len(ci),
             "regressed": len(cr),
             "net_items": net,
-            # A category-level regression needs enough items to clear the noise
-            # floor. One item in fourteen is 7.1 pp, so a 5 pp threshold would
-            # flag a single flip.
-            "is_regression": net <= -NOISE_FLOOR_ITEMS,
-            "is_improvement": net >= NOISE_FLOOR_ITEMS,
+            # Directed: a category is a regression only if losing items is
+            # itself a detectable effect, not merely that net is negative.
+            "is_regression": sig_regressed and net < 0,
+            "is_improvement": sig_improved and net > 0,
+            "mcnemar_p_up": p_up,
+            "mcnemar_p_down": p_down,
             # Kept for readers who expect the plan's flag, but not used to decide.
             "plan_would_flag": (before_p is not None and after_p is not None
                                 and (after_p - before_p) < -5),
@@ -326,20 +361,25 @@ def verdict(res: dict, is_mock: bool, conflicts: list[str], paired: bool,
         A(f"Per-category (n={res['per_category'][sorted(res['per_category'])[0]]['n']} each, "
           f"1 item = {PP_PER_ITEM:.1f} pp):")
         A(f"  {'category':<12} {'before':>7} {'after':>7} {'delta':>7} "
-          f"{'imp':>4} {'reg':>4} {'net':>5}  status")
+          f"{'imp':>4} {'reg':>4} {'net':>5} {'p':>7}  status")
         for c, d in sorted(res["per_category"].items()):
             status = ("REGRESSION" if d["is_regression"]
                       else "improved" if d["is_improvement"]
                       else "within noise")
             A(f"  {c:<12} {d['before_pct']:>6}% {d['after_pct']:>6}% {d['delta_pp']:>+6} "
-              f"{d['improved']:>4} {d['regressed']:>4} {d['net_items']:>+5}  {status}")
+              f"{d['improved']:>4} {d['regressed']:>4} {d['net_items']:>+5} "
+              f"{d['mcnemar_p_up']:>7}  {status}")
+        A("")
+        A("  status is the exact paired test on that category's discordant pairs,")
+        A("  not a net sum: 10 gained / 4 lost has net +6 but p=0.18, and is not")
+        A("  an improvement. A category can move a lot and still be indistinguishable")
+        A("  from a coin flip, because each gain and each loss cancels.")
         A("")
 
     if res["plan_would_flag"]:
         A(f"  The plan's >5 pp rule would flag: {', '.join(res['plan_would_flag'])}")
-        A(f"  Those categories moved by fewer than {NOISE_FLOOR_ITEMS} net items, which at")
-        A(f"  n=14 is under the noise floor. One item = {PP_PER_ITEM:.1f} pp, so the 5 pp")
-        A("  threshold flags any single regression. Reported, not acted on.")
+        A(f"  Those categories did not move detectably. One item = {PP_PER_ITEM:.1f} pp at")
+        A("  n=14, so the 5 pp threshold flags any single regression. Reported, not acted on.")
         A("")
 
     if res["regressions"]:
@@ -351,7 +391,7 @@ def verdict(res: dict, is_mock: bool, conflicts: list[str], paired: bool,
     elif res["category_improvements"]:
         A(f"IMPROVED CATEGORIES: {', '.join(res['category_improvements'])}")
     else:
-        A("NO CATEGORY CLEARED THE NOISE FLOOR.")
+        A("NO CATEGORY MOVED BY MORE THAN CHANCE.")
         A("  Nothing to validate. This is a null result, not a small win.")
 
     if target:
@@ -435,14 +475,24 @@ def write_comparison(res: dict, meta: dict, conditional: dict | None) -> Path:
     A(f"One item in a 14-item category is **{PP_PER_ITEM:.1f} pp**, so every value below "
       f"moves in steps of {PP_PER_ITEM:.1f}.")
     A("")
-    A("| Category | Before | After | Delta | Improved | Regressed | Net | Status |")
-    A("|---|---|---|---|---|---|---|---|")
+    A("| Category | Before | After | Delta | Improved | Regressed | Net | p | Status |")
+    A("|---|---|---|---|---|---|---|---|---|")
+    if not res["per_category"]:
+        # A header with no rows is a table that reads as "no data" to a human and
+        # as "all categories fine" to a script. Say so instead.
+        A("| _no paired items - nothing was compared_ | | | | | | | | |")
     for c, d in sorted(res["per_category"].items()):
         status = ("**regression**" if d["is_regression"]
                   else "improved" if d["is_improvement"] else "within noise")
         A(f"| {c} | {_num(d['before_pct'])} | {_num(d['after_pct'])} | "
           f"{_num(d['delta_pp'], ' pp', signed=True)} | "
-          f"{d['improved']} | {d['regressed']} | {d['net_items']:+d} | {status} |")
+          f"{d['improved']} | {d['regressed']} | {d['net_items']:+d} | "
+          f"{d.get('mcnemar_p_up', 'n/a')} | {status} |")
+    A("")
+    A("Status is the exact paired McNemar test on that category's discordant")
+    A("pairs, not a comparison of percentages and not a net sum. A category can")
+    A("move a long way and still be indistinguishable from chance, because every")
+    A("gain and every loss cancels in the net.")
     A("")
     A("## By difficulty")
     A("")

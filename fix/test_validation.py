@@ -184,7 +184,7 @@ def test_real_regression_is_detected() -> None:
 
     res = vi.analyse(before, after, "b", "a")
     law = res["per_category"]["law"]
-    check("7 net items lost is flagged as a regression", law["is_regression"],
+    check("7 lost with 0 gained is flagged as a regression", law["is_regression"],
           str(law))
     check("the regression count matches", law["regressed"] == 7, str(law))
     check("law appears in the regressions list", "law" in res["regressions"])
@@ -202,7 +202,7 @@ def test_real_regression_is_detected() -> None:
                 and int(r["question_id"][2:]) <= 6 else r
                 for r in build({c: True for c in CATS})]
     res2 = vi.analyse(before, at_floor, "b", "a")
-    check("exactly 6 net items lost IS a regression (the floor is inclusive)",
+    check("exactly 6 lost IS a regression (the floor is inclusive)",
           res2["per_category"]["law"]["is_regression"],
           str(res2["per_category"]["law"]))
     check("6 lost is reported as net -6",
@@ -213,7 +213,7 @@ def test_real_regression_is_detected() -> None:
              and int(r["question_id"][2:]) <= 5 else r
              for r in build({c: True for c in CATS})]
     res3 = vi.analyse(before, below, "b", "a")
-    check("5 net items lost is NOT yet a regression",
+    check("5 lost is NOT yet a regression",
           not res3["per_category"]["law"]["is_regression"],
           str(res3["per_category"]["law"]))
 
@@ -221,11 +221,13 @@ def test_real_regression_is_detected() -> None:
     gained = [dict(r, is_correct=False) if r["category"] == "law" else r
               for r in before]
     res4 = vi.analyse(gained, before, "b", "a")
-    check("6 net items gained IS an improvement",
+    check("6 gained IS an improvement",
           res4["per_category"]["law"]["is_improvement"],
           str(res4["per_category"]["law"]))
     check("law appears in category_improvements",
           "law" in res4["category_improvements"], str(res4["category_improvements"]))
+    print(f"   -7 -> REGRESSION; -6 -> REGRESSION (floor inclusive); "
+          f"-5 -> within noise")
     print(f"   -7 items -> REGRESSION; -6 items -> REGRESSION (floor is inclusive); "
           f"-5 items -> within noise")
 
@@ -300,8 +302,22 @@ def test_comparison_has_no_placeholders() -> None:
     check("an empty comparison still has no placeholders", "XX.X" not in t3)
     check("absent numbers are labelled, not zeroed",
           "not measured" in t3, "a missing value must say it is missing")
-    check("absent numbers never appear as 0.0",
-          "| not measured |" in t3 or "not measured" in t3)
+
+    # A header row with no data rows beneath it reads as "nothing to report" to a
+    # human and as "no problems" to anything parsing the table. It must say it
+    # had nothing to compare.
+    check("an empty category table says so rather than emitting bare headers",
+          "no paired items" in t3,
+          "an empty table is indistinguishable from a clean one")
+    header_line = [l for l in t3.splitlines()
+                   if l.startswith("| Category | Before |")]
+    check("the category header exists exactly once", len(header_line) == 1)
+    if header_line:
+        idx = t3.splitlines().index(header_line[0])
+        rows_after = [l for l in t3.splitlines()[idx + 1:]
+                      if l.startswith("| ") and "---" not in l]
+        check("the empty table still has a body row", len(rows_after) > 0,
+              "header with nothing under it")
 
     # The console renderer must survive it too.
     vi.render(empty)
@@ -384,6 +400,94 @@ def test_conditional() -> None:
     print("   conditional = 83.3% baseline vs 100.0% on law; unjustified target flagged")
 
 
+# ============================ 8. a net sum cannot stand in for the exact test
+def test_net_is_not_significance() -> None:
+    """
+    The bug this guards against, stated as a fact about the arithmetic:
+
+        10 improved / 4 regressed   net +6   p = 0.180   NOT detectable
+         6 improved / 0 regressed   net +6   p = 0.031   detectable
+
+    Identical net. Opposite conclusions. A net-only rule calls both an
+    improvement; one of them is a coin flip. Each gain and each loss cancels in
+    the sum but not in the test, which is why the exact test is used.
+    """
+    section("8. A category is flagged by the exact test, not by its net movement")
+    import validate_improvement as vi
+
+    from select_target import mcnemar_exact
+
+    # The premise itself, checked against 3.2's own implementation.
+    check("net +6 with 4 regressions is NOT detectable",
+          mcnemar_exact(10, 4) >= 0.05, f"p={mcnemar_exact(10, 4)}")
+    check("net +6 with 0 regressions IS detectable",
+          mcnemar_exact(6, 0) < 0.05, f"p={mcnemar_exact(6, 0)}")
+    check("the two cases really do share a net",
+          (10 - 4) == (6 - 0))
+
+    sig, p = vi.is_significant(10, 4, 14)
+    check("is_significant(10, 4) says no", not sig, f"p={p}")
+    sig2, p2 = vi.is_significant(6, 0, 14)
+    check("is_significant(6, 0) says yes", sig2, f"p={p2}")
+    check("both p-values are reported", p == 0.1796 and p2 == 0.0312,
+          f"{p} / {p2}")
+
+    # Now the same thing through the real analysis: a category that gains 10 and
+    # loses 4 must NOT be reported as an improvement.
+    before = [dict(r, is_correct=False) if (r["category"] == "law"
+               and int(r["question_id"][2:]) <= 10) else r
+              for r in build({c: True for c in CATS})]
+    # after: the first 10 law items are FIXED, and 4 previously-correct law items
+    # are broken -> 10 improved, 4 regressed, net +6.
+    after = build({c: True for c in CATS})
+    after = [dict(r, is_correct=False) if (r["category"] == "law"
+               and 11 <= int(r["question_id"][2:]) <= 14) else r for r in after]
+    after = [dict(r, is_correct=True) if (r["category"] == "law"
+               and int(r["question_id"][2:]) <= 10) else r for r in after]
+
+    res = vi.analyse(before, after, "b", "a")
+    law = res["per_category"]["law"]
+    check("the fixture really is 10 improved / 4 regressed",
+          (law["improved"], law["regressed"]) == (10, 4), str(law))
+    check("its net is +6", law["net_items"] == 6, str(law))
+    check("but it is NOT reported as an improvement", not law["is_improvement"],
+          "net-only labelling bug is back")
+    check("and not as a regression either", not law["is_regression"])
+    check("law is absent from category_improvements",
+          "law" not in res["category_improvements"], str(res["category_improvements"]))
+    check("the per-category p-value is carried through",
+          law["mcnemar_p_up"] == 0.1796, str(law))
+
+    # Symmetrically, gains that are real must still register. Rebuild the
+    # baseline so only SIX law items are wrong, then fix exactly those six.
+    # Reusing `before` would carry ten wrong items and flip all ten.
+    before6 = [dict(r, is_correct=False) if (r["category"] == "law"
+                and int(r["question_id"][2:]) <= 6) else r
+               for r in build({c: True for c in CATS})]
+    after6 = build({c: True for c in CATS})
+    res2 = vi.analyse(before6, after6, "b", "a")
+    l2 = res2["per_category"]["law"]
+    check("the clean fixture is 6 improved / 0 regressed",
+          (l2["improved"], l2["regressed"]) == (6, 0), str(l2))
+    check("6 gained with no losses IS reported as an improvement",
+          l2["is_improvement"], str(l2))
+    check("its p-value is 0.0312", l2["mcnemar_p_up"] == 0.0312, str(l2))
+
+    # Both halves of the pair share net +6 and disagree. That is the whole point.
+    check("identical net, opposite verdicts - the premise of this test",
+          law["net_items"] == l2["net_items"] == 6
+          and law["is_improvement"] is False and l2["is_improvement"] is True,
+          f"{law['net_items']}/{l2['net_items']}")
+
+    # The verdict must explain the difference rather than just printing "noise".
+    v = vi.verdict(res, is_mock=False, conflicts=[], paired=True, target=None)
+    check("the verdict explains that net is not significance",
+          "not a net sum" in v, v[-500:])
+    check("the verdict gives the concrete counter-example", "10 gained / 4 lost" in v)
+    print(f"   net +6 with 4 regressions -> p={law['mcnemar_p_up']} -> NOT an "
+          f"improvement; net +6 with 0 -> p=0.0312 -> improvement")
+
+
 def main() -> int:
     print("=" * 70)
     print("  Phase 3.4 verification")
@@ -394,7 +498,8 @@ def main() -> int:
                test_attribution_blocked,
                test_comparison_has_no_placeholders,
                test_mock_is_not_certified,
-               test_conditional):
+               test_conditional,
+               test_net_is_not_significance):
         try:
             fn()
         except Exception as e:

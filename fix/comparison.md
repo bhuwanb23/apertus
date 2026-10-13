@@ -1,6 +1,6 @@
 # Improvement comparison
 
-Generated 2026-10-13T14:44:15+00:00 by `fix/validate_improvement.py`.
+Generated 2026-10-13T14:57:09+00:00 by `fix/validate_improvement.py`.
 
 > ## ⚠️ These are not results
 >
@@ -33,8 +33,14 @@ At n=0 a detectable effect needs about 6 net item flips. This run moved +0.
 
 One item in a 14-item category is **7.1 pp**, so every value below moves in steps of 7.1.
 
-| Category | Before | After | Delta | Improved | Regressed | Net | Status |
-|---|---|---|---|---|---|---|---|
+| Category | Before | After | Delta | Improved | Regressed | Net | p | Status |
+|---|---|---|---|---|---|---|---|---|
+| _no paired items - nothing was compared_ | | | | | | | | |
+
+Status is the exact paired McNemar test on that category's discordant
+pairs, not a comparison of percentages and not a net sum. A category can
+move a long way and still be indistinguishable from chance, because every
+gain and every loss cancels in the net.
 
 ## By difficulty
 
