@@ -292,10 +292,45 @@ deliberately, since audio items need real recorded Swiss German.
 > floor. k=3 and k=5 score identically because the 2,400-char context cap
 > saturates first (only 1 of 84 items' contexts actually differ).
 
-**3.4 · Dev-set validation — not started**
+**3.4 · Dev-set validation — built and run; verdict is a null result**
+- [x] `fix/validate_improvement.py` — paired first, unpaired only as fallback
+- [x] Regression detection **in items, not pp** — the plan's >5 pp rule is a false-positive machine
+- [x] Attribution gate — a delta across mismatched setups is refused, not reported
+- [x] Conditional RAG — requires an explicit `--target-category` **and** `--target-justification`
+- [x] `fix/comparison.md` — generated, carries no `XX.X` placeholders
+- [x] `fix/test_validation.py` (68 checks)
+- [x] Test split stays sealed — `--split test` exits 1, and no read call can name it
+- [ ] **Re-run on a real model (B2)** — mock is refused certification, exit 1
 
-**Current total: 10,943 automated checks across eight suites, all passing.**
-(10,881 through 3.2, plus 62 in `fix/test_improvement.py`.)
+> ### ⛔ The plan's regression rule is a false-positive machine
+>
+> `docs/plans/phase_3.md` §3.4 Step 2 asks "did any category get WORSE by >5%?"
+> and flags it. At n=14 per category **one item is 7.1 pp**, so a 5 pp threshold
+> flags *any* single flipped item and calls a coin-flip a regression.
+>
+> Regressions are therefore counted in **items**, with a floor of 6 net flips
+> (inclusive) from `select_target.py`'s power table. The plan's pp flag is still
+> *reported*, because a reader expects it — it just does not decide.
+> Demonstrated on the current mock run: the plan flags **health at −7.1 pp**,
+> which is one item. And **law at +21.5 pp** is only 3 net items, under the floor.
+> A clean-looking category table would have been entirely an artefact of n=14.
+
+> ### 📋 Result (mock, n=84, paired, top_k=3) — null
+>
+> 15 improved / 10 regressed, net **+5** items, **p = 0.42**. Below the 6-item
+> floor, so the comparison separates neither a real effect from noise nor the
+> reverse. **No category cleared the floor.** Difficulty profile is flat
+> (easy +2, medium +0, hard +3). `validate_improvement.py` **exits 1 and refuses
+> to certify**, because the backend is mock.
+>
+> Conditional on `law` computes to 19.0% vs 15.5% baseline — but that is
+> **arithmetic on existing runs, not a measurement**, and it is offered only with
+> a justification. 3.2 refused to name a target (G1/G2/G3 all fired), so nothing
+> here picks one automatically.
+
+**Current total: 11,011 automated checks across nine suites, all passing.**
+(10,881 through 3.2, plus 62 in `fix/test_improvement.py` and 68 in
+`fix/test_validation.py`.)
 
 ## Phase 3.3 — defects its 62-check suite caught
 
@@ -327,6 +362,27 @@ deliberately, since audio items need real recorded Swiss German.
    `run_knowledge._content_tokens` warns about, and the signal retrieval most
    needs for the signature-threshold questions. Now reuses the project's tested
    tokenizer plus a German/French supplement.
+
+## Phase 3.4 — defects its 68-check suite caught
+
+1. **`write_comparison` crashed on an absent number.** `f"{None:+.1f}"` raises,
+   so an empty or unpaired comparison could not write its document at all. Fixed
+   with `_num()`, which prints "not measured" — deliberately *not* `0.0`, since a
+   fabricated zero in a file people quote is worse than a crash.
+2. **`verdict()` and `render()` indexed `per_category[0]` on an empty dict**, so
+   a comparison with no paired items raised instead of reporting nothing.
+3. **The plan's comparison template is built to be quoted with its placeholders
+   in it.** `+XX.X pp` and `XX.X%` survive into any file generated from it. Every
+   number in `fix/comparison.md` is now a real value or the words "not measured",
+   and a test asserts `XX.X` never appears.
+4. **Two test fixtures asserted the wrong direction.** "One lost item" was built
+   as one *gained* item, and "4 gains / 8 regressions" was built as 4 gains / 0
+   regressions. Both passed a broken validator. Fixtures that do not describe the
+   case they name are the same failure as a validator that cannot fail.
+5. **The −6 boundary was asserted backwards.** 6 net items lost *is* a
+   regression: `select_target.py`'s power table puts the detection floor at
+   exactly 6, inclusive in both directions. The validator was right; the
+   expectation was not.
 
 ## Phase 3.2 — defects its 96-check suite caught
 
