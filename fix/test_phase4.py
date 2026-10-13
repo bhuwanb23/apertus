@@ -357,6 +357,15 @@ def test_resume() -> None:
                         "dialect": lambda m: fake_dispatch("dialect", m, "-")}
         saved_guard = rtf.guard
         rtf.guard = lambda require_live=True: (True, [])
+        # The audit log is redirected too. Otherwise every test run appends
+        # "test-run knowledge/8b/baseline" to the real log, and after a few test
+        # runs the record of who opened the sealed set is unreadable - test
+        # accesses and real ones become indistinguishable, which defeats the
+        # only mechanism that caught the original incident.
+        import seal as seal_mod
+        saved_audit = seal_mod.AUDIT_PATH
+        real_audit_len = len(seal_mod.read_audit())
+        seal_mod.AUDIT_PATH = Path(td) / "audit.log"
         try:
             r = rtf.run_one("knowledge", "8b", "baseline", 3, resume=False)
             check("a completed run is recorded",
@@ -391,6 +400,10 @@ def test_resume() -> None:
             rtf.TEST_RUN = saved
             rtf.DISPATCH = saved_dispatch
             rtf.guard = saved_guard
+            seal_mod.AUDIT_PATH = saved_audit
+        check("the test run did not touch the real audit log",
+              len(seal_mod.read_audit()) == real_audit_len,
+              "test accesses must not be mixed into the real record")
 
     src = (ROOT / "eval" / "run_test_final.py").read_text(encoding="utf-8")
     check("run_one catches exceptions and reports them per run",
@@ -421,6 +434,8 @@ def test_run_one_is_guarded() -> None:
         saved_dispatch = rtf.DISPATCH
         rtf.DISPATCH = {k: (lambda *a: calls.append(a) or {}) for k in
                         ("knowledge", "values", "dialect")}
+        import seal as seal_mod2
+        before_log = len(seal_mod2.read_audit())
         try:
             refused = False
             try:
@@ -434,6 +449,9 @@ def test_run_one_is_guarded() -> None:
         finally:
             rtf.TEST_RUN = saved
             rtf.DISPATCH = saved_dispatch
+        check("a refused call does not log an access",
+              len(seal_mod2.read_audit()) == before_log,
+              "the guard must fire before the access is logged")
 
     src = (ROOT / "eval" / "run_test_final.py").read_text(encoding="utf-8")
     body = src.split("def run_one", 1)[1]

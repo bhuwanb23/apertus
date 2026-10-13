@@ -32,7 +32,7 @@ ones the plan requires in pairs.
 
 ---
 
-## ⚠️ Five recorded accesses to the sealed set — all from this project's own tests
+## ⚠️ Seven recorded accesses to the sealed set — all from this project's own tests
 
 `eval/seal.py audit` is reproduced exactly as it stands:
 
@@ -42,16 +42,23 @@ ones the plan requires in pairs.
 2026-10-13T16:48:43+00:00  user  git=547cab4015d7  test-run knowledge/8b/baseline
 2026-10-13T16:48:48+00:00  user  git=547cab4015d7  test-run knowledge/8b/baseline
 2026-10-13T16:48:48+00:00  user  git=547cab4015d7  test-run knowledge/8b/baseline
+2026-10-13T16:59:22+00:00  user  git=076f3f74      test-run knowledge/8b/baseline
+2026-10-13T16:59:22+00:00  user  git=076f3f74      test-run knowledge/8b/baseline
 ```
 
-Five, not one. The first was the original bug; the other four were my own
-follow-up test runs before I stubbed the guard out of the test path. Each one
-read all 36 sealed questions against the **mock** backend and wrote
-`knowledge_8b_test_base.json` plus its scores.
+Seven, not one — and not the five first reported. The count grew while the bug
+was being fixed, which is exactly what a hand-maintained note gets wrong and a
+log cannot.
 
-**Root cause.** `run_test_final.run_one()` had **no gate of its own** — the
-pre-flight lived in `main()`. Any caller that did not go through `main()` was
-unguarded. The test suite was exactly such a caller.
+| entries | cause | read the sealed set? |
+|---|---|---|
+| 1 (16:47) | **the bug** — `run_one()` called directly, unguarded | **yes**, all 36, against mock |
+| 4 (16:48) | my follow-up test runs, before the guard was stubbed out of the path | **yes**, all 36, against mock |
+| 2 (16:59) | the resume test with a stubbed dispatcher | **no** — fake dispatch, temp dir |
+
+**Root cause of the first five.** `run_test_final.run_one()` had **no gate of its
+own** — the pre-flight lived in `main()`. Any caller that did not go through
+`main()` was unguarded, and the test suite was exactly such a caller.
 
 **Aftermath:**
 
@@ -60,21 +67,24 @@ unguarded. The test suite was exactly such a caller.
   derived file from any of the five survives anywhere.
 - The sealed file was never modified. Its SHA-256 is unchanged and
   `seal.py verify` passes.
-- **All five audit entries were kept.** Removing them would defeat the only
+- **All seven audit entries were kept.** Removing them would defeat the only
   mechanism that caught this. A log that can be tidied is not an audit.
 - `run_one` now calls `guard()` itself, putting the refusal at the point of use.
   `fix/test_phase4.py` §6b asserts a direct call is refused, makes zero model
-  calls, and writes zero files; §6 stubs the dispatcher so no test can reach the
-  model at all.
+  calls, writes zero files, and **logs no access**.
+- The test suite now redirects `seal.AUDIT_PATH` to a temp file. The last two
+  entries are exactly that problem: a test access indistinguishable from a real
+  one. A log that fills with noise stops answering the question it exists to
+  answer.
 
-**The real shot is unspent.** Every one of those runs produced synthetic
-responses that nobody can cite, and nothing from them exists. But the accesses
-happened, and they are on the record — which is the point.
+**The real shot is unspent.** The first five produced synthetic responses nobody
+can cite, and nothing from them exists. But the accesses happened and they are on
+the record.
 
 This is the argument for the audit log. Without it the first run would have
-succeeded, produced a plausible-looking table at 27.8%, and been quoted as a
-result. The log turned a silent contamination into a two-line fix, and it also
-meant this document could not quietly under-report five accesses as one.
+succeeded, produced a plausible-looking table at 27.8%, and been quoted. The log
+turned a silent contamination into a two-line fix — and it is also what made it
+impossible for this document to quietly under-report the count.
 
 **Before the real run, the log should be reset** — `mv eval/seal/access.log
 eval/seal/access.log.preflight-incident` — so the record of the actual evaluation

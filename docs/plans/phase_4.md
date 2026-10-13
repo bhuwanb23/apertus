@@ -14,6 +14,37 @@
 
 ---
 
+> ## ⚠️ 4.2 IMPLEMENTATION STATUS — built and verified, no numbers yet
+>
+> `eval/statistical_report.py` is built and covered by **178 checks**
+> (`python fix/test_statistics.py`), including seven published
+> Clopper-Pearson intervals and the defining property of every bound.
+>
+> **The report has no numbers in it**, because 4.1 has not run. It exits 1 and
+> writes a document that says so. What it *does* publish, before any data
+> exists, is the power limit — which is the part that should be read first:
+>
+> | | needs for p<0.05 |
+> |---|---|
+> | Overall, n=36 | 6 improvements with **0 regressions** = +16.7 pp |
+> | Per category, n=6 | **only a clean sweep (6/0, p=0.031)**; with one regression, nothing |
+>
+> **Corrections to §4.2 below**, detailed in `TODO.md`:
+>
+> 1. The sample code prints `ci = f"±{i['ci_range']/2}"` in the **delta**
+>    column. That is the *improved arm's* interval, not the delta's. Measured for
+>    8 gains / 1 regression: delta `[+0.9, +24.9]`, arm `[85.8, 99.5]`.
+> 2. It treats baseline and improved as independent. They answer the **same 36
+>    questions** and are paired, so McNemar applies and is much stronger here.
+> 3. Values scores are filtered with `[s for s in rows if s >= 0]` and only the
+>    survivor mean reported — a biased subset with nothing saying so.
+> 4. No category is named "best"; that is selection on 6×2×2 comparisons.
+> 5. The cross-check agreement rate is left un-invented until B5 exists.
+> 6. The template's category list includes "Holidays", which is not a category
+>    in this dataset.
+
+---
+
 # 🔬 PHASE 4 — FINAL EVALUATION & RESULTS: Complete Deep Dive
 
 **This is the moment of truth. You open the sealed test set exactly once. The numbers you produce here go into your submission, your README, your video, and the jury's evaluation. No do-overs.**

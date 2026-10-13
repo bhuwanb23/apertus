@@ -298,7 +298,7 @@ deliberately, since audio items need real recorded Swiss German.
 - [x] **2. The runner** — `eval/run_test_final.py`, reuses the Phase 2 scorers, resumable
 - [x] **3. Sanity checks** — `quick_sanity_check()` plus the project's known failure modes
 - [x] **4. Resume** — a crashed run restarts alone; completed runs are never redone
-- [x] `fix/test_phase4.py` — **99 checks**
+- [x] `fix/test_phase4.py` — **101 checks**
 - [x] `fix/PHASE4_1.md` — full writeup
 - [ ] **⛔ RUN IT** — requires B2 (real 8B) *and* B3 (70B route)
 
@@ -312,27 +312,40 @@ deliberately, since audio items need real recorded Swiss German.
 > 2026-10-13T16:48:43+00:00  user  git=547cab4015d7  test-run knowledge/8b/baseline
 > 2026-10-13T16:48:48+00:00  user  git=547cab4015d7  test-run knowledge/8b/baseline
 > 2026-10-13T16:48:48+00:00  user  git=547cab4015d7  test-run knowledge/8b/baseline
+> 2026-10-13T16:59:22+00:00  user  git=076f3f74  test-run knowledge/8b/baseline
+> 2026-10-13T16:59:22+00:00  user  git=076f3f74  test-run knowledge/8b/baseline
 > ```
 >
-> The first is the bug; the other four were my own follow-up test runs before I
-> stubbed the guard out of the test path. Each read **all 36 sealed questions
-> against the mock backend**.
+> **Seven**, not five — the count grew twice while fixing the bug, and the
+> honest sequence is:
 >
-> **Root cause:** `run_test_final.run_one()` had **no gate of its own** — the
-> pre-flight lived in `main()`, so any caller that skipped `main()` was
-> unguarded. The test suite was exactly such a caller.
+> | entries | cause | read the sealed set? |
+> |---|---|---|
+> | 1 (16:47) | **the bug**: `run_one` called directly, no gate | **yes**, all 36, against mock |
+> | 4 (16:48) | my follow-up test runs before stubbing the guard | **yes**, all 36, against mock |
+> | 2 (16:59) | the resume test with a stubbed dispatcher | **no** — fake dispatch, temp dir |
+>
+> **Root cause of the first five:** `run_test_final.run_one()` had **no gate of
+> its own** — the pre-flight lived in `main()`, so any caller that skipped
+> `main()` was unguarded. The test suite was exactly such a caller.
 >
 > - Mock artefacts **deleted**; `eval/results/test_run/` does not exist.
 > - The sealed file was **never modified** — SHA-256 unchanged, `verify` passes.
-> - **All five entries were kept.** Removing them would defeat the only mechanism
->   that caught this, and it is also why this note cannot quietly say "one".
+> - **All seven entries were kept.** Removing them would defeat the only
+>   mechanism that caught this, and it is also why this note cannot quietly say
+>   "one" or "five".
 > - `run_one` now calls `guard()` itself. `test_phase4.py` §6b asserts a direct
->   call is refused, makes **0 model calls**, writes **0 files**.
+>   call is refused, makes **0 model calls**, writes **0 files**, and **does not
+>   log an access**.
+> - The test suite now redirects `seal.AUDIT_PATH` to a temp file, so test
+>   accesses can never again be mixed into the real record — otherwise the log
+>   fills with indistinguishable entries and stops answering the question it
+>   exists to answer.
 >
-> The real shot is unspent — all five produced synthetic responses nobody can
-> cite — but the accesses happened and are on the record. **This is the argument
-> for the audit log:** without it the first run would have succeeded, produced a
-> plausible 27.8% table, and been quoted.
+> The real shot is unspent — the first five produced synthetic responses nobody
+> can cite — but the accesses happened and are on the record. **This is the
+> argument for the audit log:** without it the first run would have succeeded,
+> produced a plausible 27.8% table, and been quoted.
 >
 > Before the real run: `mv eval/seal/access.log eval/seal/access.log.preflight-incident`
 > so the evaluation's own record is clean. The incident log is kept alongside it.
@@ -368,6 +381,50 @@ deliberately, since audio items need real recorded Swiss German.
 > python eval/run_test_final.py --preflight         # must be all PASS
 > python eval/run_test_final.py
 > ```
+
+**4.2 · Statistical comparison — built and verified; ⛔ no numbers yet (needs 4.1)**
+- [x] `eval/statistical_report.py` — Wilson per arm, **exact paired CI on the delta**
+- [x] Paired McNemar throughout, reusing `select_target.mcnemar_exact`
+- [x] Power limits **computed and printed** — n=36 and n=6 tables in the artefact
+- [x] `statistical_report.md` + `test_scores.json`, no placeholders
+- [x] `fix/test_statistics.py` — **178 checks**, incl. 7 textbook CI values
+- [ ] **Run it** — needs 4.1's real results (B2/B3)
+
+> ### ⛔ What n=36 and n=6 actually support (computed, not asserted)
+>
+> | | needs for p<0.05 |
+> |---|---|
+> | **Overall, n=36** | **6 improvements with 0 regressions = +16.7 pp** (1 regression → 8 gains, +19.4 pp) |
+> | **Per category, n=6** | **ONLY a clean sweep: 6/0 → p=0.031.** With one regression, *nothing* is detectable at this n. |
+>
+> So the test set **cannot support any per-category claim**. `6/0 → p=0.031`,
+> `5/1 → p=0.219`, `4/2 → p=0.688`. Every table is labelled descriptive, and the
+> power table is printed into the report itself so the limit is visible in the
+> artefact rather than buried in a caveats paragraph.
+
+> ### ⛔ Corrections to `docs/plans/phase_4.md` §4.2
+>
+> 1. **The plan prints the wrong interval next to the delta.**
+>    `ci = f"±{improved['ci_range']/2}"` is the *improved arm's* CI, shown as
+>    though it bounded the *change*. It does not. Verified: for 8 gains / 1
+>    regression the delta CI is `[+0.9, +24.9]` while the improved arm's is
+>    `[85.8, 99.5]`.
+> 2. **The plan treats the arms as independent.** They answer the *same 36
+>    questions*, so they are paired. McNemar conditions on the discordant pairs
+>    and is far more powerful at this n. The delta's interval is derived exactly
+>    from those pairs — no bootstrap, no asymptotics, no seed.
+> 3. **Values scores were filtered with `[s for s in rows if s >= 0]`** and only
+>    the survivor mean reported. If a third of the judgements failed, the mean is
+>    computed on a biased subset with nothing saying so. The dropped count is
+>    now part of the output.
+> 4. **No "best category" is named.** 6 categories × 2 models × 2 methods;
+>    reporting the maximum is selection on the measurement set. Per-category
+>    rows are printed side by side and never ranked.
+> 5. **The cross-check agreement rate is not invented.** It needs B5. Until a
+>    human scores the 15 blind items the field says so.
+>
+> Also: the template's category list includes "Holidays", which is not a category
+> in this dataset (politics, law, health, geography, services, history).
 
 **3.4 · Dev-set validation — built and run; verdict is a null result**
 
@@ -444,9 +501,33 @@ deliberately, since audio items need real recorded Swiss German.
 > a justification. 3.2 refused to name a target (G1/G2/G3 all fired), so nothing
 > here picks one automatically.
 
-**Current total: 11,130 automated checks across ten suites, all passing.**
+**Current total: 11,310 automated checks across eleven suites, all passing.**
 (10,881 through 3.2, plus 62 in `fix/test_improvement.py`, 88 in
-`fix/test_validation.py`, and 99 in `fix/test_phase4.py`.)
+`fix/test_validation.py`, 101 in `fix/test_phase4.py`, and 178 in
+`fix/test_statistics.py`.)
+
+## Phase 4.2 — defects its 178-check suite caught
+
+1. **`clopper_pearson` returned an interval that did not contain its own point
+   estimate.** Two bugs stacked: the upper bound was inverted against
+   `1 - α/2` instead of `α/2`, and the lower bound's bisection assumed
+   `P(X > k)` *decreases* with `p` when it *increases*. For 2/10 it returned
+   `[1.0000, 0.0667]` — a lower bound of 100% and an upper bound below the
+   estimate. **Nothing crashed and no check failed**; the report would have been
+   written, published, and read as precision. Caught by testing against
+   *published* Clopper-Pearson values and by asserting the defining property
+   (each bound must reproduce P = 0.025 to 1e-9) rather than the
+   implementation's own behaviour.
+2. **A test asserted a false mathematical claim** — that `P(X ≤ k | n, p)`
+   increases with `p`. It does not; it is a degree-`k` polynomial that turns
+   over. Replaced with the branch the bisection actually visits, plus a comment
+   in the source recording why the general claim is false.
+3. **A significance check only tested the improvement direction**, so every
+   regression case passed regardless of its interval. 0 improvements / 6
+   regressions has p=0.031 and a CI excluding zero; the check expected the
+   opposite.
+4. **An assertion compared `d["direction"]` to itself** through broken operator
+   precedence, so it passed whatever the code did.
 
 ## Phase 3.3 — defects its 62-check suite caught
 
