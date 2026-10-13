@@ -240,13 +240,93 @@ deliberately, since audio items need real recorded Swiss German.
 > is not partitioned; restricting the test to that category would discard most
 > of the effect *and* most of the power.
 
-**3.3 · Improvement — not started**
-- [ ] 3.3a System prompt (Option A) · 3.3b RAG (Option B, highest ROI) · 3.3c LoRA (stretch)
-- [ ] `fix/rag/embeddings.py`, `retriever.py`, `rag_prompt.py`, `run_rag_eval.py`
+**3.3 · Improvement implementation — built and validated, no effect claim yet**
+- [x] **0. Contamination gate first** — 30% of dev was in the plan's prompt; see below
+- [x] **3.3a** System prompt — `fix/system_prompt/swiss_context_v1.txt`, behavioural rules only, 0/84 contamination
+- [x] **3.3b** RAG — corpus → retriever → paired eval; **source recall @5 = 94.0%** (real, model-free)
+- [x] **3.3c** LoRA — documented infeasible on an 8 GB card
+- [x] `fix/prompts_check.py`, `fix/test_improvement.py` (62 checks), `fix/rag/{prepare_corpus,embeddings,retriever,rag_prompt,run_rag_eval}.py`
+- [x] `fix/rag/RESULTS.md`
+- [ ] **Re-run all of 3.3 on a real model (B2)** — every accuracy so far is mock
+
+> ### ⛔ The contamination finding that shaped 3.3
+>
+> The system prompt `docs/plans/phase_3.md` §3.3 Option A proposes asserts
+> ~11 Swiss facts verbatim ("26 cantons", "100,000 signatures", "suffrage 1971",
+> "Federal Supreme Court is in Lausanne", …). Checking those against the dev
+> set: **25 of 84 items — 30% — are directly answered by that prompt.**
+>
+> So a large part of any measured "improvement" from Option A would be the answer
+> key injected into the prompt, not a capability change. Worse, it would not
+> transfer: the held-out test set is scored once in Phase 4.1 and the delta would
+> not reproduce on questions the prompt does not name.
+>
+> **Done: the 3.3a prompt carries behavioural rules and framing only — no
+> factual content the benchmark tests.** `fix/prompts_check.py` enforces it as a
+> hard gate that *raises*, and it re-runs at the start of every RAG run, so an
+> edit between review and run cannot slip through.
+>
+> ```
+> $ python fix/prompts_check.py fix/system_prompt/swiss_context_v1.txt --gate
+>   0/84 (0%) of dev items are answered by the prompt — CLEAN      exit 0
+> $ python fix/prompts_check.py /tmp/plan_prompt.txt --gate
+>   25/84 (30%) of dev items are answered by the prompt — CONTAMINATED  exit 1
+> ```
+
+> ### ✅ What 3.3 established (and what it did not)
+>
+> **Established, model-free and real:** retrieval finds the answer's own source
+> **94.0% of the time at k=5 (90.5% @3, 83.3% @1)**, median rank 1, using
+> pure-Python BM25 with **zero third-party dependencies**.
+> → The dense retriever is *not* the bottleneck, so installing
+> `sentence-transformers` is **not worth doing before a real baseline exists.**
+>
+> Two corrections to the plan's RAG design, both in `fix/rag/RESULTS.md`:
+> `all-MiniLM-L6-v2` is **English-only**, not multilingual as the plan claims
+> (178 of 367 chunks are Alemannic); and paragraph-splitting the `raw_pages`
+> files would mix URL headers and fact-candidate scaffolding into the evidence.
+>
+> **Not established:** that RAG helps Apertus, or that the behavioural prompt
+> helps. Paired mock run: 15 gains / 10 regressions, **p = 0.42 → "no detectable
+> effect"**, which is the correct verdict at n=84, where ~6 net flips is the
+> floor. k=3 and k=5 score identically because the 2,400-char context cap
+> saturates first (only 1 of 84 items' contexts actually differ).
 
 **3.4 · Dev-set validation — not started**
 
-**Current total: 10,881 automated checks across seven suites.**
+**Current total: 10,943 automated checks across eight suites, all passing.**
+(10,881 through 3.2, plus 62 in `fix/test_improvement.py`.)
+
+## Phase 3.3 — defects its 62-check suite caught
+
+1. **The control arm was not the baseline.** The first `rag_prompt.build()`
+   rendered the no-context arm with an *empty* system prompt and the RAG
+   template's `"(no context available)"` placeholder. Any delta against that
+   would have mixed "retrieval did not help" with "the control was
+   handicapped", indistinguishably. Fixed to delegate to
+   `run_knowledge.build_prompt`; §3 now asserts byte equality.
+
+2. **`compose()` silently accepted a filename as prompt text.** The RAG runner
+   passes pre-loaded prompt text, but a direct call with
+   `"swiss_context_v1.txt"` produced a 20-character system prompt reading
+   literally that — a nonsense system prompt that still runs and still scores.
+   Guarded on shape (short and single-line); testing for `"/"` alone would have
+   rejected the shipped prompt, which cites its own path in a provenance note.
+
+3. **Per-category recall exceeded 100% (reported as 378.6%).** The hit counter
+   incremented once per `k` rather than once per question. Per-category recall
+   is now counted at one stated `k`.
+
+4. **The median rank was computed from a nonsense expression** —
+   `sorted(rank_hist.elements(), key=...)` sorts ranks by their frequency, which
+   is meaningless. Now a real median over the expanded rank list.
+
+5. **A missing tokenizer import was invented rather than found.** `tokenise()`
+   imported `STOPWORDS` from `eval/prompts.py`, which does not exist. Worse, the
+   regex it would have used split `100,000` into `100` + `000` — the exact bug
+   `run_knowledge._content_tokens` warns about, and the signal retrieval most
+   needs for the signature-threshold questions. Now reuses the project's tested
+   tokenizer plus a German/French supplement.
 
 ## Phase 3.2 — defects its 96-check suite caught
 
