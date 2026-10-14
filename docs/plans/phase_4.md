@@ -1210,6 +1210,39 @@ understanding.
 
 ---
 
+> ## ⚠️ 4.4 IMPLEMENTATION STATUS — written, as a generator, with no model data
+>
+> `eval/narrative.py`, covered by **69 checks** (`python fix/test_narrative.py`).
+> Output: `eval/results/narrative/findings.md` (~2,000 words).
+>
+> **The template's placeholders are not all numbers.** §4.4 Step 2 pre-writes the
+> finding:
+>
+> > The most common error type across both models is **DE-CONF** (German/EU
+> > confusion), accounting for [XX]% of all wrong answers.
+>
+> Phase 3.1 found **78% of content errors `UNCLASSIFIED`**, and
+> `select_target.py` **refused to name a target** with all three gates firing.
+> Filling that sentence in would attribute the project's headline result to an
+> analysis that explicitly declined to make it.
+>
+> So `findings.md` is **generated from the data**, not filled in by hand. It
+> cannot state a claim the data does not contain, because it reads the data to
+> decide what to say.
+>
+> **Scenario: `pending`.** A (strong), B (modest) and D (scale) all require
+> accuracy numbers, and C presupposes a resolved error analysis. None is
+> available, so the generator says so and reports the findings that hold
+> without a model:
+>
+> 1. **Retrieval recall 94% at k=5** — ground truth, no GPU, zero dependencies
+> 2. **The proposed system prompt was contaminated at 30%** of the dev split
+> 3. **The error taxonomy did not resolve**, and that is reported as the finding
+> 4. **n=36 and n=6 cannot support the claims a category breakdown implies**
+> 5. **RAG showed no detectable effect on dev** (p = 0.42), properly measured
+
+---
+
 # 📖 SUB-PHASE 4.4 — CROSS-MODEL NARRATIVE
 
 ### 🎯 Goal

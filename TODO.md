@@ -293,6 +293,24 @@ deliberately, since audio items need real recorded Swiss German.
 > saturates first (only 1 of 84 items' contexts actually differ).
 
 **4.1 · Held-out test run — machinery built; ⛔ BLOCKED on B2 (do not run)**
+
+> ### ⛔ THE ONE SHOT HAS NOT BEEN SPENT — and must not be, yet
+>
+> `eval/.env` still has `APERTUS_8B_BACKEND=mock` and `APERTUS_70B_BACKEND=mock`.
+> **No model has ever run.** Running the 36-item sealed set now would spend the
+> single unrepeatable evaluation of this project on synthetic responses, and
+> `run_test_final.py` **refuses on that ground** (check `P2-backend-not-mock`).
+>
+> Everything in 4.1 that does not touch the test set is built and tested on the
+> **dev** split. When B2 lands, the run is one command.
+>
+> Two further preconditions the plan does not list but which are hard blockers:
+> - **The improvement is frozen.** Golden Rule 4 forbids changing the fix after
+>   seeing test numbers. `eval/seal.py freeze` records the git hash of the
+>   improvement; the runner refuses if HEAD moved.
+> - **3.4 found no detectable effect** (p=0.42). So the "improved" arm is
+>   expected to *match* baseline. That is a legitimate, reportable outcome —
+>   it is not a reason to change the fix now and not a reason to skip the arm.
 - [x] **0. The seal** — `eval/seal.py` records and verifies the test-set hash, logs every access
 - [x] **1. Pre-flight gate** — 13 checks, refuses on mock / unsealed / dirty tree / frozen-code change
 - [x] **2. The runner** — `eval/run_test_final.py`, reuses the Phase 2 scorers, resumable
@@ -465,27 +483,6 @@ deliberately, since audio items need real recorded Swiss German.
 >   the test delta — hiding how far the effect had to survive from n=84.
 > - **Every figure carries the n=36 detection limit on its face**, not in a caption.
 > - **Mock arms are watermarked**; fig4 is correctly *not*, since it needs no model.
-
-**3.4 · Dev-set validation — built and run; verdict is a null result**
-
-> ### ⛔ THE ONE SHOT HAS NOT BEEN SPENT — and must not be, yet
->
-> `eval/.env` still has `APERTUS_8B_BACKEND=mock` and `APERTUS_70B_BACKEND=mock`.
-> **No model has ever run.** Running the 36-item sealed set now would spend the
-> single unrepeatable evaluation of this project on synthetic responses, and
-> `run_test_final.py` **refuses on that ground** (check `P2-backend-not-mock`).
->
-> Everything in 4.1 that does not touch the test set is built and tested on the
-> **dev** split. When B2 lands, the run is one command.
->
-> Two further preconditions the plan does not list but which are hard blockers:
-> - **The improvement is frozen.** Golden Rule 4 forbids changing the fix after
->   seeing test numbers. `eval/seal.py freeze` records the git hash of the
->   improvement; the runner refuses if HEAD moved.
-> - **3.4 found no detectable effect** (p=0.42). So the "improved" arm is
->   expected to *match* baseline. That is a legitimate, reportable outcome —
->   it is not a reason to change the fix now and not a reason to skip the arm.
-
 **3.4 · Dev-set validation — built and run; verdict is a null result**
 - [x] `fix/validate_improvement.py` — paired first, unpaired only as fallback
 - [x] Regression detection by the **exact paired test**, not by pp and not by net
@@ -541,10 +538,57 @@ deliberately, since audio items need real recorded Swiss German.
 > a justification. 3.2 refused to name a target (G1/G2/G3 all fired), so nothing
 > here picks one automatically.
 
-**Current total: 11,422 automated checks across twelve suites, all passing.**
+**4.4 · Cross-model narrative — written and generated; scenario = `pending`**
+- [x] `eval/narrative.py` — **generates** findings.md from the data, not a template
+- [x] `eval/results/narrative/findings.md` — ~2,000 words, 5 acts, no placeholders
+- [x] Scenario chosen by the data: **`pending`** (A/B/C/D all inapplicable)
+- [x] `fix/test_narrative.py` — **69 checks**, incl. the two audience reviews
+- [ ] **Rewrite once 4.1 runs** — the generator re-runs and picks a real scenario
+
+> ### ⛔ The template's placeholders are not all numbers
+>
+> `docs/plans/phase_4.md` §4.4 Step 2 pre-writes the headline finding:
+>
+> > "The most common error type across both models is **DE-CONF** (German/EU
+> > confusion), accounting for [XX]% of all wrong answers."
+>
+> 3.1 found **78% of content errors `UNCLASSIFIED`**, and `select_target.py`
+> **refused to name a target** (G1/G2/G3 all fired). Filling that sentence in
+> would attribute the project's headline result to an analysis that explicitly
+> declined to make it. So `findings.md` is **generated from the data** and cannot
+> state a claim the data does not contain.
+>
+> Also **Scenario C is closest but still unavailable**: it would lead with "open
+> LLMs systematically confuse Swiss and German law", which is the same
+> unsupported assertion in different words. The generator selects `pending` and
+> carries that caveat.
+
+**Current total: 11,491 automated checks across thirteen suites, all passing.**
 (10,881 through 3.2, plus 62 in `fix/test_improvement.py`, 88 in
 `fix/test_validation.py`, 101 in `fix/test_phase4.py`, 178 in
-`fix/test_statistics.py`, and 112 in `fix/test_charts.py`.)
+`fix/test_statistics.py`, 112 in `fix/test_charts.py`, and 69 in
+`fix/test_narrative.py`.)
+
+## Phase 4.4 — defects its 69-check suite caught
+
+1. **I wrote a literal `XX%` into the generator's own prose**, in the sentence
+   explaining what *not* to write. The output was clean and the source was not —
+   so a test that only reads the output would have passed. Both are checked now.
+2. **`taxonomy_state()` read `error_type`; the field is `error_code`.** It
+   reported "0 of 0 unclassified", and the document rendered
+   **"None% … (0 of 0)"**. It also counted the 13 *correct* answers as errors,
+   since they carry `error_code: None` — inflating the very statistic the section
+   is about.
+3. **The document asserted the 70B values arm "is self-judged"** when no values
+   arm has run at all. The judge is configured; nothing has been judged.
+   Describing a future configuration as a finding is the same error as typing in
+   a number. Now phrased conditionally until the arm exists.
+4. **A redundant sentence** — "this cannot be delegated to a model" appeared
+   twice in one paragraph.
+5. **Three test bugs**: the placeholder detector's own pattern list tripped the
+   source scan; `answer key` was split across a hard line-wrap so a grep missed
+   it (a document hard-wrapped for readers is two tokens to grep); and an
+   "expected values" set rounded `90.5` to `91` before formatting.
 
 ## Phase 4.3 — defects its 112-check suite caught
 
