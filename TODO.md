@@ -426,6 +426,46 @@ deliberately, since audio items need real recorded Swiss German.
 > Also: the template's category list includes "Holidays", which is not a category
 > in this dataset (politics, law, health, geography, services, history).
 
+**4.3 · Visualisation — built and verified; 1 of 4 figures has real data**
+- [x] `eval/svgkit.py` — dependency-free SVG toolkit (matplotlib/numpy/PIL all absent)
+- [x] `eval/generate_charts.py` — 4 figures, each with its own honesty gate
+- [x] **fig4 retrieval recall — ✅ REAL** (83.3 / 90.5 / 94.0%, model-free)
+- [ ] fig1 / fig2 / fig3 — empty until 4.1 runs (B2/B3)
+- [x] `fix/test_charts.py` — **112 checks**
+
+> ### ⛔ The category heatmap is not built
+>
+> `docs/plans/phase_4.md` §4.3 asks for a heatmap to "show WHERE the improvement
+> helps most". At n=6:
+>
+> | score | 95% Wilson interval |
+> |---|---|
+> | 0/6 = 0% | **[0.0, 39.0]** |
+> | 3/6 = 50% | [18.8, 81.2] |
+> | 6/6 = 100% | **[61.0, 100.0]** |
+>
+> Every category is compatible with almost anything. A red-to-green ramp over
+> those numbers renders noise as a confident gradient, and a reader scanning the
+> picture concludes something specific about Swiss health insurance that the data
+> cannot distinguish from chance. **fig2 replaces it with intervals and states the
+> reason on the chart face.** A test asserts no chart contains a gradient.
+
+> ### ⛔ SVG, because nothing else is possible
+>
+> matplotlib, numpy and PIL are **all absent** and cannot be installed. A raster
+> chart needs a font rasteriser to draw text; SVG needs none — the renderer draws
+> the type. Bonus: the output is diffable and *verifiable*, so tests parse it as
+> XML and check bar geometry against the numbers (the k=5 bar must sit at exactly
+> the pixel 94.0% implies).
+
+> ### Notes
+>
+> - **fig3 (dev → test transfer) is not in the plan.** Transfer is the most
+>   scientifically interesting question here, and 4.1 would otherwise report only
+>   the test delta — hiding how far the effect had to survive from n=84.
+> - **Every figure carries the n=36 detection limit on its face**, not in a caption.
+> - **Mock arms are watermarked**; fig4 is correctly *not*, since it needs no model.
+
 **3.4 · Dev-set validation — built and run; verdict is a null result**
 
 > ### ⛔ THE ONE SHOT HAS NOT BEEN SPENT — and must not be, yet
@@ -501,10 +541,32 @@ deliberately, since audio items need real recorded Swiss German.
 > a justification. 3.2 refused to name a target (G1/G2/G3 all fired), so nothing
 > here picks one automatically.
 
-**Current total: 11,310 automated checks across eleven suites, all passing.**
+**Current total: 11,422 automated checks across twelve suites, all passing.**
 (10,881 through 3.2, plus 62 in `fix/test_improvement.py`, 88 in
-`fix/test_validation.py`, 101 in `fix/test_phase4.py`, and 178 in
-`fix/test_statistics.py`.)
+`fix/test_validation.py`, 101 in `fix/test_phase4.py`, 178 in
+`fix/test_statistics.py`, and 112 in `fix/test_charts.py`.)
+
+## Phase 4.3 — defects its 112-check suite caught
+
+1. **`_retrieval_numbers` fell back to hardcoded `83.3 / 90.5 / 94.0`** when the
+   retriever raised. A transient failure would have rendered a chart showing
+   *remembered* numbers as though freshly computed — a stale figure with nothing
+   marking it stale, which is the worst failure a chart can have. Now it returns
+   empty and the figure says "could not be measured".
+2. **That fix immediately exposed a real bug.** With no fallback, running the CLI
+   revealed `ModuleNotFoundError: No module named 'embeddings'` — `fix/rag` was on
+   `sys.path` for the tests but not for the program. Every test passed while the
+   CLI could not render its only figure with data. **A test that passes because it
+   fixed the environment differently from the program is not testing the program**,
+   so a test now runs the CLI and checks its output.
+3. **The legend drew "top-3" swatches on a figure with no bars at all.** A key to
+   nothing is misleading, not neutral. Now drawn only when there is data.
+4. **fig2's legend only appeared when data existed**, though it documents *how to
+   read* the chart — so the empty figure had no key. Split the difference: the
+   category legend always draws, the recall legend only draws with its bars.
+5. **Four test bugs**, including pairing bars with `k` in the wrong order (a taller
+   bar has a *smaller* pixel y, so ascending y pairs with *descending* k) and
+   flagging a docstring that names the literals it removed.
 
 ## Phase 4.2 — defects its 178-check suite caught
 

@@ -816,6 +816,39 @@ Manual cross-check agreement: XX% (6/30 scenarios audited)
 
 ---
 
+> ## ⚠️ 4.3 IMPLEMENTATION STATUS — built and verified, 1 of 4 figures has data
+>
+> `eval/svgkit.py` + `eval/generate_charts.py`, covered by **112 checks**
+> (`python fix/test_charts.py`).
+>
+> **matplotlib, numpy and PIL are all absent and cannot be installed.** A raster
+> chart would need a font rasteriser to draw text; SVG needs none, because the
+> renderer draws the type. Output is SVG — crisp at any size, diffable, and
+> verifiable (the tests parse it as XML and check the bar geometry against the
+> numbers).
+>
+> **The category heatmap is not built.** The plan asks for one to "show WHERE the
+> improvement helps most". At n=6 a category scoring 0/6 has a 95% interval of
+> [0.0, 39.0] and one scoring 6/6 has [61.0, 100.0]. A red-to-green ramp over those
+> numbers renders indistinguishable-from-anything as a confident gradient. fig2
+> replaces it with intervals and states the reason on the chart.
+>
+> | figure | what it is | status |
+> |---|---|---|
+> | `fig1_overall_accuracy` | both models, both arms, Wilson intervals, chance line | empty — needs 4.1 |
+> | `fig2_category_intervals` | per-category **with intervals**, no heatmap, not ranked | empty — needs 4.1 |
+> | `fig3_dev_to_test` | did the improvement transfer from dev (n=84) to test (n=36)? | empty — needs 4.1 |
+> | `fig4_retrieval_recall` | retrieval recall vs chance | **✅ real** — needs no model |
+>
+> fig3 is not in the plan. Transfer is the most scientifically interesting question
+> in the project and Phase 4.1 would otherwise report only the test delta, hiding
+> how far the effect had to survive.
+>
+> Every figure carries the n=36 detection limit on its face, and any figure built
+> from mock arms is watermarked.
+
+---
+
 # 📈 SUB-PHASE 4.3 — VISUALIZATION
 
 ### 🎯 Goal
