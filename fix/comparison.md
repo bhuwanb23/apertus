@@ -1,6 +1,6 @@
 # Improvement comparison
 
-Generated 2026-10-13T17:02:03+00:00 by `fix/validate_improvement.py`.
+Generated 2026-10-15T13:01:37+00:00 by `fix/validate_improvement.py`.
 
 > ## ⚠️ These are not results
 >
