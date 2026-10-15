@@ -90,7 +90,42 @@ def git_dirty() -> bool:
         return False
 
 
+HASH_SCHEME = "sha256/canonical-lf/v1"
+
+
+def canonical_bytes(raw: bytes) -> bytes:
+    """
+    Normalise a file to a form whose bytes do not depend on the platform's line
+    ending convention.
+
+    Why this exists: the seal's job is to detect a change to the TEST QUESTIONS.
+    Hashing raw bytes made it detect something else as well - whether the
+    repository happened to be checked out with `core.autocrlf` on. A judge
+    cloning this repo on a different machine, or anyone running the suite after
+    an editor rewrote line endings, would fail `verify()` on a file whose content
+    was untouched. That is a false alarm, and a seal that cries wolf gets
+    disabled.
+
+    So the hash is taken over normalised text: BOM stripped, CRLF and lone CR
+    folded to LF. A change to any question, option or answer still changes it.
+    A change of line endings alone does not - correctly, because it is not a
+    change to the questions.
+
+    The raw byte hash is still recorded alongside it, for forensics, because
+    "the bytes on disk differ" is sometimes the thing worth knowing.
+    """
+    if raw.startswith(b"\xef\xbb\xbf"):
+        raw = raw[3:]
+    return raw.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+
+
 def file_hash(path: Path = SEALED) -> str:
+    """Canonical content hash - the value the seal is judged on."""
+    return hashlib.sha256(canonical_bytes(path.read_bytes())).hexdigest()
+
+
+def file_hash_raw(path: Path = SEALED) -> str:
+    """Raw byte hash - forensic only, never used to refuse a run."""
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
@@ -109,6 +144,8 @@ def compute() -> dict:
     return {
         "exists": True,
         "sha256": h,
+        "hash_scheme": HASH_SCHEME,
+        "sha256_raw": file_hash_raw(),
         "n_questions": len(data),
         "bytes": len(raw.encode("utf-8")),
         # Structure only. The keys are the same in every item, so this leaks

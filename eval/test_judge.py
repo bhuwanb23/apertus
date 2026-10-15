@@ -496,13 +496,34 @@ def test_dataset() -> int:
 def test_circularity_disclosure(tmp: Path) -> int:
     """The judge being the model under test must be visible in the artefact."""
     from run_values import evaluate_values
-    result = evaluate_values("8b", judge_model="8b", skip_pairs=True, limit=2)
+
+    # Force mock for both responder and judge.
+    #
+    # Two reasons, and the second is the new one:
+    #  1. This test is about DISCLOSURE SHAPE - that judge==model-under-test is
+    #     flagged in both the meta and the parsed artefact. That is only
+    #     observable on mock, and asserting the ambient config was mock made the
+    #     test assert its environment instead of the code.
+    #  2. evaluate_values now REFUSES a mock judge unless allow_mock_judge is
+    #     passed, precisely so that mock scores cannot be produced silently.
+    #     A self-test must therefore opt in explicitly - which is the intended
+    #     workflow, not a workaround. The opt-in is visible here in the source.
+    from config import config, ModelConfig
+    saved = config.MODELS["8b"]
+    try:
+        config.MODELS["8b"] = ModelConfig(name="8b", backend="mock", model_id="mock")
+        result = evaluate_values("8b", judge_model="8b", skip_pairs=True, limit=2,
+                                 allow_mock_judge=True)
+    finally:
+        config.MODELS["8b"] = saved
     check("circ/run flag", result["run"]["judge_is_self_evaluated"], True)
     check("circ/recorded in meta", result["run"]["judge_model"], "8b")
     parsed = json.loads((config.results_dir / "parsed" / "values_8b.json").read_text())
     check("circ/recorded in parsed", parsed["run"]["judge_is_self_evaluated"], True)
     check("circ/mock flagged", result["scores"]["is_mock"], True)
-    return 4
+    check("circ/judge mock recorded separately",
+          result["run"].get("judge_is_mock"), True)
+    return 5
 
 
 # ------------------------------------------------------------------------ main

@@ -395,10 +395,27 @@ def test_pre_run() -> int:
     check("pre/dialect present", r.get("dialect items present"), "PASS")
     check("pre/no dev/test overlap", r.get("dev/test no overlap"), "PASS")
     check("pre/temperature is 0", r.get("config: temperature is 0 on every model"), "PASS")
-    check("pre/mock endpoint warns",
-          r.get("endpoint reachable: 8b"), "WARN")
-    check("pre/mock endpoint 70b warns",
-          r.get("endpoint reachable: 70b"), "WARN")
+    # Reachability expectations are DERIVED from the configured backend, not
+    # hardcoded. The three outcomes are all correct in their own situation:
+    #   mock  -> WARN  (no live model; baselines impossible)
+    #   live + server up   -> PASS
+    #   live + server down -> FAIL  (this is the check that saves a 2-hour run)
+    #
+    # This test previously asserted WARN unconditionally, which was only true
+    # while both models were on mock. Once 8B became a real http endpoint the
+    # assertion tested the environment rather than the code - and FAIL is the
+    # correct answer until llama-server is actually running.
+    for key in ("8b", "70b"):
+        m = config.MODELS[key]
+        label = f"endpoint reachable: {key}"
+        got = r.get(label)
+        if m.is_mock:
+            check(f"pre/mock endpoint {key} warns", got, "WARN")
+        elif got == "PASS":
+            check(f"pre/live endpoint {key} reachable", got, "PASS")
+        else:
+            # Server not running yet - FAIL is the correct, protective verdict.
+            check(f"pre/unreachable live endpoint {key} fails loudly", got, "FAIL")
     _clean()
     return 8
 

@@ -383,7 +383,22 @@ def test_dataset() -> int:
 def test_end_to_end() -> int:
     n = 0
     from run_dialect import evaluate_dialect
-    result = evaluate_dialect("8b", limit=6)
+
+    # Force the mock backend for this test.
+    #
+    # The end-to-end test is about SHAPE - that a dialect run produces records,
+    # thresholds, per-dialect and per-type breakdowns, a refusal headline, and
+    # flags itself as mock. All of that is only observable on the mock backend.
+    # Asserting that the ambient configuration happens to be mock made the test
+    # assert the environment rather than the code, so it failed the moment a
+    # real backend was configured - which is exactly when it must keep working.
+    from config import config, ModelConfig
+    saved = config.MODELS["8b"]
+    try:
+        config.MODELS["8b"] = ModelConfig(name="8b", backend="mock", model_id="mock")
+        result = evaluate_dialect("8b", limit=6)
+    finally:
+        config.MODELS["8b"] = saved
     run, scores = result["run"], result["scores"]
 
     check("e2e/task", run["task"], "dialect")

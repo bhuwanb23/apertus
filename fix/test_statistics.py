@@ -306,7 +306,7 @@ def test_nothing_unmeasured_is_reported() -> None:
     check("_f signs a negative", sr._f(-3.0, " pp", True) == "-3.0 pp")
 
     # The document must never carry the plan's placeholders.
-    with tempfile.TemporaryDirectory(dir="/tmp/opencode") as td:
+    with tempfile.TemporaryDirectory() as td:
         empty = sr.compute(models=())
         p = sr.write_report(empty, Path(td) / "r.md")
         text = p.read_text(encoding="utf-8")

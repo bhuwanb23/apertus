@@ -61,20 +61,40 @@ def test_refuses_on_mock() -> None:
     import run_test_final as rtf
     from config import config
 
-    check("both models are currently mock",
-          all(config.model(m).is_mock for m in ("8b", "70b")),
-          "if this is false, B2 landed - update this test, it is asserting the premise")
+    # Force the mock backend explicitly rather than asserting that the ambient
+    # configuration happens to be mock.
+    #
+    # The previous version checked `all(config.model(m).is_mock ...)` - that
+    # asserts the ENVIRONMENT, not the code under test, so it broke the moment
+    # a real backend was configured, which is precisely when this test still
+    # needed to work. A test that can only pass before the project leaves mock
+    # stops guarding the rule exactly when the rule starts to matter.
+    #
+    # The behaviour under test is "preflight refuses when the backend is mock".
+    # To test that, set the backend to mock for the duration.
+    from config import config, ModelConfig
+    saved = {k: config.MODELS[k] for k in ("8b", "70b")}
+    try:
+        for k in ("8b", "70b"):
+            config.MODELS[k] = ModelConfig(name=k, backend="mock", model_id="mock")
+        check("both models forced to mock for this test",
+              all(config.model(m).is_mock for m in ("8b", "70b")))
 
-    pf = rtf.preflight(require_live=True, check_freeze=True)
-    check("pre-flight fails while on mock", not pf["ok"])
-    ids = {c["id"]: c for c in pf["checks"]}
-    check("the mock backend is a named blocking check",
-          "P2-backend-not-mock" in ids and not ids["P2-backend-not-mock"]["ok"])
-    check("the refusal explains what is at stake",
-          "unrepeatable" in ids["P2-backend-not-mock"]["detail"],
-          ids["P2-backend-not-mock"]["detail"])
-    check("every check is reported, not just the first failure",
-          len(pf["checks"]) >= 12, f"{len(pf['checks'])} checks")
+        pf = rtf.preflight(require_live=True, check_freeze=True)
+        check("pre-flight fails while on mock", not pf["ok"])
+        ids = {c["id"]: c for c in pf["checks"]}
+        check("the mock backend is a named blocking check",
+              "P2-backend-not-mock" in ids and not ids["P2-backend-not-mock"]["ok"])
+        check("the refusal explains what is at stake",
+              "unrepeatable" in ids["P2-backend-not-mock"]["detail"],
+              ids["P2-backend-not-mock"]["detail"])
+        check("every check is reported, not just the first failure",
+              len(pf["checks"]) >= 12, f"{len(pf['checks'])} checks")
+    finally:
+        config.MODELS.update(saved)
+    check("the real backend configuration is restored",
+          config.MODELS["8b"].backend == saved["8b"].backend,
+          f"8b backend {config.MODELS['8b'].backend}")
 
     # The CLI must exit non-zero and must not have written any test results.
     r = subprocess.run([sys.executable, str(ROOT / "eval" / "run_test_final.py"),
@@ -123,7 +143,7 @@ def test_seal_detects_tampering() -> None:
     # file is never touched - the tests must not be the thing that breaks the seal.
     sealed = seal.SEALED
     original = sealed.read_bytes()
-    with tempfile.TemporaryDirectory(dir="/tmp/opencode") as td:
+    with tempfile.TemporaryDirectory() as td:
         tampered = Path(td) / "knowledge_test.json"
         tampered.write_bytes(original.replace(b'"A"', b'"Z"', 1))
         check("the tampered copy differs from the sealed file",
@@ -161,7 +181,7 @@ def test_freeze() -> None:
     # therefore exercised by monkeypatching rather than by waiting for a commit.
     was_dirty = seal.git_dirty
 
-    with tempfile.TemporaryDirectory(dir="/tmp/opencode") as td:
+    with tempfile.TemporaryDirectory() as td:
         saved_freeze = seal.FREEZE_PATH
         seal.FREEZE_PATH = Path(td) / "freeze.json"
         try:
@@ -316,10 +336,16 @@ def test_reuses_phase2_scorers() -> None:
           "30" not in rtf.IMPROVEMENT.get("method", ""),
           f"method={rtf.IMPROVEMENT.get('method')!r}; the corpus has 100 sources")
 
-    # All eight runs exist, and knowledge gets both methods.
+    # Every run the declared scope requires must exist. The original design was
+    # two models x (2 knowledge + 1 values + 1 dialect) = 8 runs; the scope was
+    # later narrowed to 8B only (70B cannot fit this machine), which is a
+    # recorded disclosure rather than a silent shrink. So the count is derived
+    # from SCOPE_MODELS, and the narrowing itself is asserted explicitly below.
     ids = [f"{t}_{m}_{x}" for t, m, x in rtf.RUNS]
-    check("8 runs are planned", len(ids) == 8, str(len(ids)))
-    for m in ("8b", "70b"):
+    n_expected = len(rtf.SCOPE_MODELS) * 4
+    check(f"{n_expected} runs are planned for {len(rtf.SCOPE_MODELS)} in-scope model(s)",
+          len(ids) == n_expected, str(len(ids)))
+    for m in rtf.SCOPE_MODELS:
         for meth in ("baseline", "improved"):
             check(f"knowledge_{m}_{meth} is planned",
                   f"knowledge_{m}_{meth}" in ids)
@@ -327,6 +353,17 @@ def test_reuses_phase2_scorers() -> None:
               any(i.startswith(f"values_{m}_") for i in ids), str(ids))
         check(f"a dialect run is planned for {m}",
               any(i.startswith(f"dialect_{m}_") for i in ids), str(ids))
+
+    # The narrowing is disclosed, not merely applied.
+    check("the dropped model is declared", rtf.DROPPED_MODELS == ("70b",),
+          str(rtf.DROPPED_MODELS))
+    check("the drop carries a stated reason", len(rtf.DROPPED_REASON) > 80)
+    check("the reason admits the lost capability",
+          "cannot distinguish" in rtf.DROPPED_REASON, rtf.DROPPED_REASON[:90])
+    check("no dropped model appears in the run list",
+          not any(m in rtf.DROPPED_MODELS for _, m, _ in rtf.RUNS), str(ids))
+    check("scope is recorded in run_metadata",
+          '"scope"' in src and '"dropped_reason"' in src)
     check("no run targets anything but the two configured models",
           all(m in ("8b", "70b") for _, m, _ in rtf.RUNS))
     print(f"   {len(ids)} runs planned, all via the Phase 2 scorers")
@@ -337,7 +374,7 @@ def test_resume() -> None:
     section("6. An interrupted run resumes without repeating completed work")
     import run_test_final as rtf
 
-    with tempfile.TemporaryDirectory(dir="/tmp/opencode") as td:
+    with tempfile.TemporaryDirectory() as td:
         saved = rtf.TEST_RUN
         rtf.TEST_RUN = Path(td)
         # A stubbed dispatcher. The real one evaluates the model against the
@@ -421,13 +458,39 @@ def test_run_one_is_guarded() -> None:
     # directly, which skipped main()'s pre-flight and read all 36 sealed
     # questions through the mock backend. Nothing caught it except a human
     # reading the log. The guard now lives at the point of use.
-    ok, problems = rtf.guard()
+    #
+    # The refusal must be provoked, not assumed: 8B is a live backend now, so
+    # the guard correctly ALLOWS the run. Put it back on mock to observe the
+    # refusal the guard is supposed to produce.
+    from config import config, ModelConfig
+    saved_8b = config.MODELS["8b"]
+    try:
+        config.MODELS["8b"] = ModelConfig(name="8b", backend="mock",
+                                         model_id="mock")
+        ok, problems = rtf.guard()
+    finally:
+        config.MODELS["8b"] = saved_8b
     check("guard() refuses on mock", not ok)
     check("it names the mock backend", any("mock" in p for p in problems),
           str(problems))
 
+    # And the complementary property: a live in-scope model is NOT refused for
+    # mock reasons, while a live model that was dropped from scope IS refused.
+    ok_live, _ = rtf.guard()
+    check("guard() allows the live in-scope model", ok_live)
+    saved_70 = config.MODELS["70b"]
+    try:
+        config.MODELS["70b"] = ModelConfig(name="70b", backend="http",
+                                           model_id="apertus-v1.5-70b")
+        ok_stale, stale = rtf.guard()
+    finally:
+        config.MODELS["70b"] = saved_70
+    check("guard() refuses a live model dropped from scope", not ok_stale)
+    check("the stale-scope refusal is explained",
+          any("out of scope" in p for p in stale), str(stale))
+
     # And it refuses at the point of use, not just in main().
-    with tempfile.TemporaryDirectory(dir="/tmp/opencode") as td:
+    with tempfile.TemporaryDirectory() as td:
         saved = rtf.TEST_RUN
         rtf.TEST_RUN = Path(td)
         calls = []
@@ -436,7 +499,18 @@ def test_run_one_is_guarded() -> None:
                         ("knowledge", "values", "dialect")}
         import seal as seal_mod2
         before_log = len(seal_mod2.read_audit())
+        # Force the guard to REFUSE so the ordering guarantee can be tested.
+        #
+        # The property under test is "the guard fires BEFORE the access is
+        # logged", which is only observable on a run that is refused. Now that
+        # 8B is a live backend the guard correctly allows the call, so the test
+        # must put it back into a refusing state rather than depend on the
+        # ambient configuration being unconfigured.
+        from config import config, ModelConfig
+        saved_8b = config.MODELS["8b"]
         try:
+            config.MODELS["8b"] = ModelConfig(name="8b", backend="mock",
+                                             model_id="mock")
             refused = False
             try:
                 rtf.run_one("knowledge", "8b", "baseline", 3, resume=False)
@@ -447,11 +521,12 @@ def test_run_one_is_guarded() -> None:
             check("nothing was written to test_run/",
                   not list(Path(td).glob("*.json")))
         finally:
-            rtf.TEST_RUN = saved
-            rtf.DISPATCH = saved_dispatch
+            config.MODELS["8b"] = saved_8b
         check("a refused call does not log an access",
               len(seal_mod2.read_audit()) == before_log,
               "the guard must fire before the access is logged")
+        rtf.TEST_RUN = saved
+        rtf.DISPATCH = saved_dispatch
 
     src = (ROOT / "eval" / "run_test_final.py").read_text(encoding="utf-8")
     body = src.split("def run_one", 1)[1]
@@ -465,7 +540,7 @@ def test_rerun_refused() -> None:
     section("7. Re-running to improve the numbers is refused")
     import run_test_final as rtf
 
-    with tempfile.TemporaryDirectory(dir="/tmp/opencode") as td:
+    with tempfile.TemporaryDirectory() as td:
         saved = rtf.TEST_RUN
         rtf.TEST_RUN = Path(td)
         try:
@@ -489,7 +564,7 @@ def test_audit_log() -> None:
     section("8. Every access to the sealed file is logged")
     import seal
 
-    with tempfile.TemporaryDirectory(dir="/tmp/opencode") as td:
+    with tempfile.TemporaryDirectory() as td:
         saved = seal.AUDIT_PATH
         seal.AUDIT_PATH = Path(td) / "access.log"
         try:
