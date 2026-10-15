@@ -181,9 +181,28 @@ class HttpBackend:
 
         choice = body["choices"][0]
         usage = body.get("usage") or {}
+        msg = choice["message"] or {}
+        content = (msg.get("content") or "").strip()
+        reasoning = (msg.get("reasoning_content") or msg.get("reasoning") or "").strip()
+
+        # Apertus v1.5 is a REASONING model: it emits a thinking block before the
+        # answer, which llama-server surfaces as `reasoning_content`. Reading only
+        # `content` is a live landmine - if max_tokens is consumed by the thinking
+        # block, `content` comes back as an empty string and the whole evaluation
+        # silently scores near zero. That failure is invisible, so it is handled
+        # explicitly here rather than hoped away upstream.
+        #
+        # The reasoning trace is concatenated into `text` because the answer is
+        # frequently referenced positionally ("as shown above, the answer is C"),
+        # and dropping the trace would lose information the parser needs. Both
+        # halves stay separately available for auditing.
+        text = f"{reasoning}\n{content}".strip() if reasoning else content
         return {
-            "text": (choice["message"].get("content") or "").strip(),
+            "text": text,
+            "content": content,
+            "reasoning": reasoning,
             "finish_reason": choice.get("finish_reason"),
+            "spent_all_tokens_on_reasoning": bool(reasoning) and not content,
             "usage": {
                 "prompt_tokens": usage.get("prompt_tokens", -1),
                 "completion_tokens": usage.get("completion_tokens", -1),
@@ -228,7 +247,7 @@ class OpenAIBackend:
         choice = response.choices[0]
         usage = response.usage
         return {
-            "text": (choice.message.content or "").strip(),
+            "text": (choice.message.content or choice.message.reasoning_content or "").strip(),
             "finish_reason": choice.finish_reason,
             "usage": {
                 "prompt_tokens": getattr(usage, "prompt_tokens", -1),

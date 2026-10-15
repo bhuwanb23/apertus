@@ -59,11 +59,23 @@ TEST SET GOLDEN RULES:
 1. ONE SHOT ONLY — you run the test set, you record the numbers,
    you NEVER re-run to "see if you can do better"
 
-2. FOUR RUNS MINIMUM for knowledge:
+2. TWO RUNS MINIMUM for knowledge:
    → 8B baseline (no fix)
    → 8B improved (with your fix)
-   → 70B baseline (no fix)
-   → 70B improved (with your fix)
+
+   SCOPE CHANGE, disclosed: the original rule called for FOUR runs, adding
+   70B baseline and 70B improved. The evaluation machine has 8 GB of VRAM
+   (RTX 5060); Apertus v1.5 70B cannot be loaded or served locally under any
+   quantisation, so the 70B arms were dropped rather than approximated.
+
+   This WEAKENS the design and must be stated as such in the final report:
+     - "does the fix help this model?"  — still answerable (paired, same model)
+     - "is the gain model-specific?"    — NO LONGER answerable. With one model
+       we cannot distinguish a general improvement from an 8B-specific
+       artefact. A 70B arm is the only thing that would have separated those.
+   Rule 5 below gets stricter as a result: no effect-size claims beyond what a
+   single-model paired test can carry, and no "generalises across scales" claim
+   at all.
 
 3. IDENTICAL CONDITIONS to Phase 2 — same temperature (0),
    same prompt templates, same parsing code, same seed

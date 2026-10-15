@@ -127,26 +127,50 @@ def _build(key: str, default_model_id: str, default_api_base: str = "") -> Model
     )
 
 
-class EvalConfig:
-    """Project-wide settings. Everything is overridable by environment variable."""
-
-    MODELS: dict[str, ModelConfig] = {
-        # Default is a TEXT-ONLY 4-bit extract. See eval/README.md for why:
-        # swiss-ai/Apertus-v1.5-8B is the full Omni model (8.9 B params, ~19 GB
-        # bf16 storage incl. vision + wav tokenizers) and does not fit an 8 GB
-        # card. Every pillar of this benchmark is text, so the text-only extract
-        # is the right instrument - but the substitution MUST be disclosed.
-        #
-        # Set APERTUS_8B_MODEL_ID in eval/.env to whatever your server actually
-        # loaded. llama-server ignores the value for single-model servers, but it
-        # is recorded in every artefact for provenance.
+def _default_models() -> dict[str, ModelConfig]:
+    """Build the model table fresh from the environment."""
+    # Default is a TEXT-ONLY 4-bit extract. See eval/README.md for why:
+    # swiss-ai/Apertus-v1.5-8B is the full Omni model (8.9 B params, ~19 GB
+    # bf16 storage incl. vision + wav tokenizers) and does not fit an 8 GB
+    # card. Every pillar of this benchmark is text, so the text-only extract
+    # is the right instrument - but the substitution MUST be disclosed.
+    #
+    # Set APERTUS_8B_MODEL_ID in eval/.env to whatever your server actually
+    # loaded. llama-server ignores the value for single-model servers, but it
+    # is recorded in every artefact for provenance.
+    return {
         "8b": _build("8b", "Apertus-v1.5-8B-text-Q4_K_M",
                      "http://127.0.0.1:8080/v1"),
         # No route arranged yet. When there is one:
         #   hosted endpoint -> BACKEND=openai, API_KEY=<key>
         #   local vLLM      -> BACKEND=http,   API_KEY=EMPTY
+        # With nothing set this resolves to `mock`, which stamps every artefact
+        # and prints a banner. That is intentional: an absent model must be
+        # visible, never silently absent.
         "70b": _build("70b", "swiss-ai/Apertus-v1.5-70B"),
     }
+
+
+class EvalConfig:
+    """Project-wide settings. Everything is overridable by environment variable."""
+
+    MODELS: dict[str, ModelConfig] = _default_models()
+
+    def __init__(self) -> None:
+        # Build per instance rather than sharing the class-level dict.
+        #
+        # Two reasons, and the second is the one that bit us:
+        #  1. _resolve_backends() MUTATES the ModelConfig objects. If two
+        #     instances shared them, resolving one would leak into the other.
+        #  2. An unconfigured model must be resolved to `mock` so that it is
+        #     visibly fake. This class previously relied on __post_init__ to do
+        #     that, but it is not a dataclass, so __post_init__ was never
+        #     called: backend stayed as the empty string, which is not a valid
+        #     backend AND is not `mock` - so `is_mock` was False for a model
+        #     that could not possibly answer anything. A missing model looked
+        #     like a live one.
+        self.MODELS = _default_models()
+        self._resolve_backends()
 
     # ---------------------------------------------------------------- dataset
     data_dir: Path = DATA_DIR
@@ -179,8 +203,6 @@ class EvalConfig:
     prompts_dir: Path = RESULTS_DIR
     logs_dir: Path = LOGS_DIR
 
-    def __post_init__(self) -> None:
-        self._resolve_backends()
 
     # ------------------------------------------------------------------ helpers
     def _resolve_backends(self) -> None:

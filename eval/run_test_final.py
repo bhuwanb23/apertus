@@ -75,14 +75,41 @@ RESULTS = config.results_dir
 TEST_RUN = RESULTS / "test_run"
 RAW_DIR = RESULTS / "raw_responses"
 
-MODELS = ("8b", "70b")
+# ---------------------------------------------------------------- scope
+# The plan (docs/plans/phase_4.md, TEST SET GOLDEN RULES, rule 2) called for four
+# knowledge runs: 8B and 70B, each baseline and improved. The evaluation machine
+# has 8 GB of VRAM (RTX 5060) and Apertus v1.5 70B cannot be loaded or served
+# under any quantisation, so the 70B arms were dropped rather than approximated.
+#
+# The scope is DECLARED here, not inferred.
+#
+# Inferring it from "whatever is not mock" would be a serious regression: the
+# whole point of the mock guard is that an unconfigured backend must not be
+# treated as a result. Auto-shrinking to the live set would reintroduce exactly
+# that failure one level up - a model could be quietly excluded and the run
+# would still report success. So instead:
+#   - the in-scope set is fixed and reviewable,
+#   - the dropped set is recorded in run_metadata as a disclosure,
+#   - and preflight FAILS if a model in the dropped set is actually live,
+#     because that means the scope is stale and must be re-examined on purpose.
+SCOPE_MODELS: tuple[str, ...] = ("8b",)
+DROPPED_MODELS: tuple[str, ...] = ("70b",)
+DROPPED_REASON = (
+    "Apertus v1.5 70B cannot be loaded on this evaluation machine (8 GB VRAM, "
+    "RTX 5060) under any quantisation. The 70B baseline and improved arms were "
+    "dropped, not approximated. Consequence, stated plainly: a single-model "
+    "paired design cannot distinguish a general improvement from an 8B-specific "
+    "effect, so no cross-scale or generalisation claim is available."
+)
+
 METHODS = ("baseline", "improved")
 
-# Which runs the plan requires. Knowledge gets 4 (2 models x 2 methods);
-# values and dialect get 2 each - there is no "improved" arm for them, because
+# Which runs the plan requires. Knowledge gets 2 (1 model x 2 methods);
+# values and dialect get 1 each - there is no "improved" arm for them, because
 # the improvement is retrieval over the knowledge corpus.
 RUNS = ([(t, m, meth) for t in ("knowledge", "values", "dialect")
-         for m in MODELS for meth in (METHODS if t == "knowledge" else ("baseline",))])
+         for m in SCOPE_MODELS
+         for meth in (METHODS if t == "knowledge" else ("baseline",))])
 
 # What the improvement actually is. Recorded in run_metadata from the live
 # objects rather than typed as a string, so it cannot drift from reality.
@@ -107,11 +134,22 @@ def guard(require_live: bool = True) -> tuple[bool, list[str]]:
     """
     problems: list[str] = []
     if require_live:
-        mocks = [m for m in MODELS if config.model(m).is_mock]
+        mocks = [m for m in SCOPE_MODELS if config.model(m).is_mock]
         if mocks:
             problems.append(
                 f"backend is mock for: {', '.join(mocks)}. The one-shot evaluation "
                 f"cannot be spent on synthetic responses.")
+        # A model that is actually LIVE but sits outside the declared scope is a
+        # scope bug, not a free pass. Silently ignoring it would let an
+        # excluded arm vanish from the run without anyone noticing.
+        live_but_dropped = [m for m in DROPPED_MODELS
+                            if not config.model(m).is_mock]
+        if live_but_dropped:
+            problems.append(
+                f"model(s) {', '.join(live_but_dropped)} are configured on a live "
+                f"backend but are declared out of scope. Either add them to "
+                f"SCOPE_MODELS or remove them from the config deliberately - "
+                f"do not let this pass unnoticed.")
     ok, seal_problems = seal.verify()
     if not ok:
         problems.extend(seal_problems)
@@ -131,12 +169,23 @@ def preflight(require_live: bool = True, check_freeze: bool = True) -> dict:
         checks.append({"id": cid, "ok": ok, "detail": detail, "fatal": fatal})
 
     # -- the one that matters most ------------------------------------------
-    mocks = [m for m in MODELS if config.model(m).is_mock]
+    mocks = [m for m in SCOPE_MODELS if config.model(m).is_mock]
+    live_but_dropped = [m for m in DROPPED_MODELS if not config.model(m).is_mock]
     if require_live:
         add("P2-backend-not-mock", not mocks,
             f"mock backend for: {', '.join(mocks)} - the single unrepeatable "
             f"evaluation cannot be spent on synthetic responses"
-            if mocks else "both models on a live backend")
+            if mocks else
+            f"every in-scope model ({', '.join(SCOPE_MODELS)}) on a live backend")
+
+    # Not fatal by itself - it is a known, recorded reduction - but fatal if a
+    # dropped model turns out to be live, because then the scope is stale.
+    add("P2b-scope-not-stale", not live_but_dropped,
+        f"dropped model(s) {', '.join(live_but_dropped)} are live; re-examine "
+        f"SCOPE_MODELS before running"
+        if live_but_dropped else
+        f"{len(DROPPED_MODELS)} declared dropped model(s) "
+        f"({', '.join(DROPPED_MODELS)}) - see DISCLOSURES in run_metadata")
 
     # -- sealed-set integrity ------------------------------------------------
     ok, problems = seal.verify()
@@ -159,10 +208,10 @@ def preflight(require_live: bool = True, check_freeze: bool = True) -> dict:
         if seal.git_dirty() else "working tree is clean")
 
     # -- identical conditions to Phase 2 ------------------------------------
-    temps = {m: config.model(m).temperature for m in MODELS}
+    temps = {m: config.model(m).temperature for m in SCOPE_MODELS}
     add("P7-temperature-zero", all(t == 0 for t in temps.values()), f"{temps}")
 
-    seeds = {m: config.model(m).seed for m in MODELS}
+    seeds = {m: config.model(m).seed for m in SCOPE_MODELS}
     add("P8-seed-set", all(s is not None for s in seeds.values()), f"{seeds}")
 
     from prompts import PROMPT_VERSION
@@ -320,7 +369,7 @@ def print_sanity(s: dict) -> None:
 
 # ================================================================== runners
 def _rag_context_for(questions: list, top_k: int):
-    """Retrieval for the improved arm, built once and shared by both models.
+    """Retrieval for the improved arm, built once and shared by every model.
 
     The retrieval is model-independent, so building it per model would be wasted
     work - but it must be the SAME retrieval, or the two improved arms are not
@@ -483,10 +532,13 @@ def write_metadata(records: dict, top_k: int, duration_min: float) -> Path:
                        "temperature": config.model(m).temperature,
                        "seed": config.model(m).seed,
                        "is_mock": config.model(m).is_mock}
-                   for m in MODELS},
+                   for m in SCOPE_MODELS},
         "improvement": {**IMPROVEMENT, "top_k": top_k},
         "judge_model": config.judge_model,
-        "self_judged": config.judge_model in MODELS,
+        "self_judged": config.judge_model in SCOPE_MODELS,
+        "scope": {"in_scope": list(SCOPE_MODELS),
+                  "dropped": list(DROPPED_MODELS),
+                  "dropped_reason": DROPPED_REASON},
         "runs": {k: {kk: vv for kk, vv in v.items() if kk != "results"}
                  for k, v in records.items() if not k.startswith("_")},
         "test_set_size": {

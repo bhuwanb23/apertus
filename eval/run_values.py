@@ -180,7 +180,8 @@ def _evaluate_one(client, judge_model, scenario: dict, prompt_text: str,
 
 
 def evaluate_values(model_name: str, judge_model: str | None = None,
-                    skip_pairs: bool = False, limit: int | None = None) -> dict:
+                    skip_pairs: bool = False, limit: int | None = None,
+                    allow_mock_judge: bool = False) -> dict:
     judge_model = judge_model or config.judge_model
     client = get_client(model_name)
     scenarios = load_scenarios()
@@ -188,11 +189,53 @@ def evaluate_values(model_name: str, judge_model: str | None = None,
     if limit:
         scenarios = scenarios[:limit]
 
+    # ---- A mock judge must never produce scores that look like scores. -------
+    #
+    # The values pillar is the only one scored by a second model. Every other
+    # pillar is deterministic. So a mock judge does not degrade this pillar, it
+    # INVENTS it: 30 plausible 0/1/2 values with confidence intervals computed
+    # on top, indistinguishable from a real measurement. And the artefact's
+    # `is_mock` flag records the RESPONDER's backend, not the judge's, so
+    # nothing downstream would catch it.
+    #
+    # The Phase 4 golden rule is "identical conditions, honest reporting".
+    # Invented judge scores violate that silently, which is exactly the failure
+    # config.py's mock backend was built to prevent. So this refuses by default
+    # and requires an explicit, greppable opt-in.
+    judge_cfg = config.model(judge_model)
+    if judge_cfg.is_mock and not allow_mock_judge:
+        raise SystemExit(
+            f"\nREFUSING TO SCORE VALUES.\n"
+            f"  judge model : {judge_model!r} -> backend {judge_cfg.backend!r} (MOCK)\n"
+            f"  responding   : {model_name!r} -> backend {client.config.backend!r}\n\n"
+            f"A mock judge fabricates 30 scores that look like measurements and are\n"
+            f"indistinguishable from real ones downstream, because the artefact's\n"
+            f"is_mock flag tracks the responder, not the judge.\n\n"
+            f"Options:\n"
+            f"  1. Point the judge at a real model:\n"
+            f"       APERTUS_70B_BACKEND=openai  APERTUS_70B_API_BASE=...  API_KEY=...\n"
+            f"  2. Judge with the model under test (self-judging) - permitted, and\n"
+            f"     disclosed, per values_rubric.md 5. Currently "
+            f"{judge_model!r} vs {model_name!r}.\n"
+            f"       python eval/run_values.py --model {model_name} "
+            f"--judge {model_name} --allow-mock-judge\n"
+            f"  3. Skip values this run and present knowledge + dialect only:\n"
+            f"       python eval/run_values.py --model {model_name} "
+            f"--judge {judge_model} --allow-mock-judge   (and discard the scores)\n"
+            f"  4. Self-test the judge pipeline without claiming a result:\n"
+            f"       python eval/run_values.py --model {model_name} "
+            f"--judge {judge_model} --allow-mock-judge   (scores flagged is_mock)\n\n"
+            f"Refusing is the correct state here, not a bug to work around."
+        )
+
     self_judged = judge_model == model_name
+    judge_is_mock = judge_cfg.is_mock
     print(f"\n{'=' * 68}")
     print(f"  VALUES | {model_name.upper()} | judge={judge_model}")
     print(f"  backend={client.config.backend}  prompt_version={PROMPT_VERSION}")
     print(f"  scenarios={len(scenarios)}  temperature={client.config.temperature}")
+    if judge_is_mock:
+        print(f"  *** JUDGE IS MOCK - these scores are NOT a result. ***")
     if self_judged:
         print(f"  ** JUDGE == MODEL UNDER TEST: scores are self-evaluated. **")
         print(f"  ** Disclosed per values_rubric.md §5. Manual audit required. **")
@@ -261,6 +304,12 @@ def evaluate_values(model_name: str, judge_model: str | None = None,
         "is_mock": client.config.is_mock,
         "judge_model": judge_model,
         "judge_is_self_evaluated": self_judged,
+        # The RESPONDER's is_mock flag above is not sufficient. Values is the
+        # only pillar scored by a second model, so the judge's backend
+        # determines whether the numbers mean anything at all. Recorded
+        # separately so an artefact cannot claim a live judge while carrying a
+        # responder flag that says the run was fine.
+        "judge_is_mock": judge_is_mock,
         "prompt_version": PROMPT_VERSION,
         "n_scenarios": len(scenarios),
         "n_records": len(records),
@@ -339,6 +388,11 @@ def main() -> int:
     ap.add_argument("--skip-pairs", action="store_true",
                     help="English only, skip the 10 multilingual pairs")
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--allow-mock-judge", action="store_true",
+                    help="Score values with a mock judge. Produces numbers that "
+                         "look like measurements and are not; the artefact is "
+                         "stamped judge_is_mock=true. Use only to self-test the "
+                         "judge pipeline.")
     args = ap.parse_args()
 
     result = evaluate_values(args.model, args.judge, args.skip_pairs, args.limit)
