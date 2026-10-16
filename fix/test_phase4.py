@@ -487,6 +487,37 @@ def test_resume() -> None:
             rtf.TEST_RUN, rtf.DISPATCH, rtf.guard = saved_tr, saved_disp, saved_guard
             rtf.load_results = saved_load
 
+    # load_results must find the rows in BOTH shapes the Phase 2 runners write:
+    # run_knowledge writes "results", run_values/run_dialect write "records".
+    # Returning the dict for an unrecognised payload iterates its KEYS and the
+    # caller calls .get() on a str - which is how the values arm died after 73
+    # real judgements had already been paid for.
+    import json as _json
+    with tempfile.TemporaryDirectory() as td:
+        saved_res = rtf.RESULTS
+        rtf.RESULTS = Path(td)
+        (Path(td) / "parsed").mkdir()
+        try:
+            (Path(td) / "parsed" / "knowledge_8b_test_rag.json").write_text(
+                _json.dumps({"run": {}, "results": [{"q": 1}, {"q": 2}]}))
+            (Path(td) / "parsed" / "values_8b.json").write_text(
+                _json.dumps({"run": {}, "records": [{"r": 1}, {"r": 2}, {"r": 3}]}))
+            (Path(td) / "parsed" / "dialect_8b.json").write_text(
+                _json.dumps({"run": {}, "records": [{"d": 1}]}))
+            check("knowledge rows load from the 'results' key",
+                  len(rtf.load_results("knowledge", "8b", "improved")) == 2)
+            check("values rows load from the 'records' key",
+                  len(rtf.load_results("values", "8b", "baseline")) == 3)
+            check("dialect rows load from the 'records' key",
+                  len(rtf.load_results("dialect", "8b", "baseline")) == 1)
+            (Path(td) / "parsed" / "dialect_8b.json").write_text(
+                _json.dumps({"run": {}, "unexpected": 1}))
+            check("an unrecognised payload yields no rows, not its keys",
+                  rtf.load_results("dialect", "8b", "baseline") == [],
+                  "must not hand back dict keys as if they were results")
+        finally:
+            rtf.RESULTS = saved_res
+
     src = (ROOT / "eval" / "run_test_final.py").read_text(encoding="utf-8")
     check("run_one catches exceptions and reports them per run",
           "except Exception" in src)

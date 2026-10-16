@@ -474,8 +474,17 @@ def load_results(task: str, model: str, method: str) -> list:
     for p in candidates:
         if p.exists():
             payload = json.loads(p.read_text(encoding="utf-8"))
-            return payload["results"] if isinstance(payload, dict) and "results" in payload \
-                else payload
+            if isinstance(payload, list):
+                return payload
+            if not isinstance(payload, dict):
+                return []
+            # run_knowledge writes "results"; run_values and run_dialect write
+            # "records". Returning the dict itself for an unrecognised payload
+            # iterates its KEYS, and the caller then does r.get(...) on a str.
+            for key in ("results", "records"):
+                if key in payload and isinstance(payload[key], list):
+                    return payload[key]
+            return []
     return []
 
 
