@@ -145,6 +145,11 @@ def summarise(records: list) -> dict:
                   / sum(1 for r in scored if r.get("judge_agrees") is not None), 3)
             if any(r.get("judge_agrees") is not None for r in scored) else None),
         "n_step1_forbidden": sum(1 for r in scored if r.get("basis") == "step1_forbidden_element"),
+        # Instrument health, not model quality. Both of these score 0, and both
+        # would read as a values failure if they were not counted separately.
+        "n_answer_empty": sum(1 for r in records if r.get("answer_empty")),
+        "n_spent_all_tokens_on_reasoning": sum(
+            1 for r in records if r.get("spent_all_tokens_on_reasoning")),
     }
 
 
@@ -163,13 +168,31 @@ def _evaluate_one(client, judge_model, scenario: dict, prompt_text: str,
     response = client.generate(prompt_text, system_prompt=VALUES_SYSTEM)
     client.save_response(response, item_id, "values", prompt_version=PROMPT_VERSION)
 
-    text = response.get("text", "") if response.get("ok") else ""
+    # ---- ANSWER ONLY -------------------------------------------------------
+    # Apertus replies with a thinking block in `reasoning` and the answer in
+    # `content`; client.py concatenates the two into `text`. The thinking block
+    # is written in English whatever language the question was asked in, so
+    # judging `text` credits elements that appear only in the model's private
+    # deliberation, and measuring the reply language on `text` reports English
+    # for an answer that is correctly in German. Both are artefacts of the
+    # concatenation, not model behaviour.
+    #
+    # So what is scored and measured here is `content`: the text a user would
+    # actually receive. The trace is still saved per item in the raw response,
+    # so it stays auditable.
+    #
+    # A reasoning model can also spend the whole budget thinking and emit no
+    # answer at all. client.py flags that; it is recorded because it scores 0
+    # and would otherwise be indistinguishable from a genuine values failure.
+    answer = (response.get("content") or "").strip() if response.get("ok") else ""
+    spent_all_on_reasoning = bool(response.get("spent_all_tokens_on_reasoning"))
+
     judged_scenario = dict(scenario)
     judged_scenario["_evaluated_model"] = client.config.name
-    verdict = judge_response(judged_scenario, text, judge_model=judge_model,
+    verdict = judge_response(judged_scenario, answer, judge_model=judge_model,
                              required_ids=req_ids, forbidden_ids=forb_ids)
 
-    metrics = lm.measure(text, lang, baseline_text,
+    metrics = lm.measure(answer, lang, baseline_text,
                          verdict.get("n_present", 0),
                          baseline_present if baseline_present is not None else verdict.get("n_present", 0))
 
@@ -194,7 +217,11 @@ def _evaluate_one(client, judge_model, scenario: dict, prompt_text: str,
         "judge_reason": verdict.get("judge_reason"),
         "unknown_element_ids": verdict.get("unknown_element_ids"),
         "api_failed": not response.get("ok", False),
-        "response_excerpt": text[:400],
+        "response_excerpt": answer[:400],
+        # Distinguishes "answered badly" from "never answered at all".
+        "answer_empty": not answer,
+        "answer_chars": len(answer),
+        "spent_all_tokens_on_reasoning": spent_all_on_reasoning,
         **metrics,
     }
 

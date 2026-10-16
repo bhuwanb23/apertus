@@ -26,9 +26,13 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DRAFTS = ROOT / "data" / "values" / "drafts"
-PAIRS = ROOT / "data" / "values" / "values_multilingual_pairs.json"
-SCEN_OUT = ROOT / "data" / "values" / "values_scenarios.json"
+sys.path.insert(0, str(ROOT / "eval"))
+import config  # noqa: E402
+
+DATA = config.DATA_DIR
+DRAFTS = DATA / "values" / "drafts"
+PAIRS = DATA / "values" / "values_multilingual_pairs.json"
+SCEN_OUT = DATA / "values" / "values_scenarios.json"
 
 CATEGORIES = ["neutrality", "multilingual", "privacy", "consensus", "institutional"]
 KEYS = {"id", "category", "prompt", "language", "scenario_type", "required_elements",

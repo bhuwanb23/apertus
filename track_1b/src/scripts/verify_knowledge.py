@@ -17,18 +17,25 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DRAFTS = ROOT / "data" / "knowledge" / "drafts"
-RAW = ROOT / "data" / "sources" / "raw_pages"
-REGISTRY = ROOT / "data" / "sources" / "source_registry.csv"
+# Single resolver, shared with every other entrypoint. These paths used to be
+# literals under src/, which stopped existing when the dataset moved to the
+# repository root - the registry load then raised FileNotFoundError, so this
+# gate could not run at all.
+sys.path.insert(0, str(ROOT / "eval"))
+import config  # noqa: E402
 
-CATEGORY_OF_ID = [
-    (1, 20, "politics"),
-    (21, 40, "law"),
-    (41, 60, "health"),
-    (61, 80, "geography"),
-    (81, 100, "services"),
-    (101, 120, "history"),
-]
+DATA = config.DATA_DIR
+DRAFTS = DATA / "knowledge" / "drafts"
+RAW = DATA / "sources" / "raw_pages"
+REGISTRY = DATA / "sources" / "source_registry.csv"
+
+# Items are authored in contiguous id blocks per category (K001.. politics,
+# then law, and so on). The block boundaries were hardcoded as 20-item ranges,
+# which silently stops meaning anything the moment the corpus grows - the ranges
+# would cover a third of the ids and leave the rest unclassified. The invariant
+# actually worth protecting is that the blocks are CONTIGUOUS, NON-OVERLAPPING
+# and cover every id, so it is derived from the data and checked structurally.
+# See _category_blocks() below.
 
 REQUIRED_KEYS = {
     "id", "category", "question", "options", "correct_answer",
@@ -110,6 +117,34 @@ for f in draft_files:
     except Exception as exc:
         err("JSON", f"{f.name}: {exc}")
 
+
+def _category_blocks():
+    """Derive (lo, hi, category) id blocks from the corpus itself.
+
+    Each category occupies one contiguous run of ids. The blocks are returned in
+    id order and are checked below for gaps and overlaps, which is the property
+    that makes 'category' predictable from the id.
+    """
+    spans = {}
+    for q in questions:
+        if not q["id"][1:].isdigit():
+            continue
+        n = int(q["id"][1:])
+        lo, hi = spans.get(q["category"], (n, n))
+        spans[q["category"]] = (min(lo, n), max(hi, n))
+    blocks = sorted((lo, hi, cat) for cat, (lo, hi) in spans.items())
+    for (lo1, hi1, c1), (lo2, _hi2, c2) in zip(blocks, blocks[1:]):
+        if lo2 <= hi1:
+            err("IDS", f"id blocks overlap: {c1} ends at {hi1}, {c2} starts at {lo2}")
+    return blocks
+
+
+_BLOCKS = _category_blocks()
+
+
+def _block_of(n):
+    return next((cat for lo, hi, cat in _BLOCKS if lo <= n <= hi), None)
+
 # ------------------------------------------------------------------ 1. schema
 for q in questions:
     qid = q.get("id", "<no-id>")
@@ -131,8 +166,17 @@ for q in questions:
         err("SCHEMA", f"{qid}: correct option is empty")
 
 # ---------------------------------------------------------------- 2. counts/ids
-if len(questions) != 120:
-    err("COUNT", f"expected 120 questions, got {len(questions)}")
+# The corpus is expected to grow, so the size gate is opt-in:
+#     python scripts/verify_knowledge.py --expect-total 300
+# Structural checks (contiguous ids, no duplicates, schema, quote provenance)
+# run unconditionally at whatever size the corpus currently is.
+EXPECT_TOTAL = None
+if "--expect-total" in sys.argv:
+    EXPECT_TOTAL = int(sys.argv[sys.argv.index("--expect-total") + 1])
+if EXPECT_TOTAL is not None and len(questions) != EXPECT_TOTAL:
+    err("COUNT", f"expected {EXPECT_TOTAL} questions, got {len(questions)}")
+elif not questions:
+    err("COUNT", "no questions loaded - refusing to pass an empty corpus")
 
 ids = [q["id"] for q in questions]
 dupes = [i for i, n in Counter(ids).items() if n > 1]
@@ -141,8 +185,8 @@ if dupes:
 
 try:
     nums = sorted(int(i[1:]) for i in ids)
-    if nums != list(range(1, 121)):
-        missing = sorted(set(range(1, 121)) - set(nums))
+    if nums != list(range(1, len(nums) + 1)):
+        missing = sorted(set(range(1, len(nums) + 1)) - set(nums))
         err("IDS", f"id range broken; missing={missing}")
 except ValueError:
     err("IDS", f"non-numeric ids: {[i for i in ids if not i[1:].isdigit()]}")
@@ -151,14 +195,22 @@ for q in questions:
     if not q["id"][1:].isdigit():
         continue
     n = int(q["id"][1:])
-    expect = next((c for lo, hi, c in CATEGORY_OF_ID if lo <= n <= hi), None)
+    expect = _block_of(n)
     if expect and q["category"] != expect:
-        err("IDS", f"{q['id']}: category '{q['category']}' but id range implies '{expect}'")
+        err("IDS", f"{q['id']}: category '{q['category']}' but id block implies '{expect}'")
 
-for lo, hi, cat in CATEGORY_OF_ID:
-    got = [q for q in questions if q["category"] == cat]
-    if len(got) != 20:
-        err("COUNT", f"{cat}: expected 20, got {len(got)}")
+# Per-category balance. The invariant is that every category carries the same
+# number of items, not that each carries twenty of them.
+_cat_counts = Counter(q["category"] for q in questions)
+if _cat_counts:
+    sizes = set(_cat_counts.values())
+    if len(sizes) > 1:
+        err("BALANCE", f"categories are uneven: {dict(sorted(_cat_counts.items()))}")
+    else:
+        print(f"  per-category items: {_cat_counts.most_common(1)[0][1]} "
+              f"x {len(_cat_counts)} categories")
+else:
+    err("BALANCE", "no categories present")
 
 # ------------------------------------------- 3. source attribution + QUOTE MATCH
 for q in questions:
@@ -232,10 +284,16 @@ if max(letters.values()) - min(letters.values()) > 1:
 else:
     print(f"  correct-answer letters: {dict(letters)}")
 
-for lo, hi, cat in CATEGORY_OF_ID:
+for cat in sorted(_cat_counts):
     d = Counter(q["difficulty"] for q in questions if q["category"] == cat)
-    if not (d["easy"] == 4 and d["medium"] == 10 and d["hard"] == 6):
-        warn("DIFF", f"{cat}: difficulty mix {dict(d)} (target 4/10/6)")
+    total = sum(d.values())
+    # The authored target mix is 2:5:3 (easy/medium/hard), i.e. the 4/10/6 of a
+    # 20-item block. Warn on drift from that ratio rather than from absolute
+    # counts, so the check still means something at any corpus size.
+    target = {"easy": round(total * 0.20), "medium": round(total * 0.50),
+              "hard": round(total * 0.30)}
+    if any(abs(d[k] - target[k]) > max(1, round(total * 0.10)) for k in target):
+        warn("DIFF", f"{cat}: difficulty mix {dict(d)} (target ratio ~2:5:3 = {target})")
 
 # per-source concentration cap
 conc = Counter(q["source_id"] for q in questions)

@@ -129,6 +129,13 @@ class MockBackend:
         prompt_tokens = max(1, len(blob) // 4)
         return {
             "text": text,
+            # The mock has no separate thinking block, so the answer is the whole
+            # string. Kept explicit rather than absent, so a caller that scores
+            # `content` behaves the same on the mock as on a real backend instead
+            # of silently scoring an empty answer.
+            "content": text,
+            "reasoning": "",
+            "spent_all_tokens_on_reasoning": False,
             "finish_reason": "stop" if len(text) < max_tokens else "length",
             "usage": {
                 "prompt_tokens": prompt_tokens,
@@ -246,8 +253,20 @@ class OpenAIBackend:
         )
         choice = response.choices[0]
         usage = response.usage
+        # Same split as HttpBackend, for the same reason: `text` is the thinking
+        # block concatenated with the answer, which reads as English even when the
+        # answer is not English. Without these three keys a caller scoring
+        # `content` would score an empty string on this backend alone.
+        sdk_content = (choice.message.content or "").strip()
+        sdk_reasoning = (getattr(choice.message, "reasoning_content", None)
+                         or getattr(choice.message, "reasoning", None) or "").strip()
+        sdk_text = (f"{sdk_reasoning}\n{sdk_content}".strip()
+                    if sdk_reasoning else sdk_content)
         return {
-            "text": (choice.message.content or choice.message.reasoning_content or "").strip(),
+            "text": sdk_text,
+            "content": sdk_content,
+            "reasoning": sdk_reasoning,
+            "spent_all_tokens_on_reasoning": bool(sdk_reasoning) and not sdk_content,
             "finish_reason": choice.finish_reason,
             "usage": {
                 "prompt_tokens": getattr(usage, "prompt_tokens", -1),
@@ -327,6 +346,9 @@ class ApertusClient:
             logger.error("all %d attempts failed for %s", config.retry_attempts, self.config.name)
             return {
                 "text": "",
+                "content": "",
+                "reasoning": "",
+                "spent_all_tokens_on_reasoning": False,
                 "ok": False,
                 "error": last_error,
                 "attempt": config.retry_attempts,
@@ -340,6 +362,19 @@ class ApertusClient:
         self.call_count += 1
         out = {
             "text": result["text"],
+            # The backend already separated the thinking block from the answer.
+            # Carrying both through matters: `text` is the two concatenated, and
+            # for a reasoning model that makes `text` an English-dominant string
+            # even when the answer is in German. A caller that scores or measures
+            # language needs `content` on its own, and only `content`.
+            #
+            # Dropping these here is not a saving: it is the reason a stored run
+            # could not be re-analysed after the fact once the distinction had
+            # been thrown away at save time.
+            "content": result.get("content", ""),
+            "reasoning": result.get("reasoning", ""),
+            "spent_all_tokens_on_reasoning": bool(
+                result.get("spent_all_tokens_on_reasoning")),
             "ok": True,
             "error": None,
             "attempt": attempt + 1,

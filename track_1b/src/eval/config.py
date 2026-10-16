@@ -37,7 +37,41 @@ from typing import Optional
 # --------------------------------------------------------------------------- paths
 EVAL_DIR = Path(__file__).resolve().parent
 ROOT = EVAL_DIR.parent
-DATA_DIR = ROOT / "data"
+
+# The dataset has lived in two places during this project: at the repository root
+# while authoring, and (once shipped) inside the track_1b tree that judges clone.
+# config.data_path() is the single accessor every runner uses, so the resolution
+# lives here rather than being duplicated in a dozen scripts. Precedence:
+#
+#   1. $APERTUS_DATA_DIR            - explicit override, used by the container
+#   2. track_1b/src/data            - the shipped location (self-contained)
+#   3. <repo root>/data             - the authoring location
+#
+# The first candidate that actually contains the knowledge set wins. A candidate
+# that merely exists is not enough: an empty or partial data/ directory used to
+# make every runner fail deep inside a load call with no hint about where it was
+# looking.
+DATA_MARKER = Path("knowledge") / "knowledge_all.json"
+
+
+def _resolve_data_dir() -> Path:
+    candidates = []
+    override = os.environ.get("APERTUS_DATA_DIR")
+    if override:
+        candidates.append(Path(override))
+    candidates += [ROOT / "data", ROOT.parent.parent / "data"]
+    for cand in candidates:
+        if (cand / DATA_MARKER).is_file():
+            return cand
+    tried = "\n  ".join(str(c) for c in candidates)
+    raise SystemExit(
+        "cannot locate the dataset: no candidate contains "
+        f"{DATA_MARKER.as_posix()}. Tried:\n  {tried}\n"
+        "Set APERTUS_DATA_DIR to the directory that holds it."
+    )
+
+
+DATA_DIR = _resolve_data_dir()
 RESULTS_DIR = EVAL_DIR / "results"
 RAW_RESPONSES_DIR = RESULTS_DIR / "raw_responses"
 PARSED_DIR = RESULTS_DIR / "parsed"

@@ -19,8 +19,12 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data" / "sources" / "raw_pages"
-OUT = ROOT / "data" / "dialect"
+sys.path.insert(0, str(ROOT / "eval"))
+import config  # noqa: E402
+
+DATA = config.DATA_DIR
+RAW = DATA / "sources" / "raw_pages"
+OUT = DATA / "dialect"
 PARTS = [OUT / "items_D001_D017.json", OUT / "dialect_items_d018_d030.json"]
 
 T1_KEYS = {"id", "task_type", "dialect", "dialect_evidence", "orthography",

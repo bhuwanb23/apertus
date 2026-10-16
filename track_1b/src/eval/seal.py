@@ -57,7 +57,14 @@ sys.path.insert(0, str(ROOT / "eval"))
 from config import config          # noqa: E402
 
 # ---------------------------------------------------------------- locations
-SEALED = ROOT / "data" / "knowledge" / "knowledge_test.json"
+# Resolved through config.data_path rather than a literal ROOT/"data". The
+# literal pointed at track_1b/src/data, which stopped existing when the dataset
+# moved to the repository root. The failure was silent and total: file_hash()
+# returned None, verify() reported "sealed file missing", and every sealed run
+# since then was recorded as unverified. The audit log kept appending, which
+# made the seal look alive while the part that actually protects the result was
+# doing nothing.
+SEALED = config.data_path("knowledge", "knowledge_test.json")
 
 # The seal record lives OUTSIDE the results tree, because results/ is gitignored
 # and regenerated. A seal that disappears with the results proves nothing.
@@ -66,7 +73,46 @@ HASH_PATH = SEAL_DIR / "knowledge_test.sha256"
 FREEZE_PATH = SEAL_DIR / "frozen_code.json"
 AUDIT_PATH = SEAL_DIR / "access.log"
 
-EXPECTED_N = 36
+def _expected_n() -> int:
+    """The sealed item count, taken from the PRE-RECORDED seal, not the file.
+
+    Reading it from the current knowledge_test.json would make the check
+    vacuous: truncate the sealed set and the expectation would shrink to match.
+    The recorded hash is the pre-registration, so that is what the count must be
+    compared against. Falls back to the file only when no record exists yet.
+    """
+    if HASH_PATH.exists():
+        try:
+            rec = json.loads(HASH_PATH.read_text(encoding="utf-8"))
+            if isinstance(rec.get("n_questions"), int):
+                return rec["n_questions"]
+        except (json.JSONDecodeError, OSError):
+            pass
+    if SEALED.exists():
+        try:
+            return len(json.loads(SEALED.read_text(encoding="utf-8")))
+        except (json.JSONDecodeError, OSError):
+            pass
+    return 0
+
+
+# Kept as a module attribute (not a function) because the suites monkeypatch it
+# to exercise the mismatch path. See fix/test_phase4.py.
+EXPECTED_N = _expected_n()
+
+
+def _display_path(path: Path) -> str:
+    """Repo-relative when possible, absolute otherwise.
+
+    SEALED lives under the dataset root, which is not under track_1b/src, so
+    relative_to(ROOT) would raise rather than render a path.
+    """
+    for base in (Path.cwd(), ROOT, ROOT.parent.parent):
+        try:
+            return str(path.resolve().relative_to(base.resolve()))
+        except ValueError:
+            continue
+    return str(path)
 
 
 def git_hash() -> str:
@@ -308,7 +354,7 @@ def status() -> dict:
     info = compute()
     rec = json.loads(HASH_PATH.read_text(encoding="utf-8")) if HASH_PATH.exists() else None
     return {
-        "sealed_file": str(SEALED.relative_to(ROOT)),
+        "sealed_file": _display_path(SEALED),
         "recorded": rec,
         "current_sha256": info.get("sha256"),
         "verify_ok": ok,

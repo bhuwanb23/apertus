@@ -41,8 +41,18 @@ def mcnemar_exact(n01: int, n10: int) -> float:
 def load_results(path: Path) -> list[dict]:
     data = json.loads(path.read_text(encoding="utf-8"))
     rows = data["results"]
-    if len(rows) != 36:
-        raise SystemExit(f"{path.name}: expected 36 results, got {len(rows)}")
+    # The sealed-set size is whatever published_claims.json declares, not a
+    # literal in this file. run.py is the only thing judges execute, so a
+    # hardcoded 36 here meant a corpus change required editing the verification
+    # entrypoint too - and forgetting to would have failed the submission on a
+    # clean checkout for the wrong reason.
+    expected = EXPECTED_N
+    if len(rows) != expected:
+        raise SystemExit(
+            f"{path.name}: expected {expected} results, got {len(rows)}"
+        )
+    if not rows:
+        raise SystemExit(f"{path.name}: empty results set")
     return rows
 
 
