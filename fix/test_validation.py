@@ -362,6 +362,7 @@ def test_mock_is_not_certified() -> None:
             payload = json.loads(originals[p].decode("utf-8")) if originals[p] else {}
             payload.setdefault("run", {})["is_mock"] = True
             payload["run"]["backend"] = "mock"
+            p.parent.mkdir(parents=True, exist_ok=True)
             p.write_text(json.dumps(payload), encoding="utf-8")
 
         r = subprocess.run(
@@ -372,9 +373,20 @@ def test_mock_is_not_certified() -> None:
         check("the CLI prints the refusal", "REFUSED TO CERTIFY" in r.stdout,
               r.stdout[-200:])
     finally:
+        # Restore in both directions. An earlier version restored ONLY when the
+        # file had existed, so any path that was absent beforehand kept the
+        # mock stub this test had just written - and a path that DID exist lost
+        # its real contents for good whenever the process was killed before the
+        # finally ran. Both halves are needed: the suite must be invisible in
+        # the results tree whether the artefact was there or not.
         for p, data in originals.items():
             if data is not None:
                 p.write_bytes(data)
+            elif p.exists():
+                p.unlink()
+    leftover = [str(p.relative_to(ROOT)) for p, d in originals.items()
+                if d is None and p.exists()]
+    check("the suite leaves no mock stub behind", not leftover, ", ".join(leftover))
     print(f"   mock -> refused, exit {r.returncode} (0 = validated); real files restored")
 
 

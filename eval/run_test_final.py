@@ -104,6 +104,11 @@ DROPPED_REASON = (
 
 METHODS = ("baseline", "improved")
 
+# Which model judges the values arm. None means "the model under test", which
+# is the only option available here: 70B is out of scope and mock, so the
+# config default would refuse. Set explicitly by --judge when main() runs.
+JUDGE_MODEL: str | None = None
+
 # Which runs the plan requires. Knowledge gets 2 (1 model x 2 methods);
 # values and dialect get 1 each - there is no "improved" arm for them, because
 # the improvement is retrieval over the knowledge corpus.
@@ -422,9 +427,19 @@ def run_knowledge(model: str, method: str, top_k: int = 3) -> dict:
 
 
 def run_values(model: str) -> dict:
-    """Uses eval/run_values.py - the Phase 2 values runner and judge path."""
+    """Uses eval/run_values.py - the Phase 2 values runner and judge path.
+
+    The judge defaults to config.judge_model, which is 70B - a model that is
+    out of scope here and, on this machine, a mock. That made the values arm
+    refuse to run. Since 70B cannot be run, the judge is pinned to the model
+    under test, which run_values.py documents as permitted provided the artefact
+    says so. It does: evaluate_values stamps judge_is_self_evaluated, and
+    write_metadata records judge_model/self_judged below. A self-judged score
+    is a different claim from a cross-judged one and the numbers must be read
+    that way.
+    """
     from run_values import evaluate_values
-    return evaluate_values(model)
+    return evaluate_values(model, judge_model=JUDGE_MODEL or model)
 
 
 def run_dialect(model: str) -> dict:
@@ -455,9 +470,17 @@ def load_results(task: str, model: str, method: str) -> list:
     return []
 
 
-def run_one(task: str, model: str, method: str, top_k: int, resume: bool) -> dict:
+def run_one(task: str, model: str, method: str, top_k: int, rerun: bool) -> dict:
     """
     Run one arm - behind its own gate.
+
+    ``rerun`` is the ONLY thing that re-consumes a recorded arm, and only
+    ``--accept-rerun`` sets it. ``--resume`` deliberately does NOT: its job is
+    to get past the "a run is already recorded" gate so an interrupted
+    invocation can finish the arms that are still missing. An earlier version
+    passed ``args.resume or args.accept_rerun`` here, which made --resume
+    re-execute every already-recorded arm and silently re-read the sealed set.
+    The sealed test set is read once; resuming must never be a second read.
 
     The gate is re-checked HERE as well as in main(). That duplication is
     deliberate and was added after this function was called directly from a test
@@ -476,9 +499,10 @@ def run_one(task: str, model: str, method: str, top_k: int, resume: bool) -> dic
               "the one shot either.")
 
     out_path = TEST_RUN / f"{task}_{model}_{method}.json"
-    if out_path.exists() and not resume:
-        print(f"  {task}_{model}_{method}: already recorded, skipping "
-              f"(Golden Rule 1 - use --resume to continue, --accept-rerun to redo)")
+    if out_path.exists() and not rerun:
+        print(f"  {task}_{model}_{method}: already recorded, keeping it "
+              f"(Golden Rule 1 - --resume keeps finished runs, "
+              f"--accept-rerun redoes one deliberately)")
         return {"skipped": True, "path": out_path.name}
 
     print(f"\n{'#' * 72}\n#  {task.upper()} | {model.upper()} | {method}\n{'#' * 72}")
@@ -540,8 +564,8 @@ def write_metadata(records: dict, top_k: int, duration_min: float) -> Path:
                        "is_mock": config.model(m).is_mock}
                    for m in SCOPE_MODELS},
         "improvement": {**IMPROVEMENT, "top_k": top_k},
-        "judge_model": config.judge_model,
-        "self_judged": config.judge_model in SCOPE_MODELS,
+        "judge_model": JUDGE_MODEL or config.judge_model,
+        "self_judged": (JUDGE_MODEL or config.judge_model) in SCOPE_MODELS,
         "scope": {"in_scope": list(SCOPE_MODELS),
                   "dropped": list(DROPPED_MODELS),
                   "dropped_reason": DROPPED_REASON},
@@ -567,13 +591,21 @@ def main() -> int:
     ap.add_argument("--only", default=None,
                     help="one run id, e.g. knowledge_8b_baseline")
     ap.add_argument("--resume", action="store_true",
-                    help="continue after an interruption; completed runs are kept")
+                    help="continue an interrupted run; recorded runs are kept, "
+                         "only unfinished arms are run (never a second read)")
     ap.add_argument("--accept-rerun", action="store_true",
-                    help="deliberately redo a run that is already recorded")
+                    help="deliberately redo a run that is already recorded "
+                         "(recorded in run_metadata)")
     ap.add_argument("--topk", type=int, default=3)
+    ap.add_argument("--judge", default=None,
+                    help="judge model for the values arm; defaults to the model "
+                         "under test (self-judged, disclosed in run_metadata)")
     ap.add_argument("--dry-run", action="store_true",
                     help="print the plan without running anything")
     args = ap.parse_args()
+
+    global JUDGE_MODEL
+    JUDGE_MODEL = args.judge
 
     pf = preflight(require_live=True, check_freeze=True)
     print_preflight(pf)
@@ -613,7 +645,7 @@ def main() -> int:
     records = {"_started": datetime.now(timezone.utc).isoformat(timespec="seconds")}
     failures = []
     for t, m, x in selected:
-        rec = run_one(t, m, x, args.topk, args.resume or args.accept_rerun)
+        rec = run_one(t, m, x, args.topk, args.accept_rerun)
         key = f"{t}_{m}_{x}"
         records[key] = rec
         if rec.get("error"):

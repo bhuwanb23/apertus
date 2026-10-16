@@ -419,23 +419,32 @@ def test_resume() -> None:
         real_audit_len = len(seal_mod.read_audit())
         seal_mod.AUDIT_PATH = Path(td) / "audit.log"
         try:
-            r = rtf.run_one("knowledge", "8b", "baseline", 3, resume=False)
+            r = rtf.run_one("knowledge", "8b", "baseline", 3, rerun=False)
             check("a completed run is recorded",
                   (Path(td) / "knowledge_8b_baseline.json").exists(),
                   "run_one must leave a record")
             check("exactly one dispatch happened", len(calls) == 1, str(calls))
 
-            # Now it is recorded. Running it again must be refused.
+            # Now it is recorded. Running it again must be skipped.
             before = len(calls)
-            again = rtf.run_one("knowledge", "8b", "baseline", 3, resume=False)
-            check("a recorded run is skipped without --resume", again.get("skipped"),
+            again = rtf.run_one("knowledge", "8b", "baseline", 3, rerun=False)
+            check("a recorded run is skipped by default", again.get("skipped"),
                   "re-running is Golden Rule 1")
             check("skipping does not call the model again", len(calls) == before,
                   f"{len(calls) - before} extra dispatches")
 
-            # --resume re-runs it deliberately.
-            rtf.run_one("knowledge", "8b", "baseline", 3, resume=True)
-            check("--resume does re-run the arm", len(calls) == before + 1,
+            # RESUMING MUST NOT RE-CONSUME IT. This is the regression guard for
+            # the bug where --resume was threaded into the rerun flag and every
+            # recorded arm was silently re-read from the sealed test set.
+            resumed = rtf.run_one("knowledge", "8b", "baseline", 3, rerun=False)
+            check("resuming keeps a completed run (rerun=False)", resumed.get("skipped"),
+                  "--resume must never become a second read of the sealed set")
+            check("resuming did not call the model again", len(calls) == before,
+                  f"{len(calls) - before} extra dispatches")
+
+            # Only an explicit deliberate opt-in re-runs it.
+            rtf.run_one("knowledge", "8b", "baseline", 3, rerun=True)
+            check("--accept-rerun does re-run the arm", len(calls) == before + 1,
                   str(calls))
 
             # The pre-flight notices the recorded run as a non-fatal warning.
@@ -462,7 +471,23 @@ def test_resume() -> None:
           "except Exception" in src)
     check("it re-raises KeyboardInterrupt so a Ctrl-C stops cleanly",
           "except KeyboardInterrupt" in src)
-    print("   recorded runs are skipped; --resume re-runs only that arm")
+    # The wiring that actually caused the double read: main() must hand the
+    # rerun flag from --accept-rerun ALONE. If --resume ever reaches this
+    # argument again, resuming will silently re-read every recorded arm.
+    check("main() passes --accept-rerun alone as the rerun flag",
+          "run_one(t, m, x, args.topk, args.accept_rerun)" in src,
+          "--resume must not be wired into the rerun flag")
+    # Precise form of the same rule: no call site of run_one may pass --resume.
+    # A blunt search for the expression trips on the unrelated warning gate
+    # (if rerun_warn and not (args.resume or args.accept_rerun)), which is a
+    # correct use of --resume, so only the call sites are inspected.
+    run_one_calls = [ln for ln in src.splitlines()
+                     if "run_one(" in ln and "def run_one" not in ln]
+    check("no run_one call site passes --resume",
+          all("args.resume" not in ln for ln in run_one_calls),
+          " | ".join(ln.strip() for ln in run_one_calls
+                      if "args.resume" in ln) or "clean")
+    print("   recorded runs are kept on resume; only --accept-rerun redoes one")
 
 
 def test_run_one_is_guarded() -> None:
@@ -528,7 +553,7 @@ def test_run_one_is_guarded() -> None:
                                              model_id="mock")
             refused = False
             try:
-                rtf.run_one("knowledge", "8b", "baseline", 3, resume=False)
+                rtf.run_one("knowledge", "8b", "baseline", 3, rerun=False)
             except SystemExit:
                 refused = True
             check("a direct run_one call is refused", refused)
