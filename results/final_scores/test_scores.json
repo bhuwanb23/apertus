@@ -1,0 +1,559 @@
+{
+  "generated_utc": "2026-10-16T11:52:32+00:00",
+  "git_hash": "9439b858de7e2211fa0588a565606fa31b280466",
+  "alpha": 0.05,
+  "knowledge": {
+    "8b": {
+      "baseline_present": true,
+      "improved_present": true,
+      "baseline_meta": {
+        "task": "knowledge",
+        "model": "8b",
+        "method": "baseline",
+        "run_utc": "2026-10-16T03:35:15+00:00",
+        "git_hash": "490ee7cf248628ec44262fcef839e7e21c98d55d",
+        "backend": "http",
+        "is_mock": false,
+        "temperature": 0.0,
+        "seed": 42,
+        "n": 36,
+        "scores": {
+          "overall": 55.6,
+          "total_questions": 36,
+          "correct": 20,
+          "parse_errors": 0,
+          "parse_error_rate": 0.0,
+          "api_errors": 0,
+          "chance_level": 25.0,
+          "by_category": {
+            "geography": {
+              "accuracy": 83.3,
+              "correct": 5,
+              "total": 6
+            },
+            "health": {
+              "accuracy": 66.7,
+              "correct": 4,
+              "total": 6
+            },
+            "history": {
+              "accuracy": 66.7,
+              "correct": 4,
+              "total": 6
+            },
+            "law": {
+              "accuracy": 50.0,
+              "correct": 3,
+              "total": 6
+            },
+            "politics": {
+              "accuracy": 33.3,
+              "correct": 2,
+              "total": 6
+            },
+            "services": {
+              "accuracy": 33.3,
+              "correct": 2,
+              "total": 6
+            }
+          },
+          "by_difficulty": {
+            "easy": {
+              "accuracy": 66.7,
+              "correct": 4,
+              "total": 6
+            },
+            "hard": {
+              "accuracy": 33.3,
+              "correct": 4,
+              "total": 12
+            },
+            "medium": {
+              "accuracy": 66.7,
+              "correct": 12,
+              "total": 18
+            }
+          },
+          "by_correct_answer": {
+            "A": {
+              "accuracy": 71.4,
+              "correct": 10,
+              "total": 14
+            },
+            "B": {
+              "accuracy": 37.5,
+              "correct": 3,
+              "total": 8
+            },
+            "C": {
+              "accuracy": 50.0,
+              "correct": 4,
+              "total": 8
+            },
+            "D": {
+              "accuracy": 50.0,
+              "correct": 3,
+              "total": 6
+            }
+          },
+          "backend": "http",
+          "is_mock": false
+        },
+        "sanity": {
+          "label": "knowledge 8b baseline",
+          "n": 36,
+          "accuracy": 55.6,
+          "correct": 20,
+          "parse_errors": 0,
+          "api_failed": 0,
+          "distinct_predictions": 4,
+          "modal_share": 0.5,
+          "chance_level": 25.0,
+          "ok": true,
+          "problems": []
+        },
+        "duration_s": 111.7,
+        "present": true
+      },
+      "improved_meta": {
+        "task": "knowledge",
+        "model": "8b",
+        "method": "improved",
+        "run_utc": "2026-10-16T06:06:58+00:00",
+        "git_hash": "1d481aa51187215ff5a54552a9e64c2c4217cc5e",
+        "backend": "http",
+        "is_mock": false,
+        "temperature": 0.0,
+        "seed": 42,
+        "n": 36,
+        "scores": {
+          "overall": 86.1,
+          "total_questions": 36,
+          "correct": 31,
+          "parse_errors": 1,
+          "parse_error_rate": 2.8,
+          "api_errors": 0,
+          "chance_level": 25.0,
+          "by_category": {
+            "geography": {
+              "accuracy": 100.0,
+              "correct": 6,
+              "total": 6
+            },
+            "health": {
+              "accuracy": 100.0,
+              "correct": 6,
+              "total": 6
+            },
+            "history": {
+              "accuracy": 83.3,
+              "correct": 5,
+              "total": 6
+            },
+            "law": {
+              "accuracy": 83.3,
+              "correct": 5,
+              "total": 6
+            },
+            "politics": {
+              "accuracy": 50.0,
+              "correct": 3,
+              "total": 6
+            },
+            "services": {
+              "accuracy": 100.0,
+              "correct": 6,
+              "total": 6
+            }
+          },
+          "by_difficulty": {
+            "easy": {
+              "accuracy": 66.7,
+              "correct": 4,
+              "total": 6
+            },
+            "hard": {
+              "accuracy": 83.3,
+              "correct": 10,
+              "total": 12
+            },
+            "medium": {
+              "accuracy": 94.4,
+              "correct": 17,
+              "total": 18
+            }
+          },
+          "by_correct_answer": {
+            "A": {
+              "accuracy": 92.9,
+              "correct": 13,
+              "total": 14
+            },
+            "B": {
+              "accuracy": 87.5,
+              "correct": 7,
+              "total": 8
+            },
+            "C": {
+              "accuracy": 75.0,
+              "correct": 6,
+              "total": 8
+            },
+            "D": {
+              "accuracy": 83.3,
+              "correct": 5,
+              "total": 6
+            }
+          },
+          "backend": "http",
+          "is_mock": false
+        },
+        "sanity": {
+          "label": "knowledge 8b improved",
+          "n": 36,
+          "accuracy": 86.1,
+          "correct": 31,
+          "parse_errors": 0,
+          "api_failed": 0,
+          "distinct_predictions": 5,
+          "modal_share": 0.389,
+          "chance_level": 25.0,
+          "ok": true,
+          "problems": []
+        },
+        "duration_s": 207.4,
+        "present": true
+      },
+      "baseline_ci": {
+        "accuracy": 55.6,
+        "correct": 20,
+        "n": 36,
+        "ci_lower": 39.6,
+        "ci_upper": 70.5,
+        "ci_half_width": 15.4,
+        "confidence": 0.95
+      },
+      "improved_ci": {
+        "accuracy": 86.1,
+        "correct": 31,
+        "n": 36,
+        "ci_lower": 71.3,
+        "ci_upper": 93.9,
+        "ci_half_width": 11.3,
+        "confidence": 0.95
+      },
+      "paired": {
+        "n_paired": 36,
+        "before_correct": 20,
+        "after_correct": 31,
+        "before_accuracy": 55.6,
+        "after_accuracy": 86.1,
+        "delta_pp": 30.6,
+        "delta_ci_lower": 13.1,
+        "delta_ci_upper": 30.6,
+        "improved": 11,
+        "regressed": 0,
+        "discordant": 11,
+        "net_items": 11,
+        "mcnemar_p": 0.001,
+        "significant": true,
+        "direction": "improved",
+        "improved_ids": [
+          "K020",
+          "K023",
+          "K029",
+          "K048",
+          "K060",
+          "K075",
+          "K082",
+          "K091",
+          "K094",
+          "K099",
+          "K113"
+        ],
+        "regressed_ids": []
+      },
+      "by_category": {
+        "geography": {
+          "n_paired": 6,
+          "before_correct": 5,
+          "after_correct": 6,
+          "before_accuracy": 83.3,
+          "after_accuracy": 100.0,
+          "delta_pp": 16.7,
+          "delta_ci_lower": -15.8,
+          "delta_ci_upper": 16.7,
+          "improved": 1,
+          "regressed": 0,
+          "discordant": 1,
+          "net_items": 1,
+          "mcnemar_p": 1.0,
+          "significant": false,
+          "direction": "no detectable change",
+          "improved_ids": [
+            "K075"
+          ],
+          "regressed_ids": []
+        },
+        "health": {
+          "n_paired": 6,
+          "before_correct": 4,
+          "after_correct": 6,
+          "before_accuracy": 66.7,
+          "after_accuracy": 100.0,
+          "delta_pp": 33.3,
+          "delta_ci_lower": -22.8,
+          "delta_ci_upper": 33.3,
+          "improved": 2,
+          "regressed": 0,
+          "discordant": 2,
+          "net_items": 2,
+          "mcnemar_p": 0.5,
+          "significant": false,
+          "direction": "no detectable change",
+          "improved_ids": [
+            "K048",
+            "K060"
+          ],
+          "regressed_ids": []
+        },
+        "history": {
+          "n_paired": 6,
+          "before_correct": 4,
+          "after_correct": 5,
+          "before_accuracy": 66.7,
+          "after_accuracy": 83.3,
+          "delta_pp": 16.7,
+          "delta_ci_lower": -15.8,
+          "delta_ci_upper": 16.7,
+          "improved": 1,
+          "regressed": 0,
+          "discordant": 1,
+          "net_items": 1,
+          "mcnemar_p": 1.0,
+          "significant": false,
+          "direction": "no detectable change",
+          "improved_ids": [
+            "K113"
+          ],
+          "regressed_ids": []
+        },
+        "law": {
+          "n_paired": 6,
+          "before_correct": 3,
+          "after_correct": 5,
+          "before_accuracy": 50.0,
+          "after_accuracy": 83.3,
+          "delta_pp": 33.3,
+          "delta_ci_lower": -22.8,
+          "delta_ci_upper": 33.3,
+          "improved": 2,
+          "regressed": 0,
+          "discordant": 2,
+          "net_items": 2,
+          "mcnemar_p": 0.5,
+          "significant": false,
+          "direction": "no detectable change",
+          "improved_ids": [
+            "K023",
+            "K029"
+          ],
+          "regressed_ids": []
+        },
+        "politics": {
+          "n_paired": 6,
+          "before_correct": 2,
+          "after_correct": 3,
+          "before_accuracy": 33.3,
+          "after_accuracy": 50.0,
+          "delta_pp": 16.7,
+          "delta_ci_lower": -15.8,
+          "delta_ci_upper": 16.7,
+          "improved": 1,
+          "regressed": 0,
+          "discordant": 1,
+          "net_items": 1,
+          "mcnemar_p": 1.0,
+          "significant": false,
+          "direction": "no detectable change",
+          "improved_ids": [
+            "K020"
+          ],
+          "regressed_ids": []
+        },
+        "services": {
+          "n_paired": 6,
+          "before_correct": 2,
+          "after_correct": 6,
+          "before_accuracy": 33.3,
+          "after_accuracy": 100.0,
+          "delta_pp": 66.7,
+          "delta_ci_lower": -13.6,
+          "delta_ci_upper": 66.7,
+          "improved": 4,
+          "regressed": 0,
+          "discordant": 4,
+          "net_items": 4,
+          "mcnemar_p": 0.125,
+          "significant": false,
+          "direction": "no detectable change",
+          "improved_ids": [
+            "K082",
+            "K091",
+            "K094",
+            "K099"
+          ],
+          "regressed_ids": []
+        }
+      }
+    },
+    "70b": {
+      "baseline_present": false,
+      "improved_present": false,
+      "baseline_meta": {
+        "present": false,
+        "expected": "knowledge_70b_baseline.json"
+      },
+      "improved_meta": {
+        "present": false,
+        "expected": "knowledge_70b_improved.json"
+      }
+    }
+  },
+  "cross_model": {},
+  "values": {
+    "8b": {
+      "present": true,
+      "n": 73,
+      "n_unscored": 0,
+      "mean": 1.014,
+      "distribution": {
+        "0": 33,
+        "1": 6,
+        "2": 34
+      },
+      "scale_max": 2.0,
+      "note": "Scores with no valid judgement are counted as unscored, not excluded from the denominator without saying so."
+    },
+    "70b": {
+      "present": false
+    }
+  },
+  "dialect_present": {
+    "8b": true,
+    "70b": false
+  },
+  "power": {
+    "overall_n36": {
+      "n": 36,
+      "alpha": 0.05,
+      "min_improvements_zero_regressions": 6,
+      "min_delta_pp_zero_regressions": 16.7,
+      "nothing_detectable_with_any_regression": false,
+      "table": [
+        {
+          "regressed": 0,
+          "improvements_needed": 6,
+          "net": 6,
+          "accuracy_delta_pts": 16.7,
+          "detectable": true
+        },
+        {
+          "regressed": 1,
+          "improvements_needed": 8,
+          "net": 7,
+          "accuracy_delta_pts": 19.4,
+          "detectable": true
+        },
+        {
+          "regressed": 2,
+          "improvements_needed": 10,
+          "net": 8,
+          "accuracy_delta_pts": 22.2,
+          "detectable": true
+        },
+        {
+          "regressed": 3,
+          "improvements_needed": 12,
+          "net": 9,
+          "accuracy_delta_pts": 25.0,
+          "detectable": true
+        },
+        {
+          "regressed": 4,
+          "improvements_needed": 13,
+          "net": 9,
+          "accuracy_delta_pts": 25.0,
+          "detectable": true
+        },
+        {
+          "regressed": 5,
+          "improvements_needed": 15,
+          "net": 10,
+          "accuracy_delta_pts": 27.8,
+          "detectable": true
+        },
+        {
+          "regressed": 6,
+          "improvements_needed": 17,
+          "net": 11,
+          "accuracy_delta_pts": 30.6,
+          "detectable": true
+        },
+        {
+          "regressed": 7,
+          "improvements_needed": 18,
+          "net": 11,
+          "accuracy_delta_pts": 30.6,
+          "detectable": true
+        }
+      ]
+    },
+    "per_category_n6": {
+      "n": 6,
+      "alpha": 0.05,
+      "min_improvements_zero_regressions": null,
+      "min_delta_pp_zero_regressions": null,
+      "nothing_detectable_with_any_regression": true,
+      "table": [
+        {
+          "regressed": 0,
+          "improvements_needed": null,
+          "net": null,
+          "accuracy_delta_pts": null,
+          "detectable": false
+        },
+        {
+          "regressed": 1,
+          "improvements_needed": null,
+          "net": null,
+          "accuracy_delta_pts": null,
+          "detectable": false
+        },
+        {
+          "regressed": 2,
+          "improvements_needed": null,
+          "net": null,
+          "accuracy_delta_pts": null,
+          "detectable": false
+        },
+        {
+          "regressed": 3,
+          "improvements_needed": null,
+          "net": null,
+          "accuracy_delta_pts": null,
+          "detectable": false
+        },
+        {
+          "regressed": 4,
+          "improvements_needed": null,
+          "net": null,
+          "accuracy_delta_pts": null,
+          "detectable": false
+        }
+      ]
+    }
+  },
+  "judge_model": "8b",
+  "self_judged": true
+}

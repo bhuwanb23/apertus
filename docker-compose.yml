@@ -1,0 +1,52 @@
+# =============================================================================
+# Swiss Reality Check — Hack Apertus, Track 1B
+#
+#   make run
+#
+# Runs offline by default. `make run` on a clean checkout with no configuration
+# must work, and the benchmark's model-free checks (dataset integrity, retrieval
+# recall, scoring, statistics, charts) all execute without an LLM. So the
+# service below needs no configuration at all.
+#
+# To additionally smoke-test a real model, export the three variables the
+# template requires before running make run:
+#
+#   export LLM_NAME=Apertus-v1.5-8B-Instruct-Q4_K_M
+#   export LLM_BASE_URL=http://host.docker.internal:8080/v1
+#   export LLM_API_KEY=EMPTY
+#   make run
+#
+# host.docker.internal is required rather than 127.0.0.1: from inside the
+# container, 127.0.0.1 is the container itself, so a llama.cpp server running on
+# the host would be unreachable. extra_hosts maps the name for Linux, where
+# Docker does not provide it by default.
+#
+# The harness's own APERTUS_8B_* variables take precedence when set, so an
+# existing local configuration is never silently overridden by these.
+# =============================================================================
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: swiss-reality-check:1b
+    working_dir: /app
+    environment:
+      # --- the three the Hack Apertus template requires ---------------------
+      LLM_NAME: ${LLM_NAME:-}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      # --- harness aliases (only used when LLM_* are absent) ---------------
+      APERTUS_8B_BACKEND: ${APERTUS_8B_BACKEND:-}
+      APERTUS_8B_MODEL_ID: ${LLM_NAME:-}
+      APERTUS_8B_API_BASE: ${LLM_BASE_URL:-}
+      APERTUS_8B_API_KEY: ${LLLM_API_KEY:-}
+      # No secrets are baked in; .env is gitignored and never copied.
+    extra_hosts:
+      # Lets the container reach a llama.cpp server on the host by name.
+      - "host.docker.internal:host-gateway"
+    # The harness reads results back from the repo, so mount it read-only for
+    # the run. Comment this out for a hermetic clean-checkout run.
+    volumes:
+      - ./:/app:ro

@@ -219,7 +219,7 @@ torch>=2.0.0
 python -m venv test_env
 source test_env/bin/activate  # or test_env\Scripts\activate on Windows
 pip install -r requirements.txt
-python eval/run_all.py --model 8b --task knowledge --split dev
+python src/eval/run_all.py --model 8b --task knowledge --split dev
 # Does it work? If not, fix the missing dependencies.
 deactivate
 ```
@@ -259,7 +259,7 @@ git clone https://github.com/YOUR_USERNAME/swiss-reality-check.git
 cd swiss-reality-check
 pip install -r requirements.txt
 cp .env.example .env  # Edit with your API keys
-python eval/run_all.py --model 8b --task knowledge --split dev
+python src/eval/run_all.py --model 8b --task knowledge --split dev
 ```
 
 Expected output:
@@ -714,7 +714,7 @@ pip install -r requirements.txt
 cp .env.example .env  # Add your Apertus API keys
 
 # Run baseline evaluation
-python eval/run_all.py --model 8b --task knowledge --split dev
+python src/eval/run_all.py --model 8b --task knowledge --split dev
 
 # Run with RAG improvement
 python fix/rag/run_rag_eval.py --model 8b --split dev

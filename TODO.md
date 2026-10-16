@@ -166,7 +166,7 @@ deliberately, since audio items need real recorded Swiss German.
 > **Phase 2 is code-complete.** 10,709 automated checks across four suites, plus
 > the Phase 1 dataset verifiers and a byte-identical rebuild. Every "Done When" is
 > met except the parts needing a running model and a human scorer.
-> `python eval/baseline_report.py` **refuses to certify mock results** and exits
+> `python src/eval/baseline_report.py` **refuses to certify mock results** and exits
 > non-zero — that refusal is correct behaviour, not a bug.
 
 ### Phase 3 — Failure analysis & improvement
@@ -267,9 +267,9 @@ deliberately, since audio items need real recorded Swiss German.
 > edit between review and run cannot slip through.
 >
 > ```
-> $ python fix/prompts_check.py fix/system_prompt/swiss_context_v1.txt --gate
+> $ python src/fix/prompts_check.py fix/system_prompt/swiss_context_v1.txt --gate
 >   0/84 (0%) of dev items are answered by the prompt — CLEAN      exit 0
-> $ python fix/prompts_check.py /tmp/plan_prompt.txt --gate
+> $ python src/fix/prompts_check.py /tmp/plan_prompt.txt --gate
 >   25/84 (30%) of dev items are answered by the prompt — CONTAMINATED  exit 1
 > ```
 
@@ -311,9 +311,9 @@ deliberately, since audio items need real recorded Swiss German.
 > - **3.4 found no detectable effect** (p=0.42). So the "improved" arm is
 >   expected to *match* baseline. That is a legitimate, reportable outcome —
 >   it is not a reason to change the fix now and not a reason to skip the arm.
-- [x] **0. The seal** — `eval/seal.py` records and verifies the test-set hash, logs every access
+- [x] **0. The seal** — `src/eval/seal.py` records and verifies the test-set hash, logs every access
 - [x] **1. Pre-flight gate** — 13 checks, refuses on mock / unsealed / dirty tree / frozen-code change
-- [x] **2. The runner** — `eval/run_test_final.py`, reuses the Phase 2 scorers, resumable
+- [x] **2. The runner** — `src/eval/run_test_final.py`, reuses the Phase 2 scorers, resumable
 - [x] **3. Sanity checks** — `quick_sanity_check()` plus the project's known failure modes
 - [x] **4. Resume** — a crashed run restarts alone; completed runs are never redone
 - [x] `fix/test_phase4.py` — **101 checks**
@@ -395,9 +395,9 @@ deliberately, since audio items need real recorded Swiss German.
 > ```bash
 > # eval/.env:  APERTUS_8B_BACKEND=http
 > git add -A && git commit -m "Phase 4: final test run"
-> python eval/seal.py freeze                        # Golden Rule 4
-> python eval/run_test_final.py --preflight         # must be all PASS
-> python eval/run_test_final.py
+> python src/eval/seal.py freeze                        # Golden Rule 4
+> python src/eval/run_test_final.py --preflight         # must be all PASS
+> python src/eval/run_test_final.py
 > ```
 
 **4.2 · Statistical comparison — built and verified; ⛔ no numbers yet (needs 4.1)**
@@ -563,7 +563,8 @@ deliberately, since audio items need real recorded Swiss German.
 > unsupported assertion in different words. The generator selects `pending` and
 > carries that caveat.
 
-**Current total: 11,491 automated checks across thirteen suites, all passing.**
+**Current total: 11,540 automated checks across thirteen suites, all passing**
+(verified from a clean `git ls-files` checkout, not only the dev tree).
 (10,881 through 3.2, plus 62 in `fix/test_improvement.py`, 88 in
 `fix/test_validation.py`, 101 in `fix/test_phase4.py`, 178 in
 `fix/test_statistics.py`, 112 in `fix/test_charts.py`, and 69 in
@@ -801,7 +802,7 @@ deliberately, since audio items need real recorded Swiss German.
 1. **Send the Discord post for a Swiss German speaker** (B1) — async turnaround, longest lead time.
 2. **Accept the HF gate, pull the Q4_K_M GGUF, start `llama-server`, flip `eval/.env` to `http`** (B2).
 3. `python eval/client.py 8b` → confirm live params, then
-   `python eval/run_all.py --model 8b --task knowledge` for the real 84-question baseline.
+   `python src/eval/run_all.py --model 8b --task knowledge` for the real 84-question baseline.
 4. `python eval/run_values.py --model 8b` → then `python eval/crosscheck.py select --model 8b --interactive`
    and score the 15 items (B5). **This is the only Phase 2.3 deliverable still open.**
 5. `python eval/analyse_parses.py` → if the parse rate exceeds 10%, escalate the prompt variant.

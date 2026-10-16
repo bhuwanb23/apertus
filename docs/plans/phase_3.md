@@ -1307,14 +1307,14 @@ work around. Unblocking **B2** is what turns this phase from built into measured
 The tools exist now, so none of these need pasting results anywhere:
 
 ```bash
-python eval/run_knowledge.py --model 8b --split dev      # baseline
-python fix/analyze_errors.py --model 8b --diagnose      # 3.1
-python fix/select_target.py                              # 3.2 (refuses while gated)
-python fix/prompts_check.py fix/system_prompt/swiss_context_v1.txt --gate   # 3.3a
-python fix/rag/prepare_corpus.py --stats                 # 3.3b
+python src/eval/run_knowledge.py --model 8b --split dev      # baseline
+python src/fix/analyze_errors.py --model 8b --diagnose      # 3.1
+python src/fix/select_target.py                              # 3.2 (refuses while gated)
+python src/fix/prompts_check.py fix/system_prompt/swiss_context_v1.txt --gate   # 3.3a
+python src/fix/rag/prepare_corpus.py --stats                 # 3.3b
 python fix/rag/retriever.py --backend bm25               # 3.3b, model-free
 python fix/rag/run_rag_eval.py --model 8b --split dev --topk 3   # 3.3b, paired
-python fix/validate_improvement.py --model 8b --split dev --write-comparison  # 3.4
+python src/fix/validate_improvement.py --model 8b --split dev --write-comparison  # 3.4
 ```
 
 Verification: `python fix/test_error_taxonomy.py`, `fix/test_select_target.py`,

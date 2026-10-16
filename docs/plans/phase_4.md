@@ -165,7 +165,7 @@ run_test_final.py — THE definitive test set evaluation.
 Run this ONCE. Save everything. Do not re-run.
 
 Usage:
-    python eval/run_test_final.py
+    python src/eval/run_test_final.py
 """
 
 import json

@@ -324,9 +324,9 @@ def save_prompts():
 """
 run_all.py — Run the complete evaluation pipeline.
 Usage:
-    python eval/run_all.py --model 8b --split dev
-    python eval/run_all.py --model 70b --split dev
-    python eval/run_all.py --model 8b --split test   # ONLY in Phase 4
+    python src/eval/run_all.py --model 8b --split dev
+    python src/eval/run_all.py --model 70b --split dev
+    python src/eval/run_all.py --model 8b --split test   # ONLY in Phase 4
 """
 
 import argparse
@@ -388,7 +388,7 @@ if __name__ == "__main__":
 ```
 
 ### ⏱️ Time Budget: ~2 hours
-### ✅ Done When: `python eval/run_all.py --model 8b --task knowledge` runs without crashing on a 5-question subset
+### ✅ Done When: `python src/eval/run_all.py --model 8b --task knowledge` runs without crashing on a 5-question subset
 
 ---
 
@@ -1145,7 +1145,7 @@ What: Run ONLY knowledge eval on 8B with 40 questions
 Why:  Find technical problems BEFORE you have 120 questions
 
 Command:
-  python eval/run_all.py --model 8b --task knowledge --split dev
+  python src/eval/run_all.py --model 8b --task knowledge --split dev
 
 Check for:
   □ API connection works
@@ -1163,11 +1163,11 @@ WED 14 OCT — FULL BASELINE
 ══════════════════════════
 
 Morning (after all data is ready):
-  python eval/run_all.py --model 8b --split dev
+  python src/eval/run_all.py --model 8b --split dev
   → Knowledge (84 questions) + Values (30) + Dialect (20-30)
 
 Afternoon:
-  python eval/run_all.py --model 70b --split dev
+  python src/eval/run_all.py --model 70b --split dev
   → Same, but on 70B
 
 Evening:

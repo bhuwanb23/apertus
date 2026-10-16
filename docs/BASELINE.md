@@ -10,7 +10,7 @@ numbers yet.**
 > the harness end to end, and every artefact it touches is stamped
 > `is_mock: true` and printed with a `*** MOCK ***` banner.
 >
-> `python eval/baseline_report.py` **refuses to certify these** — it exits
+> `python src/eval/baseline_report.py` **refuses to certify these** — it exits
 > non-zero with `NOT a result (mock)` for both models. That refusal is the
 > intended behaviour, not a bug.
 >
@@ -35,7 +35,7 @@ verifiers and a byte-identical rebuild of `knowledge_all/dev/test.json`.
 
 ## The Phase 3 starting point
 
-Produced by `python eval/baseline_report.py --models 8b 70b`. The structure is
+Produced by `python src/eval/baseline_report.py --models 8b 70b`. The structure is
 what matters here; the numbers are hash-derived noise.
 
 ```
@@ -107,30 +107,30 @@ Two of these survive into the real run and need handling, not fixing.
 #    then edit eval/.env: APERTUS_8B_BACKEND=http
 
 # 2. pre-flight
-python eval/baseline_report.py --pre        # exits non-zero if anything is wrong
+python src/eval/baseline_report.py --pre        # exits non-zero if anything is wrong
 
 # 3. baseline, both models, all three tasks
 rm -rf eval/results
-python eval/run_all.py  --model 8b  --task knowledge
+python src/eval/run_all.py  --model 8b  --task knowledge
 python eval/run_values.py --model 8b
 python eval/run_dialect.py --model 8b
-python eval/run_all.py  --model 70b --task knowledge
+python src/eval/run_all.py  --model 70b --task knowledge
 python eval/run_values.py --model 70b
 python eval/run_dialect.py --model 70b
 
 # 4. read the first responses BEFORE trusting anything
-python eval/baseline_report.py --models 8b 70b --inspect 10
+python src/eval/baseline_report.py --models 8b 70b --inspect 10
 
 # 5. if the parse rate is high, diagnose then escalate
 python eval/analyse_parses.py
-EVAL_KNOWLEDGE_VARIANT=v1_strict python eval/run_all.py --model 8b --task knowledge
+EVAL_KNOWLEDGE_VARIANT=v1_strict python src/eval/run_all.py --model 8b --task knowledge
 
 # 6. the one step only a human can do
 python eval/crosscheck.py select --model 8b --interactive
 python eval/crosscheck.py verify  --model 8b
 
 # 7. final check - must exit 0
-python eval/baseline_report.py --models 8b 70b
+python src/eval/baseline_report.py --models 8b 70b
 ```
 
 ---
