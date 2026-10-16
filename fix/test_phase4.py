@@ -409,6 +409,14 @@ def test_resume() -> None:
                         "dialect": lambda m: fake_dispatch("dialect", m, "-")}
         saved_guard = rtf.guard
         rtf.guard = lambda require_live=True: (True, [])
+        # The stubbed dispatcher never writes to eval/results/parsed, so
+        # load_results would look at the REAL parsed directory - and an arm that
+        # cannot hand back its rows is now refused outright, which would make
+        # this test measure the guard instead of the resume behaviour. Stub the
+        # rows the same way the dispatcher is stubbed.
+        saved_load = rtf.load_results
+        rtf.load_results = lambda *a, **k: [
+            {"question_id": "K001", "is_correct": True, "predicted": "A"}]
         # The audit log is redirected too. Otherwise every test run appends
         # "test-run knowledge/8b/baseline" to the real log, and after a few test
         # runs the record of who opened the sealed set is unreadable - test
@@ -461,6 +469,7 @@ def test_resume() -> None:
             rtf.TEST_RUN = saved
             rtf.DISPATCH = saved_dispatch
             rtf.guard = saved_guard
+            rtf.load_results = saved_load
             seal_mod.AUDIT_PATH = saved_audit
         check("the test run did not touch the real audit log",
               len(seal_mod.read_audit()) == real_audit_len,

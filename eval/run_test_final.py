@@ -304,10 +304,25 @@ def quick_sanity_check(results: list, label: str) -> dict:
     parse_errors = sum(1 for r in results
                        if r.get("predicted") == "__PARSE_ERROR__")
     api_failed = sum(1 for r in results if r.get("api_failed"))
-    acc = correct / total * 100
+    # Accuracy is over the rows that CARRY A VERDICT. Dialect mixes 12
+    # free-translation rows (no is_correct) with 18 multiple-choice rows, so
+    # scoring over all 30 counted every translation as wrong and reported 30%
+    # against a 25% chance floor - a red flag for a model that actually got
+    # 50% of the questions it was asked to answer.
+    scored_rows = [r for r in results if "is_correct" in r]
+    n_scored = len(scored_rows)
+    acc = (correct / n_scored * 100) if n_scored else None
     preds = [r.get("predicted") for r in results if r.get("predicted")]
     distinct = len(set(preds))
     modal = max((preds.count(p) for p in set(preds)), default=0)
+
+    # This file's heuristics are written for four-option MCQ rows. Values rows
+    # carry no "is_correct" and dialect rows carry no "predicted", so accuracy,
+    # chance level and prediction spread are all meaningless there - left on,
+    # they flagged a healthy values arm as "0% ACCURACY" and a dialect arm as
+    # "at chance". Only run the MCQ-specific checks when the rows have the shape
+    # they are about; the transport-level checks below apply to every task.
+    is_mcq = any("is_correct" in r or "predicted" in r for r in results)
 
     # Chance level from the data, not a constant: four-option MCQ is 25%, but a
     # different task has a different floor and a hardcoded threshold misreports.
@@ -316,11 +331,12 @@ def quick_sanity_check(results: list, label: str) -> dict:
     chance = (100.0 / len(set(letters))) if len(set(letters)) >= 2 else 100.0
 
     problems: list[str] = []
-    if acc == 0.0:
-        problems.append("0% ACCURACY - the model returned nothing usable")
-    elif acc == 100.0:
-        problems.append("100% ACCURACY - check for test-set contamination or a "
-                        "leaked answer key before believing this")
+    if is_mcq and acc is not None:
+        if acc == 0.0:
+            problems.append("0% ACCURACY - the model returned nothing usable")
+        elif acc == 100.0:
+            problems.append("100% ACCURACY - check for test-set contamination or a "
+                            "leaked answer key before believing this")
     if api_failed == total:
         problems.append("every request failed - the endpoint is not serving")
     elif api_failed:
@@ -332,21 +348,26 @@ def quick_sanity_check(results: list, label: str) -> dict:
     # score at or just above chance with no request failures means the answers
     # are not being parsed into options - the requests succeeded and the run
     # still produced nothing.
-    if (total >= 20 and not api_failed and letters
-            and acc <= chance + 5.0):
+    if is_mcq and (n_scored >= 20 and not api_failed and letters
+                and acc <= chance + 5.0):
         problems.append(f"{acc:.1f}% is at or barely above the {chance:.1f}% chance "
-                        f"level on {total} items with no request failures - check "
+                        f"level on {n_scored} items with no request failures - check "
                         f"whether responses are being parsed into options")
     # A model that emits one letter for every question scores chance exactly and
     # looks entirely plausible in a table.
-    if distinct <= 1 and total >= 10:
-        problems.append(f"every prediction is the same value ({preds[0]!r}) - the "
-                        f"model is not discriminating")
-    elif modal / total > 0.6 and total >= 10:
+    if is_mcq and distinct <= 1 and total >= 10:
+        problems.append(f"every prediction is the same value "
+                        f"({preds[0]!r}) - the model is not discriminating"
+                        if preds else
+                        f"all {total} rows carry the same prediction field - "
+                        f"the scorer is not reading this arm's rows")
+    elif is_mcq and modal / total > 0.6 and total >= 10:
         problems.append(f"{modal}/{total} share one answer - near-constant output")
 
     return {
-        "label": label, "n": total, "accuracy": round(acc, 1),
+        "label": label, "n": total, "n_scored": n_scored,
+        "accuracy": round(acc, 1) if acc is not None else None,
+        "is_mcq": is_mcq,
         "correct": correct, "parse_errors": parse_errors, "api_failed": api_failed,
         "distinct_predictions": distinct, "modal_share": round(modal / total, 3),
         "chance_level": round(chance, 1),
