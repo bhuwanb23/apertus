@@ -16,12 +16,12 @@ verified Swiss sources improves model answers without contaminating the
 prompt with the answer key.
 
 ### Who created the dataset?
-Created by **Bhuwan B** (team name: **Swiss Reality Check**, solo) during
-**Hack Apertus** Online Phase (1–16 October 2026), **Track 1 — Apertus
-Readiness**, Challenge **1B: Swiss Voices** — *Localising Apertus to Swiss
-Languages, Knowledge and Values*. Swiss German dialect items are **not yet
-validated** by a native speaker (`validated_by: null` on all 30 items) — see
-limitations.
+Created by team **Swiss Reality Check** — **Bhuwan B, Padmanaban G, and
+Avinash A** — during **Hack Apertus** Online Phase (1–16 October 2026),
+**Track 1 — Apertus Readiness**, Challenge **1B: Swiss Voices** — *Localising
+Apertus to Swiss Languages, Knowledge and Values*. Swiss German dialect items
+are **not yet validated** by a native speaker (`validated_by: null` on all 30
+items) — see limitations.
 
 ### Who funded the creation?
 Self-funded. Model weights / program context provided through the

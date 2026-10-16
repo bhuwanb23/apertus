@@ -90,7 +90,7 @@ size_categories:
 
 | | |
 |---|---|
-| **Team** | Swiss Reality Check · solo · Bhuwan B (`bhuwanb23`) |
+| **Team** | Swiss Reality Check · Bhuwan B · Padmanaban G · Avinash A |
 | **Problem statement** | Evaluate how well Apertus handles Swiss reality: transcribe local dialects, test domain-specific Swiss knowledge, and assess whether responses respect Swiss cultural norms and values. |
 | **Models** | [`swiss-ai/Apertus-v1.5-8B`](https://huggingface.co/swiss-ai/Apertus-v1.5-8B) (measured) · [`swiss-ai/Apertus-v1.5-70B`](https://huggingface.co/swiss-ai/Apertus-v1.5-70B) (designed for; **not run**) |
 | **Code** | https://github.com/bhuwanb23/apertus |

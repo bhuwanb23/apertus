@@ -257,6 +257,100 @@ def infographic_scope():
     return path
 
 
+def fig_values_dialect():
+    """Values score distribution + dialect outcomes (measured 8B)."""
+    fig, axes = plt.subplots(1, 2, figsize=(10.2, 3.6), dpi=160)
+    fig.patch.set_facecolor(BG)
+
+    ax = axes[0]
+    labels = ["Score 0", "Score 2"]
+    vals = [33, 40]
+    ax.bar(labels, vals, color=[RED, RED_LIGHT], width=0.55, zorder=3)
+    for i, v in enumerate(vals):
+        ax.text(i, v + 0.8, str(v), ha="center", fontsize=11, fontweight="bold", color=INK)
+    ax.set_ylim(0, 50)
+    ax.set_ylabel("Judged records")
+    ax.set_title("Values scores (n=73, mean 1.096/2.0)", loc="left", fontsize=10, fontweight="bold", color=INK)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.text(0.5, -0.18, "self-judged 8B · B5 human audit not done", transform=ax.transAxes,
+            ha="center", fontsize=8, color=MUTED)
+
+    ax = axes[1]
+    dlab = ["Refusal", "MCQ acc.", "T1 mean"]
+    dval = [50.0, 50.0, 0.0]
+    ax.bar(dlab, dval, color=[RED, RED_LIGHT, "#FADADD"], width=0.55, zorder=3)
+    for i, v in enumerate(dval):
+        ax.text(i, v + 1.5, f"{v:.0f}%", ha="center", fontsize=11, fontweight="bold", color=INK)
+    ax.set_ylim(0, 110)
+    ax.set_ylabel("%")
+    ax.set_title("Dialect outcomes (n=30, unvalidated)", loc="left", fontsize=10, fontweight="bold", color=INK)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.text(0.5, -0.18, "refusal is a headline metric · validated_by: null", transform=ax.transAxes,
+            ha="center", fontsize=8, color=MUTED)
+
+    fig.tight_layout()
+    path = OUT / "fig_values_dialect.png"
+    fig.savefig(path, dpi=160, bbox_inches="tight", facecolor=BG)
+    plt.close(fig)
+    return path
+
+
+def fig_pipeline():
+    """Compact pipeline / contamination strip."""
+    w, h = 1400, 260
+    img = Image.new("RGB", (w, h), BG)
+    d = ImageDraw.Draw(img)
+    d.text((40, 16), "Evaluation pipeline (knowledge arm)", fill=INK, font=_font(22, True))
+    steps = [
+        (40, "1. Harvest", "100 Swiss\nsources"),
+        (300, "2. Seal", "84/36 split\nhash-locked"),
+        (560, "3. Baseline", "8B · T=0\n55.6% test"),
+        (820, "4. BM25 RAG", "top_k=3\n0/84 contam."),
+        (1080, "5. Retest", "86.1% test\np=0.001"),
+    ]
+    for x, title, body in steps:
+        d.rounded_rectangle([x, 60, x + 230, 230], radius=12, fill=PANEL, outline="#E4E7EB", width=2)
+        d.text((x + 16, 78), title, fill=RED, font=_font(16, True))
+        d.text((x + 16, 120), body, fill=INK, font=_font(15))
+    # arrows between
+    for x in (270, 530, 790, 1050):
+        d.polygon([(x, 140), (x + 20, 130), (x + 20, 150)], fill=RED)
+    path = OUT / "infographic_pipeline.png"
+    img.save(path, "PNG")
+    return path
+
+
+def fig_category_table():
+    """Numeric per-category before/after for the PDF (descriptive)."""
+    fig, ax = plt.subplots(figsize=(10.2, 3.2), dpi=160)
+    fig.patch.set_facecolor(BG)
+    ax.axis("off")
+    ax.set_title("Per-category test (n=6 each) — descriptive deltas only", loc="left",
+                 fontsize=11, fontweight="bold", color=INK, pad=8)
+    cell = [["Category", "Baseline", "RAG", "Delta", "Significant?"]]
+    for name, b, r in CATS:
+        cell.append([name, f"{b:.1f}%", f"{r:.1f}%", f"+{r-b:.1f} pp", "no (n=6)"])
+    table = ax.table(cellText=cell, loc="center", cellLoc="center")
+    table.auto_set_font_size(False)
+    table.set_fontsize(9)
+    table.scale(1.15, 1.45)
+    for (r, c), cell_obj in table.get_celld().items():
+        cell_obj.set_edgecolor("#E4E7EB")
+        if r == 0:
+            cell_obj.set_facecolor("#FAFAFB")
+            cell_obj.set_text_props(weight="bold", color=INK)
+        elif c == 0:
+            cell_obj.set_text_props(weight="bold", color=INK)
+        else:
+            cell_obj.set_facecolor(BG)
+    path = OUT / "fig_category_table.png"
+    fig.savefig(path, dpi=160, bbox_inches="tight", facecolor=BG)
+    plt.close(fig)
+    return path
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     paths = [
@@ -264,6 +358,9 @@ def main():
         fig2_categories(),
         fig3_transfer(),
         fig4_recall(),
+        fig_values_dialect(),
+        fig_pipeline(),
+        fig_category_table(),
         infographic_pillars(),
         infographic_delta(),
         infographic_scope(),
