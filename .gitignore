@@ -65,7 +65,7 @@ fix/rag/**/*.npz
 # cwd). ANCHORED with a leading slash on purpose: the unanchored form
 # `results/` matches eval/results/ at every depth and, sitting further down the
 # file, used to beat the four `!` negations above.
- /results/
+/results/
 
 # ---- python ------------------------------------------------------------------
 __pycache__/
@@ -131,3 +131,4 @@ Thumbs.db
 # crash-time backup of the preflight-incident log is ignored.
 eval/seal/access.log.preflight-incident
 models/
+submission/
