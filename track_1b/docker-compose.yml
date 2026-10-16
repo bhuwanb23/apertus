@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    environment:
+      LLM_NAME: ${LLM_NAME:-swiss-ai/Apertus-v1.5-8B}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+    # Offline verify by default; live smoke only if LLM_BASE_URL is set.
