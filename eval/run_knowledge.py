@@ -477,6 +477,15 @@ def evaluate_knowledge(
     scores = calculate_knowledge_scores(results, backend=client.config.backend)
 
     # ------------------------------------------------------------------ persist
+    # Whether this is the retrieval condition depends on BOTH context arguments.
+    # The per-question map (rag_contexts) is the one the one-shot uses; the
+    # single string (rag_context) is the dev path. Deriving the condition from
+    # rag_context alone mislabelled the one-shot's improved arm as baseline:
+    # it wrote itself to knowledge_<model>_test_base.json, overwriting the
+    # baseline's rows, so BOTH arms ended up with the same file and the improved
+    # arm's rows were never found. Score a run by what was actually sent.
+    is_rag = bool(rag_context) or bool(rag_contexts)
+
     run_meta = {
         "run_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "task": "knowledge",
@@ -488,15 +497,15 @@ def evaluate_knowledge(
         "prompt_variant": prompt_variant,
         "split": split,
         "n_questions": len(questions),
-        "rag": bool(rag_context),
-        "condition": "after" if rag_context else "before",
+        "rag": is_rag,
+        "condition": "after" if is_rag else "before",
         "request_params": client.request_params(),
     }
 
     PARSED_DIR.mkdir(parents=True, exist_ok=True)
     SCORES_DIR.mkdir(parents=True, exist_ok=True)
 
-    tag = "rag" if rag_context else "base"
+    tag = "rag" if is_rag else "base"
     parsed_path = PARSED_DIR / f"knowledge_{model_name}_{split}_{tag}.json"
     parsed_path.write_text(
         json.dumps({"run": run_meta, "results": results}, indent=2, ensure_ascii=False) + "\n",

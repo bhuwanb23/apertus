@@ -466,6 +466,27 @@ def test_resume() -> None:
               len(seal_mod.read_audit()) == real_audit_len,
               "test accesses must not be mixed into the real record")
 
+    # An arm that scored but cannot hand back its rows must FAIL, not be
+    # archived. This is the signature of a naming/tag collision: real scores
+    # next to "results": [], which the run still reported as COMPLETE.
+    with tempfile.TemporaryDirectory() as td:
+        saved_tr, saved_disp, saved_guard = rtf.TEST_RUN, rtf.DISPATCH, rtf.guard
+        saved_load = rtf.load_results
+        rtf.TEST_RUN = Path(td)
+        rtf.DISPATCH = {"knowledge": lambda m, x: {"overall": 83.3, "stub": True}}
+        rtf.guard = lambda require_live=True: (True, [])
+        rtf.load_results = lambda *a, **k: []          # rows unreadable
+        try:
+            orphan = rtf.run_one("knowledge", "8b", "improved", 3, rerun=True)
+            check("a scored arm with no rows on disk FAILS", bool(orphan.get("error")),
+                  f"archived instead: {orphan}")
+            check("nothing is written for it",
+                  not (Path(td) / "knowledge_8b_improved.json").exists(),
+                  "a scoreless, rowless archive is worse than no archive")
+        finally:
+            rtf.TEST_RUN, rtf.DISPATCH, rtf.guard = saved_tr, saved_disp, saved_guard
+            rtf.load_results = saved_load
+
     src = (ROOT / "eval" / "run_test_final.py").read_text(encoding="utf-8")
     check("run_one catches exceptions and reports them per run",
           "except Exception" in src)

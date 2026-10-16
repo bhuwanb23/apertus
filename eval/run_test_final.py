@@ -454,13 +454,22 @@ DISPATCH = {"knowledge": run_knowledge, "values": run_values, "dialect": run_dia
 # ================================================================== the run
 def load_results(task: str, model: str, method: str) -> list:
     """The parsed rows for one arm, from wherever this version of the harness
-    put them. Phase 2's layout has changed across phases, so all three are
-    tried rather than assuming one."""
+    put them. Phase 2's layout has changed across phases, so all of them are
+    tried rather than assuming one.
+
+    run_values.py and run_dialect.py write "<task>_<model>.json" - no split and
+    no tag - because they have a single unconditional arm. An earlier list only
+    carried "<task>_<model>_test*" names, so both of those arms resolved to no
+    rows at all and were archived with empty results next to scores that were
+    real. The plain name has to be in the list, and it goes last so a genuine
+    per-split file always wins.
+    """
     tag = f"{task}_{model}_test"
     candidates = [
         RESULTS / "parsed" / f"{tag}_{method}.json",
         RESULTS / "parsed" / f"{tag}_{'rag' if method == 'improved' else 'base'}.json",
         RESULTS / "parsed" / f"{tag}.json",
+        RESULTS / "parsed" / f"{task}_{model}.json",
     ]
     for p in candidates:
         if p.exists():
@@ -520,6 +529,21 @@ def run_one(task: str, model: str, method: str, top_k: int, rerun: bool) -> dict
                 "method": method}
 
     rows = load_results(task, model, method)
+
+    # An arm with no rows but real scores is a corrupt record, not a result.
+    # It is what both bugs above produced: the archive kept a real score block
+    # next to "results": [] and the run reported COMPLETE, so nothing downstream
+    # could notice. The scores here were computed from rows that existed in
+    # memory; if they cannot be read back off disk, the archive is not
+    # reproducible and no paired statistic can be built from it.
+    if not rows:
+        print("\n  ARM FAILED: the run produced scores but its per-item rows "
+              "could not be read back from\n  eval/results/parsed. The archive "
+              "would be a score with no evidence behind it.\n  This is the "
+              "signature of a file-naming or tag collision, not of a bad run.")
+        return {"error": "no rows on disk after a scored run",
+                "task": task, "model": model, "method": method}
+
     sanity = quick_sanity_check(rows, f"{task} {model} {method}")
     print_sanity(sanity)
 
