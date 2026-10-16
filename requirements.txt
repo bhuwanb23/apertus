@@ -1,0 +1,52 @@
+# "Swiss Reality Check" - runtime dependencies
+# ============================================================================
+# Tested on Python 3.13.7 (Windows 11, x86_64).
+# Install:  python -m pip install -r requirements.txt
+#
+# NOTE ON ACCURACY: the template in docs/plans/phase_5.md listed torch, pandas
+# and matplotlib. None of the three is imported anywhere in this codebase.
+# Charts are hand-rolled SVG emitted by eval/svgkit.py, so there is no plotting
+# library to install; and there is no deep-learning framework either, because
+# the benchmark talks to a model over HTTP and never loads weights in-process.
+# Those template lines were removed rather than copied.
+#
+# The version floors below are the versions this project was actually run and
+# reported against, read off `python -m pip list` on the dev machine.
+#
+# Historical note: eval/requirements.txt (a Phase 2 file, also tracked) still
+# lists pandas and matplotlib. It is stale - nothing in eval/ imports either.
+# ============================================================================
+
+# ---- core (required) --------------------------------------------------------
+# python-dotenv  loaded as `dotenv` by eval/config.py to read eval/.env.
+#                config.py carries a stdlib fallback parser, so the harness
+#                still runs without it - but a fallback is not a substitute for
+#                a correctly quoted .env.
+python-dotenv>=1.0.1
+
+# numpy          used by fix/rag/embeddings.py to vectorise chunks for the
+#                dense retriever. Pinned here as core so the retrieval
+#                experiments stay reproducible; the default BM25 retriever
+#                needs only the standard library and never imports it.
+numpy>=2.2.6
+
+# openai         required only by the `openai` backend. The `http` backend - a
+#                local llama.cpp server, which produced every reported number -
+#                uses stdlib urllib and installs nothing at all.
+openai>=2.21.0
+
+
+# ---- extras: dense retrieval backend (OPTIONAL - NOT installed by default) ---
+# Only fix/rag/embeddings.py imports these, and only when the dense backend is
+# selected. The default retriever is pure-Python BM25 built on stdlib
+# math/re, so the whole benchmark - harness, parsing, scoring, statistics,
+# charts, narrative - runs with the core block alone. Uncomment both lines to
+# enable dense retrieval:
+#     sentence-transformers>=5.5.1
+#     huggingface_hub>=1.19.0
+#
+# (huggingface_hub is also used by scripts/download_apertus.py, the optional
+# model-fetch helper - equally not needed to run the benchmark.)
+# ---------------------------------------------------------------------------
+# sentence-transformers>=5.5.1
+# huggingface_hub>=1.19.0
