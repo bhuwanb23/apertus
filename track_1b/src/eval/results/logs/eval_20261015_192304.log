@@ -1,0 +1,12 @@
+2026-10-15 19:23:04,728 [INFO] REQ #1 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:23:04,728 [INFO] RES #1 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose C."
+2026-10-15 19:23:04,929 [INFO] REQ #2 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:23:04,930 [INFO] RES #2 8b | ok | 1 completion tokens | finish=stop | 'C.'
+2026-10-15 19:23:05,131 [INFO] REQ #3 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:23:05,131 [INFO] RES #3 8b | ok | 2 completion tokens | finish=stop | 'Answer: B'
+2026-10-15 19:23:05,332 [INFO] REQ #4 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:23:05,333 [INFO] RES #4 8b | ok | 1 completion tokens | finish=stop | 'B.'
+2026-10-15 19:23:05,534 [INFO] REQ #5 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:23:05,534 [INFO] RES #5 8b | ok | 2 completion tokens | finish=stop | 'Answer: C'
+2026-10-15 19:23:05,735 [INFO] REQ #6 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:23:05,736 [INFO] RES #6 8b | ok | 1 completion tokens | finish=stop | 'C'

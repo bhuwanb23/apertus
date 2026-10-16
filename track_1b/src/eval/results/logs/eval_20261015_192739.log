@@ -1,0 +1,8 @@
+2026-10-15 19:27:39,425 [INFO] REQ #1 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-15 19:27:39,426 [INFO] RES #1 8b | ok | 1 completion tokens | finish=stop | 'C.'
+2026-10-15 19:27:39,426 [INFO] REQ #1 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-15 19:27:39,426 [INFO] RES #1 8b | ok | 31 completion tokens | finish=stop | '{"required_present": [], "forbidden_present": ["F1"], "score": 0, "reason": "moc...'
+2026-10-15 19:27:39,627 [INFO] REQ #2 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-15 19:27:39,627 [INFO] RES #2 8b | ok | 1 completion tokens | finish=stop | 'B.'
+2026-10-15 19:27:39,627 [INFO] REQ #1 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-15 19:27:39,628 [INFO] RES #1 8b | ok | 38 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2"]...'

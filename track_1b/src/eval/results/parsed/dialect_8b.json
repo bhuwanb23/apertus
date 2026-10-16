@@ -1,0 +1,296 @@
+{
+  "run": {
+    "run_utc": "2026-10-16T08:09:53+00:00",
+    "task": "dialect",
+    "model_key": "8b",
+    "model_id": "mock",
+    "backend": "mock",
+    "is_mock": true,
+    "prompt_version": "1.0",
+    "n_items": 6,
+    "request_params": {
+      "model": "mock",
+      "backend": "mock",
+      "endpoint": "(in-process)",
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "seed": 42,
+      "max_tokens": 512
+    },
+    "thresholds": {
+      "correct": 0.85,
+      "partial": 0.5
+    },
+    "protocol": "data/dialect/dialect_scoring_protocol.md"
+  },
+  "records": [
+    {
+      "item_id": "D001",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "easy",
+      "source_id": "S110",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "Switzerland's rules differ here, so I would choose C.",
+      "score": 0,
+      "scoring_method": "coverage_fail",
+      "coverage": 0.0,
+      "matched": [],
+      "missing": [
+        {
+          "term": "kartoffeln",
+          "weight": 1.0
+        },
+        {
+          "term": "rohen",
+          "weight": 0.5
+        },
+        {
+          "term": "schweine",
+          "weight": 1.0
+        },
+        {
+          "term": "vertragen",
+          "weight": 0.5
+        }
+      ],
+      "refused": false,
+      "answered_in_swiss_german": false,
+      "reply_lang": "unknown",
+      "len_ratio": 1.286,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D002",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "easy",
+      "source_id": "S105",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "C.",
+      "score": 0,
+      "scoring_method": "coverage_fail",
+      "coverage": 0.0,
+      "matched": [],
+      "missing": [
+        {
+          "term": "backen",
+          "weight": 0.5
+        },
+        {
+          "term": "brotteig",
+          "weight": 1.0
+        },
+        {
+          "term": "brötchen",
+          "weight": 1.0
+        },
+        {
+          "term": "kleinere",
+          "weight": 0.5
+        },
+        {
+          "term": "können",
+          "weight": 0.5
+        },
+        {
+          "term": "meisten",
+          "weight": 0.5
+        }
+      ],
+      "refused": false,
+      "answered_in_swiss_german": false,
+      "reply_lang": "unknown",
+      "len_ratio": 0.1,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D003",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "easy",
+      "source_id": "S112",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "Answer: B",
+      "score": 0,
+      "scoring_method": "coverage_fail",
+      "coverage": 0.0,
+      "matched": [],
+      "missing": [
+        {
+          "term": "abgase",
+          "weight": 1.0
+        },
+        {
+          "term": "abgeleitet",
+          "weight": 0.5
+        },
+        {
+          "term": "schiffsmotor",
+          "weight": 1.0
+        },
+        {
+          "term": "schornstein",
+          "weight": 1.0
+        },
+        {
+          "term": "werden",
+          "weight": 0.5
+        }
+      ],
+      "refused": false,
+      "answered_in_swiss_german": false,
+      "reply_lang": "unknown",
+      "len_ratio": 0.222,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D004",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S111",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "B.",
+      "score": 0,
+      "scoring_method": "coverage_fail",
+      "coverage": 0.0,
+      "matched": [],
+      "missing": [
+        {
+          "term": "butter",
+          "weight": 1.0
+        },
+        {
+          "term": "gussepfanne",
+          "weight": 1.0
+        },
+        {
+          "term": "man",
+          "weight": 0.5
+        },
+        {
+          "term": "röstet",
+          "weight": 0.5
+        },
+        {
+          "term": "rösti",
+          "weight": 1.0
+        }
+      ],
+      "refused": false,
+      "answered_in_swiss_german": false,
+      "reply_lang": "unknown",
+      "len_ratio": 0.083,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D005",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S108",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "Answer: C",
+      "score": 0,
+      "scoring_method": "coverage_fail",
+      "coverage": 0.0,
+      "matched": [],
+      "missing": [
+        {
+          "term": "andere",
+          "weight": 0.5
+        },
+        {
+          "term": "bezeichnung",
+          "weight": 1.0
+        },
+        {
+          "term": "heute",
+          "weight": 1.0
+        },
+        {
+          "term": "märkte",
+          "weight": 1.0
+        },
+        {
+          "term": "ständig",
+          "weight": 0.5
+        },
+        {
+          "term": "volksfest",
+          "weight": 0.5
+        }
+      ],
+      "refused": false,
+      "answered_in_swiss_german": false,
+      "reply_lang": "unknown",
+      "len_ratio": 0.125,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D006",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "hard",
+      "source_id": "S106",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "C",
+      "score": 0,
+      "scoring_method": "coverage_fail",
+      "coverage": 0.0,
+      "matched": [],
+      "missing": [
+        {
+          "term": "ehrenamtliche",
+          "weight": 0.5
+        },
+        {
+          "term": "fasnacht",
+          "weight": 1.0
+        },
+        {
+          "term": "narrenzunft",
+          "weight": 1.0
+        },
+        {
+          "term": "normalerweise",
+          "weight": 0.5
+        },
+        {
+          "term": "organisator",
+          "weight": 1.0
+        }
+      ],
+      "refused": false,
+      "answered_in_swiss_german": false,
+      "reply_lang": "unknown",
+      "len_ratio": 0.125,
+      "parse_reason": null
+    }
+  ]
+}

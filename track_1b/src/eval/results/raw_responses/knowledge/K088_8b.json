@@ -1,0 +1,33 @@
+{
+  "text": "**Analyzing the Night Work Compensation in Switzerland**\n\nOkay, let's break this down. The question is about an employee working between 11pm and 6am on fewer than 25 nights per year. What's the employer's obligation?\n\nFirst, I need to recall the relevant Swiss labor law regarding night work. The key here is the number of nights worked. The question specifies \"fewer than 25 nights.\" That's the critical threshold.\n\nNow, let's look at the options:\n\n*   **A) Time off equal to 10% of the night hours worked:** This doesn't sound right. Time off isn't the standard compensation for night work in this context.\n*   **B) A wage supplement of at least 10%:** This is a possibility. A wage supplement is a common form of compensation for night work.\n*   **C) A wage supplement of at least 50%:** This seems too high. A 50% supplement is usually reserved for more extensive night work or specific circumstances.\n*   **D) A wage supplement of at least 25%:** This also seems too high for the scenario described.\n\nThe crucial point is the number of nights. If the employee works fewer than 25 nights, the requirement is a wage supplement of at least 10%. This is a standard provision in Swiss labor law for night work compensation when the number of nights is below a certain threshold.\n\nTherefore, the correct answer is B.\n\nLet me double-check. Yes, the standard rule is: if night work occurs on fewer than 25 nights per year, the employer must pay a wage supplement of at least 10%. This is a well-established provision in Swiss labor law.\n\nSo, the answer is B.\nB",
+  "ok": true,
+  "error": null,
+  "attempt": 1,
+  "usage": {
+    "prompt_tokens": 151,
+    "completion_tokens": 371
+  },
+  "finish_reason": "stop",
+  "request_params": {
+    "model": "apertus-v1.5-8b-text-q4_k_m",
+    "backend": "http",
+    "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42,
+    "max_tokens": 2048
+  },
+  "provenance": {
+    "model_key": "8b",
+    "model_id": "apertus-v1.5-8b-text-q4_k_m",
+    "backend": "http",
+    "api_base": "http://127.0.0.1:8080/v1",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42,
+    "max_tokens": 2048,
+    "is_mock": false,
+    "prompt_version": "1.0"
+  },
+  "timestamp": "2026-10-16T08:28:08+00:00"
+}

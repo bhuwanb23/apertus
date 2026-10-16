@@ -1,0 +1,2 @@
+2026-10-15 22:11:25,900 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-15 22:11:27,571 [INFO] RES #1 8b | ok | 125 completion tokens | finish=stop | 'The user wants to know the capital of Switzerland and answer with a single lette...'

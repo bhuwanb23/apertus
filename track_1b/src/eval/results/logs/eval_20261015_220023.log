@@ -1,0 +1,23 @@
+2026-10-15 22:00:23,554 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-15 22:00:25,623 [WARNING] attempt 1/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:00:32,662 [WARNING] attempt 2/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:00:44,695 [WARNING] attempt 3/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:00:44,695 [ERROR] all 3 attempts failed for 8b
+2026-10-15 22:00:44,897 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-15 22:00:46,929 [WARNING] attempt 1/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:00:53,975 [WARNING] attempt 2/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:01:06,031 [WARNING] attempt 3/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:01:06,031 [ERROR] all 3 attempts failed for 8b
+2026-10-15 22:01:06,232 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-15 22:01:08,266 [WARNING] attempt 1/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:01:15,290 [WARNING] attempt 2/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:01:27,330 [WARNING] attempt 3/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:01:27,330 [ERROR] all 3 attempts failed for 8b
+2026-10-15 22:01:27,531 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-15 22:01:29,559 [WARNING] attempt 1/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:01:36,608 [WARNING] attempt 2/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:01:48,641 [WARNING] attempt 3/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:01:48,641 [ERROR] all 3 attempts failed for 8b
+2026-10-15 22:01:48,843 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-15 22:01:50,872 [WARNING] attempt 1/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+2026-10-15 22:01:57,908 [WARNING] attempt 2/3 failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>

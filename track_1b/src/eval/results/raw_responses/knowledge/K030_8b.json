@@ -1,0 +1,33 @@
+{
+  "text": "**Analyzing the Swiss Naturalization Requirement**\n\nOkay, the user wants to know which Swiss residence permit a foreign citizen *must* hold before applying for ordinary naturalization. Let's break this down.\n\nFirst, I need to recall the Swiss naturalization process. It's not just about *having* a residence permit; it's about the *type* of permit and the duration of residence.\n\nThe question is straightforward: \"Which Swiss residence permit must a foreign citizen already hold before being able to apply for ordinary naturalization?\"\n\nLet's look at the options:\n\n*   **A) A short-term residence permit (L):** This is for temporary stays, not long-term residence. Definitely not the one.\n*   **B) A residence permit (B):** This is the standard long-term residence permit. This seems promising.\n*   **C) A settlement permit (C):** This is a specific type of permit for long-term residence, but is it the *required* one for naturalization? I need to be sure.\n*   **D) A cross-border commuter permit (G):** This is for people who commute to work in Switzerland but live elsewhere. Not relevant for naturalization.\n\nNow, the key is the *duration* of residence required for ordinary naturalization. According to the Swiss Federal Office of Migration (and generally accepted knowledge), a foreign citizen must have been residing in Switzerland for at least 10 years (continuous residence) to be eligible for ordinary naturalization.\n\nThe residence permit (B) is the permit that allows for this continuous residence. The settlement permit (C) is a specific type of residence permit, but the *residence permit (B)* is the one that facilitates the continuous residence required for naturalization.\n\nTherefore, the correct answer is B.\n\nLet me double-check. Yes, the residence permit (B) is the standard long-term residence permit that allows for the continuous residence required for ordinary naturalization. The settlement permit (C) is a specific type of residence permit, but the *residence permit (B)* is the one that facilitates the continuous residence required for naturalization.\n\nSo, the answer is B.\nB",
+  "ok": true,
+  "error": null,
+  "attempt": 1,
+  "usage": {
+    "prompt_tokens": 124,
+    "completion_tokens": 442
+  },
+  "finish_reason": "stop",
+  "request_params": {
+    "model": "apertus-v1.5-8b-text-q4_k_m",
+    "backend": "http",
+    "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42,
+    "max_tokens": 2048
+  },
+  "provenance": {
+    "model_key": "8b",
+    "model_id": "apertus-v1.5-8b-text-q4_k_m",
+    "backend": "http",
+    "api_base": "http://127.0.0.1:8080/v1",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42,
+    "max_tokens": 2048,
+    "is_mock": false,
+    "prompt_version": "1.0"
+  },
+  "timestamp": "2026-10-16T08:24:15+00:00"
+}

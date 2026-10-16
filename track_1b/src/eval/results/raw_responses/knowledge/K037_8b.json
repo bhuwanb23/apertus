@@ -1,0 +1,33 @@
+{
+  "text": "**Analyzing the Question on Swiss Annual Leave**\n\nOkay, the user wants to know if an employee in Switzerland can decide when to take their statutory annual leave. Let's break this down.\n\nFirst, I need to recall the relevant Swiss labor laws. The key here is the \"statutory annual leave\" – that's the leave an employee is entitled to by law. The question is about the employee's *right* to choose the timing.\n\nNow, I know that in many European countries, including Switzerland, the employer has some say in scheduling. The employee's entitlement is there, but the timing isn't always entirely free.\n\nLet's look at the options:\n\n*   **A) Yes – the statutory entitlement is unconditional, so the employee alone fixes the dates.** This seems too absolute. While the employee is entitled to the leave, the employer's operational needs often come into play. It's unlikely the employee has complete unilateral control over the *dates* without any employer input.\n*   **B) No – the employer must approve the time off, and may require the employee to change dates that are not compatible with the needs or interests of the company.** This sounds more accurate. The employer has the right to approve the leave schedule, and they can ask for changes if the dates conflict with business operations. This is a common practice in many countries, including Switzerland.\n*   **C) No – leave may only be taken in the calendar year in which it was earned.** This is incorrect. The employee can carry over unused leave to the next year, but the question is about *when* they can take it, not the year it was earned.\n*   **D) Yes, provided one month's notice is given to the employer in advance.** This is also incorrect. While notice is often required for changes, the employer's approval is the key factor here.\n\nSo, the correct answer is B. The employer has the right to approve the leave schedule, and they can require changes if the dates conflict with the company's needs. This is the standard practice in Swiss labor law regarding annual leave scheduling.\n\nTherefore, the answer is B.\nB",
+  "ok": true,
+  "error": null,
+  "attempt": 1,
+  "usage": {
+    "prompt_tokens": 175,
+    "completion_tokens": 442
+  },
+  "finish_reason": "stop",
+  "request_params": {
+    "model": "apertus-v1.5-8b-text-q4_k_m",
+    "backend": "http",
+    "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42,
+    "max_tokens": 2048
+  },
+  "provenance": {
+    "model_key": "8b",
+    "model_id": "apertus-v1.5-8b-text-q4_k_m",
+    "backend": "http",
+    "api_base": "http://127.0.0.1:8080/v1",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42,
+    "max_tokens": 2048,
+    "is_mock": false,
+    "prompt_version": "1.0"
+  },
+  "timestamp": "2026-10-16T08:24:33+00:00"
+}

@@ -1,0 +1,6 @@
+2026-10-15 20:08:25,094 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1024
+2026-10-15 20:08:29,496 [INFO] RES #1 8b | ok | 345 completion tokens | finish=stop | '**Analyzing the Impact of Swiss Federal Council Presidency on Decision-Making Po...'
+2026-10-15 20:08:29,698 [INFO] REQ #2 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1024
+2026-10-15 20:08:29,831 [INFO] RES #2 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-15 20:08:30,032 [INFO] REQ #3 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1024
+2026-10-15 20:08:30,123 [INFO] RES #3 8b | ok | 2 completion tokens | finish=stop | 'B'

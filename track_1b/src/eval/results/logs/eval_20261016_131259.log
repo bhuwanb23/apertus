@@ -1,0 +1,10 @@
+2026-10-16 13:12:59,771 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 13:13:06,078 [INFO] RES #1 8b | ok | 489 completion tokens | finish=stop | '**Analyzing the Swiss Federal Council Presidency**\n\nOkay, so the question is abo...'
+2026-10-16 13:13:06,281 [INFO] REQ #2 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 13:13:06,421 [INFO] RES #2 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 13:13:06,622 [INFO] REQ #3 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 13:13:12,273 [INFO] RES #3 8b | ok | 458 completion tokens | finish=stop | 'The user wants to know when a decision of the Swiss Parliament (Federal Assembly...'
+2026-10-16 13:13:12,475 [INFO] REQ #4 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 13:13:12,574 [INFO] RES #4 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 13:13:12,775 [INFO] REQ #5 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 13:13:18,391 [INFO] RES #5 8b | ok | 457 completion tokens | finish=stop | 'The user wants to identify which cantons are entitled to only one seat in the Co...'

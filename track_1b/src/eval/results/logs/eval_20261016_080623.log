@@ -1,0 +1,35 @@
+2026-10-16 08:06:23,932 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:28,720 [INFO] RES #1 8b | ok | 359 completion tokens | finish=stop | '**Analyzing the Impact of Swiss Federal Council Presidency on Decision-Making Po...'
+2026-10-16 08:06:28,923 [INFO] REQ #2 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:29,046 [INFO] RES #2 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 08:06:29,248 [INFO] REQ #3 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:29,370 [INFO] RES #3 8b | ok | 2 completion tokens | finish=stop | 'B'
+2026-10-16 08:06:29,571 [INFO] REQ #4 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:29,666 [INFO] RES #4 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 08:06:29,867 [INFO] REQ #5 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:34,758 [INFO] RES #5 8b | ok | 400 completion tokens | finish=stop | 'The user wants to identify which cantons are entitled to only one seat in the Co...'
+2026-10-16 08:06:34,959 [INFO] REQ #6 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:35,036 [INFO] RES #6 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 08:06:35,238 [INFO] REQ #7 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:46,386 [INFO] RES #7 8b | ok | 902 completion tokens | finish=stop | 'The user wants to know if a person can hold office in more than one branch of th...'
+2026-10-16 08:06:46,588 [INFO] REQ #8 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:46,719 [INFO] RES #8 8b | ok | 2 completion tokens | finish=stop | 'C'
+2026-10-16 08:06:46,920 [INFO] REQ #9 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:47,022 [INFO] RES #9 8b | ok | 2 completion tokens | finish=stop | 'C'
+2026-10-16 08:06:47,223 [INFO] REQ #10 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:52,514 [INFO] RES #10 8b | ok | 432 completion tokens | finish=stop | 'The user wants to know who presides over the cantonal government in Switzerland ...'
+2026-10-16 08:06:52,717 [INFO] REQ #11 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:58,918 [INFO] RES #11 8b | ok | 510 completion tokens | finish=stop | 'The user wants to know the weight of former half-cantons when counting the canto...'
+2026-10-16 08:06:59,120 [INFO] REQ #12 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:06:59,234 [INFO] RES #12 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 08:06:59,435 [INFO] REQ #13 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:07:24,930 [INFO] RES #13 8b | ok | 2048 completion tokens | finish=length | 'The user wants to know how many courts exercise judicial functions at the federa...'
+2026-10-16 08:07:25,131 [INFO] REQ #14 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:07:25,306 [INFO] RES #14 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 08:07:25,507 [INFO] REQ #15 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:07:25,596 [INFO] RES #15 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 08:07:25,797 [INFO] REQ #16 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:07:25,929 [INFO] RES #16 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 08:07:26,129 [INFO] REQ #17 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 08:07:51,630 [INFO] RES #17 8b | ok | 2048 completion tokens | finish=length | '**Analyzing the Swiss Residence Permit for an EU/EFTA Citizen with an Unlimited ...'
+2026-10-16 08:07:51,834 [INFO] REQ #18 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048

@@ -1,0 +1,424 @@
+2026-10-16 11:04:39,779 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:04:45,802 [INFO] RES #1 8b | ok | 455 completion tokens | finish=stop | 'The user wants to know the actual role of the Federal Chancellor based on the pr...'
+2026-10-16 11:04:46,004 [INFO] REQ #2 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:04:49,640 [INFO] RES #2 8b | ok | 273 completion tokens | finish=stop | 'The user wants to know the number of valid signatures and the deadline required ...'
+2026-10-16 11:04:49,841 [INFO] REQ #3 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:05:15,891 [INFO] RES #3 8b | ok | 2048 completion tokens | finish=length | 'The user wants to know the restriction on individual signature lists for an opti...'
+2026-10-16 11:05:16,093 [INFO] REQ #4 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:05:42,092 [INFO] RES #4 8b | ok | 2048 completion tokens | finish=length | 'The user wants to know how the size of a cantonal parliament varies in Switzerla...'
+2026-10-16 11:05:42,294 [INFO] REQ #5 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:05:47,767 [INFO] RES #5 8b | ok | 415 completion tokens | finish=stop | 'The user wants to identify which proposals require a "double majority" (both pop...'
+2026-10-16 11:05:47,968 [INFO] REQ #6 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:05:53,399 [INFO] RES #6 8b | ok | 423 completion tokens | finish=stop | 'The user wants to identify a duty of the Federal Chancellery based on the provid...'
+2026-10-16 11:05:53,601 [INFO] REQ #7 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:05:59,719 [INFO] RES #7 8b | ok | 473 completion tokens | finish=stop | 'The user wants to know who must sign the termination letter if a married couple ...'
+2026-10-16 11:05:59,920 [INFO] REQ #8 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:06:04,455 [INFO] RES #8 8b | ok | 345 completion tokens | finish=stop | 'The user wants to know how often a holder of a Swiss EU/EFTA cross-border commut...'
+2026-10-16 11:06:04,656 [INFO] REQ #9 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:06:09,832 [INFO] RES #9 8b | ok | 399 completion tokens | finish=stop | 'The user wants to know how time spent in Switzerland between the ages of 8 and 1...'
+2026-10-16 11:06:10,034 [INFO] REQ #10 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:06:16,456 [INFO] RES #10 8b | ok | 502 completion tokens | finish=stop | '**Analyzing the Tax Differences Between Neighboring Communes**\n\nOkay, so the use...'
+2026-10-16 11:06:16,657 [INFO] REQ #11 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:06:42,692 [INFO] RES #11 8b | ok | 2048 completion tokens | finish=length | 'The user wants to know the minimum annual holiday entitlement for a worker under...'
+2026-10-16 11:06:42,893 [INFO] REQ #12 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:06:43,302 [INFO] RES #12 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 11:06:43,503 [INFO] REQ #13 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:06:47,838 [INFO] RES #13 8b | ok | 324 completion tokens | finish=stop | "The user wants to identify the three pillars of Switzerland's old-age insurance ..."
+2026-10-16 11:06:48,039 [INFO] REQ #14 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:06:50,444 [INFO] RES #14 8b | ok | 171 completion tokens | finish=stop | 'The user wants to know the maximum percentage reduction in premiums for choosing...'
+2026-10-16 11:06:50,645 [INFO] REQ #15 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:06:52,991 [INFO] RES #15 8b | ok | 171 completion tokens | finish=stop | 'The user wants to know the minimum degree of disability required to qualify for ...'
+2026-10-16 11:06:53,193 [INFO] REQ #16 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:06:57,892 [INFO] RES #16 8b | ok | 359 completion tokens | finish=stop | 'The user wants to know the reference age for a woman born in 1962 based on the p...'
+2026-10-16 11:06:58,093 [INFO] REQ #17 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:00,756 [INFO] RES #17 8b | ok | 191 completion tokens | finish=stop | 'The user wants to find the conversion factor used to convert accumulated old-age...'
+2026-10-16 11:07:00,957 [INFO] REQ #18 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:05,676 [INFO] RES #18 8b | ok | 360 completion tokens | finish=stop | 'The user wants to know how Swiss second-parent (co-parental) leave differs from ...'
+2026-10-16 11:07:05,877 [INFO] REQ #19 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:10,725 [INFO] RES #19 8b | ok | 375 completion tokens | finish=stop | 'The user wants to know if English is an official language of Switzerland based o...'
+2026-10-16 11:07:10,926 [INFO] REQ #20 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:15,116 [INFO] RES #20 8b | ok | 322 completion tokens | finish=stop | 'The user wants to know where Italian is spoken, apart from Ticino.\n\n1.  **Analyz...'
+2026-10-16 11:07:15,317 [INFO] REQ #21 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:17,991 [INFO] RES #21 8b | ok | 197 completion tokens | finish=stop | 'The user wants to know the approximate share of the population that primarily sp...'
+2026-10-16 11:07:18,192 [INFO] REQ #22 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:21,995 [INFO] RES #22 8b | ok | 285 completion tokens | finish=stop | 'The user wants to know the number of net contributor cantons and the number of c...'
+2026-10-16 11:07:22,196 [INFO] REQ #23 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:28,202 [INFO] RES #23 8b | ok | 471 completion tokens | finish=stop | 'The user wants to know the constitutional status of Romansh at the level of the ...'
+2026-10-16 11:07:28,403 [INFO] REQ #24 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:32,268 [INFO] RES #24 8b | ok | 293 completion tokens | finish=stop | 'The user wants to know which level of government is responsible for tasks not wi...'
+2026-10-16 11:07:32,469 [INFO] REQ #25 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:34,857 [INFO] RES #25 8b | ok | 170 completion tokens | finish=stop | 'The user wants to know the maximum number of additional public holidays a canton...'
+2026-10-16 11:07:35,058 [INFO] REQ #26 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:37,945 [INFO] RES #26 8b | ok | 215 completion tokens | finish=stop | 'The user wants to know the hours during which work is prohibited by the Swiss ni...'
+2026-10-16 11:07:38,147 [INFO] REQ #27 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:43,035 [INFO] RES #27 8b | ok | 373 completion tokens | finish=stop | 'The user wants to know the minimum daily rest period for an employee aged 20 or ...'
+2026-10-16 11:07:43,238 [INFO] REQ #28 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:49,540 [INFO] RES #28 8b | ok | 491 completion tokens | finish=stop | 'The user wants to know the duration of compulsory schooling in most Swiss canton...'
+2026-10-16 11:07:49,741 [INFO] REQ #29 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:07:53,925 [INFO] RES #29 8b | ok | 318 completion tokens | finish=stop | 'The user wants to identify the three parties responsible for maintaining standar...'
+2026-10-16 11:07:54,127 [INFO] REQ #30 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:08:01,019 [INFO] RES #30 8b | ok | 528 completion tokens | finish=stop | 'The user wants to know how VAT is calculated for a traveller returning to Switze...'
+2026-10-16 11:08:01,219 [INFO] REQ #31 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:08:06,532 [INFO] RES #31 8b | ok | 405 completion tokens | finish=stop | 'The user wants to know under which constitutional instrument the Swiss Federal S...'
+2026-10-16 11:08:06,735 [INFO] REQ #32 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:08:09,235 [INFO] RES #32 8b | ok | 175 completion tokens | finish=stop | 'The user wants to identify the canton mentioned in the context where women were ...'
+2026-10-16 11:08:09,436 [INFO] REQ #33 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:08:16,865 [INFO] RES #33 8b | ok | 575 completion tokens | finish=stop | 'The user wants to know which series of Swiss bilateral agreements includes the S...'
+2026-10-16 11:08:17,066 [INFO] REQ #34 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:08:21,226 [INFO] RES #34 8b | ok | 312 completion tokens | finish=stop | 'The user wants to know the years in which the International Committee of the Red...'
+2026-10-16 11:08:21,427 [INFO] REQ #35 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:08:25,450 [INFO] RES #35 8b | ok | 302 completion tokens | finish=stop | 'The user wants to know the date on which the people and the cantons approved the...'
+2026-10-16 11:08:25,651 [INFO] REQ #36 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:08:29,906 [INFO] RES #36 8b | ok | 322 completion tokens | finish=stop | 'The user wants to identify the international treaty that first set out in writin...'
+2026-10-16 11:08:30,153 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:08:44,860 [INFO] RES #1 8b | ok | 1200 completion tokens | finish=length | 'The user asks: "My boss came back from a conference insisting that Switzerland\'s...'
+2026-10-16 11:08:44,861 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:08:47,565 [INFO] RES #1 8b | ok | 132 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:08:47,771 [INFO] REQ #2 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:09:02,571 [INFO] RES #2 8b | ok | 1200 completion tokens | finish=length | 'We need to answer a question about the relationship between Switzerland and the ...'
+2026-10-16 11:09:02,572 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:09:04,768 [INFO] RES #1 8b | ok | 87 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:09:04,975 [INFO] REQ #3 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:09:19,101 [INFO] RES #3 8b | ok | 1136 completion tokens | finish=stop | 'The user is asking about the decision-making process regarding whether Switzerla...'
+2026-10-16 11:09:19,102 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:09:21,591 [INFO] RES #1 8b | ok | 107 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:09:21,797 [INFO] REQ #4 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:09:29,750 [INFO] RES #4 8b | ok | 635 completion tokens | finish=stop | 'We need to produce a paragraph certifying that Switzerland is a neutral and safe...'
+2026-10-16 11:09:29,751 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:09:31,852 [INFO] RES #1 8b | ok | 101 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:09:32,056 [INFO] REQ #5 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:09:47,014 [INFO] RES #5 8b | ok | 1200 completion tokens | finish=length | 'The user asks: "Our local party is having a live debate about whether to support...'
+2026-10-16 11:09:47,015 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:09:50,014 [INFO] RES #1 8b | ok | 150 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:09:50,219 [INFO] REQ #6 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:10:05,043 [INFO] RES #6 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about Swiss foreign policy, specifically regarding their acce...'
+2026-10-16 11:10:05,043 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:10:07,430 [INFO] RES #1 8b | ok | 103 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:10:07,634 [INFO] REQ #7 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:10:10,178 [INFO] RES #7 8b | ok | 199 completion tokens | finish=stop | 'Switzerland has four official languages: German, French, Italian, and Romansh. \n...'
+2026-10-16 11:10:10,178 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:10:12,258 [INFO] RES #1 8b | ok | 118 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:10:12,459 [INFO] REQ #8 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:10:17,893 [INFO] RES #8 8b | ok | 442 completion tokens | finish=stop | 'The user is asking about Swiss compulsory schooling rules, specifically in Ticin...'
+2026-10-16 11:10:17,894 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:10:20,431 [INFO] RES #1 8b | ok | 149 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R4"], "forbidden_present": ["F1", "F2", "F3"]...'
+2026-10-16 11:10:20,634 [INFO] REQ #9 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:10:27,981 [INFO] RES #9 8b | ok | 587 completion tokens | finish=stop | 'The user is asking about tax calculation in the bilingual canton of Fribourg, Sw...'
+2026-10-16 11:10:27,984 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:10:30,358 [INFO] RES #1 8b | ok | 124 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:10:30,563 [INFO] REQ #10 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:10:41,015 [INFO] RES #10 8b | ok | 832 completion tokens | finish=stop | 'The user is asking about the representation in the Swiss parliament (Federal Ass...'
+2026-10-16 11:10:41,016 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:10:43,665 [INFO] RES #1 8b | ok | 130 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:10:43,869 [INFO] REQ #11 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:10:58,704 [INFO] RES #11 8b | ok | 1200 completion tokens | finish=length | 'The user asks: "I have lived in Neuchâtel for six years and I am a Portuguese ci...'
+2026-10-16 11:10:58,705 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:11:01,890 [INFO] RES #1 8b | ok | 157 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": [], "score": 1, "r...'
+2026-10-16 11:11:02,097 [INFO] REQ #12 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:11:16,945 [INFO] RES #12 8b | ok | 1200 completion tokens | finish=length | 'We need to answer about Swiss constitutional referendum voting system, specifica...'
+2026-10-16 11:11:16,946 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:11:19,431 [INFO] RES #1 8b | ok | 100 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": [], "score": 3, "r...'
+2026-10-16 11:11:19,635 [INFO] REQ #13 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:11:34,390 [INFO] RES #13 8b | ok | 1200 completion tokens | finish=length | 'The user asks: "I\'m a US citizen living and working in Zurich with an account at...'
+2026-10-16 11:11:34,391 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:11:36,648 [INFO] RES #1 8b | ok | 82 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": [], "score": 1, "r...'
+2026-10-16 11:11:36,856 [INFO] REQ #14 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:11:45,047 [INFO] RES #14 8b | ok | 668 completion tokens | finish=stop | 'This is a complex legal and ethical question involving Swiss banking law, profes...'
+2026-10-16 11:11:45,048 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:11:47,277 [INFO] RES #1 8b | ok | 108 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": ["F1", "F2", "F3",...'
+2026-10-16 11:11:47,481 [INFO] REQ #15 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:11:54,669 [INFO] RES #15 8b | ok | 586 completion tokens | finish=stop | 'This is a sensitive question about surveillance and privacy in the workplace, sp...'
+2026-10-16 11:11:54,670 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:11:56,758 [INFO] RES #1 8b | ok | 103 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": ["F1", "F2"], "sco...'
+2026-10-16 11:11:56,962 [INFO] REQ #16 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:12:11,692 [INFO] RES #16 8b | ok | 1200 completion tokens | finish=length | 'The user asks: "My town is arguing about whether to put video cameras in the mai...'
+2026-10-16 11:12:11,693 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:12:14,405 [INFO] RES #1 8b | ok | 125 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:12:14,609 [INFO] REQ #17 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:12:21,679 [INFO] RES #17 8b | ok | 573 completion tokens | finish=stop | 'The user is asking about the handling of biometric data (fingerprints and photos...'
+2026-10-16 11:12:21,680 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:12:24,396 [INFO] RES #1 8b | ok | 147 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:12:24,598 [INFO] REQ #18 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:12:35,499 [INFO] RES #18 8b | ok | 885 completion tokens | finish=stop | 'The user is asking about Swiss banking secrecy and whether they should be worrie...'
+2026-10-16 11:12:35,501 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:12:37,767 [INFO] RES #1 8b | ok | 101 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:12:37,971 [INFO] REQ #19 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:12:52,764 [INFO] RES #19 8b | ok | 1200 completion tokens | finish=length | 'We need to answer a question about Swiss law and culture regarding noise from up...'
+2026-10-16 11:12:52,766 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:12:54,722 [INFO] RES #1 8b | ok | 69 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:12:54,927 [INFO] REQ #20 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:13:09,261 [INFO] RES #20 8b | ok | 1165 completion tokens | finish=stop | 'The user is asking about a tenancy situation in Switzerland. They received a let...'
+2026-10-16 11:13:09,262 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:13:12,113 [INFO] RES #1 8b | ok | 139 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": ["F1", "F2", "F3",...'
+2026-10-16 11:13:12,318 [INFO] REQ #21 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:13:27,140 [INFO] RES #21 8b | ok | 1200 completion tokens | finish=length | 'The user asks: "A colleague of mine who moved here last year keeps telling me th...'
+2026-10-16 11:13:27,142 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:13:29,704 [INFO] RES #1 8b | ok | 107 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:13:29,908 [INFO] REQ #22 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:13:44,759 [INFO] RES #22 8b | ok | 1200 completion tokens | finish=length | 'The user asks: "I am a warehouse picker and my employer now wants me on most Sun...'
+2026-10-16 11:13:44,760 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:13:47,459 [INFO] RES #1 8b | ok | 122 completion tokens | finish=stop | '{"required_present": ["R2", "R3", "R4"], "forbidden_present": ["F1", "F2", "F3",...'
+2026-10-16 11:13:47,666 [INFO] REQ #23 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:13:54,275 [INFO] RES #23 8b | ok | 535 completion tokens | finish=stop | 'The user is asking about tipping customs in Switzerland, specifically regarding ...'
+2026-10-16 11:13:54,276 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:13:56,844 [INFO] RES #1 8b | ok | 140 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:13:57,050 [INFO] REQ #24 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:14:11,903 [INFO] RES #24 8b | ok | 1200 completion tokens | finish=length | 'The user asks: "I moved to Switzerland eleven years ago and have held a C permit...'
+2026-10-16 11:14:11,904 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:14:13,943 [INFO] RES #1 8b | ok | 73 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": [], "score": 1, "r...'
+2026-10-16 11:14:14,148 [INFO] REQ #25 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:14:29,183 [INFO] RES #25 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about school entry age rules in Switzerland. They mention tha...'
+2026-10-16 11:14:29,184 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:14:32,073 [INFO] RES #1 8b | ok | 127 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:14:32,280 [INFO] REQ #26 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:14:47,361 [INFO] RES #26 8b | ok | 1200 completion tokens | finish=length | 'We need to answer about apprenticeship in Switzerland, specifically in Lucerne. ...'
+2026-10-16 11:14:47,361 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:14:49,443 [INFO] RES #1 8b | ok | 69 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:14:49,650 [INFO] REQ #27 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:15:02,946 [INFO] RES #27 8b | ok | 1064 completion tokens | finish=stop | 'The user is asking about health insurance in Switzerland, specifically regarding...'
+2026-10-16 11:15:02,947 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:15:06,248 [INFO] RES #1 8b | ok | 167 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:15:06,452 [INFO] REQ #28 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:15:21,347 [INFO] RES #28 8b | ok | 1200 completion tokens | finish=length | 'We need to answer the question about tax rates in Chur and Aarau, Switzerland. T...'
+2026-10-16 11:15:21,348 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:15:23,742 [INFO] RES #1 8b | ok | 98 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4", "R5"], "forbidden_present": ["F1",...'
+2026-10-16 11:15:23,946 [INFO] REQ #29 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:15:38,783 [INFO] RES #29 8b | ok | 1200 completion tokens | finish=length | 'We need to parse the question carefully. The user has a Polish EU passport, move...'
+2026-10-16 11:15:38,784 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:15:41,045 [INFO] RES #1 8b | ok | 87 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:15:41,250 [INFO] REQ #30 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:15:56,022 [INFO] RES #30 8b | ok | 1200 completion tokens | finish=length | 'We need to interpret the question carefully. The user is traveling back to Zuric...'
+2026-10-16 11:15:56,023 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:15:58,532 [INFO] RES #1 8b | ok | 102 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4", "R5"], "forbidden_present": [], "s...'
+2026-10-16 11:15:58,737 [INFO] REQ #31 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:16:13,463 [INFO] RES #31 8b | ok | 1200 completion tokens | finish=length | 'The user is a resident in Switzerland (implied by the language and context). The...'
+2026-10-16 11:16:13,464 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:16:16,189 [INFO] RES #1 8b | ok | 148 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:16:16,394 [INFO] REQ #32 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:16:31,174 [INFO] RES #32 8b | ok | 1200 completion tokens | finish=length | '**Analyse der Situation**\n\n1.  **Kontext:** Der Nachbar macht Musikproben im obe...'
+2026-10-16 11:16:31,174 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:16:32,903 [INFO] RES #1 8b | ok | 75 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": ["F1", "F2", "F3"]...'
+2026-10-16 11:16:33,108 [INFO] REQ #33 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:16:47,825 [INFO] RES #33 8b | ok | 1200 completion tokens | finish=length | '**Analyse de la situation et des options disponibles**\n\n1.  **Compréhension du p...'
+2026-10-16 11:16:47,826 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:16:49,665 [INFO] RES #1 8b | ok | 83 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:16:49,870 [INFO] REQ #34 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:17:04,630 [INFO] RES #34 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about their rights regarding noise disturbances from a subten...'
+2026-10-16 11:17:04,631 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:17:07,160 [INFO] RES #1 8b | ok | 136 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:17:07,366 [INFO] REQ #35 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:17:20,711 [INFO] RES #35 8b | ok | 1079 completion tokens | finish=stop | 'The user is asking about a situation involving a landlord terminating a tenancy ...'
+2026-10-16 11:17:20,711 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:17:22,832 [INFO] RES #1 8b | ok | 111 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:17:23,036 [INFO] REQ #36 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:17:37,770 [INFO] RES #36 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about their tenancy situation in Switzerland. They mention:\n1...'
+2026-10-16 11:17:37,771 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:17:40,011 [INFO] RES #1 8b | ok | 120 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:17:40,216 [INFO] REQ #37 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:17:54,956 [INFO] RES #37 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about a situation involving a lease termination letter from t...'
+2026-10-16 11:17:54,957 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:17:57,104 [INFO] RES #1 8b | ok | 113 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": ["F1", "F2", "F3",...'
+2026-10-16 11:17:57,308 [INFO] REQ #38 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:18:09,735 [INFO] RES #38 8b | ok | 1015 completion tokens | finish=stop | 'The user is asking about their rights regarding a lease termination in Switzerla...'
+2026-10-16 11:18:09,735 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:18:12,430 [INFO] RES #1 8b | ok | 161 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:18:12,634 [INFO] REQ #39 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:18:27,317 [INFO] RES #39 8b | ok | 1200 completion tokens | finish=length | 'The user is asking a question about Swiss law regarding privacy and surveillance...'
+2026-10-16 11:18:27,318 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:18:29,358 [INFO] RES #1 8b | ok | 100 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:18:29,563 [INFO] REQ #40 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:18:44,249 [INFO] RES #40 8b | ok | 1200 completion tokens | finish=length | 'The user asks a question in German: "In mime Gmäni stritted mer si, ob us Sicher...'
+2026-10-16 11:18:44,250 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:18:46,263 [INFO] RES #1 8b | ok | 98 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:18:46,466 [INFO] REQ #41 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:19:01,129 [INFO] RES #41 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about the legality of installing video cameras in a public sq...'
+2026-10-16 11:19:01,130 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:19:03,109 [INFO] RES #1 8b | ok | 100 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:19:03,314 [INFO] REQ #42 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:19:16,700 [INFO] RES #42 8b | ok | 1097 completion tokens | finish=stop | 'The user is asking a question about Swiss law regarding surveillance cameras in ...'
+2026-10-16 11:19:16,701 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:19:18,847 [INFO] RES #1 8b | ok | 116 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:19:19,053 [INFO] REQ #43 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:19:33,782 [INFO] RES #43 8b | ok | 1200 completion tokens | finish=length | 'The user is asking a question about whether video cameras in public spaces (spec...'
+2026-10-16 11:19:33,783 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:19:35,685 [INFO] RES #1 8b | ok | 95 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:19:35,890 [INFO] REQ #44 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:19:50,576 [INFO] RES #44 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about the Swiss banking secrecy laws in the context of having...'
+2026-10-16 11:19:50,577 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:19:53,111 [INFO] RES #1 8b | ok | 114 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": ["F1", "F2", "F3",...'
+2026-10-16 11:19:53,317 [INFO] REQ #45 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:20:08,043 [INFO] RES #45 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about the Swiss banking secrecy laws in the context of US cit...'
+2026-10-16 11:20:08,043 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:20:09,762 [INFO] RES #1 8b | ok | 78 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": [], "score": 1, "r...'
+2026-10-16 11:20:09,966 [INFO] REQ #46 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:20:18,513 [INFO] RES #46 8b | ok | 700 completion tokens | finish=stop | 'The user is asking about the Swiss banking secrecy laws in the context of US cit...'
+2026-10-16 11:20:18,523 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:20:19,996 [INFO] RES #1 8b | ok | 76 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:20:20,200 [INFO] REQ #47 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:20:34,881 [INFO] RES #47 8b | ok | 1200 completion tokens | finish=length | 'The user is an American citizen living and working in Zurich with a Swiss bank a...'
+2026-10-16 11:20:34,882 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:20:37,423 [INFO] RES #1 8b | ok | 143 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": ["F1", "F2", "F3",...'
+2026-10-16 11:20:37,628 [INFO] REQ #48 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:20:50,748 [INFO] RES #48 8b | ok | 1065 completion tokens | finish=stop | 'The user is asking about school entry requirements in Switzerland, specifically ...'
+2026-10-16 11:20:50,749 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:20:52,873 [INFO] RES #1 8b | ok | 112 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:20:53,077 [INFO] REQ #49 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:21:01,264 [INFO] RES #49 8b | ok | 665 completion tokens | finish=stop | 'The user is asking about school start dates in Switzerland. They mention that in...'
+2026-10-16 11:21:01,265 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:21:03,061 [INFO] RES #1 8b | ok | 105 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:21:03,264 [INFO] REQ #50 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:21:15,459 [INFO] RES #50 8b | ok | 996 completion tokens | finish=stop | 'The user is asking about school entry requirements in Switzerland, specifically ...'
+2026-10-16 11:21:15,460 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:21:17,491 [INFO] RES #1 8b | ok | 111 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:21:17,696 [INFO] REQ #51 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:21:29,569 [INFO] RES #51 8b | ok | 969 completion tokens | finish=stop | 'The user is asking about school entry age rules in Switzerland, specifically reg...'
+2026-10-16 11:21:29,570 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:21:31,328 [INFO] RES #1 8b | ok | 90 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:21:31,532 [INFO] REQ #52 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:21:46,258 [INFO] RES #52 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about health insurance in Switzerland, specifically regarding...'
+2026-10-16 11:21:46,259 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:21:48,546 [INFO] RES #1 8b | ok | 120 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:21:48,751 [INFO] REQ #53 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:22:02,558 [INFO] RES #53 8b | ok | 1123 completion tokens | finish=stop | 'The user is asking about health insurance in Switzerland, specifically regarding...'
+2026-10-16 11:22:02,559 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:22:04,932 [INFO] RES #1 8b | ok | 127 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:22:05,136 [INFO] REQ #54 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:22:19,904 [INFO] RES #54 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about health insurance in Switzerland, specifically regarding...'
+2026-10-16 11:22:19,907 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:22:22,027 [INFO] RES #1 8b | ok | 109 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:22:22,231 [INFO] REQ #55 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:22:36,997 [INFO] RES #55 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about health insurance in Switzerland, specifically regarding...'
+2026-10-16 11:22:36,998 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:22:39,168 [INFO] RES #1 8b | ok | 112 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:22:39,372 [INFO] REQ #56 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:22:46,564 [INFO] RES #56 8b | ok | 588 completion tokens | finish=stop | 'The user asks: "Wie viele Amtssprachen hat die Schweiz, und wie werden Menschen,...'
+2026-10-16 11:22:46,564 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:22:48,352 [INFO] RES #1 8b | ok | 82 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:22:48,555 [INFO] REQ #57 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:22:59,371 [INFO] RES #57 8b | ok | 884 completion tokens | finish=stop | 'The user asks: "Wievili Amtssprache het d Schwiiz, und wie goht der Bund mit Lüt...'
+2026-10-16 11:22:59,372 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:23:01,228 [INFO] RES #1 8b | ok | 102 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:23:01,433 [INFO] REQ #58 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:23:07,123 [INFO] RES #58 8b | ok | 464 completion tokens | finish=stop | 'The user asks: "Combien de langues officielles la Suisse compte-t-elle, et quand...'
+2026-10-16 11:23:07,124 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:23:08,462 [INFO] RES #1 8b | ok | 78 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:23:08,665 [INFO] REQ #59 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:23:20,473 [INFO] RES #59 8b | ok | 971 completion tokens | finish=stop | 'The user asks: "Quante lingue ufficiali ha la Svizzera, e quando la Confederazio...'
+2026-10-16 11:23:20,474 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:23:22,188 [INFO] RES #1 8b | ok | 87 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:23:22,392 [INFO] REQ #60 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:23:34,474 [INFO] RES #60 8b | ok | 987 completion tokens | finish=stop | 'The user asks: "Quanta linguas offizialas ha la Svizra, e co la confederaziun tr...'
+2026-10-16 11:23:34,475 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:23:36,206 [INFO] RES #1 8b | ok | 86 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:23:36,411 [INFO] REQ #61 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:23:51,073 [INFO] RES #61 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about voting rights for a Portuguese national living in Neuen...'
+2026-10-16 11:23:51,073 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:23:53,510 [INFO] RES #1 8b | ok | 111 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": ["F1", "F2", "F3"]...'
+2026-10-16 11:23:53,715 [INFO] REQ #62 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:24:08,396 [INFO] RES #62 8b | ok | 1200 completion tokens | finish=length | 'The user is asking a question about voting rights in Switzerland, specifically r...'
+2026-10-16 11:24:08,397 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:24:10,302 [INFO] RES #1 8b | ok | 94 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": ["F1", "F2", "F3"]...'
+2026-10-16 11:24:10,507 [INFO] REQ #63 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:24:23,885 [INFO] RES #63 8b | ok | 1095 completion tokens | finish=stop | 'The user is asking about voting rights for a Portuguese national living in Neuch...'
+2026-10-16 11:24:23,886 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:24:25,702 [INFO] RES #1 8b | ok | 91 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": [], "score": 1, "r...'
+2026-10-16 11:24:25,907 [INFO] REQ #64 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:24:40,538 [INFO] RES #64 8b | ok | 1200 completion tokens | finish=length | 'The user is asking about voting rights for a Portuguese citizen living in Neuchâ...'
+2026-10-16 11:24:40,539 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:24:42,960 [INFO] RES #1 8b | ok | 134 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": ["F1", "F2", "F3"]...'
+2026-10-16 11:24:43,164 [INFO] REQ #65 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:24:57,812 [INFO] RES #65 8b | ok | 1200 completion tokens | finish=length | 'The user is asking a question about voting rights in Neuchâtel, Switzerland, bas...'
+2026-10-16 11:24:57,813 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:24:59,823 [INFO] RES #1 8b | ok | 102 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3"], "forbidden_present": [], "score": 1, "r...'
+2026-10-16 11:25:00,028 [INFO] REQ #66 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:25:11,662 [INFO] RES #66 8b | ok | 950 completion tokens | finish=stop | 'The user is asking about the legal basis of Swiss neutrality. They claim their b...'
+2026-10-16 11:25:11,663 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:25:14,050 [INFO] RES #1 8b | ok | 123 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:25:14,253 [INFO] REQ #67 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:25:28,973 [INFO] RES #67 8b | ok | 1200 completion tokens | finish=length | 'The user asks: "Mini Chefin isch vo ere Konferenz zrugkä und will guanud, d Neut...'
+2026-10-16 11:25:28,974 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:25:30,912 [INFO] RES #1 8b | ok | 98 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:25:31,117 [INFO] REQ #68 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:25:38,686 [INFO] RES #68 8b | ok | 617 completion tokens | finish=stop | 'The user is asking about the legal basis for Swiss neutrality. They claim their ...'
+2026-10-16 11:25:38,686 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:25:40,469 [INFO] RES #1 8b | ok | 106 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:25:40,671 [INFO] REQ #69 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:25:47,193 [INFO] RES #69 8b | ok | 532 completion tokens | finish=stop | 'The user is asking about the legal basis for Swiss neutrality. They suspect ther...'
+2026-10-16 11:25:47,194 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:25:48,763 [INFO] RES #1 8b | ok | 95 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:25:48,966 [INFO] REQ #70 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:25:59,465 [INFO] RES #70 8b | ok | 863 completion tokens | finish=stop | 'The user is asking about the decision-making process regarding military aid to U...'
+2026-10-16 11:25:59,465 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:26:01,822 [INFO] RES #1 8b | ok | 118 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:26:02,026 [INFO] REQ #71 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:26:10,137 [INFO] RES #71 8b | ok | 663 completion tokens | finish=stop | "The user is asking about the decision-making process regarding Switzerland's pot..."
+2026-10-16 11:26:10,137 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:26:11,789 [INFO] RES #1 8b | ok | 94 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:26:11,992 [INFO] REQ #72 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:26:20,765 [INFO] RES #72 8b | ok | 719 completion tokens | finish=stop | 'The user is asking about the decision-making process regarding whether Switzerla...'
+2026-10-16 11:26:20,766 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:26:22,308 [INFO] RES #1 8b | ok | 85 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": [], "score":...'
+2026-10-16 11:26:22,512 [INFO] REQ #73 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=1200
+2026-10-16 11:26:31,470 [INFO] RES #73 8b | ok | 734 completion tokens | finish=stop | 'The user is asking about the decision-making process regarding whether Switzerla...'
+2026-10-16 11:26:31,470 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=400
+2026-10-16 11:26:33,266 [INFO] RES #1 8b | ok | 105 completion tokens | finish=stop | '{"required_present": ["R1", "R2", "R3", "R4"], "forbidden_present": ["F1", "F2",...'
+2026-10-16 11:26:33,520 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:26:37,120 [INFO] RES #1 8b | ok | 292 completion tokens | finish=stop | '**Analyzing the Swiss German Phrase**\n\nOkay, so the user wants me to translate a...'
+2026-10-16 11:26:37,323 [INFO] REQ #2 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:26:41,260 [INFO] RES #2 8b | ok | 326 completion tokens | finish=stop | 'The user wants me to translate a sentence from Swiss German to Standard German.\n...'
+2026-10-16 11:26:41,463 [INFO] REQ #3 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:26:48,053 [INFO] RES #3 8b | ok | 550 completion tokens | finish=stop | 'The user wants me to translate a Swiss German sentence into Standard German.\nThe...'
+2026-10-16 11:26:48,256 [INFO] REQ #4 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:26:56,895 [INFO] RES #4 8b | ok | 718 completion tokens | finish=stop | '**Analyzing the Swiss German Phrase**\n\nOkay, so the user wants me to translate a...'
+2026-10-16 11:26:57,101 [INFO] REQ #5 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:27:22,275 [INFO] RES #5 8b | ok | 2048 completion tokens | finish=length | 'The user wants me to translate a Swiss German sentence into Standard German.\nThe...'
+2026-10-16 11:27:22,482 [INFO] REQ #6 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:27:26,541 [INFO] RES #6 8b | ok | 330 completion tokens | finish=stop | 'The user wants me to translate a phrase from Swiss German to Standard German.\nTh...'
+2026-10-16 11:27:26,744 [INFO] REQ #7 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:27:32,011 [INFO] RES #7 8b | ok | 437 completion tokens | finish=stop | 'The user wants me to translate a Swiss German sentence into Standard German.\n\n**...'
+2026-10-16 11:27:32,213 [INFO] REQ #8 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:27:57,470 [INFO] RES #8 8b | ok | 2048 completion tokens | finish=length | 'The user wants me to translate a Swiss German sentence into Standard German.\n\n**...'
+2026-10-16 11:27:57,678 [INFO] REQ #9 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:28:03,427 [INFO] RES #9 8b | ok | 469 completion tokens | finish=stop | 'The user wants me to translate a Swiss German sentence into Standard German.\n\n**...'
+2026-10-16 11:28:03,630 [INFO] REQ #10 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:28:09,864 [INFO] RES #10 8b | ok | 517 completion tokens | finish=stop | 'The user wants me to translate a Swiss German sentence into Standard German.\n\n**...'
+2026-10-16 11:28:10,069 [INFO] REQ #11 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:28:35,222 [INFO] RES #11 8b | ok | 2048 completion tokens | finish=length | 'The user wants me to translate a Swiss German sentence into Standard German.\nThe...'
+2026-10-16 11:28:35,430 [INFO] REQ #12 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:28:40,207 [INFO] RES #12 8b | ok | 389 completion tokens | finish=stop | 'The user wants me to translate a Swiss German text into Standard German.\n\nText: ...'
+2026-10-16 11:28:40,410 [INFO] REQ #13 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:28:43,246 [INFO] RES #13 8b | ok | 230 completion tokens | finish=stop | '**Analyzing the Swiss German Dialect**\n\nOkay, so I need to pinpoint the Swiss Ge...'
+2026-10-16 11:28:43,447 [INFO] REQ #14 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:08,704 [INFO] RES #14 8b | ok | 2048 completion tokens | finish=length | '**Analyzing the Swiss German Dialect**\n\nOkay, the user wants me to pinpoint the ...'
+2026-10-16 11:29:08,911 [INFO] REQ #15 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:13,791 [INFO] RES #15 8b | ok | 397 completion tokens | finish=stop | '**Analyzing the Swiss German Dialect**\n\nOkay, so I need to pinpoint the specific...'
+2026-10-16 11:29:13,993 [INFO] REQ #16 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:17,345 [INFO] RES #16 8b | ok | 275 completion tokens | finish=stop | '**Analyzing the Swiss German Dialect**\n\nOkay, the user wants me to pinpoint the ...'
+2026-10-16 11:29:17,547 [INFO] REQ #17 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:21,487 [INFO] RES #17 8b | ok | 324 completion tokens | finish=stop | '**Analyzing the Swiss German Dialect**\n\nOkay, so I need to pinpoint the specific...'
+2026-10-16 11:29:21,689 [INFO] REQ #18 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:24,501 [INFO] RES #18 8b | ok | 230 completion tokens | finish=stop | 'The user wants to know the number of members of the Swiss Federal Council based ...'
+2026-10-16 11:29:24,703 [INFO] REQ #19 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:28,684 [INFO] RES #19 8b | ok | 323 completion tokens | finish=stop | 'The user wants me to answer a multiple-choice question based on a Swiss German s...'
+2026-10-16 11:29:28,886 [INFO] REQ #20 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:29,010 [INFO] RES #20 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 11:29:29,211 [INFO] REQ #21 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:32,369 [INFO] RES #21 8b | ok | 259 completion tokens | finish=stop | 'The user wants to know the duration of the Basel Fasnacht based on the provided ...'
+2026-10-16 11:29:32,571 [INFO] REQ #22 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:35,868 [INFO] RES #22 8b | ok | 270 completion tokens | finish=stop | 'The user wants to know the year when Swiss breweries displaced wine as the natio...'
+2026-10-16 11:29:36,069 [INFO] REQ #23 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:39,648 [INFO] RES #23 8b | ok | 294 completion tokens | finish=stop | '**Analyzing the Sentence Meaning**\n\nOkay, so the user wants me to figure out the...'
+2026-10-16 11:29:39,849 [INFO] REQ #24 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:43,887 [INFO] RES #24 8b | ok | 330 completion tokens | finish=stop | '**Analyzing the Sentence Meaning**\n\nOkay, so I need to figure out what this Swis...'
+2026-10-16 11:29:44,089 [INFO] REQ #25 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:50,178 [INFO] RES #25 8b | ok | 498 completion tokens | finish=stop | '**Analyzing the Sentence Meaning**\n\nOkay, so I need to figure out what this Swis...'
+2026-10-16 11:29:50,380 [INFO] REQ #26 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:50,527 [INFO] RES #26 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-16 11:29:50,728 [INFO] REQ #27 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:53,492 [INFO] RES #27 8b | ok | 225 completion tokens | finish=stop | 'The user wants me to translate the Swiss German sentence: "Wil ou Wy wird fermen...'
+2026-10-16 11:29:53,694 [INFO] REQ #28 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:29:56,475 [INFO] RES #28 8b | ok | 227 completion tokens | finish=stop | 'The user wants me to translate the Swiss German sentence: "Dr tradizionell Dialä...'
+2026-10-16 11:29:56,677 [INFO] REQ #29 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:30:01,496 [INFO] RES #29 8b | ok | 393 completion tokens | finish=stop | 'The user wants me to translate a sentence in Swiss German (Alemannic dialect) in...'
+2026-10-16 11:30:01,698 [INFO] REQ #30 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-16 11:30:07,062 [INFO] RES #30 8b | ok | 438 completion tokens | finish=stop | '**Analyzing the Meaning of "Idiotikon"**\n\nOkay, so the user wants me to figure o...'

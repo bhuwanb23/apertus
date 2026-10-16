@@ -1,0 +1,336 @@
+2026-10-15 19:21:58,174 [INFO] REQ #1 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:21:58,174 [INFO] RES #1 8b | ok | 1 completion tokens | finish=stop | 'A.'
+2026-10-15 19:21:58,376 [INFO] REQ #2 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:21:58,376 [INFO] RES #2 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:21:58,578 [INFO] REQ #3 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:21:58,578 [INFO] RES #3 8b | ok | 1 completion tokens | finish=stop | 'A.'
+2026-10-15 19:21:58,779 [INFO] REQ #4 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:21:58,779 [INFO] RES #4 8b | ok | 1 completion tokens | finish=stop | 'B'
+2026-10-15 19:21:58,980 [INFO] REQ #5 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:21:58,981 [INFO] RES #5 8b | ok | 1 completion tokens | finish=stop | 'A.'
+2026-10-15 19:21:59,181 [INFO] REQ #6 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:21:59,182 [INFO] RES #6 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose D."
+2026-10-15 19:21:59,383 [INFO] REQ #7 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:21:59,383 [INFO] RES #7 8b | ok | 1 completion tokens | finish=stop | 'B'
+2026-10-15 19:21:59,584 [INFO] REQ #8 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:21:59,584 [INFO] RES #8 8b | ok | 1 completion tokens | finish=stop | 'A) '
+2026-10-15 19:21:59,786 [INFO] REQ #9 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:21:59,786 [INFO] RES #9 8b | ok | 1 completion tokens | finish=stop | 'B.'
+2026-10-15 19:21:59,987 [INFO] REQ #10 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:21:59,987 [INFO] RES #10 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:00,189 [INFO] REQ #11 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:00,189 [INFO] RES #11 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:00,390 [INFO] REQ #12 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:00,390 [INFO] RES #12 8b | ok | 1 completion tokens | finish=stop | 'B'
+2026-10-15 19:22:00,591 [INFO] REQ #13 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:00,591 [INFO] RES #13 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:00,792 [INFO] REQ #14 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:00,792 [INFO] RES #14 8b | ok | 4 completion tokens | finish=stop | 'The answer is B.'
+2026-10-15 19:22:00,993 [INFO] REQ #15 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:00,994 [INFO] RES #15 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:01,195 [INFO] REQ #16 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:01,195 [INFO] RES #16 8b | ok | 1 completion tokens | finish=stop | 'B.'
+2026-10-15 19:22:01,396 [INFO] REQ #17 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:01,396 [INFO] RES #17 8b | ok | 1 completion tokens | finish=stop | 'B'
+2026-10-15 19:22:01,597 [INFO] REQ #18 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:01,597 [INFO] RES #18 8b | ok | 4 completion tokens | finish=stop | 'The answer is B.'
+2026-10-15 19:22:01,798 [INFO] REQ #19 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:01,798 [INFO] RES #19 8b | ok | 2 completion tokens | finish=stop | 'Answer: A'
+2026-10-15 19:22:01,999 [INFO] REQ #20 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:01,999 [INFO] RES #20 8b | ok | 1 completion tokens | finish=stop | 'A'
+2026-10-15 19:22:02,200 [INFO] REQ #21 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:02,201 [INFO] RES #21 8b | ok | 1 completion tokens | finish=stop | 'C) '
+2026-10-15 19:22:02,402 [INFO] REQ #22 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:02,402 [INFO] RES #22 8b | ok | 1 completion tokens | finish=stop | 'A'
+2026-10-15 19:22:02,603 [INFO] REQ #23 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:02,603 [INFO] RES #23 8b | ok | 1 completion tokens | finish=stop | 'D'
+2026-10-15 19:22:02,804 [INFO] REQ #24 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:02,804 [INFO] RES #24 8b | ok | 2 completion tokens | finish=stop | 'Answer: C'
+2026-10-15 19:22:03,005 [INFO] REQ #25 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:03,005 [INFO] RES #25 8b | ok | 2 completion tokens | finish=stop | 'Answer: A'
+2026-10-15 19:22:03,206 [INFO] REQ #26 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:03,206 [INFO] RES #26 8b | ok | 4 completion tokens | finish=stop | 'The answer is C.'
+2026-10-15 19:22:03,407 [INFO] REQ #27 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:03,407 [INFO] RES #27 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:03,608 [INFO] REQ #28 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:03,608 [INFO] RES #28 8b | ok | 1 completion tokens | finish=stop | 'A'
+2026-10-15 19:22:03,810 [INFO] REQ #29 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:03,810 [INFO] RES #29 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose B."
+2026-10-15 19:22:04,011 [INFO] REQ #30 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:04,011 [INFO] RES #30 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is D because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:04,212 [INFO] REQ #31 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:04,212 [INFO] RES #31 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is C because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:04,413 [INFO] REQ #32 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:04,413 [INFO] RES #32 8b | ok | 4 completion tokens | finish=stop | 'The answer is A.'
+2026-10-15 19:22:04,614 [INFO] REQ #33 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:04,615 [INFO] RES #33 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is D because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:04,815 [INFO] REQ #34 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:04,816 [INFO] RES #34 8b | ok | 1 completion tokens | finish=stop | 'D) '
+2026-10-15 19:22:05,016 [INFO] REQ #35 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:05,017 [INFO] RES #35 8b | ok | 2 completion tokens | finish=stop | 'Answer: A'
+2026-10-15 19:22:05,217 [INFO] REQ #36 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:05,217 [INFO] RES #36 8b | ok | 2 completion tokens | finish=stop | 'Answer: A'
+2026-10-15 19:22:05,419 [INFO] REQ #37 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:05,419 [INFO] RES #37 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose A."
+2026-10-15 19:22:05,620 [INFO] REQ #38 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:05,620 [INFO] RES #38 8b | ok | 2 completion tokens | finish=stop | 'Answer: D'
+2026-10-15 19:22:05,821 [INFO] REQ #39 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:05,821 [INFO] RES #39 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose D."
+2026-10-15 19:22:06,022 [INFO] REQ #40 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:06,022 [INFO] RES #40 8b | ok | 1 completion tokens | finish=stop | 'B) '
+2026-10-15 19:22:06,223 [INFO] REQ #41 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:06,223 [INFO] RES #41 8b | ok | 4 completion tokens | finish=stop | 'The answer is C.'
+2026-10-15 19:22:06,424 [INFO] REQ #42 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:06,424 [INFO] RES #42 8b | ok | 2 completion tokens | finish=stop | 'Answer: B'
+2026-10-15 19:22:06,625 [INFO] REQ #43 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:06,625 [INFO] RES #43 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:06,826 [INFO] REQ #44 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:06,826 [INFO] RES #44 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is C because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:07,027 [INFO] REQ #45 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:07,027 [INFO] RES #45 8b | ok | 2 completion tokens | finish=stop | 'Answer: D'
+2026-10-15 19:22:07,228 [INFO] REQ #46 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:07,228 [INFO] RES #46 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is A because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:07,429 [INFO] REQ #47 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:07,429 [INFO] RES #47 8b | ok | 4 completion tokens | finish=stop | 'The answer is B.'
+2026-10-15 19:22:07,630 [INFO] REQ #48 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:07,631 [INFO] RES #48 8b | ok | 4 completion tokens | finish=stop | 'The answer is B.'
+2026-10-15 19:22:07,831 [INFO] REQ #49 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:07,831 [INFO] RES #49 8b | ok | 1 completion tokens | finish=stop | 'C) '
+2026-10-15 19:22:08,033 [INFO] REQ #50 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:08,033 [INFO] RES #50 8b | ok | 1 completion tokens | finish=stop | 'C) '
+2026-10-15 19:22:08,234 [INFO] REQ #51 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:08,234 [INFO] RES #51 8b | ok | 1 completion tokens | finish=stop | 'A'
+2026-10-15 19:22:08,435 [INFO] REQ #52 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:08,435 [INFO] RES #52 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is B because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:08,636 [INFO] REQ #53 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:08,636 [INFO] RES #53 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:08,837 [INFO] REQ #54 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:08,837 [INFO] RES #54 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is B because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:09,038 [INFO] REQ #55 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:09,039 [INFO] RES #55 8b | ok | 1 completion tokens | finish=stop | 'A) '
+2026-10-15 19:22:09,240 [INFO] REQ #56 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:09,240 [INFO] RES #56 8b | ok | 1 completion tokens | finish=stop | 'A'
+2026-10-15 19:22:09,441 [INFO] REQ #57 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:09,442 [INFO] RES #57 8b | ok | 1 completion tokens | finish=stop | 'C.'
+2026-10-15 19:22:09,642 [INFO] REQ #58 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:09,642 [INFO] RES #58 8b | ok | 4 completion tokens | finish=stop | 'The answer is B.'
+2026-10-15 19:22:09,843 [INFO] REQ #59 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:09,843 [INFO] RES #59 8b | ok | 1 completion tokens | finish=stop | 'D'
+2026-10-15 19:22:10,045 [INFO] REQ #60 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:10,045 [INFO] RES #60 8b | ok | 1 completion tokens | finish=stop | 'C) '
+2026-10-15 19:22:10,246 [INFO] REQ #61 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:10,246 [INFO] RES #61 8b | ok | 1 completion tokens | finish=stop | 'A) '
+2026-10-15 19:22:10,447 [INFO] REQ #62 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:10,447 [INFO] RES #62 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is A because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:10,648 [INFO] REQ #63 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:10,648 [INFO] RES #63 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is B because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:10,850 [INFO] REQ #64 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:10,850 [INFO] RES #64 8b | ok | 4 completion tokens | finish=stop | 'The answer is C.'
+2026-10-15 19:22:11,051 [INFO] REQ #65 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:11,051 [INFO] RES #65 8b | ok | 1 completion tokens | finish=stop | 'A'
+2026-10-15 19:22:11,252 [INFO] REQ #66 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:11,252 [INFO] RES #66 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose A."
+2026-10-15 19:22:11,454 [INFO] REQ #67 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:11,454 [INFO] RES #67 8b | ok | 1 completion tokens | finish=stop | 'C'
+2026-10-15 19:22:11,655 [INFO] REQ #68 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:11,655 [INFO] RES #68 8b | ok | 1 completion tokens | finish=stop | 'A.'
+2026-10-15 19:22:11,856 [INFO] REQ #69 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:11,856 [INFO] RES #69 8b | ok | 1 completion tokens | finish=stop | 'B.'
+2026-10-15 19:22:12,057 [INFO] REQ #70 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:12,057 [INFO] RES #70 8b | ok | 4 completion tokens | finish=stop | 'The answer is C.'
+2026-10-15 19:22:12,259 [INFO] REQ #71 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:12,259 [INFO] RES #71 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose B."
+2026-10-15 19:22:12,460 [INFO] REQ #72 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:12,460 [INFO] RES #72 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is C because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:12,662 [INFO] REQ #73 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:12,662 [INFO] RES #73 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose D."
+2026-10-15 19:22:12,863 [INFO] REQ #74 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:12,864 [INFO] RES #74 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is B because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:13,065 [INFO] REQ #75 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:13,065 [INFO] RES #75 8b | ok | 4 completion tokens | finish=stop | 'The answer is C.'
+2026-10-15 19:22:13,267 [INFO] REQ #76 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:13,267 [INFO] RES #76 8b | ok | 2 completion tokens | finish=stop | 'Answer: C'
+2026-10-15 19:22:13,468 [INFO] REQ #77 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:13,468 [INFO] RES #77 8b | ok | 1 completion tokens | finish=stop | 'D.'
+2026-10-15 19:22:13,669 [INFO] REQ #78 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:13,670 [INFO] RES #78 8b | ok | 4 completion tokens | finish=stop | 'The answer is A.'
+2026-10-15 19:22:13,870 [INFO] REQ #79 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:13,871 [INFO] RES #79 8b | ok | 2 completion tokens | finish=stop | 'Answer: D'
+2026-10-15 19:22:14,072 [INFO] REQ #80 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:14,072 [INFO] RES #80 8b | ok | 1 completion tokens | finish=stop | 'D) '
+2026-10-15 19:22:14,273 [INFO] REQ #81 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:14,273 [INFO] RES #81 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose D."
+2026-10-15 19:22:14,474 [INFO] REQ #82 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:14,474 [INFO] RES #82 8b | ok | 4 completion tokens | finish=stop | 'The answer is D.'
+2026-10-15 19:22:14,675 [INFO] REQ #83 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:14,675 [INFO] RES #83 8b | ok | 1 completion tokens | finish=stop | 'D) '
+2026-10-15 19:22:14,877 [INFO] REQ #84 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:14,877 [INFO] RES #84 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is B because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:15,079 [INFO] REQ #85 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:15,079 [INFO] RES #85 8b | ok | 1 completion tokens | finish=stop | 'D.'
+2026-10-15 19:22:15,281 [INFO] REQ #86 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:15,281 [INFO] RES #86 8b | ok | 2 completion tokens | finish=stop | 'Answer: D'
+2026-10-15 19:22:15,482 [INFO] REQ #87 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:15,482 [INFO] RES #87 8b | ok | 1 completion tokens | finish=stop | 'B.'
+2026-10-15 19:22:15,684 [INFO] REQ #88 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:15,684 [INFO] RES #88 8b | ok | 1 completion tokens | finish=stop | 'D.'
+2026-10-15 19:22:15,885 [INFO] REQ #89 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:15,886 [INFO] RES #89 8b | ok | 2 completion tokens | finish=stop | 'Answer: D'
+2026-10-15 19:22:16,087 [INFO] REQ #90 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:16,087 [INFO] RES #90 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:16,289 [INFO] REQ #91 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:16,289 [INFO] RES #91 8b | ok | 1 completion tokens | finish=stop | 'A'
+2026-10-15 19:22:16,490 [INFO] REQ #92 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:16,490 [INFO] RES #92 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:16,692 [INFO] REQ #93 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:16,692 [INFO] RES #93 8b | ok | 1 completion tokens | finish=stop | 'A.'
+2026-10-15 19:22:16,893 [INFO] REQ #94 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:16,893 [INFO] RES #94 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose D."
+2026-10-15 19:22:17,095 [INFO] REQ #95 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:17,095 [INFO] RES #95 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is C because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:17,296 [INFO] REQ #96 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:17,296 [INFO] RES #96 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose D."
+2026-10-15 19:22:17,498 [INFO] REQ #97 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:17,498 [INFO] RES #97 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is B because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:17,699 [INFO] REQ #98 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:17,700 [INFO] RES #98 8b | ok | 1 completion tokens | finish=stop | 'C'
+2026-10-15 19:22:17,901 [INFO] REQ #99 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:17,901 [INFO] RES #99 8b | ok | 1 completion tokens | finish=stop | 'D'
+2026-10-15 19:22:18,102 [INFO] REQ #100 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:18,102 [INFO] RES #100 8b | ok | 4 completion tokens | finish=stop | 'The answer is D.'
+2026-10-15 19:22:18,304 [INFO] REQ #101 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:18,304 [INFO] RES #101 8b | ok | 1 completion tokens | finish=stop | 'C'
+2026-10-15 19:22:18,505 [INFO] REQ #102 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:18,505 [INFO] RES #102 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:18,707 [INFO] REQ #103 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:18,707 [INFO] RES #103 8b | ok | 1 completion tokens | finish=stop | 'A) '
+2026-10-15 19:22:18,908 [INFO] REQ #104 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:18,908 [INFO] RES #104 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:19,110 [INFO] REQ #105 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:19,110 [INFO] RES #105 8b | ok | 2 completion tokens | finish=stop | 'Answer: C'
+2026-10-15 19:22:19,311 [INFO] REQ #106 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:19,312 [INFO] RES #106 8b | ok | 4 completion tokens | finish=stop | 'The answer is B.'
+2026-10-15 19:22:19,513 [INFO] REQ #107 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:19,513 [INFO] RES #107 8b | ok | 2 completion tokens | finish=stop | 'Answer: B'
+2026-10-15 19:22:19,714 [INFO] REQ #108 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:19,714 [INFO] RES #108 8b | ok | 4 completion tokens | finish=stop | 'The answer is D.'
+2026-10-15 19:22:19,916 [INFO] REQ #109 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:19,916 [INFO] RES #109 8b | ok | 4 completion tokens | finish=stop | 'The answer is A.'
+2026-10-15 19:22:20,117 [INFO] REQ #110 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:20,117 [INFO] RES #110 8b | ok | 4 completion tokens | finish=stop | 'The answer is B.'
+2026-10-15 19:22:20,319 [INFO] REQ #111 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:20,319 [INFO] RES #111 8b | ok | 1 completion tokens | finish=stop | 'C) '
+2026-10-15 19:22:20,521 [INFO] REQ #112 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:20,521 [INFO] RES #112 8b | ok | 1 completion tokens | finish=stop | 'A'
+2026-10-15 19:22:20,722 [INFO] REQ #113 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:20,723 [INFO] RES #113 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose D."
+2026-10-15 19:22:20,924 [INFO] REQ #114 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:20,925 [INFO] RES #114 8b | ok | 4 completion tokens | finish=stop | 'The answer is B.'
+2026-10-15 19:22:21,126 [INFO] REQ #115 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:21,126 [INFO] RES #115 8b | ok | 2 completion tokens | finish=stop | 'Answer: D'
+2026-10-15 19:22:21,328 [INFO] REQ #116 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:21,328 [INFO] RES #116 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose A."
+2026-10-15 19:22:21,529 [INFO] REQ #117 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:21,529 [INFO] RES #117 8b | ok | 2 completion tokens | finish=stop | 'Answer: B'
+2026-10-15 19:22:21,731 [INFO] REQ #118 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:21,731 [INFO] RES #118 8b | ok | 1 completion tokens | finish=stop | 'D'
+2026-10-15 19:22:21,932 [INFO] REQ #119 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:21,932 [INFO] RES #119 8b | ok | 4 completion tokens | finish=stop | 'The answer is B.'
+2026-10-15 19:22:22,133 [INFO] REQ #120 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:22,134 [INFO] RES #120 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is D because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:22,335 [INFO] REQ #121 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:22,335 [INFO] RES #121 8b | ok | 1 completion tokens | finish=stop | 'B'
+2026-10-15 19:22:22,537 [INFO] REQ #122 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:22,537 [INFO] RES #122 8b | ok | 1 completion tokens | finish=stop | 'A.'
+2026-10-15 19:22:22,738 [INFO] REQ #123 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:22,738 [INFO] RES #123 8b | ok | 2 completion tokens | finish=stop | 'Answer: A'
+2026-10-15 19:22:22,940 [INFO] REQ #124 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:22,940 [INFO] RES #124 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is A because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:23,142 [INFO] REQ #125 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:23,142 [INFO] RES #125 8b | ok | 1 completion tokens | finish=stop | 'B) '
+2026-10-15 19:22:23,344 [INFO] REQ #126 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:23,345 [INFO] RES #126 8b | ok | 1 completion tokens | finish=stop | 'B'
+2026-10-15 19:22:23,545 [INFO] REQ #127 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:23,546 [INFO] RES #127 8b | ok | 2 completion tokens | finish=stop | 'Answer: A'
+2026-10-15 19:22:23,747 [INFO] REQ #128 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:23,747 [INFO] RES #128 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose B."
+2026-10-15 19:22:23,948 [INFO] REQ #129 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:23,948 [INFO] RES #129 8b | ok | 4 completion tokens | finish=stop | 'The answer is B.'
+2026-10-15 19:22:24,150 [INFO] REQ #130 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:24,150 [INFO] RES #130 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose A."
+2026-10-15 19:22:24,351 [INFO] REQ #131 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:24,351 [INFO] RES #131 8b | ok | 2 completion tokens | finish=stop | 'Answer: D'
+2026-10-15 19:22:24,552 [INFO] REQ #132 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:24,552 [INFO] RES #132 8b | ok | 1 completion tokens | finish=stop | 'D.'
+2026-10-15 19:22:24,754 [INFO] REQ #133 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:24,754 [INFO] RES #133 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose B."
+2026-10-15 19:22:24,955 [INFO] REQ #134 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:24,955 [INFO] RES #134 8b | ok | 1 completion tokens | finish=stop | 'D.'
+2026-10-15 19:22:25,156 [INFO] REQ #135 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:25,157 [INFO] RES #135 8b | ok | 2 completion tokens | finish=stop | 'Answer: C'
+2026-10-15 19:22:25,358 [INFO] REQ #136 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:25,358 [INFO] RES #136 8b | ok | 2 completion tokens | finish=stop | 'Answer: C'
+2026-10-15 19:22:25,560 [INFO] REQ #137 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:25,560 [INFO] RES #137 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose C."
+2026-10-15 19:22:25,761 [INFO] REQ #138 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:25,761 [INFO] RES #138 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:25,963 [INFO] REQ #139 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:25,963 [INFO] RES #139 8b | ok | 1 completion tokens | finish=stop | 'D.'
+2026-10-15 19:22:26,165 [INFO] REQ #140 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:26,165 [INFO] RES #140 8b | ok | 4 completion tokens | finish=stop | 'The answer is C.'
+2026-10-15 19:22:26,366 [INFO] REQ #141 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:26,366 [INFO] RES #141 8b | ok | 4 completion tokens | finish=stop | 'The answer is A.'
+2026-10-15 19:22:26,567 [INFO] REQ #142 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:26,568 [INFO] RES #142 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is A because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:26,769 [INFO] REQ #143 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:26,769 [INFO] RES #143 8b | ok | 4 completion tokens | finish=stop | 'The answer is A.'
+2026-10-15 19:22:26,970 [INFO] REQ #144 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:26,971 [INFO] RES #144 8b | ok | 4 completion tokens | finish=stop | 'The answer is D.'
+2026-10-15 19:22:27,172 [INFO] REQ #145 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:27,172 [INFO] RES #145 8b | ok | 22 completion tokens | finish=stop | 'The correct answer is A because it is the only figure stated by an official Swis...'
+2026-10-15 19:22:27,374 [INFO] REQ #146 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:27,374 [INFO] RES #146 8b | ok | 1 completion tokens | finish=stop | 'D'
+2026-10-15 19:22:27,575 [INFO] REQ #147 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:27,575 [INFO] RES #147 8b | ok | 1 completion tokens | finish=stop | 'D'
+2026-10-15 19:22:27,776 [INFO] REQ #148 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:27,776 [INFO] RES #148 8b | ok | 1 completion tokens | finish=stop | 'C.'
+2026-10-15 19:22:27,978 [INFO] REQ #149 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:27,978 [INFO] RES #149 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose D."
+2026-10-15 19:22:28,179 [INFO] REQ #150 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:28,179 [INFO] RES #150 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose D."
+2026-10-15 19:22:28,380 [INFO] REQ #151 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:28,381 [INFO] RES #151 8b | ok | 1 completion tokens | finish=stop | 'A) '
+2026-10-15 19:22:28,582 [INFO] REQ #152 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:28,582 [INFO] RES #152 8b | ok | 4 completion tokens | finish=stop | 'The answer is D.'
+2026-10-15 19:22:28,784 [INFO] REQ #153 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:28,784 [INFO] RES #153 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose C."
+2026-10-15 19:22:28,985 [INFO] REQ #154 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:28,986 [INFO] RES #154 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose D."
+2026-10-15 19:22:29,187 [INFO] REQ #155 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:29,187 [INFO] RES #155 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose C."
+2026-10-15 19:22:29,389 [INFO] REQ #156 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:29,389 [INFO] RES #156 8b | ok | 2 completion tokens | finish=stop | 'Answer: D'
+2026-10-15 19:22:29,590 [INFO] REQ #157 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:29,590 [INFO] RES #157 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose A."
+2026-10-15 19:22:29,792 [INFO] REQ #158 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:29,792 [INFO] RES #158 8b | ok | 4 completion tokens | finish=stop | 'The answer is A.'
+2026-10-15 19:22:29,993 [INFO] REQ #159 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:29,993 [INFO] RES #159 8b | ok | 1 completion tokens | finish=stop | 'D) '
+2026-10-15 19:22:30,195 [INFO] REQ #160 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:30,195 [INFO] RES #160 8b | ok | 1 completion tokens | finish=stop | 'A'
+2026-10-15 19:22:30,396 [INFO] REQ #161 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:30,396 [INFO] RES #161 8b | ok | 4 completion tokens | finish=stop | 'The answer is A.'
+2026-10-15 19:22:30,598 [INFO] REQ #162 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:30,598 [INFO] RES #162 8b | ok | 1 completion tokens | finish=stop | 'C'
+2026-10-15 19:22:30,800 [INFO] REQ #163 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:30,801 [INFO] RES #163 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:31,002 [INFO] REQ #164 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:31,002 [INFO] RES #164 8b | ok | 2 completion tokens | finish=stop | 'Answer: A'
+2026-10-15 19:22:31,204 [INFO] REQ #165 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:31,204 [INFO] RES #165 8b | ok | 15 completion tokens | finish=stop | "I'm not certain enough to pick one of the options from memory."
+2026-10-15 19:22:31,405 [INFO] REQ #166 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:31,405 [INFO] RES #166 8b | ok | 1 completion tokens | finish=stop | 'C.'
+2026-10-15 19:22:31,607 [INFO] REQ #167 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:31,607 [INFO] RES #167 8b | ok | 1 completion tokens | finish=stop | 'B) '
+2026-10-15 19:22:31,808 [INFO] REQ #168 8b | model=mock temp=0.0 top_p=1.0 seed=42 max_tokens=512
+2026-10-15 19:22:31,808 [INFO] RES #168 8b | ok | 13 completion tokens | finish=stop | "Switzerland's rules differ here, so I would choose D."

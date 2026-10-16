@@ -1,0 +1,9 @@
+2026-10-15 22:24:01,530 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-15 22:24:05,611 [INFO] RES #1 8b | ok | 326 completion tokens | finish=stop | "**Analyzing the President's Role in the Swiss Federal Council**\n\nOkay, let's bre..."
+2026-10-15 22:24:05,813 [INFO] REQ #2 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-15 22:24:05,955 [INFO] RES #2 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-15 22:24:06,156 [INFO] REQ #3 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-15 22:24:06,292 [INFO] RES #3 8b | ok | 2 completion tokens | finish=stop | 'B'
+2026-10-15 22:24:06,493 [INFO] REQ #4 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048
+2026-10-15 22:24:06,593 [INFO] RES #4 8b | ok | 2 completion tokens | finish=stop | 'A'
+2026-10-15 22:24:06,794 [INFO] REQ #5 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=2048

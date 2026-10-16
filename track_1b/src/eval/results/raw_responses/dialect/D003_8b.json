@@ -1,0 +1,33 @@
+{
+  "text": "Answer: B",
+  "ok": true,
+  "error": null,
+  "attempt": 1,
+  "usage": {
+    "prompt_tokens": 61,
+    "completion_tokens": 2
+  },
+  "finish_reason": "stop",
+  "request_params": {
+    "model": "mock",
+    "backend": "mock",
+    "endpoint": "(in-process)",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42,
+    "max_tokens": 512
+  },
+  "provenance": {
+    "model_key": "8b",
+    "model_id": "mock",
+    "backend": "mock",
+    "api_base": "",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42,
+    "max_tokens": 512,
+    "is_mock": true,
+    "prompt_version": "1.0"
+  },
+  "timestamp": "2026-10-16T08:09:52+00:00"
+}
