@@ -1,6 +1,6 @@
 {
-  "frozen_utc": "2026-10-16T03:17:49+00:00",
-  "git_hash": "a0f3b8c7abbd2c0da5bf39e2be4ce6802a31afff",
+  "frozen_utc": "2026-10-16T03:32:27+00:00",
+  "git_hash": "fdf727f5301c91a5534e03648492caae63ee9592",
   "tree_dirty": false,
-  "note": "Improvement frozen before the one-shot: BM25 top-3 retrieval over the 367-chunk corpus. Dev: 48.8% -> 83.3% (+34.5), McNemar 34 improved / 5 regressed. No change to the fix after this point."
+  "note": "Re-freeze after fixing a one-shot harness bug: the improved arm had been sending all 36 stitched per-question contexts with every question (17k tokens, cross-question leakage). Fix restores per-question retrieval to match the dev path. The already-completed knowledge baseline arm is UNAFFECTED - it runs with no retrieval context. No change to the intervention itself (BM25 top-3)."
 }

@@ -96,10 +96,13 @@ def git_dirty() -> bool:
     except Exception:
         return False
     lines = [ln for ln in out.splitlines() if ln.strip()]
-    # Drop untracked seal bookkeeping, e.g. "?? eval/seal/frozen_code.json".
-    material = [ln for ln in lines if not (
-        ln.startswith("??") and ln[3:].strip().replace("\\", "/").startswith(
-            "eval/seal/"))]
+    # Drop the seal's own bookkeeping, modified or untracked, e.g.
+    # " M eval/seal/frozen_code.json" / "?? eval/seal/frozen_code.json".
+    def _is_seal_bookkeeping(line: str) -> bool:
+        path = line[2:].strip() if len(line) > 2 else ""
+        path = path.strip('"').replace("\\", "/")
+        return path.startswith("eval/seal/")
+    material = [ln for ln in lines if not _is_seal_bookkeeping(ln)]
     return bool(material)
 
 
