@@ -416,7 +416,8 @@ def _num(value, suffix: str = "%", signed: bool = False) -> str:
     return f"{value:+.1f}{suffix}" if signed else f"{value}{suffix}"
 
 
-def write_comparison(res: dict, meta: dict, conditional: dict | None) -> Path:
+def write_comparison(res: dict, meta: dict, conditional: dict | None,
+                     out_path: Path | None = None) -> Path:
     """
     Write comparison.md.
 
@@ -424,8 +425,14 @@ def write_comparison(res: dict, meta: dict, conditional: dict | None) -> Path:
     never survive into a real file: a document with XX.X in it gets quoted, and
     the XX.X is what a reader remembers. Unavailable numbers are written as
     "not measured", not as a placeholder.
+
+    `out_path` exists so a caller with synthetic data - the test suite - can
+    write somewhere disposable. The destination used to be hardcoded, which meant
+    any test run silently overwrote the tracked comparison.md with mock numbers
+    and left the tree dirty. Defaulting to the real path keeps every existing
+    caller unchanged; the tests must opt out explicitly.
     """
-    path = ROOT / "fix" / "comparison.md"
+    path = Path(out_path) if out_path is not None else ROOT / "fix" / "comparison.md"
     L = []
     A = L.append
     A("# Improvement comparison")
@@ -542,10 +549,17 @@ def write_comparison(res: dict, meta: dict, conditional: dict | None) -> Path:
           "not the model.**")
     A(f"- Per-category n is 14, so one item is {PP_PER_ITEM:.1f} pp. Category-level "
       f"claims are not supportable at this sample size.")
+    # The clause after the floor has to follow the floor, or the limitation
+    # contradicts the table above it. A +29 net run certified as significant must
+    # not be described as "separates neither ... nor the reverse".
+    above = abs(res["net_items"]) >= NOISE_FLOOR_ITEMS
+    verdict = ("which is detectable at this n, so the effect is separated from noise"
+               if above else
+               "so this comparison separates neither a real effect from noise nor "
+               "the reverse")
     A(f"- The overall delta of {res['net_items']:+d} net items is "
-      f"{'below' if abs(res['net_items']) < NOISE_FLOOR_ITEMS else 'at or above'} the "
-      f"{NOISE_FLOOR_ITEMS}-item floor for n={res['n_paired']}, so this comparison "
-      f"separates neither a real effect from noise nor the reverse.")
+      f"{'at or above' if above else 'below'} the "
+      f"{NOISE_FLOOR_ITEMS}-item floor for n={res['n_paired']}, {verdict}.")
     A("- Retrieval recall for the RAG arm is reported in `fix/rag/RESULTS.md` and is "
       "model-free ground truth; it is not affected by the mock backend.")
     A("")

@@ -23,7 +23,13 @@ Run:  python -c "import sys; sys.path.insert(0,'eval'); import config; config.de
 
 from __future__ import annotations
 
+import atexit
+import hashlib
 import os
+import shutil
+import sys
+import tempfile
+from contextlib import contextmanager
 from dataclasses import dataclass, field, asdict
 from pathlib import Path
 from typing import Optional
@@ -305,3 +311,188 @@ class EvalConfig:
 
 
 config = EvalConfig()
+
+
+# ==================================================================== test sandbox
+#
+# WHY THIS EXISTS
+#
+# eval/results/ holds the benchmark's real artefacts. Some of them are the
+# authoritative deliverable (results/test_run/*.json is sealed in Phase 4.1) and
+# none of them may be touched by a test that is only exercising harness code.
+#
+# Three suites did exactly that, and the damage was silent:
+#
+#   test_baseline_report._clean() unlinked every *.json under results/parsed,
+#   results/scores and results/raw_responses. It was written to stop the suite's
+#   fixtures from inheriting leftover state - a real concern - but it aimed at
+#   the REAL directories, so running it deleted the benchmark.
+#
+#   test_dialect.test_end_to_end() called the real evaluate_dialect(limit=6),
+#   which wrote a six-item truncated results/parsed/dialect_8b.json over the
+#   full 30-item one.
+#
+#   test_judge.test_circularity_disclosure() called the real
+#   evaluate_values(limit=2) and did the same to results/parsed/values_8b.json.
+#
+# The failure mode is nasty because it is a *loss*, not a wrong number: the
+# destroyed artefact cannot be recovered by re-running the harness.
+#
+# THE FIX
+#
+# Redirect, don't monkeypatch. Every path that can receive a write is derived
+# from RESULTS_DIR, so pointing that at a per-run temp directory moves the whole
+# artefact tree at once. Two things have to move together, which is why this is
+# a helper in config.py rather than something each suite patches for itself:
+#
+#   1. the module-level constants (PARSED_DIR, SCORES_DIR, ...) that every other
+#      module pulled in via `from config import PARSED_DIR`, and
+#   2. config.results_dir / .prompts_dir / .logs_dir, which client.py and
+#      baseline_report.py read off the instance.
+#
+# Modules imported *during* the redirect pick the new values up automatically,
+# because they read config's globals at import time. That matters here:
+# client.py calls setup_logging() as an import side effect, so redirecting
+# before the first `import run_dialect` is what keeps the eval logs dir clean.
+#
+# Suites must enter the redirect BEFORE importing anything that writes. The
+# sandbox helper below is designed to be called at module top for that reason.
+
+REAL_RESULTS_DIR: Path = RESULTS_DIR
+
+_PATH_CONSTANTS = ("RESULTS_DIR", "RAW_RESPONSES_DIR", "PARSED_DIR",
+                   "SCORES_DIR", "LOGS_DIR")
+
+
+def _redirected_paths(dest: Path) -> dict[str, Path]:
+    return {
+        "RESULTS_DIR": dest,
+        "RAW_RESPONSES_DIR": dest / "raw_responses",
+        "PARSED_DIR": dest / "parsed",
+        "SCORES_DIR": dest / "scores",
+        "LOGS_DIR": dest / "logs",
+    }
+
+
+def _eval_modules() -> list:
+    """Every already-imported module whose source lives in eval/."""
+    found = []
+    for mod in list(sys.modules.values()):
+        src = getattr(mod, "__file__", None)
+        if not src:
+            continue
+        try:
+            Path(src).resolve().relative_to(EVAL_DIR)
+        except (ValueError, OSError):
+            continue
+        found.append(mod)
+    return found
+
+
+@contextmanager
+def redirect_results_dir(dest):
+    """
+    Point every artefact path at `dest` for the duration of the block.
+
+    Restores the previous paths on exit, including on exception. Yields `dest`.
+    """
+    dest = Path(dest)
+    new = _redirected_paths(dest)
+
+    saved_module = {name: globals()[name] for name in _PATH_CONSTANTS}
+    saved_all_dirs = ALL_DIRS
+    saved_instance = (config.results_dir, config.prompts_dir, config.logs_dir)
+    saved_imported = [(mod, name, getattr(mod, name))
+                      for mod in _eval_modules()
+                      for name in _PATH_CONSTANTS
+                      if isinstance(getattr(mod, name, None), Path)]
+
+    try:
+        globals().update(new)
+        globals()["ALL_DIRS"] = [new["RAW_RESPONSES_DIR"], new["PARSED_DIR"],
+                                 new["SCORES_DIR"], new["LOGS_DIR"],
+                                 new["RESULTS_DIR"]]
+        config.results_dir = new["RESULTS_DIR"]
+        config.prompts_dir = new["RESULTS_DIR"]
+        config.logs_dir = new["LOGS_DIR"]
+        for mod, name, _ in saved_imported:
+            setattr(mod, name, new[name])
+        config.ensure_dirs()
+        yield dest
+    finally:
+        globals().update(saved_module)
+        globals()["ALL_DIRS"] = saved_all_dirs
+        (config.results_dir, config.prompts_dir,
+         config.logs_dir) = saved_instance
+        for mod, name, original in saved_imported:
+            setattr(mod, name, original)
+
+
+def digest_file(path) -> Optional[str]:
+    """SHA-256 of a file's bytes, or None if it does not exist."""
+    p = Path(path)
+    if not p.is_file():
+        return None
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def snapshot_results_tree(root=None) -> dict[Path, str]:
+    """
+    {absolute path: sha256} for every file under a results tree.
+
+    Defaults to the REAL tree, not the currently-configured one - so this stays
+    meaningful while a suite is running inside a redirect. Absence is
+    representable as a missing key, which is how a deleted artefact shows up.
+    """
+    base = Path(root) if root is not None else REAL_RESULTS_DIR
+    if not base.is_dir():
+        return {}
+    return {p: digest_file(p) for p in sorted(base.rglob("*")) if p.is_file()}
+
+
+def snapshot_diff(before: dict, after: dict) -> list[str]:
+    """Human-readable list of everything that changed between two snapshots."""
+    def rel(p):
+        try:
+            return str(p.relative_to(REAL_RESULTS_DIR))
+        except ValueError:
+            return str(p)
+
+    problems = []
+    for path in sorted(set(before) | set(after)):
+        b, a = before.get(path), after.get(path)
+        if b == a:
+            continue
+        was = b[:12] if b else "ABSENT"
+        now = a[:12] if a else "ABSENT"
+        problems.append(f"{rel(path)}: {was} -> {now}")
+    return problems
+
+
+def results_sandbox(prefix: str = "eval_suite_"):
+    """
+    Suite-level convenience: a throwaway results tree, already redirected to,
+    plus a snapshot of the real tree taken before the redirect.
+
+    Call it at module top, before any import of a module that writes:
+
+        SUITE_RESULTS, SUITE_START_DIGESTS = results_sandbox()
+
+    Returns (sandbox_path, {real path: sha256}). The sandbox is torn down and
+    the redirect unwound at interpreter exit, so nothing survives the process.
+    """
+    snapshot = snapshot_results_tree()
+    tmp = Path(tempfile.mkdtemp(prefix=prefix))
+    dest = tmp / "results"
+    dest.mkdir(parents=True, exist_ok=True)
+    ctx = redirect_results_dir(dest)
+    ctx.__enter__()
+
+    def _teardown():
+        try:
+            ctx.__exit__(None, None, None)
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+
+    atexit.register(_teardown)
+    return dest, snapshot

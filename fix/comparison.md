@@ -1,33 +1,26 @@
 # Improvement comparison
 
-Generated 2026-10-16T05:33:01+00:00 by `fix/validate_improvement.py`.
+Generated 2026-10-16T07:55:33+00:00 by `fix/validate_improvement.py`.
 
-> ## ⚠️ These are not results
->
-> Backend: **mock**, `is_mock=True`.
-> Every number in this file comes from the mock backend and is a
-> self-test of the harness. Nothing here says anything about Apertus.
-> This file exists to be regenerated once a real model is running (B2).
-
-- Model: `8b` (`Apertus`)
+- Model: `8b` (`apertus-v1.5-8b-text-q4_k_m`)
 - Split: `dev` — **dev only. The 36-item test set is sealed for Phase 4.1 and was not read.**
-- Comparison: b → a
-- Paired items: 0
+- Comparison: paired control (no context) → paired treatment (rag, top_k=3)
+- Paired items: 84
 
 ## Overall
 
 | | value |
 |---|---|
-| Baseline accuracy | not measured |
-| Improved accuracy | not measured |
-| Delta | not measured |
-| Items improved | 0 |
-| Items regressed | 0 |
-| Net item movement | +0 |
-| McNemar p | 1.0 |
-| Distinguishable from noise | no |
+| Baseline accuracy | 48.8% |
+| Improved accuracy | 83.3% |
+| Delta | +34.5 pp |
+| Items improved | 34 |
+| Items regressed | 5 |
+| Net item movement | +29 |
+| McNemar p | 0.0 |
+| Distinguishable from noise | yes |
 
-At n=0 a detectable effect needs about 6 net item flips. This run moved +0.
+At n=84 a detectable effect needs about 6 net item flips. This run moved +29.
 
 ## By category
 
@@ -35,7 +28,12 @@ One item in a 14-item category is **7.1 pp**, so every value below moves in step
 
 | Category | Before | After | Delta | Improved | Regressed | Net | p | Status |
 |---|---|---|---|---|---|---|---|---|
-| _no paired items - nothing was compared_ | | | | | | | | |
+| geography | 57.1% | 92.9% | +35.8 pp | 5 | 0 | +5 | 0.0625 | within noise |
+| health | 50.0% | 85.7% | +35.7 pp | 6 | 1 | +5 | 0.125 | within noise |
+| history | 42.9% | 92.9% | +50.0 pp | 8 | 1 | +7 | 0.0391 | improved |
+| law | 21.4% | 64.3% | +42.9 pp | 8 | 2 | +6 | 0.1094 | within noise |
+| politics | 64.3% | 78.6% | +14.3 pp | 3 | 1 | +2 | 0.625 | within noise |
+| services | 57.1% | 85.7% | +28.6 pp | 4 | 0 | +4 | 0.125 | within noise |
 
 Status is the exact paired McNemar test on that category's discordant
 pairs, not a comparison of percentages and not a net sum. A category can
@@ -46,13 +44,20 @@ gain and every loss cancels in the net.
 
 | Difficulty | n | Before | After | Net items |
 |---|---|---|---|---|
+| easy | 18 | 50.0% | 88.9% | +7 |
+| hard | 24 | 54.2% | 83.3% | +7 |
+| medium | 42 | 45.2% | 81.0% | +15 |
+
+Net movement by difficulty ranges from **easy (+7)** to **medium (+15)**. A flat profile means the effect is not
+concentrated in one band of question difficulty; a profile that only
+moves easy questions would suggest the context is restating what the
+model already had rather than supplying something it lacked.
 
 ## Limitations
 
 - Dev split only (84 items). The 36-item test set is sealed for Phase 4.1 and was not read by anything in this sub-phase.
 - 70B was not measured (B3), so there is no claim that the effect holds across model sizes.
-- **All figures are mock-backend self-tests and describe the harness, not the model.**
 - Per-category n is 14, so one item is 7.1 pp. Category-level claims are not supportable at this sample size.
-- The overall delta of +0 net items is below the 6-item floor for n=0, so this comparison separates neither a real effect from noise nor the reverse.
+- The overall delta of +29 net items is at or above the 6-item floor for n=84, which is detectable at this n, so the effect is separated from noise.
 - Retrieval recall for the RAG arm is reported in `fix/rag/RESULTS.md` and is model-free ground truth; it is not affected by the mock backend.
 

@@ -32,13 +32,21 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+# The sandbox MUST come before any import of a module that writes. config itself
+# is inert; run_values and crosscheck pull in client, whose module-level
+# setup_logging() would otherwise drop a file into the real eval/results/logs.
+from config import results_sandbox, snapshot_diff, snapshot_results_tree  # noqa: E402
+
+SUITE_RESULTS, SUITE_START_DIGESTS = results_sandbox("judge_")
+
+# Imported AFTER the redirect, so every artefact path below is the sandbox's.
 import language_metrics as lm                                  # noqa: E402
-from config import config                                      # noqa: E402
+from config import REAL_RESULTS_DIR, config                   # noqa: E402
 from crosscheck import (_BLIND_FIELDS, AGREEMENT_FLOOR,       # noqa: E402
                         element_table, select_crosscheck_sample,
                         verify_crosscheck)
 from judge import (build_judge_prompt, parse_judge_output,     # noqa: E402
-                  score_from_observations)
+                   score_from_observations)
 from run_values import load_pairs, load_scenarios, summarise   # noqa: E402
 
 failures: list[str] = []
@@ -526,6 +534,33 @@ def test_circularity_disclosure(tmp: Path) -> int:
     return 5
 
 
+# ================================= 9. THE SUITE NEVER TOUCHES THE REAL RESULTS
+def test_real_results_untouched(tmp: Path) -> int:
+    """
+    test_circularity_disclosure() calls the real evaluate_values(), which writes
+    results/parsed/values_8b.json and results/scores/values_8b.json. With
+    skip_pairs=True and limit=2 it wrote a two-item truncated file over the full
+    73-scenario one (125.1 KB -> 2.7 KB). The suite still passed, because it
+    read back the file it had just overwritten.
+
+    The redirect at the top of this file moves those writes into a temp
+    directory. This asserts it, over the whole real tree, by sha256.
+    """
+    n = 0
+    problems = snapshot_diff(SUITE_START_DIGESTS, snapshot_results_tree())
+    check("real results tree is byte-identical after the suite ran",
+          problems, [])
+
+    check("sandbox is outside the real results tree",
+          not SUITE_RESULTS.is_relative_to(REAL_RESULTS_DIR)
+          and not REAL_RESULTS_DIR.is_relative_to(SUITE_RESULTS), True)
+    check("the circularity run wrote into the sandbox, not the repo",
+          config.results_dir.is_relative_to(SUITE_RESULTS)
+          and (config.results_dir / "parsed" / "values_8b.json").exists(), True)
+    n += 3
+    return n
+
+
 # ------------------------------------------------------------------------ main
 def main() -> int:
     import tempfile
@@ -533,6 +568,7 @@ def main() -> int:
     print("=" * 74)
     print("PHASE 2.3 VERIFICATION - values judge, rubric, cross-check")
     print("=" * 74)
+    print(f"  sandbox      : {SUITE_RESULTS}")
 
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
@@ -545,10 +581,16 @@ def main() -> int:
             ("cross-check blinding + maths", lambda: test_crosscheck(tmp)),
             ("dataset integrity", lambda: test_dataset()),
             ("circularity disclosure", lambda: test_circularity_disclosure(tmp)),
+            ("real results untouched", lambda: test_real_results_untouched(tmp)),
         ]
         for name, fn in groups:
             before = checks
-            fn()
+            try:
+                fn()
+            except Exception as exc:
+                failures.append(f"{name}: raised {type(exc).__name__}: {exc}")
+                import traceback
+                traceback.print_exc()
             print(f"  {name:<34} {checks - before:>6} checks")
 
     print("\n" + "=" * 74)

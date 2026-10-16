@@ -1,8 +1,9 @@
 # Phase 2 — Evaluation Harness
 
-**Status: Phase 2.1 complete. Phase 2.2 code complete — live baselines blocked on
-model access.** Phases 2.3 and 2.4 are not started. See project status in
-`../TODO.md`.
+**Status: the harness is complete and the one-shot evaluation has been run.**
+Live 8B results exist for knowledge, values and dialect; the 70B arms are dropped.
+**Read [Disclosures](#disclosures) before quoting any number from this file.** See
+project status in `../TODO.md`.
 
 `docs/plans/phase_2.md` §2.1 defines the golden rules. The two that shaped this
 code most:
@@ -13,6 +14,173 @@ code most:
 > **DETERMINISTIC output** — temperature 0, fixed seed, and every request's
 > actual parameters are logged, so "was it really 0?" is answered from the log
 > file rather than from memory.
+
+---
+
+## Disclosures
+
+Every accuracy in this file and in `results/` comes from one model, one
+quantisation, one GPU and one sealed test set. The limits of that are stated next
+to the numbers they qualify, not collected at the end. Source of truth for every
+figure below: `results/final_scores/statistical_report.md`,
+`results/final_scores/test_scores.json`, `results/test_run/*.json`,
+`results/narrative/findings.md`.
+
+### What was measured
+
+Held-out sealed test set, `data/knowledge/knowledge_test.json`, n=36,
+hash-verified (`df819e8c1582902a…`) and sealed until Phase 4.1. Both arms answer
+the same 36 items through the same scorer, so the comparison is paired.
+
+| Arm | Accuracy | 95% CI (Wilson) |
+|---|---|---|
+| Baseline, no retrieval | **55.6%** (20/36) | [39.6, 70.5] |
+| Knowledge + RAG (BM25, `top_k=3`, per-question contexts) | **86.1%** (31/36) | [71.3, 93.9] |
+
+Delta **+30.6 pp**, exact 95% CI [+13.1, +30.6]. Paired: **11 improved, 0
+regressed**, McNemar p=0.001. The interval on the delta comes from the discordant
+pairs, not from either arm's interval, and is wider than both.
+
+| Other arm | n | Result | Qualification |
+|---|---|---|---|
+| Values | 73 records (30 scenarios × renderings) | mean **1.096** / 2.0 | self-judged — see below |
+| Dialect — refusal | 15/30 | **50.0%** | refusal is not a wrong answer and not a right one |
+| Dialect — multiple choice | 18 | **50.0%** | all 30 items carry `validated_by: null` |
+| Dialect — translation | 12 | mean **0.0** | all 12 items were refusals |
+
+### The sealed test set was opened more than once
+
+This is the most important limitation in this project.
+
+`seal/access.log` is append-only and gains one line per arm execution, written
+before dispatch and whether or not the run completes. It records **9** opens of
+`knowledge/8b/baseline` and **15** opens of `knowledge/8b/improved`. The two arms
+reported here are one open each (`run_utc` 03:35:15 and 06:06:58, 2026-10-16);
+seven further improved opens are logged *after* the statistical report was
+generated at 07:12:55. Because the log line is written before the run, the open
+count is an upper bound on evaluations, not an equal count of them — but it is
+not one.
+
+Cause: a bug in `run_test_final.py` passed `args.resume or args.accept_rerun`
+into the rerun flag, so `--resume` re-executed already-recorded arms instead of
+keeping them, silently re-reading the sealed set. It is documented at
+`run_test_final.py:512` and fixed.
+
+Mitigations. These reduce the damage; they do not undo it.
+
+- Decoding was greedy — temperature 0.0, seed 42, recorded in every run block —
+  so a repeat is a *reproduction attempt*, not a fresh sample, and nothing was
+  being selected between attempts. It is **not** bit-exact: re-running the
+  84-item dev baseline under identical settings moved the score by one question
+  (42.9% → 44.0%, 6 → 4 parse errors). Long greedy decodes on a GPU are not
+  reproducible to the bit because reduction order varies between runs. Any
+  single figure here should be read with that ±1-question wobble in mind.
+- The baseline arm reported 55.6% (20/36) on each completed run of the sealed
+  set — but given the drift above, that agreement is partly luck. Raw responses
+  are overwritten per run, so it is not independently checkable from the
+  surviving artefacts.
+- No threshold, prompt or decision changed between runs, so nothing could be
+  tuned to the test set. `fix/prompts_check.py` re-runs the contamination gate at
+  the start of every evaluation.
+
+Consequences to state rather than absorb: the headline result is **one reported
+run, not a mean over runs**, and the sealed-set claim in
+`results/narrative/findings.md` — "opened exactly once" — is not supported by the
+log. The audit remains available: `python eval/seal.py audit`.
+
+### The model is not the thing usually advertised
+
+The weights are a `Q4_K_M` quantisation of `swiss-ai/Apertus-v1.5-8B`, text-only
+— not the official Omni weights, which are multimodal and ~19.4 GB. It was served
+by a **fork** of llama.cpp: `MichelRosselli/llama.cpp`, branch
+`model/apertus-v1.5`, commit `918ebc1`, built for `sm_120a-real` with
+`-DCMAKE_CUDA_FLAGS=-allow-unsupported-compiler` because CUDA 12.9 rejects the
+installed MSVC 14.50. Hardware: one RTX 5060, 8 GB.
+
+So these are not stock upstream llama.cpp numbers, and a rerun on stock
+llama.cpp, on different weights, or on different hardware may not reproduce
+them. The repository does not record the build recipe; the model id carried in
+every artefact is `apertus-v1.5-8b-text-q4_k_m`.
+
+### No cross-scale claim is available
+
+Apertus 70B is **dropped, not approximated** (`results/test_run/run_metadata.json`
+→ `scope`): it cannot be loaded in 8 GB VRAM under any quantisation, and its
+configured backend is `mock`. A single-model paired design cannot distinguish a
+general improvement from an 8B-specific effect, so no generalisation or
+cross-scale claim is available from this data.
+
+### Values are self-judged, and the human cross-check does not exist
+
+The 8B model judged the 8B model's own responses (`judge_model: 8b`,
+`self_judged: true`). The agreement rate between the judge's own stated score and
+the rubric applied in code is **0.03**
+(`judge_self_report_agreement`), so the reported 1.096 is the code's rubric
+applied to what the judge observed — not the judge's grading of itself. A
+self-judged score is a weaker claim than a cross-judged one, and the observation
+itself is unverified.
+
+B5, a human blind cross-check of 15 items, **has not been done** and cannot be
+delegated to a model. The reports say so rather than carrying a placeholder.
+
+### The error taxonomy is unresolved
+
+`fix/error_taxonomy.md` was generated from a **mock-backend** run and carries a
+mock banner. Its percentages describe the classifier on synthetic text, not
+Apertus. There is no real error taxonomy, so no dominant failure mode is claimed
+and no target category is named.
+
+### Every per-category interval crosses zero
+
+n=6 per category. At that n only a clean 6/0 sweep reaches p<0.05 (0.031); with a
+single regression, nothing is detectable. **The +66.7 pp services delta
+(33.3% → 100.0%) is not a significant finding** and must not be read as one.
+Categories are therefore reported side by side and never ranked — ranking six of
+them is selection on the measurement set.
+
+### Retrieval recall is backend-specific, and measured on dev
+
+The headline recall figures — **83.3% / 90.5% / 94.0%** at k=1/3/5 — are
+pure-Python BM25 with zero third-party dependencies, measured over all 84 dev
+items (`fix/rag/RESULTS.md`). They describe the corpus and the index, not the
+model, and they come from the dev split, not the sealed test set.
+
+The retriever's default `--backend` is `auto`, so anyone re-running it can get the
+dense `intfloat/multilingual-e5-small` index and different numbers; the reported
+run pinned `bm25`. No dense-backend recall figures are recorded in this
+repository, so none are quoted here.
+
+On the dev run, retrieval put the gold source in context for 76 of 84 items, and
+2 of the 36 gains occurred on items where it had missed — some of the movement is
+prompt-shape effect, not retrieval.
+
+### The dev split produced a null result first
+
+Before a model was running, the paired dev evaluation measured **15 gains and 10
+regressions, p=0.42** — no detectable effect at n=84 (`fix/rag/RESULTS.md`). That
+was the state of the improvement when it was frozen. The real 8B dev run
+afterwards was positive — +34.5 pp, 34 improved / 5 regressed, p<0.001
+(`fix/comparison.md`) — and the sealed test set was consulted only after that.
+
+### Reproducibility
+
+- Per-arm code hashes, as recorded in the artefacts: baseline
+  `490ee7cf248628ec44262fcef839e7e21c98d55d`, improved
+  `1d481aa51187215ff5a54552a9e64c2c4217cc5e`. **The two arms were executed under
+  different revisions, and neither is the recorded freeze.**
+- `seal/frozen_code.json`: `436ba260830af773434675282a2cc897f15d13c9`, frozen
+  2026-10-16T07:12:28Z.
+- `results/test_run/run_metadata.json` records `git_hash`
+  `2b2b75c840419f07c0a3c316d468df44721ea950` for the final orchestration pass,
+  which **skipped** both knowledge arms and reused the files above.
+- Decoding: temperature 0.0, seed 42, `prompt_version` 1.0, backend `http`,
+  `is_mock: false`.
+- RAG corpus: **189 of 367 chunks** (`include_dialect: false` — the 178 Alemannic
+  chunks are excluded by default), `top_k` 3, retrieval backend `bm25`.
+  `format_context` caps rendered context at 2,400 characters, which is why k=5
+  adds almost nothing over k=3.
+- Sealed test set SHA-256:
+  `df819e8c1582902a23197ed2aa4ab2e9aab431f0df60d0349a9ba5c9467293e2`.
 
 ---
 
@@ -272,6 +440,9 @@ means re-scoring from disk, not re-running the model.
 `data/knowledge/knowledge_test.json` is sealed until Phase 4.1. `--split test`
 prints a warning and is expected to be run exactly once, in Phase 4.
 
+It was not run exactly once. `seal/access.log` records 9 opens of the baseline arm
+and 15 of the improved arm; see [Disclosures](#the-sealed-test-set-was-opened-more-than-once).
+
 ---
 
 ## Two defects the smoke test caught
@@ -304,11 +475,16 @@ no check at all.
 | 2.2 — parser, scoring, breakdown, artefacts | **done** |
 | 2.2 — 9,928 automated checks | **done** |
 | 2.2 — parse-failure diagnosis + escalation ladder | **done** |
-| 2.2 — live 84-question baseline, 8B **and** 70B | **blocked on model access** |
-| 2.2 — `<5%` parse-error target | **blocked** — unmeasurable on `mock` |
-| 2.3 — `run_values.py`, `judge.py`, `crosscheck.py` | not started (data ready) |
-| 2.4 — `run_dialect.py` | not started (Phase 1C has no data yet) |
-| Phase 3.3b — `rag.py` (`retrieve`) | not started |
+| 2.2 — live baseline, 8B | **done** — dev 84 items, sealed test 36 items |
+| 2.2 — live baseline, 70B | **dropped** — does not fit 8 GB VRAM (B3); no cross-scale claim |
+| 2.2 — `<5%` parse-error target | **measured on live runs** — `results/final_scores/` |
+| 2.3 — `run_values.py`, `judge.py` | **done** — 73 records, self-judged |
+| 2.3 — `crosscheck.py` | **not started** — B5, human blind scoring, not delegable |
+| 2.4 — `run_dialect.py` | **done** — 30 items; native validation still blocked (B1) |
+| Phase 3.3b — RAG retriever (`fix/rag/`) | **done** — dev recall @5 94.0% on BM25 |
+
+The two arms behind the headline comparison were run more than once; see
+[Disclosures](#the-sealed-test-set-was-opened-more-than-once).
 
 `run_all.py --task values` and `--task dialect` currently print which phase owns
 them and exit 0, so a half-built Phase 2 never blocks the part that works.

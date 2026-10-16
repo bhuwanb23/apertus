@@ -35,8 +35,16 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+# The sandbox MUST come before any import of a module that writes. config itself
+# is inert; run_dialect pulls in client, whose module-level setup_logging() would
+# otherwise drop a file into the real eval/results/logs.
+from config import results_sandbox, snapshot_diff, snapshot_results_tree  # noqa: E402
+
+SUITE_RESULTS, SUITE_START_DIGESTS = results_sandbox("dialect_")
+
+# Imported AFTER the redirect, so every artefact path below is the sandbox's.
 import language_metrics as lm                                  # noqa: E402
-from config import config                                      # noqa: E402
+from config import REAL_RESULTS_DIR, config                   # noqa: E402
 from run_dialect import (THRESHOLD_CORRECT, THRESHOLD_PARTIAL,  # noqa: E402
                          build_prompt, dialect_echo, load_items,
                          score_translation, stems, strip_diacritics,
@@ -424,11 +432,41 @@ def test_end_to_end() -> int:
     return n
 
 
+# ================================= 10. THE SUITE NEVER TOUCHES THE REAL RESULTS
+def test_real_results_untouched() -> int:
+    """
+    test_end_to_end() calls the real evaluate_dialect(). That is deliberate -
+    it is the only way to see a real run's shape - but the function writes
+    results/parsed/dialect_8b.json and results/scores/dialect_8b.json, and with
+    limit=6 it wrote a six-item truncated file over the full 30-item one
+    (35.3 KB -> 7 KB). The suite still passed: it asserted the record count of
+    the file it had just overwritten, so the destruction was invisible from
+    inside.
+
+    The redirect at the top of this file moves evaluate_dialect()'s writes into
+    a temp directory. This asserts it, over the whole real tree, by sha256.
+    """
+    n = 0
+    problems = snapshot_diff(SUITE_START_DIGESTS, snapshot_results_tree())
+    check("real results tree is byte-identical after the suite ran",
+          problems, [])
+
+    check("sandbox is outside the real results tree",
+          not SUITE_RESULTS.is_relative_to(REAL_RESULTS_DIR)
+          and not REAL_RESULTS_DIR.is_relative_to(SUITE_RESULTS), True)
+    check("the e2e run wrote into the sandbox, not the repo",
+          config.results_dir.is_relative_to(SUITE_RESULTS)
+          and (config.results_dir / "parsed" / "dialect_8b.json").exists(), True)
+    n += 3
+    return n
+
+
 # ------------------------------------------------------------------------ main
 def main() -> int:
     print("=" * 74)
     print("PHASE 2.4 VERIFICATION - dialect scoring")
     print("=" * 74)
+    print(f"  sandbox      : {SUITE_RESULTS}")
 
     groups = [
         ("normalisation", test_normalisation),
@@ -441,6 +479,7 @@ def main() -> int:
         ("reporting, never pooled", test_summarise),
         ("dataset integrity", test_dataset),
         ("end-to-end (mock)", test_end_to_end),
+        ("real results untouched", test_real_results_untouched),
     ]
     for name, fn in groups:
         before = checks

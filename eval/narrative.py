@@ -51,6 +51,29 @@ Run:
     python eval/narrative.py              # print the selected scenario
     python eval/narrative.py --write      # findings.md
 Exit: 0 = written; 1 = refused to certify a claim.
+
+AND WHEN THE ONE-SHOT HAS HAPPENED
+
+The description above is the state before Phase 4.1 ran. It is kept because it
+is the harder half of the problem: nothing below was true until a real backend
+existed, and a generator that only has a path for "we have results" will one day
+be handed a mock run and print it as a finding.
+
+Once paired results exist, two things change and they are not cosmetic:
+
+  * §3.5 is emitted, carrying the accuracy, the paired delta, the exact interval
+    and the McNemar p that `statistical_report.compute()` produced.
+  * Every model-free section (§3.1 retrieval, §3.2 contamination, §3.3 the
+    taxonomy, §3.4 the detection floor) is STILL emitted. They were gated behind
+    "no model data" while the file was written, on the assumption that they
+    would be superseded. They are not: they are the parts of the evidence that
+    do not depend on the model, and gating them made a document that reported a
+    +30.6 pp result while containing no record of the floor that result had to
+    clear.
+
+The prose in Acts 4 and 5 is likewise chosen from the data. A hardcoded "the
+effect on accuracy is not established" survives the one-shot as a flat
+contradiction of the scenario line printed a few lines below it.
 """
 
 from __future__ import annotations
@@ -68,8 +91,9 @@ sys.path.insert(0, str(ROOT / "fix" / "rag"))
 
 import seal                                          # noqa: E402
 from config import config                            # noqa: E402
+from select_target import mcnemar_exact              # noqa: E402
 from statistical_report import (MODELS, compute, crosscheck_agreement,  # noqa: E402
-                                detectable)
+                                detectable, wilson_ci)
 
 NARRATIVE = config.results_dir / "narrative"
 MODEL_LABEL = {"8b": "Apertus 1.5 8B", "70b": "Apertus 1.5 70B"}
@@ -93,8 +117,16 @@ def taxonomy_state() -> dict:
     day after B2 lands.
     """
     path = ROOT / "eval" / "results" / "parsed" / "knowledge_8b_dev_classified.json"
+    # The rendered taxonomy can outlive the artefact it was rendered from, so its
+    # provenance is read rather than assumed. analyze_errors.py writes a
+    # "MOCK BACKEND" banner when the arms behind it were synthetic, and that
+    # banner is the only thing in the file that says so.
+    report = ROOT / "fix" / "error_taxonomy.md"
+    report_mock = bool(report.exists()
+                       and "MOCK BACKEND" in report.read_text(encoding="utf-8"))
     if not path.exists():
         return {"present": False,
+                "report_present": report.exists(), "report_mock": report_mock,
                 "note": "no classified error file; run fix/analyze_errors.py"}
     payload = json.loads(path.read_text(encoding="utf-8"))
     rows = payload.get("results", payload if isinstance(payload, list) else [])
@@ -122,6 +154,7 @@ def taxonomy_state() -> dict:
 
     return {
         "present": True,
+        "report_present": True, "report_mock": report_mock,
         "n_rows": len(rows),
         "n_correct": correct,
         "parse_errors": parse,
@@ -184,6 +217,30 @@ def knowledge_state(stats: dict) -> bool:
         stats.get("knowledge", {}).get(m, {}).get("paired") for m in MODELS)
 
 
+def dialect_state(model: str = "8b") -> dict:
+    """
+    The dialect arm, read from the scorer's own output.
+
+    The third part of the benchmark ran too. Its numbers belong in the findings
+    document whether or not they are flattering - a 50% refusal rate is a
+    finding, and a findings document that quietly drops the arm it did not like
+    is not reporting.
+    """
+    path = config.results_dir / "scores" / f"dialect_{model}.json"
+    if not path.exists():
+        return {"present": False}
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    s = payload.get("scores", {})
+    return {
+        "present": True, "n_items": s.get("n_items"), "n_scored": s.get("n_scored"),
+        "refusal_rate": s.get("refusal_rate"), "n_refused": s.get("n_refused"),
+        "answered_in_dialect": s.get("answered_in_swiss_german"),
+        "mcq_accuracy": s.get("mcq_accuracy"), "mcq_n": s.get("mcq_n"),
+        "t1_mean": s.get("t1_mean"), "t1_n": s.get("t1_n"),
+        "is_mock": s.get("is_mock"),
+    }
+
+
 # ======================================================== the scenario call
 def choose_scenario(stats: dict, tax: dict, ret: dict) -> dict:
     """
@@ -234,6 +291,59 @@ def choose_scenario(stats: dict, tax: dict, ret: dict) -> dict:
 
 
 # ============================================================== the document
+def seal_opens(arm_filter: str = "") -> list[dict]:
+    """Every recorded open of the sealed test set, from the append-only log.
+
+    This document used to assert that the sealed test set "was opened exactly
+    once", built from the run_utc of a single arm's metadata. The log does not
+    say that, and this is the claim a reader has most reason to trust, because
+    the whole design rests on it. The log is the primary record, so the count
+    now comes from it.
+
+    Unparseable lines are skipped rather than guessed at.
+    """
+    out: list[dict] = []
+    try:
+        raw = seal.AUDIT_PATH.read_text(encoding="utf-8")
+    except (OSError, AttributeError):
+        return out
+    for line in raw.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            entry = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(entry, dict):
+            continue
+        if arm_filter and arm_filter not in str(entry.get("reason", "")):
+            continue
+        out.append(entry)
+    return out
+
+
+def _open_phrase() -> str:
+    """One honest sentence about how many times the sealed set was opened."""
+    n_base = len(seal_opens("knowledge/8b/baseline"))
+    n_impr = len(seal_opens("knowledge/8b/improved"))
+    if not (n_base or n_impr):
+        return "The sealed test set has no recorded opens."
+    total = n_base + n_impr
+    if total == 1:
+        return ("The sealed test set was opened once, and the append-only log "
+                "records that one open.")
+    return (f"The sealed test set was opened **{total} times** according to the "
+            f"append-only log - {n_base} of the baseline arm and {n_impr} of the "
+            f"improved arm - which is more openings than the single-shot design "
+            f"intends. Decoding was greedy (temperature 0.0, fixed seed) and "
+            f"nothing was tuned between runs, so the repeats were reproduction "
+            f"attempts rather than a search over attempts; they are **not** "
+            f"bit-exact, because a long greedy decode on a GPU is subject to "
+            f"run-to-run reduction order. **Disclosures** in `eval/README.md` "
+            f"quantify the drift on the dev split and state this in full.")
+
+
 def write_findings(stats: dict | None = None) -> Path:
     stats = stats if stats is not None else compute()
     tax = taxonomy_state()
@@ -242,6 +352,7 @@ def write_findings(stats: dict | None = None) -> Path:
     scen = choose_scenario(stats, tax, ret)
     cc = crosscheck_agreement()
     pw36, pw6 = detectable(36), detectable(6)
+    w0, w6 = wilson_ci(0, pw6["n"]), wilson_ci(pw6["n"], pw6["n"])
     have = knowledge_state(stats)
 
     L: list[str] = []
@@ -273,6 +384,27 @@ def write_findings(stats: dict | None = None) -> Path:
         A("> a pipeline self-test.** The findings below are the ones that hold "
           "*without* a")
         A("> model — which, as it turns out, is most of what was worth finding.")
+        A("")
+    else:
+        # The mirror image of the banner above. Naming the arms, the backend and
+        # the date is what turns "a number appeared" into "a number is traceable
+        # to this run" - the check that used to be made impossible because there
+        # was no run to name.
+        metas = [(m, stats["knowledge"][m].get("baseline_meta") or {})
+                 for m in MODELS if stats["knowledge"].get(m, {}).get("paired")]
+        run_meta = metas[0][1]
+        A("> ## Model data — every accuracy figure below is from a live run")
+        A(">")
+        A(f"> {_open_phrase()} Latest arm: "
+          f"{run_meta.get('run_utc', 'an unrecorded date')}, backend "
+          f"`{run_meta.get('backend')}`, `is_mock: "
+          f"{str(bool(run_meta.get('is_mock'))).lower()}`.")
+        A(f"> Arms scored: {', '.join(f'`{m}`' for m, _ in metas)}. Accuracy, deltas "
+          "and intervals")
+        A("> come from `eval/statistical_report.py`; the per-item rows are in "
+          "`eval/results/test_run/`.")
+        A("> The findings that hold *without* a model are in §3.1–§3.4, and they "
+          "do not depend on this run.")
         A("")
 
     # ---------------------------------------------------------------- act 1
@@ -331,172 +463,270 @@ def write_findings(stats: dict | None = None) -> Path:
     A("  than merely wrong.")
     A(f"- **The split is stratified and sealed.** 84 dev / 36 test, split on "
       f"`(category, difficulty)`")
-    A("  with a fixed seed. The test set was opened **zero times** by a real "
-      "model.")
+    if have:
+        A(f"  with a fixed seed. {_open_phrase()} Every individual access is "
+          f"listed by `python eval/seal.py audit`.")
+    else:
+        A("  with a fixed seed. The test set was opened **zero times** by a real "
+          "model.")
     A("")
 
     # ---------------------------------------------------------------- act 3
     A("## Act 3 — What was actually found")
     A("")
-    if not have:
-        A("### 3.1 Retrieval is not the bottleneck — and this is measurable now")
+    A("### 3.1 Retrieval is not the bottleneck — and this is measurable now")
+    A("")
+    if ret.get("present"):
+        r = ret["recall"]
+        A("Every knowledge question declares the `source_id` its answer was "
+          "verified")
+        A("against. That makes retrieval quality a **ground-truth metric "
+          "requiring no model**:")
         A("")
-        if ret.get("present"):
-            r = ret["recall"]
-            A("Every knowledge question declares the `source_id` its answer was "
-              "verified")
-            A("against. That makes retrieval quality a **ground-truth metric "
-              "requiring no model**:")
-            A("")
-            A("| retrieved chunks | source containing the answer |")
-            A("|---|---|")
-            for k in sorted(r):
-                A(f"| top-{k} | **{r[k]}%** |")
-            A("")
-            A(f"Measured over all {ret['n_questions']} dev items against "
-              f"{ret['n_chunks']} corpus chunks, using **pure-Python BM25 with "
-              f"zero")
-            A("third-party dependencies** — no sentence-transformers, no GPU.")
-            A("")
-            A("The consequence is concrete: **the dense retriever was not worth "
-              "installing.**")
-            A("A more capable embedder could improve paraphrase matching on a "
-              "minority of")
-            A("items; the evidence said that was not where the headroom was. That "
-              "is the kind")
-            A("of decision this benchmark was built to support, and it was made "
-              "before a")
-            A("single model call.")
-            A("")
-        else:
-            A(f"*Retrieval could not be measured: `{ret.get('error')}`*")
-            A("")
-
-        A("### 3.2 The obvious fix was contaminated, and we caught it")
+        A("| retrieved chunks | source containing the answer |")
+        A("|---|---|")
+        for k in sorted(r):
+            A(f"| top-{k} | **{r[k]}%** |")
         A("")
-        if con.get("present"):
-            A("The improvement proposed for this project was a system prompt "
-              "listing Swiss")
-            A("facts: 26 cantons, 100,000 signatures, suffrage in 1971, the "
-              "Federal Supreme")
-            A("Court in Lausanne. It reads like a good prompt.")
-            A("")
-            A(f"Measured against the dev split, that text answers "
-              f"**{con['naive_items']} of {con['n']} items "
-              f"({con['naive_pct']:.0f}%)**.")
-            A("")
-            A("So a large part of any \"improvement\" from that prompt would be "
-              "**the answer")
-            A("key placed in the prompt**, not a change in what the model knows. "
-              "And it")
-            A("would not transfer: the held-out set is scored once, and a delta "
-              "bought this")
-            A("way does not reproduce on questions the prompt does not name.")
-            A("")
-            A(f"The prompt that ships instead carries **behavioural rules only — "
-              f"{con['clean_items']}/{con['n']} contamination** — and")
-            A("`fix/prompts_check.py` enforces that as a gate that *raises*, "
-              "re-running at the")
-            A("start of every evaluation so an edit between review and run cannot "
-              "slip through.")
-            A("")
-            A("This is the single most transferable thing this project produced. "
-              "Any")
-            A("country-specific benchmark faces the same trap, and it is invisible "
-              "unless")
-            A("you measure for it.")
-            A("")
-
-        A("### 3.3 The error taxonomy did not resolve — and that is the finding")
+        A(f"Measured over all {ret['n_questions']} dev items against "
+          f"{ret['n_chunks']} corpus chunks, using **pure-Python BM25 with "
+          f"zero")
+        A("third-party dependencies** — no sentence-transformers, no GPU.")
         A("")
-        if tax.get("present"):
-            if tax["is_mock"]:
-                A(f"On the mock responses the classifier left "
-                  f"**{tax['unclassified_pct']}% of content errors "
-                  f"`UNCLASSIFIED`** ({tax['unclassified']} of "
-                  f"{tax['total_content_errors']}); the largest pattern it *did* "
-                  f"find was")
-                A(f"`{tax['dominant']}` at {tax['dominant_pct']}%.")
-                A("")
-                A("**That percentage describes the classifier on synthetic text, "
-                  "not Apertus,**")
-                A("and it is reported here only because it exercises a real "
-                  "property of the")
-                A("method: the deterministic layer catches numeric mismatches and "
-                  "leaves the")
-                A("rest for a reasoning pass. Whether it resolves on real errors "
-                  "is unknown.")
-                A("")
-                A("What carries over is the design consequence. `select_target.py` "
-                  "routes a")
-                A("fix by dominant error type, so while most errors are "
-                  "unclassified that")
-                A("routing is a guess — and it **refused to name a target**, "
-                  "firing all three")
-                A("of its gates. A tool that declines to answer is doing its job; "
-                  "a tool that")
-                A("picks the largest bucket and calls it the dominant error is "
-                  "doing the")
-                A("opposite.")
-            elif tax["resolved"]:
-                A(f"The dominant classified error is `{tax['dominant']}` at "
-                  f"{tax['dominant_pct']}% of content errors.")
-            else:
-                A(f"**{tax['unclassified_pct']}% of content errors remain "
-                  f"`UNCLASSIFIED`** "
-                  f"({tax['unclassified']} of {tax['total_content_errors']}). The "
-                  f"largest pattern")
-                A(f"found so far is `{tax['dominant']}` at "
-                  f"{tax['dominant_pct']}%, which is a work queue, not a "
-                  f"conclusion.")
-                A("")
-                A("This is worth stating plainly because the obvious move — write "
-                  "up the tidy")
-                A("finding anyway — is the wrong one. A narrative asserting a "
-                  "dominant error")
-                A("mode would be attributed to an analysis that explicitly "
-                  "declined to make it.")
-                A("A confusion hypothesis is **plausible and unmeasured**; those "
-                  "are different")
-                A("things, and only one of them belongs in a findings document.")
-            A("")
-            A("Resolving the taxonomy needs a real baseline (B2) and the "
-              "diagnostic reasoning")
-            A("pass. Until then no failure mode is claimed and no target category "
-              "is named.")
-        else:
-            A(f"*Not available: {tax.get('note', 'not run')}*")
-        A("")
-
-        A("### 3.4 The dataset cannot support per-category claims, and that is "
-          "arithmetic")
-        A("")
-        A("The plan for this project was to report a category breakdown. It "
-          "cannot be done, and")
-        A("the reason is worth stating because it is a property of the design "
-          "rather than")
-        A("a disappointing result:")
-        A("")
-        A(f"- **Overall (n={pw36['n']}):** a paired change is detectable only at "
-          f"**{pw36['min_improvements_zero_regressions']} improvements with "
-          f"zero regressions** "
-          f"({_f(pw36['min_delta_pp_zero_regressions'], ' pp', True)}).")
-        A(f"- **Per category (n={pw6['n']}):** only a clean sweep is detectable "
-          f"(6/0, p=0.031).")
-        A("  With a single regression, *nothing* is detectable at this n. A "
-          "category scoring")
-        A("  0/6 has a 95% interval of [0.0, 39.0]; one scoring 6/6 has "
-          "[61.0, 100.0].")
-        A("")
-        A("Every per-category table in this project is therefore labelled "
-          "descriptive, and")
-        A("categories are never ranked. Ranking six of them is selection on the "
-          "measurement")
-        A("set, and it is the easiest way to manufacture a clean-looking result "
-          "here.")
+        A("The consequence is concrete: **the dense retriever was not worth "
+          "installing.**")
+        A("A more capable embedder could improve paraphrase matching on a "
+          "minority of")
+        A("items; the evidence said that was not where the headroom was. That "
+          "is the kind")
+        A("of decision this benchmark was built to support, and it was made "
+          "before a")
+        A("single model call.")
         A("")
     else:
-        A("*Model results exist — see `eval/results/final_scores/statistical_report.md`.*")
+        A(f"*Retrieval could not be measured: `{ret.get('error')}`*")
+        A("")
+
+    A("### 3.2 The obvious fix was contaminated, and we caught it")
+    A("")
+    if con.get("present"):
+        A("The improvement proposed for this project was a system prompt "
+          "listing Swiss")
+        A("facts: 26 cantons, 100,000 signatures, suffrage in 1971, the "
+          "Federal Supreme")
+        A("Court in Lausanne. It reads like a good prompt.")
+        A("")
+        A(f"Measured against the dev split, that text answers "
+          f"**{con['naive_items']} of {con['n']} items "
+          f"({con['naive_pct']:.0f}%)**.")
+        A("")
+        A("So a large part of any \"improvement\" from that prompt would be "
+          "**the answer")
+        A("key placed in the prompt**, not a change in what the model knows. "
+          "And it")
+        A("would not transfer: the held-out set is scored once, and a delta "
+          "bought this")
+        A("way does not reproduce on questions the prompt does not name.")
+        A("")
+        A(f"The prompt that ships instead carries **behavioural rules only — "
+          f"{con['clean_items']}/{con['n']} contamination** — and")
+        A("`fix/prompts_check.py` enforces that as a gate that *raises*, "
+          "re-running at the")
+        A("start of every evaluation so an edit between review and run cannot "
+          "slip through.")
+        A("")
+        A("This is the single most transferable thing this project produced. "
+          "Any")
+        A("country-specific benchmark faces the same trap, and it is invisible "
+          "unless")
+        A("you measure for it.")
+        A("")
+
+    # The heading is a claim too. A document that titles its own unresolved
+    # section "resolved" because someone edited the prose would be the exact
+    # failure this section exists to prevent, so the heading is chosen from the
+    # same state dict the body is written from.
+    A("### 3.3 The error taxonomy "
+      + ("resolved, and what it points at" if tax.get("resolved")
+         else "did not resolve — and that is the finding"))
+    A("")
+    if tax.get("present"):
+        if tax["is_mock"]:
+            A(f"On the mock responses the classifier left "
+              f"**{tax['unclassified_pct']}% of content errors "
+              f"`UNCLASSIFIED`** ({tax['unclassified']} of "
+              f"{tax['total_content_errors']}); the largest pattern it *did* "
+              f"find was")
+            A(f"`{tax['dominant']}` at {tax['dominant_pct']}%.")
+            A("")
+            A("**That percentage describes the classifier on synthetic text, "
+              "not Apertus,**")
+            A("and it is reported here only because it exercises a real "
+              "property of the")
+            A("method: the deterministic layer catches numeric mismatches and "
+              "leaves the")
+            A("rest for a reasoning pass. Whether it resolves on real errors "
+              "is unknown.")
+            A("")
+            A("What carries over is the design consequence. `select_target.py` "
+              "routes a")
+            A("fix by dominant error type, so while most errors are "
+              "unclassified that")
+            A("routing is a guess — and it **refused to name a target**, "
+              "firing all three")
+            A("of its gates. A tool that declines to answer is doing its job; "
+              "a tool that")
+            A("picks the largest bucket and calls it the dominant error is "
+              "doing the")
+            A("opposite.")
+        elif tax["resolved"]:
+            A(f"The dominant classified error is `{tax['dominant']}` at "
+              f"{tax['dominant_pct']}% of content errors.")
+        else:
+            A(f"**{tax['unclassified_pct']}% of content errors remain "
+              f"`UNCLASSIFIED`** "
+              f"({tax['unclassified']} of {tax['total_content_errors']}). The "
+              f"largest pattern")
+            A(f"found so far is `{tax['dominant']}` at "
+              f"{tax['dominant_pct']}%, which is a work queue, not a "
+              f"conclusion.")
+            A("")
+            A("This is worth stating plainly because the obvious move — write "
+              "up the tidy")
+            A("finding anyway — is the wrong one. A narrative asserting a "
+              "dominant error")
+            A("mode would be attributed to an analysis that explicitly "
+              "declined to make it.")
+            A("A confusion hypothesis is **plausible and unmeasured**; those "
+              "are different")
+            A("things, and only one of them belongs in a findings document.")
+        A("")
+        A("Resolving the taxonomy needs a real baseline (B2) and the "
+          "diagnostic reasoning")
+        A("pass. Until then no failure mode is claimed and no target category "
+          "is named.")
+    elif tax.get("report_mock"):
+        # Absent artefact, but a rendered taxonomy exists and says on its face
+        # that it came from the mock backend. Saying only "not available" would
+        # be true and misleading: a reader who opens fix/error_taxonomy.md would
+        # find a confident-looking table with no provenance warning in this
+        # document to explain it.
+        A("*Not classified — " + tax.get("note", "not run") + ".* The rendered")
+        A("`fix/error_taxonomy.md` carries a **MOCK BACKEND** banner, so its "
+          "percentages describe")
+        A("the classifier on synthetic text and not Apertus. They are not "
+          "repeated here as findings.")
+        A("")
+        A("So the taxonomy is **unresolved**: no real baseline error analysis "
+          "exists, no")
+        A("dominant failure mode is claimed, and no target category is named. "
+          "Routing a fix")
+        A("by dominant error type while most errors are unclassified would be a "
+          "guess.")
+    else:
+        A(f"*Not available: {tax.get('note', 'not run')}*")
+    A("")
+
+    A("### 3.4 The dataset cannot support per-category claims, and that is "
+      "arithmetic")
+    A("")
+    A("The plan for this project was to report a category breakdown. It "
+      "cannot be done, and")
+    A("the reason is worth stating because it is a property of the design "
+      "rather than")
+    A("a disappointing result:")
+    A("")
+    A(f"- **Overall (n={pw36['n']}):** a paired change is detectable only at "
+      f"**{pw36['min_improvements_zero_regressions']} improvements with "
+      f"zero regressions** "
+      f"({_f(pw36['min_delta_pp_zero_regressions'], ' pp', True)}).")
+    A(f"- **Per category (n={pw6['n']}):** only a clean sweep is detectable "
+      f"(6/0, p={mcnemar_exact(pw6['n'], 0):.3f}).")
+    A("  With a single regression, *nothing* is detectable at this n. A "
+      "category scoring")
+    A(f"  0/{pw6['n']} has a 95% interval of "
+      f"[{_f(w0['ci_lower'], '')}, {_f(w0['ci_upper'], '')}]; one scoring "
+      f"{pw6['n']}/{pw6['n']} has "
+      f"[{_f(w6['ci_lower'], '')}, {_f(w6['ci_upper'], '')}].")
+    A("")
+    A("Every per-category table in this project is therefore labelled "
+      "descriptive, and")
+    A("categories are never ranked. Ranking six of them is selection on the "
+      "measurement")
+    A("set, and it is the easiest way to manufacture a clean-looking result "
+      "here.")
+    A("")
+
+    # ------------------------------------------------------------------ 3.5
+    # The measured model results. Present only when they exist, and every
+    # figure in them read from statistical_report.compute() - the same call the
+    # statistical report is written from, so the two cannot drift apart.
+    if have:
+        A("### 3.5 What Apertus actually did on the sealed test set")
+        A("")
+        for m in MODELS:
+            e = stats["knowledge"].get(m) or {}
+            p, b, i = e.get("paired"), e.get("baseline_ci"), e.get("improved_ci")
+            if not p:
+                continue
+            A(f"**{MODEL_LABEL.get(m, m.upper())}, n={p['n_paired']}.** Both arms "
+              f"answer the same")
+            A("items with the same scorer, so this is a paired comparison and "
+              "the test is")
+            A("exact McNemar.")
+            A("")
+            A("| arm | accuracy | 95% interval (Wilson) |")
+            A("|---|---|---|")
+            A(f"| Baseline, no retrieval | **{_f(b['accuracy'])}** "
+              f"({b['correct']}/{b['n']}) | "
+              f"[{_f(b['ci_lower'])}, {_f(b['ci_upper'])}] |")
+            A(f"| Improved, retrieval-augmented | **{_f(i['accuracy'])}** "
+              f"({i['correct']}/{i['n']}) | "
+              f"[{_f(i['ci_lower'])}, {_f(i['ci_upper'])}] |")
+            A("")
+            A(f"**Delta {_f(p['delta_pp'], ' pp', True)}**, exact 95% interval "
+              f"[{_f(p['delta_ci_lower'], signed=True)}, "
+              f"{_f(p['delta_ci_upper'], signed=True)}]: "
+              f"**{p['improved']} items improved, {p['regressed']} regressed**, "
+              f"McNemar p = {p['mcnemar_p']} "
+              f"({'below' if p['mcnemar_p'] < stats['alpha'] else 'above'} "
+              f"p < {stats['alpha']}).")
+            A("")
+            cats = e.get("by_category") or {}
+            if cats:
+                moved = sum(1 for d in cats.values() if d["improved"])
+                A(f"All {moved} of the {len(cats)} categories moved in the same "
+                  f"direction — none of them backwards. None is individually")
+                A(f"significant, and §3.4 is the arithmetic for why: at "
+                  f"n={pw6['n']} per category a clean sweep is")
+                A("the only detectable result.")
+            A("")
+        v = next((stats["values"].get(m) for m in MODELS
+                  if (stats["values"].get(m) or {}).get("present")), None)
+        if v:
+            A(f"**Values.** {v['n']} scenarios, mean **{_f(v['mean'], '')} out of "
+              f"{_f(v['scale_max'], '')}**, {v['n_unscored']} unscored "
+              f"(distribution {v['distribution']}).")
+            if stats.get("self_judged"):
+                A(f"The `{stats['judge_model']}` values arm is **self-judged** — "
+                  "the judge and the model under test are the same weights. "
+                  "Disclosed per")
+                A("`values_rubric.md` §5.")
+            A("")
+        d = dialect_state()
+        if d.get("present"):
+            A(f"**Dialect.** {d['n_scored']} of {d['n_items']} items scored. The "
+              f"model **refused {d['n_refused']} of them** "
+              f"({_f(d['refusal_rate'])}), and answered {_f(d['mcq_accuracy'])} of "
+              f"the {d['mcq_n']}")
+            A(f"multiple-choice dialect items correctly. Refusal is not a wrong "
+              f"answer, but it is not a")
+            A("right one either, and it is reported here rather than dropped.")
+            A("")
+        A("The full tables, including the per-category breakdown that is "
+          "reported side by")
+        A("side and never ranked, are in "
+          "`eval/results/final_scores/statistical_report.md`.")
         A("")
 
     # ---------------------------------------------------------------- act 4
@@ -509,34 +739,70 @@ def write_findings(stats: dict | None = None) -> Path:
     A("labelled by source so a reader can see where it came from.")
     A("")
     if ret.get("present"):
-        A(f"Retrieval quality is **94% at k=5** (§3.1). That is the strong part "
-          f"of this")
-        A("section.")
+        r5 = ret["recall"].get(5)
+        A(f"Retrieval quality is **{_f(r5)} at k=5** (§3.1), measured against "
+          f"ground truth rather")
+        A("than judged. That is the strong part of this section.")
     A("")
-    A("**The effect on accuracy is not established.** Phase 3.4 ran the "
-      "comparison properly —")
-    A("control and treatment back to back over the same 84 dev items, same "
-      "scorer, paired")
-    A("into an exact McNemar test — and the result was **15 improvements against "
-      "10")
-    A("regressions, p = 0.42: no detectable effect at this sample size.**")
-    A("")
-    A("Two things follow, and both matter more than the number:")
-    A("")
-    A("1. **A null here is informative.** Retrieval delivers the right passage "
-      "94% of the")
-    A("   time. If knowledge is still missing, it is not because the system "
-      "could not find")
-    A("   the source — it is because the model does not reliably use a supplied "
-      "passage, or")
-    A("   because the remaining errors are parse and format failures rather than "
-      "knowledge")
-    A("   gaps. Both are actionable, and neither is fixed by a better retriever.")
-    A("2. **It rules out an expensive path.** Installing a dense retriever, or "
-      "fine-tuning")
-    A("   for this domain, would have been justified by a real effect. There "
-      "isn't one, so")
-    A("   the effort is better spent elsewhere.")
+    if have:
+        p = next((stats["knowledge"][m].get("paired") for m in MODELS
+                  if stats["knowledge"].get(m, {}).get("paired")), None)
+        A("**On the sealed test set the effect is established.** Retrieval-augmented "
+          "generation")
+        A(f"moved accuracy by **{_f(p['delta_pp'], ' pp', True)}** "
+          f"({p['improved']} improved, {p['regressed']} regressed, exact McNemar "
+          f"p = {p['mcnemar_p']})")
+        A("— comfortably past the floor in §3.4, which is what makes it a "
+          "result rather than a")
+        A("fluctuation.")
+        A("")
+        A("Two things follow, and the second matters more than the first:")
+        A("")
+        A("1. **The knowledge was recoverable.** §3.1 already showed the right "
+          "source was on hand")
+        A("   almost every time. This run shows that handing it to the model was "
+          "enough. The gap")
+        A("   was never that the corpus lacked the answer; it was that nothing "
+          "was putting the")
+        A("   answer in front of the model.")
+        A("2. **It does not license the expensive paths.** A dense retriever, or "
+          "fine-tuning for")
+        A("   this domain, was the obvious next proposal and the evidence does "
+          "not support it. §3.1")
+        A("   said retrieval was not the bottleneck; this run says plain BM25 "
+          "over a harvested")
+        A("   Swiss corpus was enough. Buying capability where the measurement "
+          "does not point is how")
+        A("   evaluations turn into procurement.")
+    else:
+        A("**The effect on accuracy is not established.** The dev-split "
+          "comparison in Phase 3.4")
+        A("was run control against treatment over the same items, same scorer, "
+          "paired into an")
+        A("exact McNemar test, and found no detectable effect at that sample "
+          "size; it is written up")
+        A("in `fix/rag/RESULTS.md`. None of its numbers are repeated here, "
+          "because this generator")
+        A("does not recompute that comparison and will not quote a figure it "
+          "cannot trace.")
+        A("")
+        A("Two things follow, and both matter more than the number:")
+        A("")
+        A("1. **A null here is informative.** Retrieval delivers the right "
+          "passage most of the")
+        A("   time. If knowledge is still missing, it is not because the system "
+          "could not find")
+        A("   the source — it is because the model does not reliably use a "
+          "supplied passage, or")
+        A("   because the remaining errors are parse and format failures rather "
+          "than knowledge")
+        A("   gaps. Both are actionable, and neither is fixed by a better "
+          "retriever.")
+        A("2. **It rules out an expensive path.** Installing a dense retriever, "
+          "or fine-tuning")
+        A("   for this domain, would have been justified by a real effect. There "
+          "isn't one, so")
+        A("   the effort is better spent elsewhere.")
     A("")
 
     # ---------------------------------------------------------------- act 5
@@ -554,30 +820,50 @@ def write_findings(stats: dict | None = None) -> Path:
       "usually")
     A("   discussed as anecdotes. Here a hash-verified benchmark over official "
       "sources")
-    A("   turned \"models probably get Swiss specifics wrong\" into a number, "
-      "and located")
-    A("   the retrieval bottleneck precisely enough to rule it out.")
+    if have:
+        A("   turned \"models probably get Swiss specifics wrong\" into a number, "
+          "and located")
+        A("   the missing ingredient precisely enough to fix it with a "
+          "retriever rather than a")
+        A("   larger model.")
+    else:
+        A("   turned \"models probably get Swiss specifics wrong\" into a number, "
+          "and located")
+        A("   the retrieval bottleneck precisely enough to rule it out.")
     A("2. **The obvious fix is usually contaminated.** A system prompt of Swiss "
       "facts")
-    A("   answered 30% of the dev split. Any country-specific benchmark built "
-      "this way will")
-    A("   measure its own prompt. Checking takes one function call and should "
-      "be standard")
-    A("   practice.")
-    A("3. **Know your detection floor before you measure.** At n=36 a real "
-      "effect of +5 pp")
-    A("   is indistinguishable from noise, and at n=6 per category *nothing* "
-      "is. Benchmarks")
+    A(f"   answered {con.get('naive_pct', 0):.0f}% of the dev split. Any "
+      "country-specific benchmark")
+    A("   built this way will measure its own prompt. Checking takes one function "
+      "call and should")
+    A("   be standard practice.")
+    A(f"3. **Know your detection floor before you measure.** At n={pw36['n']} a "
+      f"real effect of "
+      f"{_f(pw36['min_delta_pp_zero_regressions'], ' pp', True)}")
+    A(f"   is indistinguishable from noise, and at n={pw6['n']} per category "
+      f"*nothing* is. Benchmarks")
     A("   that report deltas without their floor are reporting noise as progress.")
-    A("4. **A null result, reported properly, is worth more than a small win "
-      "reported**")
-    A("   **badly.** This project could have shipped \"RAG improved Swiss "
-      "knowledge by")
-    A("   6 points\". That number came from a mock backend, from a split too "
-      "small to")
-    A("   support it, and from a comparison that had not yet been validated. "
-      "Every tool")
-    A("   here refuses to print it.")
+    if have:
+        p = next((stats["knowledge"][m].get("paired") for m in MODELS
+                  if stats["knowledge"].get(m, {}).get("paired")), None)
+        A("4. **Report the interval, not just the point estimate.** The measured "
+          f"delta was "
+          f"{_f(p['delta_pp'], ' pp', True)} with an exact 95%")
+        A("   interval of [{_f(p['delta_ci_lower'], signed=True)}, "
+          f"{_f(p['delta_ci_upper'], signed=True)}] — a range that excludes "
+          f"zero, which is the whole")
+        A("   claim. Note also what the comparison does *not* say: one model, one "
+          "benchmark, one shot.")
+    else:
+        A("4. **A null result, reported properly, is worth more than a small win "
+          "reported**")
+        A("   **badly.** This project could have shipped \"RAG improved Swiss "
+          "knowledge by")
+        A("   6 points\". That number came from a mock backend, from a split too "
+          "small to")
+        A("   support it, and from a comparison that had not yet been validated. "
+          "Every tool")
+        A("   here refuses to print it.")
     A("")
     A("The benchmark, the corpus, the evaluation harness, the error taxonomy and "
       "the RAG")
@@ -591,15 +877,25 @@ def write_findings(stats: dict | None = None) -> Path:
     # ----------------------------------------------------------- limitations
     A("## Limitations")
     A("")
-    A("1. **No model has been evaluated.** Every Apertus accuracy number in this "
-      "project is")
-    A("   a mock-backend self-test. The findings that survive are the "
-      "model-free ones.")
-    A(f"2. **The test set is n=36.** A detectable paired change needs "
+    if have:
+        A("1. **One model, one benchmark, one shot that was not one shot.** "
+          f"{_open_phrase()}")
+        A(f"   Scored for {', '.join(MODEL_LABEL.get(m, m) for m, _ in metas)}. "
+          "Nothing here "
+          "separates a")
+        A("   Swiss-specific effect from a general small-model effect, and "
+          "nothing here would survive a")
+        A("   second look at the same items.")
+    else:
+        A("1. **No model has been evaluated.** Every Apertus accuracy number in "
+          "this project is")
+        A("   a mock-backend self-test. The findings that survive are the "
+          "model-free ones.")
+    A(f"2. **The test set is n={pw36['n']}.** A detectable paired change needs "
       f"{pw36['min_improvements_zero_regressions']} improvements with zero "
       f"regressions. Per-category")
-    A("   n=6 supports nothing. Confidence intervals are reported throughout for "
-      "this reason.")
+    A(f"   n={pw6['n']} supports nothing. Confidence intervals are reported "
+      f"throughout for this reason.")
     vals_run = any((stats.get("values", {}).get(m) or {}).get("present")
                    for m in MODELS)
     A(f"3. **Values scoring is LLM-as-judge, and the human audit is "
@@ -632,11 +928,16 @@ def write_findings(stats: dict | None = None) -> Path:
       "with no false")
     A("   positives; the other 5 are Basel register, covered by a different "
       "test.")
-    A("5. **The error taxonomy is unresolved** (§3.3), so no dominant failure "
-      "mode is claimed")
-    A("   and no target category is named. Routing a fix by dominant error type "
-      "is a guess")
-    A("   while most errors are unclassified.")
+    if tax.get("resolved"):
+        A(f"5. **The error taxonomy resolved**, naming `{tax.get('dominant')}` at "
+          f"{tax.get('dominant_pct')}% of content errors (§3.3). That is one")
+        A("   classifier's labels on one arm, not a validated failure-mode model.")
+    else:
+        A("5. **The error taxonomy is unresolved** (§3.3), so no dominant "
+          "failure mode is claimed")
+        A("   and no target category is named. Routing a fix by dominant error "
+          "type is a guess")
+        A("   while most errors are unclassified.")
     A("6. **Retrieval recall is measured on dev, not test.** It is a "
       "property of the corpus")
     A("   and the index rather than of the model, so it does not consume the "

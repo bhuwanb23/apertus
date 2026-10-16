@@ -23,6 +23,16 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+# The sandbox MUST come before any import of a module that writes. config itself
+# is inert, so importing it first is safe; baseline_report pulls in client, which
+# calls setup_logging() as an import side effect, so it must land inside the
+# redirect or every run drops a log file into the real eval/results/logs.
+from config import results_sandbox, snapshot_diff, snapshot_results_tree  # noqa: E402
+
+SUITE_RESULTS, SUITE_START_DIGESTS = results_sandbox("baseline_report_")
+
+# Imported AFTER the redirect, so these are the sandbox's paths, not the
+# repository's. Every fixture below is written through them.
 from config import PARSED_DIR, SCORES_DIR, config      # noqa: E402
 
 failures: list[str] = []
@@ -91,25 +101,54 @@ def _write(model, scores=None, run=None, results=None, task="knowledge"):
     SCORES_DIR.mkdir(parents=True, exist_ok=True)
     tag = f"{task}_{model}_dev_base" if task == "knowledge" else f"{task}_{model}"
     if task == "knowledge":
-        (PARSED_DIR / f"{tag}.json").write_text(
+        parsed = PARSED_DIR / f"{tag}.json"
+        scorefile = SCORES_DIR / f"{tag}.json"
+        _assert_in_sandbox(parsed)
+        _assert_in_sandbox(scorefile)
+        parsed.write_text(
             json.dumps({"run": run or _run(), "results": results or _results()}), encoding="utf-8")
-        (SCORES_DIR / f"{tag}.json").write_text(
+        scorefile.write_text(
             json.dumps({"run": run or _run(), "scores": scores or _scores()}), encoding="utf-8")
 
 
 def _clean():
     """Remove every artefact the report reads, including raw responses.
-    Without this the suite's expectations depend on whatever a real baseline run
-    happened to leave behind - a test that passes because of leftover state is
-    not a test."""
+
+    Without this the suite's expectations depend on whatever a previous test in
+    this file happened to leave behind - a test that passes because of leftover
+    state is not a test.
+
+    The isolation is still needed. What changed is the blast radius: PARSED_DIR,
+    SCORES_DIR and config.results_dir now point into the suite's own temp
+    directory (see results_sandbox() at the top of this file), so this deletes
+    fixtures, never results. It used to aim at the real eval/results tree, which
+    meant running this suite deleted the benchmark.
+
+    _assert_in_sandbox() is the belt to that braces: every single file this
+    function is about to unlink is checked against the sandbox root first, so a
+    future path change fails loudly here instead of silently eating real
+    artefacts again.
+    """
+    doomed = []
     for d in (PARSED_DIR, SCORES_DIR):
         if d.is_dir():
-            for f in d.glob("*.json"):
-                f.unlink()
+            doomed += list(d.glob("*.json"))
     raw = config.results_dir / "raw_responses"
     if raw.is_dir():
-        for f in raw.rglob("*.json"):
-            f.unlink()
+        doomed += list(raw.rglob("*.json"))
+
+    for f in doomed:
+        _assert_in_sandbox(f)
+        f.unlink()
+
+
+def _assert_in_sandbox(path: Path) -> None:
+    try:
+        path.resolve().relative_to(SUITE_RESULTS.resolve())
+    except ValueError:
+        raise AssertionError(
+            f"refusing to touch {path}: it is outside the suite sandbox "
+            f"{SUITE_RESULTS}. This suite must never write to eval/results.")
 
 
 def _run_report():
@@ -420,11 +459,51 @@ def test_pre_run() -> int:
     return 8
 
 
+# ================================= 8. THE SUITE NEVER TOUCHES THE REAL RESULTS
+def test_real_results_untouched() -> int:
+    """
+    The invariant this file exists to protect, asserted on itself.
+
+    This suite used to delete the benchmark. _clean() unlinked every *.json in
+    results/parsed, results/scores and results/raw_responses, so a routine test
+    run removed knowledge_8b_dev_base.json along with the artefacts written
+    during the Phase 4.1 test run. The suite still passed, because it only ever
+    checked its own fixtures - the destruction was invisible from inside.
+
+    So the check is the whole real tree, sha256 per file, snapshot taken before
+    the redirect and compared after every group has run. Digests are the direct
+    statement of the invariant: "the bytes on disk are the bytes that were
+    there".
+    """
+    n = 0
+    after = snapshot_results_tree()
+    problems = snapshot_diff(SUITE_START_DIGESTS, after)
+    check("real results tree is byte-identical after the suite ran",
+          problems, [])
+
+    # and the sandbox is genuinely somewhere else
+    from config import REAL_RESULTS_DIR
+    check("sandbox is outside the real results tree",
+          not SUITE_RESULTS.is_relative_to(REAL_RESULTS_DIR)
+          and not REAL_RESULTS_DIR.is_relative_to(SUITE_RESULTS), True)
+    check("sandbox is outside eval/ entirely",
+          not SUITE_RESULTS.is_relative_to(Path(__file__).resolve().parent), True)
+    check("parsed dir points into the sandbox",
+          PARSED_DIR.is_relative_to(SUITE_RESULTS), True)
+    check("scores dir points into the sandbox",
+          SCORES_DIR.is_relative_to(SUITE_RESULTS), True)
+    check("results_dir points into the sandbox",
+          config.results_dir.is_relative_to(SUITE_RESULTS), True)
+    n += 5
+    return n
+
+
 # ------------------------------------------------------------------------ main
 def main() -> int:
     print("=" * 74)
     print("PHASE 2.5 VERIFICATION - baseline checks must actually fail")
     print("=" * 74)
+    print(f"  sandbox      : {SUITE_RESULTS}")
 
     groups = [
         ("healthy run passes", test_healthy_run_passes),
@@ -434,6 +513,7 @@ def main() -> int:
         ("comparison table matches data", test_comparison_table),
         ("values + dialect checks", test_values_and_dialect_checks),
         ("pre-run checklist", test_pre_run),
+        ("real results untouched", test_real_results_untouched),
     ]
     for name, fn in groups:
         before = checks

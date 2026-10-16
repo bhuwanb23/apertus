@@ -9,17 +9,25 @@ authoritative voice available to it, in the place where people stop checking.
      exists to prevent placeholders shipped one: the sentence "confuse Swiss and
      German law, XX% of the time" was written into the source as an example.
      The output was clean and the source was not. Both are checked.
-  2. NO CLAIM THE ANALYSIS DECLINED TO MAKE. 3.1 left 78% of errors
+  2. NO CLAIM THE ANALYSIS DECLINED TO MAKE. 3.1 left most errors
      UNCLASSIFIED and select_target.py refused to name a target. The narrative
-     must not name a dominant error mode, a weakest area, or a category.
-  3. NO MOCK NUMBER PRESENTED AS A FINDING. Every mock-derived figure carries
-     its provenance in the same paragraph.
-  4. NO ACCURACY NUMBER FOR APERTUS WHILE ON MOCK. The single most likely way
-     this document misleads is by implying a score exists.
-  5. THE SCENARIO IS CHOSEN FROM DATA. And "pending" is a real answer, not a
-     failure to decide.
-  6. EVERY NUMBER TRACES TO A MODULE. Cross-checked against statistical_report,
-     not re-derived, so a divergence shows up.
+     must not name a dominant error mode, a weakest area, or a category - and
+     must still say the taxonomy is unresolved, because it is.
+  3. EVERY FIGURE CARRIES ITS PROVENANCE IN PLACE. A mock-derived number and a
+     real one are both percentages in this document; only one of them is a
+     finding about Apertus, so the banner saying which is which must sit next
+     to them.
+  4. EVERY NUMBER TRACES TO A MODULE THAT MEASURED IT. Read back out of
+     statistical_report, retriever, prompts_check and the scorer - never from a
+     hand-kept list, so a figure that appears in the document without a source
+     fails here.
+  5. THE SCENARIO IS CHOSEN FROM DATA. Both directions: with no model it must
+     refuse to pick A-D, and with the one-shot scored it must pick the one the
+     numbers support rather than the one that was written first.
+  6. THE MODEL-FREE FINDINGS ARE NOT GATED ON HAVING A MODEL. Retrieval,
+     contamination, the taxonomy and the detection floor hold without a run, and
+     a generator that drops them the moment results exist has thrown away the
+     part of the evidence that a reader cannot reproduce.
   7. IT IS BOTH CREDIBLE AND READABLE - the two audience checks the plan asks
      for, made mechanical rather than a matter of opinion.
 
@@ -40,6 +48,8 @@ sys.path.insert(0, str(ROOT / "fix" / "rag"))
 
 CHECKS = 0
 FAILURES: list[str] = []
+
+import seal as seal_mod  # noqa: E402  (needs the sys.path inserts above)
 
 
 def check(label: str, condition: bool, detail: str = "") -> None:
@@ -69,7 +79,10 @@ def test_no_placeholders_anywhere() -> None:
     for pat, name in ((r"XX\.X", "XX.X"), (r"\bXX\b", "bare XX"),
                       (r"XX/", "XX/"), (r"\bTBD\b", "TBD"),
                       (r"\bTODO\b", "TODO"), (r"\[\s*\]", "empty bracket"),
-                      (r"<[A-Z_]{3,}>", "unfilled angle placeholder")):
+                      (r"<[A-Z_]{3,}>", "unfilled angle placeholder"),
+                      (r"%%", "doubled percent sign"),
+                      (r"\bnan\b|\binf\b", "non-finite number"),
+                      (r"None%|None pp", "unrendered value")):
         check(f"findings.md has no {name}", not re.search(pat, text),
               str(re.findall(pat, text)[:3]))
 
@@ -112,8 +125,25 @@ def test_no_unmeasured_claims() -> None:
               not re.search(r"dominant (?:classified )?error (?:is|was)", text, re.I)
               or "`UNCLASSIFIED`" in text,
               "a dominant error may not be named while the taxonomy is unresolved")
+        # Three phrasings of one fact, because the generator picks between them
+        # from taxonomy_state(): the section heading, the body, and the
+        # limitations list all say it, and which one a reader reaches first
+        # depends on whether a classified file exists. Accepting only the first
+        # spelling tested the prose rather than the claim.
         check("it says the taxonomy is unresolved",
-              "UNCLASSIFIED" in text or "did not resolve" in text)
+              any(s in text for s in ("UNCLASSIFIED", "did not resolve",
+                                      "is unresolved", "unresolved")),
+              "the taxonomy has not resolved, and the document has to say so "
+              "rather than go quiet on it")
+        # The other direction. fix/error_taxonomy.md came out of a mock-backend
+        # run, so "unresolved" is the true state of this analysis, and a
+        # generator that quietly starts reporting a dominant failure mode once a
+        # model run exists would be the precise failure this suite exists for.
+        # (?<!un) so that "unresolved" does not trip it.
+        check("it does not claim the taxonomy resolved",
+              re.search(r"taxonomy[^.\n]{0,40}(?<!un)resolved", text, re.I) is None,
+              "3.1 declined to name a dominant error; the narrative must not "
+              "start naming one on its own authority")
 
     # No weakest-area claim. select_target.py refused with all three gates.
     check("it does not name a weakest area",
@@ -133,18 +163,54 @@ def test_no_unmeasured_claims() -> None:
     print("   no dominant error, no weakest area, no ranked category")
 
 
-# ================================= 3. mock provenance is inline
+# ================================= 3. provenance of every figure is in place
 def test_mock_provenance() -> None:
-    section("3. Every mock-derived figure carries its provenance in place")
+    section("3. Every figure carries its provenance in the same place")
     import narrative
 
     path, scen, have = build()
     text = path.read_text(encoding="utf-8")
     tax = narrative.taxonomy_state()
 
-    check("the document opens by saying no model has been evaluated",
-          "No model has been evaluated" in text or "no model has" in text.lower())
-    check("it states the backend is mock", "mock" in text.lower())
+    if have:
+        # The one-shot has happened. The old check - "does the document say no
+        # model has been evaluated" - passed only because the banner was
+        # unconditional, and would have kept passing after the run made it a
+        # lie. What has to be true now is the mirror image: the document names
+        # the run its accuracy figures come from, and says they are not a
+        # self-test.
+        # This check used to REQUIRE the phrase "opened **once**", so it
+        # enforced the very claim that turned out to be false: the append-only
+        # log records 24 opens of the sealed set, not one. It now requires the
+        # count to be reported from the log, the run to be named, and the
+        # one-shot phrasing to be ABSENT.
+        n_base = len([e for e in seal_mod.read_audit()
+                      if "knowledge/8b/baseline" in str(e.get("reason", ""))])
+        n_impr = len([e for e in seal_mod.read_audit()
+                      if "knowledge/8b/improved" in str(e.get("reason", ""))])
+        total = n_base + n_impr
+        check("the document names the run its accuracy figures came from",
+              bool(re.search(r"Latest arm: \d{4}-\d\d-\d\dT", text)) is not False
+              and re.search(r"Latest arm: \d{4}-\d\d-\d\dT", text) is not None
+              and re.search(r"`is_mock: (true|false)`", text) is not None,
+              "a figure with no run behind it is indistinguishable from a mock "
+              "self-test")
+        check("it reports the sealed-set open count from the log, not a claim "
+              "of one",
+              f"opened **{total} times**" in text,
+              f"the log records {total} opens ({n_base} baseline, {n_impr} "
+              f"improved); the document must state that count")
+        check("it does not claim the set was opened exactly once",
+              "opened **once**" not in text and "exactly once" not in text,
+              "the one-shot claim was false and must not come back")
+        check("it says the scored arms are not mock", "is_mock: false" in text)
+        check("it does not still claim no model has been evaluated",
+              "No model has been evaluated" not in text,
+              "the banner that said this is now false and must be gone")
+    else:
+        check("the document opens by saying no model has been evaluated",
+              "No model has been evaluated" in text or "no model has" in text.lower())
+        check("it states the backend is mock", "mock" in text.lower())
 
     if tax.get("present") and tax.get("is_mock") and tax.get("unclassified_pct"):
         idx = text.find(str(tax["unclassified_pct"]) + "%")
@@ -156,6 +222,16 @@ def test_mock_provenance() -> None:
               "a number 20 lines from its caveat is a number read on its own")
         check("it says plainly that the figure is not about Apertus",
               "not Apertus" in window or "describes the classifier" in window)
+    elif not tax.get("present") and tax.get("report_mock"):
+        # The rendered taxonomy exists and says on its face that it came from
+        # synthetic responses. A document that reports "not available" and stops
+        # there leaves a confident-looking table in the repo with no provenance
+        # warning pointing at it.
+        check("the mock provenance of the rendered taxonomy is stated",
+              "MOCK BACKEND" in text
+              and re.search(r"not repeated here as findings", text) is not None,
+              "a reader who opens fix/error_taxonomy.md must be told here that "
+              "it is not evidence about Apertus")
 
     # The 30% contamination figure is model-free and MUST be stated as such,
     # because it is the strongest number in the document.
@@ -167,46 +243,120 @@ def test_mock_provenance() -> None:
     print("   mock caveats sit next to the numbers they qualify")
 
 
-# ================================= 4. no Apertus accuracy while on mock
-def test_no_accuracy_while_mock() -> None:
-    section("4. No Apertus accuracy figure is stated while on mock")
+# ============================== 4. every figure traces to a measurement
+def test_figures_traceable() -> None:
+    section("4. Every figure traces to the module that measured it")
     import narrative
 
+    stats = narrative.compute()
     path, scen, have = build()
     text = path.read_text(encoding="utf-8")
-    check("the generator reports no model data", not have)
-    check("the scenario is 'pending'", scen["id"] == "pending", scen["id"])
-    check("the scenario explains why A-D cannot apply",
-          "none of A" in scen["why"] or "cannot be selected" in scen["why"])
 
-    # Any percentage in the document must be traceable to a non-model source.
-    # Read from the modules themselves rather than from a hand-kept list, so a
-    # new figure appears in the document and is automatically expected here.
+    if have:
+        # Phase 4.1 has run and the one-shot is spent. The check that used to
+        # live here - "no accuracy figure while on mock" - is still the right
+        # question, asked in the form the data now takes: are the figures here
+        # from a real backend, and does the generator agree?
+        check("the generator sees model data", bool(have),
+              "the one-shot has run; a document that reports no model data is "
+              "reporting a stale state, not a finding")
+        mocks = [m for m in narrative.MODELS
+                 if stats["knowledge"].get(m, {}).get("paired")
+                 and (stats["knowledge"][m].get("baseline_meta") or {}).get("is_mock")]
+        check("no scored arm came from the mock backend", not mocks, str(mocks))
+        check("the scenario is no longer 'pending'",
+              scen["id"] in ("A", "B", "C"), scen["id"])
+        check("the scenario is the one the real data selects",
+              scen["id"] == narrative.choose_scenario(
+                  stats, narrative.taxonomy_state(), {})["id"],
+              "the printed scenario and choose_scenario disagree")
+        # The scenario has to justify itself out of the measurement. A label
+        # with no number behind it is the same failure mode as a bare figure.
+        p = next((stats["knowledge"][m]["paired"] for m in narrative.MODELS
+                  if stats["knowledge"].get(m, {}).get("paired")), None)
+        if scen["id"] in ("A", "B"):
+            check("the scenario cites the measured delta that selected it",
+                  f"{p['delta_pp']:+.1f} pp" in scen["why"]
+                  and f"{p['delta_pp']:+.1f} pp" in text, scen["why"])
+            # The exact contradiction this generator shipped for one revision:
+            # a document that reports a significant paired gain and, two acts
+            # later, says the effect was not established. Both sentences were
+            # true of some state of the data; only one is true of this state.
+            check("the document does not also call the effect unestablished",
+                  re.search(r"effect on accuracy is not established", text, re.I)
+                  is None
+                  and re.search(r"no detectable effect", text, re.I) is None,
+                  "a significant paired result and a null claim cannot both be "
+                  "in the same document")
+        else:
+            check("the scenario explains the absence of a significant gain",
+                  "no arm reached" in scen["why"], scen["why"])
+            check("the document does not claim an established effect",
+                  "effect is established" not in text.lower(),
+                  "no arm reached significance; the document must not say the "
+                  "effect was established")
+    else:
+        # Unchanged from before the one-shot, and still live: if the sealed arms
+        # are ever removed, the generator must go back to refusing to pick a
+        # scenario rather than reporting an accuracy for a model that has not
+        # answered anything.
+        check("the generator reports no model data", not have)
+        check("the scenario is 'pending'", scen["id"] == "pending", scen["id"])
+        check("the scenario explains why A-D cannot apply",
+              "none of A" in scen["why"] or "cannot be selected" in scen["why"])
+
+    # Any percentage in the document must be traceable to a non-model source or
+    # to the scorer that measured it. Read from the modules themselves rather
+    # than from a hand-kept list, so a new figure appears in the document and is
+    # automatically expected here.
     allowed = {"25", "5", "10", "0.031", "0.5", "95", "2.5", "50", "42"}
     ret = narrative.retrieval_state()
     con = narrative.contamination_state()
     tax = narrative.taxonomy_state()
+    dia = narrative.dialect_state()
     from statistical_report import detectable, wilson_ci
     pw = detectable(36)
     expected = set(allowed)
+
+    def add(v):
+        if v is None:
+            return
+        one = f"{v:.1f}"
+        expected.add(one)
+        # Only accept the rounded form where rounding is lossless, so a prose
+        # "30%" matches but "55%" does not silently cover "55.6%".
+        if one.endswith(".0"):
+            expected.add(f"{v:.0f}")
+
     for v in (ret.get("recall") or {}).values():
-        # The document prints recall at one decimal; accept the integer form too
-        # because prose may round it. Rounding before stripping zeros would turn
-        # 90.5 into "91" and then fail to match the text's own "90.5%".
-        expected.add(f"{v:.1f}")
-        expected.add(f"{v:.0f}")
+        add(v)
     if con.get("present"):
+        add(con["naive_pct"])
+        # Both places the contamination figure appears round it to a whole
+        # percent, because 25/84 is not a cleaner number than "30%". Registered
+        # for this figure only; every other value has to match its own precision.
         expected.add(f"{con['naive_pct']:.0f}")
     if tax.get("unclassified_pct") is not None:
-        expected.add(f"{tax['unclassified_pct']:.1f}")
+        add(tax["unclassified_pct"])
     if tax.get("dominant_pct") is not None:
-        expected.add(f"{tax['dominant_pct']:.1f}")
+        add(tax["dominant_pct"])
+    for m in narrative.MODELS:
+        e = stats["knowledge"].get(m) or {}
+        for ci in (e.get("baseline_ci"), e.get("improved_ci")):
+            for k in ("accuracy", "ci_lower", "ci_upper"):
+                add((ci or {}).get(k))
+        pr = e.get("paired")
+        for k in ("delta_pp", "delta_ci_lower", "delta_ci_upper"):
+            add((pr or {}).get(k))
+    if dia.get("present"):
+        for k in ("refusal_rate", "mcq_accuracy"):
+            add(dia.get(k))
     expected.add(f"{pw['min_delta_pp_zero_regressions']:+.1f}")
     expected.add(f"{pw['min_delta_pp_zero_regressions']:.1f}")
     for k in (0, 6):
         w = wilson_ci(k, 6)
-        expected.add(f"{w['ci_lower']:.1f}")
-        expected.add(f"{w['ci_upper']:.1f}")
+        add(w["ci_lower"])
+        add(w["ci_upper"])
         expected.add(f"{w['ci_upper'] - w['ci_lower']:.0f}")
 
     pct = re.findall(r"(\d+(?:\.\d+)?)%", text)
@@ -214,12 +364,14 @@ def test_no_accuracy_while_mock() -> None:
     check("every percentage traces to a module that measured it",
           not suspicious, f"unexplained: {suspicious}")
 
-    # It must not say a model "scores" or "achieves" anything.
+    # It must not attribute a score to the model in the language of a press
+    # release. This is not "no accuracy may be stated" - the arms exist now -
+    # it is "no score may appear unattributed".
     for verb in (r"8B scores", r"70B scores", r"achieves \d", r"accuracy of \d",
                  r"scored \d"):
         check(f"the document does not say '{verb}'",
               not re.search(verb, text, re.I))
-    print(f"   {len(pct)} percentages, all traceable to model-free sources")
+    print(f"   {len(pct)} percentages, all traceable to a measured source")
 
 
 # ================================= 5. the scenario comes from data
@@ -257,11 +409,21 @@ def test_scenario_from_data() -> None:
     check("no model data selects 'pending'",
           narrative.choose_scenario({"knowledge": {}}, {}, {})["id"] == "pending")
 
-    # "pending" must carry the caveat about scenario C.
-    check("'pending' names the closest scenario", scen.get("closest") == "C")
+    # The pending branch is exercised by FORCING it, not by hoping the live data
+    # is still missing. It is the branch that fires if the sealed arms are ever
+    # removed, and a generator whose refusal path stops being tested is a
+    # generator that will stop refusing.
+    pending = narrative.choose_scenario({"knowledge": {}}, {}, {})
+
+    check("'pending' names the closest scenario", pending.get("closest") == "C",
+          f"pending must still say which scenario it is nearest: {pending}")
     check("'pending' explains why C is also unavailable",
-          "not supported" in scen.get("closest_caveat", ""),
-          scen.get("closest_caveat", ""))
+          "not supported" in pending.get("closest_caveat", ""),
+          pending.get("closest_caveat", ""))
+    check("'pending' explains why A-D cannot apply",
+          "none of A" in pending.get("why", "")
+          or "cannot be selected" in pending.get("why", ""),
+          pending.get("why", ""))
 
     check("the selected scenario appears in the document",
           f"**{scen['id']} —" in build()[0].read_text(encoding="utf-8")
@@ -294,6 +456,18 @@ def test_numbers_traceable() -> None:
     check("it says n=6 supports nothing but a clean sweep",
           pw6["nothing_detectable_with_any_regression"] and "6/0" in text)
 
+    # And the recall figures must not ALSO exist as literals in the generator.
+    # A document recomputes its recall from the retriever and then hardcodes the
+    # same number into its prose is a document that will keep printing the old
+    # figure after the corpus changes - which is the same failure
+    # fix/test_charts.py refuses in generate_charts.py.
+    src = (ROOT / "eval" / "narrative.py").read_text(encoding="utf-8")
+    code = re.sub(r'"""[\s\S]*?"""', "", src)      # the docstring names them
+    lit = [v for v in ("83.3", "90.5", "94.0", "83.3%", "90.5%", "94%")
+           if v in code]
+    check("no recall figure is hardcoded in the generator's code", not lit,
+          f"literals {lit}; retrieval_state() already computes these")
+
     w0, w6 = wilson_ci(0, 6), wilson_ci(6, 6)
     check("the 0/6 interval quoted matches wilson_ci",
           f"[{w0['ci_lower']:.1f}, {w0['ci_upper']:.1f}]" in text,
@@ -305,6 +479,28 @@ def test_numbers_traceable() -> None:
     import seal
     check("the commit hash is the real one", seal.git_hash()[:12] in text)
     check("the sealed set hash is the real one", seal.file_hash()[:32] in text)
+
+    # If model arms exist, the measured comparison has to be IN this document,
+    # not merely in the statistical report it links to. The discordant counts
+    # are the part of a McNemar result a reader has to see to judge it: a delta
+    # with its interval but no counts is a number without a story.
+    stats = narrative.compute()
+    for m in narrative.MODELS:
+        pr = (stats["knowledge"].get(m) or {}).get("paired")
+        if not pr:
+            continue
+        check(f"the {m.upper()} arm accuracies are reported",
+              f"{pr['before_accuracy']}%" in text
+              and f"{pr['after_accuracy']}%" in text,
+              "the two arms are the comparison; reporting one is reporting half")
+        check(f"the {m.upper()} discordant counts are reported",
+              f"{pr['improved']} items improved" in text
+              and f"{pr['regressed']} regressed" in text,
+              "improvements and regressions, not a delta on its own")
+        check(f"the {m.upper()} McNemar p is reported",
+              f"p = {pr['mcnemar_p']}" in text,
+              "significance is the claim; the point estimate is not enough")
+
     print("   recall, power floor, intervals, commit and seal all cross-checked")
 
 
@@ -384,7 +580,7 @@ def main() -> int:
     for fn in (test_no_placeholders_anywhere,
                test_no_unmeasured_claims,
                test_mock_provenance,
-               test_no_accuracy_while_mock,
+               test_figures_traceable,
                test_scenario_from_data,
                test_numbers_traceable,
                test_two_audiences):

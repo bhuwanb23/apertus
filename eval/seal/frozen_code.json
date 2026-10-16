@@ -1,6 +1,6 @@
 {
-  "frozen_utc": "2026-10-16T03:32:27+00:00",
-  "git_hash": "fdf727f5301c91a5534e03648492caae63ee9592",
+  "frozen_utc": "2026-10-16T07:12:28+00:00",
+  "git_hash": "436ba260830af773434675282a2cc897f15d13c9",
   "tree_dirty": false,
-  "note": "Re-freeze after fixing a one-shot harness bug: the improved arm had been sending all 36 stitched per-question contexts with every question (17k tokens, cross-question leakage). Fix restores per-question retrieval to match the dev path. The already-completed knowledge baseline arm is UNAFFECTED - it runs with no retrieval context. No change to the intervention itself (BM25 top-3)."
+  "note": "manual"
 }

@@ -19,6 +19,11 @@ about the difference between those two things.
   7. CONDITIONAL ARITHMETIC IS CORRECT, and a target with no justification is
      called out - choosing the category that happened to improve best on the
      split being validated is selection on the measurement set.
+  8. A NET SUM IS NOT A SIGNIFICANCE TEST.
+  9. THE SUITE WRITES NOTHING TRACKED. Every document this suite builds is
+     synthetic, and writing one to fix/comparison.md replaces a real deliverable
+     with mock numbers on every run. Snapshot digests taken at import time say
+     so.
 
 Run:  python fix/test_validation.py
 Exit: 0 = pass, 1 = failure
@@ -26,6 +31,7 @@ Exit: 0 = pass, 1 = failure
 
 from __future__ import annotations
 
+import hashlib
 import json
 import subprocess
 import sys
@@ -39,6 +45,29 @@ sys.path.insert(0, str(ROOT / "fix" / "rag"))
 
 CHECKS = 0
 FAILURES: list[str] = []
+
+# Digest of every tracked file this suite is allowed to touch at all, taken at
+# import time - before any test has run. Test 9 compares against this, so the
+# assertion covers the whole suite rather than whichever test happens to run last.
+#
+# The real artefacts in the results tree are included as well as comparison.md:
+# test 6 rewrites them in place and restores them in a finally block, and a suite
+# that leaves mock stubs behind is exactly the failure mode this guards.
+PROTECTED = [
+    ROOT / "fix" / "comparison.md",
+    ROOT / "eval" / "results" / "parsed" / "knowledge_8b_dev_base.json",
+    ROOT / "fix" / "rag" / "results_rag_8b_dev_k3.json",
+]
+
+
+def digest(path: Path) -> str | None:
+    """Content digest, or None if absent. Absent is a value worth comparing."""
+    if not path.exists():
+        return None
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+SUITE_START_DIGESTS = {p: digest(p) for p in PROTECTED}
 
 
 def check(label: str, condition: bool, detail: str = "") -> None:
@@ -264,70 +293,89 @@ def test_comparison_has_no_placeholders() -> None:
     section("5. comparison.md carries numbers, never the plan's XX.X")
     import validate_improvement as vi
 
-    res = vi.analyse(build({c: True for c in CATS}),
-                     build({c: False for c in CATS}), "baseline", "improved")
-    meta = {"is_mock": True, "backend": "mock", "model_key": "8b",
-            "model_id": "Apertus", "split": "dev", "conflicts": []}
-    path = vi.write_comparison(res, meta, None)
-    text = path.read_text(encoding="utf-8")
+    # Every document this test builds is built from synthetic rows, so every one
+    # of them is written into a temp directory. Writing them to the real
+    # fix/comparison.md would replace the real comparison with before=100%,
+    # after=0% mock numbers on every suite run - which is both a lie in a tracked
+    # deliverable and a dirty working tree that fails the P6-tree-clean gate.
+    with tempfile.TemporaryDirectory() as td:
+        tmp = Path(td)
 
-    check("no XX.X placeholder survives", "XX.X" not in text)
-    check("no bare XX survives", "XX " not in text)
-    check("the mock banner is present", "not results" in text.lower())
-    check("is_mock is stated", "is_mock=True" in text or "mock" in text.lower())
-    check("the sealed test split is mentioned", "sealed" in text.lower())
-    check("the 70B gap is disclosed", "70B" in text)
-    check("one-item-is-7.1pp is stated", "7.1" in text)
+        res = vi.analyse(build({c: True for c in CATS}),
+                         build({c: False for c in CATS}), "baseline", "improved")
+        meta = {"is_mock": True, "backend": "mock", "model_key": "8b",
+                "model_id": "Apertus", "split": "dev", "conflicts": []}
+        path = vi.write_comparison(res, meta, None, tmp / "comparison.md")
+        text = path.read_text(encoding="utf-8")
 
-    # Numbers must be real values from the analysis, not filler.
-    check("the before accuracy appears", f"{res['before_accuracy']}%" in text)
-    check("the after accuracy appears", f"{res['after_accuracy']}%" in text)
+        check("the document went to the temp dir, not the repo",
+              tmp in path.parents, str(path))
 
-    # A conflict must appear in the document, not just on the console.
-    meta2 = dict(meta, conflicts=["backend: before='mock' after='http'"])
-    path2 = vi.write_comparison(res, meta2, None)
-    t2 = path2.read_text(encoding="utf-8")
-    check("a setup conflict is written into the document",
-          "Attribution blocked" in t2, t2[:300])
+        check("no XX.X placeholder survives", "XX.X" not in text)
+        check("no bare XX survives", "XX " not in text)
+        check("the mock banner is present", "not results" in text.lower())
+        check("is_mock is stated", "is_mock=True" in text or "mock" in text.lower())
+        check("the sealed test split is mentioned", "sealed" in text.lower())
+        check("the 70B gap is disclosed", "70B" in text)
+        check("one-item-is-7.1pp is stated", "7.1" in text)
 
-    # Unavailable numbers must say so rather than show a placeholder. An empty
-    # comparison makes every figure None, which is exactly where `f"{None:+.1f}"`
-    # would raise.
-    empty = vi.analyse([], [], "b", "a")
-    check("an empty comparison has no categories", empty["per_category"] == {})
-    check("an empty comparison has a None delta", empty["delta_pp"] is None)
-    p3 = vi.write_comparison(empty, meta, None)
-    t3 = p3.read_text(encoding="utf-8")
-    check("an empty comparison writes without crashing", p3.exists())
-    check("an empty comparison still has no placeholders", "XX.X" not in t3)
-    check("absent numbers are labelled, not zeroed",
-          "not measured" in t3, "a missing value must say it is missing")
+        # Numbers must be real values from the analysis, not filler.
+        check("the before accuracy appears", f"{res['before_accuracy']}%" in text)
+        check("the after accuracy appears", f"{res['after_accuracy']}%" in text)
 
-    # A header row with no data rows beneath it reads as "nothing to report" to a
-    # human and as "no problems" to anything parsing the table. It must say it
-    # had nothing to compare.
-    check("an empty category table says so rather than emitting bare headers",
-          "no paired items" in t3,
-          "an empty table is indistinguishable from a clean one")
-    header_line = [l for l in t3.splitlines()
-                   if l.startswith("| Category | Before |")]
-    check("the category header exists exactly once", len(header_line) == 1)
-    if header_line:
-        idx = t3.splitlines().index(header_line[0])
-        rows_after = [l for l in t3.splitlines()[idx + 1:]
-                      if l.startswith("| ") and "---" not in l]
-        check("the empty table still has a body row", len(rows_after) > 0,
-              "header with nothing under it")
+        # A conflict must appear in the document, not just on the console.
+        meta2 = dict(meta, conflicts=["backend: before='mock' after='http'"])
+        path2 = vi.write_comparison(res, meta2, None, tmp / "comparison_conflict.md")
+        t2 = path2.read_text(encoding="utf-8")
+        check("a setup conflict is written into the document",
+              "Attribution blocked" in t2, t2[:300])
 
-    # The console renderer must survive it too.
-    vi.render(empty)
-    v_empty = vi.verdict(empty, is_mock=True, conflicts=[], paired=True, target=None)
-    check("the verdict survives an empty comparison",
-          "NOTHING TO VALIDATE" in v_empty.upper(), v_empty[-200:])
-    check("an empty comparison does not claim a regression or improvement",
-          "REAL REGRESSIONS" not in v_empty and "IMPROVED CATEGORIES" not in v_empty)
-    print("   placeholders: none; mock banner, sealed split, 70B gap, "
-          "and conflicts all present")
+        # Unavailable numbers must say so rather than show a placeholder. An empty
+        # comparison makes every figure None, which is exactly where `f"{None:+.1f}"`
+        # would raise.
+        empty = vi.analyse([], [], "b", "a")
+        check("an empty comparison has no categories", empty["per_category"] == {})
+        check("an empty comparison has a None delta", empty["delta_pp"] is None)
+        p3 = vi.write_comparison(empty, meta, None, tmp / "comparison_empty.md")
+        t3 = p3.read_text(encoding="utf-8")
+        check("an empty comparison writes without crashing", p3.exists())
+        check("an empty comparison still has no placeholders", "XX.X" not in t3)
+        check("absent numbers are labelled, not zeroed",
+              "not measured" in t3, "a missing value must say it is missing")
+
+        # A header row with no data rows beneath it reads as "nothing to report" to a
+        # human and as "no problems" to anything parsing the table. It must say it
+        # had nothing to compare.
+        check("an empty category table says so rather than emitting bare headers",
+              "no paired items" in t3,
+              "an empty table is indistinguishable from a clean one")
+        header_line = [l for l in t3.splitlines()
+                       if l.startswith("| Category | Before |")]
+        check("the category header exists exactly once", len(header_line) == 1)
+        if header_line:
+            idx = t3.splitlines().index(header_line[0])
+            rows_after = [l for l in t3.splitlines()[idx + 1:]
+                          if l.startswith("| ") and "---" not in l]
+            check("the empty table still has a body row", len(rows_after) > 0,
+                  "header with nothing under it")
+
+        # The default destination is unchanged: a caller that passes no path still
+        # writes the tracked deliverable. Only the tests opt out.
+        import inspect
+        default_doc = inspect.getsource(vi.write_comparison)
+        check("the default destination is still fix/comparison.md",
+              'ROOT / "fix" / "comparison.md"' in default_doc)
+
+        # The console renderer must survive it too.
+        vi.render(empty)
+        v_empty = vi.verdict(empty, is_mock=True, conflicts=[], paired=True, target=None)
+        check("the verdict survives an empty comparison",
+              "NOTHING TO VALIDATE" in v_empty.upper(), v_empty[-200:])
+        check("an empty comparison does not claim a regression or improvement",
+              "REAL REGRESSIONS" not in v_empty and "IMPROVED CATEGORIES" not in v_empty)
+        print("   placeholders: none; mock banner, sealed split, 70B gap, "
+              "and conflicts all present")
+        print(f"   all three documents written under {tmp.name}")
 
 
 # ============================================ 6. mock cannot be certified
@@ -525,6 +573,68 @@ def test_net_is_not_significance() -> None:
           f"improvement; net +6 with 0 -> p=0.0312 -> improvement")
 
 
+# ================================= 9. the suite leaves the repository alone
+def test_suite_writes_nothing_tracked() -> None:
+    """
+    The invariant, stated once:
+
+        this suite must not modify any tracked file outside its own temp dir.
+
+    It exists because `write_comparison` used to hardcode its destination at
+    fix/comparison.md. Three test call sites wrote mock data there, so every run
+    replaced the real comparison - before=100%, after=0%, an is_mock banner, empty
+    category tables - with a synthetic document, and the repo's premise is that
+    mock numbers must never reach a deliverable. The committed comparison.md was
+    itself the fixture's output, so the overwrite looked like a one-line timestamp
+    diff and went unnoticed.
+
+    Two things are asserted. The bytes are the direct statement of the invariant.
+    The AST check is what keeps it true: it fails on the *next* call site that
+    forgets the argument, rather than waiting for one of them to run.
+    """
+    section("9. The suite must not write outside its temp dir")
+    import ast
+
+    for path, before in SUITE_START_DIGESTS.items():
+        after = digest(path)
+        rel = path.relative_to(ROOT)
+        if before is None:
+            check(f"{rel} was absent before and is still absent", after is None,
+                  "the suite created a file that should not exist")
+        else:
+            check(f"{rel} is byte-identical to before the suite ran",
+                  after == before,
+                  f"{before[:12]} -> {(after or 'ABSENT')[:12]}")
+        check(f"{rel} still exists", path.exists(),
+              "the suite deleted a real artefact")
+
+    src = (ROOT / "fix" / "test_validation.py").read_text(encoding="utf-8")
+    tree = ast.parse(src)
+
+    def callee(node) -> str:
+        if isinstance(node, ast.Attribute):
+            return node.attr
+        return getattr(node, "id", "")
+
+    calls = [n for n in ast.walk(tree)
+             if isinstance(n, ast.Call) and callee(n.func) == "write_comparison"]
+    check("every write_comparison call site was found", len(calls) == 3,
+          f"found {len(calls)} call sites")
+    undirected = [n.lineno for n in calls if len(n.args) < 4 and not n.keywords]
+    check("no call site relies on the default destination", not undirected,
+          f"lines {undirected} write to fix/comparison.md")
+
+    # And the tracked document must be a real comparison, not the harness's
+    # self-test - which is what the mock file looked like.
+    doc = (ROOT / "fix" / "comparison.md").read_text(encoding="utf-8")
+    check("the tracked comparison.md carries no mock banner",
+          "not results" not in doc.lower() and "is_mock" not in doc,
+          "the deliverable is a mock self-test")
+    check("the tracked comparison.md has no placeholders", "XX.X" not in doc)
+    print(f"   {len(SUITE_START_DIGESTS)} tracked files unchanged; "
+          f"{len(calls)} write_comparison call sites all redirect")
+
+
 def main() -> int:
     print("=" * 70)
     print("  Phase 3.4 verification")
@@ -536,7 +646,8 @@ def main() -> int:
                test_comparison_has_no_placeholders,
                test_mock_is_not_certified,
                test_conditional,
-               test_net_is_not_significance):
+               test_net_is_not_significance,
+               test_suite_writes_nothing_tracked):
         try:
             fn()
         except Exception as e:
