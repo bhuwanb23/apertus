@@ -80,14 +80,27 @@ def git_hash() -> str:
 
 def git_dirty() -> bool:
     """Uncommitted changes. A dirty tree means the recorded hash does not
-    identify the code that produced anything."""
+    identify the code that produced anything.
+
+    The seal's OWN bookkeeping under eval/seal/ is excluded. Without this,
+    writing the freeze record makes the tree dirty by definition, so
+    check_freeze() would always report "dirty" immediately after a successful
+    freeze and the one-shot could never run. That is a self-reference bug, not
+    a safety feature: frozen_code.json is metadata ABOUT the freeze, not code
+    the freeze is meant to identify.
+    """
     try:
         out = subprocess.check_output(
             ["git", "status", "--porcelain"], cwd=ROOT,
-            stderr=subprocess.DEVNULL).decode().strip()
-        return bool(out)
+            stderr=subprocess.DEVNULL).decode()
     except Exception:
         return False
+    lines = [ln for ln in out.splitlines() if ln.strip()]
+    # Drop untracked seal bookkeeping, e.g. "?? eval/seal/frozen_code.json".
+    material = [ln for ln in lines if not (
+        ln.startswith("??") and ln[3:].strip().replace("\\", "/").startswith(
+            "eval/seal/"))]
+    return bool(material)
 
 
 HASH_SCHEME = "sha256/canonical-lf/v1"
