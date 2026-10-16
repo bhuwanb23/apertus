@@ -25,7 +25,7 @@ FIX = TRACK / "src" / "fixtures"
 STAGE = TRACK / "docs" / "hf_dataset"
 
 DATASET_CARD = """---
-license: apache-2.0
+license: cdla-permissive-2.0
 task_categories:
   - multiple-choice
   - question-answering
@@ -82,9 +82,11 @@ cd track_1b && make run
 
 ## Licensing
 
-- Project code: Apache-2.0
+- Dataset (compilation, metadata, annotations): CDLA-Permissive-2.0
+- Evaluation code: Apache-2.0
 - Official Swiss government source excerpts: public information
-- Alemannic Wikipedia dialect source text: CC BY-SA 4.0 (disclosed in metadata)
+- Alemannic Wikipedia dialect source text: CC BY-SA 4.0 (disclosed in metadata;
+  the CDLA-Permissive-2.0 grant above does not relicense it)
 """
 
 

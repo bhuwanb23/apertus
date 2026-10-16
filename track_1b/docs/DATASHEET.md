@@ -159,19 +159,22 @@ evaluated** (hardware scope: 8 GB VRAM).
 
 ### How will the dataset be distributed?
 Publicly via GitHub (`https://github.com/bhuwanb23/apertus`) and Hugging Face
-Datasets (`https://huggingface.co/datasets/bhuwanb23/apertus`) under the
-**MIT** license.
+Datasets (`https://huggingface.co/datasets/bhuwanb23/apertus`). The **dataset**
+— its compilation, metadata and annotations — is released under
+**CDLA-Permissive-2.0**; the **evaluation code** is Apache-2.0 (see `LICENSE`).
 
 ### When will the dataset be distributed?
 16 October 2026 (hackathon submission deadline).
 
 ### Will the dataset be distributed under a copyright or IP license?
-MIT — free to use, modify, and redistribute with attribution.
+CDLA-Permissive-2.0 for the dataset's compilation, metadata and annotations —
+free to use, modify, and redistribute. The evaluation code is Apache-2.0.
 
 ### Have any third parties imposed IP-based restrictions?
 Knowledge sources are official Swiss public information. Alemannic Wikipedia
-excerpts used for dialect items are CC BY-SA 4.0 — redistributors should
-respect that license for those text excerpts.
+excerpts used for dialect items are CC BY-SA 4.0. Those excerpts keep their own
+terms — the dataset's CDLA-Permissive-2.0 grant does not relicense them, and
+redistributors should respect them for that text.
 
 ---
 

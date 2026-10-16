@@ -439,7 +439,7 @@ def build():
         "• Dataset: <font face='Courier'>https://huggingface.co/datasets/bhuwanb23/apertus</font><br/>"
         "• Models: <font face='Courier'>https://huggingface.co/swiss-ai/Apertus-v1.5-8B</font> · "
         "<font face='Courier'>…/Apertus-v1.5-70B</font><br/>"
-        "• License (project): MIT · Datasheet: DATASHEET.md (Gebru et al. 2021)<br/>"
+        "• License: code Apache-2.0 · dataset CDLA-Permissive-2.0 · Datasheet: DATASHEET.md (Gebru et al. 2021)<br/>"
         "• Rebuild: <font face='Courier'>python scripts/prepare_submission_assets.py</font> · "
         "<font face='Courier'>python scripts/build_submission_pdf.py</font>",
         S["bullet"],
@@ -458,7 +458,8 @@ def build():
     story.append(side_by_side("fig3_dev_to_test.png", "fig_values_dialect.png", usable, max_h=62 * mm))
     story.append(Paragraph(
         "Figure H–I. Left: knowledge transfer. Right: values/dialect outcomes. "
-        f"Team: <b>{TEAM}</b>. Everything ships open under MIT.",
+        f"Team: <b>{TEAM}</b>. Everything ships open — code Apache-2.0, "
+        "dataset CDLA-Permissive-2.0.",
         S["caption"],
     ))
     story.append(Paragraph(

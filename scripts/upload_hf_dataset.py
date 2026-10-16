@@ -54,7 +54,7 @@ ASSET_GLOBS = [
 
 
 DATASET_CARD = """---
-license: mit
+license: cdla-permissive-2.0
 task_categories:
   - multiple-choice
   - question-answering
@@ -133,9 +133,13 @@ DATASHEET.md · LICENSE
 
 ## License
 
-MIT (see `LICENSE`). Alemannic Wikipedia excerpts in `sources/raw_pages/`
-that originate from als.wikipedia.org remain under **CC BY-SA 4.0**.
-Apertus model weights remain under their Apache-2.0 model licenses.
+- **Dataset** (compilation, metadata, annotations): **CDLA-Permissive-2.0**
+- **Evaluation code**: **Apache-2.0** (see `LICENSE`)
+- Alemannic Wikipedia excerpts in `sources/raw_pages/` that originate from
+  als.wikipedia.org remain under **CC BY-SA 4.0**; the CDLA-Permissive-2.0
+  grant above does not relicense them.
+- Official Swiss government source text is public information.
+- Apertus model weights remain under their Apache-2.0 model licenses.
 """
 
 
