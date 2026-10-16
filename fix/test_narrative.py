@@ -52,10 +52,97 @@ sys.path.insert(0, str(ROOT / "eval"))
 sys.path.insert(0, str(ROOT / "fix"))
 sys.path.insert(0, str(ROOT / "fix" / "rag"))
 
+# ============================================================== test sandbox
+#
+# This suite is the same failure class as eval/test_baseline_report.py, so it
+# uses the same fix: redirect, do not monkeypatch, and keep every write inside a
+# throwaway tree. eval/results/narrative/findings.md is a TRACKED artefact and
+# the authoritative findings document; write_findings() rewrites it wholesale,
+# with a fresh generation timestamp in the first line, so merely running this
+# suite used to leave the working tree dirty and to clobber the deliverable.
+#
+# The established pattern is eval/config.py's results_sandbox(), called at
+# module top before any import of a module that writes, plus an
+# _assert_in_sandbox() guard on every path about to be written and a
+# snapshot/snapshot_diff pair asserting the real tree is byte-identical
+# afterwards. results_sandbox() also derives the whole artefact tree at once -
+# results root, narrative/, charts/ and final_scores/ all move together,
+# because every write path in this project is built from config.results_dir.
+#
+# ONE EXTRA CONSTRAINT, and it is the reason this is not a copy-paste.
+#
+# config.results_dir is not only a write root; it is also a READ root, and the
+# readers are what make these assertions worth running. statistical_report binds
+# `TEST_RUN = config.results_dir / "test_run"` at import time and reads the
+# sealed measurement arms from it. Redirecting before it is imported would move
+# TEST_RUN into the empty sandbox, every arm would read as absent, and this file
+# would sail through its "no model has been evaluated" branch with a third of
+# its checks skipped. That is a weaker suite pretending to be an isolated one.
+#
+# So the order here is deliberate and must not be rearranged:
+#
+#   1. snapshot the REAL tree first, before anything project-side is imported;
+#   2. import statistical_report, binding its read paths to the real arms;
+#   3. enter results_sandbox(), which redirects every write path;
+#   4. narrative is imported later, inside the tests, so its module-level
+#      `NARRATIVE = config.results_dir / "narrative"` resolves into the sandbox.
+#
+# narrative is therefore never imported at module level in this file. That is
+# the whole mechanism, and reintroducing a top-level `import narrative` would
+# silently move the write back onto the tracked artefact.
+
+from config import (REAL_RESULTS_DIR, digest_file, results_sandbox,  # noqa: E402
+                     snapshot_diff, snapshot_results_tree)
+
+# Taken before any project import, so it covers import-time side effects too -
+# strictly stronger than the snapshot results_sandbox() takes for itself, which
+# happens one step later.
+SUITE_START_DIGESTS = snapshot_results_tree()
+
+
+def _stamp(path: Path):
+    """(mtime_ns, size, sha256) of a file, or None if it is absent."""
+    p = Path(path)
+    if not p.is_file():
+        return None
+    st = p.stat()
+    return (st.st_mtime_ns, st.st_size, digest_file(p))
+
+
+# The artefact this suite exists to stop overwriting, recorded before the
+# redirect and before any test body runs.
+TRACKED_FINDINGS = REAL_RESULTS_DIR / "narrative" / "findings.md"
+TRACKED_CHARTS = REAL_RESULTS_DIR / "charts"
+FINDINGS_STAMP_BEFORE = _stamp(TRACKED_FINDINGS)
+
+# Reader, imported BEFORE the redirect - see the note above.
+import statistical_report  # noqa: E402
+
+# Writer, imported AFTER it. The redirect unwinds and the temp tree is removed at
+# interpreter exit, so nothing survives the process.
+SUITE_RESULTS, _SUITE_SANDBOX_DIGESTS = results_sandbox("narrative_")
+
 CHECKS = 0
 FAILURES: list[str] = []
 
 import seal as seal_mod  # noqa: E402  (needs the sys.path inserts above)
+
+
+def _assert_in_sandbox(path: Path) -> None:
+    """
+    Refuse to proceed if `path` is not inside this suite's temp tree.
+
+    The belt to the braces that results_sandbox() provides. If a future change
+    reorders the imports above, or narrative grows a second write path that is
+    not derived from config.results_dir, this fails loudly at the write instead
+    of quietly eating a tracked artefact again.
+    """
+    try:
+        Path(path).resolve().relative_to(SUITE_RESULTS.resolve())
+    except ValueError:
+        raise AssertionError(
+            f"refusing to touch {path}: it is outside the suite sandbox "
+            f"{SUITE_RESULTS}. This suite must never write to eval/results.")
 
 
 def check(label: str, condition: bool, detail: str = "") -> None:
@@ -70,8 +157,29 @@ def section(name: str) -> None:
 
 
 def build():
+    """
+    Generate the findings document, and prove it lands in the sandbox.
+
+    write_findings() overwrites the whole file and returns its path, so this is
+    the only place in the suite where a tracked artefact could be destroyed. The
+    path is checked against the sandbox before the content is read back, and the
+    document itself is checked too - a generator that started writing its chart
+    or final_scores siblings outside the sandbox would be caught by the tree
+    snapshot in test_real_results_untouched, and this guard names the offender
+    immediately instead.
+    """
     import narrative
-    return narrative.write_findings()
+    from config import config
+
+    # Every path this call can receive a write on.
+    _assert_in_sandbox(config.results_dir)
+    _assert_in_sandbox(config.results_dir / "charts")
+    _assert_in_sandbox(config.results_dir / "final_scores")
+    _assert_in_sandbox(narrative.NARRATIVE)
+
+    path, scen, have = narrative.write_findings()
+    _assert_in_sandbox(path)
+    return path, scen, have
 
 
 # ================================= 1. no placeholder, source or output
@@ -660,9 +768,105 @@ def test_two_audiences() -> None:
           f"{unexplained or 'none undefined'}")
 
 
+# ============================ 9. the suite never touches the real results
+def test_real_results_untouched() -> None:
+    """
+    The invariant this file exists to protect, asserted on itself.
+
+    Run as a suite, build() regenerates eval/results/narrative/findings.md seven
+    times. That file is tracked, it is the document a jury reads, and it is the
+    only artefact in the repo the narrative can rewrite on demand - so the damage
+    was invisible from inside the suite, which only ever checked its own output.
+    Every other check in this file passed while the deliverable was being
+    overwritten.
+
+    Three independent statements of "nothing outside the sandbox moved":
+
+      * the whole real tree, sha256 per file, snapshotted before any
+        project-side import and compared now. This is the strong one: it also
+        catches a deleted or created file, which a stat comparison cannot.
+      * mtime + size + sha256 of findings.md specifically, which is the direct
+        form the requirement is stated in and which fails with a readable
+        message rather than a digest prefix.
+      * the sandbox is genuinely somewhere else, and the readers were NOT
+        dragged into it - statistical_report.TEST_RUN must still point at the
+        real sealed arms, or this suite would have been quietly weakened by its
+        own sandbox.
+    """
+    import narrative
+    from config import config
+
+    section("9. The real results tree is untouched")
+
+    problems = snapshot_diff(SUITE_START_DIGESTS, snapshot_results_tree())
+    check("the real results tree is byte-identical after the suite ran",
+          problems == [], "; ".join(problems[:5]))
+
+    stamp_after = _stamp(TRACKED_FINDINGS)
+    check("the tracked findings.md mtime and size are unchanged",
+          (stamp_after is None) == (FINDINGS_STAMP_BEFORE is None)
+          and (stamp_after is None
+               or stamp_after[:2] == FINDINGS_STAMP_BEFORE[:2]),
+          f"{FINDINGS_STAMP_BEFORE!r} -> {stamp_after!r}")
+    check("the tracked findings.md content is unchanged",
+          (stamp_after is None) == (FINDINGS_STAMP_BEFORE is None)
+          and (stamp_after is None
+               or stamp_after[2] == FINDINGS_STAMP_BEFORE[2]),
+          "sha256 differs: findings.md was rewritten by the suite")
+
+    # The sandbox is somewhere else, and everything that writes goes there.
+    check("the sandbox is outside the real results tree",
+          not SUITE_RESULTS.is_relative_to(REAL_RESULTS_DIR)
+          and not REAL_RESULTS_DIR.is_relative_to(SUITE_RESULTS), True)
+    check("the sandbox is outside eval/ entirely",
+          not SUITE_RESULTS.is_relative_to(ROOT / "eval"), True)
+    check("results_dir points into the sandbox",
+          config.results_dir.is_relative_to(SUITE_RESULTS),
+          str(config.results_dir))
+    check("the narrative output directory points into the sandbox",
+          narrative.NARRATIVE.is_relative_to(SUITE_RESULTS),
+          str(narrative.NARRATIVE))
+
+    # ...and everything that reads did not follow it. This is what keeps the
+    # assertions above load-bearing: if the sealed arms had been hidden by the
+    # redirect, roughly a third of this file would have taken its "no model
+    # data" branch and passed vacuously.
+    check("the readers still see the real sealed arms",
+          statistical_report.TEST_RUN == REAL_RESULTS_DIR / "test_run",
+          f"TEST_RUN is {statistical_report.TEST_RUN}; if this is inside the "
+          f"sandbox the measured-arm checks are no longer being exercised")
+    check("the measured dialect arm is still readable",
+          (REAL_RESULTS_DIR / "test_run" / "dialect_8b_baseline.json").is_file())
+    check("the chart artefacts are readable and untouched",
+          all(_stamp(p) is not None
+              and _stamp(p)[2] == SUITE_START_DIGESTS.get(p)
+              for p in (TRACKED_CHARTS.glob("*.svg")
+                        if TRACKED_CHARTS.is_dir() else [])))
+
+    # check() only tallies; it does not raise, so under pytest a violation here
+    # would leave a green run and an empty report. These four are the invariants
+    # the suite exists for, so they are asserted outright as well - which makes
+    # `python -m pytest fix/test_narrative.py` a real gate and not a smoke test.
+    assert problems == [], f"the suite modified the real results tree: {problems}"
+    assert FINDINGS_STAMP_BEFORE == stamp_after, (
+        f"the suite rewrote the tracked artefact {TRACKED_FINDINGS}: "
+        f"{FINDINGS_STAMP_BEFORE!r} -> {stamp_after!r}")
+    assert config.results_dir.is_relative_to(SUITE_RESULTS), config.results_dir
+    assert narrative.NARRATIVE.is_relative_to(SUITE_RESULTS), narrative.NARRATIVE
+    assert statistical_report.TEST_RUN == REAL_RESULTS_DIR / "test_run", (
+        f"TEST_RUN is {statistical_report.TEST_RUN}; if the sandbox swallowed "
+        f"the sealed arms, the measured-arm checks above were not exercised")
+
+    print(f"   {len(SUITE_START_DIGESTS)} tracked files under "
+          f"{REAL_RESULTS_DIR} verified unchanged; findings.md "
+          f"{'still present' if FINDINGS_STAMP_BEFORE else 'was already absent'}")
+
+
 def main() -> int:
     print("=" * 72)
     print("  Phase 4.4 verification")
+    print(f"  sandbox    : {SUITE_RESULTS}")
+    print(f"  real tree  : {REAL_RESULTS_DIR} (must stay byte-identical)")
     print("=" * 72)
     for fn in (test_no_placeholders_anywhere,
                test_no_unmeasured_claims,
@@ -671,7 +875,8 @@ def main() -> int:
                test_scenario_from_data,
                test_numbers_traceable,
                test_dialect_provenance,
-               test_two_audiences):
+               test_two_audiences,
+               test_real_results_untouched):
         try:
             fn()
         except Exception as e:

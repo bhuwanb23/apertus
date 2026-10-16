@@ -170,9 +170,12 @@ def stage() -> Path:
     # compact licenses note
     (meta_dir / "LICENSING.md").write_text(
         "# Licensing notes\n\n"
+        "- Dataset (compilation, metadata, annotations): CDLA-Permissive-2.0\n"
         "- Evaluation code in the GitHub repo: Apache-2.0\n"
         "- Official Swiss government pages: public information\n"
         "- Alemannic Wikipedia excerpts used for dialect items: CC BY-SA 4.0\n"
+        "  (those excerpts keep their own terms; the dataset grant above does not\n"
+        "  relicense them)\n"
         "- No personal data; dialect items carry validated_by: null\n",
         encoding="utf-8",
     )
