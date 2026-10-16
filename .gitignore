@@ -133,3 +133,4 @@ eval/seal/access.log.preflight-incident
 models/
 hf_dataset/
 brag-output/
+logs/
