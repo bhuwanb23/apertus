@@ -1,2 +1,0 @@
-2026-10-16 11:03:05,485 [INFO] REQ #1 8b | model=apertus-v1.5-8b-text-q4_k_m temp=0.0 top_p=1.0 seed=42 max_tokens=5
-2026-10-16 11:03:05,575 [INFO] RES #1 8b | ok | 5 completion tokens | finish=length | 'The user wants'

@@ -1,3 +1,0 @@
-# Minimal deps for offline `make run` (stdlib only for verify).
-# Kept for Docker image future-proofing / optional tooling.
-python-dotenv>=1.0.0
