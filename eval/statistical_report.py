@@ -398,9 +398,32 @@ def compute(models=MODELS, n_expected: int = 36) -> dict:
             "overall_n36": detectable(n_expected),
             "per_category_n6": detectable(n_expected // 6),
         },
-        "judge_model": config.judge_model,
-        "self_judged": config.judge_model in models,
+        "judge_model": _judge_used(),
+        "self_judged": _judge_used() in models,
     }
+
+
+def _judge_used() -> str:
+    """Which model actually judged the values arm.
+
+    NOT config.judge_model. That is the configured default (70B), which is out
+    of scope here and was never used - the one-shot pins the judge to the model
+    under test. Reading the config made the report print "judge = 70b" beside a
+    set of scores judged by 8B, and print "SELF-JUDGED" only by accident of the
+    default landing outside the scope list. The run_metadata written by
+    run_test_final.py records the judge that actually ran, so that is the
+    source of truth; the config default is only a fallback for a report built
+    without a one-shot run.
+    """
+    meta = TEST_RUN / "run_metadata.json"
+    if meta.exists():
+        try:
+            recorded = json.loads(meta.read_text(encoding="utf-8")).get("judge_model")
+            if recorded:
+                return recorded
+        except (json.JSONDecodeError, OSError):
+            pass
+    return config.judge_model
 
 
 def crosscheck_agreement() -> dict:
