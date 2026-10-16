@@ -30,6 +30,12 @@ authoritative voice available to it, in the place where people stop checking.
      part of the evidence that a reader cannot reproduce.
   7. IT IS BOTH CREDIBLE AND READABLE - the two audience checks the plan asks
      for, made mechanical rather than a matter of opinion.
+  8. THE DIALECT FIGURE IS THE MEASURED ONE, OR IT IS NOT PRINTED. A mock arm
+     and a sealed arm are both percentages, and only one of them is a finding.
+     The reader refuses a mock source, and the numbers in the document are
+     cross-checked against the artefact rather than against themselves - which
+     is how a 6-item mock self-test came to be published as the dialect result
+     while the technical report said 50%.
 
 Run:  python fix/test_narrative.py
 Exit: 0 = pass, 1 = failure
@@ -504,6 +510,87 @@ def test_numbers_traceable() -> None:
     print("   recall, power floor, intervals, commit and seal all cross-checked")
 
 
+# ============== 8. the dialect figure is the measured one, or it is not printed
+def test_dialect_provenance() -> None:
+    section("8. The dialect figure is the measured run, or it is not printed")
+    import json
+    import tempfile
+
+    import narrative
+    import statistical_report as sr
+
+    path, _scen, _have = build()
+    text = path.read_text(encoding="utf-8")
+
+    # (a) Read the artefact INDEPENDENTLY of the generator - straight off disk -
+    # and require the document to agree with it. The earlier check read the
+    # dialect numbers back out of dialect_state() and then looked for those same
+    # numbers in the document, which compares the generator against itself. It
+    # passed for as long as the generator was wrong, while findings.md published
+    # a mock self-test ("6 of 6 items scored ... refused 0 of them") as the
+    # dialect finding and the technical report said 50%. A check whose expected
+    # value comes from the code under test cannot fail, so this one does not.
+    arm = ROOT / "eval" / "results" / "test_run" / "dialect_8b_baseline.json"
+    if arm.exists():
+        payload = json.loads(arm.read_text(encoding="utf-8"))
+        nums = payload["scores"]["scores"]
+        run = payload["scores"]["run"]
+        check("the measured dialect arm is not a mock",
+              not payload.get("is_mock") and not run.get("is_mock"),
+              "the sealed arms are http-backed; a mock file here is a false "
+              "fixture and every check below would bless it")
+        for label, frag in (
+                ("item count", f"{nums['n_scored']} of {nums['n_items']} "
+                               f"items scored"),
+                ("refusal count", f"refused {nums['n_refused']} of them"),
+                ("refusal rate", f"{nums['refusal_rate']}%"),
+                ("MCQ denominator", f"the {nums['mcq_n']}")):
+            check(f"the document reports the measured dialect {label}",
+                  frag in text,
+                  f"the artefact says '{frag}'; the document must not report a "
+                  f"different run")
+        check("the document does not report the mock dialect arm",
+              "6 of 6 items scored" not in text,
+              "6 of 6 is the 6-item mock self-test, not the 30-item sealed arm")
+    else:
+        check("no measured dialect arm - the document states no dialect figure",
+              "**Dialect.** Not reported" in text,
+              "without the arm the document must say so rather than print a "
+              "dev-set number")
+
+    # (b) A mock dialect arm must be REFUSED, not rendered. Build one and point
+    # the shared reader at it. There was no mock check here at all, which is how
+    # the mock figure reached a tracked file - and eval/README.md is explicit
+    # that a mock run "never produces a publishable number".
+    with tempfile.TemporaryDirectory() as td:
+        (Path(td) / "dialect_8b_baseline.json").write_text(json.dumps({
+            "task": "dialect", "model": "8b", "method": "baseline",
+            "backend": "mock", "is_mock": True,
+            "scores": {"run": {"is_mock": True, "backend": "mock",
+                               "n_items": 6, "model_id": "mock"},
+                       "scores": {"n_items": 6, "n_scored": 6,
+                                  "refusal_rate": 0.0, "n_refused": 0,
+                                  "mcq_accuracy": None, "mcq_n": 0,
+                                  "t1_mean": 0.0, "t1_n": 6}},
+            "results": [],
+        }), encoding="utf-8")
+        old = sr.TEST_RUN
+        sr.TEST_RUN = Path(td)
+        try:
+            state = narrative.dialect_state()
+        finally:
+            sr.TEST_RUN = old
+
+    check("a mock dialect arm is refused, not rendered",
+          state.get("present") is False and state.get("mock") is True,
+          f"dialect_state() returned {state}; a mock arm is a self-test, and "
+          f"reporting one as a finding is the defect this section exists for")
+    check("the refusal says why",
+          "mock" in (state.get("reason") or "").lower(), state.get("reason", ""))
+    print("   dialect figures cross-checked against the artefact, not the "
+          "generator")
+
+
 # ================================ 7. credible to experts, readable to laypeople
 def test_two_audiences() -> None:
     section("7. The two audience checks, made mechanical")
@@ -583,6 +670,7 @@ def main() -> int:
                test_figures_traceable,
                test_scenario_from_data,
                test_numbers_traceable,
+               test_dialect_provenance,
                test_two_audiences):
         try:
             fn()

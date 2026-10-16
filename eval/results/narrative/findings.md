@@ -1,6 +1,6 @@
 # Key Findings — Swiss Reality Check
 
-*Generated 2026-10-16T08:31:09+00:00 by `eval/narrative.py` from measured data · git `436ba260830a`*
+*Generated 2026-10-16T10:09:02+00:00 by `eval/narrative.py` from measured data · git `335ee05d868d`*
 
 > **Read this first.** Every number below was computed by the code in this repository
 > and is traceable to a run. There are no placeholders, and no claim appears that
@@ -9,7 +9,7 @@
 
 > ## Model data — every accuracy figure below is from a live run
 >
-> The sealed test set was opened **26 times** according to the append-only log - 9 of the baseline arm and 17 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Latest arm: 2026-10-16T03:35:15+00:00, backend `http`, `is_mock: false`.
+> The sealed test set was opened **27 times** according to the append-only log - 9 of the baseline arm and 18 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Latest arm: 2026-10-16T03:35:15+00:00, backend `http`, `is_mock: false`.
 > Arms scored: `8b`. Accuracy, deltas and intervals
 > come from `eval/statistical_report.py`; the per-item rows are in `eval/results/test_run/`.
 > The findings that hold *without* a model are in §3.1–§3.4, and they do not depend on this run.
@@ -48,7 +48,7 @@ Two properties matter more than the counts:
   plausible-sounding invention. That is what makes an error diagnosable rather
   than merely wrong.
 - **The split is stratified and sealed.** 84 dev / 36 test, split on `(category, difficulty)`
-  with a fixed seed. The sealed test set was opened **26 times** according to the append-only log - 9 of the baseline arm and 17 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Every individual access is listed by `python eval/seal.py audit`.
+  with a fixed seed. The sealed test set was opened **27 times** according to the append-only log - 9 of the baseline arm and 18 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Every individual access is listed by `python eval/seal.py audit`.
 
 ## Act 3 — What was actually found
 
@@ -139,7 +139,7 @@ the only detectable result.
 The `8b` values arm is **self-judged** — the judge and the model under test are the same weights. Disclosed per
 `values_rubric.md` §5.
 
-**Dialect.** 6 of 6 items scored. The model **refused 0 of them** (0.0%), and answered not measured of the 0
+**Dialect.** 30 of 30 items scored. The model **refused 15 of them** (50.0%), and answered 50.0% of the 18
 multiple-choice dialect items correctly. Refusal is not a wrong answer, but it is not a
 right one either, and it is reported here rather than dropped.
 
@@ -202,7 +202,7 @@ to any small-n evaluation, in any language, for any model.
 
 ## Limitations
 
-1. **One model, one benchmark, one shot that was not one shot.** The sealed test set was opened **26 times** according to the append-only log - 9 of the baseline arm and 17 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full.
+1. **One model, one benchmark, one shot that was not one shot.** The sealed test set was opened **27 times** according to the append-only log - 9 of the baseline arm and 18 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full.
    Scored for Apertus 1.5 8B. Nothing here separates a
    Swiss-specific effect from a general small-model effect, and nothing here would survive a
    second look at the same items.
@@ -230,7 +230,7 @@ to any small-n evaluation, in any language, for any model.
 
 ## Reproducibility
 
-- Git commit `436ba260830af773434675282a2cc897f15d13c9`
+- Git commit `335ee05d868d3c1ee9cc3c77c8141a3e53a23cb5`
 - Sealed test set SHA-256 `df819e8c1582902a23197ed2aa4ab2e9…` (recorded in `eval/seal/`)
 - Seed 42 · temperature 0.0 · prompt version 1.0 · judge `8b`
 - Every access to the sealed test set is in an append-only log: `python eval/seal.py audit`

@@ -93,7 +93,7 @@ import seal                                          # noqa: E402
 from config import config                            # noqa: E402
 from select_target import mcnemar_exact              # noqa: E402
 from statistical_report import (MODELS, compute, crosscheck_agreement,  # noqa: E402
-                                detectable, wilson_ci)
+                                detectable, load_arm, wilson_ci)
 
 NARRATIVE = config.results_dir / "narrative"
 MODEL_LABEL = {"8b": "Apertus 1.5 8B", "70b": "Apertus 1.5 70B"}
@@ -219,25 +219,60 @@ def knowledge_state(stats: dict) -> bool:
 
 def dialect_state(model: str = "8b") -> dict:
     """
-    The dialect arm, read from the scorer's own output.
+    The dialect arm, read from the run that was measured under seal.
 
     The third part of the benchmark ran too. Its numbers belong in the findings
     document whether or not they are flattering - a 50% refusal rate is a
     finding, and a findings document that quietly drops the arm it did not like
     is not reporting.
+
+    Three things this reader must not do, all of which it did:
+
+    1. Read `results/scores/dialect_{model}.json`. That is the Phase 2.4 *dev*
+       pilot, and the copy left on disk after Phase 4.1 is a 6-item mock
+       self-test. Reading it published "6 of 6 items scored ... refused 0 of
+       them" into a tracked findings document, while the technical report said
+       50% - two figures from one project, on one arm, contradicting each other,
+       with the wrong one in the more quotable document. The measured run is
+       `results/test_run/dialect_{model}_baseline.json`, 30 items.
+    2. Accept a mock source. Every other reader in this project refuses one;
+       this one had no check at all, which is how the mock figure reached a
+       published file. `eval/README.md`: a mock run "never produces a
+       publishable number" - and that is not a style preference, it is the
+       difference between measuring Apertus and measuring the harness.
+    3. Assume the flat shape. The scorer nests its numbers at `scores.scores`
+       with metadata at `scores.run`, so a flat key lookup against the measured
+       artefact returns nothing, which renders as the literal prose "answered
+       not measured of the 0".
+
+    Reading it through `statistical_report.load_arm` rather than by hand is the
+    part that matters: the report and the narrative then cannot disagree about
+    which file is the measurement, because there is one reader.
     """
-    path = config.results_dir / "scores" / f"dialect_{model}.json"
-    if not path.exists():
-        return {"present": False}
-    payload = json.loads(path.read_text(encoding="utf-8"))
-    s = payload.get("scores", {})
+    _rows, meta = load_arm("dialect", model, "baseline")
+    if not meta.get("present"):
+        return {"present": False,
+                "reason": f"no measured dialect arm ({meta.get('expected', model)})"}
+
+    s = meta.get("scores") if isinstance(meta.get("scores"), dict) else {}
+    run = s.get("run") if isinstance(s.get("run"), dict) else {}
+    nums = s.get("scores") if isinstance(s.get("scores"), dict) else s
+
+    if (meta.get("is_mock") or run.get("is_mock")
+            or meta.get("backend") == "mock" or run.get("backend") == "mock"):
+        return {"present": False, "mock": True,
+                "reason": (f"the dialect arm ({meta.get('expected', model)}) is a "
+                           f"mock self-test: a mock arm is not a result")}
+
     return {
-        "present": True, "n_items": s.get("n_items"), "n_scored": s.get("n_scored"),
-        "refusal_rate": s.get("refusal_rate"), "n_refused": s.get("n_refused"),
-        "answered_in_dialect": s.get("answered_in_swiss_german"),
-        "mcq_accuracy": s.get("mcq_accuracy"), "mcq_n": s.get("mcq_n"),
-        "t1_mean": s.get("t1_mean"), "t1_n": s.get("t1_n"),
-        "is_mock": s.get("is_mock"),
+        "present": True, "n_items": nums.get("n_items"),
+        "n_scored": nums.get("n_scored"),
+        "refusal_rate": nums.get("refusal_rate"),
+        "n_refused": nums.get("n_refused"),
+        "answered_in_dialect": nums.get("answered_in_swiss_german"),
+        "mcq_accuracy": nums.get("mcq_accuracy"), "mcq_n": nums.get("mcq_n"),
+        "t1_mean": nums.get("t1_mean"), "t1_n": nums.get("t1_n"),
+        "is_mock": False,
     }
 
 
@@ -722,6 +757,17 @@ def write_findings(stats: dict | None = None) -> Path:
             A(f"multiple-choice dialect items correctly. Refusal is not a wrong "
               f"answer, but it is not a")
             A("right one either, and it is reported here rather than dropped.")
+            A("")
+        else:
+            # The arm is absent, or present only as a mock self-test. Neither is
+            # a measurement, and this paragraph used to print a mock one as
+            # though it were. Stated in words, with no figure to be quoted out
+            # of context.
+            A(f"**Dialect.** Not reported. {d['reason'].capitalize()} — so this "
+              "document carries no dialect figure for the sealed arms, rather "
+              "than a number lifted from a different run. Refusal is not a "
+              "wrong answer, but it is not a right one either, and a mock "
+              "figure is not a measurement.")
             A("")
         A("The full tables, including the per-category breakdown that is "
           "reported side by")
