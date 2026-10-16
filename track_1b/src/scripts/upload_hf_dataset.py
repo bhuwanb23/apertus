@@ -1,60 +1,31 @@
 #!/usr/bin/env python3
-"""Stage and upload the Swiss Reality Check dataset to Hugging Face.
+"""Stage and upload Swiss Reality Check dataset in Hack Apertus 1B shape.
+
+Required components:
+  evaluation/       — test cases
+  model_responses/  — model outputs per case
+  metadata/         — provenance / licenses / splits
 
 Usage:
-  python scripts/upload_hf_dataset.py --repo bhuwanb23/apertus
-  python scripts/upload_hf_dataset.py --repo bhuwanb23/apertus --stage-only
+  python src/scripts/upload_hf_dataset.py --repo bhuwanb23/apertus
 """
 from __future__ import annotations
 
 import argparse
+import json
 import shutil
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-STAGE = ROOT / "docs" / "submission" / "hf_dataset"
-
-COPY_FILES = [
-    # knowledge
-    ("data/knowledge/knowledge_all.json", "knowledge/knowledge_all.json"),
-    ("data/knowledge/knowledge_dev.json", "knowledge/knowledge_dev.json"),
-    ("data/knowledge/knowledge_test.json", "knowledge/knowledge_test.json"),
-    ("data/knowledge/knowledge_stats.md", "knowledge/knowledge_stats.md"),
-    ("data/knowledge/MCQ_AUTHORING_SPEC.md", "knowledge/MCQ_AUTHORING_SPEC.md"),
-    # values
-    ("data/values/values_scenarios.json", "values/values_scenarios.json"),
-    ("data/values/values_multilingual_pairs.json", "values/values_multilingual_pairs.json"),
-    ("data/values/values_rubric.md", "values/values_rubric.md"),
-    ("data/values/values_stats.md", "values/values_stats.md"),
-    ("data/values/multilingual_scoring_protocol.md", "values/multilingual_scoring_protocol.md"),
-    # dialect
-    ("data/dialect/dialect_items.json", "dialect/dialect_items.json"),
-    ("data/dialect/dialect_scoring_protocol.md", "dialect/dialect_scoring_protocol.md"),
-    ("data/dialect/dialect_stats.md", "dialect/dialect_stats.md"),
-    ("data/dialect/dialect_pilot_note.md", "dialect/dialect_pilot_note.md"),
-    ("data/dialect/VALIDATION_PACKET_FILLED.md", "dialect/VALIDATION_PACKET_FILLED.md"),
-    # sources
-    ("data/sources/source_registry.csv", "sources/source_registry.csv"),
-    ("data/sources/README.md", "sources/README.md"),
-    # docs / license / results summary
-    ("DATASHEET.md", "DATASHEET.md"),
-    ("LICENSE", "LICENSE"),
-    ("eval/results/final_scores/statistical_report.md", "results/statistical_report.md"),
-    ("eval/results/final_scores/test_scores.json", "results/test_scores.json"),
-]
-
-COPY_TREE = [
-    ("data/sources/raw_pages", "sources/raw_pages"),
-]
-
-ASSET_GLOBS = [
-    ("docs/submission/assets/*.png", "charts"),
-]
-
+TRACK = Path(__file__).resolve().parents[2]  # track_1b/
+REPO = TRACK.parent
+# Prefer repo-root data/ if still present; else fixtures evaluation copies
+DATA = REPO / "data"
+FIX = TRACK / "src" / "fixtures"
+STAGE = TRACK / "docs" / "hf_dataset"
 
 DATASET_CARD = """---
-license: mit
+license: apache-2.0
 task_categories:
   - multiple-choice
   - question-answering
@@ -68,75 +39,66 @@ language:
   - rm
 tags:
   - switzerland
-  - swiss
   - apertus
-  - benchmark
-  - rag
-  - dialect
-  - cultural-values
   - hackapertus
   - track-1b
   - swiss-voices
+  - benchmark
+  - rag
 pretty_name: Swiss Reality Check
 size_categories:
   - n<1K
 ---
 
-# Swiss Reality Check
+# Swiss Reality Check (Hack Apertus Track 1B)
 
-**Hack Apertus · Online Phase (1–16 Oct 2026)**  
-**Track 1 — Apertus Readiness · Challenge 1B: Swiss Voices**  
-*Localising Apertus to Swiss Languages, Knowledge and Values*
+**Team:** Swiss Reality Check — Bhuwan B · Padmanaban G · Avinash A  
+**Track:** 1B Swiss Voices — Core Task Intelligence (+ values / dialect)  
+**Code:** https://github.com/bhuwanb23/apertus/tree/main/track_1b
 
-| | |
+## Components (Hack Apertus schema)
+
+| Folder | Contents |
 |---|---|
-| **Team** | Swiss Reality Check · Bhuwan B · Padmanaban G · Avinash A |
-| **Problem statement** | Evaluate how well Apertus handles Swiss reality: transcribe local dialects, test domain-specific Swiss knowledge, and assess whether responses respect Swiss cultural norms and values. |
-| **Models** | [`swiss-ai/Apertus-v1.5-8B`](https://huggingface.co/swiss-ai/Apertus-v1.5-8B) (measured) · [`swiss-ai/Apertus-v1.5-70B`](https://huggingface.co/swiss-ai/Apertus-v1.5-70B) (designed for; **not run**) |
-| **Code** | https://github.com/bhuwanb23/apertus |
-| **Jury PDF** | `swiss_reality_check_report.pdf` (≤6 pages) |
+| `evaluation/` | Knowledge / values / dialect test cases |
+| `model_responses/` | Apertus 1.5 8B sealed-test responses (baseline + RAG + values + dialect) |
+| `metadata/` | Source registry, datasheet, published claims, run metadata |
 
-Open benchmark for **Swiss knowledge**, **cultural values / framing**, and
-**Alemannic (Swiss German) dialect**.
-
-- **120** knowledge MCQs (84 development / 36 sealed test)
-- **30** values scenarios + multilingual renderings
-- **30** dialect items (unvalidated — `validated_by: null`)
-- **100** source pages (registry + raw excerpts) for RAG
-
-## Measured result (not training labels)
-
-Sealed knowledge test, **Apertus 1.5 8B** (Q4_K_M, llama.cpp, T=0):
+## Headline result (sealed knowledge, n=36, 8B)
 
 | Arm | Accuracy |
 |---|---|
 | Baseline | 55.6% (20/36) |
 | BM25 RAG (`top_k=3`) | 86.1% (31/36) |
 
-Paired Δ **+30.6 pp**, McNemar p=0.001. Dev transfer: 48.8% → 83.3%.
+Paired Δ **+30.6 pp**, McNemar 11↑/0↓, p≈0.001.  
+**Apertus 70B was not evaluated** (8 GB VRAM).
 
-**Apertus 70B was not evaluated** (8 GB VRAM). Do not treat missing 70B
-numbers as implied scores.
+## Reproduce
 
-## Files
-
-```
-knowledge/   JSON MCQs + stats
-values/      scenarios, rubric, multilingual pairs
-dialect/     items + scoring protocol
-sources/     registry.csv + raw_pages/
-charts/      PNG figures for the jury report
-results/     sealed-test statistical report
-swiss_reality_check_report.pdf
-DATASHEET.md · LICENSE
+```bash
+cd track_1b && make run
 ```
 
-## License
+## Licensing
 
-MIT (see `LICENSE`). Alemannic Wikipedia excerpts in `sources/raw_pages/`
-that originate from als.wikipedia.org remain under **CC BY-SA 4.0**.
-Apertus model weights remain under their Apache-2.0 model licenses.
+- Project code: Apache-2.0
+- Official Swiss government source excerpts: public information
+- Alemannic Wikipedia dialect source text: CC BY-SA 4.0 (disclosed in metadata)
 """
+
+
+def _copy(src: Path, dst: Path) -> None:
+    if not src.exists():
+        print(f"WARNING: missing {src}", file=sys.stderr)
+        return
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    if src.is_dir():
+        if dst.exists():
+            shutil.rmtree(dst)
+        shutil.copytree(src, dst)
+    else:
+        shutil.copy2(src, dst)
 
 
 def stage() -> Path:
@@ -144,60 +106,92 @@ def stage() -> Path:
         shutil.rmtree(STAGE)
     STAGE.mkdir(parents=True)
 
-    missing = []
-    for src_rel, dst_rel in COPY_FILES:
-        src = ROOT / src_rel
-        if not src.exists():
-            missing.append(src_rel)
-            continue
-        dst = STAGE / dst_rel
-        dst.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(src, dst)
+    eval_dir = STAGE / "evaluation"
+    resp_dir = STAGE / "model_responses"
+    meta_dir = STAGE / "metadata"
+    for d in (eval_dir, resp_dir, meta_dir):
+        d.mkdir(parents=True)
 
-    for src_rel, dst_rel in COPY_TREE:
-        src = ROOT / src_rel
-        if not src.exists():
-            missing.append(src_rel)
-            continue
-        dst = STAGE / dst_rel
-        shutil.copytree(src, dst)
+    # --- evaluation ---
+    knowledge_src = DATA / "knowledge" if (DATA / "knowledge").exists() else FIX / "evaluation"
+    # fixtures may hold flat copies
+    for name in ("knowledge_all.json", "knowledge_dev.json", "knowledge_test.json"):
+        candidates = [
+            DATA / "knowledge" / name,
+            FIX / "evaluation" / name,
+            FIX / name,
+        ]
+        for c in candidates:
+            if c.exists():
+                _copy(c, eval_dir / "knowledge" / name)
+                break
+    for name in ("values_scenarios.json", "values_multilingual_pairs.json", "values_rubric.md"):
+        c = DATA / "values" / name
+        if c.exists():
+            _copy(c, eval_dir / "values" / name)
+        elif (FIX / name).exists():
+            _copy(FIX / name, eval_dir / "values" / name)
+    for name in ("dialect_items.json", "dialect_scoring_protocol.md"):
+        c = DATA / "dialect" / name
+        if c.exists():
+            _copy(c, eval_dir / "dialect" / name)
+        elif (FIX / name).exists():
+            _copy(FIX / name, eval_dir / "dialect" / name)
 
-    charts_dst = STAGE / "charts"
-    charts_dst.mkdir(parents=True, exist_ok=True)
-    assets = ROOT / "docs" / "submission" / "assets"
-    if assets.exists():
-        for png in assets.glob("*.png"):
-            shutil.copy2(png, charts_dst / png.name)
+    # --- model responses ---
+    for name in (
+        "knowledge_8b_baseline.json",
+        "knowledge_8b_improved.json",
+        "values_8b_baseline.json",
+        "dialect_8b_baseline.json",
+    ):
+        _copy(FIX / name, resp_dir / name)
 
-    pdf = ROOT / "docs" / "submission" / "swiss_reality_check_report.pdf"
-    if pdf.exists():
-        shutil.copy2(pdf, STAGE / "swiss_reality_check_report.pdf")
+    # --- metadata ---
+    _copy(FIX / "published_claims.json", meta_dir / "published_claims.json")
+    _copy(FIX / "test_scores.json", meta_dir / "test_scores.json")
+    _copy(FIX / "run_metadata.json", meta_dir / "run_metadata.json")
+    if (DATA / "sources" / "source_registry.csv").exists():
+        _copy(DATA / "sources" / "source_registry.csv", meta_dir / "source_registry.csv")
+    if (TRACK / "docs" / "DATASHEET.md").exists():
+        _copy(TRACK / "docs" / "DATASHEET.md", meta_dir / "DATASHEET.md")
+    elif (REPO / "DATASHEET.md").exists():
+        _copy(REPO / "DATASHEET.md", meta_dir / "DATASHEET.md")
+    if (TRACK / "SwissRealityCheck_Report.pdf").exists():
+        _copy(TRACK / "SwissRealityCheck_Report.pdf", STAGE / "SwissRealityCheck_Report.pdf")
+    if (TRACK / "technical_report.md").exists():
+        _copy(TRACK / "technical_report.md", STAGE / "technical_report.md")
+    charts = TRACK / "docs" / "charts"
+    if charts.exists():
+        _copy(charts, STAGE / "charts")
+
+    # compact licenses note
+    (meta_dir / "LICENSING.md").write_text(
+        "# Licensing notes\n\n"
+        "- Evaluation code in the GitHub repo: Apache-2.0\n"
+        "- Official Swiss government pages: public information\n"
+        "- Alemannic Wikipedia excerpts used for dialect items: CC BY-SA 4.0\n"
+        "- No personal data; dialect items carry validated_by: null\n",
+        encoding="utf-8",
+    )
 
     (STAGE / "README.md").write_text(DATASET_CARD, encoding="utf-8")
-
-    if missing:
-        print("WARNING: missing files (skipped):", file=sys.stderr)
-        for m in missing:
-            print(f"  - {m}", file=sys.stderr)
-
-    n_files = sum(1 for _ in STAGE.rglob("*") if _.is_file())
-    print(f"staged {n_files} files -> {STAGE}")
+    n = sum(1 for p in STAGE.rglob("*") if p.is_file())
+    print(f"staged {n} files -> {STAGE}")
     return STAGE
 
 
-def upload(repo_id: str, private: bool = False) -> str:
+def upload(repo_id: str) -> str:
     from huggingface_hub import HfApi, create_repo
 
     api = HfApi()
-    who = api.whoami()
-    print(f"authenticated as {who.get('name')}")
-
-    create_repo(repo_id, repo_type="dataset", exist_ok=True, private=private)
+    print(f"authenticated as {api.whoami().get('name')}")
+    create_repo(repo_id, repo_type="dataset", exist_ok=True)
     api.upload_folder(
         folder_path=str(STAGE),
         repo_id=repo_id,
         repo_type="dataset",
-        commit_message="Upload Swiss Reality Check benchmark dataset",
+        commit_message="Track 1B schema: evaluation + model_responses + metadata",
     )
     url = f"https://huggingface.co/datasets/{repo_id}"
     print(f"uploaded -> {url}")
@@ -208,13 +202,10 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--repo", default="bhuwanb23/apertus")
     p.add_argument("--stage-only", action="store_true")
-    p.add_argument("--private", action="store_true")
     args = p.parse_args()
-
     stage()
-    if args.stage_only:
-        return
-    upload(args.repo, private=args.private)
+    if not args.stage_only:
+        upload(args.repo)
 
 
 if __name__ == "__main__":

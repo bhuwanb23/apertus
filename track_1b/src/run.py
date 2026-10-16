@@ -112,9 +112,9 @@ def main() -> int:
     b_c, b_acc = accuracy(base)
     i_c, i_acc = accuracy(impr)
     up, down = paired_discordant(base, impr)
-    p = mcnemar_exact(up, down)  # n01=improved-only, n10=regressed
-    # Convention: up = baseline wrong → improved right = n01 in some texts
-    delta = round(i_acc - b_acc, 1)
+    p = mcnemar_exact(up, down)  # up = baseline wrong → improved right
+    # Delta from counts (avoids 86.1-55.6 float display as 30.5)
+    delta = round(100.0 * (i_c - b_c) / len(base), 1)
 
     print(f"Knowledge sealed test (n=36)")
     print(f"  Baseline:  {b_acc}% ({b_c}/36)")
