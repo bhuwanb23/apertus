@@ -1,0 +1,6 @@
+{
+  "frozen_utc": "2026-10-16T03:17:49+00:00",
+  "git_hash": "a0f3b8c7abbd2c0da5bf39e2be4ce6802a31afff",
+  "tree_dirty": false,
+  "note": "Improvement frozen before the one-shot: BM25 top-3 retrieval over the 367-chunk corpus. Dev: 48.8% -> 83.3% (+34.5), McNemar 34 improved / 5 regressed. No change to the fix after this point."
+}

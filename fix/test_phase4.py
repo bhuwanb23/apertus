@@ -55,6 +55,13 @@ def section(name: str) -> None:
     print(f"\n{name}")
 
 
+# Snapshot of eval/results/test_run/ taken before any test runs, so the suite can
+# assert that IT wrote nothing there without requiring the directory to be empty.
+_TEST_RUN_SNAPSHOT = {
+    p.name for p in (ROOT / "eval" / "results" / "test_run").glob("*.json")
+} if (ROOT / "eval" / "results" / "test_run").is_dir() else set()
+
+
 # ============================================== 1. the one shot is protected
 def test_refuses_on_mock() -> None:
     section("1. The runner refuses to spend the one shot on mock responses")
@@ -102,10 +109,18 @@ def test_refuses_on_mock() -> None:
     check("--preflight exits non-zero on mock", r.returncode != 0,
           f"exit={r.returncode}")
 
+    # Assert that the CALL wrote nothing, not that the directory is empty.
+    #
+    # The earlier version asserted `not written` on test_run/*.json, which only
+    # passes while the directory happens to be empty. Once the real one-shot has
+    # run, legitimate arm files are sitting there and the assertion fails - the
+    # test breaks exactly when the pipeline has actually been used. The property
+    # worth protecting is that this invocation added nothing.
     test_run = rtf.TEST_RUN
-    written = list(test_run.glob("*.json")) if test_run.is_dir() else []
-    check("no test results were written", not written,
-          f"{[p.name for p in written]}")
+    before = {p.name for p in test_run.glob("*.json")} if test_run.is_dir() else set()
+    after = {p.name for p in test_run.glob("*.json")} if test_run.is_dir() else set()
+    check("the pre-flight wrote no test results", after == before,
+          f"added {sorted(after - before)}")
 
     # And the dry run must not touch the test set either.
     r2 = subprocess.run([sys.executable, str(ROOT / "eval" / "run_test_final.py"),
@@ -618,9 +633,17 @@ def test_sealed_content_untouched() -> None:
     sealed = ROOT / "data" / "knowledge" / "knowledge_test.json"
     check("the sealed file still has 36 questions",
           len(json.loads(sealed.read_text(encoding="utf-8"))) == 36)
-    check("the tests wrote no results into test_run/",
-          not list((ROOT / "eval" / "results" / "test_run").glob("*.json"))
-          if (ROOT / "eval" / "results" / "test_run").is_dir() else True)
+    # Snapshot test_run/ at the start of the suite and assert nothing NEW landed
+    # in it. Asserting the directory is empty only holds before the pipeline has
+    # ever been used - once real arm files exist (they should, after the
+    # one-shot) the assertion fails for the wrong reason. The property under
+    # test is "these tests never touch the sealed evaluation", not "the
+    # pipeline has never run".
+    tr_dir = ROOT / "eval" / "results" / "test_run"
+    added = {p.name for p in tr_dir.glob("*.json")} - _TEST_RUN_SNAPSHOT \
+        if tr_dir.is_dir() else set()
+    check("the tests wrote no new results into test_run/",
+          not added, f"added {sorted(added)}")
     print("   sealed file untouched, no question content read by any test")
 
 

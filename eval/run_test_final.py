@@ -403,15 +403,21 @@ def run_knowledge(model: str, method: str, top_k: int = 3) -> dict:
         if gate.get("n_items") and not gate["clean"]:
             raise SystemExit("refusing: contaminated system prompt")
         contexts, n_chunks = _rag_context_for(questions, top_k)
-        # evaluate_knowledge takes one context string for the whole split, so
-        # the per-question contexts are stitched with a per-question header and
-        # passed through. It keeps ONE scoring path rather than adding a second.
-        context = "\n\n".join(
-            f"[Question {q['id']}]\n{contexts[q['id']]}" for q in questions)
+        # Per-question context, NOT one stitched string for the whole split.
+        #
+        # The previous version joined all 36 contexts with per-question headers
+        # and passed them as a single rag_context. Two things went wrong: the
+        # stitched prompt was ~17k tokens and overflowed the 8k context window,
+        # and every question was answered alongside the retrieved evidence for
+        # all the OTHER questions. The dev path (run_rag_eval) retrieves per
+        # question, so this restores dev-test comparability rather than changing
+        # the intervention.
         print(f"  retrieval: {n_chunks} chunks, {len(contexts)} per-question "
-              f"contexts, {len(context)} chars total")
+              f"contexts, max {max(len(c) for c in contexts.values())} chars")
 
-    scores = evaluate_knowledge(model, split="test", rag_context=context)
+    scores = evaluate_knowledge(model, split="test",
+                                rag_contexts=contexts if method == "improved" else None,
+                                rag_context=context)
     return scores
 
 

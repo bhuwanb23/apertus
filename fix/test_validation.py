@@ -344,13 +344,38 @@ def test_mock_is_not_certified() -> None:
           "a mock run has shown nothing about safety")
     check("it explains what mock does prove", "self-test" in v)
 
-    r = subprocess.run(
-        [sys.executable, str(ROOT / "fix" / "validate_improvement.py"),
-         "--model", "8b", "--split", "dev"],
-        capture_output=True, text=True, cwd=ROOT)
-    check("the CLI exits non-zero on mock", r.returncode == 1, f"exit={r.returncode}")
-    check("the CLI prints the refusal", "REFUSED TO CERTIFY" in r.stdout)
-    print(f"   mock -> refused, exit {r.returncode} (0 = validated)")
+    # The CLI must refuse MOCK results. That has to be forced, not assumed.
+    #
+    # This test used to assert exit==1 on whatever happened to be on disk, which
+    # only held while the only results present were mock ones. Now that real dev
+    # runs exist the CLI correctly validates them and exits 0, so the assertion
+    # was testing the repository's state, not the refusal logic.
+    #
+    # The invariant worth protecting is "if the results it finds are mock, it
+    # refuses" - so temporarily put mock-flagged results where the CLI reads
+    # them, run it, and restore the real files untouched.
+    paired = ROOT / "fix" / "rag" / "results_rag_8b_dev_k3.json"
+    base = ROOT / "eval" / "results" / "parsed" / "knowledge_8b_dev_base.json"
+    originals = {p: (p.read_bytes() if p.exists() else None) for p in (paired, base)}
+    try:
+        for p in originals:
+            payload = json.loads(originals[p].decode("utf-8")) if originals[p] else {}
+            payload.setdefault("run", {})["is_mock"] = True
+            payload["run"]["backend"] = "mock"
+            p.write_text(json.dumps(payload), encoding="utf-8")
+
+        r = subprocess.run(
+            [sys.executable, str(ROOT / "fix" / "validate_improvement.py"),
+             "--model", "8b", "--split", "dev"],
+            capture_output=True, text=True, cwd=ROOT)
+        check("the CLI exits non-zero on mock", r.returncode == 1, f"exit={r.returncode}")
+        check("the CLI prints the refusal", "REFUSED TO CERTIFY" in r.stdout,
+              r.stdout[-200:])
+    finally:
+        for p, data in originals.items():
+            if data is not None:
+                p.write_bytes(data)
+    print(f"   mock -> refused, exit {r.returncode} (0 = validated); real files restored")
 
 
 # ================================= 7. conditional arithmetic and justification

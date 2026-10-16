@@ -410,8 +410,23 @@ def evaluate_knowledge(
     limit: int | None = None,
     rag_context: str = "",
     prompt_variant: str | None = None,
+    rag_contexts: dict | None = None,
 ) -> dict:
-    """Run the knowledge set and return the score dict."""
+    """Run the knowledge set and return the score dict.
+
+    rag_contexts maps question id -> that question's retrieved context.
+
+    Why this exists: the one-shot runner used to stitch every question's
+    retrieved context into ONE string and pass it as rag_context, so all 36
+    contexts were sent with all 36 questions. That is wrong twice over - it blew
+    the context window (36 x ~1.9k chars is ~17k tokens, over the 8k limit) and,
+    worse, it handed every question the retrieved evidence for the OTHER
+    questions. The dev path (run_rag_eval) always retrieved per question, so the
+    one-shot was not even reproducing the dev condition it was meant to confirm.
+
+    rag_context is kept for the single-context dev path so there is still exactly
+    one scoring implementation rather than two.
+    """
     split = split or config.knowledge_split
     prompt_variant = prompt_variant or config.knowledge_prompt_variant
     client = get_client(model_name)
@@ -426,7 +441,9 @@ def evaluate_knowledge(
 
     results = []
     for i, q in enumerate(questions):
-        system, prompt = build_prompt(q, rag_context, prompt_variant)
+        # Per-question context when supplied; otherwise the single shared string.
+        q_ctx = rag_contexts.get(q["id"], rag_context) if rag_contexts else rag_context
+        system, prompt = build_prompt(q, q_ctx, prompt_variant)
         response = client.generate(prompt, system_prompt=system)
         client.save_response(response, q["id"], "knowledge", prompt_version=PROMPT_VERSION)
 
