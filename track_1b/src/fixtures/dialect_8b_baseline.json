@@ -1,0 +1,2196 @@
+{
+  "task": "dialect",
+  "model": "8b",
+  "method": "baseline",
+  "run_utc": "2026-10-16T07:10:27+00:00",
+  "git_hash": "2b2b75c840419f07c0a3c316d468df44721ea950",
+  "backend": "http",
+  "is_mock": false,
+  "temperature": 0.0,
+  "seed": 42,
+  "n": 30,
+  "scores": {
+    "run": {
+      "run_utc": "2026-10-16T07:10:27+00:00",
+      "task": "dialect",
+      "model_key": "8b",
+      "model_id": "apertus-v1.5-8b-text-q4_k_m",
+      "backend": "http",
+      "is_mock": false,
+      "prompt_version": "1.0",
+      "n_items": 30,
+      "request_params": {
+        "model": "apertus-v1.5-8b-text-q4_k_m",
+        "backend": "http",
+        "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "seed": 42,
+        "max_tokens": 2048
+      },
+      "thresholds": {
+        "correct": 0.85,
+        "partial": 0.5
+      },
+      "protocol": "data/dialect/dialect_scoring_protocol.md"
+    },
+    "scores": {
+      "n_items": 30,
+      "n_scored": 30,
+      "refusal_rate": 50.0,
+      "n_refused": 15,
+      "answered_in_swiss_german": 7,
+      "mcq_parse_errors": 0,
+      "t1_mean": 0.0,
+      "t1_n": 12,
+      "t1_coverage_mean": 0.989,
+      "mcq_accuracy": 50.0,
+      "mcq_n": 18,
+      "by_dialect": {
+        "basel": {
+          "n": 13,
+          "t1_mean": 0.0,
+          "t1_n": 8,
+          "mcq_accuracy": 20.0,
+          "mcq_n": 5
+        },
+        "bern": {
+          "n": 4,
+          "t1_mean": 0.0,
+          "t1_n": 1,
+          "mcq_accuracy": 66.7,
+          "mcq_n": 3
+        },
+        "uncertain": {
+          "n": 1,
+          "t1_mean": null,
+          "t1_n": 0,
+          "mcq_accuracy": 100.0,
+          "mcq_n": 1
+        },
+        "valais": {
+          "n": 2,
+          "t1_mean": null,
+          "t1_n": 0,
+          "mcq_accuracy": 50.0,
+          "mcq_n": 2
+        },
+        "walser": {
+          "n": 3,
+          "t1_mean": 0.0,
+          "t1_n": 1,
+          "mcq_accuracy": 50.0,
+          "mcq_n": 2
+        },
+        "zurich": {
+          "n": 7,
+          "t1_mean": 0.0,
+          "t1_n": 2,
+          "mcq_accuracy": 60.0,
+          "mcq_n": 5
+        }
+      },
+      "by_task_type": {
+        "comprehension": {
+          "n": 8,
+          "mean": 0.75,
+          "accuracy": 75.0,
+          "refusals": 3
+        },
+        "culture_in_dialect": {
+          "n": 5,
+          "mean": 0.6,
+          "accuracy": 60.0,
+          "refusals": 0
+        },
+        "dialect_identification": {
+          "n": 5,
+          "mean": 0.0,
+          "accuracy": 0.0,
+          "refusals": 0
+        },
+        "translation": {
+          "n": 12,
+          "mean": 0.0,
+          "accuracy": null,
+          "refusals": 12
+        }
+      },
+      "pooled_note": "per-dialect figures only; pooling is not meaningful across registers",
+      "is_mock": false,
+      "backend": "http"
+    },
+    "records": [
+      {
+        "item_id": "D001",
+        "task_type": "translation",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+        "difficulty": "easy",
+        "source_id": "S110",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "**Analyzing the Swiss German Phrase**\n\nOkay, so the user wants me to translate a Swiss German phrase into Standard German. The phrase is: \"D' Säu verdraage nämli keini raui Grumbiirre.\"\n\nFirst, I need to break down the components. \"D' Säu\" is clearly \"die Säue\" (the pigs). \"Verdraage\" is \"verdrage\" ",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 1.0,
+        "matched": [
+          {
+            "term": "kartoffeln",
+            "weight": 1.0,
+            "via": "grumbiirre"
+          },
+          {
+            "term": "rohen",
+            "weight": 0.5,
+            "via": "raui"
+          },
+          {
+            "term": "schweine",
+            "weight": 1.0,
+            "via": "säu"
+          },
+          {
+            "term": "vertragen",
+            "weight": 0.5,
+            "via": "verdraage"
+          }
+        ],
+        "missing": [],
+        "refused": true,
+        "answered_in_swiss_german": false,
+        "reply_lang": "en",
+        "len_ratio": 20.714,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D002",
+        "task_type": "translation",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+        "difficulty": "easy",
+        "source_id": "S105",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate a sentence from Swiss German to Standard German.\n\n**Swiss German:** \"Mit de mäiste Brotdäig cha mä au chliineri Bröötli bache.\"\n\n**Step 1: Analyze the Swiss German sentence.**\n- \"Mit de mäiste Brotdäig\" -> \"With the most bread dough\"\n- \"cha mä\" -> \"can I\"\n- \"au chliine",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 1.0,
+        "matched": [
+          {
+            "term": "backen",
+            "weight": 0.5,
+            "via": "backen"
+          },
+          {
+            "term": "brotteig",
+            "weight": 1.0,
+            "via": "brotteig"
+          },
+          {
+            "term": "brötchen",
+            "weight": 1.0,
+            "via": "brötchen"
+          },
+          {
+            "term": "kleinere",
+            "weight": 0.5,
+            "via": "kleinere"
+          },
+          {
+            "term": "können",
+            "weight": 0.5,
+            "via": "cha"
+          },
+          {
+            "term": "meisten",
+            "weight": 0.5,
+            "via": "meisten"
+          }
+        ],
+        "missing": [],
+        "refused": true,
+        "answered_in_swiss_german": false,
+        "reply_lang": "en",
+        "len_ratio": 17.0,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D003",
+        "task_type": "translation",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+        "difficulty": "easy",
+        "source_id": "S112",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\nThe sentence is: \"D Abgaas vom Schiffsmotor wärde über e Chemmi abgläitet.\"\n\nLet's break this down:\n- \"D\" is likely a typo or abbreviation for \"Die\" (the). Or it could be part of a name. But in this context, it seems like \"",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 1.0,
+        "matched": [
+          {
+            "term": "abgase",
+            "weight": 1.0,
+            "via": "abgase"
+          },
+          {
+            "term": "abgeleitet",
+            "weight": 0.5,
+            "via": "abgläitet"
+          },
+          {
+            "term": "schiffsmotor",
+            "weight": 1.0,
+            "via": "schiffsmotor"
+          },
+          {
+            "term": "schornstein",
+            "weight": 1.0,
+            "via": "chemmi"
+          },
+          {
+            "term": "werden",
+            "weight": 0.5,
+            "via": "wärde"
+          }
+        ],
+        "missing": [],
+        "refused": true,
+        "answered_in_swiss_german": true,
+        "reply_lang": "chde",
+        "len_ratio": 34.778,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D004",
+        "task_type": "translation",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S111",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "**Analyzing the Swiss German Phrase**\n\nOkay, so the user wants me to translate a Swiss German phrase into Standard German. The phrase is: \"Ire Gussisepfanne tuet me de mit e chly Anke d Röschti aabrätle.\"\n\nFirst, I need to break down the components of this phrase. \"Ire\" seems to be a name or a speci",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 1.0,
+        "matched": [
+          {
+            "term": "butter",
+            "weight": 1.0,
+            "via": "butter"
+          },
+          {
+            "term": "gussepfanne",
+            "weight": 1.0,
+            "via": "gussisepfanne"
+          },
+          {
+            "term": "man",
+            "weight": 0.5,
+            "via": "me"
+          },
+          {
+            "term": "röstet",
+            "weight": 0.5,
+            "via": "aabrätle"
+          },
+          {
+            "term": "rösti",
+            "weight": 1.0,
+            "via": "röschti"
+          }
+        ],
+        "missing": [],
+        "refused": true,
+        "answered_in_swiss_german": false,
+        "reply_lang": "en",
+        "len_ratio": 38.667,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D005",
+        "task_type": "translation",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S108",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\nThe sentence provided is: \"Hüte wird d Bezäichnig au für anderi Märt brucht, wo nid ständig si, hüfig für Volksfest.\"\n\nLet's break this down:\n- \"Hüte\" -> \"Hüte\" (could be a typo or a specific term, but likely \"Hüte\" is the ",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 1.0,
+        "matched": [
+          {
+            "term": "andere",
+            "weight": 0.5,
+            "via": "andere"
+          },
+          {
+            "term": "bezeichnung",
+            "weight": 1.0,
+            "via": "bezeichnung"
+          },
+          {
+            "term": "heute",
+            "weight": 1.0,
+            "via": "hüt"
+          },
+          {
+            "term": "märkte",
+            "weight": 1.0,
+            "via": "märkte"
+          },
+          {
+            "term": "ständig",
+            "weight": 0.5,
+            "via": "ständig"
+          },
+          {
+            "term": "volksfest",
+            "weight": 0.5,
+            "via": "volksfest"
+          }
+        ],
+        "missing": [],
+        "refused": true,
+        "answered_in_swiss_german": true,
+        "reply_lang": "chde",
+        "len_ratio": 64.875,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D006",
+        "task_type": "translation",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+        "difficulty": "hard",
+        "source_id": "S106",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate a phrase from Swiss German to Standard German.\nThe phrase is: \"Organisator fodr Fasnet isch normalerweis a oatsasässege Narrazomft.\"\n\nLet's break it down:\n- \"Organisator\" -> Organisator (Standard German)\n- \"fodr\" -> für (Standard German)\n- \"Fasnet\" -> Fasnet (Standard ",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 1.0,
+        "matched": [
+          {
+            "term": "ehrenamtliche",
+            "weight": 0.5,
+            "via": "oatsasässege"
+          },
+          {
+            "term": "fasnacht",
+            "weight": 1.0,
+            "via": "fasnet"
+          },
+          {
+            "term": "narrenzunft",
+            "weight": 1.0,
+            "via": "narrazomft"
+          },
+          {
+            "term": "normalerweise",
+            "weight": 0.5,
+            "via": "normalerweise"
+          },
+          {
+            "term": "organisator",
+            "weight": 1.0,
+            "via": "organisator"
+          }
+        ],
+        "missing": [],
+        "refused": true,
+        "answered_in_swiss_german": true,
+        "reply_lang": "chde",
+        "len_ratio": 21.0,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D007",
+        "task_type": "translation",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S102",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\n\n**Swiss German:** \"Für viili Basler isch d’Basler Fasnacht dr wichtigschti Aaloss im Yoor, und au diè gröschti Fasnacht vo der Schwyz.\"\n\n**Step-by-step translation:**\n\n1.  \"Für viili Basler\" -> \"Für viele Basler\" (Standard",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 1.0,
+        "matched": [
+          {
+            "term": "basler",
+            "weight": 1.0,
+            "via": "basler"
+          },
+          {
+            "term": "ereignis",
+            "weight": 1.0,
+            "via": "aaloss"
+          },
+          {
+            "term": "fasnacht",
+            "weight": 1.0,
+            "via": "fasnacht"
+          },
+          {
+            "term": "grösste",
+            "weight": 0.5,
+            "via": "grösste"
+          },
+          {
+            "term": "jahr",
+            "weight": 1.0,
+            "via": "jahr"
+          },
+          {
+            "term": "schweiz",
+            "weight": 1.0,
+            "via": "schweiz"
+          },
+          {
+            "term": "wichtigste",
+            "weight": 0.5,
+            "via": "wichtigste"
+          }
+        ],
+        "missing": [],
+        "refused": true,
+        "answered_in_swiss_german": true,
+        "reply_lang": "chde",
+        "len_ratio": 11.421,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D008",
+        "task_type": "translation",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S109",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\n\n**Swiss German text:** \"Ermeri Lüt und in Krisezite fast die ganze Bevölkerung hat Ersatzkaffee getrunken wie Malzkaffee oder Schiggoree.\"\n\n**Step-by-step translation:**\n\n1.  \"Ermeri Lüt\" -> This looks like a proper name o",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 0.8667,
+        "matched": [
+          {
+            "term": "bevölkerung",
+            "weight": 1.0,
+            "via": "bevölkerung"
+          },
+          {
+            "term": "ersatzkaffee",
+            "weight": 1.0,
+            "via": "ersatzkaffee"
+          },
+          {
+            "term": "getrunken",
+            "weight": 0.5,
+            "via": "getrunken"
+          },
+          {
+            "term": "krisenzeiten",
+            "weight": 1.0,
+            "via": "krisenzeiten"
+          },
+          {
+            "term": "leute",
+            "weight": 1.0,
+            "via": "lüt"
+          },
+          {
+            "term": "malzkaffee",
+            "weight": 1.0,
+            "via": "malzkaffee"
+          },
+          {
+            "term": "zichorienkaffee",
+            "weight": 1.0,
+            "via": "schiggoree"
+          }
+        ],
+        "missing": [
+          {
+            "term": "ärmere",
+            "weight": 1.0
+          }
+        ],
+        "refused": true,
+        "answered_in_swiss_german": false,
+        "reply_lang": "en",
+        "len_ratio": 70.562,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D009",
+        "task_type": "translation",
+        "dialect": "zurich",
+        "canon_dialect": "zurich",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S127",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\n\n**Swiss German:** \"D Schwiiz het hüüt zämme mit Luxeburg dr höchschti Ussländerbeschtand in ganz Europa.\"\n\n**Step-by-step translation:**\n\n1.  \"D Schwiiz\" -> \"Die Schweiz\"\n2.  \"het\" -> \"hat\"\n3.  \"hüüt\" -> \"heute\"\n4.  \"zämme",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 1.0,
+        "matched": [
+          {
+            "term": "ausländerbestand",
+            "weight": 1.0,
+            "via": "ausländerbestand"
+          },
+          {
+            "term": "europa",
+            "weight": 1.0,
+            "via": "europa"
+          },
+          {
+            "term": "heute",
+            "weight": 0.5,
+            "via": "heute"
+          },
+          {
+            "term": "höchsten",
+            "weight": 0.5,
+            "via": "höchsten"
+          },
+          {
+            "term": "luxemburg",
+            "weight": 1.0,
+            "via": "luxemburg"
+          },
+          {
+            "term": "schweiz",
+            "weight": 1.0,
+            "via": "schweiz"
+          },
+          {
+            "term": "zusammen",
+            "weight": 0.5,
+            "via": "zusammen"
+          }
+        ],
+        "missing": [],
+        "refused": true,
+        "answered_in_swiss_german": true,
+        "reply_lang": "chde",
+        "len_ratio": 16.385,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D010",
+        "task_type": "translation",
+        "dialect": "zurich",
+        "canon_dialect": "zurich",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S130",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\n\n**Swiss German:** \"S Woort und de Glaube häts natüürli scho vorane ggëë, aber über söttigi Sache hät mer halt früener chuum gschribe.\"\n\n**Step-by-step analysis:**\n1.  **\"S Woort und de Glaube\"**: This translates to \"The Wo",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 1.0,
+        "matched": [
+          {
+            "term": "existiert",
+            "weight": 0.5,
+            "via": "vorane"
+          },
+          {
+            "term": "früher",
+            "weight": 0.5,
+            "via": "früher"
+          },
+          {
+            "term": "geschrieben",
+            "weight": 0.5,
+            "via": "geschrieben"
+          },
+          {
+            "term": "glaube",
+            "weight": 1.0,
+            "via": "glaube"
+          },
+          {
+            "term": "natürlich",
+            "weight": 0.5,
+            "via": "natürlich"
+          },
+          {
+            "term": "solches",
+            "weight": 0.5,
+            "via": "solches"
+          },
+          {
+            "term": "wort",
+            "weight": 1.0,
+            "via": "wort"
+          }
+        ],
+        "missing": [],
+        "refused": true,
+        "answered_in_swiss_german": false,
+        "reply_lang": "en",
+        "len_ratio": 15.833,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D011",
+        "task_type": "translation",
+        "dialect": "bern",
+        "canon_dialect": "bern",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S119",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\nThe sentence provided is: \"Für d Froue isch ds Braue den so Sälbstverständlech gsi, wi ds Bache vo Brot.\"\n\nLet's break this down:\n- \"Für d Froue\" -> \"Für die Frau\" (Standard German)\n- \"isch\" -> \"war\" or \"ist\" (depending on ",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 1.0,
+        "matched": [
+          {
+            "term": "backen",
+            "weight": 1.0,
+            "via": "backen"
+          },
+          {
+            "term": "brauen",
+            "weight": 1.0,
+            "via": "brauen"
+          },
+          {
+            "term": "brot",
+            "weight": 1.0,
+            "via": "brot"
+          },
+          {
+            "term": "frauen",
+            "weight": 1.0,
+            "via": "frauen"
+          },
+          {
+            "term": "selbstverständlich",
+            "weight": 0.5,
+            "via": "selbstverständlich"
+          }
+        ],
+        "missing": [],
+        "refused": true,
+        "answered_in_swiss_german": true,
+        "reply_lang": "chde",
+        "len_ratio": 84.154,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D012",
+        "task_type": "translation",
+        "dialect": "walser",
+        "canon_dialect": "walser",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "hard",
+        "source_id": "S125",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate a Swiss German text into Standard German.\n\nText: \"D Chilche ùn d Schuel sin bis in d 1920er Joor franzeesisch gsii, derno isch s Idalieenisch ùfchùù.\"\n\nLet's break this down:\n- \"D Chilche\" = The churches\n- \"ùn d Schuel\" = and the schools\n- \"sin bis in d 1920er Joor\" = ",
+        "score": 0,
+        "scoring_method": "refusal",
+        "coverage": 1.0,
+        "matched": [
+          {
+            "term": "französisch",
+            "weight": 0.5,
+            "via": "französisch"
+          },
+          {
+            "term": "gewesen",
+            "weight": 0.5,
+            "via": "gsii"
+          },
+          {
+            "term": "hinzugekommen",
+            "weight": 0.5,
+            "via": "ufchùù"
+          },
+          {
+            "term": "italienisch",
+            "weight": 0.5,
+            "via": "italienisch"
+          },
+          {
+            "term": "jahre",
+            "weight": 1.0,
+            "via": "jahre"
+          },
+          {
+            "term": "kirche",
+            "weight": 1.0,
+            "via": "kirche"
+          },
+          {
+            "term": "schule",
+            "weight": 1.0,
+            "via": "schule"
+          }
+        ],
+        "missing": [],
+        "refused": true,
+        "answered_in_swiss_german": true,
+        "reply_lang": "chde",
+        "len_ratio": 11.333,
+        "parse_reason": null
+      },
+      {
+        "item_id": "D013",
+        "task_type": "dialect_identification",
+        "dialect": "zurich",
+        "canon_dialect": "zurich",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "easy",
+        "source_id": "S127",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "**Analyzing the Swiss German Dialect**\n\nOkay, so I need to pinpoint the Swiss German dialect of this sentence: \"Schpaatussiidler gelted dernaa nöd als Ussländer.\" Let's break this down. First, I see the spelling: \"Schpaatussiidler\". That's a key indicator. \"Schpaat\" is a clear clue; it's the spellin",
+        "predicted": "D",
+        "correct": "B",
+        "score": 0,
+        "is_correct": false,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "echo_exact",
+        "refused": false,
+        "reply_lang": "chde"
+      },
+      {
+        "item_id": "D014",
+        "task_type": "dialect_identification",
+        "dialect": "bern",
+        "canon_dialect": "bern",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S120",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "**Analyzing the Swiss German Dialect**\n\nOkay, the user wants me to pinpoint the Swiss German dialect of this sentence: \"Im Kapitel 17 chöme die zwöi e neue Name, also Abraham und Sara über.\" Right, let's break this down.\n\nFirst, I need to look at the vocabulary and the spelling. \"chöme\" – that's a c",
+        "predicted": "D",
+        "correct": "C",
+        "score": 0,
+        "is_correct": false,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "echo_exact",
+        "refused": false,
+        "reply_lang": "en"
+      },
+      {
+        "item_id": "D015",
+        "task_type": "dialect_identification",
+        "dialect": "walser",
+        "canon_dialect": "walser",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S126",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "**Analyzing the Swiss German Dialect**\n\nOkay, so I need to pinpoint the specific Swiss German dialect used in this sentence: \"Di Gmäind Chlooschtärsch ischt mit dr Rhätischä Bahn guet ärschlossän.\" Let's break this down.\n\nFirst, I see the word \"Gmäind.\" That's a clear indicator. \"Gemeinde\" in Standa",
+        "predicted": "C",
+        "correct": "D",
+        "score": 0,
+        "is_correct": false,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": false,
+        "reply_lang": "chde"
+      },
+      {
+        "item_id": "D016",
+        "task_type": "dialect_identification",
+        "dialect": "valais",
+        "canon_dialect": "valais",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S123",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "**Analyzing the Swiss German Dialect**\n\nOkay, the user wants me to pinpoint the Swiss German dialect of this sentence: \"Dur ds Taal vaner Lienne fiert der Füesswäg zum Rawilpass.\" Right, let's break this down. First, I need to understand the linguistic features of each option: Wallisertiitsch, Basel",
+        "predicted": "C",
+        "correct": "A",
+        "score": 0,
+        "is_correct": false,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": false,
+        "reply_lang": "en"
+      },
+      {
+        "item_id": "D017",
+        "task_type": "dialect_identification",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S110",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "**Analyzing the Swiss German Dialect**\n\nOkay, so I need to pinpoint the specific Swiss German dialect used in this sentence: \"D' Dämpfi isch bis in d' sibziger Joor in de Schwiinemascht zum gare vo Grumbiire iigsetzt worde.\" Let's break this down.\n\nFirst, I see the use of \"isch\" for \"is\" and \"Joor\" ",
+        "predicted": "C",
+        "correct": "B",
+        "score": 0,
+        "is_correct": false,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": false,
+        "reply_lang": "chde"
+      },
+      {
+        "item_id": "D018",
+        "task_type": "culture_in_dialect",
+        "dialect": "zürich",
+        "canon_dialect": "zurich",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "easy",
+        "source_id": "S133",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants to know the number of members of the Swiss Federal Council based on the provided sentence.\n\n1.  **Analyze the sentence:** \"Dr Bundesrat hät sibe Mitgliider, wo jedes für sich au wider Bundesrat oder Bundesrätin gheisst.\"\n    *   \"Dr Bundesrat\" refers to the Federal Council (Swiss Fede",
+        "predicted": "B",
+        "correct": "B",
+        "score": 1,
+        "is_correct": true,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": false,
+        "reply_lang": "chde"
+      },
+      {
+        "item_id": "D019",
+        "task_type": "culture_in_dialect",
+        "dialect": "zürich",
+        "canon_dialect": "zurich",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "hard",
+        "source_id": "S133",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to answer a multiple-choice question based on a Swiss German sentence.\n\n**Sentence Analysis:**\n\"De Bundespräsident hät als «erschte under Gliiche» (primus inter pares) kei wiiteri Rächt, sondern erfüllt Repräsentationsuufgabe und leitet d Bundesratssitzige.\"\n\nTranslation:\n\"The Fede",
+        "predicted": "A",
+        "correct": "D",
+        "score": 0,
+        "is_correct": false,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": false,
+        "reply_lang": "en"
+      },
+      {
+        "item_id": "D020",
+        "task_type": "culture_in_dialect",
+        "dialect": "uncertain",
+        "canon_dialect": "uncertain",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S142",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "A",
+        "predicted": "A",
+        "correct": "A",
+        "score": 1,
+        "is_correct": true,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "bare_letter",
+        "refused": false,
+        "reply_lang": "unknown"
+      },
+      {
+        "item_id": "D021",
+        "task_type": "culture_in_dialect",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S132",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants to know the duration of the Basel Fasnacht based on the provided Swiss German sentence.\n\n1.  **Analyze the sentence:** \"D Fasnacht duurt denn gnau 72 Stund und heert drum am Donschtig Morgen am Vieri mit em Ändstraich wider uff.\"\n    *   \"D Fasnacht\" = The Fasnacht (Carnival)\n    *   ",
+        "predicted": "B",
+        "correct": "C",
+        "score": 0,
+        "is_correct": false,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": false,
+        "reply_lang": "chde"
+      },
+      {
+        "item_id": "D022",
+        "task_type": "culture_in_dialect",
+        "dialect": "bern",
+        "canon_dialect": "bern",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S119",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants to know the year when Swiss breweries displaced wine as the national drink, based on the provided sentence.\n\n1.  **Analyze the sentence:** \"1885 hei d Schwyzer Brauereie der Wy als Nationalgetränk dür ds Bier verdrängt.\"\n    *   \"1885\" is clearly the year mentioned at the beginning.\n ",
+        "predicted": "C",
+        "correct": "C",
+        "score": 1,
+        "is_correct": true,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": false,
+        "reply_lang": "en"
+      },
+      {
+        "item_id": "D023",
+        "task_type": "comprehension",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "easy",
+        "source_id": "S132",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "**Analyzing the Sentence Meaning**\n\nOkay, so the user wants me to figure out the meaning of this Swiss German sentence: \"D Basler Fasnacht isch die greeschti Fasnacht in dr ganze Schwiz.\" Right, let's break this down. \"Basler Fasnacht\" clearly refers to the Basel Carnival. \"Die greeschti Fasnacht\" –",
+        "predicted": "A",
+        "correct": "B",
+        "score": 0,
+        "is_correct": false,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": false,
+        "reply_lang": "chde"
+      },
+      {
+        "item_id": "D024",
+        "task_type": "comprehension",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S132",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "**Analyzing the Sentence Meaning**\n\nOkay, so I need to figure out what this Swiss German sentence means. The sentence is: \"E Masgge isch in Basel e Goschdyymierte, aso aine won e Goschdyym und a Larven aahet.\" Right, let's break this down.\n\nFirst, \"E Masgge\" – that's clearly \"A Masgge\" in English. T",
+        "predicted": "A",
+        "correct": "D",
+        "score": 0,
+        "is_correct": false,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": false,
+        "reply_lang": "chde"
+      },
+      {
+        "item_id": "D025",
+        "task_type": "comprehension",
+        "dialect": "zürich",
+        "canon_dialect": "zurich",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "hard",
+        "source_id": "S145",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "**Analyzing the Sentence Meaning**\n\nOkay, so I need to figure out what this Swiss German sentence means. The sentence is: \"Er isch au gäge d Räislöiferei ufträtte, also s Verschicke vo Landslüt as Söldner i frömdi Chrieg, wo d Innerschwyzer Arischtokraty finanziell starch devo profitiert hät.\"\n\nLet'",
+        "predicted": "B",
+        "correct": "B",
+        "score": 1,
+        "is_correct": true,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": false,
+        "reply_lang": "chde"
+      },
+      {
+        "item_id": "D026",
+        "task_type": "comprehension",
+        "dialect": "zürich",
+        "canon_dialect": "zurich",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "hard",
+        "source_id": "S133",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "A",
+        "predicted": "A",
+        "correct": "A",
+        "score": 1,
+        "is_correct": true,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "bare_letter",
+        "refused": false,
+        "reply_lang": "unknown"
+      },
+      {
+        "item_id": "D027",
+        "task_type": "comprehension",
+        "dialect": "bern",
+        "canon_dialect": "bern",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S119",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate the Swiss German sentence: \"Wil ou Wy wird fermentiert u trotzdäm wird Wy nid brout sondern kelteret.\"\n\nLet's break it down:\n- \"Wil ou Wy\" = Wine or Beer (literally \"Wine or Beer\")\n- \"wird fermentiert\" = is fermented\n- \"u trotzdäm\" = and nevertheless / and despite that",
+        "predicted": "A",
+        "correct": "A",
+        "score": 1,
+        "is_correct": true,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": true,
+        "reply_lang": "chde"
+      },
+      {
+        "item_id": "D028",
+        "task_type": "comprehension",
+        "dialect": "valais",
+        "canon_dialect": "valais",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "medium",
+        "source_id": "S123",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate the Swiss German sentence: \"Dr tradizionell Dialäkt va Ayent gcheert zum Frankoprovenzalischu.\"\n\nLet's break it down:\n- \"Dr tradizionell Dialäkt\" = The traditional dialect\n- \"va Ayent\" = of Ayent (a place name)\n- \"gcheert\" = belongs/is classified (imperfect form of \"ge",
+        "predicted": "D",
+        "correct": "D",
+        "score": 1,
+        "is_correct": true,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": true,
+        "reply_lang": "chde"
+      },
+      {
+        "item_id": "D029",
+        "task_type": "comprehension",
+        "dialect": "walser",
+        "canon_dialect": "walser",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "hard",
+        "source_id": "S126",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "The user wants me to translate a sentence in Swiss German (Alemannic dialect) into English and select the correct meaning from the given options.\n\n**Swiss German Sentence:** \"Sit dm 9. Dezembär 2005 chund Chlooschtärsch dür dn Gotschnä-Umfahrigs-Tunell vam Durchgangsvärchehr entlaschtät.\"\n\n**Breakdo",
+        "predicted": "A",
+        "correct": "A",
+        "score": 1,
+        "is_correct": true,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": true,
+        "reply_lang": "en"
+      },
+      {
+        "item_id": "D030",
+        "task_type": "comprehension",
+        "dialect": "basel",
+        "canon_dialect": "basel",
+        "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+        "difficulty": "hard",
+        "source_id": "S143",
+        "validated_by": null,
+        "model": "8b",
+        "api_failed": false,
+        "response_excerpt": "**Analyzing the Meaning of \"Idiotikon\"**\n\nOkay, so the user wants me to figure out what \"Idiotikon\" means based on this Swiss German sentence. Let's break it down. The sentence says, \"Idiotikon isch en alts Wort für es Wörterbuech, wo die Wort drinstönd, wo für e bistimmti Landschaft tipisch sind, a",
+        "predicted": "C",
+        "correct": "C",
+        "score": 1,
+        "is_correct": true,
+        "scoring_method": "mcq_exact",
+        "parse_reason": "label_forward",
+        "refused": false,
+        "reply_lang": "chde"
+      }
+    ]
+  },
+  "sanity": {
+    "label": "dialect 8b baseline",
+    "n": 30,
+    "n_scored": 18,
+    "accuracy": 50.0,
+    "is_mcq": true,
+    "correct": 9,
+    "parse_errors": 0,
+    "api_failed": 0,
+    "distinct_predictions": 4,
+    "modal_share": 0.233,
+    "chance_level": 25.0,
+    "ok": true,
+    "problems": []
+  },
+  "results": [
+    {
+      "item_id": "D001",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "easy",
+      "source_id": "S110",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "**Analyzing the Swiss German Phrase**\n\nOkay, so the user wants me to translate a Swiss German phrase into Standard German. The phrase is: \"D' Säu verdraage nämli keini raui Grumbiirre.\"\n\nFirst, I need to break down the components. \"D' Säu\" is clearly \"die Säue\" (the pigs). \"Verdraage\" is \"verdrage\" ",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 1.0,
+      "matched": [
+        {
+          "term": "kartoffeln",
+          "weight": 1.0,
+          "via": "grumbiirre"
+        },
+        {
+          "term": "rohen",
+          "weight": 0.5,
+          "via": "raui"
+        },
+        {
+          "term": "schweine",
+          "weight": 1.0,
+          "via": "säu"
+        },
+        {
+          "term": "vertragen",
+          "weight": 0.5,
+          "via": "verdraage"
+        }
+      ],
+      "missing": [],
+      "refused": true,
+      "answered_in_swiss_german": false,
+      "reply_lang": "en",
+      "len_ratio": 20.714,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D002",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "easy",
+      "source_id": "S105",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate a sentence from Swiss German to Standard German.\n\n**Swiss German:** \"Mit de mäiste Brotdäig cha mä au chliineri Bröötli bache.\"\n\n**Step 1: Analyze the Swiss German sentence.**\n- \"Mit de mäiste Brotdäig\" -> \"With the most bread dough\"\n- \"cha mä\" -> \"can I\"\n- \"au chliine",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 1.0,
+      "matched": [
+        {
+          "term": "backen",
+          "weight": 0.5,
+          "via": "backen"
+        },
+        {
+          "term": "brotteig",
+          "weight": 1.0,
+          "via": "brotteig"
+        },
+        {
+          "term": "brötchen",
+          "weight": 1.0,
+          "via": "brötchen"
+        },
+        {
+          "term": "kleinere",
+          "weight": 0.5,
+          "via": "kleinere"
+        },
+        {
+          "term": "können",
+          "weight": 0.5,
+          "via": "cha"
+        },
+        {
+          "term": "meisten",
+          "weight": 0.5,
+          "via": "meisten"
+        }
+      ],
+      "missing": [],
+      "refused": true,
+      "answered_in_swiss_german": false,
+      "reply_lang": "en",
+      "len_ratio": 17.0,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D003",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "easy",
+      "source_id": "S112",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\nThe sentence is: \"D Abgaas vom Schiffsmotor wärde über e Chemmi abgläitet.\"\n\nLet's break this down:\n- \"D\" is likely a typo or abbreviation for \"Die\" (the). Or it could be part of a name. But in this context, it seems like \"",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 1.0,
+      "matched": [
+        {
+          "term": "abgase",
+          "weight": 1.0,
+          "via": "abgase"
+        },
+        {
+          "term": "abgeleitet",
+          "weight": 0.5,
+          "via": "abgläitet"
+        },
+        {
+          "term": "schiffsmotor",
+          "weight": 1.0,
+          "via": "schiffsmotor"
+        },
+        {
+          "term": "schornstein",
+          "weight": 1.0,
+          "via": "chemmi"
+        },
+        {
+          "term": "werden",
+          "weight": 0.5,
+          "via": "wärde"
+        }
+      ],
+      "missing": [],
+      "refused": true,
+      "answered_in_swiss_german": true,
+      "reply_lang": "chde",
+      "len_ratio": 34.778,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D004",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S111",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "**Analyzing the Swiss German Phrase**\n\nOkay, so the user wants me to translate a Swiss German phrase into Standard German. The phrase is: \"Ire Gussisepfanne tuet me de mit e chly Anke d Röschti aabrätle.\"\n\nFirst, I need to break down the components of this phrase. \"Ire\" seems to be a name or a speci",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 1.0,
+      "matched": [
+        {
+          "term": "butter",
+          "weight": 1.0,
+          "via": "butter"
+        },
+        {
+          "term": "gussepfanne",
+          "weight": 1.0,
+          "via": "gussisepfanne"
+        },
+        {
+          "term": "man",
+          "weight": 0.5,
+          "via": "me"
+        },
+        {
+          "term": "röstet",
+          "weight": 0.5,
+          "via": "aabrätle"
+        },
+        {
+          "term": "rösti",
+          "weight": 1.0,
+          "via": "röschti"
+        }
+      ],
+      "missing": [],
+      "refused": true,
+      "answered_in_swiss_german": false,
+      "reply_lang": "en",
+      "len_ratio": 38.667,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D005",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S108",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\nThe sentence provided is: \"Hüte wird d Bezäichnig au für anderi Märt brucht, wo nid ständig si, hüfig für Volksfest.\"\n\nLet's break this down:\n- \"Hüte\" -> \"Hüte\" (could be a typo or a specific term, but likely \"Hüte\" is the ",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 1.0,
+      "matched": [
+        {
+          "term": "andere",
+          "weight": 0.5,
+          "via": "andere"
+        },
+        {
+          "term": "bezeichnung",
+          "weight": 1.0,
+          "via": "bezeichnung"
+        },
+        {
+          "term": "heute",
+          "weight": 1.0,
+          "via": "hüt"
+        },
+        {
+          "term": "märkte",
+          "weight": 1.0,
+          "via": "märkte"
+        },
+        {
+          "term": "ständig",
+          "weight": 0.5,
+          "via": "ständig"
+        },
+        {
+          "term": "volksfest",
+          "weight": 0.5,
+          "via": "volksfest"
+        }
+      ],
+      "missing": [],
+      "refused": true,
+      "answered_in_swiss_german": true,
+      "reply_lang": "chde",
+      "len_ratio": 64.875,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D006",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "hard",
+      "source_id": "S106",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate a phrase from Swiss German to Standard German.\nThe phrase is: \"Organisator fodr Fasnet isch normalerweis a oatsasässege Narrazomft.\"\n\nLet's break it down:\n- \"Organisator\" -> Organisator (Standard German)\n- \"fodr\" -> für (Standard German)\n- \"Fasnet\" -> Fasnet (Standard ",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 1.0,
+      "matched": [
+        {
+          "term": "ehrenamtliche",
+          "weight": 0.5,
+          "via": "oatsasässege"
+        },
+        {
+          "term": "fasnacht",
+          "weight": 1.0,
+          "via": "fasnet"
+        },
+        {
+          "term": "narrenzunft",
+          "weight": 1.0,
+          "via": "narrazomft"
+        },
+        {
+          "term": "normalerweise",
+          "weight": 0.5,
+          "via": "normalerweise"
+        },
+        {
+          "term": "organisator",
+          "weight": 1.0,
+          "via": "organisator"
+        }
+      ],
+      "missing": [],
+      "refused": true,
+      "answered_in_swiss_german": true,
+      "reply_lang": "chde",
+      "len_ratio": 21.0,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D007",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S102",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\n\n**Swiss German:** \"Für viili Basler isch d’Basler Fasnacht dr wichtigschti Aaloss im Yoor, und au diè gröschti Fasnacht vo der Schwyz.\"\n\n**Step-by-step translation:**\n\n1.  \"Für viili Basler\" -> \"Für viele Basler\" (Standard",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 1.0,
+      "matched": [
+        {
+          "term": "basler",
+          "weight": 1.0,
+          "via": "basler"
+        },
+        {
+          "term": "ereignis",
+          "weight": 1.0,
+          "via": "aaloss"
+        },
+        {
+          "term": "fasnacht",
+          "weight": 1.0,
+          "via": "fasnacht"
+        },
+        {
+          "term": "grösste",
+          "weight": 0.5,
+          "via": "grösste"
+        },
+        {
+          "term": "jahr",
+          "weight": 1.0,
+          "via": "jahr"
+        },
+        {
+          "term": "schweiz",
+          "weight": 1.0,
+          "via": "schweiz"
+        },
+        {
+          "term": "wichtigste",
+          "weight": 0.5,
+          "via": "wichtigste"
+        }
+      ],
+      "missing": [],
+      "refused": true,
+      "answered_in_swiss_german": true,
+      "reply_lang": "chde",
+      "len_ratio": 11.421,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D008",
+      "task_type": "translation",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S109",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\n\n**Swiss German text:** \"Ermeri Lüt und in Krisezite fast die ganze Bevölkerung hat Ersatzkaffee getrunken wie Malzkaffee oder Schiggoree.\"\n\n**Step-by-step translation:**\n\n1.  \"Ermeri Lüt\" -> This looks like a proper name o",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 0.8667,
+      "matched": [
+        {
+          "term": "bevölkerung",
+          "weight": 1.0,
+          "via": "bevölkerung"
+        },
+        {
+          "term": "ersatzkaffee",
+          "weight": 1.0,
+          "via": "ersatzkaffee"
+        },
+        {
+          "term": "getrunken",
+          "weight": 0.5,
+          "via": "getrunken"
+        },
+        {
+          "term": "krisenzeiten",
+          "weight": 1.0,
+          "via": "krisenzeiten"
+        },
+        {
+          "term": "leute",
+          "weight": 1.0,
+          "via": "lüt"
+        },
+        {
+          "term": "malzkaffee",
+          "weight": 1.0,
+          "via": "malzkaffee"
+        },
+        {
+          "term": "zichorienkaffee",
+          "weight": 1.0,
+          "via": "schiggoree"
+        }
+      ],
+      "missing": [
+        {
+          "term": "ärmere",
+          "weight": 1.0
+        }
+      ],
+      "refused": true,
+      "answered_in_swiss_german": false,
+      "reply_lang": "en",
+      "len_ratio": 70.562,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D009",
+      "task_type": "translation",
+      "dialect": "zurich",
+      "canon_dialect": "zurich",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S127",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\n\n**Swiss German:** \"D Schwiiz het hüüt zämme mit Luxeburg dr höchschti Ussländerbeschtand in ganz Europa.\"\n\n**Step-by-step translation:**\n\n1.  \"D Schwiiz\" -> \"Die Schweiz\"\n2.  \"het\" -> \"hat\"\n3.  \"hüüt\" -> \"heute\"\n4.  \"zämme",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 1.0,
+      "matched": [
+        {
+          "term": "ausländerbestand",
+          "weight": 1.0,
+          "via": "ausländerbestand"
+        },
+        {
+          "term": "europa",
+          "weight": 1.0,
+          "via": "europa"
+        },
+        {
+          "term": "heute",
+          "weight": 0.5,
+          "via": "heute"
+        },
+        {
+          "term": "höchsten",
+          "weight": 0.5,
+          "via": "höchsten"
+        },
+        {
+          "term": "luxemburg",
+          "weight": 1.0,
+          "via": "luxemburg"
+        },
+        {
+          "term": "schweiz",
+          "weight": 1.0,
+          "via": "schweiz"
+        },
+        {
+          "term": "zusammen",
+          "weight": 0.5,
+          "via": "zusammen"
+        }
+      ],
+      "missing": [],
+      "refused": true,
+      "answered_in_swiss_german": true,
+      "reply_lang": "chde",
+      "len_ratio": 16.385,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D010",
+      "task_type": "translation",
+      "dialect": "zurich",
+      "canon_dialect": "zurich",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S130",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\n\n**Swiss German:** \"S Woort und de Glaube häts natüürli scho vorane ggëë, aber über söttigi Sache hät mer halt früener chuum gschribe.\"\n\n**Step-by-step analysis:**\n1.  **\"S Woort und de Glaube\"**: This translates to \"The Wo",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 1.0,
+      "matched": [
+        {
+          "term": "existiert",
+          "weight": 0.5,
+          "via": "vorane"
+        },
+        {
+          "term": "früher",
+          "weight": 0.5,
+          "via": "früher"
+        },
+        {
+          "term": "geschrieben",
+          "weight": 0.5,
+          "via": "geschrieben"
+        },
+        {
+          "term": "glaube",
+          "weight": 1.0,
+          "via": "glaube"
+        },
+        {
+          "term": "natürlich",
+          "weight": 0.5,
+          "via": "natürlich"
+        },
+        {
+          "term": "solches",
+          "weight": 0.5,
+          "via": "solches"
+        },
+        {
+          "term": "wort",
+          "weight": 1.0,
+          "via": "wort"
+        }
+      ],
+      "missing": [],
+      "refused": true,
+      "answered_in_swiss_german": false,
+      "reply_lang": "en",
+      "len_ratio": 15.833,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D011",
+      "task_type": "translation",
+      "dialect": "bern",
+      "canon_dialect": "bern",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S119",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate a Swiss German sentence into Standard German.\nThe sentence provided is: \"Für d Froue isch ds Braue den so Sälbstverständlech gsi, wi ds Bache vo Brot.\"\n\nLet's break this down:\n- \"Für d Froue\" -> \"Für die Frau\" (Standard German)\n- \"isch\" -> \"war\" or \"ist\" (depending on ",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 1.0,
+      "matched": [
+        {
+          "term": "backen",
+          "weight": 1.0,
+          "via": "backen"
+        },
+        {
+          "term": "brauen",
+          "weight": 1.0,
+          "via": "brauen"
+        },
+        {
+          "term": "brot",
+          "weight": 1.0,
+          "via": "brot"
+        },
+        {
+          "term": "frauen",
+          "weight": 1.0,
+          "via": "frauen"
+        },
+        {
+          "term": "selbstverständlich",
+          "weight": 0.5,
+          "via": "selbstverständlich"
+        }
+      ],
+      "missing": [],
+      "refused": true,
+      "answered_in_swiss_german": true,
+      "reply_lang": "chde",
+      "len_ratio": 84.154,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D012",
+      "task_type": "translation",
+      "dialect": "walser",
+      "canon_dialect": "walser",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "hard",
+      "source_id": "S125",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate a Swiss German text into Standard German.\n\nText: \"D Chilche ùn d Schuel sin bis in d 1920er Joor franzeesisch gsii, derno isch s Idalieenisch ùfchùù.\"\n\nLet's break this down:\n- \"D Chilche\" = The churches\n- \"ùn d Schuel\" = and the schools\n- \"sin bis in d 1920er Joor\" = ",
+      "score": 0,
+      "scoring_method": "refusal",
+      "coverage": 1.0,
+      "matched": [
+        {
+          "term": "französisch",
+          "weight": 0.5,
+          "via": "französisch"
+        },
+        {
+          "term": "gewesen",
+          "weight": 0.5,
+          "via": "gsii"
+        },
+        {
+          "term": "hinzugekommen",
+          "weight": 0.5,
+          "via": "ufchùù"
+        },
+        {
+          "term": "italienisch",
+          "weight": 0.5,
+          "via": "italienisch"
+        },
+        {
+          "term": "jahre",
+          "weight": 1.0,
+          "via": "jahre"
+        },
+        {
+          "term": "kirche",
+          "weight": 1.0,
+          "via": "kirche"
+        },
+        {
+          "term": "schule",
+          "weight": 1.0,
+          "via": "schule"
+        }
+      ],
+      "missing": [],
+      "refused": true,
+      "answered_in_swiss_german": true,
+      "reply_lang": "chde",
+      "len_ratio": 11.333,
+      "parse_reason": null
+    },
+    {
+      "item_id": "D013",
+      "task_type": "dialect_identification",
+      "dialect": "zurich",
+      "canon_dialect": "zurich",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "easy",
+      "source_id": "S127",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "**Analyzing the Swiss German Dialect**\n\nOkay, so I need to pinpoint the Swiss German dialect of this sentence: \"Schpaatussiidler gelted dernaa nöd als Ussländer.\" Let's break this down. First, I see the spelling: \"Schpaatussiidler\". That's a key indicator. \"Schpaat\" is a clear clue; it's the spellin",
+      "predicted": "D",
+      "correct": "B",
+      "score": 0,
+      "is_correct": false,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "echo_exact",
+      "refused": false,
+      "reply_lang": "chde"
+    },
+    {
+      "item_id": "D014",
+      "task_type": "dialect_identification",
+      "dialect": "bern",
+      "canon_dialect": "bern",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S120",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "**Analyzing the Swiss German Dialect**\n\nOkay, the user wants me to pinpoint the Swiss German dialect of this sentence: \"Im Kapitel 17 chöme die zwöi e neue Name, also Abraham und Sara über.\" Right, let's break this down.\n\nFirst, I need to look at the vocabulary and the spelling. \"chöme\" – that's a c",
+      "predicted": "D",
+      "correct": "C",
+      "score": 0,
+      "is_correct": false,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "echo_exact",
+      "refused": false,
+      "reply_lang": "en"
+    },
+    {
+      "item_id": "D015",
+      "task_type": "dialect_identification",
+      "dialect": "walser",
+      "canon_dialect": "walser",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S126",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "**Analyzing the Swiss German Dialect**\n\nOkay, so I need to pinpoint the specific Swiss German dialect used in this sentence: \"Di Gmäind Chlooschtärsch ischt mit dr Rhätischä Bahn guet ärschlossän.\" Let's break this down.\n\nFirst, I see the word \"Gmäind.\" That's a clear indicator. \"Gemeinde\" in Standa",
+      "predicted": "C",
+      "correct": "D",
+      "score": 0,
+      "is_correct": false,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": false,
+      "reply_lang": "chde"
+    },
+    {
+      "item_id": "D016",
+      "task_type": "dialect_identification",
+      "dialect": "valais",
+      "canon_dialect": "valais",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S123",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "**Analyzing the Swiss German Dialect**\n\nOkay, the user wants me to pinpoint the Swiss German dialect of this sentence: \"Dur ds Taal vaner Lienne fiert der Füesswäg zum Rawilpass.\" Right, let's break this down. First, I need to understand the linguistic features of each option: Wallisertiitsch, Basel",
+      "predicted": "C",
+      "correct": "A",
+      "score": 0,
+      "is_correct": false,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": false,
+      "reply_lang": "en"
+    },
+    {
+      "item_id": "D017",
+      "task_type": "dialect_identification",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S110",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "**Analyzing the Swiss German Dialect**\n\nOkay, so I need to pinpoint the specific Swiss German dialect used in this sentence: \"D' Dämpfi isch bis in d' sibziger Joor in de Schwiinemascht zum gare vo Grumbiire iigsetzt worde.\" Let's break this down.\n\nFirst, I see the use of \"isch\" for \"is\" and \"Joor\" ",
+      "predicted": "C",
+      "correct": "B",
+      "score": 0,
+      "is_correct": false,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": false,
+      "reply_lang": "chde"
+    },
+    {
+      "item_id": "D018",
+      "task_type": "culture_in_dialect",
+      "dialect": "zürich",
+      "canon_dialect": "zurich",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "easy",
+      "source_id": "S133",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants to know the number of members of the Swiss Federal Council based on the provided sentence.\n\n1.  **Analyze the sentence:** \"Dr Bundesrat hät sibe Mitgliider, wo jedes für sich au wider Bundesrat oder Bundesrätin gheisst.\"\n    *   \"Dr Bundesrat\" refers to the Federal Council (Swiss Fede",
+      "predicted": "B",
+      "correct": "B",
+      "score": 1,
+      "is_correct": true,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": false,
+      "reply_lang": "chde"
+    },
+    {
+      "item_id": "D019",
+      "task_type": "culture_in_dialect",
+      "dialect": "zürich",
+      "canon_dialect": "zurich",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "hard",
+      "source_id": "S133",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to answer a multiple-choice question based on a Swiss German sentence.\n\n**Sentence Analysis:**\n\"De Bundespräsident hät als «erschte under Gliiche» (primus inter pares) kei wiiteri Rächt, sondern erfüllt Repräsentationsuufgabe und leitet d Bundesratssitzige.\"\n\nTranslation:\n\"The Fede",
+      "predicted": "A",
+      "correct": "D",
+      "score": 0,
+      "is_correct": false,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": false,
+      "reply_lang": "en"
+    },
+    {
+      "item_id": "D020",
+      "task_type": "culture_in_dialect",
+      "dialect": "uncertain",
+      "canon_dialect": "uncertain",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S142",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "A",
+      "predicted": "A",
+      "correct": "A",
+      "score": 1,
+      "is_correct": true,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "bare_letter",
+      "refused": false,
+      "reply_lang": "unknown"
+    },
+    {
+      "item_id": "D021",
+      "task_type": "culture_in_dialect",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S132",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants to know the duration of the Basel Fasnacht based on the provided Swiss German sentence.\n\n1.  **Analyze the sentence:** \"D Fasnacht duurt denn gnau 72 Stund und heert drum am Donschtig Morgen am Vieri mit em Ändstraich wider uff.\"\n    *   \"D Fasnacht\" = The Fasnacht (Carnival)\n    *   ",
+      "predicted": "B",
+      "correct": "C",
+      "score": 0,
+      "is_correct": false,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": false,
+      "reply_lang": "chde"
+    },
+    {
+      "item_id": "D022",
+      "task_type": "culture_in_dialect",
+      "dialect": "bern",
+      "canon_dialect": "bern",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S119",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants to know the year when Swiss breweries displaced wine as the national drink, based on the provided sentence.\n\n1.  **Analyze the sentence:** \"1885 hei d Schwyzer Brauereie der Wy als Nationalgetränk dür ds Bier verdrängt.\"\n    *   \"1885\" is clearly the year mentioned at the beginning.\n ",
+      "predicted": "C",
+      "correct": "C",
+      "score": 1,
+      "is_correct": true,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": false,
+      "reply_lang": "en"
+    },
+    {
+      "item_id": "D023",
+      "task_type": "comprehension",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "easy",
+      "source_id": "S132",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "**Analyzing the Sentence Meaning**\n\nOkay, so the user wants me to figure out the meaning of this Swiss German sentence: \"D Basler Fasnacht isch die greeschti Fasnacht in dr ganze Schwiz.\" Right, let's break this down. \"Basler Fasnacht\" clearly refers to the Basel Carnival. \"Die greeschti Fasnacht\" –",
+      "predicted": "A",
+      "correct": "B",
+      "score": 0,
+      "is_correct": false,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": false,
+      "reply_lang": "chde"
+    },
+    {
+      "item_id": "D024",
+      "task_type": "comprehension",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S132",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "**Analyzing the Sentence Meaning**\n\nOkay, so I need to figure out what this Swiss German sentence means. The sentence is: \"E Masgge isch in Basel e Goschdyymierte, aso aine won e Goschdyym und a Larven aahet.\" Right, let's break this down.\n\nFirst, \"E Masgge\" – that's clearly \"A Masgge\" in English. T",
+      "predicted": "A",
+      "correct": "D",
+      "score": 0,
+      "is_correct": false,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": false,
+      "reply_lang": "chde"
+    },
+    {
+      "item_id": "D025",
+      "task_type": "comprehension",
+      "dialect": "zürich",
+      "canon_dialect": "zurich",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "hard",
+      "source_id": "S145",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "**Analyzing the Sentence Meaning**\n\nOkay, so I need to figure out what this Swiss German sentence means. The sentence is: \"Er isch au gäge d Räislöiferei ufträtte, also s Verschicke vo Landslüt as Söldner i frömdi Chrieg, wo d Innerschwyzer Arischtokraty finanziell starch devo profitiert hät.\"\n\nLet'",
+      "predicted": "B",
+      "correct": "B",
+      "score": 1,
+      "is_correct": true,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": false,
+      "reply_lang": "chde"
+    },
+    {
+      "item_id": "D026",
+      "task_type": "comprehension",
+      "dialect": "zürich",
+      "canon_dialect": "zurich",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "hard",
+      "source_id": "S133",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "A",
+      "predicted": "A",
+      "correct": "A",
+      "score": 1,
+      "is_correct": true,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "bare_letter",
+      "refused": false,
+      "reply_lang": "unknown"
+    },
+    {
+      "item_id": "D027",
+      "task_type": "comprehension",
+      "dialect": "bern",
+      "canon_dialect": "bern",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S119",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate the Swiss German sentence: \"Wil ou Wy wird fermentiert u trotzdäm wird Wy nid brout sondern kelteret.\"\n\nLet's break it down:\n- \"Wil ou Wy\" = Wine or Beer (literally \"Wine or Beer\")\n- \"wird fermentiert\" = is fermented\n- \"u trotzdäm\" = and nevertheless / and despite that",
+      "predicted": "A",
+      "correct": "A",
+      "score": 1,
+      "is_correct": true,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": true,
+      "reply_lang": "chde"
+    },
+    {
+      "item_id": "D028",
+      "task_type": "comprehension",
+      "dialect": "valais",
+      "canon_dialect": "valais",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "medium",
+      "source_id": "S123",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate the Swiss German sentence: \"Dr tradizionell Dialäkt va Ayent gcheert zum Frankoprovenzalischu.\"\n\nLet's break it down:\n- \"Dr tradizionell Dialäkt\" = The traditional dialect\n- \"va Ayent\" = of Ayent (a place name)\n- \"gcheert\" = belongs/is classified (imperfect form of \"ge",
+      "predicted": "D",
+      "correct": "D",
+      "score": 1,
+      "is_correct": true,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": true,
+      "reply_lang": "chde"
+    },
+    {
+      "item_id": "D029",
+      "task_type": "comprehension",
+      "dialect": "walser",
+      "canon_dialect": "walser",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "hard",
+      "source_id": "S126",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "The user wants me to translate a sentence in Swiss German (Alemannic dialect) into English and select the correct meaning from the given options.\n\n**Swiss German Sentence:** \"Sit dm 9. Dezembär 2005 chund Chlooschtärsch dür dn Gotschnä-Umfahrigs-Tunell vam Durchgangsvärchehr entlaschtät.\"\n\n**Breakdo",
+      "predicted": "A",
+      "correct": "A",
+      "score": 1,
+      "is_correct": true,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": true,
+      "reply_lang": "en"
+    },
+    {
+      "item_id": "D030",
+      "task_type": "comprehension",
+      "dialect": "basel",
+      "canon_dialect": "basel",
+      "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
+      "difficulty": "hard",
+      "source_id": "S143",
+      "validated_by": null,
+      "model": "8b",
+      "api_failed": false,
+      "response_excerpt": "**Analyzing the Meaning of \"Idiotikon\"**\n\nOkay, so the user wants me to figure out what \"Idiotikon\" means based on this Swiss German sentence. Let's break it down. The sentence says, \"Idiotikon isch en alts Wort für es Wörterbuech, wo die Wort drinstönd, wo für e bistimmti Landschaft tipisch sind, a",
+      "predicted": "C",
+      "correct": "C",
+      "score": 1,
+      "is_correct": true,
+      "scoring_method": "mcq_exact",
+      "parse_reason": "label_forward",
+      "refused": false,
+      "reply_lang": "chde"
+    }
+  ],
+  "duration_s": 213.8
+}
