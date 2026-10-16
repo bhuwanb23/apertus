@@ -75,6 +75,8 @@ tags:
   - dialect
   - cultural-values
   - hackapertus
+  - track-1b
+  - swiss-voices
 pretty_name: Swiss Reality Check
 size_categories:
   - n<1K
@@ -82,29 +84,39 @@ size_categories:
 
 # Swiss Reality Check
 
+**Hack Apertus · Online Phase (1–16 Oct 2026)**  
+**Track 1 — Apertus Readiness · Challenge 1B: Swiss Voices**  
+*Localising Apertus to Swiss Languages, Knowledge and Values*
+
+| | |
+|---|---|
+| **Team** | Swiss Reality Check · solo · Bhuwan B (`bhuwanb23`) |
+| **Problem statement** | Evaluate how well Apertus handles Swiss reality: transcribe local dialects, test domain-specific Swiss knowledge, and assess whether responses respect Swiss cultural norms and values. |
+| **Models** | [`swiss-ai/Apertus-v1.5-8B`](https://huggingface.co/swiss-ai/Apertus-v1.5-8B) (measured) · [`swiss-ai/Apertus-v1.5-70B`](https://huggingface.co/swiss-ai/Apertus-v1.5-70B) (designed for; **not run**) |
+| **Code** | https://github.com/bhuwanb23/apertus |
+| **Jury PDF** | `swiss_reality_check_report.pdf` (≤6 pages) |
+
 Open benchmark for **Swiss knowledge**, **cultural values / framing**, and
-**Alemannic (Swiss German) dialect**, built for Hack Apertus Track 1B.
+**Alemannic (Swiss German) dialect**.
 
 - **120** knowledge MCQs (84 development / 36 sealed test)
 - **30** values scenarios + multilingual renderings
 - **30** dialect items (unvalidated — `validated_by: null`)
 - **100** source pages (registry + raw excerpts) for RAG
 
-## Measured result (not part of the training labels)
+## Measured result (not training labels)
 
-On the sealed knowledge test set with **Apertus 1.5 8B** (Q4_K_M):
+Sealed knowledge test, **Apertus 1.5 8B** (Q4_K_M, llama.cpp, T=0):
 
 | Arm | Accuracy |
 |---|---|
 | Baseline | 55.6% (20/36) |
 | BM25 RAG (`top_k=3`) | 86.1% (31/36) |
 
-Paired Δ **+30.6 pp**, McNemar p=0.001.
+Paired Δ **+30.6 pp**, McNemar p=0.001. Dev transfer: 48.8% → 83.3%.
 
 **Apertus 70B was not evaluated** (8 GB VRAM). Do not treat missing 70B
 numbers as implied scores.
-
-Full disclosures: see `DATASHEET.md` and `results/statistical_report.md`.
 
 ## Files
 
@@ -113,18 +125,17 @@ knowledge/   JSON MCQs + stats
 values/      scenarios, rubric, multilingual pairs
 dialect/     items + scoring protocol
 sources/     registry.csv + raw_pages/
-results/     sealed-test statistical report + charts/
+charts/      PNG figures for the jury report
+results/     sealed-test statistical report
+swiss_reality_check_report.pdf
+DATASHEET.md · LICENSE
 ```
 
 ## License
 
 MIT (see `LICENSE`). Alemannic Wikipedia excerpts in `sources/raw_pages/`
 that originate from als.wikipedia.org remain under **CC BY-SA 4.0**.
-
-## Code
-
-Evaluation harness and RAG pipeline:
-https://github.com/bhuwanb23/apertus
+Apertus model weights remain under their Apache-2.0 model licenses.
 """
 
 
