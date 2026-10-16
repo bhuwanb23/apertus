@@ -1,0 +1,33 @@
+{
+  "text": "",
+  "content": "",
+  "reasoning": "",
+  "spent_all_tokens_on_reasoning": false,
+  "ok": false,
+  "error": "URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>",
+  "attempt": 3,
+  "usage": {},
+  "finish_reason": null,
+  "request_params": {
+    "model": "apertus-v1.5-8b-text-q4_k_m",
+    "backend": "http",
+    "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42,
+    "max_tokens": 2048
+  },
+  "provenance": {
+    "model_key": "8b",
+    "model_id": "apertus-v1.5-8b-text-q4_k_m",
+    "backend": "http",
+    "api_base": "http://127.0.0.1:8080/v1",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42,
+    "max_tokens": 2048,
+    "is_mock": false,
+    "prompt_version": "1.1"
+  },
+  "timestamp": "2026-10-16T11:22:10+00:00"
+}
