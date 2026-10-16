@@ -1,7 +1,7 @@
 # SHOT LIST — Swiss Reality Check demo (2:30 screen recording + VO)
 
 Prep sheet for the recorder. Nothing here has been recorded yet.
-Pace reference: `video/script.md` — 346 spoken words, 2:29 at 140 wpm.
+Pace reference: `video/script.md` — 352 spoken words, 2:31 at 140 wpm.
 
 ---
 
@@ -31,7 +31,7 @@ Never navigate, never open a file, never start a run on camera.
 ### Never show on camera
 
 - `data/knowledge/knowledge_test.json` — do not open it, do not screenshot it.
-- Any screen containing `sealed test set SHA-256` or the append-only access log **except** during the deliberate disclosure beat at 2:10 (see §4).
+- Any screen containing `sealed test set SHA-256` or the append-only access log **except** during the deliberate disclosure beat at 2:10 (see Section 4).
 - The values score `1.096 / 2.0` — **unless** the label `self-judged — 8B judged 8B` is on screen simultaneously.
 
 ---
@@ -64,16 +64,16 @@ Never navigate, never open a file, never start a run on camera.
 
 | Time | Section | Screen | Action | VO beat |
 |---|---|---|---|---|
-| 0:00–0:12 | HOOK | Terminal → dataset question | Static terminal frame. Hard cut to one question, full frame, options visible. Hold still. | "names a European institution… Fluent. Confident. Completely wrong." |
-| 0:12–0:25 | BENCHMARK | VS Code `knowledge_dev.json` | Slow scroll **upward** through the file, stop on one question. | "120 multiple-choice questions across six categories" |
+| 0:00–0:12 | HOOK | Terminal → dataset question | Static terminal frame. Hard cut to one question, full frame, options visible. Hold still. | "names a European institution, not the Swiss one… Fluent. Confident. Wrong." |
+| 0:12–0:25 | BENCHMARK | VS Code `knowledge_dev.json` | Slow scroll **upward** through the file, stop on one question. | "A hundred and twenty multiple-choice questions across six categories" |
 | 0:25–0:40 | BENCHMARK | Same, zoom to `source_url` | Highlight/underline the URL field. | "every distractor is a real answer from Germany or the EU" |
 | 0:40–0:55 | FINDING | `fig1_overall_accuracy.svg` | Static. Point at the 55.6 bar and the 25% chance line with the cursor. | "fifty-five point six percent… chance is twenty-five" |
-| 0:55–1:10 | FINDING | `fig1_overall_accuracy.svg` (hold) → or a simple text card "30 dialect items · 15 refused" | If using a card, it must read: **30 items · 15 refused or not understood · MCQ 50% · free translation 0.0/2.0** | "on fifteen of them — half — it refused" |
-| 1:10–1:30 | FIX | Terminal, `fix/rag/` | Frozen output. Highlight one retrieved chunk and its source label. | "top three retrieved chunks ninety point five percent of the time" |
-| 1:30–1:45 | FIX | Same | Cursor moves from chunk → into prompt. | "Plain BM25… no fine-tuning… works on any model" |
-| 1:45–2:00 | RESULT | `fig3_dev_to_test.svg` → `fig1_overall_accuracy.svg` | Dev bars first, then cut to the overall chart. | "reserved test set… 86.1… plus thirty point six points" |
-| 2:00–2:10 | RESULT | `fig2_category_intervals.svg` | **Hold. Let the viewer see the intervals crossing zero.** No pointer. | "every interval crosses zero — so we claim no category" |
-| 2:10–2:20 | CLOSE / disclosure | Repo tree, then a disclosure card | Disclosure card text, verbatim: **"The sealed test set was opened ~27 times (runner bug). Reserved until the improvement was frozen. Every access is in the append-only log."** | "the sealed test set was opened more than once… a runner bug" |
+| 0:55–1:10 | FINDING | `fig1_overall_accuracy.svg` (hold) → or a text card | Card text, verbatim: **30 dialect items · 15 refused or not understood · MCQ 50% · free translation 0.0/2.0** | "on fifteen — half — it refused" |
+| 1:10–1:30 | FIX | Terminal, `fix/rag/` | Frozen output. Highlight one retrieved chunk and its source label. | "the correct source was in the top three retrieved chunks ninety point five percent of the time" |
+| 1:30–1:45 | FIX | Same | Cursor moves from chunk → into prompt. | "Plain BM25… No fine-tuning… works on any model" |
+| 1:45–2:00 | RESULT | `fig3_dev_to_test.svg` → `fig1_overall_accuracy.svg` | Dev bars first, then cut to the overall chart. | "a test set reserved until the improvement was finished… 86.1… plus thirty point six points" |
+| 2:00–2:10 | RESULT | `fig2_category_intervals.svg` | **Hold. Let the viewer see the intervals crossing zero.** No pointer. | "every interval crosses zero. We claim no category." |
+| 2:10–2:20 | CLOSE / disclosure | Disclosure card (see Section 4), then repo tree | Disclosure card holds for the full spoken line. | "opened more than once — about twenty-seven times — because of a runner bug" |
 | 2:20–2:30 | CLOSE | GitHub repo tree → title card | One slow scroll. Fade to `Swiss Reality Check` card. | "all open source. Reusable for any country." |
 
 ---
@@ -99,7 +99,7 @@ Greedy decoding (temp 0.0, seed 42) — repeats are reproduction attempts, not a
 **Content integrity — check these before export, every time**
 
 - [ ] **No mention of 70B** anywhere: VO, titles, cards, captions, description. 70B was dropped, not approximated. Zero cross-model or cross-scale claims.
-- [ ] **"Opened once" / "one shot"** appears nowhere. The disclosure beat (§4) is present and holds for its full duration.
+- [ ] **"Opened once" / "one shot"** appears nowhere. The disclosure beat (Section 4) is present and holds for its full duration.
 - [ ] **No dominant error mode** is claimed or implied. Never surface `fix/error_taxonomy.md` — it carries a MOCK BACKEND banner and is unresolved.
 - [ ] **No per-category win.** `fig2_category_intervals.svg` is shown *for the intervals crossing zero*. No category is named as stronger or weaker. No leaderboard, no highlighting of a single bar.
 - [ ] **Values:** either not mentioned, or `1.096 / 2.0` appears only with `self-judged — 8B judged 8B` on screen at the same time.

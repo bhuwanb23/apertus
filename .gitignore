@@ -131,4 +131,4 @@ Thumbs.db
 # crash-time backup of the preflight-incident log is ignored.
 eval/seal/access.log.preflight-incident
 models/
-submission/
+hf_dataset/

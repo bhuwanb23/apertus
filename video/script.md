@@ -1,7 +1,7 @@
 # Swiss Reality Check — Demo Voiceover Script
 
 **Hack Apertus · Track 1B "Swiss Voices"**
-Target runtime: **2:30** · Pace: **140 wpm**
+Target runtime: **2:30** · Pace: **140 wpm** · Spoken word count: **352** (= 2:31)
 Read at a calm, unhurried pace. `[SCREEN:]` cues are for the editor, not spoken.
 
 Every number below is traceable to a run in `eval/results/`. Do not ad-lib numbers.
@@ -12,11 +12,11 @@ Every number below is traceable to a run in `eval/results/`. Do not ad-lib numbe
 
 `[SCREEN: Terminal, one static frame, 40pt monospace. Hard cut to a single dataset question filling the frame.]`
 
-> Ask a Swiss model how Switzerland cooperates with NATO — it isn't a member — and it names a European institution, not the one Switzerland uses.
+> Ask a Swiss model how Switzerland cooperates with NATO — it isn't a member — and it names a European institution, not the Swiss one.
 >
 > Fluent. Confident. Wrong.
 >
-> And you'd never know.
+> You'd never know.
 
 ## 0:12 – 0:40 · THE BENCHMARK
 
@@ -24,9 +24,9 @@ Every number below is traceable to a run in `eval/results/`. Do not ad-lib numbe
 
 > So we built a benchmark where being wrong is visible. This is Apertus 1.5 8B, running locally.
 >
-> One hundred and twenty multiple-choice questions across six categories. Every answer checked against a quoted passage from an official Swiss government URL. Every distractor is a real answer from Germany or the EU.
+> A hundred and twenty multiple-choice questions across six categories. Every answer checked against a quoted official Swiss government URL. Every distractor is a real answer from Germany or the EU.
 >
-> Thirty values scenarios in German, French, Italian, Swiss German and Romansh. Thirty Swiss German dialect items.
+> Thirty values scenarios in five languages — German, French, Italian, Swiss German, Romansh. Thirty dialect items.
 
 ## 0:40 – 1:10 · THE FINDING
 
@@ -34,15 +34,15 @@ Every number below is traceable to a run in `eval/results/`. Do not ad-lib numbe
 
 > On the held-out test set, baseline accuracy was fifty-five point six percent. Chance on four options is twenty-five. So that's real signal — the model does know a lot of this.
 >
-> But the dialect arm. Thirty Swiss German questions — and on fifteen, half of them, it refused, or didn't understand the sentence at all. On the ones it did answer as multiple choice: half right. Free translation: zero out of two.
+> But the dialect arm. Thirty Swiss German questions, and on fifteen — half — it refused, or didn't understand the sentence at all. On the ones it did answer as multiple choice: half right. Free translation: zero out of two.
 
 ## 1:10 – 1:45 · THE FIX
 
 `[SCREEN: `fix/rag/` — retriever output already on screen. Highlight one retrieved chunk and its source label going into the prompt.]`
 
-> Before we built bigger, we measured where the answer already was. On the dev split, the correct source was in the top three retrieved chunks ninety point five percent of the time.
+> First we measured where the answer already was. On dev, the correct source was in the top three retrieved chunks ninety point five percent of the time.
 >
-> So the fix is retrieval. Plain BM25 — pure Python, no GPU — pulling the relevant passages from the harvested official Swiss corpus, each labelled with its source, handed to the model before it answers.
+> So the fix is retrieval. Plain BM25 — pure Python, no GPU — pulling relevant passages from the harvested official Swiss corpus, each labelled with its source, handed to the model before it answers.
 >
 > No fine-tuning. No bigger model. It works on any model.
 
@@ -50,17 +50,17 @@ Every number below is traceable to a run in `eval/results/`. Do not ad-lib numbe
 
 `[SCREEN: `fig3_dev_to_test.svg`, then `fig2_category_intervals.svg` — the intervals visibly crossing zero. Do not linger on any single category.]`
 
-> The improvement was designed on dev: forty-eight point eight to eighty-three point three. Then we froze it, and moved to a test set reserved until the improvement was finished.
+> Designed on dev: forty-eight point eight to eighty-three point three. We froze it, then moved to a test set reserved until the improvement was finished.
 >
-> On that set: fifty-five point six to eighty-six point one. Plus thirty point six points. Eleven improved, zero got worse. Exact McNemar p equals zero point zero one.
+> On that set: fifty-five point six to eighty-six point one — plus thirty point six points. Eleven improved, zero got worse, exact McNemar p equals zero point zero one.
 >
-> Per category, every interval crosses zero. So we claim no category, and rank none.
+> And per category, every interval crosses zero. We claim no category.
 
 ## 2:10 – 2:30 · THE CLOSE
 
 `[SCREEN: GitHub repo tree, one slow scroll. Fade to the title card.]`
 
-> Full disclosure, because it should be. The sealed test set was opened more than once — about twenty-seven times — because of a runner bug. It was reserved until the improvement was frozen, but the log records every access. It's in the repo.
+> Full disclosure, because it should be. The sealed test set was opened more than once — about twenty-seven times — because of a runner bug. It was reserved until the improvement was frozen, but the log records every access.
 >
 > Benchmark, corpus, harness, pipeline — all open source. Reusable for any country.
 
@@ -68,15 +68,15 @@ Every number below is traceable to a run in `eval/results/`. Do not ad-lib numbe
 
 ## Timing summary
 
-| Section | Window | Target words | ≈ @140 wpm |
+| Section | Window | Words | ≈ @140 wpm |
 |---|---|---|---|
-| HOOK | 0:00–0:12 | 32 | 0:14 |
+| HOOK | 0:00–0:12 | 31 | 0:13 |
 | THE BENCHMARK | 0:12–0:40 | 63 | 0:27 |
-| THE FINDING | 0:40–1:10 | 67 | 0:29 |
-| THE FIX | 1:10–1:45 | 74 | 0:32 |
+| THE FINDING | 0:40–1:10 | 71 | 0:30 |
+| THE FIX | 1:10–1:45 | 71 | 0:30 |
 | THE RESULT | 1:45–2:10 | 65 | 0:28 |
-| THE CLOSE | 2:10–2:30 | 49 | 0:21 |
-| **Total** | **2:30** | **350** | **2:30** |
+| THE CLOSE | 2:10–2:30 | 51 | 0:22 |
+| **Total** | **2:30** | **352** | **2:31** |
 
 If the read runs long, cut from THE BENCHMARK first — never from the disclosure beat.
 
