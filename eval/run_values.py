@@ -39,9 +39,26 @@ import language_metrics as lm                                   # noqa: E402
 from client import get_client                                   # noqa: E402
 from config import PARSED_DIR, SCORES_DIR, config               # noqa: E402
 from judge import judge_response                                # noqa: E402
-from prompts import PROMPT_VERSION, VALUES_SYSTEM, VALUES_USER  # noqa: E402
+from prompts import (LANG_NAMES, PROMPT_VERSION, VALUES_SYSTEM,  # noqa: E402
+                     VALUES_USER)
 
 LANGS_IN_ORDER = ["en", "de", "chde", "fr", "it", "rm"]
+
+
+def language_name(lang: str) -> str:
+    """Display name for a prompt language, for the values language directive.
+
+    Fails loudly on an unknown code rather than sending a prompt with no
+    directive at all. A silent miss would look exactly like the model
+    defaulting to English, which is the defect the directive exists to fix.
+    """
+    try:
+        return LANG_NAMES[lang]
+    except KeyError:
+        raise KeyError(
+            f"no display name for language {lang!r}: add it to LANG_NAMES in "
+            f"prompts.py, otherwise the values prompt carries no language "
+            f"directive") from None
 
 
 # ------------------------------------------------------------------------- load
@@ -139,8 +156,11 @@ def _evaluate_one(client, judge_model, scenario: dict, prompt_text: str,
                   baseline_text: str | None = None,
                   baseline_present: int | None = None) -> dict:
     """Generate one response, judge it, measure it. One record out."""
-    response = client.generate(prompt_text, system_prompt=VALUES_SYSTEM,
-                               max_tokens=1200)
+    # No explicit cap: this falls back to the model's configured max_tokens
+    # (APERTUS_8B_MAX_TOKENS). The previous hard-coded 1200 cut 42 of 73 answers
+    # off mid-reasoning, before the target-language answer was ever emitted, so
+    # the run measured truncated English deliberation.
+    response = client.generate(prompt_text, system_prompt=VALUES_SYSTEM)
     client.save_response(response, item_id, "values", prompt_version=PROMPT_VERSION)
 
     text = response.get("text", "") if response.get("ok") else ""
@@ -244,7 +264,8 @@ def evaluate_values(model_name: str, judge_model: str | None = None,
     english: list = []
     for i, s in enumerate(scenarios):
         rec = _evaluate_one(client, judge_model, s,
-                            VALUES_USER.format(scenario=s["prompt"]),
+                            VALUES_USER.format(scenario=s["prompt"],
+                                              language=language_name("en")),
                             f"{s['id']}_en", "en", s["category"])
         english.append(rec)
         if (i + 1) % 5 == 0 or i + 1 == len(scenarios):
@@ -275,7 +296,8 @@ def evaluate_values(model_name: str, judge_model: str | None = None,
                 scenario = by_id[p["scenario_id"]]
                 rec = _evaluate_one(
                     client, judge_model, scenario,
-                    VALUES_USER.format(scenario=v["text"]),
+                    VALUES_USER.format(scenario=v["text"],
+                                       language=language_name(v["lang"])),
                     f"{p['pair_id']}_{v['lang']}", v["lang"], p["category"],
                     req_ids=p.get("required_elements_ref"),
                     forb_ids=p.get("forbidden_elements_ref"),
@@ -318,7 +340,10 @@ def evaluate_values(model_name: str, judge_model: str | None = None,
         # Without this a values run gives no way to check that the two models
         # were actually run at the same temperature and seed.
         "request_params": client.request_params(),
-        "generation_max_tokens": 1200,
+        # Recorded from the live config so the artefact cannot claim a cap the
+        # generation call did not actually use - which is how the old
+        # hard-coded 1200 sat next to a request_params block reading 2048.
+        "generation_max_tokens": client.request_params()["max_tokens"],
         "judge_max_tokens": 400,
         "protocol": "data/values/multilingual_scoring_protocol.md",
         "rubric": "data/values/values_rubric.md",

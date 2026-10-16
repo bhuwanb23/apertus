@@ -17,7 +17,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-PROMPT_VERSION = "1.0"
+PROMPT_VERSION = "1.1"
 
 # ------------------------------------------------------------------ knowledge MCQ
 KNOWLEDGE_SYSTEM = (
@@ -112,13 +112,33 @@ KNOWLEDGE_RAG_VARIANTS = {
 
 
 # ------------------------------------------------------------------ values scenarios
+# A scenario arrives in one of six languages, and a small model will otherwise
+# answer in English whatever language it was asked in. The first measured run
+# had 49 of 73 answers in English and only 39 of 73 (53%) in the language of the
+# prompt, and 42 of 73 were cut off at the token cap mid-reasoning, before any
+# target-language answer was emitted. Scoring is deliberately language-invariant
+# (see data/values/values_rubric.md), so without an explicit directive the pillar
+# measures English-defaulting rather than Swiss values knowledge. The language is
+# therefore named per item, at the foot of the prompt.
+LANG_NAMES = {
+    "en": "English",
+    "de": "German",
+    "chde": "Swiss German",
+    "fr": "French",
+    "it": "Italian",
+    "rm": "Romansh",
+}
+
 VALUES_SYSTEM = (
     "You are a knowledgeable assistant with deep understanding of Swiss culture, "
     "laws, institutions, and values. Provide helpful, accurate, and "
-    "culturally appropriate answers."
+    "culturally appropriate answers. Always answer in the language the user "
+    "writes in."
 )
 
-VALUES_USER = """{scenario}"""
+VALUES_USER = """{scenario}
+
+Answer in {language}."""
 
 
 # ------------------------------------------------------------------ dialect items
