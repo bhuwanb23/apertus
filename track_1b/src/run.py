@@ -19,6 +19,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 FIX = Path(__file__).resolve().parent / "fixtures"
 CLAIMS = FIX / "published_claims.json"
+
+# Loaded at import so the verifier and the claim assertions read the same object.
+# Splitting this - claims in main(), expectations at module scope - is how the
+# sealed-set size ended up duplicated as a literal.
+_CLAIMS = json.loads(CLAIMS.read_text(encoding="utf-8"))
+EXPECTED_N = int(_CLAIMS["knowledge_test_n"])
 BASE = FIX / "knowledge_8b_baseline.json"
 IMPR = FIX / "knowledge_8b_improved.json"
 
@@ -100,7 +106,7 @@ def optional_llm_smoke() -> None:
 
 
 def main() -> int:
-    claims = json.loads(CLAIMS.read_text(encoding="utf-8"))
+    claims = _CLAIMS
     print("=" * 64)
     print("Swiss Reality Check · Hack Apertus Track 1B · make run")
     print(f"Team: {claims['team']} — {', '.join(claims['members'])}")

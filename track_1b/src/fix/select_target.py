@@ -120,7 +120,7 @@ def source_material() -> dict:
     Read from source_registry.csv, which is already harvested - so this question
     does not need a model, a baseline, or any further data collection.
     """
-    path = ROOT / "data" / "sources" / "source_registry.csv"
+    path = config.data_path("sources", "source_registry.csv")
     facts, sources, files = defaultdict(int), defaultdict(int), defaultdict(int)
     present = set()
     with open(path, encoding="utf-8-sig") as fh:
@@ -130,10 +130,10 @@ def source_material() -> dict:
             facts[cat] += int(r["fact_count"] or 0)
             sources[cat] += 1
             raw = (r["raw_file"] or "").split(" ")[0].split(",")[0].strip()
-            if raw and (ROOT / "data" / "sources" / "raw_pages" / raw).exists():
+            if raw and config.data_path("sources", "raw_pages", raw).exists():
                 files[cat] += 1
 
-    raw_dir = ROOT / "data" / "sources" / "raw_pages"
+    raw_dir = config.data_path("sources", "raw_pages")
     all_raw = {p.name for p in raw_dir.glob("*.txt")} if raw_dir.is_dir() else set()
 
     out = {}
