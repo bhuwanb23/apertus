@@ -1,86 +1,92 @@
 {
-  "frozen_utc": "2026-10-17T14:22:19+00:00",
-  "git_hash": "b6ef0bb61ee2848e657e8dc24fb27ddf2b79b90b",
-  "tree_hash": "e3323211bd1df199c26f5b72ae55999ed28507de7068f5193123b49264125f89",
+  "frozen_utc": "2026-10-17T14:30:44+00:00",
+  "git_hash": "4eefa2d3676671941d6d57d4525e9a0a9bfb052b",
+  "tree_hash": "7843a4176d77efdfa78a102cce48fd7f0603a59142e20b961b74effb7e440f34",
   "tree_dirty": false,
-  "note": "open-ended factuality arm complete: sealed arms staged to results/test_run, chart-index fix, PDF block inside the 6-page brief limit. Frozen on a clean tree.",
+  "note": "Makefile audit: help-text inaccuracies corrected, charts index now derived from the directory with a completeness test. No scoring, generation or grading code touched.",
   "supersedes": {
-    "git_hash": "68db135727db2b27d33cc67ddf862fcfe8b7ed1a",
-    "frozen_utc": "2026-10-17T14:22:13+00:00",
-    "tree_hash": "7a0324dd208a697d86987329867ec4dde4e7ef9a134f8183b42e4921dfbdd329",
-    "why_advanced": "open-ended factuality arm complete: sealed arms staged to results/test_run, chart-index fix, PDF block inside the 6-page brief limit. Frozen on a clean tree.",
+    "git_hash": "b6ef0bb61ee2848e657e8dc24fb27ddf2b79b90b",
+    "frozen_utc": "2026-10-17T14:22:19+00:00",
+    "tree_hash": "e3323211bd1df199c26f5b72ae55999ed28507de7068f5193123b49264125f89",
+    "why_advanced": "Makefile audit: help-text inaccuracies corrected, charts index now derived from the directory with a completeness test. No scoring, generation or grading code touched.",
     "supersedes": {
-      "git_hash": "d2f29cc352a24544f705f3fb25aa166d526da941",
-      "frozen_utc": "2026-10-17T14:18:17+00:00",
-      "tree_hash": "161c3eba43100ed280c28cb4cba9965eff75b6de0731148739d5dffec3de3e38",
-      "why_advanced": "open-ended factuality arm complete: sealed arms staged to results/test_run, chart index fix, PDF block inside the 6-page limit. The supersedes chain is now carried forward by seal.freeze() instead of being overwritten.",
+      "git_hash": "68db135727db2b27d33cc67ddf862fcfe8b7ed1a",
+      "frozen_utc": "2026-10-17T14:22:13+00:00",
+      "tree_hash": "7a0324dd208a697d86987329867ec4dde4e7ef9a134f8183b42e4921dfbdd329",
+      "why_advanced": "open-ended factuality arm complete: sealed arms staged to results/test_run, chart-index fix, PDF block inside the 6-page brief limit. Frozen on a clean tree.",
       "supersedes": {
-        "git_hash": "b32cdd3b6c2ab522b0f9c3ce3b4ca5099a3e38a3",
-        "frozen_utc": "2026-10-17T12:58:26+05:30",
-        "tree_hash": "057ad42406c3a9e357ffae22d8b41c3c7b738453ededed479c91d06969ad95ea",
-        "why_advanced": "The open-ended factuality arm was added after that freeze. It introduces a new grading model (three-way LLM judge) and new dataset fields, so the previous hash no longer identifies the code that produced the shipped openQA results.",
-        "post_measurement_changes": [
-          {
-            "file": "src/eval/open_prompt.py, src/eval/open_grade.py, src/eval/run_openqa.py",
-            "change": "new open-ended arm: options withheld, deterministic abstention filter, three-way judge",
-            "affects": "GENERATION AND GRADING - a new arm, separate from the MCQ arms",
-            "how_applied": "run over the sealed split; its own access logged in src/eval/seal/access.log",
-            "recorded_in_artefacts": "results/test_run/openqa_test_baseline_8b.json, openqa_test_rag_8b.json"
-          },
-          {
-            "file": "data/knowledge/*.json",
-            "change": "added answer, answer_variations, answer_type, reference to all 300 items",
-            "affects": "THE SEALED SPLIT - additive only",
-            "how_applied": "a field-level equivalence check proved all 90 item ids and all 10 pre-existing scored fields byte-identical before the seal was re-recorded; answer == options[correct_answer] and reference == source_quote on every item, asserted by the test suite",
-            "why": "the seal hash necessarily changes when the file gains fields; the check is what makes re-recording legitimate rather than a silent rewrite"
-          },
-          {
-            "file": "src/eval/statistical_report.py",
-            "change": "thin hooks delegating the open-ended section to openqa_report",
-            "affects": "REPORTING ONLY - no change to MCQ parsing, scoring or generation"
-          },
-          {
-            "file": "src/scripts/build_submission_pdf.py",
-            "change": "open-ended block folded into page 4; the redundant per-category numeric table removed to stay within the brief's 6-page maximum",
-            "affects": "PRESENTATION ONLY - all removed numbers remain in Figure 4 and in results/final_scores/statistical_report.md"
-          }
-        ],
-        "scoring_files_touched": [
-          "src/eval/open_grade.py"
-        ],
-        "mcq_scoring_unchanged": "No file on the multiple-choice scoring path was modified by this feature. The MCQ arms remain produced at their original commits; the earlier chain of parser and seal-access changes is preserved in the nested 'supersedes' entry of the prior freeze.",
-        "prior_chain": {
-          "git_hash": "7b00bb3e30c9f025c5d09d3584c4872bb5e59a69",
-          "frozen_utc": "2026-10-17T06:51:44+00:00",
-          "why_advanced": "The measurement was taken at the superseded hash. Two changes were made afterwards and are recorded here rather than being silently absorbed into the new hash.",
+        "git_hash": "d2f29cc352a24544f705f3fb25aa166d526da941",
+        "frozen_utc": "2026-10-17T14:18:17+00:00",
+        "tree_hash": "161c3eba43100ed280c28cb4cba9965eff75b6de0731148739d5dffec3de3e38",
+        "why_advanced": "open-ended factuality arm complete: sealed arms staged to results/test_run, chart index fix, PDF block inside the 6-page limit. The supersedes chain is now carried forward by seal.freeze() instead of being overwritten.",
+        "supersedes": {
+          "git_hash": "b32cdd3b6c2ab522b0f9c3ce3b4ca5099a3e38a3",
+          "frozen_utc": "2026-10-17T12:58:26+05:30",
+          "tree_hash": "057ad42406c3a9e357ffae22d8b41c3c7b738453ededed479c91d06969ad95ea",
+          "why_advanced": "The open-ended factuality arm was added after that freeze. It introduces a new grading model (three-way LLM judge) and new dataset fields, so the previous hash no longer identifies the code that produced the shipped openQA results.",
           "post_measurement_changes": [
             {
-              "file": "src/eval/run_knowledge.py",
-              "change": "strip_control_markers() - parse the chat-template end-of-turn marker out of served answers",
-              "affects": "SCORING",
-              "how_applied": "re-derived from saved raw responses via src/eval/rescore.py; no regeneration",
-              "recorded_in_artefacts": "rescored=true, parser_revision=2.0",
-              "why": "49 of 90 sealed baseline answers were being scored as PARSE_ERROR (wrong) when they were the model's bare letter wrapped in transport scaffolding"
+              "file": "src/eval/open_prompt.py, src/eval/open_grade.py, src/eval/run_openqa.py",
+              "change": "new open-ended arm: options withheld, deterministic abstention filter, three-way judge",
+              "affects": "GENERATION AND GRADING - a new arm, separate from the MCQ arms",
+              "how_applied": "run over the sealed split; its own access logged in src/eval/seal/access.log",
+              "recorded_in_artefacts": "results/test_run/openqa_test_baseline_8b.json, openqa_test_rag_8b.json"
             },
             {
-              "file": "src/eval/run_knowledge.py, src/fix/rag/run_rag_eval.py",
-              "change": "seal-access logging on the test split",
-              "affects": "AUDIT TRAIL ONLY - does not touch parsing, scoring or generation",
-              "how_applied": "added after these runners had already been driven through them",
-              "consequence": "the headline paired run is absent from src/eval/seal/access.log; disclosed in technical_report.md section 5"
+              "file": "data/knowledge/*.json",
+              "change": "added answer, answer_variations, answer_type, reference to all 300 items",
+              "affects": "THE SEALED SPLIT - additive only",
+              "how_applied": "a field-level equivalence check proved all 90 item ids and all 10 pre-existing scored fields byte-identical before the seal was re-recorded; answer == options[correct_answer] and reference == source_quote on every item, asserted by the test suite",
+              "why": "the seal hash necessarily changes when the file gains fields; the check is what makes re-recording legitimate rather than a silent rewrite"
             },
             {
-              "file": "src/eval/generate_charts.py, src/eval/narrative.py, src/run.py, src/scripts/*",
-              "change": "derived n / recall / split sizes instead of literals",
-              "affects": "FIGURES AND PROSE ONLY"
+              "file": "src/eval/statistical_report.py",
+              "change": "thin hooks delegating the open-ended section to openqa_report",
+              "affects": "REPORTING ONLY - no change to MCQ parsing, scoring or generation"
+            },
+            {
+              "file": "src/scripts/build_submission_pdf.py",
+              "change": "open-ended block folded into page 4; the redundant per-category numeric table removed to stay within the brief's 6-page maximum",
+              "affects": "PRESENTATION ONLY - all removed numbers remain in Figure 4 and in results/final_scores/statistical_report.md"
             }
           ],
           "scoring_files_touched": [
-            "src/eval/run_knowledge.py",
-            "src/fix/rag/retriever.py",
-            "src/fix/rag/run_rag_eval.py"
+            "src/eval/open_grade.py"
           ],
-          "generation_code_still_reproducible_from": "7b00bb3e30c9f025c5d09d3584c4872bb5e59a69"
+          "mcq_scoring_unchanged": "No file on the multiple-choice scoring path was modified by this feature. The MCQ arms remain produced at their original commits; the earlier chain of parser and seal-access changes is preserved in the nested 'supersedes' entry of the prior freeze.",
+          "prior_chain": {
+            "git_hash": "7b00bb3e30c9f025c5d09d3584c4872bb5e59a69",
+            "frozen_utc": "2026-10-17T06:51:44+00:00",
+            "why_advanced": "The measurement was taken at the superseded hash. Two changes were made afterwards and are recorded here rather than being silently absorbed into the new hash.",
+            "post_measurement_changes": [
+              {
+                "file": "src/eval/run_knowledge.py",
+                "change": "strip_control_markers() - parse the chat-template end-of-turn marker out of served answers",
+                "affects": "SCORING",
+                "how_applied": "re-derived from saved raw responses via src/eval/rescore.py; no regeneration",
+                "recorded_in_artefacts": "rescored=true, parser_revision=2.0",
+                "why": "49 of 90 sealed baseline answers were being scored as PARSE_ERROR (wrong) when they were the model's bare letter wrapped in transport scaffolding"
+              },
+              {
+                "file": "src/eval/run_knowledge.py, src/fix/rag/run_rag_eval.py",
+                "change": "seal-access logging on the test split",
+                "affects": "AUDIT TRAIL ONLY - does not touch parsing, scoring or generation",
+                "how_applied": "added after these runners had already been driven through them",
+                "consequence": "the headline paired run is absent from src/eval/seal/access.log; disclosed in technical_report.md section 5"
+              },
+              {
+                "file": "src/eval/generate_charts.py, src/eval/narrative.py, src/run.py, src/scripts/*",
+                "change": "derived n / recall / split sizes instead of literals",
+                "affects": "FIGURES AND PROSE ONLY"
+              }
+            ],
+            "scoring_files_touched": [
+              "src/eval/run_knowledge.py",
+              "src/fix/rag/retriever.py",
+              "src/fix/rag/run_rag_eval.py"
+            ],
+            "generation_code_still_reproducible_from": "7b00bb3e30c9f025c5d09d3584c4872bb5e59a69"
+          }
         }
       }
     }
