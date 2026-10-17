@@ -358,5 +358,545 @@
     "language": "en",
     "difficulty": "hard",
     "notes": "Co-parental leave runs for two weeks: 14 daily allowances and ten days off work, paid at 80% of earnings capped at CHF 220/day. It must be used within six months of the birth."
+  },
+  {
+    "id": "K211",
+    "category": "health",
+    "question": "Under the conditions listed on ch.ch, how many months must a mother have been insured under the OASI/DI scheme before the birth to be entitled to maternity allowance?",
+    "options": {
+      "A": "Nine months prior to the birth",
+      "B": "Three months prior to the birth",
+      "C": "Twelve months prior to the birth",
+      "D": "Twenty-four months prior to the birth"
+    },
+    "correct_answer": "A",
+    "source_id": "S024",
+    "source_url": "https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/",
+    "source_quote": "You were insured under the OASI/DI scheme for the nine months prior to the birth.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps the OASI/AHV lettering variant (the page says OASI/DI here, OASI/AHV on the paternity side) and the 3/6/12/24-month alternatives a non-expert would guess."
+  },
+  {
+    "id": "K212",
+    "category": "health",
+    "question": "Within what period after giving birth is a mother in Switzerland not allowed to return to work?",
+    "options": {
+      "A": "The first four weeks after the birth",
+      "B": "The first eight weeks after the birth",
+      "C": "The first twelve weeks after the birth",
+      "D": "The first six weeks after the birth"
+    },
+    "correct_answer": "B",
+    "source_id": "S024",
+    "source_url": "https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/",
+    "source_quote": "You are not allowed to return to work in the first eight weeks after the birth.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps confusion with the 14-week maternity leave itself and with the 16-week dismissal protection; 4/6/12 weeks are the plausible wrong figures."
+  },
+  {
+    "id": "K213",
+    "category": "health",
+    "question": "Under which circumstance is a Swiss mother's period of claimable maternity benefits extended, and by how much at most?",
+    "options": {
+      "A": "If the newborn must stay in hospital for more than 21 days directly after the birth, extended by a maximum of 56 days",
+      "B": "If the newborn must stay in hospital for more than 14 days directly after the birth, extended by a maximum of 28 days",
+      "C": "If the newborn must stay in hospital for more than 14 days directly after the birth, extended by a maximum of 56 days",
+      "D": "If the newborn must stay in hospital for more than 28 days directly after the birth, extended by a maximum of 84 days"
+    },
+    "correct_answer": "C",
+    "source_id": "S024",
+    "source_url": "https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/",
+    "source_quote": "If your newborn has to stay in hospital for more than 14 days directly after the birth, the period for which you can claim maternity benefits is extended by a maximum of 56 days, provided that you return to work when your maternity leave ends.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Two-figure item (trigger threshold + extension). Distractors shift either the 14-day hospital trigger or the 56-day extension while keeping the other number right, and the last one shifts both. Also traps the unpaid two-week extension as a distractor-shaped confusion."
+  },
+  {
+    "id": "K214",
+    "category": "health",
+    "question": "A mother in Switzerland extends her maternity leave by the two weeks available beyond the standard 14-week period. What does she receive for those two additional weeks?",
+    "options": {
+      "A": "Maternity allowance at half the usual rate",
+      "B": "The same maternity allowance as for the first 14 weeks",
+      "C": "Maternity allowance at 80% of earnings, capped at CHF 220 per day",
+      "D": "Nothing - no benefits are paid for the two additional weeks"
+    },
+    "correct_answer": "D",
+    "source_id": "S024",
+    "source_url": "https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/",
+    "source_quote": "You have the right to extend your maternity leave by two weeks beyond the standard 14-week period. However, you will not receive benefits for those two additional weeks.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps the 80%/CHF 220 allowance figures lifted from the standard maternity allowance rule; the extension is unpaid."
+  },
+  {
+    "id": "K215",
+    "category": "health",
+    "question": "In Switzerland, if the mother dies within 14 weeks of the child's birth, how much further leave is the surviving spouse entitled to?",
+    "options": {
+      "A": "A further 14 weeks",
+      "B": "A further two weeks",
+      "C": "A further four weeks",
+      "D": "A further eight weeks"
+    },
+    "correct_answer": "A",
+    "source_id": "S024",
+    "source_url": "https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/",
+    "source_quote": "If the mother dies within 14 weeks of the child's birth, the surviving spouse is entitled to a further 14 weeks' leave.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Traps the mirror-image rule on the same page: if the father or spouse of the mother dies within six months, the mother gets only two additional weeks. 'two weeks' is the confident wrong pick."
+  },
+  {
+    "id": "K216",
+    "category": "health",
+    "question": "Which group is not subject to the mandatory Swiss LPP/BVG occupational benefits scheme?",
+    "options": {
+      "A": "Salaried persons with a job contract of unlimited duration",
+      "B": "The self-employed",
+      "C": "Salaried persons working at least 50 per cent of full time for a company",
+      "D": "Salaried persons on contracts longer than three months"
+    },
+    "correct_answer": "B",
+    "source_id": "S023",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
+    "source_quote": "Certain groups of people are not subject to the mandatory scheme: the self-employed, salaried persons with a job contract that does not exceed three months, family members of a person operating an agricultural establishment in which they are employed, persons who are disabled to at least 70 % according to the provisions of the AI.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The other three exempt groups (short contracts, agricultural family members, 70 % disabled) are real exemptions, so a distractor naming any of them would also be defensible; instead the distractors name categories that ARE covered, which is what a non-expert would wrongly believe."
+  },
+  {
+    "id": "K217",
+    "category": "health",
+    "question": "Under the Swiss LPP/BVG, from what point are additional retirement savings made for an employee?",
+    "options": {
+      "A": "From the employee's 17th birthday",
+      "B": "From 1 January after the employee reaches the age of 20",
+      "C": "From 1 January after the employee reaches the age of 24",
+      "D": "From the employee's 18th birthday"
+    },
+    "correct_answer": "C",
+    "source_id": "S023",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
+    "source_quote": "The obligation to take out insurance sets in with gainful employment, after reaching 17 at the earliest. Until the employee reaches the age of 24, contributions only cover the risks of death and disability. From 1 January after the employee reaches the age of 24, additional savings are made for the retirement pension.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Traps the two other ages on the same passage (17 = entry into the scheme, 18 = entry into savings elsewhere framed), and the off-by-one of 'at 24' vs 'from the 1 January after 24'."
+  },
+  {
+    "id": "K218",
+    "category": "health",
+    "question": "How does the Swiss state contribute to the financing of second-pillar pension funds?",
+    "options": {
+      "A": "By paying a fixed share of each fund's annual expenditure",
+      "B": "By guaranteeing the conversion factor used when the accumulated capital is turned into a pension",
+      "C": "By paying a direct per-person annual subsidy into the fund of the person's employer",
+      "D": "Only indirectly, by granting tax exemption on the contributions and on second-pillar assets"
+    },
+    "correct_answer": "D",
+    "source_id": "S023",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
+    "source_quote": "The state contributes only indirectly to the financing of pension funds, by granting tax exemption on the contributions and 2nd pillar assets.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps the assumption that the state co-funds the second pillar like it does the first; tax exemption is the only state support the page describes."
+  },
+  {
+    "id": "K219",
+    "category": "health",
+    "question": "Under the collective financing principle of the LPP/BVG, what must an employer's contribution be?",
+    "options": {
+      "A": "At least equal to the sum of contributions paid by all the employees",
+      "B": "At least half of the sum of contributions paid by all the employees",
+      "C": "Equal to that individual employee's contribution and to no more",
+      "D": "Any amount agreed with the fund, provided it is disclosed in the fund's accounts"
+    },
+    "correct_answer": "A",
+    "source_id": "S023",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
+    "source_quote": "The LPP/BVG is based on the principle of collective financing: the contribution of the employer must be at least equal to the sum of contributions paid by all the employees.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Traps the common belief that the employer pays exactly the employee's own share, and the 50/50-style split that belongs to OASI."
+  },
+  {
+    "id": "K220",
+    "category": "health",
+    "question": "Under the LPP/BVG, early retirement is possible from the age of 63, but an occupational benefits institution may set a lower qualifying age. How low may that age go?",
+    "options": {
+      "A": "55",
+      "B": "58",
+      "C": "60",
+      "D": "57"
+    },
+    "correct_answer": "B",
+    "source_id": "S023",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
+    "source_quote": "Early retirement is possible from the age of 63. Occupational benefits institutions may stipulate a lower age at which benefits can be received (but no earlier than 58).",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Traps the same page's maximum deferral age of 70 and the reference age of 65; 55/57/60 are plausible floors a non-expert would propose."
+  },
+  {
+    "id": "K221",
+    "category": "health",
+    "question": "Who is covered by the mandatory Swiss old-age and survivors' insurance (OASI) scheme?",
+    "options": {
+      "A": "Only Swiss citizens who reside in Switzerland",
+      "B": "Only persons in paid employment in Switzerland",
+      "C": "Anyone who lives or works in Switzerland, regardless of nationality, including people not in paid work",
+      "D": "Only Swiss citizens and cross-border commuters who are in paid employment"
+    },
+    "correct_answer": "C",
+    "source_id": "S022",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-insurance-system",
+    "source_quote": "As a general rule, anyone who lives or works in Switzerland, regardless of their nationality, is covered by the mandatory old-age and survivors' insurance scheme. You are also covered if you are not in paid work, e.g. stay-at-home spouses and students.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps the citizenship test and the paid-employment test - the two most common non-Swiss assumptions about a national insurance scheme."
+  },
+  {
+    "id": "K222",
+    "category": "health",
+    "question": "Under the OASI, from when must a person resident in Switzerland pay contributions, and how does that differ for someone already in paid work?",
+    "options": {
+      "A": "From 1 January after turning 18 in all cases; for those already working, from 1 January of the year in which they turn 16",
+      "B": "From 1 January after turning 25 in all cases; for those already working, from 1 January of the year in which they turn 20",
+      "C": "From the age of 20, but only for those in paid employment; non-employed persons begin at 25",
+      "D": "From 1 January after turning 20; for those already working, from 1 January of the year in which they turn 18"
+    },
+    "correct_answer": "D",
+    "source_id": "S022",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-insurance-system",
+    "source_quote": "If you live or work in Switzerland, you must pay OASI contributions from 1 January after you turn 20 until you reach the reference (retirement) age. If you are already working, this obligation begins on 1 January of the year in which you turn 18.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Two-age item with an inverted rule: the working person starts EARLIER (18) than the general rule (20). Distractors transplant 16/20/25 and impose a paid-employment condition the page rejects."
+  },
+  {
+    "id": "K223",
+    "category": "health",
+    "question": "According to the Federal Social Insurance Office, what is the range of the full OASI old-age pension for a person with a complete contribution record?",
+    "options": {
+      "A": "CHF 1,260 to CHF 2,520",
+      "B": "CHF 1,140 to CHF 2,280",
+      "C": "CHF 1,260 to CHF 3,780",
+      "D": "CHF 880 to CHF 2,520"
+    },
+    "correct_answer": "A",
+    "source_id": "S022",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-insurance-system",
+    "source_quote": "- minimum old-age pension: CHF 1,260\n- maximum old-age pension: CHF 2,520",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps moving one endpoint only - a CHF 880 minimum is the plausible older figure and CHF 3,780 is 1.5x the maximum."
+  },
+  {
+    "id": "K224",
+    "category": "health",
+    "question": "How are OASI contributions shared between an employee and the employee's employer in Switzerland?",
+    "options": {
+      "A": "The employee pays two thirds and the employer pays one third",
+      "B": "The employee pays half and the employer pays the other half",
+      "C": "The employer pays the whole contribution",
+      "D": "The employee pays one quarter and the employer pays three quarters"
+    },
+    "correct_answer": "B",
+    "source_id": "S022",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-insurance-system",
+    "source_quote": "- As an employee, you pay half of the contributions. Your employer pays the other half.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Traps an employer-heavy split borrowed from BVG reasoning (where the employer must at least match the employees' total), which is the natural wrong assumption here."
+  },
+  {
+    "id": "K225",
+    "category": "health",
+    "question": "Up to what annual income does the mandatory Swiss occupational pension scheme (BVG) provide cover?",
+    "options": {
+      "A": "CHF 45,360",
+      "B": "CHF 80,000",
+      "C": "CHF 90,720",
+      "D": "CHF 100,000"
+    },
+    "correct_answer": "C",
+    "source_id": "S022",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-insurance-system",
+    "source_quote": "You are subject to mandatory occupational pension contributions if you annually earn more than CHF 22,680 (as of 2025) from one employer and are older than 17 (insurance cover against the risks of invalidity and death from the age of 17; old-age insurance cover from the age 25). The mandatory insurance scheme covers annual incomes up to CHF 90,720.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Tests the upper coordination ceiling, not the CHF 22,680 entry threshold; CHF 45,360 is 2x the threshold and a plausible confusion."
+  },
+  {
+    "id": "K226",
+    "category": "health",
+    "question": "What is the range of deductibles available to adults in Swiss compulsory basic health insurance?",
+    "options": {
+      "A": "CHF 100 to CHF 2,000",
+      "B": "CHF 300 to CHF 4,000",
+      "C": "CHF 0 to CHF 2,500",
+      "D": "CHF 300 to CHF 2,500"
+    },
+    "correct_answer": "D",
+    "source_id": "S020",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-costs/",
+    "source_quote": "The lowest deductible for adults is CHF 300, the highest CHF 2,500.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Traps shifting either endpoint; the CHF 0 lower bound is the child rule on the adjacent sentence."
+  },
+  {
+    "id": "K227",
+    "category": "health",
+    "question": "Which deductibles apply to children in Swiss compulsory basic health insurance?",
+    "options": {
+      "A": "Between CHF 0 and CHF 600",
+      "B": "Between CHF 100 and CHF 500",
+      "C": "Between CHF 300 and CHF 1,000",
+      "D": "Between CHF 0 and CHF 300"
+    },
+    "correct_answer": "A",
+    "source_id": "S020",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-costs/",
+    "source_quote": "The lowest deductible for adults is CHF 300, the highest CHF 2,500. Deductibles of between CHF 0 and CHF 600 apply for children.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps transferring the adult band onto children and halving the child ceiling (S046 states children pay no deductible at all under the standard option, so CHF 0-300 is a confident wrong pick)."
+  },
+  {
+    "id": "K228",
+    "category": "health",
+    "question": "Once the annual deductible has been used up in Swiss compulsory health insurance, what share of healthcare costs does the insured person still pay?",
+    "options": {
+      "A": "Twenty per cent, capped at CHF 1,400 per year",
+      "B": "Ten per cent, capped at CHF 700 per year",
+      "C": "Ten per cent, with no annual cap",
+      "D": "Five per cent, capped at CHF 350 per year"
+    },
+    "correct_answer": "B",
+    "source_id": "S020",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-costs/",
+    "source_quote": "When the deductible has been used up you will still pay ten percent of your healthcare costs. However, this retention fee is limited to CHF 700 per year (CHF 350 for children).",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Two-figure item (coinsurance rate + annual cap). CHF 350 is the child cap, a confident wrong pick for an adult; 'no cap' is the other common misconception."
+  },
+  {
+    "id": "K229",
+    "category": "health",
+    "question": "How much does a hospitalised patient in Switzerland contribute per day towards the cost of a hospital stay?",
+    "options": {
+      "A": "CHF 5 per day",
+      "B": "CHF 25 per day",
+      "C": "CHF 15 per day",
+      "D": "CHF 50 per day"
+    },
+    "correct_answer": "C",
+    "source_id": "S020",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-costs/",
+    "source_quote": "You must pay the contribution to hospital costs if you are hospitalised. It is CHF 15 per day.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Traps treating the hospital daily contribution as a German-style flat daily fee; the page gives it as a fixed CHF, not a percentage."
+  },
+  {
+    "id": "K230",
+    "category": "health",
+    "question": "Premiums for compulsory basic health insurance in Switzerland are lower for which group?",
+    "options": {
+      "A": "People over the age of 65",
+      "B": "Employees who work at least eight hours per week",
+      "C": "Insured persons who choose the CHF 2,500 deductible",
+      "D": "Children and young adults under the age of 25"
+    },
+    "correct_answer": "D",
+    "source_id": "S020",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-costs/",
+    "source_quote": "Premiums are lower for children and young adults under the age of 25.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Traps the pensionable-age intuition that premiums fall after 65, which is where most countries' premium relief goes."
+  },
+  {
+    "id": "K231",
+    "category": "health",
+    "question": "In Switzerland, which group must take out personal accident insurance itself?",
+    "options": {
+      "A": "The self-employed",
+      "B": "Salaried employees who work from home",
+      "C": "Registered unemployed people who receive unemployment benefits",
+      "D": "Trainees"
+    },
+    "correct_answer": "A",
+    "source_id": "S021",
+    "source_url": "https://www.ch.ch/en/insurance/accident-insurance/",
+    "source_quote": "It you are self-employed you must take out personal accident insurance.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "The quote reproduces the page's grammatical slip ('It you') verbatim. Distractors are the three groups the same page says are automatically covered by an employer, Suva or the trainee scheme."
+  },
+  {
+    "id": "K232",
+    "category": "health",
+    "question": "A registered unemployed person in Switzerland who receives unemployment benefits is automatically insured against accident by which body, and how is the premium paid?",
+    "options": {
+      "A": "The person's health insurer, with the premium added to the monthly health insurance premium",
+      "B": "The Swiss National Accident Insurance Fund (Suva), with the premium deducted from the unemployment benefits",
+      "C": "The Swiss National Accident Insurance Fund (Suva), with the premium paid by the person's employer",
+      "D": "The cantonal authority, with no premium charged to the person"
+    },
+    "correct_answer": "B",
+    "source_id": "S021",
+    "source_url": "https://www.ch.ch/en/insurance/accident-insurance/",
+    "source_quote": "If you are registered unemployed, providing you receive unemployment benefits you are automatically insured via the Swiss National Accident Insurance Fund (Suva) in case of accident. The premium is deducted from your benefits.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps Suva for health insurance (B) and the employer-pays pattern that the same page gives for employees (C)."
+  },
+  {
+    "id": "K233",
+    "category": "health",
+    "question": "Under Swiss compulsory accident insurance, what does an insured person pay towards accident-related medical expenses?",
+    "options": {
+      "A": "The annual deductible only, with no retention fee",
+      "B": "A retention fee only, with no deductible",
+      "C": "Nothing - no deductible and no retention fee",
+      "D": "Both the annual deductible and the retention fee, as under basic health insurance"
+    },
+    "correct_answer": "C",
+    "source_id": "S021",
+    "source_url": "https://www.ch.ch/en/insurance/accident-insurance/",
+    "source_quote": "Your accident insurance will reimburse accident-related medical expenses. You do not have to pay a deductible or retention fee yourself.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps transplanting the KVG franchise/retention structure into accident cover; the page's following sentence makes clear that paying the deductible and retention fee applies only when insured against accident via the health insurer."
+  },
+  {
+    "id": "K234",
+    "category": "health",
+    "question": "An accident insurer pays a daily allowance of less than 80 per cent of an employee's salary. What must the employer do under Swiss accident insurance rules?",
+    "options": {
+      "A": "Pay nothing further, because the insurer's allowance replaces the salary",
+      "B": "Make up the difference and continue paying full salary in any case",
+      "C": "Make up the difference, but for a maximum of three days only",
+      "D": "Make up the difference, and if the allowance already reaches 80 per cent or more, stop paying salary"
+    },
+    "correct_answer": "D",
+    "source_id": "S021",
+    "source_url": "https://www.ch.ch/en/insurance/accident-insurance/",
+    "source_quote": "If the allowance paid by your accident insurance is lower than this figure, your employer must make up the difference. If your insurance benefits correspond to 80% of your salary or more, your employer does not have to continue paying your salary.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The quote's 'this figure' resolves to 80 per cent in the preceding sentence. Traps the assumption that the employer tops up on top of a continuing salary, and the three-day figure from the daily allowance's waiting period."
+  },
+  {
+    "id": "K235",
+    "category": "health",
+    "question": "In Switzerland, is a resident free to take compulsory basic health insurance with any authorised insurer operating in the region where they live?",
+    "options": {
+      "A": "Yes - any authorised insurer operating in the region, because insurers must offer basic insurance to everyone",
+      "B": "No - the canton assigns each municipality a single designated insurer",
+      "C": "No - only insurers operating in the person's canton of residence may be chosen",
+      "D": "Yes, but only while the insurer still has spare capacity to accept new basic-policy holders"
+    },
+    "correct_answer": "A",
+    "source_id": "S019",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-taking-out--changing--cancelling/",
+    "source_quote": "You can choose any company that operates in the region where you live. Simply register, because they are required to offer everyone basic insurance.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps the canton-assigns-the-insurer model common in neighbouring systems, and the underwriting-capacity model used for supplementary cover on the same page."
+  },
+  {
+    "id": "K236",
+    "category": "health",
+    "question": "Which authority decides whether a foreign retiree, student or diplomat living in Switzerland has to take out compulsory health insurance?",
+    "options": {
+      "A": "The Federal Social Insurance Office alone, without any canton involved",
+      "B": "The relevant agency in the person's canton or municipality, which approves any exemptions",
+      "C": "The person's employer or scholarship body",
+      "D": "The municipality in which the person was born"
+    },
+    "correct_answer": "B",
+    "source_id": "S019",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-taking-out--changing--cancelling/",
+    "source_quote": "Foreign retirees, students and diplomats do not necessarily need to take out health insurance. The relevant agency in your canton or municipality approves any exemptions.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Tests where the decision sits in Swiss federalism: canton/municipality, not the federal office and not an employer. Traps a purely federal or purely contractual decision."
+  },
+  {
+    "id": "K237",
+    "category": "health",
+    "question": "In Switzerland, may compulsory basic insurance and voluntary supplementary insurance be held with different health insurers?",
+    "options": {
+      "A": "No - both must be held with the same insurer",
+      "B": "Yes, but only if both insurers operate in the same canton",
+      "C": "Yes",
+      "D": "Yes, but supplementary cover may not be kept once basic cover is switched"
+    },
+    "correct_answer": "C",
+    "source_id": "S019",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-taking-out--changing--cancelling/",
+    "source_quote": "You can take out compulsory basic insurance and voluntary supplementary insurance from different health insurers.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Traps the bundled-policy intuition common in other systems; the page adds that switching basic cover lets you keep supplementary cover where it is."
+  },
+  {
+    "id": "K238",
+    "category": "health",
+    "question": "What must an applicant normally complete before a Swiss insurer will approve voluntary supplementary health insurance?",
+    "options": {
+      "A": "A medical examination at the insurer's expense",
+      "B": "A declaration of their assets and income",
+      "C": "Approval from a cantonal health authority",
+      "D": "A questionnaire on their health"
+    },
+    "correct_answer": "D",
+    "source_id": "S019",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-taking-out--changing--cancelling/",
+    "source_quote": "As a rule you will have to complete a questionnaire on your health before an insurer will approve supplementary health insurance for you.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps the open-enrolment rule for BASIC insurance: insurers must accept everyone for basic cover but may underwrite supplementary cover."
+  },
+  {
+    "id": "K239",
+    "category": "health",
+    "question": "Must a Swiss compulsory health insurer offer the whole range of optional deductible levels?",
+    "options": {
+      "A": "No - it does not have to offer the full range",
+      "B": "Yes - offering every optional deductible level is a legal requirement",
+      "C": "Yes for adults, but not for children",
+      "D": "Yes, but only in cantons where at least two insurers operate"
+    },
+    "correct_answer": "A",
+    "source_id": "S046",
+    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
+    "source_quote": "The health insurer does not have to offer the full range of deductibles.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps reading the published list of available deductible levels (500/1000/1500/2000/2500) as a guarantee that every insurer offers all of them."
+  },
+  {
+    "id": "K240",
+    "category": "health",
+    "question": "For which age group may a Swiss compulsory health insurer offer deductibles that differ from those it offers to adults?",
+    "options": {
+      "A": "Children below the age of 18",
+      "B": "Young adults between the ages of 19 and 25",
+      "C": "Adults over the age of 65",
+      "D": "Persons in education or training of any age"
+    },
+    "correct_answer": "B",
+    "source_id": "S046",
+    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
+    "source_quote": "It may offer different deductibles for adults and young adults (between the ages of 19 and 25).",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Tests the 19-25 young-adult band specifically; children are a separate deductible range on the same page and education/training is the hospital-contribution exemption on S020, so both are confident wrong picks."
   }
 ]

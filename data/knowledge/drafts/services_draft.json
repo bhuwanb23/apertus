@@ -502,5 +502,401 @@
     "language": "en",
     "difficulty": "medium",
     "notes": "Distinguishes proposing from deciding. C is the common error: assuming the executive settles tax treatment unilaterally."
+  },
+  {
+    "id": "K129",
+    "category": "services",
+    "question": "A traveller returning to Switzerland carries goods intended for personal use with a total value of CHF 140. What does the Swiss VAT tax-free limit imply for these goods?",
+    "options": {
+      "A": "They may be imported VAT-free.",
+      "B": "VAT at the standard rate of 8.1% is due on the whole value.",
+      "C": "VAT at the reduced rate of 2.6% is due on the whole value.",
+      "D": "Customs duties must be paid on them in addition to VAT."
+    },
+    "correct_answer": "A",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "When you return from abroad or enter Switzerland, goods up to a total value of CHF 150 may be imported VAT-free (tax-free limit), provided they are intended for your personal use or as gifts.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "The threshold is CHF 150, not the CHF 100 used by a number of other jurisdictions, and it is a VAT threshold rather than a duty-free allowance - so the duty distractor is wrong at this value."
+  },
+  {
+    "id": "K130",
+    "category": "services",
+    "question": "How often may the CHF 150 tax-free limit be claimed by a traveller entering Switzerland on the same day?",
+    "options": {
+      "A": "Once per family per day, with a child's own claim only from age six",
+      "B": "Once per person per day, children included",
+      "C": "Once per person per week, so a second crossing on the same day adds nothing",
+      "D": "Once per day for each adult, with a separate claim for each accompanying child"
+    },
+    "correct_answer": "B",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "The tax-free limit can be claimed only once per person and per day. It applies also for children.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps the assumption that the allowance is per group or per week, and the assumption that a child's own goods consume a separate claim - the children's allowance is part of the same per-person, per-day claim."
+  },
+  {
+    "id": "K131",
+    "category": "services",
+    "question": "A Swiss resident buys goods abroad purely for resale in a Swiss shop and brings them back. How are those goods treated at import?",
+    "options": {
+      "A": "They are covered by the CHF 150 tax-free limit in the same way as any other purchase made abroad",
+      "B": "They are covered by the tax-free limit as long as their total value stays below CHF 150",
+      "C": "They are subject to VAT",
+      "D": "They are subject to VAT only if their total value exceeds CHF 150"
+    },
+    "correct_answer": "C",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "Goods that are not intended for your personal use or as gifts are subject to VAT.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The allowance tests purpose first and value second; commercial goods fall outside it at any value. Distractor D is the common confusion of treating value as the only test."
+  },
+  {
+    "id": "K132",
+    "category": "services",
+    "question": "Which of the following is not counted when a traveller works out whether the CHF 150 tax-free limit is exceeded?",
+    "options": {
+      "A": "Duty-free foodstuffs bought in the aircraft's duty-free shop",
+      "B": "Tobacco products and alcoholic beverages carried in from abroad",
+      "C": "Repairs or maintenance work carried out abroad on the traveller's own private vehicle",
+      "D": "The traveller's personal effects and the fuel put into their vehicle"
+    },
+    "correct_answer": "D",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "The value of personal effects, travelling provisions and fuel for your vehicle is not included.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Personal effects, travelling provisions and fuel are excluded, whereas duty-free foodstuffs, tobacco, alcohol, household pets and work done abroad on the private vehicle all count towards the limit. The trap is transferring the duty-free-shop exemption from customs duty to the VAT threshold."
+  },
+  {
+    "id": "K133",
+    "category": "services",
+    "question": "A traveller returns with goods that stay below the CHF 150 VAT tax-free limit but exceed the duty-free allowances for alcohol. What is still payable?",
+    "options": {
+      "A": "Customs duties",
+      "B": "VAT at the standard rate of 8.1%",
+      "C": "Customs duties and VAT at the reduced rate of 2.6%",
+      "D": "Nothing further, because the CHF 150 limit covers all import charges"
+    },
+    "correct_answer": "A",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "In addition to VAT, you must pay customs duties if the goods you are carrying exceed the duty-free allowances for alcohol, tobacco products and certain foodstuffs.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The CHF 150 figure is the VAT tax-free limit; the separate duty-free allowances belong to customs duties. Distractor C mixes the two regimes and adds a rate that does not apply to alcohol."
+  },
+  {
+    "id": "K134",
+    "category": "services",
+    "question": "A traveller receives a gift abroad and declares it to Swiss customs. On what basis is the import VAT assessed for such a gift?",
+    "options": {
+      "A": "On any receipt the giver can produce, or else on a self-declared value",
+      "B": "Its market value",
+      "C": "On the nominal value printed on the gift packaging, where one exists",
+      "D": "On the recipient's own estimate of what the gift is worth to them personally"
+    },
+    "correct_answer": "B",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "Otherwise, the market value is taxed, e.g. in the case of gifts. The market value refers to the sum a third party would have had to pay to buy the item.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Purchases are taxed on the invoice, receipt or purchase contract; where there is none - gifts in particular - the market value applies, i.e. what a third party would have paid. Traps are the self-declared value and the recipient's sentimental valuation."
+  },
+  {
+    "id": "K135",
+    "category": "services",
+    "question": "Roughly how much waste does Switzerland generate in a year, according to the Federal Office for the Environment?",
+    "options": {
+      "A": "About 8 to 9 million tonnes",
+      "B": "About 30 million tonnes",
+      "C": "About 80 to 90 million tonnes",
+      "D": "About 300 million tonnes"
+    },
+    "correct_answer": "C",
+    "source_id": "S035",
+    "source_url": "https://www.bafu.admin.ch/en/state-wastemanagement",
+    "source_quote": "Overall, Switzerland generates about 80 to 90 million tonnes of waste annually, and it is fair to assume that the total quantity will continue to rise in the future.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Order-of-magnitude anchor for the whole waste topic: the headline recycling rate makes Swiss volumes sound modest, but construction and demolition account for the great majority. Distractors straddle the correct figure by roughly a decade each."
+  },
+  {
+    "id": "K136",
+    "category": "services",
+    "question": "Which activity generates the largest share of Switzerland's total waste volume?",
+    "options": {
+      "A": "Households, offices and small businesses through municipal solid waste collection",
+      "B": "Demolition of buildings, roads and railway lines",
+      "C": "Special treatment of hazardous waste",
+      "D": "Excavated and quarried materials from construction activity"
+    },
+    "correct_answer": "D",
+    "source_id": "S035",
+    "source_url": "https://www.bafu.admin.ch/en/state-wastemanagement",
+    "source_quote": "The largest share of waste in Switzerland is generated by construction activity: excavated and quarried materials comprise just under two thirds of all waste (57 million tonnes), and a fifth of the waste stems from the demolition of buildings, roads and railway lines (17 million tonnes).",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Municipal solid waste is only about 7% of the total, so the intuition imported from EU or US waste debates - that household waste dominates - inverts the Swiss picture. Demolition is large but smaller than excavation."
+  },
+  {
+    "id": "K137",
+    "category": "services",
+    "question": "Under the Swiss Waste Ordinance, from when must phosphorus be recovered from sewage sludge, animal and bone meal and reused?",
+    "options": {
+      "A": "1 January 2026",
+      "B": "1 January 2016, the year the Waste Ordinance was enacted",
+      "C": "1 January 2036, once the transition period granted by the Federal Council has run",
+      "D": "1 January 2021, five years after the Ordinance was enacted"
+    },
+    "correct_answer": "A",
+    "source_id": "S035",
+    "source_url": "https://www.bafu.admin.ch/en/state-wastemanagement",
+    "source_quote": "In that year, Switzerland became the first country in the world to make it obligatory to recover the nutrient phosphorus: from 1 January 2026, phosphorus has been recovered from sewage sludge, animal and bone meal and reused in agriculture or the chemical industry. The Federal Council has granted the cantons and the business community a 10-year period of grace.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Three dates are in play and are easy to interleave: the Ordinance and first-country claim date from 2016, the obligation bites from 1 January 2026, and a 10-year grace period runs for the cantons and industry."
+  },
+  {
+    "id": "K138",
+    "category": "services",
+    "question": "On which principle is the financing of waste disposal in Switzerland based?",
+    "options": {
+      "A": "Waste disposal is financed from general federal tax revenue collected centrally",
+      "B": "The 'polluter pays' principle",
+      "C": "The cantons and communes must cover the full cost of disposal from their own budgets",
+      "D": "Producers of packaged goods finance disposal through a federal levy on packaging"
+    },
+    "correct_answer": "B",
+    "source_id": "S035",
+    "source_url": "https://www.bafu.admin.ch/en/state-wastemanagement",
+    "source_quote": "The disposal of all waste costs Switzerland a good CHF 3 billion a year. The 'polluter pays' principle is widely applied in Switzerland, i.e. whoever creates the waste must also pay for its disposal.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The named principle matters more than the CHF 3 billion figure: whoever creates the waste pays for its disposal. Traps are the centrally funded reading and the producer-llevy model, neither of which is the stated basis."
+  },
+  {
+    "id": "K139",
+    "category": "services",
+    "question": "In 2020, approximately how much hazardous waste underwent special treatment in Switzerland or was exported for environmentally sustainable disposal?",
+    "options": {
+      "A": "About 1.85 million tonnes, all of it exported for disposal abroad",
+      "B": "About 0.5 million tonnes",
+      "C": "About 1.85 million tonnes",
+      "D": "About 7 million tonnes"
+    },
+    "correct_answer": "C",
+    "source_id": "S035",
+    "source_url": "https://www.bafu.admin.ch/en/state-wastemanagement",
+    "source_quote": "In 2020, approximately 1.85 million tonnes of hazardous waste underwent special treatment in Switzerland or was exported for environmentally sustainable disposal under strictly monitored conditions (0.5 million tonnes).",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The 0.5 million tonnes is the export subset inside the 1.85 million tonne total, so the two figures are routinely swapped. The distractor at 7 million tonnes reflects confusing hazardous waste with the hazardous fraction of municipal waste."
+  },
+  {
+    "id": "K140",
+    "category": "services",
+    "question": "Roughly how many professions can a young person in Switzerland choose from when looking for an apprenticeship?",
+    "options": {
+      "A": "About 24",
+      "B": "About 140",
+      "C": "About 2,400",
+      "D": "Over 240"
+    },
+    "correct_answer": "D",
+    "source_id": "S034",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/what-comes-after-compulsory-education/",
+    "source_quote": "How do I find an apprenticeship? In a first step, you can choose from over 240 professions. Then look for a company with an opening for an apprenticeship.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "The two nearest confusions are the order-of-magnitude errors 24 and 2,400; the distractors are chosen so that a model guessing a plausible Swiss-sounding number still lands wrong."
+  },
+  {
+    "id": "K141",
+    "category": "services",
+    "question": "In the Swiss dual apprenticeship, where does an apprentice normally acquire the practical part of the training and the theoretical basics of the profession?",
+    "options": {
+      "A": "In the host company and at the vocational school respectively",
+      "B": "At the vocational school for both, with the host company supplying only workspace and materials",
+      "C": "In the host company for both, with the vocational school offering only optional exam preparation",
+      "D": "Split between the host company and a branch training centre run by the professional organisation"
+    },
+    "correct_answer": "A",
+    "source_id": "S034",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/what-comes-after-compulsory-education/",
+    "source_quote": "In most cases, your host company will provide you with practical training and you will learn the theoretical basics of your profession at the vocational school. In some cases, you can also complete your apprenticeship full-time in a school.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The dual model with company practice and school theory; the page also notes the minority full-time school-based route. Distractor B is the German-style reading where the vocational school is the main provider, and D imports a third mandatory venue."
+  },
+  {
+    "id": "K142",
+    "category": "services",
+    "question": "What does the Swiss academic baccalaureate qualify its holder to study, and how long does the programme normally take?",
+    "options": {
+      "A": "Study at a university or a federal institute of technology, on a four-year programme",
+      "B": "Study at a university of applied sciences, on a three-year programme",
+      "C": "Study at a university or a federal institute of technology, on a two-year programme",
+      "D": "Study at a teacher training college only, on a six-year programme"
+    },
+    "correct_answer": "A",
+    "source_id": "S034",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/what-comes-after-compulsory-education/",
+    "source_quote": "You usually start baccalaureate school after the second or third year of upper-secondary level school. The study programme lasts four years in most cantons and aims to provide a good general education. Students do not learn a profession, however the completion of an academic baccalaureate gives them access to study at a university or a federal institute of technology (ETH Zurich or EPFL).",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Separates the academic baccalaureate (general education, access to university and the ETH/EPFL) from the vocational baccalaureate (access to a university of applied sciences) and from the specialised school route, which is three years plus one."
+  },
+  {
+    "id": "K143",
+    "category": "services",
+    "question": "In Switzerland, admission to a baccalaureate school depends on which factor?",
+    "options": {
+      "A": "The Confederation alone, under a uniform federal admission rule",
+      "B": "The commune alone, through a single entrance test for all cantons",
+      "C": "The canton and the type of baccalaureate",
+      "D": "The federal institute of technology the pupil intends to attend afterwards"
+    },
+    "correct_answer": "C",
+    "source_id": "S034",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/what-comes-after-compulsory-education/",
+    "source_quote": "If you want to study for a baccalaureate, you need to meet different requirements depending on the canton and the type of baccalaureate you wish to obtain, including good grades, a recommendation from your class teacher or a successful entrance examination.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Entry is cantonal and type-dependent: good grades, a class teacher's recommendation or an entrance examination. Traps are the assumption of a single federal rule and the assumption that grades alone decide."
+  },
+  {
+    "id": "K144",
+    "category": "services",
+    "question": "In which month does the Swiss school year generally begin?",
+    "options": {
+      "A": "September",
+      "B": "July",
+      "C": "January",
+      "D": "August"
+    },
+    "correct_answer": "D",
+    "source_id": "S033",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/school-and-kindergarten/",
+    "source_quote": "The school year starts in August.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Anchors the point that the school calendar is set cantonally and communally rather than by federal law - the exact holiday dates come from the commune or the school itself. September is the default imported from neighbouring systems."
+  },
+  {
+    "id": "K145",
+    "category": "services",
+    "question": "Under Swiss rules, who is responsible for getting a child to school, and when may a commune step in?",
+    "options": {
+      "A": "The parents, with commune support only where the route is very long or too dangerous",
+      "B": "The commune, which must provide transport for any child living more than two kilometres from school",
+      "C": "The canton, which arranges school transport for every child in its territory",
+      "D": "The parents, with commune transport guaranteed for any child of compulsory-school age"
+    },
+    "correct_answer": "A",
+    "source_id": "S033",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/school-and-kindergarten/",
+    "source_quote": "Getting a child to school is the responsibility of the parents. The communes only provide support if the route to school is very long or too dangerous.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Communes step in only for a very long or dangerous route, which is what Pedibus-style schemes address. The over-general distractor D sounds like a parental duty with municipal backing and is the trap for those who half-remember the rule."
+  },
+  {
+    "id": "K146",
+    "category": "services",
+    "question": "Which authority in Switzerland sets the rules and conditions for homeschooling a child of compulsory-school age?",
+    "options": {
+      "A": "The Confederation, which sets a single national home-education ordinance",
+      "B": "The canton, which sets its own rules and conditions",
+      "C": "The commune, which must first approve the arrangement in writing",
+      "D": "The school itself, which may refuse the arrangement only on academic grounds"
+    },
+    "correct_answer": "B",
+    "source_id": "S033",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/school-and-kindergarten/",
+    "source_quote": "Children can be sent to a public school or they can be homeschooled. Contact your canton for the specific rules and conditions.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Homeschooling is possible in Switzerland but the conditions are cantonal - there is no federal home-education ordinance. The federal-ordinance reading is imported from Germany, where a Bundesland ordinance framework exists."
+  },
+  {
+    "id": "K147",
+    "category": "services",
+    "question": "Under Swiss law, how much time off may an employee take for a special event such as a marriage or the birth of a child?",
+    "options": {
+      "A": "A fixed entitlement of one day per event is guaranteed throughout Switzerland",
+      "B": "A fixed entitlement of three days per event applies in every canton",
+      "C": "The employer sets the rules",
+      "D": "A statutory half-day per event applies in cantons that adopted the model rules"
+    },
+    "correct_answer": "C",
+    "source_id": "S031",
+    "source_url": "https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/",
+    "source_quote": "The law does not clearly define how many hours or days you can take off. Ask your employer about the rules that apply in your company.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The duration of these special absences is not fixed by law, unlike the minimum vacation entitlement, which is. The trap is confusing the two and assuming a uniform statutory day count for special absences."
+  },
+  {
+    "id": "K148",
+    "category": "services",
+    "question": "A cantonal public holiday falls on a Saturday, which is a non-working day for the employee. How is that holiday treated?",
+    "options": {
+      "A": "It is added to the employee's vacation entitlement for that year",
+      "B": "It is compensated with one day of time off during the same week",
+      "C": "It is compensated with a day of time off in the following week",
+      "D": "It cannot be redeemed"
+    },
+    "correct_answer": "D",
+    "source_id": "S031",
+    "source_url": "https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/",
+    "source_quote": "If a public holiday falls on a non-working day, such as a Saturday or Sunday, you cannot redeem the holiday time during the week.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "No time in lieu for a holiday landing on a non-working day - a real gap in Swiss employment law compared with systems that credit the day. Must not be conflated with the separate rule that a holiday falling during annual leave does not consume a vacation day."
+  },
+  {
+    "id": "K149",
+    "category": "services",
+    "question": "Under Swiss rules, how often may an employer shorten the daily rest period below the eleven-hour minimum, and on what condition?",
+    "options": {
+      "A": "Once a week, if the two-week average daily rest is 11 hours",
+      "B": "Once a week, at the employer's discretion and without any further condition",
+      "C": "Up to three times a week, provided the two-week average daily rest is 11 hours",
+      "D": "Never for employees aged 18 or over, whatever the two-week average"
+    },
+    "correct_answer": "A",
+    "source_id": "S032",
+    "source_url": "https://www.ch.ch/en/work/working-hours/working-on-sundays-and-at-night/",
+    "source_quote": "Once a week, your employer has the right to reduce the rest period to 8 hours but only if you have been given an average daily rest period of 11 hours over two weeks.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The eleven-hour daily rest is the baseline; the statutory exception is a single weekly reduction to eight hours, conditional on an eleven-hour average across the two weeks. Traps are unconditional weekly discretion, a higher frequency, and reading the exception as a flat ban."
+  },
+  {
+    "id": "K150",
+    "category": "services",
+    "question": "An employer has an employee work between 11pm and 6am on 30 nights in a calendar year. What must the employer provide?",
+    "options": {
+      "A": "A wage supplement of at least 25% on top of the hourly wage",
+      "B": "Time off equal to 10% of the night hours worked",
+      "C": "Time off equal to 25% of the night hours worked, or cash in its place",
+      "D": "One rest day of 24 consecutive hours for every ten nights worked"
+    },
+    "correct_answer": "B",
+    "source_id": "S032",
+    "source_url": "https://www.ch.ch/en/work/working-hours/working-on-sundays-and-at-night/",
+    "source_quote": "Time off equal to 10% of the hours of night work performed must be provided for night work carried out on 25 or more nights per calendar year.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "25 nights per calendar year is the dividing line: below it a supplement of at least 25% is payable, at or above it the employer owes compensatory time off of 10% of the night hours, and paying cash in lieu of that rest is against the law. Distractor D borrows the Sunday-work 24-hour rest figure."
   }
 ]

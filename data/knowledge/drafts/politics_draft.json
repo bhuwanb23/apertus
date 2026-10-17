@@ -358,5 +358,545 @@
     "language": "en",
     "difficulty": "medium",
     "notes": "Precise delimitation: the Chancellery is the Federal Council's staff office, not a head of state/government. Referendum and initiative committees submit their signatures to it."
+  },
+  {
+    "id": "K151",
+    "category": "politics",
+    "question": "Which languages does the Federal Chancellery ensure are used correctly and understandably in laws and official texts?",
+    "options": {
+      "A": "German, French, Italian, and sometimes Romansh or English",
+      "B": "German and French only",
+      "C": "German, French, Italian, Romansh and English in every case",
+      "D": "The two or three languages most widely used in the canton concerned"
+    },
+    "correct_answer": "A",
+    "source_id": "S012b",
+    "source_url": "https://www.bk.admin.ch/en",
+    "source_quote": "German, French, Italian, and sometimes Romansh or English: the Federal Chancellery ensures that laws and official texts are understandable and correct.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps the assumption that a language-monitoring office would either cover only the two federal court languages or all five national languages on a mandatory basis."
+  },
+  {
+    "id": "K152",
+    "category": "politics",
+    "question": "Alongside organising federal elections and popular votes, which parties submit the signatures they have collected to the Federal Chancellery?",
+    "options": {
+      "A": "The Federal Supreme Court",
+      "B": "Members of the Federal Assembly acting in united chambers",
+      "C": "Referendum and initiative committees",
+      "D": "The cantonal governments"
+    },
+    "correct_answer": "C",
+    "source_id": "S012b",
+    "source_url": "https://www.bk.admin.ch/en",
+    "source_quote": "Along with the cantons, the Federal Chancellery organises federal elections and popular votes. Referendum and initiative committees submit the signatures they collect to the Federal Chancellery.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Separates the Chancellery's organising role from its intake role, and separates both from the cantons' own task of organising the vote."
+  },
+  {
+    "id": "K153",
+    "category": "politics",
+    "question": "In addition to coordinating the digital transformation of the federal administration, what does the Federal Chancellery do to support Federal Council policy decisions?",
+    "options": {
+      "A": "It audits the federal administration on behalf of the Federal Assembly",
+      "B": "It keeps abreast of international trends and develops scenarios for the future",
+      "C": "It negotiates Switzerland's international treaties on behalf of the Federal Council",
+      "D": "It verifies the constitutional compatibility of acts adopted by the Federal Assembly"
+    },
+    "correct_answer": "B",
+    "source_id": "S012b",
+    "source_url": "https://www.bk.admin.ch/en",
+    "source_quote": "The Federal Chancellery keeps abreast of international trends and develops scenarios for the future. This helps the Federal Council make policy decisions.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The Chancellery is a staff office, not a political negotiator, a constitutional reviewer or an audit body; each distractor assigns it a function belonging to another federal body."
+  },
+  {
+    "id": "K154",
+    "category": "politics",
+    "question": "As Switzerland's highest court, the Federal Supreme Court acts as the final instance on appeals against which decisions?",
+    "options": {
+      "A": "Decisions of any cantonal court, at first and second instance",
+      "B": "Decisions of the cantonal governments and of cantonal administrative authorities",
+      "C": "Only decisions of the Federal Criminal Court and the Federal Administrative Court",
+      "D": "Decisions of the highest cantonal courts and of the three other federal courts"
+    },
+    "correct_answer": "D",
+    "source_id": "S011",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/courts/",
+    "source_quote": "It rules as the final instance on all appeals against decisions of the highest cantonal courts, the Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Tests the appellate ceiling: not every cantonal decision, only the top cantonal tier, and not only the federal criminal and administrative courts. D is a near-miss subset."
+  },
+  {
+    "id": "K155",
+    "category": "politics",
+    "question": "Where are most criminal cases in Switzerland decided in the first instance?",
+    "options": {
+      "A": "By cantonal courts",
+      "B": "By the Federal Criminal Court",
+      "C": "By the Federal Supreme Court",
+      "D": "By the Federal Administrative Court"
+    },
+    "correct_answer": "A",
+    "source_id": "S011",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/courts/",
+    "source_quote": "Most criminal cases are decided in the first instance by cantonal courts.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Counterintuitive for anyone importing a model where a national criminal court is the ordinary first-instance criminal body; the Federal Criminal Court is a specialist exception."
+  },
+  {
+    "id": "K156",
+    "category": "politics",
+    "question": "A case concerns money laundering and organised crime with an international dimension. Which federal body hears such cases?",
+    "options": {
+      "A": "The Federal Supreme Court sitting as a criminal first-instance court",
+      "B": "The Federal Criminal Court",
+      "C": "The Federal Administrative Court",
+      "D": "The Federal Patent Court"
+    },
+    "correct_answer": "B",
+    "source_id": "S011",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/courts/",
+    "source_quote": "The Federal Criminal Court hears criminal cases involving offences against federal interests, explosives offences, international cases of white-collar crime, cases relating to organised crime, corruption and money laundering, and offences related to civil aviation or war material.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distinguishes the four federal courts by subject matter. D invents a criminal first-instance division of the Supreme Court, a structure familiar from other countries."
+  },
+  {
+    "id": "K157",
+    "category": "politics",
+    "question": "Which of the following kinds of case falls within the jurisdiction of the Federal Administrative Court?",
+    "options": {
+      "A": "A challenge to the legal validity of a patent for a technical innovation",
+      "B": "A criminal case involving offences against federal interests",
+      "C": "An appeal against a federal decision of principle in an asylum case",
+      "D": "An appeal against a cantonal court's ruling in a civil dispute"
+    },
+    "correct_answer": "C",
+    "source_id": "S011",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/courts/",
+    "source_quote": "The Federal Administrative Court rules on appeals against decisions made by authorities of the Federal Administration. Some of the issues may be controversial from both a social and political standpoint. Examples include decisions of principle in asylum-related cases or on major transport and infrastructure projects.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Each distractor is a real Swiss jurisdiction routed to the wrong court: civil appeals to the Supreme Court, patents to the Patent Court, federal criminal offences to the Federal Criminal Court."
+  },
+  {
+    "id": "K158",
+    "category": "politics",
+    "question": "Which body decides whether e-voting trials take place in a canton and which voters are eligible to take part in them?",
+    "options": {
+      "A": "The Federal Chancellery",
+      "B": "The Federal Assembly",
+      "C": "The Federal Supreme Court",
+      "D": "Each canton, on its own"
+    },
+    "correct_answer": "D",
+    "source_id": "S010",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/e-voting/",
+    "source_quote": "Every canton decides for itself whether to conduct e-voting trials. The cantons also decide which voters would be eligible to participate in the trials.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Proves cantonal autonomy inside a federally regulated area. B and D exploit the Chancellery's role in organising votes and the Supreme Court's constitutional role."
+  },
+  {
+    "id": "K159",
+    "category": "politics",
+    "question": "A voter casts a ballot electronically in an e-voting trial and afterwards sends a postal ballot using the same voter identification card. What is the result?",
+    "options": {
+      "A": "The postal ballot replaces the electronic vote",
+      "B": "The postal ballot is not counted",
+      "C": "Both the electronic vote and the postal ballot are counted",
+      "D": "Both the electronic vote and the postal ballot are cancelled"
+    },
+    "correct_answer": "B",
+    "source_id": "S010",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/e-voting/",
+    "source_quote": "Once you have cast your vote electronically, your voter identification card will be recorded and blocked for other forms of voting (by post or at a polling station). You cannot vote again at a polling station using a voter identification card that has already been used for e-voting. Votes sent by post with a voter identification card that has already been used will not be counted.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The card-blocking mechanism is the anti-double-vote control; B and C are the natural guesses from models trained on jurisdictions that reconcile rather than discard."
+  },
+  {
+    "id": "K160",
+    "category": "politics",
+    "question": "Which of the following is a task of a cantonal parliament in Switzerland?",
+    "options": {
+      "A": "Appointing the members of the cantonal government each year",
+      "B": "Ruling on appeals against decisions of cantonal administrative authorities",
+      "C": "Supervising the activity of the cantonal government",
+      "D": "Managing cantonal affairs and planning cantonal projects"
+    },
+    "correct_answer": "C",
+    "source_id": "S008b",
+    "source_url": "https://www.ch.ch/en/political-system/cantons/cantonal-parliament-role-and-composition/",
+    "source_quote": "Last but not least, the cantonal parliament supervises the activity of the cantonal government.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "B is the cantonal government's own core task and C is a plausible overreach; D confuses parliamentary oversight with judicial review."
+  },
+  {
+    "id": "K161",
+    "category": "politics",
+    "question": "Who chairs the meetings of a cantonal parliament?",
+    "options": {
+      "A": "A member of that parliament, elected to the presidency each year",
+      "B": "The president of the cantonal government for that year",
+      "C": "The president of the Confederation",
+      "D": "The longest-serving member of the cantonal parliament"
+    },
+    "correct_answer": "A",
+    "source_id": "S008b",
+    "source_url": "https://www.ch.ch/en/political-system/cantons/cantonal-parliament-role-and-composition/",
+    "source_quote": "Parliament annually elects one of its members to be president. The president's duties include chairing the meetings of parliament.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps the assumption that the executive heads the legislature too, or that the federal president presides over cantonal business. Rotating annual presidency parallels the federal arrangement."
+  },
+  {
+    "id": "K162",
+    "category": "politics",
+    "question": "Which statement correctly describes how a cantonal parliament meets?",
+    "options": {
+      "A": "It meets roughly once a month, behind closed doors",
+      "B": "It meets weekly, in public, as the Federal Assembly does",
+      "C": "It meets behind closed doors, and its minutes are not public",
+      "D": "It meets roughly once a month, in public"
+    },
+    "correct_answer": "D",
+    "source_id": "S008b",
+    "source_url": "https://www.ch.ch/en/political-system/cantons/cantonal-parliament-role-and-composition/",
+    "source_quote": "Council members holds regular, scheduled meetings, usually once a month. These meetings and their minutes are generally public.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Contrasts the legislature's public monthly rhythm with the cantonal government's behind-closed-doors meetings; C borrows the federal weekly cadence."
+  },
+  {
+    "id": "K163",
+    "category": "politics",
+    "question": "How many members does a cantonal government in Switzerland have?",
+    "options": {
+      "A": "Between nine and twelve",
+      "B": "Between five and seven",
+      "C": "Between three and five",
+      "D": "Between seven and nine"
+    },
+    "correct_answer": "B",
+    "source_id": "S008",
+    "source_url": "https://www.ch.ch/en/political-system/cantons/cantonal-government-role-and-composition/",
+    "source_quote": "There are between five and seven members in each cantonal government.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Establishes the cantonal counterpart to the seven-member Federal Council, which a model tends to over-generalise to cantonal level."
+  },
+  {
+    "id": "K164",
+    "category": "politics",
+    "question": "A member of a cantonal government privately disagrees with a decision the government has taken. What is that member required to do?",
+    "options": {
+      "A": "Ask the cantonal parliament to reverse the decision",
+      "B": "Abstain in public and distance themselves from the decision",
+      "C": "Defend the government's position publicly, whatever their own opinion",
+      "D": "Resign from the cantonal government immediately"
+    },
+    "correct_answer": "C",
+    "source_id": "S008",
+    "source_url": "https://www.ch.ch/en/political-system/cantons/cantonal-government-role-and-composition/",
+    "source_quote": "All members of the cantonal government must defend the position of the collegial body, regardless of their personal opinion.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Collegiality binds the cantonal government exactly as it binds the Federal Council; B, C and D are all plausible reactions from a cabinet-style mental model."
+  },
+  {
+    "id": "K165",
+    "category": "politics",
+    "question": "How do the meetings of a cantonal government usually take place?",
+    "options": {
+      "A": "Behind closed doors",
+      "B": "In public, with the minutes published",
+      "C": "Behind closed doors, but minuted and published",
+      "D": "In public, but only after the agenda has been published"
+    },
+    "correct_answer": "A",
+    "source_id": "S008",
+    "source_url": "https://www.ch.ch/en/political-system/cantons/cantonal-government-role-and-composition/",
+    "source_quote": "The members of the cantonal government hold regular scheduled meetings, usually behind closed doors.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Pairs with K162: the same canton legislates in public but executes behind closed doors. C is the tempting half-right compromise."
+  },
+  {
+    "id": "K166",
+    "category": "politics",
+    "question": "What does the Federal Administration consist of?",
+    "options": {
+      "A": "The seven federal departments, the Federal Chancellery and the Federal Supreme Court",
+      "B": "The seven federal departments alone",
+      "C": "The Federal Chancellery and the seven Federal Council members",
+      "D": "The seven federal departments together with the Federal Chancellery"
+    },
+    "correct_answer": "D",
+    "source_id": "S006",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/separation-of-powers/",
+    "source_quote": "Each of the seven members of the Federal Council is head of one of the seven federal departments, which together with the Federal Chancellery make up the Federal Administration.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "B wrongly folds a court into the executive, C drops the Chancellery, D confuses the people who lead the administration with the administration's parts."
+  },
+  {
+    "id": "K167",
+    "category": "politics",
+    "question": "What is the task of the Federal Supreme Court as Switzerland's highest court?",
+    "options": {
+      "A": "Binding courts in other states on the interpretation of treaties",
+      "B": "Ensuring the uniform application of the law",
+      "C": "Supervising the cantonal courts for the Federal Assembly",
+      "D": "Approving federal legislation before it enters into force"
+    },
+    "correct_answer": "B",
+    "source_id": "S006",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/separation-of-powers/",
+    "source_quote": "The Federal supreme Court is Switzerland's highest court. Its task is to ensure the uniform application of the law and to uphold the rights of ordinary people.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "D is the key trap: uniform application is an internal Swiss function, not a supranational preliminary-reference power as in the EU."
+  },
+  {
+    "id": "K168",
+    "category": "politics",
+    "question": "As highest court of appeal, the Federal Supreme Court also rules on which further kinds of dispute?",
+    "options": {
+      "A": "Preliminary references from cantonal courts on the interpretation of federal law, as in the European Union",
+      "B": "Complaints by foreign states against federal measures taken in Switzerland",
+      "C": "Disputes between individuals and the state, and between the Confederation and the cantons",
+      "D": "References from cantonal courts on the interpretation of federal law"
+    },
+    "correct_answer": "C",
+    "source_id": "S006",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/separation-of-powers/",
+    "source_quote": "As the highest court of appeal, it also rules on disputes between individuals and the state or between the Confederation and the cantons.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Switzerland resolves federal-cantonal and state-citizen disputes domestically in its own apex court. C is the strongest distractor because it imports the CJEU's preliminary-reference role."
+  },
+  {
+    "id": "K169",
+    "category": "politics",
+    "question": "When was the separation of powers introduced in Switzerland?",
+    "options": {
+      "A": "In 1848, on the founding of the federal state",
+      "B": "In 1874, when the optional referendum was introduced",
+      "C": "In 1891, when the federal popular initiative was introduced",
+      "D": "In 1948, after a total revision of the federal Constitution"
+    },
+    "correct_answer": "A",
+    "source_id": "S006",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/separation-of-powers/",
+    "source_quote": "In Switzerland, the powers of the state are divided among the three branches of the state: the legislature, the executive and the judiciary. This separation was introduced in 1848 on the founding of the federal state, with the aim of preventing a concentration of power in individual persons or institutions.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Dates the principle to the founding of the federal state, not to 1874 or 1891 (the direct-democracy instruments) or to a post-war revision."
+  },
+  {
+    "id": "K170",
+    "category": "politics",
+    "question": "In which cantons do foreign nationals have the right to vote at cantonal level, though not to stand for election?",
+    "options": {
+      "A": "Jura and Geneva",
+      "B": "Neuchâtel and Basel-Stadt",
+      "C": "Geneva and Vaud",
+      "D": "Jura and Neuchâtel"
+    },
+    "correct_answer": "D",
+    "source_id": "S005",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/right-to-vote/",
+    "source_quote": "At the cantonal level, Jura and Neuchâtel grant the right to vote (but not to stand for election) to foreign nationals.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "High search cost and tests real cantonal variation; Geneva and Vaud are the intuitive French-speaking guesses and are not the cited pair."
+  },
+  {
+    "id": "K171",
+    "category": "politics",
+    "question": "Does a Swiss citizen living in Switzerland have to register in order to be entered on the electoral roll of their commune?",
+    "options": {
+      "A": "Yes, but only people holding a single nationality",
+      "B": "No, the commune adds them automatically",
+      "C": "Yes, at the commune's population office each year",
+      "D": "Yes, with the cantonal government before the vote"
+    },
+    "correct_answer": "B",
+    "source_id": "S005",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/right-to-vote/",
+    "source_quote": "If you live in Switzerland, you do not need to register to vote: you will be added to the electoral register of your commune of residence as a matter of course as soon as you fulfil the conditions for being eligible to vote.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Contrast with the explicit registration required of Swiss citizens abroad; an automatic-register premise is unusual compared with most EU systems."
+  },
+  {
+    "id": "K172",
+    "category": "politics",
+    "question": "A Swiss citizen living abroad can vote at federal level. How many cantons also extend cantonal voting rights to Swiss citizens abroad?",
+    "options": {
+      "A": "None of them",
+      "B": "Only the French-speaking cantons",
+      "C": "Half of them",
+      "D": "All of them"
+    },
+    "correct_answer": "C",
+    "source_id": "S005",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/right-to-vote/",
+    "source_quote": "Half of the cantons grant the right to vote at cantonal level to Swiss citizens abroad.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Federal voting rights abroad are universal, but the cantonal layer is split roughly down the middle; the page frames the result as a fraction, not a list."
+  },
+  {
+    "id": "K173",
+    "category": "politics",
+    "question": "Who elects the judges of the Federal Supreme Court in Switzerland?",
+    "options": {
+      "A": "The Federal Council",
+      "B": "The cantonal governments",
+      "C": "The Federal Chancellery",
+      "D": "The Federal Assembly"
+    },
+    "correct_answer": "D",
+    "source_id": "S002",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/swiss-parliament/",
+    "source_quote": "elect federal authorities, including the seven members of the Federal Council, the President of the Confederation, the Federal Chancellor and the judges of the Federal Supreme Court",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Parliament elects the government, the Chancellor AND the apex judges, so judicial appointments are a legislative act. B and D wrongly put appointments with the executive's staff office."
+  },
+  {
+    "id": "K174",
+    "category": "politics",
+    "question": "How many regular sessions does the Federal Assembly hold each year, and how long does each session last?",
+    "options": {
+      "A": "Four sessions of three weeks",
+      "B": "Four sessions of two months",
+      "C": "Two sessions of three weeks",
+      "D": "Six sessions of one week"
+    },
+    "correct_answer": "A",
+    "source_id": "S002",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/swiss-parliament/",
+    "source_quote": "The members of the two chambers meet during parliamentary sessions, which take place four times a year. Each session lasts three weeks.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "A calendar fact a model rarely has; distractors vary each component independently so a half-remembered figure is punished."
+  },
+  {
+    "id": "K175",
+    "category": "politics",
+    "question": "Beyond the Federal Council, the Federal Administration and the Federal Supreme Court, which other bodies does the Federal Assembly monitor?",
+    "options": {
+      "A": "Foreign states in their dealings with the Confederation",
+      "B": "Bodies that perform federal tasks, such as Swiss Post",
+      "C": "Cantonal governments, cantonal courts and communes",
+      "D": "The Federal Chancellery and the federal administrative offices"
+    },
+    "correct_answer": "B",
+    "source_id": "S002",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/swiss-parliament/",
+    "source_quote": "monitor the activities of the Federal Council, the Federal Administration, the Federal Supreme Court and other bodies that perform federal tasks, e.g. the Swiss Post or the Swiss Federal Railways.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Federal oversight reaches beyond the classic branches into autonomous bodies with federal tasks; B is the canton-level confusion the whole source set is trying to prevent."
+  },
+  {
+    "id": "K176",
+    "category": "politics",
+    "question": "Can a federal popular initiative be used at federal level to demand a change to an existing federal law rather than to the Constitution?",
+    "options": {
+      "A": "Yes, but only for laws adopted before the entry into force of the 1999 Constitution",
+      "B": "Yes, provided the Federal Assembly agrees to treat the proposal as constitutional",
+      "C": "No, a federal popular initiative can concern only the Constitution",
+      "D": "Yes, if the initiative is supported by a majority of the cantons"
+    },
+    "correct_answer": "C",
+    "source_id": "S007",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/initiatives/what-is-a-federal-popular-initiative/",
+    "source_quote": "A federal popular initiative concerns only the Constitution. In contrast to the position in some cantons, there is no procedure at federal level for amending existing laws or introducing new laws through an initiative.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The sharpest federalism point in the corpus: some cantons have legislative initiatives, federal level does not. C and D invent conditional routes."
+  },
+  {
+    "id": "K177",
+    "category": "politics",
+    "question": "How far in advance of the vote on a federal popular initiative must the date be announced, and by whom?",
+    "options": {
+      "A": "The cantonal governments must announce it at least one year ahead",
+      "B": "The Federal Council must announce it at least four months ahead",
+      "C": "The Federal Assembly must announce it at least six months ahead",
+      "D": "The Federal Chancellery must announce it at least three months ahead"
+    },
+    "correct_answer": "B",
+    "source_id": "S007",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/initiatives/what-is-a-federal-popular-initiative/",
+    "source_quote": "The Federal Council must announce the date of the vote at least four months in advance.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The executive, not the Chancellery or Parliament, fixes the ballot date; C is the natural confusion with the Chancellery's vote-organising role."
+  },
+  {
+    "id": "K178",
+    "category": "politics",
+    "question": "Since the federal popular initiative was introduced in 1891, roughly what share of the initiatives put to the vote has been adopted?",
+    "options": {
+      "A": "Around 25 per cent",
+      "B": "Around 50 per cent",
+      "C": "Around 90 per cent",
+      "D": "Around 10 per cent"
+    },
+    "correct_answer": "D",
+    "source_id": "S007",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/initiatives/what-is-a-federal-popular-initiative/",
+    "source_quote": "More than 200 initiatives have been voted on since then, and around 10 per cent have been adopted.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Corrects the intuition that a successful signature-gathering initiative is usually a successful outcome; the low adoption rate is the point."
+  },
+  {
+    "id": "K179",
+    "category": "politics",
+    "question": "Parliament decides not only on laws but also on enactments that are not laws, such as decisions on international treaties. Can an optional referendum be launched against such a decision?",
+    "options": {
+      "A": "Yes, an optional referendum is possible",
+      "B": "No, only amendments to the Constitution are put to a vote",
+      "C": "No, because treaties are approved by the Federal Council alone",
+      "D": "Yes, but only after a majority of the cantons has approved the treaty"
+    },
+    "correct_answer": "A",
+    "source_id": "S004",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/referendum/",
+    "source_quote": "Parliament also decides on enactments that are not laws, for example decisions on international treaties between Switzerland and other countries. It is also possible to launch an optional referendum against these.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The referendum right reaches further than formally legislated acts; B and C are the usual assumptions about treaty approval in a parliamentary system."
+  },
+  {
+    "id": "K180",
+    "category": "politics",
+    "question": "Two groups from different political camps both want to challenge the same federal law. How is that handled?",
+    "options": {
+      "A": "Both may initiate a referendum, but their signatures are counted separately",
+      "B": "Only one group may challenge the law if the camps disagree",
+      "C": "Both may initiate a referendum, and their signatures are counted",
+      "D": "Only the group that registered first may challenge the law"
+    },
+    "correct_answer": "C",
+    "source_id": "S004",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/referendum/",
+    "source_quote": "What is more, several groups can initiate a referendum against the same new or amended law – even though they might be from different political camps. The signatures collected are counted.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Competing committees do not exclude each other; C is a near-miss that would also work in practice but is not what the page states."
   }
 ]

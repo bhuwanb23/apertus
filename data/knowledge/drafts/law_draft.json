@@ -358,5 +358,545 @@
     "language": "en",
     "difficulty": "medium",
     "notes": "Switzerland joined Schengen in 2008 while remaining outside the EU and the EEA. Presented with a valid national passport, the biometric residence permit entitles the holder to travel throughout the Schengen area without a visa."
+  },
+  {
+    "id": "K181",
+    "category": "law",
+    "question": "Under Swiss data protection law, what is actually protected?",
+    "options": {
+      "A": "The data themselves, as an asset of whoever holds them",
+      "B": "The persons about whom data are processed",
+      "C": "The commercial value of the collected information",
+      "D": "Only special categories of personal data, such as health and criminal records"
+    },
+    "correct_answer": "B",
+    "source_id": "S053",
+    "source_url": "https://www.edoeb.admin.ch/en/faq-data-protection",
+    "source_quote": "Data protection law does not protect data as such, but rather the persons about whom data is processed.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Traps the property-framing imported from data-protection-as-asset models; the FDPIC states the protection attaches to persons, not to the data as a commodity."
+  },
+  {
+    "id": "K182",
+    "category": "law",
+    "question": "Under the Swiss Federal Act on Data Protection (FADP), whose processing of personal data is regulated?",
+    "options": {
+      "A": "Federal authorities only, with private companies left entirely to cantonal law",
+      "B": "Private companies only, since the Confederation has no supervisory role",
+      "C": "Both federal authorities and private individuals or legal entities, including associations and commercial enterprises",
+      "D": "Only cantonal and communal authorities, since data protection is a cantonal matter"
+    },
+    "correct_answer": "C",
+    "source_id": "S053",
+    "source_url": "https://www.edoeb.admin.ch/en/faq-data-protection",
+    "source_quote": "It contains legal norms that serve the protection of personality and informational self-determination and regulate the processing of personal data carried out by federal authorities or private individuals or legal entities (e.g. associations or commercial enterprises).",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The FADP reaches private companies as well as federal bodies. The distractor A imports the idea that data protection is a purely public-sector or cantonal matter."
+  },
+  {
+    "id": "K183",
+    "category": "law",
+    "question": "Under Swiss law, how does the processing of personal data by private entities generally stand?",
+    "options": {
+      "A": "It is prohibited unless the data subject has given prior written consent",
+      "B": "It is permitted only where the data have been fully anonymised",
+      "C": "It requires prior authorisation from the FDPIC for each processing purpose",
+      "D": "It is permitted in principle, with the test being whether the invasion of privacy can be justified by consent or by overriding interests"
+    },
+    "correct_answer": "D",
+    "source_id": "S053",
+    "source_url": "https://www.edoeb.admin.ch/en/faq-data-protection",
+    "source_quote": "The situation is different for the processing of personal data by private entities. In principle, this is permitted in Switzerland.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Distractor A is the GDPR prior-consent default, which does not carry over to Swiss private-sector processing; the source deliberately does not use the words opt-in or opt-out."
+  },
+  {
+    "id": "K184",
+    "category": "law",
+    "question": "Where the Swiss State processes personal data, how do the citizen's data protection rights stand?",
+    "options": {
+      "A": "The citizen may waive them in an individual case once the authority holds their written consent",
+      "B": "They apply only to data processed by private companies, not to federal bodies",
+      "C": "There is in principle no voluntary waiver, and the purpose, scope and extent of state processing are fixed by statute",
+      "D": "They may be waived by a cantonal court at the authority's request"
+    },
+    "correct_answer": "C",
+    "source_id": "S053",
+    "source_url": "https://www.edoeb.admin.ch/en/faq-data-protection",
+    "source_quote": "The protection of privacy is a constitutionally guaranteed fundamental right (Art. 13 of the Federal Constitution). In principle, there is no voluntary waiver of data protection rights with regard to the processing of personal data by the State.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Distractor A transplants the private-sector consent logic into the public-law sphere, where the FDPIC says no waiver is possible."
+  },
+  {
+    "id": "K185",
+    "category": "law",
+    "question": "A Swiss company gathers personal data about an employee from a third party rather than from the employee. What does the FADP require of the company?",
+    "options": {
+      "A": "To inform the data subject in advance and in an adequate manner that their data are to be gathered",
+      "B": "Nothing, because the data were not obtained from the data subject",
+      "C": "Prior notification to the cantonal data protection authority",
+      "D": "Notice within one month of the processing, at the latest"
+    },
+    "correct_answer": "A",
+    "source_id": "S053",
+    "source_url": "https://www.edoeb.admin.ch/en/faq-data-protection",
+    "source_quote": "Whenever personal data is gathered, the data controller must inform the data subject in advance and in an adequate manner that their data is to be gathered, even if the data are not gathered directly from the data subject concerned.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The duty to inform bites on indirect collection too, and it bites in advance rather than after processing. Distractor D weakens advance notice to a post-hoc deadline."
+  },
+  {
+    "id": "K186",
+    "category": "law",
+    "question": "The duty to inform under Swiss data protection law is not absolute. How are its exceptions treated?",
+    "options": {
+      "A": "They are drawn broadly by the FDPIC and may be relied on at the controller's discretion",
+      "B": "They cover, for example, a data subject who already has the information or processing required by law, and they must be narrowly interpreted",
+      "C": "They apply only where a federal authority processes the data",
+      "D": "They apply only to special categories of data such as health data"
+    },
+    "correct_answer": "B",
+    "source_id": "S053",
+    "source_url": "https://www.edoeb.admin.ch/en/faq-data-protection",
+    "source_quote": "Moreover, the exceptions mentioned in Article 20 FADP limit or remove the duty to provide information, for example if a data subject already has the information (because they previously consented to their data being processed) or if the processing of personal data is required by law. These exceptions must be narrowly interpreted: the data controller should not assume that they will apply.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Names the Article 20 FADP exceptions and the narrow-interpretation rule; distractor A is the opposite of the FDPIC's express warning against assuming they apply."
+  },
+  {
+    "id": "K187",
+    "category": "law",
+    "question": "How does the Swiss Federal Data Protection and Information Commissioner (FDPIC) differ from its EU counterparts?",
+    "options": {
+      "A": "It can impose administrative fines of up to 5 per cent of annual turnover",
+      "B": "It can suspend a company's data processing for up to twelve months",
+      "C": "It may order the deletion of any unlawfully processed data without any court involvement",
+      "D": "It has no power to impose sanctions under the FADP, so fines of up to CHF 250,000 fall on the natural person responsible for the offence"
+    },
+    "correct_answer": "D",
+    "source_id": "S053",
+    "source_url": "https://www.edoeb.admin.ch/en/faq-data-protection",
+    "source_quote": "Fines of up to CHF250,000 may be imposed on the natural person responsible for the offence. Legal persons can be fined up to CHF50,000, only as a subsidiary measure.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Distractors A and C are GDPR-style supervisory powers the FDPIC does not have under the FADP; enforcement runs through binding orders and the FADP's criminal provisions."
+  },
+  {
+    "id": "K188",
+    "category": "law",
+    "question": "May a private individual in Switzerland operate CCTV systems covering public property?",
+    "options": {
+      "A": "No, such systems are normally regarded as an excessive and unlawful measure and their installation is prohibited",
+      "B": "Yes, provided the monitored area is clearly signposted",
+      "C": "Yes, if the cameras operate only at night",
+      "D": "Only with a cantonal permit, which is routinely granted for crime prevention"
+    },
+    "correct_answer": "A",
+    "source_id": "S054",
+    "source_url": "https://www.edoeb.admin.ch/en/video-surveillance-of-public-places-by-private-individuals",
+    "source_quote": "As a result, private CCTV systems in public areas are normally regarded as an excessive and unlawful measure and their installation is prohibited.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Public-space video surveillance is handled under cantonal and communal law with private systems generally barred; signage alone does not make a private public-space camera lawful."
+  },
+  {
+    "id": "K189",
+    "category": "law",
+    "question": "A shopkeeper installs cameras covering the pavement outside the shop to deter burglars. Why does this fail under Swiss data protection guidance?",
+    "options": {
+      "A": "Because a private camera may never record any area beyond the owner's own property",
+      "B": "Because preserving security and order in public areas is a task for the police, not for private individuals",
+      "C": "Because only a cantonal authority may install cameras under a communal ordinance",
+      "D": "Because shopkeepers must first exhaust every less intrusive security measure"
+    },
+    "correct_answer": "B",
+    "source_id": "S054",
+    "source_url": "https://www.edoeb.admin.ch/en/video-surveillance-of-public-places-by-private-individuals",
+    "source_quote": "Interest in crime prevention: the preservation of security and order in public areas is not the responsibility of private individuals, but a task for the police. For this reason, protecting his or her own security is not a legitimate reason for a private individual to monitor a public area.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Self-protection is expressly not a legitimate reason for a private person to monitor a public area, because that task belongs to the police."
+  },
+  {
+    "id": "K190",
+    "category": "law",
+    "question": "When is private surveillance that incidentally records a public area normally tolerated in Switzerland?",
+    "options": {
+      "A": "Whenever it protects the person's own property, however much of the public area is captured",
+      "B": "Whenever the footage is deleted within 24 hours",
+      "C": "Whenever a neighbouring resident gives written consent",
+      "D": "When the intrusion on the public area is negligible and surveillance of the private property would otherwise be impossible"
+    },
+    "correct_answer": "D",
+    "source_id": "S054",
+    "source_url": "https://www.edoeb.admin.ch/en/video-surveillance-of-public-places-by-private-individuals",
+    "source_quote": "There are possible exceptions to this rule: When legitimate video surveillance of private property is conducted, images of public areas are also recorded. If the extent of this intrusion is negligible and the surveillance of the private property would otherwise be impossible, common sense dictates that surveillance will normally be allowed.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Two cumulative conditions: negligible intrusion plus impossibility of surveillance otherwise. Distractor B lifts the retention figure and mistakes a storage rule for a permission rule."
+  },
+  {
+    "id": "K191",
+    "category": "law",
+    "question": "A private individual wants to install a camera that would also cover a public area. With whose authority must the question of permission be settled in advance?",
+    "options": {
+      "A": "The commune, with which it must be clarified in advance whether permission is required",
+      "B": "The FDPIC, which grants or refuses the permit",
+      "C": "The cantonal police, which approve the installation as a crime-prevention measure",
+      "D": "The cantonal building authority, under cantonal building law"
+    },
+    "correct_answer": "A",
+    "source_id": "S054",
+    "source_url": "https://www.edoeb.admin.ch/en/video-surveillance-of-public-places-by-private-individuals",
+    "source_quote": "If public places are involved, it must be clarified in advance with the commune whether permission is required. Monitored areas must be clearly signposted.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "This is the cantonally anchored level: the commune decides, not a federal permit office. Distractors B and D transplant federal or building-law approval routes."
+  },
+  {
+    "id": "K192",
+    "category": "law",
+    "question": "For how long should footage from video surveillance be retained in Switzerland?",
+    "options": {
+      "A": "Indefinitely, provided the footage is stored on an access-protected drive",
+      "B": "For up to six months, so that incidents can still be traced",
+      "C": "As a general rule it should be deleted within 24 to 72 hours, the period depending on the purpose of the monitoring",
+      "D": "For exactly 24 hours in every case, with no variation permitted"
+    },
+    "correct_answer": "C",
+    "source_id": "S054",
+    "source_url": "https://www.edoeb.admin.ch/en/video-surveillance-of-public-places-by-private-individuals",
+    "source_quote": "Recordings should only be retained for a limited period. The length of time the data is kept depends on the purpose of the monitoring. As a general rule, recordings should be deleted within 24 to 72 hours.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "The window is a 24-72 hour range, not a fixed deadline; distractor D hard-codes the lower bound and distractor B imports a German-style retention period."
+  },
+  {
+    "id": "K193",
+    "category": "law",
+    "question": "Which residence permit categories are issued as biometric residence permits for foreign nationals in Switzerland?",
+    "options": {
+      "A": "Short-term residence permits (L), residence permits (B) and settlement permits (C)",
+      "B": "All residence permits without exception, including the N permit for asylum seekers and the F permit for provisionally admitted foreigners",
+      "C": "Only residence permits (B), because short stays are covered by a passport stamp",
+      "D": "Only settlement permits (C), since biometric data are required for a permanent status"
+    },
+    "correct_answer": "A",
+    "source_id": "S017",
+    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/biometr_auslaenderausweis.html",
+    "source_quote": "Biometric residence permits shall be issued to holders of the following categories of residence permit: - Short-term residence permits (L) - Residence permits (B) - Settlement permits (C)",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Exactly the three categories L, B and C; the N and F permits are deliberately not in the biometric programme."
+  },
+  {
+    "id": "K194",
+    "category": "law",
+    "question": "Who decides the application procedure for a biometric residence permit in Switzerland, and who captures the biometric data?",
+    "options": {
+      "A": "The SEM decides nationally, and the fingerprints are taken at the Swiss embassy",
+      "B": "The municipality of residence decides, and the data are captured by the cantonal police",
+      "C": "The FDPIC decides, and the data are captured by an accredited private provider",
+      "D": "The canton of residence decides, and the biometric data are captured by that canton's authority"
+    },
+    "correct_answer": "D",
+    "source_id": "S017",
+    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/biometr_auslaenderausweis.html",
+    "source_quote": "The application procedure and issuance of a biometric residence permit are decided by the Canton of residence. Biometric data are obtained from the person by the corresponding authority in the Canton of residence.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Cantonal variable: no single national procedure or fee. Distractor A overstates the SEM's role, which is limited to centrally producing the cards."
+  },
+  {
+    "id": "K195",
+    "category": "law",
+    "question": "What happens to a first-generation Swiss residence permit for foreign nationals that carries no biometric data?",
+    "options": {
+      "A": "It becomes invalid as soon as the holder applies for a biometric permit",
+      "B": "It is automatically upgraded to a settlement permit after five years",
+      "C": "It remains valid until its expiry date, a biometric permit being issued only once it has expired or if personal data change",
+      "D": "It must be surrendered within six months of the holder's first entry into Switzerland"
+    },
+    "correct_answer": "C",
+    "source_id": "S017",
+    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/biometr_auslaenderausweis.html",
+    "source_quote": "First-generation residence permits for foreign nationals (i.e. no biometric data stored) shall remain valid until the expiry date. The new biometric residence permit shall only be issued after the previous residence permit has expired or if changes in personal data require issuance of a new residence permit.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Transition rule, not a revocation rule; distractor B invents an automatic five-year upgrade that the page does not support."
+  },
+  {
+    "id": "K196",
+    "category": "law",
+    "question": "Who must sign the letter terminating a Swiss rental agreement, and how should it be sent to the landlord?",
+    "options": {
+      "A": "Only the first-named tenant, sent by ordinary post",
+      "B": "All parties who signed the rental agreement, with the letter sent to the landlord by registered mail",
+      "C": "Every adult occupant of the flat, sent by registered mail, whether or not they signed the agreement",
+      "D": "Any one of the tenants, since one signature binds all signatories"
+    },
+    "correct_answer": "B",
+    "source_id": "S014",
+    "source_url": "https://www.ch.ch/en/housing/rent/rental-and-leasing-agreements/",
+    "source_quote": "All parties who signed the rental agreement must sign the letter of termination. Tenants who are renting with a spouse or registered partner must have the approval of the other person to terminate the agreement, even if only one party has signed the agreement as the tenant. Tenants are not required to provide a reason for terminating the agreement. The letter of termination should be sent to the landlord by registered mail.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Two traps: signature is required from all signatories (not all occupants), and proof of dispatch matters, so registered mail is the safe route. The tenant need give no reason."
+  },
+  {
+    "id": "K197",
+    "category": "law",
+    "question": "How long does a tenant in Switzerland have to contact the commune's conciliation authority in order to contest a termination?",
+    "options": {
+      "A": "14 days, running from the date the letter of termination is posted",
+      "B": "3 months, matching the statutory notice period for residential premises",
+      "C": "There is no fixed deadline, because each cantonal conciliation authority sets its own",
+      "D": "30 days"
+    },
+    "correct_answer": "D",
+    "source_id": "S014",
+    "source_url": "https://www.ch.ch/en/housing/rent/rental-and-leasing-agreements/",
+    "source_quote": "Tenants have 30 days to contact their commune's conciliation authority to contest the termination.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The 30-day contestation window is distinct from the notice period itself, which distractor B conflates with it."
+  },
+  {
+    "id": "K198",
+    "category": "law",
+    "question": "Under Swiss tenancy rules, when may a tenant sublet a furnished apartment and add a surcharge to the monthly rent?",
+    "options": {
+      "A": "A surcharge of up to 20% of the monthly rent may be added, to compensate for wear and tear on furnishings",
+      "B": "A surcharge of up to 50% of the monthly rent may be added, once the landlord has been informed",
+      "C": "No surcharge at all may be added; the subletting tenant may charge only what they themselves pay",
+      "D": "A surcharge of up to 10% of the monthly rent may be added, but only for a fixed-term lease"
+    },
+    "correct_answer": "A",
+    "source_id": "S014",
+    "source_url": "https://www.ch.ch/en/housing/rent/rental-and-leasing-agreements/",
+    "source_quote": "A maximum surcharge of 20% may be added to the monthly rent on a furnished apartment, to compensate for wear and tear on furnishings. In all other cases, tenants may only charge what they themselves pay for the apartment (incl. additional charges).",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The 20% allowance is confined to furnished apartments; distractor C states the rule for all other cases and drops the furnished exception."
+  },
+  {
+    "id": "K199",
+    "category": "law",
+    "question": "In Switzerland, on what grounds is a landlord generally permitted to terminate a rental agreement?",
+    "options": {
+      "A": "Only for reasons listed in the tenancy act, such as non-payment of rent",
+      "B": "For any reason in principle, with no requirement to observe any notice period",
+      "C": "For any reason in principle, but the statutory or contractual notice period must be observed and an official form must be used",
+      "D": "Only with the prior authorisation of the cantonal conciliation authority"
+    },
+    "correct_answer": "C",
+    "source_id": "S014",
+    "source_url": "https://www.ch.ch/en/housing/rent/rental-and-leasing-agreements/",
+    "source_quote": "In Switzerland, landlords are generally allowed to terminate a rental agreement for any reason. They are nevertheless required to observe the notice periods stated in law or in the agreement, and to use an official form to terminate the agreement.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Swiss law is cause-free for landlords but procedural: notice period plus official form. Distractor A imports the German cause requirement, distractor B drops the formalities."
+  },
+  {
+    "id": "K200",
+    "category": "law",
+    "question": "An EU/EFTA national who is not in gainful employment wishes to obtain a Swiss B residence permit. What must such a person show?",
+    "options": {
+      "A": "That they have been resident in Switzerland for at least five years",
+      "B": "That they have sufficient financial means and adequate health and accident insurance",
+      "C": "That they hold a job offer of at least twelve months' duration",
+      "D": "That a Swiss employer guarantees their residence for the full five-year period"
+    },
+    "correct_answer": "B",
+    "source_id": "S045",
+    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/eu_efta.html",
+    "source_quote": "Nationals from all EU/EFTA member states without gainful employment are entitled to a B permit if they can prove they have sufficient financial means and adequate health and accident insurance.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractors A and C apply residence-duration or employment-contract thresholds that belong to other permit categories; the non-employed B route is insurance and means, not job history."
+  },
+  {
+    "id": "K201",
+    "category": "law",
+    "question": "An EU/EFTA national's B residence permit comes up for renewal after more than twelve consecutive months of involuntary unemployment. How may that first renewal be dealt with?",
+    "options": {
+      "A": "It may be limited to one year",
+      "B": "It cannot be granted at all, because the holder no longer has gainful employment",
+      "C": "It must be reduced to the three-month minimum used for short-stay permits",
+      "D": "It is automatically replaced by an L permit issued to job seekers"
+    },
+    "correct_answer": "A",
+    "source_id": "S045",
+    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/eu_efta.html",
+    "source_quote": "First-time renewal of the permit can be limited to one year, however, if the holder has been involuntarily unemployed for more than twelve consecutive months.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "A shortening mechanism, not a withdrawal rule. Distractors B and D over-read the unemployment fact into loss of status or an automatic category change."
+  },
+  {
+    "id": "K202",
+    "category": "law",
+    "question": "An EU/EFTA national takes up a series of engagements in Switzerland, none lasting longer than three months. How are these handled?",
+    "options": {
+      "A": "Each engagement requires its own work permit of up to three months",
+      "B": "A G cross-border commuter permit is required throughout",
+      "C": "A B residence permit valid for twelve months is required",
+      "D": "Contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure"
+    },
+    "correct_answer": "D",
+    "source_id": "S045",
+    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/eu_efta.html",
+    "source_quote": "Employment contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The Swiss online notification procedure replaces a permit for short engagements below three months within a calendar year; the boundary is three months, not one year."
+  },
+  {
+    "id": "K203",
+    "category": "law",
+    "question": "In Switzerland, which authority assesses the taxes and collects the direct federal tax as well as cantonal and communal taxes?",
+    "options": {
+      "A": "The Federal Tax Administration, for all three taxing levels",
+      "B": "Each commune, which collects the federal share and passes it on to the canton",
+      "C": "The cantons, which calculate the taxes and collect the federal taxes as well as cantonal and communal taxes",
+      "D": "The FDPIC, which supervises the assessment of tax"
+    },
+    "correct_answer": "C",
+    "source_id": "S018",
+    "source_url": "https://www.ch.ch/en/taxes-and-finances/paying-taxes/",
+    "source_quote": "The cantonal tax authorities calculate your taxes on the basis of the figures you provide in your tax return. The cantons collect both the federal taxes and the cantonal and communal taxes.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Counterintuitive: the cantons are the collecting and assessing authority for the federal tax as well, which distractor A assigns to the Federal Tax Administration."
+  },
+  {
+    "id": "K204",
+    "category": "law",
+    "question": "On what basis are Swiss taxes calculated?",
+    "options": {
+      "A": "On total gross income, with no deductions permitted before assessment",
+      "B": "On 'taxable income', a lower amount from which social insurance contributions and other permissible deductions have been subtracted",
+      "C": "On gross income less social insurance contributions only, with no other deductions allowed",
+      "D": "On taxable wealth, with income taxed only by the Confederation"
+    },
+    "correct_answer": "B",
+    "source_id": "S018",
+    "source_url": "https://www.ch.ch/en/taxes-and-finances/paying-taxes/",
+    "source_quote": "Taxes are not calculated on the basis of your total income, but on the basis of what is known as your 'taxable income'. This is a lower amount. You can deduct social insurance contributions from your income and make various other deductions in your tax return.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Distractor D reverts to the federal/communal split of tax bases (income for the Confederation, income and wealth for cantons and communes), which is not the rule for computing the bill."
+  },
+  {
+    "id": "K205",
+    "category": "law",
+    "question": "Which single day is Switzerland's only national public holiday?",
+    "options": {
+      "A": "1 August",
+      "B": "1 January",
+      "C": "1 August and 25 December",
+      "D": "Ascension Day"
+    },
+    "correct_answer": "A",
+    "source_id": "S013",
+    "source_url": "https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/",
+    "source_quote": "The first of August - Swiss national day - is Switzerland's only national public holiday.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Everything else is cantonal; 25 December and 1 January are cantonal holidays, not national ones."
+  },
+  {
+    "id": "K206",
+    "category": "law",
+    "question": "Beyond Switzerland's single national public holiday, who determines the other public holidays observed in a canton?",
+    "options": {
+      "A": "The federal government, which publishes a national list each year",
+      "B": "Each canton, which can have up to eight additional public holidays on its territory",
+      "C": "Each commune alone, with no upper limit and no cantonal role",
+      "D": "The cantons and communes jointly, up to a federal ceiling of eight"
+    },
+    "correct_answer": "B",
+    "source_id": "S013",
+    "source_url": "https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/",
+    "source_quote": "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Eight is a ceiling on the cantonal additions, not a nationwide total of public holidays; distractor D misreads it as a federal maximum."
+  },
+  {
+    "id": "K207",
+    "category": "law",
+    "question": "Under Swiss tenancy law, how may a tenant end the tenancy before the notice period or the contractual termination date has expired?",
+    "options": {
+      "A": "By paying a penalty equal to three months' rent",
+      "B": "By giving three months' notice and paying the rent until the next customary termination date",
+      "C": "By cumulatively proposing a suitable replacement tenant who will take over on the same conditions and returning the rented property",
+      "D": "By obtaining a release from the cantonal conciliation authority"
+    },
+    "correct_answer": "C",
+    "source_id": "S044",
+    "source_url": "https://www.zsg.justice.be.ch/de/start/themen/zivilrecht/mietrecht/beendigung-mietvertrag/beenden-mieter-in.html",
+    "source_quote": "Sie können das Mietverhältnis vor Ablauf einer festen Vertragsdauer, der Kündigungsfrist oder einem Kündigungstermin beenden, wenn Sie der Vermieterin oder dem Vermieter kumulativ - eine Nachmieterin oder einen Nachmieter vorschlagen, der/die den Mietvertrag zu den gleichen Bedingungen übernehmen will und zumutbar ist, und - das Mietobjekt zurückgeben.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Source quote is German (Canton Bern conciliation authority). English: the tenancy may be ended early only if the tenant cumulatively proposes a suitable replacement tenant taking over on the same conditions and returns the rented property. Both limbs are required."
+  },
+  {
+    "id": "K208",
+    "category": "law",
+    "question": "According to the Canton Bern conciliation authority, when is an ordinary termination of a tenancy possible?",
+    "options": {
+      "A": "Only if the notice period and the locally customary termination dates are observed",
+      "B": "On one month's notice, aligned to the end of a calendar month",
+      "C": "Only with the prior consent of the conciliation authority",
+      "D": "Only for a fixed-term contract, never for an open-ended one"
+    },
+    "correct_answer": "A",
+    "source_id": "S044",
+    "source_url": "https://www.zsg.justice.be.ch/de/start/themen/zivilrecht/mietrecht/beendigung-mietvertrag/beenden-mieter-in.html",
+    "source_quote": "Die ordentliche Kündigung ist nur unter Einhaltung der Kündigungsfrist und der Kündigungstermine möglich.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Source quote is German. The source states the locally customary termination dates, not a universal end-of-month rule, so distractor B is the widely repeated but unverified one-month claim."
+  },
+  {
+    "id": "K209",
+    "category": "law",
+    "question": "How long is the probationary period on a newly acquired Swiss category B driving licence, and what follows a serious traffic violation?",
+    "options": {
+      "A": "Two years, extended by six months after a serious violation",
+      "B": "Three years, extended by one year where a serious traffic violation leads to disqualification from driving",
+      "C": "Three years, during which any serious violation ends the licence permanently",
+      "D": "Five years, extended by one year for each serious traffic violation"
+    },
+    "correct_answer": "B",
+    "source_id": "S016",
+    "source_url": "https://www.ch.ch/en/vehicles-and-traffic/driving-licence/learning-to-drive/",
+    "source_quote": "The probationary period lasts three years. If you commit a serious traffic violation during this period and are disqualified from driving, the probationary period will be extended by one year.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Extension by one year, and only where disqualification from driving follows; distractor C confuses extension with revocation."
+  },
+  {
+    "id": "K210",
+    "category": "law",
+    "question": "In Switzerland, what is the fee for simplified naturalisation of an adult, and what happens to it if the application is refused?",
+    "options": {
+      "A": "CHF 900, and the full amount must be paid in advance and is not refunded if the application is refused",
+      "B": "CHF 650, refundable if the application is refused",
+      "C": "CHF 250, the same rate as for minors under the age of 12",
+      "D": "Up to CHF 2,000, set by the canton and refunded on refusal"
+    },
+    "correct_answer": "A",
+    "source_id": "S015",
+    "source_url": "https://www.ch.ch/en/foreign-nationals-in-switzerland/naturalisation/",
+    "source_quote": "The cost of simplified naturalisation in Switzerland varies according to age:\n- 250 francs for minors under the age of 12\n- 650 francs for minors aged 12 and over\n- 900 francs for adults.\nFor spouses of Swiss citizens residing abroad, simplified naturalisation costs 600 francs.\nThe full amount must be paid in advance and is not refunded if the application is refused.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "CHF 900 is the adult rate, distinct from the 12-and-over minor rate of 650 and the under-12 rate of 250; CHF 2,000 is the cantonal fee for ordinary naturalisation, not this one."
   }
 ]

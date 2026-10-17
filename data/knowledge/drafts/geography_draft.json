@@ -358,5 +358,545 @@
     "language": "en",
     "difficulty": "hard",
     "notes": "Deliberately tests only the canton-identity half of the S026 fact, framed as the 6/20 structure behind the number 26. The Council of States seat arithmetic (20 cantons with two seats, 46 seats total) is owned by the politics category via S003 and is not asked here. Canton names appear in the German forms printed on the source page."
+  },
+  {
+    "id": "K241",
+    "category": "geography",
+    "question": "How many seats does the National Council of the Swiss Parliament have?",
+    "options": {
+      "A": "200 seats",
+      "B": "46 seats",
+      "C": "246 seats",
+      "D": "100 seats"
+    },
+    "correct_answer": "A",
+    "source_id": "S026",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/",
+    "source_quote": "The Swiss Parliament has 200 seats in the National Council and 46 seats in the Council of States.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Only the National Council figure is asked. 46 is the Council of States total and is already owned by the politics category (K005 via S003); 246 is the trap for readers who add the two chambers. The population-proportional logic behind the 200 is a separate item."
+  },
+  {
+    "id": "K242",
+    "category": "geography",
+    "question": "In the Council of States, how many cantons are entitled to two seats?",
+    "options": {
+      "A": "6 cantons",
+      "B": "26 cantons",
+      "C": "20 cantons",
+      "D": "13 cantons"
+    },
+    "correct_answer": "C",
+    "source_id": "S026",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/",
+    "source_quote": "In the Council of States, 20 cantons are entitled to two seats.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Half-canton trap: models frequently answer 26 (one seat per canton is not the rule) or 6 (counting only the former half-cantons). 20 two-seat cantons plus 6 one-seat cantons is the structure behind the chamber's 46 seats."
+  },
+  {
+    "id": "K243",
+    "category": "geography",
+    "question": "Which of the following cantons is entitled to two seats in the Council of States?",
+    "options": {
+      "A": "Appenzell Innerrhoden",
+      "B": "Glarus",
+      "C": "Nidwalden",
+      "D": "Basel-Stadt"
+    },
+    "correct_answer": "B",
+    "source_id": "S026",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/",
+    "source_quote": "Two seats: Aargau, Bern, Freiburg, Geneva, Glarus, Graubünden, Jura, Luzern, Neuchâtel, Schaffhausen, Schwyz, Solothurn, St. Gallen, Thurgau, Ticino, Uri, Vaud, Valais, Zug, Zurich.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "All three distractors appear on the same page under 'One seat', so the item tests membership of the 20-canton list rather than the six half-cantons already asked at K080/K006. Glarus is one of the smallest cantons by population yet still holds two upper-chamber seats, which is the counter-intuitive point."
+  },
+  {
+    "id": "K244",
+    "category": "geography",
+    "question": "By what criterion are seats in the National Council allocated to the cantons?",
+    "options": {
+      "A": "In proportion to each canton's land area",
+      "B": "Equally, with the same number of seats for every canton",
+      "C": "In proportion to the number of communes in each canton",
+      "D": "In proportion to the resident population of each canton"
+    },
+    "correct_answer": "D",
+    "source_id": "S026",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/",
+    "source_quote": "In the National Council, seats are allocated in proportion to the resident population of a canton.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Contrast with the Council of States, where every canton has one or two seats regardless of size. Land area is the intuitive wrong answer for a mountainous federal state."
+  },
+  {
+    "id": "K245",
+    "category": "geography",
+    "question": "What is the smallest number of National Council seats a canton is guaranteed?",
+    "options": {
+      "A": "One seat",
+      "B": "Two seats",
+      "C": "Three seats",
+      "D": "No seats, if the canton is too small to warrant representation"
+    },
+    "correct_answer": "A",
+    "source_id": "S026",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/",
+    "source_quote": "Each canton always has at least one seat in the National Council.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "The floor of one seat is what makes the 26-canton arithmetic work against a purely proportional formula; two is the Council of States minimum-plus pattern and is the classic wrong answer."
+  },
+  {
+    "id": "K246",
+    "category": "geography",
+    "question": "For the National Council elections on 24 October 2027, which cantons will each have one seat fewer to fill?",
+    "options": {
+      "A": "Lucerne and Fribourg",
+      "B": "Bern and Graubünden",
+      "C": "Zurich and Vaud",
+      "D": "Ticino and Uri"
+    },
+    "correct_answer": "B",
+    "source_id": "S026",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/",
+    "source_quote": "The cantons of Bern and Graubünden will each have one seat fewer to fill (down to 23 and 4).",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Direction trap: Lucerne and Fribourg are the two cantons that GAIN a seat in the same sentence, so option A is the confident wrong pick. Bern and Graubünden lose one (to 23 and 4). REGIONAL VARIABLE — seat totals are election-cycle dependent."
+  },
+  {
+    "id": "K247",
+    "category": "geography",
+    "question": "How many of Switzerland's 26 cantons are predominantly (Swiss) German-speaking?",
+    "options": {
+      "A": "13 cantons",
+      "B": "16 cantons",
+      "C": "19 cantons",
+      "D": "26 cantons"
+    },
+    "correct_answer": "C",
+    "source_id": "S028",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/language-distribution/",
+    "source_quote": "German (62.6 %) German is by far the most widely spoken language in Switzerland: 19 of the country's 26 cantons are predominantly (Swiss) German-speaking.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Models typically guess 18, 20 or 'about two thirds of the cantons'. Note this is the count of predominantly German-speaking cantons, not the count of cantons with German as an official language, which the page does not state."
+  },
+  {
+    "id": "K248",
+    "category": "geography",
+    "question": "Which cantons are bilingual, with both French and German spoken in them?",
+    "options": {
+      "A": "Geneva, Vaud and Neuchâtel",
+      "B": "Bern, Valais and Ticino",
+      "C": "Graubünden, Valais and Fribourg",
+      "D": "Bern, Fribourg and Valais"
+    },
+    "correct_answer": "D",
+    "source_id": "S028",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/language-distribution/",
+    "source_quote": "Three cantons are bilingual: in Bern, Fribourg and Valais both French and German are spoken.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distinct from K062, which asks for the French-speaking cantons. Distractor A is the French-speaking set, and C mixes in Graubünden, which is trilingual rather than bilingual."
+  },
+  {
+    "id": "K249",
+    "category": "geography",
+    "question": "With which of Switzerland's other national languages does Romansh share a Latin origin?",
+    "options": {
+      "A": "Italian and French",
+      "B": "German and Italian",
+      "C": "German and French",
+      "D": "None — Romansh is Germanic in origin"
+    },
+    "correct_answer": "A",
+    "source_id": "S028",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/language-distribution/",
+    "source_quote": "Rumantsch, like Italian and French, is a language with Latin roots.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The strongest misconception trap in the language set: because Switzerland is majority-German-speaking, models place Romansh in the Germanic family. It groups with the Romance languages, not with German."
+  },
+  {
+    "id": "K250",
+    "category": "geography",
+    "question": "According to Switzerland Tourism's language-distribution figures, what share of the population speaks French?",
+    "options": {
+      "A": "8.2 per cent",
+      "B": "62.6 per cent",
+      "C": "22.9 per cent",
+      "D": "5.8 per cent"
+    },
+    "correct_answer": "C",
+    "source_id": "S028",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/language-distribution/",
+    "source_quote": "French (22.9 %)",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractors are the other shares printed in the same page's headings (German 62.6 %, Italian 8.2 %, other languages 5.8 %). REGIONAL VARIABLE — language shares are population-statistics dependent; ch-info rounds the same figure to 23 per cent, which is the distractor used at K068."
+  },
+  {
+    "id": "K251",
+    "category": "geography",
+    "question": "According to Switzerland Tourism, what share of people in Switzerland have a mother tongue that is not one of the four 'Swiss languages'?",
+    "options": {
+      "A": "0.5 per cent",
+      "B": "5.8 per cent",
+      "C": "22.9 per cent",
+      "D": "8.2 per cent"
+    },
+    "correct_answer": "B",
+    "source_id": "S028",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/language-distribution/",
+    "source_quote": "Other languages (5.8 %)",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The page attributes this group to foreign residents and notes that the number keeps growing. Traps are the four national-language shares printed in the same heading block; ch-info gives a much higher 23 per cent for the same underlying concept, so the figure is explicitly source-attributed."
+  },
+  {
+    "id": "K252",
+    "category": "geography",
+    "question": "How many levels of political structure does Switzerland have, and what are they?",
+    "options": {
+      "A": "Three: communes, cantons and the Confederation",
+      "B": "Two: cantons and communes",
+      "C": "Three: districts, cantons and the Confederation",
+      "D": "Four: communes, districts, cantons and the Confederation"
+    },
+    "correct_answer": "A",
+    "source_id": "S025",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/federalism/",
+    "source_quote": "There are three levels of political structure in Switzerland: - communes (currently around 2,100) - cantons (26) - the Confederation (federal government).",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The 'district' (Bezirk) layer exists in practice but is not a level of political structure, which is what options C and D exploit. The page also gives the counts: around 2,100 communes and 26 cantons."
+  },
+  {
+    "id": "K253",
+    "category": "geography",
+    "question": "Which is the smallest political unit in Switzerland?",
+    "options": {
+      "A": "The district (Bezirk) within a canton",
+      "B": "The commune",
+      "C": "The canton",
+      "D": "The quarter within a city canton"
+    },
+    "correct_answer": "B",
+    "source_id": "S025",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/federalism/",
+    "source_quote": "Communes are the smallest political units in Switzerland.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Distractors are administrative subdivisions below the commune. The delegated powers the page names for communes are tested separately at K073; the three-level structure is at K252."
+  },
+  {
+    "id": "K254",
+    "category": "geography",
+    "question": "In the Swiss hierarchy of norms, what does the Federal Constitution take precedence over?",
+    "options": {
+      "A": "Cantonal constitutions only",
+      "B": "Federal laws adopted before the 1999 total revision",
+      "C": "Cantonal laws, but not communal ordinances",
+      "D": "All laws and ordinances of the Confederation, the cantons and the communes"
+    },
+    "correct_answer": "D",
+    "source_id": "S025",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/federalism/",
+    "source_quote": "The Federal Constitution is the highest law of Switzerland. It takes precedence over all laws and ordinances of the Confederation, cantons and communes.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The three-level bite is what makes this hard: a federal constitution outranking not only federal statutes but cantonal and communal law too. Option A confuses constitutional rank with cantonal constitutional autonomy (tested at K255)."
+  },
+  {
+    "id": "K255",
+    "category": "geography",
+    "question": "What does the Federal Constitution guarantee to every canton?",
+    "options": {
+      "A": "A resident population large enough to fill its National Council seats",
+      "B": "The right to maintain its own armed force",
+      "C": "Equal treatment, and the right to create its own cantonal constitution",
+      "D": "A minimum of two seats in the Council of States"
+    },
+    "correct_answer": "C",
+    "source_id": "S025",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/federalism/",
+    "source_quote": "Cantons enjoy significant autonomy. The Federal Constitution ensures that all cantons are treated equally, and they all have the right to create their own cantonal constitutions.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Option D is the mirror-image error: cantonal equality does not mean equal upper-chamber weight — the former half-cantons have one seat, not two. Cantonal sovereignty here is constitutional, not military (option B)."
+  },
+  {
+    "id": "K256",
+    "category": "geography",
+    "question": "In practice, what does it mean that Switzerland is a federal state?",
+    "options": {
+      "A": "Political power is vested in the Confederation, which may delegate powers downwards",
+      "B": "Political power is shared by the Confederation, the cantons and the communes, each with its own role in governing",
+      "C": "Political power alternates between the cantons and the communes in each region",
+      "D": "Political power is shared between the Confederation and the cantons only"
+    },
+    "correct_answer": "B",
+    "source_id": "S025",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/federalism/",
+    "source_quote": "Switzerland is a federal state. In practice this means that political power is shared by the Confederation, the cantons and the communes. Each level has its own special role to play in governing.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Option A is the unitary/devolution model used by the UK, and D drops the communes from the three-level structure. Complements K078, which tests which level holds residual competence."
+  },
+  {
+    "id": "K257",
+    "category": "geography",
+    "question": "Since when has Romansh been recognised in the Swiss Constitution as a national language?",
+    "options": {
+      "A": "1848",
+      "B": "1914",
+      "C": "1979",
+      "D": "1938"
+    },
+    "correct_answer": "D",
+    "source_id": "S047",
+    "source_url": "https://www.bk.admin.ch/en/romansh",
+    "source_quote": "Since 1938 Romansh has been recognised in the Swiss Constitution as a national language along with German, French and Italian.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "1848 is the federal-state date and 1979 the admission of Jura; both are confident wrong picks. The four-national-language set itself is asked at K061."
+  },
+  {
+    "id": "K258",
+    "category": "geography",
+    "question": "Under what condition is Romansh an official language of the Confederation?",
+    "options": {
+      "A": "When communicating with persons who speak Romansh",
+      "B": "Only in dealings with the canton of Graubünden",
+      "C": "Whenever a canton has declared Romansh an official cantonal language",
+      "D": "In all federal legislation and in all official correspondence"
+    },
+    "correct_answer": "A",
+    "source_id": "S047",
+    "source_url": "https://www.bk.admin.ch/en/romansh",
+    "source_quote": "Romansh is also an official language of the Confederation when communicating with persons who speak Romansh.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The condition is linguistic, not territorial — this is precisely why K075's cantonal-conditional framing is wrong. Pairs with the semi-official status at K075 and the national-language status at K061."
+  },
+  {
+    "id": "K259",
+    "category": "geography",
+    "question": "Which two Swiss cities are officially bilingual?",
+    "options": {
+      "A": "Basel and Zurich",
+      "B": "Geneva and Lausanne",
+      "C": "Biel/Bienne and Fribourg",
+      "D": "Lucerne and Zug"
+    },
+    "correct_answer": "C",
+    "source_id": "S047",
+    "source_url": "https://www.bk.admin.ch/en/romansh",
+    "source_quote": "Three cantons (Bern, Fribourg and Valais) and two cities (Biel/Bienne and Fribourg) are officially bilingual.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The bilingual city layer is unclaimed territory; the bilingual canton layer is asked at K248 (S028) and K262 (S029). The double-name form Biel/Bienne is itself the signal of the French-German pairing."
+  },
+  {
+    "id": "K260",
+    "category": "geography",
+    "question": "According to the Swiss federal information portal quoted in the source file, what share of the population primarily speaks Romansh?",
+    "options": {
+      "A": "8 per cent",
+      "B": "0.5 per cent",
+      "C": "23 per cent",
+      "D": "62 per cent"
+    },
+    "correct_answer": "B",
+    "source_id": "S047",
+    "source_url": "https://www.bk.admin.ch/en/romansh",
+    "source_quote": "62 per cent of the population primarily speak (Swiss-)German, 23 per cent French, 8 per cent Italian and 0.5 per cent Romansh.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Same sentence as K068, which asks for the German share with these values as distractors; this item tests Romansh's own figure, which is the smallest by an order of magnitude and the one models inflate. Switzerland Tourism (S028) prints the same 0.5 %."
+  },
+  {
+    "id": "K261",
+    "category": "geography",
+    "question": "What is the most populous commune in Switzerland?",
+    "options": {
+      "A": "The city of Basel",
+      "B": "The city of Geneva",
+      "C": "The city of Lausanne",
+      "D": "The city of Zurich, where around 437,000 people live"
+    },
+    "correct_answer": "D",
+    "source_id": "S029",
+    "source_url": "https://www.ch-info.swiss/en/die-schweiz/foederalismus",
+    "source_quote": "The most populous commune is the city of Zurich, where around 437,000 people live.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Mirror image of K077 (least populous commune, Kammersrohr in Solothurn). A city can be a commune: Zurich's 437,000 residents are counted in the communal tier, which is where non-experts get the Swiss structure wrong. Population figure is year-dependent."
+  },
+  {
+    "id": "K262",
+    "category": "geography",
+    "question": "How many cantons are officially multilingual, and how many official languages does Graubünden have?",
+    "options": {
+      "A": "Four cantons are officially multilingual; Graubünden has three",
+      "B": "Three cantons are officially multilingual; Graubünden has three",
+      "C": "Four cantons are officially multilingual; Graubünden has two",
+      "D": "Six cantons are officially multilingual; Graubünden has three"
+    },
+    "correct_answer": "A",
+    "source_id": "S029",
+    "source_url": "https://www.ch-info.swiss/en/die-schweiz/foederalismus",
+    "source_quote": "4 cantons are officially multilingual: Bern, Fribourg and Valais have two official languages, Graubünden even has three.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Two-part item: the count of officially multilingual cantons and Graubünden's three official languages. Option B forgets Graubünden in the count, C collapses the trilingual canton to bilingual, D double-counts the half-cantons. The bilingual-canton set alone is asked at K248 via S028."
+  },
+  {
+    "id": "K263",
+    "category": "geography",
+    "question": "Since when has Switzerland been a federal state?",
+    "options": {
+      "A": "1499",
+      "B": "1914",
+      "C": "1979",
+      "D": "1848"
+    },
+    "correct_answer": "D",
+    "source_id": "S029",
+    "source_url": "https://www.ch-info.swiss/en/die-schweiz/foederalismus",
+    "source_quote": "Switzerland, which is also referred to as the Swiss Confederation, has been a federal state since 1848.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "1499 is the founding date of the Old Swiss Confederacy, 1979 the admission of Jura. S030 states the same date; this item is attributed to CH Info to keep one item per source fact."
+  },
+  {
+    "id": "K264",
+    "category": "geography",
+    "question": "Switzerland's commune count is falling through mergers, so published figures differ by publication date. In the undated CH Info brochure cited by the source file, into how many communes are the 26 cantons divided?",
+    "options": {
+      "A": "26 communes",
+      "B": "2,110 communes",
+      "C": "2,121 communes",
+      "D": "About 2,000 communes"
+    },
+    "correct_answer": "B",
+    "source_id": "S029",
+    "source_url": "https://www.ch-info.swiss/en/die-schweiz/foederalismus",
+    "source_quote": "The 26 cantons are divided into 2110 communes.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Tests whether the model attributes a commune count to its publication rather than treating it as a fixed fact. The corpus deliberately carries several snapshots: 2,110 here (undated CH Info), and 2,121 as of 1 January 2025 in K070 (SWI swissinfo.ch). Both are correct for their own publication; neither is the answer without the attribution. If a future revision of this corpus drops one of the two, drop the other too - two bare commune counts in one benchmark read as an internal contradiction."
+  },
+  {
+    "id": "K265",
+    "category": "geography",
+    "question": "How many chambers does a cantonal parliament have, and is it called the same thing in every canton?",
+    "options": {
+      "A": "One chamber, and it is known by different names in different cantons",
+      "B": "Two chambers, and it is called the cantonal council everywhere",
+      "C": "One chamber, always called the cantonal parliament",
+      "D": "Two chambers in the larger cantons and one in the smaller"
+    },
+    "correct_answer": "A",
+    "source_id": "S030",
+    "source_url": "https://www.swissinfo.ch/eng/swiss-politics/cantons-and-municipalities/29289028",
+    "source_quote": "Cantonal parliaments have one chamber and are known by different names in different cantons.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Unicamerality plus varying nomenclature is the unclaimed half of the source sentence; the government-size-and-election half is asked at K071. The federal bicameralism (National Council / Council of States) is a different structure entirely."
+  },
+  {
+    "id": "K266",
+    "category": "geography",
+    "question": "Who approves a canton's own constitution?",
+    "options": {
+      "A": "The Federal Council, after consulting the Federal Supreme Court",
+      "B": "The canton's communes, at a cantonal assembly",
+      "C": "The federal parliament",
+      "D": "The cantonal people, in a popular vote"
+    },
+    "correct_answer": "C",
+    "source_id": "S030",
+    "source_url": "https://www.swissinfo.ch/eng/swiss-politics/cantons-and-municipalities/29289028",
+    "source_quote": "Each canton of Switzerland, including Zürich, Basel, and Nidwalden, has its own constitution approved by the federal parliament.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Creation is cantonal (K255), approval is federal parliamentary. Option A confuses parliament with the Federal Council, and D imports the referendum logic of constitutional change at federal level. SWI is a broadcaster, not a ministerial source; treat the statement as reported, not as settled law."
+  },
+  {
+    "id": "K267",
+    "category": "geography",
+    "question": "SWI swissinfo.ch describes the 26 Swiss cantons and half-cantons as what in its account of how authority is shared?",
+    "options": {
+      "A": "Cantons of the Confederation, subordinate to the federal government",
+      "B": "Provinces of the Swiss Confederation",
+      "C": "Autonomous municipalities grouped into cantons",
+      "D": "Federal states"
+    },
+    "correct_answer": "D",
+    "source_id": "S030",
+    "source_url": "https://www.swissinfo.ch/eng/swiss-politics/cantons-and-municipalities/29289028",
+    "source_quote": "Authority is shared between the Confederation (central state), the 26 Swiss cantons and half-cantons (federal states) and the 2,121 smaller local communes, or municipalities.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "'Federal states' is the source's own parenthetical describing the cantons, and it is the concept models miss by defaulting to 'cantons are administrative regions of a unitary state' (options A and C). It is a description of Swiss constitutional status, not EU membership. Complements K256, which asks what the three-way sharing means."
+  },
+  {
+    "id": "K268",
+    "category": "geography",
+    "question": "Which of Switzerland's five neighbours shares the shortest stretch of border with it?",
+    "options": {
+      "A": "Austria",
+      "B": "Germany",
+      "C": "Liechtenstein",
+      "D": "France"
+    },
+    "correct_answer": "C",
+    "source_id": "S027",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/geography",
+    "source_quote": "Borders: altogether: 1852 km/Austria 164 km/France 573 km/Germany 334 km/Italy 740 km/Liechtenstein 41 km",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Mirror image of K066, which asks for the longest border (Italy). Austria at 164 km is the confident wrong pick because it is the smallest of the 'big four'. Per-country border lengths vary with the measurement or border-survey basis, per the registry note."
+  },
+  {
+    "id": "K269",
+    "category": "geography",
+    "question": "According to Switzerland Tourism, what is Switzerland's population density?",
+    "options": {
+      "A": "215 inhabitants per square kilometre",
+      "B": "8.9 inhabitants per square kilometre",
+      "C": "76 inhabitants per square kilometre",
+      "D": "437 inhabitants per square kilometre"
+    },
+    "correct_answer": "A",
+    "source_id": "S027",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/geography",
+    "source_quote": "Switzerland has a population of 8.9 million. The population density is high at 215 inhabitants per square kilometre.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Option B is the population in millions misread as a density, D is Zurich's population in thousands, C is the result of dividing by total area twice. Density is national-average only — the Alps hold just 10 per cent of the population (K079). Figures are date-dependent."
+  },
+  {
+    "id": "K270",
+    "category": "geography",
+    "question": "According to Switzerland Tourism, what area counts as Switzerland's productive area — the land without lakes, rivers or vegetation?",
+    "options": {
+      "A": "41,285 km²",
+      "B": "10,532 km²",
+      "C": "30 753 km²",
+      "D": "8,900 km²"
+    },
+    "correct_answer": "C",
+    "source_id": "S027",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/geography",
+    "source_quote": "The productive area - i.e. the area without lakes, rivers, unproductive vegetation and without any vegetation - covers 30 753 km².",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Option A is the total national area (41,285 km²) and is the confident wrong pick, because 'productive area' sounds like it should be the whole country. Option D transposes the population figure of 8.9 million. The source's own definition is partly circular ('unproductive vegetation and without any vegetation'), reproduced in the stem so the definition is not misstated."
   }
 ]
