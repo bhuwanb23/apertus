@@ -6,6 +6,8 @@ fix/comparison.md, fig4 retrieval). No invented 70B scores.
 """
 from __future__ import annotations
 
+import json
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -16,23 +18,24 @@ from matplotlib.patches import FancyBboxPatch
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = next(p for p in Path(__file__).resolve().parents
-              if (p / "data").is_dir() and (p / "Makefile").is_file())
+            if (p / "data").is_dir() and (p / "Makefile").is_file())
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import submission_numbers as SN  # noqa: E402
 OUT = ROOT / "docs" / "submission" / "assets"
 
-# Measured numbers (sources in module docstring)
-BASE_ACC, BASE_N, BASE_CI = 55.6, "20/36", (39.6, 70.5)
-RAG_ACC, RAG_N, RAG_CI = 86.1, "31/36", (71.3, 93.9)
-DELTA_PP, DELTA_CI, MCNEMAR_P = 30.6, (13.1, 30.6), 0.001
-DEV_BASE, DEV_RAG = 48.8, 83.3
-RECALL = {1: 83.3, 3: 90.5, 5: 94.0}
-CATS = [
-    ("geography", 83.3, 100.0),
-    ("health", 66.7, 100.0),
-    ("history", 66.7, 83.3),
-    ("law", 50.0, 83.3),
-    ("politics", 33.3, 50.0),
-    ("services", 33.3, 100.0),
-]
+# Measured numbers. Loaded, never typed - see submission_numbers.py. These were
+# literals here and all of them described a 36-item run; the sealed set is now 90.
+_H = SN.headline()
+BASE_ACC, BASE_N, BASE_CI = _H["base_acc"], _H["base_n"], _H["base_ci"]
+RAG_ACC, RAG_N, RAG_CI = _H["rag_acc"], _H["rag_n"], _H["rag_ci"]
+DELTA_PP, DELTA_CI, MCNEMAR_P = _H["delta_pp"], _H["delta_ci"], _H["mcnemar_p"]
+IMPROVED_N, REGRESSED_N, N_PAIRED = _H["improved"], _H["regressed"], _H["n_paired"]
+DEV_N = SN.dev()["n"]
+RECALL = SN.recall()
+RECALL_N = SN.recall_n()
+CATS = [(c["category"], c["before_accuracy"], c["after_accuracy"])
+        for c in SN.categories()]
 
 RED = "#E63946"
 RED_LIGHT = "#F4A6AB"
@@ -84,7 +87,7 @@ def fig1_overall():
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
     ax.set_title("Knowledge accuracy on the held-out test set — Apertus 1.5 8B", loc="left", fontsize=13, fontweight="bold", color=INK, pad=14)
-    fig.text(0.08, 0.02, f"n=36 · paired McNemar 11↑ / 0↓ · p={MCNEMAR_P} · Δ +{DELTA_PP} pp [{DELTA_CI[0]}, +{DELTA_CI[1]}] · 70B: not measured", fontsize=8.5, color=MUTED)
+    fig.text(0.08, 0.02, f"n={N_PAIRED} · paired McNemar {IMPROVED_N}↑ / {REGRESSED_N}↓ · {SN.fmt_p(MCNEMAR_P)} · Δ +{DELTA_PP} pp [{DELTA_CI[0]}, +{DELTA_CI[1]}] · 70B: not measured", fontsize=8.5, color=MUTED)
 
     # Side panel
     ax_p = fig.add_axes([0.72, 0.28, 0.24, 0.48])
@@ -131,21 +134,87 @@ def fig2_categories():
     return path
 
 
+def _values_mean_str() -> str:
+    """The values mean as measured, with its own scale named."""
+    v = SN.values()
+    if not v.get("present"):
+        return "not measured"
+    return f"{v['mean']} / {v['scale_max']} (self-judged)"
+
+
+def _n_sources() -> int:
+    """Distinct sources actually behind the corpus - not the original plan's 100."""
+    try:
+        ids = set()
+        for split in ("dev", "test"):
+            p = ROOT / "data" / "knowledge" / f"knowledge_{split}.json"
+            for q in json.loads(p.read_text(encoding="utf-8")):
+                if q.get("source_id"):
+                    ids.add(q["source_id"])
+        return len(ids)
+    except (OSError, json.JSONDecodeError, KeyError):
+        return 0
+
+
+def _try_dev_knowledge() -> dict | None:
+    """The paired dev delta, if a dev run exists at the CURRENT dev scale.
+
+    Returns None when it does not. The caller then draws only measured bars.
+    Absence is reported, never filled in.
+    """
+    for name in ("knowledge_8b_dev_rescore.json", "knowledge_8b_dev.json"):
+        p = ROOT / "results" / "scores" / name
+        if not p.is_file():
+            continue
+        try:
+            d = json.loads(p.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        sc = d.get("scores", d)
+        if "overall" not in sc:
+            continue
+        return {"n": sc.get("total_questions"), "acc": sc["overall"]}
+    return None
+
+
 def fig3_transfer():
+    """
+    The dev → test transfer check, drawn from whatever is actually measured.
+
+    This figure used to draw two bars from constants: Dev (n=84) +34.5 pp and Test
+    (n=36) +30.6 pp. When the sealed set was rescaled to 90 items the test bar went
+    stale, and no dev run exists at the new 210-item dev scale at all - so the dev
+    bar was not merely out of date, it had no current measurement behind it.
+
+    A bar with no run behind it is decoration. So this renders only the arms that
+    exist, and names the split it could not draw rather than inventing one.
+    """
     fig, ax = plt.subplots(figsize=(9.5, 4.8), dpi=160)
     fig.patch.set_facecolor(BG)
-    splits = ["Dev (n=84)", "Test (n=36)"]
-    deltas = [DEV_RAG - DEV_BASE, DELTA_PP]
-    colors = [RED_LIGHT, RED]
-    bars = ax.bar(splits, deltas, width=0.5, color=colors, zorder=3)
-    for i, d in enumerate(deltas):
-        ax.text(i, d + 1.2, f"+{d:.1f} pp", ha="center", fontsize=12, fontweight="bold", color=INK)
+
+    rows = []
+    dev_k = _try_dev_knowledge()
+    if dev_k:
+        rows.append((f"Dev (n={dev_k['n']})", dev_k["delta_pp"], RED_LIGHT))
+    rows.append((f"Test (n={N_PAIRED})", DELTA_PP, RED))
+
+    bars = ax.bar([r[0] for r in rows], [r[1] for r in rows],
+                  width=0.5, color=[r[2] for r in rows], zorder=3)
+    top = max(r[1] for r in rows)
+    for i, (_lbl, d, _c) in enumerate(rows):
+        ax.text(i, d + top * 0.04, f"+{d:.1f} pp", ha="center",
+                fontsize=12, fontweight="bold", color=INK)
     ax.set_ylabel("Paired accuracy delta (pp)")
-    ax.set_ylim(0, 45)
+    ax.set_ylim(0, top * 1.22)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    ax.set_title("Dev → test transfer of the RAG gain (Apertus 8B)", loc="left", fontsize=12, fontweight="bold", color=INK, pad=12)
-    fig.text(0.08, 0.02, f"Dev {DEV_BASE}% → {DEV_RAG}% · Test {BASE_ACC}% → {RAG_ACC}% · 70B not measured", fontsize=8.5, color=MUTED)
+    ax.set_title("Dev → test transfer of the RAG gain (Apertus 8B)", loc="left",
+                 fontsize=12, fontweight="bold", color=INK, pad=12)
+
+    note = f"Test {BASE_ACC}% → {RAG_ACC}%"
+    note += (f" · Dev not re-run at n={DEV_N}" if not dev_k else "")
+    note += " · 70B not measured"
+    fig.text(0.08, 0.02, note, fontsize=8.5, color=MUTED)
     path = OUT / "fig3_dev_to_test.png"
     fig.savefig(path, dpi=160, bbox_inches="tight", facecolor=BG)
     plt.close(fig)
@@ -165,8 +234,8 @@ def fig4_recall():
     ax.set_ylabel("Source recall (%)")
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    ax.set_title("BM25 source recall on knowledge_dev (model-free, n=84)", loc="left", fontsize=12, fontweight="bold", color=INK, pad=12)
-    fig.text(0.08, 0.02, "Retrieval finds the answer's source 94% of the time at k=5 — dense retriever not the bottleneck.", fontsize=8.5, color=MUTED)
+    ax.set_title(f"BM25 source recall on knowledge_dev (model-free, n={RECALL_N})", loc="left", fontsize=12, fontweight="bold", color=INK, pad=12)
+    fig.text(0.08, 0.02, f"Retrieval finds the answer's source {RECALL.get(5, 0):.1f}% of the time at k=5 — dense retriever not the bottleneck.", fontsize=8.5, color=MUTED)
     path = OUT / "fig4_retrieval_recall.png"
     fig.savefig(path, dpi=160, bbox_inches="tight", facecolor=BG)
     plt.close(fig)
@@ -241,10 +310,10 @@ def infographic_scope():
     d.text((920, 80), "70B", fill=MUTED, font=_font(16, True))
     d.line([(40, 110), (1360, 110)], fill="#E4E7EB", width=2)
     rows = [
-        ("Knowledge baseline", f"{BASE_ACC}% (20/36)", "Not run"),
-        ("Knowledge + RAG", f"{RAG_ACC}% (31/36)", "Not run"),
-        ("Paired delta", f"+{DELTA_PP} pp · p={MCNEMAR_P}", "—"),
-        ("Values mean / 2.0", "1.096 (self-judged)", "Not run"),
+        ("Knowledge baseline", f"{BASE_ACC}% ({BASE_N})", "Not run"),
+        ("Knowledge + RAG", f"{RAG_ACC}% ({RAG_N})", "Not run"),
+        ("Paired delta", f"+{DELTA_PP} pp · {SN.fmt_p(MCNEMAR_P)}", "—"),
+        ("Values mean / 2.0", f"{_values_mean_str()}", "Not run"),
         ("Dialect refusal", "50.0% (15/30)", "Not run"),
     ]
     y = 125
@@ -305,11 +374,11 @@ def fig_pipeline():
     d = ImageDraw.Draw(img)
     d.text((40, 16), "Evaluation pipeline (knowledge arm)", fill=INK, font=_font(22, True))
     steps = [
-        (40, "1. Harvest", "100 Swiss\nsources"),
-        (300, "2. Seal", "84/36 split\nhash-locked"),
-        (560, "3. Baseline", "8B · T=0\n55.6% test"),
-        (820, "4. BM25 RAG", "top_k=3\n0/84 contam."),
-        (1080, "5. Retest", "86.1% test\np=0.001"),
+        (40, "1. Harvest", f"{_n_sources()} Swiss\nsources"),
+        (300, "2. Seal", f"{DEV_N}/{N_PAIRED} split\nhash-locked"),
+        (560, "3. Baseline", f"8B · T=0\n{BASE_ACC}% test"),
+        (820, "4. BM25 RAG", f"top_k=3\n0/{DEV_N} contam."),
+        (1080, "5. Retest", f"{RAG_ACC}% test\n{SN.fmt_p(MCNEMAR_P)}"),
     ]
     for x, title, body in steps:
         d.rounded_rectangle([x, 60, x + 230, 230], radius=12, fill=PANEL, outline="#E4E7EB", width=2)

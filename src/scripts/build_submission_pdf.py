@@ -28,6 +28,23 @@ from reportlab.platypus import (
 
 ROOT = next(p for p in Path(__file__).resolve().parents
               if (p / "data").is_dir() and (p / "Makefile").is_file())
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import submission_numbers as SN  # noqa: E402
+
+# Every figure below is loaded from the generated claims, never typed. The
+# literals this replaced all described a 36-item run.
+_H = SN.headline()
+BASE_ACC, BASE_N, BASE_CI = _H["base_acc"], _H["base_n"], _H["base_ci"]
+RAG_ACC, RAG_N, RAG_CI = _H["rag_acc"], _H["rag_n"], _H["rag_ci"]
+DELTA_PP, DELTA_CI = _H["delta_pp"], _H["delta_ci"]
+MCNEMAR_P, P_STR = _H["mcnemar_p"], SN.fmt_p(_H["mcnemar_p"])
+IMPROVED_N, REGRESSED_N, N_PAIRED = _H["improved"], _H["regressed"], _H["n_paired"]
+DEV_N = SN.dev()["n"]
+RECALL = SN.recall()
+RECALL_STR = " / ".join(f"{RECALL[k]:.1f}%" for k in sorted(RECALL))
+POWER = _load_power() if (_load_power := lambda: _read_power()) else None  # placeholder
+
 ASSETS = ROOT / "docs" / "submission" / "assets"
 OUT = ROOT / "docs" / "submission" / "swiss_reality_check_report.pdf"
 OUT_ROOT = ROOT / "swiss_reality_check_report.pdf"

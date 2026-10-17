@@ -42,7 +42,8 @@ assertion in a different sentence. So the generator selects **"pending"** and
 writes the parts that ARE real:
 
   - the benchmark itself, and what it is for
-  - retrieval recall: 94% at k=5, ground truth, no model required
+  - retrieval recall at k=5, ground truth, no model required (imported live from
+    retriever.recall_figure, so this document cannot outlive the corpus)
   - the contamination finding: the naive system prompt answers 30% of dev
   - the error taxonomy being unresolved, and why that is not a failure
   - the detection limits, computed rather than asserted

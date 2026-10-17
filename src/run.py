@@ -166,8 +166,9 @@ def run_retrieval() -> None:
        f"{r['@5']}%")
     ok("retrieval beats chance by a wide margin", r["@1"] >= 50, f"{r['@1']}%")
 
-    # The decision this number drove.
-    print("\n  → 94% recall with pure-Python BM25 and zero dependencies is why a")
+    # The decision this number drove. The figure is the one just computed above,
+    # not a remembered literal: "94%" here outlived the corpus it described.
+    print(f"\n  → {r['@5']}% recall with pure-Python BM25 and zero dependencies is why a")
     print("    dense retriever was never installed. See technical_report.md §4.")
 
 
