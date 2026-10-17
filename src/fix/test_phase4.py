@@ -30,6 +30,7 @@ Exit: 0 = pass, 1 = failure
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -105,10 +106,22 @@ def test_refuses_on_mock() -> None:
           f"8b backend {config.MODELS['8b'].backend}")
 
     # The CLI must exit non-zero and must not have written any test results.
+    #
+    # The mock has to be requested through the ENVIRONMENT, not by mutating
+    # config in this process: a subprocess re-reads its configuration from the
+    # environment, so a parent-side assignment never reached it. The check then
+    # only appeared to pass because preflight exits non-zero for any blocking
+    # problem, and a dirty tree always blocks - so it was green on a dirty tree
+    # and red on a clean one, which is the opposite of a hermetic test.
+    mock_env = dict(os.environ, APERTUS_8B_BACKEND="mock")
     r = subprocess.run([sys.executable, str(ROOT / "src" / "eval" / "run_test_final.py"),
-                        "--preflight"], capture_output=True, text=True, cwd=ROOT)
+                        "--preflight"], capture_output=True, text=True, cwd=ROOT,
+                       env=mock_env)
     check("--preflight exits non-zero on mock", r.returncode != 0,
           f"exit={r.returncode}")
+    check("...and the refusal is actually about the mock backend, not a dirty tree",
+          "P2-backend-not-mock" in (r.stdout + r.stderr),
+          f"stdout+stderr tail: {(r.stdout + r.stderr)[-400:]}")
 
     # Assert that the CALL wrote nothing, not that the directory is empty.
     #
@@ -125,8 +138,13 @@ def test_refuses_on_mock() -> None:
 
     # And the dry run must not touch the test set either.
     r2 = subprocess.run([sys.executable, str(ROOT / "src" / "eval" / "run_test_final.py"),
-                         "--dry-run"], capture_output=True, text=True, cwd=ROOT)
-    check("--dry-run also refuses on mock", r2.returncode != 0)
+                         "--dry-run"], capture_output=True, text=True, cwd=ROOT,
+                        env=mock_env)
+    check("--dry-run also refuses on mock", r2.returncode != 0,
+          f"exit={r2.returncode}")
+    check("...and says why, rather than blocking on a dirty tree",
+          "P2-backend-not-mock" in (r2.stdout + r2.stderr),
+          f"tail: {(r2.stdout + r2.stderr)[-400:]}")
 
     # require_live=False is how the harness is exercised without a model.
     pf_relaxed = rtf.preflight(require_live=False, check_freeze=False)
