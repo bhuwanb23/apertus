@@ -568,10 +568,10 @@ def run_one(task: str, model: str, method: str, top_k: int, rerun: bool) -> dict
     # memory; if they cannot be read back off disk, the archive is not
     # reproducible and no paired statistic can be built from it.
     if not rows:
-print("\n  ARM FAILED: the run produced scores but its per-item rows "
-                    "could not be read back from\n  results/parsed/. The archive "
-                    "would be a score with no evidence behind it.\n  This is the "
-                    "signature of a file-naming or tag collision, not of a bad run.")
+        print("\n  ARM FAILED: the run produced scores but its per-item rows "
+              "could not be read back from\n  results/parsed/. The archive "
+              "would be a score with no evidence behind it.\n  This is the "
+              "signature of a file-naming or tag collision, not of a bad run.")
         return {"error": "no rows on disk after a scored run",
                 "task": task, "model": model, "method": method}
 
