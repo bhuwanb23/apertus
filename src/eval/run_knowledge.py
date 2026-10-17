@@ -261,6 +261,28 @@ def extract_answer(text: str, options: dict | None = None) -> str:
     return explain_answer(text, options)[0]
 
 
+# Chat-template control tokens, e.g. the end-of-turn and end-of-text markers some
+# templates define. They are transport scaffolding and must never reach the answer
+# parser.
+#
+# The closing pipe is optional because it is not always present: the served build
+# emitted "<|im_end>" with only the opening pipe, so a pattern requiring the
+# closing one matched nothing and every response stayed unparseable.
+CONTROL_TOKEN_RE = re.compile(r"<\|[^|<>]{0,64}\|?>")
+
+
+def strip_control_markers(text: str) -> str:
+    """Remove chat-template control tokens, then tidy the seams.
+
+    Tidy matters: a stripped marker can leave "A" glued to the following text
+    ("Anot sure"), and a bare-letter rule cannot see through that. Trimming the
+    resulting whitespace keeps the answer readable to every downstream rule.
+    """
+    if not text:
+        return text
+    return re.sub(r"[ \t]+", " ", CONTROL_TOKEN_RE.sub("", text)).strip()
+
+
 def explain_answer(text: str, options: dict | None = None) -> tuple[str, str]:
     """
     Parse a response, and say which rule decided it.
@@ -310,6 +332,18 @@ def explain_answer(text: str, options: dict | None = None) -> tuple[str, str]:
     """
     if not text or not text.strip():
         return PARSE_ERROR, "empty"
+
+    # Chat-template control tokens are scaffolding, not answer text. Some
+    # serving configurations emit the end-of-turn marker as visible characters
+    # instead of consuming it, so every answer arrives as "A" followed by that
+    # marker. That is not an ambiguous answer - it is the model's bare letter
+    # with a piece of transport wrapped around it - and scoring it as a parse
+    # error discards a correct response. It also biases the corpus, because the
+    # bias is not random: it hits the terse answers hardest.
+    #
+    # Stripped here, before the hedge screen, so the marker can never be read as
+    # prose by any later rule.
+    text = strip_control_markers(text)
 
     raw = text.strip()
     up = raw.upper()
@@ -539,6 +573,24 @@ def main() -> int:
     if args.split == "test":
         print("WARNING: you are running the SEALED test set. "
               "docs/plans/phase_1.md seals it until Phase 4.1.\n")
+        # Record the access. The seal's whole value is that the number of times
+        # the test set was opened is a question the log can answer, and this
+        # runner reads the test split without going through the instrumented
+        # Phase 4.1 path. The one-shot behind the currently reported numbers was
+        # measured this way and was therefore NOT in the log at the time; see
+        # results/narrative/findings.md for that disclosure. From here on the
+        # audit trail is complete.
+        try:
+            import seal as _seal
+            _seal.verify()
+            _seal.log_access(f"test-run knowledge/{args.model}/"
+                             f"{'improved' if args.rag else 'baseline'}",
+                             actor="user")
+            print("  (access recorded in the seal audit log)\n")
+        except SystemExit:
+            raise
+        except Exception as exc:  # never let the audit break the run
+            print(f"  (could not record the seal access: {exc})\n")
 
     rag_context = ""
     if args.rag:

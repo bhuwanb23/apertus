@@ -353,6 +353,22 @@ def main() -> int:
     ap.add_argument("--limit", type=int, default=None)
     args = ap.parse_args()
     split = args.split or config.knowledge_split
+    if split == "test":
+        # Record the access to the sealed half. Without this the RAG arm's
+        # opens are invisible to the audit log, so the log understates how
+        # many times the test set was read - which is the first thing a
+        # reader checks. See results/narrative/findings.md for the
+        # disclosure covering the one-shot measured before this was wired.
+        try:
+            import seal as _seal
+            _seal.verify()
+            _seal.log_access(f"test-run knowledge/{args.model}/improved",
+                             actor="user")
+            print("  (access recorded in the seal audit log)\n")
+        except SystemExit:
+            raise
+        except Exception as exc:
+            print(f"  (could not record the seal access: {exc})\n")
 
     if len(args.topk) == 1:
         evaluate_with_rag(args.model, split, args.topk[0], args.limit, args.backend,
