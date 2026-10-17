@@ -1,6 +1,6 @@
 # Key Findings — Swiss Reality Check
 
-*Generated 2026-10-17T08:02:25+00:00 by `eval/narrative.py` from measured data · git `0664af1709b3`*
+*Generated 2026-10-17T14:08:06+00:00 by `eval/narrative.py` from measured data · git `e65fb1a8d588`*
 
 > **Read this first.** Every number below was computed by the code in this repository
 > and is traceable to a run. There are no placeholders, and no claim appears that
@@ -9,7 +9,7 @@
 
 > ## Model data — every accuracy figure below is from a live run
 >
-> The sealed test set was opened **78 times** according to the append-only log - 9 of the baseline arm and 69 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Latest arm: 2026-10-17T06:59:59+00:00, backend `http`, `is_mock: false`.
+> The sealed test set was opened **81 times** according to the append-only log - 9 of the baseline arm and 72 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Latest arm: 2026-10-17T06:59:59+00:00, backend `http`, `is_mock: false`.
 > Arms scored: `8b`. Accuracy, deltas and intervals
 > come from `eval/statistical_report.py`; the per-item rows are in `results/test_run/`.
 > The findings that hold *without* a model are in §3.1–§3.4, and they do not depend on this run.
@@ -48,7 +48,7 @@ Two properties matter more than the counts:
   plausible-sounding invention. That is what makes an error diagnosable rather
   than merely wrong.
 - **The split is stratified and sealed.** 84 dev / 36 test, split on `(category, difficulty)`
-  with a fixed seed. The sealed test set was opened **78 times** according to the append-only log - 9 of the baseline arm and 69 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Every individual access is listed by `python src/eval/seal.py audit`.
+  with a fixed seed. The sealed test set was opened **81 times** according to the append-only log - 9 of the baseline arm and 72 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Every individual access is listed by `python src/eval/seal.py audit`.
 
 ## Act 3 — What was actually found
 
@@ -146,6 +146,29 @@ right one either, and it is reported here rather than dropped.
 The full tables, including the per-category breakdown that is reported side by
 side and never ranked, are in `results/final_scores/statistical_report.md`.
 
+### 3.6 Multiple choice cannot see a refusal — and this model refuses a lot
+
+Every other arm in this report scores what the model gets right. Asked the same 90 sealed questions as multiple choice, Apertus 8B answers **51.1%** of them correctly — with **0% refusal possible**, because four options always offer something to pick.
+
+That instrument has a blind spot, and it is the one that matters for deployment. With options present, a confident fabrication and an honest refusal both score zero: same number, opposite behaviour. A multiple-choice benchmark cannot tell competence from bluffing.
+
+Removing the options and grading each answer against its reference passage — **correct / incorrect / not attempted** — shows both:
+
+| arm | factuality | hallucination | abstention |
+|---|---|---|---|
+| Open-ended, no context | 43.8% | 56.2% | 46.7% |
+| Open-ended, BM25 RAG | 87.4% | 12.6% | 3.3% |
+
+Factuality and hallucination are over **attempted** answers only, so a model cannot improve by refusing everything. On that basis the un-assisted model is wrong on **56.2%** of the questions it chooses to answer, and declines **42 of 90** outright.
+
+Retrieval helps, and — importantly — it helps for the right reason. Across the same 90 items, **56** answers became correct against **1** lost. A retrieval system can always make its hallucination rate look better by declining more; this one declined **nothing new** (`newly_abstained = 0`) and instead moved 39 answers *out* of refusal and into correctness.
+
+The honest reading is uncomfortable for the headline number: on the same questions, the same weights and the same sealed split, an 8B model that looks like it knows just over half of Switzerland will confidently invent an answer more than half the time when you take the options away, and will tell you it does not know on the rest. Both facts are invisible to multiple choice.
+
+The figure `openqa_factuality.svg` shows the three arms as one composition: multiple choice has no refusal segment because it cannot, and the two open-ended arms differ mostly in how much is *correct* rather than in how much has gone silent.
+
+*Grader:* the same Apertus 8B under test, self-judged and disclosed. Abstention is fixed by a deterministic rule before the judge is called. Human cross-check of the judge: **not started** (9 stratified verdicts awaiting a reviewer).
+
 ## Act 4 — The fix, and what it is worth
 
 The intervention is retrieval-augmented generation: before answering, the model
@@ -202,7 +225,7 @@ to any small-n evaluation, in any language, for any model.
 
 ## Limitations
 
-1. **One model, one benchmark, one shot that was not one shot.** The sealed test set was opened **78 times** according to the append-only log - 9 of the baseline arm and 69 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full.
+1. **One model, one benchmark, one shot that was not one shot.** The sealed test set was opened **81 times** according to the append-only log - 9 of the baseline arm and 72 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full.
    Scored for Apertus 1.5 8B. Nothing here separates a
    Swiss-specific effect from a general small-model effect, and nothing here would survive a
    second look at the same items.
@@ -228,10 +251,12 @@ to any small-n evaluation, in any language, for any model.
 7. **No comparison to models outside Apertus.** Nothing here shows these gaps are
    specific to Apertus rather than common to open multilingual models of its size.
 
+8. **The open-ended hallucination rate rests on a self-judge and a small attempted pool.** The judge is the same 8B under test. Two things follow. First, its verdicts are not independent of the thing being measured, so the 56.2% figure should be read as *this model's* self-consistent notion of what the reference says, not as an external verdict; a 20% human cross-check sheet is prepared but unscored, so no agreement rate is claimed. Second, factuality is computed over the 48 questions the baseline attempted, not all 90 — correct by construction for a metric with a refusal option, but it means the baseline rate rests on fewer judgements than the headline n suggests.
+
 ## Reproducibility
 
-- Git commit `0664af1709b35363b5882feea89ae816a7c17ebf`
-- Sealed test set SHA-256 `83c20589e1c5b668fabcdafb0a09c1d2…` (recorded in `eval/seal/`)
+- Git commit `e65fb1a8d588b55bbd3204bd4d8400ac1964b716`
+- Sealed test set SHA-256 `d00c8cf8548fd5597f225f16c8435755…` (recorded in `eval/seal/`)
 - Seed 42 · temperature 0.0 · prompt version 1.0 · judge `8b`
 - Every access to the sealed test set is in an append-only log: `python src/eval/seal.py audit`
 - Scenario selected by the data, not by hand: **A — Strong improvement**

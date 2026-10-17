@@ -148,7 +148,7 @@ def build(summary: dict, mcq: dict | None = None) -> Canvas:
            f"{pr['lost_correct']} out (net {pr['net_correct']:+d}).",
            size=13, fill=INK, weight="600")
     c.text(84, ybase + 50,
-           f"newly abstained = {pr['newly_abstained']}   ·   "
+           f"newly_abstained = {pr['newly_abstained']}   ·   "
            f"moved out of refusal = {pr['un_abstained']}",
            size=12, fill=INK, family=MONO)
     c.text(84, ybase + 74,

@@ -475,6 +475,22 @@ def test_figures_traceable() -> None:
         add(w["ci_upper"])
         expected.add(f"{w['ci_upper'] - w['ci_lower']:.0f}")
 
+    # The open-ended arm's rates trace to openqa_report, which reads them out of
+    # the parsed sealed results rather than recomputing anything. Added to the
+    # EXPECTED set from that artefact for the same reason as everything above: a
+    # percentage in findings.md that no module produced is exactly the failure
+    # this check exists to catch, and the openQA rates are now in the document.
+    try:
+        import openqa_report
+        _oq = openqa_report.summary()
+        if _oq.get("status") == "complete":
+            for _m in (_oq["baseline"], _oq["rag"]):
+                for _k in ("factuality", "hallucination_rate", "abstention_rate"):
+                    add(_m.get(_k))
+            add(20)          # the brief's 20% human cross-check sampling rate
+    except Exception:
+        pass                    # arm not run: nothing in the document cites it
+
     pct = re.findall(r"(\d+(?:\.\d+)?)%", text)
     suspicious = sorted({p for p in pct if p not in expected})
     check("every percentage traces to a module that measured it",

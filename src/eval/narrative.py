@@ -815,6 +815,19 @@ def write_findings(stats: dict | None = None) -> Path:
           "`results/final_scores/statistical_report.md`.")
         A("")
 
+    # The open-ended finding renders itself; see openqa_narrative.py for why it
+    # lives outside this file.
+    try:
+        from openqa_narrative import finding as _oq_finding
+        _oq = _oq_finding()
+        if _oq:
+            for _line in _oq:
+                A(_line)
+            A("")
+    except (ImportError, OSError) as _e:
+        A("### 3.x Open-ended factuality (unavailable: %s)" % _e)
+        A("")
+
     # ---------------------------------------------------------------- act 4
     A("## Act 4 — The fix, and what it is worth")
     A("")
@@ -1036,6 +1049,15 @@ def write_findings(stats: dict | None = None) -> Path:
     A("   specific to Apertus rather than common to open multilingual models of "
       "its size.")
     A("")
+
+    try:
+        from openqa_narrative import limitation as _oq_lim
+        _l = _oq_lim()
+        if _l:
+            A("8. " + _l[0])
+            A("")
+    except (ImportError, OSError):
+        pass
 
     # ------------------------------------------------------- reproducibility
     A("## Reproducibility")

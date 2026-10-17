@@ -519,6 +519,15 @@ def build():
         author=TEAM_SHORT,
         subject="Hack Apertus Online · Track 1B Swiss Voices",
     )
+    # The open-ended factuality page renders itself from openqa_report; see
+    # openqa_pdf.py. Appended last so it cannot renumber the existing pages, and
+    # skipped entirely when the arm has not been run.
+    try:
+        from openqa_pdf import build as _oq_pdf_build
+        _oq_pdf_build(story, S, usable, mm, img)
+    except (ImportError, OSError) as _e:
+        print("  openQA page skipped: %s" % _e)
+
     doc.build(story, onFirstPage=footer, onLaterPages=footer)
 
     from pypdf import PdfReader
