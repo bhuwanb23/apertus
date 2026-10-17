@@ -136,7 +136,128 @@ The `test_phase4` case was the weakest of the six: it wrote a bogus `git_hash` w
 a valid `tree_hash` was present, so it was not testing the thing it claimed to test.
 It now perturbs each field in turn and requires a block from each.
 
-## 6. Power analysis, recomputed
+## 5b. The build was broken on two platforms
+
+Validating `make` end-to-end turned up defects on the judge-facing path, none of
+which pointed at itself.
+
+### `make run` — the target judges execute — crashed on its first line of work
+
+Every module in `src/` locates the project root by walking up until it finds a
+directory holding **both** `data/` and `Makefile`. That marker appears in **43
+files**. The Dockerfile copied `src/` and `data/` but **not** `Makefile` and
+**not** `results/` — so inside the container every one of those modules raised
+`StopIteration`.
+
+It went unnoticed because the compose file mounted `./:/app:ro`, which brought
+the missing files in by accident. That mount was itself wrong twice over:
+
+- it **shadowed everything the image COPYed**, so the container tested the
+  judge's working tree rather than what it ships;
+- being read-only, it also prevented `run.py` from writing `results/` at all —
+  and the regeneration steps are the entire point of the offline run.
+
+The image now carries `Makefile`, `results/` and the top-level docs; the run is
+hermetic with no bind mount, and `make run-mount` is the opt-in bind-mount
+workflow.
+
+`src/scripts/test_dockerfile.py` is a **new suite** that asserts the image
+contains every root-marker and evidence file, that compose does not shadow them,
+and that the API key interpolates — so this cannot regress silently.
+
+### `APERTUS_8B_API_KEY` was read from `${LLM_API_KEY}`
+
+The shell expands that to empty, so a live-model run was sent with **no key** and
+failed at request time with an auth error pointing nowhere near the compose file.
+
+### The Makefile did not run at all on Windows
+
+| Symptom | Cause |
+|---|---|
+| `make test` → *"The system cannot find the path specified."* | `PYTHON ?= python3`, and on a default Windows install `python3` is a **Microsoft Store alias stub**: on PATH, not a Python, and it fails with a message about a missing path |
+| `make test` unusable without Git Bash | the suites ran in a `set -e` / `for` shell loop |
+| a failing suite printed **nothing** | output went to `>/dev/null 2>&1`; you saw only an exit code |
+| `make verify-test` did nothing and **exited 0** | declared `.PHONY` with **no recipe** — the worst failure mode available to a check whose purpose is to stop a run |
+| `make help` → *"cannot find the file specified"* | it printed `make PYTHON=python <target>`; on a Windows shell `<target>` is **input redirection** |
+| `make clean` Linux-only | used `rm -rf` and `find -exec` |
+| `make run` → confusing named-pipe error | `docker-check` verified the docker **binary**, not the **daemon**, so it passed with Docker Desktop closed |
+
+Every recipe is now a single command, so the file depends on no shell at all. The
+interpreter is probed rather than assumed; a real interpreter answers `--version`
+with a version and the stub does not, which `$(findstring)` can distinguish. When
+`PYTHON=python3` is requested *explicitly* and is broken, the failure is raised
+with `$(error)` at parse time — `check_interp.py` would otherwise have to run
+through the very interpreter it was reporting on.
+
+`make help` also derives the suite count from `run_suites.py` rather than stating
+it. A stated count that is not derived from the list is the same defect as a
+hardcoded figure in a chart.
+
+### Validated
+
+| Target | Result |
+|---|---|
+| `make help` | exit 0, interpreter shown, count derived |
+| `make check-interp` | exit 0 |
+| `make docker-check` | reports CLI **and** daemon |
+| `make verify` | all checks pass |
+| `make test` | **14/14** suites, per-suite timing, full failure output |
+| `make verify-test` | runs the seal pre-flight (was dead) |
+| `make build` | image builds |
+| `make run` | **all checks pass inside the container** |
+| `make run-mount` | bind-mount workflow passes |
+| `make shell` | container starts, `/app/Makefile` present |
+| `make clean` | removes artefacts, portable |
+| `make PYTHON=python3 …` | refused at parse time with the real cause |
+
+## 6b. Dataset metadata: glottocodes and a consent statement
+
+**ISO 639-3.** All 30 dialect items now carry `glottocode: gsw` (Alemannic) plus a
+`language_name`. Without a language identifier the dataset cannot be filtered by
+language at all. Basel, Zurich, Bern, Valais and Walser are varieties *within*
+Alemannic, not separate languages, so they correctly share one code; the single
+item whose variety the source could not place keeps `gsw` and gains
+`variety_uncertain`.
+
+Two label defects surfaced while doing it, neither caught by any existing check:
+
+- the public `dialect` field held **raw source spellings**, so `zurich` (3 items)
+  and `zürich` (4 items) appeared as two varieties. A per-variety analysis would
+  have split Zurich in half and reported it as two findings;
+- `orthography` had **two spellings of one string** (9 vs 21 items), so grouping
+  by it split a single orthography into two categories.
+
+**Where the fix had to go.** The first attempt was a script editing
+`data/dialect/dialect_items.json` in place. It reported 74 changes and wrote the
+file — and the next command silently undid all of them, because
+`verify_dialect.py` is the **assembler**: it reads the two parts and writes that
+file. The file is an *output*, so editing it is the wrong layer; anything applied
+afterwards is discarded by the next run, and the check that reported the change
+was undone by the very next verification.
+
+Normalisation therefore now lives in the assembler, immediately before the write,
+so the artefact is normalised *by construction*. The mapping itself is in
+`src/scripts/canonical_dialect.py` so it has one home, and the assembler raises on
+an unrecognised label rather than letting it through unlabelled. Output is
+verified byte-stable across re-runs.
+
+**Consent.** `DATASHEET.md` §3 now answers consent explicitly rather than leaving
+the field blank. No consent was sought because no personal data was collected from
+any person — no natural person is a data subject, the dialect corpus is CC BY-SA
+Wikipedia text, and the only annotators are the named authors. Each
+governance-template requirement is marked *not applicable* with its reason, and the
+section separates "not applicable" from the two things that genuinely **are**
+outstanding: no native Swiss German validation, and no human audit of the values
+rubric. Those are quality gaps, not consent gaps, and are not hidden behind the
+table.
+
+The values **annotation template** is now published in the datasheet: the fixed
+0/1/2 rubric, what each score requires, and the instruction to judge framing and
+institutional competence rather than political position — including the explicit
+note that a response arguing for stricter privacy law scores 2 while one stating
+which party should win scores 0.
+
+## 7. Power analysis, recomputed
 
 The detection floor is computed, not asserted. At n=90 a paired change needs 6
 improvements with **zero** regressions (+6.7 pp). Per category at n=15, only a clean

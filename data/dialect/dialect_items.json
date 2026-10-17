@@ -4,7 +4,7 @@
     "task_type": "translation",
     "dialect": "basel",
     "dialect_evidence": "S056 header `DIALECT: basel`; the file's DIALECT_EVIDENCE block places this in village-spoken Basel-Landschaft Alemannisch (Mappach, BL) and names `Grumbiirre` as the definitive Basel-Landschaft dialect word. The file's own word-count note flags S2 as \"the shortest dialect-variation-contrast item available\".",
-    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "swiss_german_text": "D' Säu verdraage nämli keini raui Grumbiirre.",
     "standard_german_reference": "Die Schweine vertragen nämlich keine rohen Kartoffeln.",
     "scoring": {
@@ -44,14 +44,17 @@
     "source_url": "https://als.wikipedia.org/wiki/Kartoffeld%C3%A4mpfer",
     "validated_by": null,
     "notes": "",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "orthography_as_sourced": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D002",
     "task_type": "translation",
     "dialect": "basel",
     "dialect_evidence": "S056 header `DIALECT: basel`; DIALECT_EVIDENCE calls this \"plain house-style Alemannisch with a Basel/Southwest-German feel\" and names `Bröötli` as a Basel `-li` diminutive. LEXICAL NOTES L1/L8/L9 cover Däig, Bröötli, bache.",
-    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "swiss_german_text": "Mit de mäiste Brotdäig cha mä au chliineri Bröötli bache.",
     "standard_german_reference": "Mit dem meisten Brotteig kann man auch kleinere Brötchen backen.",
     "scoring": {
@@ -107,14 +110,17 @@
     "source_url": "https://als.wikipedia.org/wiki/Brot",
     "validated_by": null,
     "notes": "",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "orthography_as_sourced": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D003",
     "task_type": "translation",
     "dialect": "basel",
     "dialect_evidence": "S056 header `DIALECT: basel`. LEXICAL NOTE L22: \"`Chemmi` = Schornstein — deliberate sense-shift, `Kamin`/`Schornstein` -> Alemannic `Chemmi`, a wholly different word. The strongest lexical item in the file.\" The file is otherwise pure Basel house style (`Aadriib`, `Wässerfaarzüüg`, `aabriibe`).",
-    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "swiss_german_text": "D Abgaas vom Schiffsmotor wärde über e Chemmi abgläitet.",
     "standard_german_reference": "Die Abgase vom Schiffsmotor werden über einen Schornstein abgeleitet.",
     "scoring": {
@@ -162,14 +168,17 @@
     "source_url": "https://als.wikipedia.org/wiki/Schiff",
     "validated_by": null,
     "notes": "Deliberate lexical trap: a model that pattern-matches `Chemmi` to Standard `Kamin` loses the highest-weight content word. `Kamin` is accepted as a synonym because the reference itself is `Schornstein` and the two are near-synonymous in Standard German.",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "orthography_as_sourced": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D004",
     "task_type": "translation",
     "dialect": "basel",
     "dialect_evidence": "S056 header `DIALECT: basel`; the file's lead sentence enumerates five regional Alemannic names for the dish (`Röschti`, `Brägel`, `Brausi`, `Häärpflchoch`), confirming Alemannic lexis rather than Standard borrowings. LEXICAL NOTE L14: \"`Anke` = Butter — Alemannic-only word, Standard `Butter` has no dialect counterpart in most Swiss German\".",
-    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "swiss_german_text": "Ire Gussisepfanne tuet me de mit e chly Anke d Röschti aabrätle.",
     "standard_german_reference": "In der Gussepfanne röstet man dann die Rösti mit etwas Butter an.",
     "scoring": {
@@ -218,14 +227,17 @@
     "source_url": "https://als.wikipedia.org/wiki/R%C3%B6sti",
     "validated_by": null,
     "notes": "Reference renders the verb loosely as \"röstet ... an\"; `aabrätle` is specifically anbratenen/rösten. Synonyms cover both.",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "orthography_as_sourced": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D005",
     "task_type": "translation",
     "dialect": "basel",
     "dialect_evidence": "S056 header `DIALECT: basel`. The file's DIALECT_EVIDENCE records that `Märit`/`Märik` do not exist on als.wikipedia at all; the working Alemannic headword is `Märt` (LEXICAL NOTE L1), with `Mäss` as a second one. Both are Alemannic-only and neither is recoverable from Standard German.",
-    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "swiss_german_text": "Hüte wird d Bezäichnig au für anderi Märt brucht, wo nid ständig si, hüfig für Volksfest.",
     "standard_german_reference": "Heute wird die Bezeichnung auch für andere Märkte gebraucht, die nicht ständig sind, häufig für Volksfeste.",
     "scoring": {
@@ -281,14 +293,17 @@
     "source_url": "https://als.wikipedia.org/wiki/Jahrmarkt",
     "validated_by": null,
     "notes": "This file also carries the harvest note that `Märit` vs `Markt` was REFUTED as a dialect contrast. That does not affect the item: as a T1 translation task it tests `Märt` = Märkte, a lexical mapping, not a dialect discrimination.",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "orthography_as_sourced": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D006",
     "task_type": "translation",
     "dialect": "basel",
     "dialect_evidence": "S056 header `DIALECT: basel`, but this specific sentence sits in the `=== Schwäbesch-Alemannesche Fasnet ===` subsection, which the DIALECT_EVIDENCE block flags as orthographically a DIFFERENT system from the rest of the article (near-Dieth, `fo`, `fodr`, `mo`, final devoicing throughout, no unstressed `-e`). Orthography is recorded per item for exactly this reason. The header is a corpus-level Basel convenience label.",
-    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "swiss_german_text": "Organisator fodr Fasnet isch normalerweis a oatsasässege Narrazomft.",
     "standard_german_reference": "Organisator der Fasnacht ist normalerweise eine ehrenamtliche Narrenzunft.",
     "scoring": {
@@ -339,14 +354,17 @@
     "source_url": "https://als.wikipedia.org/wiki/Fasnacht",
     "validated_by": null,
     "notes": "Hard because it is dense heavy Alemannisch: `fodr` = für, `is normalerweis a` = ist normalerweise eine, `oatsasässege` = ehrenamtliche, `Zomft` = Zunft. Function words carry no weight, so the item stands or falls on four content words.",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "orthography_as_sourced": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D007",
     "task_type": "translation",
     "dialect": "basel",
     "dialect_evidence": "S056 header `DIALECT: basel`; DIALECT_EVIDENCE states the article is \"demonstrably Basel-oriented\" with the lexical set `Brugg`, `Quardier`, `Gündeli`, `Süüde`/`rächts`. LEXICAL NOTES L10 (`Aaloss` = Ereignis, Alemannic `-oos` for long /o:/) and L11 (`Yoor` = Jahr) are both in this sentence. At the 20-word cap, no length flag.",
-    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "swiss_german_text": "Für viili Basler isch d’Basler Fasnacht dr wichtigschti Aaloss im Yoor, und au diè gröschti Fasnacht vo der Schwyz.",
     "standard_german_reference": "Für viele Basler ist die Basler Fasnacht das wichtigste Ereignis im Jahr, und auch die grösste Fasnacht der Schweiz.",
     "scoring": {
@@ -403,14 +421,17 @@
     "source_url": "https://als.wikipedia.org/wiki/Basel",
     "validated_by": null,
     "notes": "Verbatim text contains the typographic apostrophe in `d\" + [char]0x2019 + \"Basler` (U+2019). Preserved exactly as in the source; do NOT normalise to an ASCII apostrophe.",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "orthography_as_sourced": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D008",
     "task_type": "translation",
     "dialect": "basel",
     "dialect_evidence": "S056 header `DIALECT: basel`. The Alemannic headword `Kaffi` is given in the article's own first sentence (LEXICAL NOTE L1), and L10 records `Schiggoree` = Zichorienkaffee as \"genuinely dialectal, no Standard counterpart\". 18 words, within cap, no length flag.",
-    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "swiss_german_text": "Ermeri Lüt und in Krisezite fast die ganzi Bevölkerig häi Ersatzkaffi drunke wie Malzkaffi oder Schiggoree.",
     "standard_german_reference": "Ärmere Leute und in Krisenzeiten fast die ganze Bevölkerung haben Ersatzkaffee getrunken wie Malzkaffee oder Zichorienkaffee.",
     "scoring": {
@@ -482,7 +503,10 @@
     "source_url": "https://als.wikipedia.org/wiki/Kaffee",
     "validated_by": null,
     "notes": "",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "orthography_as_sourced": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D009",
@@ -549,7 +573,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Ausl%C3%A4nder",
     "validated_by": null,
     "notes": "`Ussländerbeschtand` and `Schwaarz`/`zämme` vowel spellings are the load-bearing evidence. The item deliberately does NOT rely on `hüt`/`hüüt`, which the corpus records as a shared form across Basel, Bern and Zürich.",
-    "_canon_dialect": "zurich"
+    "_canon_dialect": "zurich",
+    "glottocode": "gsw",
+    "language_name": "Zurich German"
   },
   {
     "id": "D010",
@@ -618,7 +644,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Chindlistein",
     "validated_by": null,
     "notes": "Note the reference double-negates (\"wurde halt früher kaum geschrieben\") which maps to `chuum gschribe`. Synonyms include `kaum`/`nit gly` so both halves of the reference are reachable. Folklore register per C5 — valid documentary Zürich German but more formal than everyday speech.",
-    "_canon_dialect": "zurich"
+    "_canon_dialect": "zurich",
+    "glottocode": "gsw",
+    "language_name": "Zurich German"
   },
   {
     "id": "D011",
@@ -675,7 +703,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Brauerei",
     "validated_by": null,
     "notes": "`Brot`/`Broot`/`Laib` is a verified contrast (Brauerei C1), so a model defaulting to the Basel `Broot` still scores full credit — which is correct, since the task is translation, not dialect identification.",
-    "_canon_dialect": "bern"
+    "_canon_dialect": "bern",
+    "glottocode": "gsw",
+    "language_name": "Bernese German"
   },
   {
     "id": "D012",
@@ -742,7 +772,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Issime",
     "validated_by": null,
     "notes": "High-alpine Südwalser register: `Chilche`/`Schuel`/`franzeesich`/`Idalieenisch`/`gsii`/`ùfchùù`. Note the settlement is in Italy — this is Walser German, not a Swiss cantonal dialect, and must be labelled as such in any reporting.",
-    "_canon_dialect": "walser"
+    "_canon_dialect": "walser",
+    "glottocode": "gsw",
+    "language_name": "Walser German"
   },
   {
     "id": "D013",
@@ -764,7 +796,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Ausl%C3%A4nder",
     "validated_by": null,
     "notes": "Verified contrast: Ausländer C1 — `nöd` for `nicht`. Zürich harvest nöd 9 / nid 0; Bernese nid 6 / nöd 0; Basel nid 14 / nöd 0. C1 calls this \"THE strongest lexical Basel+Bern vs Zürich opposition in the corpus\" and the \"headline Zürich/Bern contrast item\". Corroborated by Zurich-only `Schpaatussiidler` (= Spätaussiedler) and `dernaa` (= demnach). NOT based on `hüt`/`hüüt`, which C6 of Brauerei records as shared by all three dialects.",
-    "_canon_dialect": "zurich"
+    "_canon_dialect": "zurich",
+    "glottocode": "gsw",
+    "language_name": "Zurich German"
   },
   {
     "id": "D014",
@@ -786,7 +820,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Ismael",
     "validated_by": null,
     "notes": "Verified contrast: `zwöi` = zwei. Bauern-Tabak C4 — Bernese harvest has `zwöi` 2 / `zwei` 0, the Zürich harvest has `zwei` 1 / `zwöi` 0, \"a clean, usable minimal pair\", both sides in-corpus. Restated as Ismael C3. Corroborated by Ismael C4 `Är` (Bernese vs Zürich `er`, both in-corpus) and C1 `Frou`/`Froue` (Bernese drops the -w-). CAVEAT: the Basel and Walser sides of the zwöi/zwei opposition are not attested in the harvest, so those two options are excluded by absence, not by a positive contrast.",
-    "_canon_dialect": "bern"
+    "_canon_dialect": "bern",
+    "glottocode": "gsw",
+    "language_name": "Bernese German"
   },
   {
     "id": "D015",
@@ -808,7 +844,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Klosters",
     "validated_by": null,
     "notes": "Two verified contrasts on one sentence. (1) Klosters C1: `ischt` for `ist` occurs ONLY in the alpine dialects (walser 2, valais 3) and is entirely absent from basel (156 `isch`), bern (24) and zurich (33). C1 explicitly states this CONTRADICTS the harvest brief's Basel-vs-Zürich devoicing hypothesis and is the cleanest devoicing contrast in the corpus. (2) Klosters C2: `Gmäind` = Gemeinde is a THREE-WAY contrast — Wallis `Gmei` 3 / `Gmeind` 0, Zürich `Gmeind` 6 / `Gmäind` 0, Walser `Gmäind`. Basel is excluded as unusable here (infobox noise). The second marker rules out the Wallisertiitsch reading of `ischt`.",
-    "_canon_dialect": "walser"
+    "_canon_dialect": "walser",
+    "glottocode": "gsw",
+    "language_name": "Walser German"
   },
   {
     "id": "D016",
@@ -830,14 +868,16 @@
     "source_url": "https://als.wikipedia.org/wiki/Ayent",
     "validated_by": null,
     "notes": "Verified contrast: Ayent C1 — `vaner`/`vanu` = von. C1: \"THE most exclusive lexical marker in the corpus\"; the forms occur only in the Wallisertiitsch harvest and are absent from basel, bern, zurich and walser, all of which use `vo` (Basel 242, Bern 23, Zürich 37) or, for Walser, `vù`/`vam` (8, per Issime C7). Restated as Blatten C3. All four distractors are therefore excluded by a POSITIVE contrast on the same slot, not by absence. Deliberately NOT using `Füesswäg`, which Ayent C6 corrects as SHARED Bernese/Wallisertiitsch rather than a Bernese marker.",
-    "_canon_dialect": "valais"
+    "_canon_dialect": "valais",
+    "glottocode": "gsw",
+    "language_name": "Valais German"
   },
   {
     "id": "D017",
     "task_type": "dialect_identification",
     "dialect": "basel",
     "dialect_evidence": "S056 header `DIALECT: basel`; DIALECT_EVIDENCE places the article in village-spoken Basel-Landschaft Alemannisch (Mappach, canton Basel-Landschaft).",
-    "orthography": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "prompt": "D' Dämpfi isch bis in d' sibziger Joor in de Schwiinemascht zum gare vo Grumbiire iigsetzt worde.",
     "question": "Which Swiss German dialect is this sentence written in?",
     "options": {
@@ -852,12 +892,15 @@
     "source_url": "https://als.wikipedia.org/wiki/Kartoffeld%C3%A4mpfer",
     "validated_by": null,
     "notes": "Verified contrast: `Joor` = Jahr, i.e. final devoicing of /r/. Bauern-Tabak C5: Bernese harvest `Jahr` 4 / `Joor` 0, Basel comparison sample `Joor` 17; Klosters C4 repeats it and states \"the devoicing of Jahr is a shared West-/South-Alpine retention, not a Basel peculiarity\"; Ayent C4 places the Wallisertiitsch on the OPPOSITE side (`eerschtu`, i.e. devoicing absent). Corroborated by Basel-only `Grumbiire`, `gare` and `Schwiinemascht` (LEXICAL NOTES L2, L3, L4). CAVEAT: Walser also writes `Joor` (Klosters C4, Issime C4), which is why Walser is NOT offered as an option here — including it would make the item ambiguous. The Wallisertiitsch distractor is excluded positively by the `eerschtu`/`Jahr` evidence in Ayent C4 and Blatten C8.",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "orthography_as_sourced": "semi-Dieth (the Alemannic Wikipedia house system)",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D018",
     "task_type": "culture_in_dialect",
-    "dialect": "zürich",
+    "dialect": "zurich",
     "dialect_evidence": "explicit {{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch (See)}} template in the wikitext.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "prompt": "Dr Bundesrat hät sibe Mitgliider, wo jedes für sich au wider Bundesrat oder Bundesrätin gheisst.",
@@ -874,12 +917,15 @@
     "source_url": "https://als.wikipedia.org/wiki/Bundesrat_(Schweiz)",
     "validated_by": null,
     "notes": "Fact cross-referenced to the English corpus: S001 F1 ('The federal government of Switzerland consists of the seven members of the Federal Council'). AGREE - no conflict. The Alemannic numeral is sibe, so the item cannot be answered without decoding the dialect. Distractors 5/9/12 are the figures a German or EU reader reaches for (five is also the cantonal-government figure in S008).",
-    "_canon_dialect": "zurich"
+    "_canon_dialect": "zurich",
+    "dialect_as_sourced": "zürich",
+    "glottocode": "gsw",
+    "language_name": "Zurich German"
   },
   {
     "id": "D019",
     "task_type": "culture_in_dialect",
-    "dialect": "zürich",
+    "dialect": "zurich",
     "dialect_evidence": "explicit {{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch (See)}} template in the wikitext.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "prompt": "De Bundespräsident hät als «erschte under Gliiche» (primus inter pares) kei wiiteri Rächt, sondern erfüllt Repräsentationsuufgabe und leitet d Bundesratssitzige.",
@@ -896,7 +942,10 @@
     "source_url": "https://als.wikipedia.org/wiki/Bundesrat_(Schweiz)",
     "validated_by": null,
     "notes": "Fact cross-referenced to the English corpus: S001 F3 ('the President of the Confederation in Switzerland has hardly any more decision-making power than the other members of the Federal Council'). AGREE - no conflict. This is the sharpest test of Swiss institutional specificity in the set: a German or EU reader assumes a presidential system with real power. Dialect load: erschte under Gliiche, primus inter pares, kei wiiteri Rächt, erfüllt, Bundesratssitzige. Deliberately not the trivial 'how many members' item.",
-    "_canon_dialect": "zurich"
+    "_canon_dialect": "zurich",
+    "dialect_as_sourced": "zürich",
+    "glottocode": "gsw",
+    "language_name": "Zurich German"
   },
   {
     "id": "D020",
@@ -918,7 +967,10 @@
     "source_url": "https://als.wikipedia.org/wiki/Schweiz",
     "validated_by": null,
     "notes": "Fact cross-referenced to the English corpus: S026 F3 and S003 F3 ('The Swiss Parliament has 200 seats in the National Council and 46 seats in the Council of States') and S002 F1. AGREE - no conflict. 46 is the counter-intuitive figure: 20 cantons x 2 plus 6 half-cantons x 1. Distractors 50, 52 (=26x2, the naive count) and 26 are exactly the wrong guesses. Dialect load: Ständerot, git's, sändet, zwöi Ständeröt, Halbkantön, sände eine. Dialect recorded as uncertain: this page is the most dialect-heterogeneous harvested, but every sentence here is taken from the Basel-leaning == Politik == section. Excluded from per-dialect reporting under protocol section 5.",
-    "_canon_dialect": "uncertain"
+    "_canon_dialect": "uncertain",
+    "glottocode": "gsw",
+    "language_name": "Alemannic, specific variety not determinable from the source",
+    "variety_uncertain": true
   },
   {
     "id": "D021",
@@ -940,7 +992,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Basler_Fasnacht",
     "validated_by": null,
     "notes": "Cross-ref: none - the English corpus S001-S055 contains no carnival material, so there is no English figure to conflict with. The duration is stated explicitly (duurt denn gnau 72 Stund), but it is unreachable without decoding duurt, gnau, Stund and heert ... wider uff. Distractors are other plausible carnival durations, never an absurd value. The year-locked figures listed in this file's CAVEAT (1911, 2004, 1376, 1529, 1540, 12'000, 18'000) are not used here.",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D022",
@@ -962,7 +1016,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Brauerei",
     "validated_by": null,
     "notes": "Cross-ref: none - the English corpus has no brewing material. The year is stated in Alemannic word order (1885 hei d Schwyzer Brauereie der Wy als Nationalgetränk dür ds Bier verdrängt) but only reachable by decoding Schwyzer Brauereie, Wy, Nationalgetränk and \u000berdrängt. Distractors are other real Swiss dates in the corpus: 1851 (the Swiss franc enters circulation, S058 regierung F5) and 1876 (Lindi ammonia compressor, same article).",
-    "_canon_dialect": "bern"
+    "_canon_dialect": "bern",
+    "glottocode": "gsw",
+    "language_name": "Bernese German"
   },
   {
     "id": "D023",
@@ -984,7 +1040,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Basler_Fasnacht",
     "validated_by": null,
     "notes": "Superlative item. All four options are superlatives that are true of some carnival somewhere; none is absurd. Tests the contrast greeschti (largest) against the neighbouring superlatives a reader might reach for. This is the design exemplar given in protocol section 3.",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D024",
@@ -1006,12 +1064,14 @@
     "source_url": "https://als.wikipedia.org/wiki/Basler_Fasnacht",
     "validated_by": null,
     "notes": "Lexical-semantics item and a deliberate false-friend trap: the Alemannic distinguishes Goschdyym (costume) from Larve (mask) and the sentence states they are not synonyms. Distractors A, B and C are each a plausible but wrong reading produced by collapsing the two words or by mapping Masgge straight onto English 'mask'.",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   },
   {
     "id": "D025",
     "task_type": "comprehension",
-    "dialect": "zürich",
+    "dialect": "zurich",
     "dialect_evidence": "EXPLICIT - {{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch}} template present; text confirms it lexically (Züri, Groossmöischter, uuffüere, chönte).",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "prompt": "Er isch au gäge d Räislöiferei ufträtte, also s Verschicke vo Landslüt as Söldner i frömdi Chrieg, wo d Innerschwyzer Arischtokraty finanziell starch devo profitiert hät.",
@@ -1028,12 +1088,15 @@
     "source_url": "https://als.wikipedia.org/wiki/Huldrych_Zwingli",
     "validated_by": null,
     "notes": "The sentence glosses the dialect term in the Alemannic itself (\u0007lso s Verschicke vo Landslüt as Söldner i frömdi Chrieg), so the item tests the reading of Räislöiferei, ufträtte, \frömdi and Arischtokraty rather than recall of the word. Distractor C is the sharpest: it takes the opposition at face value and drops the profit clause that the sentence explicitly attaches to the Innertschwyzer aristocracy.",
-    "_canon_dialect": "zurich"
+    "_canon_dialect": "zurich",
+    "dialect_as_sourced": "zürich",
+    "glottocode": "gsw",
+    "language_name": "Zurich German"
   },
   {
     "id": "D026",
     "task_type": "comprehension",
-    "dialect": "zürich",
+    "dialect": "zurich",
     "dialect_evidence": "explicit {{Dialekt|Zürichdeutsch|Züritüütsch|Züritüütsch (See)}} template in the wikitext.",
     "orthography": "semi-Dieth (Alemannic Wikipedia house system)",
     "prompt": "Die sibe Bundesröt regiered eigetli zäme über alli Gschäft, aber tatsächlich stönd si je eim Departement vor; das isch s Departemäntalprinzip.",
@@ -1050,7 +1113,10 @@
     "source_url": "https://als.wikipedia.org/wiki/Bundesrat_(Schweiz)",
     "validated_by": null,
     "notes": "Tests the adversative eigetli zäme ... aber tatsächlich against \regiered ... zäme and stönd si je eim Departement vor. The correct option requires holding both clauses at once. Fact cross-referenced to the English corpus: S001 F9 and S006 F5 ('Each of the seven members of the Federal Council is head of one of the seven federal departments'). AGREE - no conflict.",
-    "_canon_dialect": "zurich"
+    "_canon_dialect": "zurich",
+    "dialect_as_sourced": "zürich",
+    "glottocode": "gsw",
+    "language_name": "Zurich German"
   },
   {
     "id": "D027",
@@ -1072,7 +1138,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Brauerei",
     "validated_by": null,
     "notes": "Short, dense Bernese sentence. Requires Wil ou Wy, \brout and kelteret - the last is the trap, since kelteret reads like a distill/press verb in English but here means cellared. Distractors B, C and D are the three wrong ways an English reader resolves the wine/beer contrast.",
-    "_canon_dialect": "bern"
+    "_canon_dialect": "bern",
+    "glottocode": "gsw",
+    "language_name": "Bernese German"
   },
   {
     "id": "D028",
@@ -1094,7 +1162,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Ayent",
     "validated_by": null,
     "notes": "Valais / Wallisertiitsch, NOT Walser - the harvest flagged that conflating the two would corrupt a dialect item. Dialect load is concentrated in gcheert (gehört, an exclusive Wallisertiitsch marker), \u000ba (von) and zum. The three distractors are the neighbouring Swiss Romance and German groups; Alemannic is the plausible wrong answer for anyone who assumes all Swiss German dialects are Alemannic.",
-    "_canon_dialect": "valais"
+    "_canon_dialect": "valais",
+    "glottocode": "gsw",
+    "language_name": "Valais German"
   },
   {
     "id": "D029",
@@ -1116,7 +1186,9 @@
     "source_url": "https://als.wikipedia.org/wiki/Klosters",
     "validated_by": null,
     "notes": "Genuine Walser (Prättigau, Graubünden), the one Alpine Walser file rather than the Aosta one. Requires chund, dür dn, Gotschnä-Umfahrigs-Tunell, \u000bam Durchgangsvärchehr and the -ät participle entlaschtät. Distractor B is the strongest: the Vereina tunnel is the other Alpine tunnel in the same article, so it is reachable by a reader who has half-decoded the sentence.",
-    "_canon_dialect": "walser"
+    "_canon_dialect": "walser",
+    "glottocode": "gsw",
+    "language_name": "Walser German"
   },
   {
     "id": "D030",
@@ -1138,6 +1210,8 @@
     "source_url": "https://als.wikipedia.org/wiki/Schweizerisches_Idiotikon",
     "validated_by": null,
     "notes": "The sentence defines its own headword in Alemannic (wo die Wort drinstönd, wo für e bistimmti Landschaft tipisch sind, aber nöd au die, wo glych sind wie i de Schriftsprach). The distinguishing clause is the exclusion (\nöd au die, wo glych sind), which is exactly what distractors A and B drop. Also tests Wörterbuech, drinstönd, Landschaft, Schriftsprach.",
-    "_canon_dialect": "basel"
+    "_canon_dialect": "basel",
+    "glottocode": "gsw",
+    "language_name": "Basel German"
   }
 ]

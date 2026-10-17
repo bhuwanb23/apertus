@@ -17,6 +17,10 @@ import sys
 import unicodedata
 from collections import Counter
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from canonical_dialect import ORTHOGRAPHY_CANON, apply_labels  # noqa: E402
 
 ROOT = next(p for p in Path(__file__).resolve().parents
               if (p / "data").is_dir() and (p / "Makefile").is_file())
@@ -168,10 +172,33 @@ for it in items:
         if re.search(pat, content, re.I):
             err("REFUTED", f"{it['id']}: item content relies on {pat!r} -> {why}")
 
-# ---------------------------------------------------------------- 4. write out
+# ------------------------------------------------------- 4. labels, then write
+# Normalisation belongs HERE, not in a separate pass over the output. This file is
+# the assembler: it reads the two parts and writes dialect_items.json, so anything
+# applied to the output afterwards is discarded the next time it runs. An earlier
+# version edited the output from a script, reported 74 changes, and lost every one
+# of them to the following verification run.
+#
+# Labels are canonicalised and given an ISO 639-3 code before the write, so the
+# artefact is normalised by construction rather than by convention.
 if not errors:
-    (OUT / "dialect_items.json").write_text(
-        json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    try:
+        for _it in items:
+            apply_labels(_it)
+    except KeyError as e:
+        err("DIALECT", f"unrecognised dialect label: {e}")
+    else:
+        spread = dict(sorted(Counter(i["dialect"] for i in items).items()))
+        glos = sorted({i["glottocode"] for i in items})
+        # Every item must now carry a code. Without one the dataset cannot be
+        # filtered by language, which is the point of shipping it.
+        missing = [i["id"] for i in items if not i.get("glottocode")]
+        if missing:
+            err("DIALECT", f"no ISO 639-3 code on: {missing[:8]}")
+        print(f"glottocodes  : {glos}")
+        print(f"dialects(ok) : {spread}")
+        (OUT / "dialect_items.json").write_text(
+            json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 print("=" * 78)
 print("PHASE 1C VERIFICATION")
