@@ -52,7 +52,12 @@ from config import config                             # noqa: E402
 import open_prompt                                     # noqa: E402
 import open_grade                                      # noqa: E402
 
-MAX_TOKENS = 64          # the system prompt asks for an answer, not an essay
+# 128, not 64. The system prompt asks for "one short sentence" and the model often
+# ignores it, and at 64 tokens replies were cut MID-SENTENCE (finish_reason=length):
+# the judge then graded a fragment, which makes an INCORRECT verdict indistinguishable
+# from a truncation artefact. A full sentence is the unit the three labels assume.
+MAX_TOKENS = 128
+JUDGE_MAX_TOKENS = 12     # "CORRECT" + the model's stop marker; 8 clipped the marker
 ARMS = ("baseline", "rag")
 
 
@@ -174,7 +179,7 @@ def judge(model: str, questions: list[dict], replies: list[dict]) -> list[dict]:
             reply=rec["reply"][:600],
         )
         r = client.generate(user, system_prompt=open_grade.JUDGE_SYSTEM,
-                            max_tokens=8)
+                            max_tokens=JUDGE_MAX_TOKENS)
         verdict = open_grade.parse_judgement(r.get("text", "")) if r.get("ok") else None
         rec["judge_verdict"] = verdict
         rec["judge_raw"] = (r.get("text", "") or "")[:60]

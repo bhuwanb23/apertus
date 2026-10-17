@@ -84,3 +84,4 @@
 {"utc": "2026-10-17T07:57:28+00:00", "pid": 29088, "actor": "unknown", "git_hash": "5dda9f104c136bdcc9d80a1824acb73d68c80bbb", "reason": "test-run knowledge/8b/improved"}
 {"utc": "2026-10-17T07:58:37+00:00", "pid": 31592, "actor": "unknown", "git_hash": "3372c219478d555beed492428d249eeee9f5df53", "reason": "test-run knowledge/8b/improved"}
 {"utc": "2026-10-17T08:02:28+00:00", "pid": 22424, "actor": "unknown", "git_hash": "0664af1709b35363b5882feea89ae816a7c17ebf", "reason": "test-run knowledge/8b/improved"}
+{"utc": "2026-10-17T13:55:43+00:00", "pid": 27396, "actor": "user", "git_hash": "6d2a3ad128eeb9d8568dff2cea76cecd7ed1fc82", "reason": "openqa test/8b/baseline+rag"}

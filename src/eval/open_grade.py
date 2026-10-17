@@ -73,7 +73,11 @@ _ABSTAIN_PATTERNS = [
     r"^\s*i\s+don'?t\s+know\b",
     r"^\s*i\s+do\s+not\s+know\b",
     r"\bi\s+(?:don'?t|do\s+not|cannot|can'?t)\s+know\b",
-    r"\bi\s+(?:am|'m)\s+not\s+(?:sure|certain)\b",
+    # "I'm not sure" and "I am not sure" both occur; the contraction has no space
+    # before the apostrophe, which the first version of this pattern got wrong and
+    # so silently missed every "I'm ..." reply.
+    r"\bi(?:\s+am|\s*'m)\s+not\s+(?:sure|certain)\b",
+    r"\bi\s+(?:am|'m)\s+uncertain\b",
     r"\bnot\s+certain\b",
     r"\bi\s+(?:don'?t|do\s+not)\s+have\s+(?:enough\s+)?(?:information|knowledge)\b",
     r"\bno\s+reliable\s+(?:information|source)\b",
@@ -83,22 +87,71 @@ _ABSTAIN_PATTERNS = [
 ]
 _ABSTAIN_RE = [re.compile(p, re.I) for p in _ABSTAIN_PATTERNS]
 
+_SENT_END = re.compile(r"(?<=[.!?])\s+")
+
+
+def _first_sentence(text: str, limit: int = 260) -> str:
+    """
+    The opening sentence, bounded.
+
+    "Federal Councillors." and "1,2,3." both end in a period, and the split is on a
+    lookbehind for [.!?] so a decimal point does not create a boundary on its own.
+    The bound matters because some items ask for a bare number ("58") with no
+    terminal punctuation - without it, such a reply is one long "sentence" and the
+    opening-window test would scan the whole response.
+    """
+    parts = _SENT_END.split(text, maxsplit=1)
+    first = parts[0] if parts else text
+    return first[:limit]
+
 
 def is_abstention(text: str) -> tuple[bool, str]:
     """
     Does this response decline to answer?
 
-    Returns (abstained, which_pattern). Only the FIRST 400 characters are
-    examined: the instruction to say "I don't know" is at the end of the system
-    prompt, and a model that hedges in its final sentence after committing to an
-    answer has attempted an answer.
+    Returns (abstained, which_pattern).
+
+    THE RULE: a refusal counts only when the non-knowledge claim IS the answer.
+
+    A real response from this model looks like:
+
+        "The Federal Chancellor is the administrative head of the Federal Council
+         and does not hold an independent constitutional role separate from the
+         Federal Councillors. ... I don't know if there is a specific official role
+         beyond administrative coordination."
+
+    That contains a non-knowledge claim, but it is a trailing hedge on a subsidiary
+    point after the model has already committed to an answer. Calling it an
+    abstention would DELETE a genuine attempt from both the factuality and the
+    hallucination denominators - and deleting an uncertain answer is the one move
+    that makes a hallucination rate look better without the model behaving better.
+    The earlier version of this function did exactly that on a real response.
+
+    So a non-knowledge claim counts only when either:
+      (a) it is in the FIRST sentence - the response opens by refusing; or
+      (b) the whole reply is short (< 240 chars) - there was no substantive
+          assertion to have hedged after, so the hedge is the answer.
+
+    Both conditions are conservative in the same direction: when genuinely unsure,
+    this under-counts abstention rather than over-counting it.
     """
     if not text or not text.strip():
         return True, "empty"
-    head = text.strip()[:400]
+
+    stripped = text.strip()
+    short = len(stripped) < 240
+
+    # (a) first sentence only
+    first = _first_sentence(stripped)
     for rx in _ABSTAIN_RE:
-        if rx.search(head):
-            return True, rx.pattern
+        if rx.search(first):
+            return True, "opens_with:" + rx.pattern
+
+    # (b) short reply: anywhere counts
+    if short:
+        for rx in _ABSTAIN_RE:
+            if rx.search(stripped):
+                return True, "short_refusal:" + rx.pattern
     return False, ""
 
 
@@ -141,11 +194,22 @@ _JUDGE_VERDICT_RE = re.compile(r"\b(CORRECT|INCORRECT)\b", re.I)
 
 
 def parse_judgement(raw: str) -> str:
-    """First verdict token wins. Anything else is INCORRECT, loudly."""
+    """
+    First verdict token wins; anything else is INCORRECT.
+
+    The fallback is deliberate and one-directional. An unparseable judge reply is
+    a failed grading, and recording it as CORRECT would inflate factuality; the
+    bias runs toward the pessimistic label so a judge failure can never manufacture
+    a good result. `parse_judgement` used to raise AttributeError on an unmatched
+    regex instead, which meant any judge reply missing both words aborted the whole
+    run rather than degrading one item.
+    """
     if not raw:
         return INCORRECT
     m = _JUDGE_VERDICT_RE.search(raw)
-    return (m.group(1).upper() == "CORRECT") and CORRECT or INCORRECT
+    if not m:
+        return INCORRECT
+    return CORRECT if m.group(1).upper() == "CORRECT" else INCORRECT
 
 
 def accepted_forms(q: dict) -> str:
@@ -269,15 +333,29 @@ def paired(before: list[dict], after: list[dict]) -> dict:
 
 
 def selfcheck() -> int:
+    # The 4th case is a REAL reply this pipeline produced during development: it
+    # asserts an answer, then hedges on a subsidiary point. It must NOT be filed as
+    # an abstention, or a real attempt leaves both denominators and the
+    # hallucination rate improves for free.
+    hedge_after_answer = (
+        "The Federal Chancellor is the administrative head of the Federal Council "
+        "and does not hold an independent constitutional role separate from the "
+        "Federal Councillors. The reference to the 'eighth Federal Councillor' is "
+        "a media metaphor, not an official title. I don't know if there is a "
+        "specific official role beyond administrative coordination."
+    )
     q = {"id": "X1", "category": "law", "answer": "Obwalden", "answer_variations": [],
          "question": "q"}
     cases = [
         ("Obwalden", False, "a direct answer"),
         ("I don't know", True, "the instructed abstention"),
-        ("I don't know, but probably Bern.", True, "abstention then a guess"),
+        ("I don't know, but probably Bern.", True, "refusal then a guess"),
         ("The answer is Obwalden.", False, "full sentence"),
         ("", True, "empty reply"),
         ("I am not certain.", True, "explicit uncertainty"),
+        ("58", False, "bare number, no punctuation"),
+        ("I'm not sure; it's a complex area.", True, "short hedged refusal"),
+        (hedge_after_answer, False, "REAL reply: hedge AFTER an answer"),
     ]
     bad = 0
     for text, want, why in cases:
@@ -285,7 +363,8 @@ def selfcheck() -> int:
         flag = "ok " if got == want else "BAD"
         if got != want:
             bad += 1
-        print(f"  {flag}  abstained={got!s:<5} want={want!s:<5}  {why:<28} {text[:38]!r}")
+        print(f"  {flag}  abstained={got!s:<5} want={want!s:<5}  {why:<32} "
+              f"{text[:34]!r}")
     print()
     print("  labels:", LABELS)
     assert set(LABELS) == {CORRECT, INCORRECT, NOT_ATTEMPTED}

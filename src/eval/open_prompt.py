@@ -100,18 +100,24 @@ def build(q: dict, context: str = "", system: str | None = None) -> tuple[str, s
     """
     Render (system, user) for one open-ended question.
 
-    Raises OptionLeak if any option text survives into the prompt. This is the
-    guard that keeps the arm honest, and it runs on every item of every run
-    rather than being tested once.
+    Raises OptionLeak if an option's text reaches the prompt OUTSIDE the retrieved
+    context. The distinction matters: the retriever legitimately surfaces passages
+    that contain the correct answer - that is what retrieval is FOR, and the MCQ arm
+    has the same property and is not considered contaminated by it. The failure this
+    guard exists to catch is different: the OPTION BLOCK being spliced into the
+    question scaffolding, which would silently convert the open arm back into the
+    MCQ arm. So the guard inspects only the non-context part of the prompt.
     """
     if context:
         user = RAG_USER.format(context=context.strip(), question=q["question"])
+        scaffolding = f"Question: {q['question']}\nAnswer:"
     else:
         user = OPEN_USER_NO_CONTEXT.format(question=q["question"])
+        scaffolding = user
 
     sysmsg = system if system is not None else OPEN_SYSTEM
 
-    haystack = (user + "\n" + sysmsg).casefold()
+    haystack = (scaffolding + "\n" + sysmsg).casefold()
     for letter, text in (q.get("options") or {}).items():
         t = (text or "").strip()
         # Short options ("46 seats", "58") occur incidentally in prose; only a
@@ -119,12 +125,38 @@ def build(q: dict, context: str = "", system: str | None = None) -> tuple[str, s
         # producing false refusals.
         if len(t) >= 18 and t.casefold() in haystack:
             raise OptionLeak(
-                f"{q.get('id')}: option {letter} leaked into the open prompt: "
-                f"{t[:70]!r}")
+                f"{q.get('id')}: option {letter} reached the prompt OUTSIDE the "
+                f"retrieved context: {t[:70]!r}")
     return sysmsg, user
 
 
+def templates_are_clean() -> list[str]:
+    """
+    Static check: no template accepts an option, so `str.format` cannot inject one.
+
+    This is the stronger of the two guards. `build()` catches a leak that has
+    already happened; this makes the leak impossible by construction, because
+    there is no placeholder to fill. An injected option would need a new
+    placeholder plus a new call site, and both are visible in review.
+
+    Returns a list of problems; empty means clean.
+    """
+    problems = []
+    for name, tpl in (("RAG_USER", RAG_USER),
+                      ("OPEN_USER", OPEN_USER),
+                      ("OPEN_USER_NO_CONTEXT", OPEN_USER_NO_CONTEXT),
+                      ("OPEN_SYSTEM", OPEN_SYSTEM)):
+        for field in ("option_a", "option_b", "option_c", "option_d", "options"):
+            if "{" + field + "}" in tpl:
+                problems.append(f"{name} has an option placeholder: {{{field}}}")
+    return problems
+
+
 def selfcheck() -> int:
+    problems = templates_are_clean()
+    print(f"  template option placeholders: {problems or 'none'}")
+    print()
+
     q = {"id": "X000", "question": "Which four cantons are French-speaking?",
          "options": {"A": "Geneva, Jura, Neuchatel and Valais",
                      "B": "Geneva, Jura, Neuchatel and Vaud",
@@ -134,10 +166,30 @@ def selfcheck() -> int:
     print(user)
     print()
     bad = [t for t in q["options"].values() if t.casefold() in user.casefold()]
-    print(f"  options present in prompt: {bad}")
-    # B must NOT be there; the question names only the shape.
-    ok = not bad
-    print("  OK: no option text in the prompt" if ok else "  LEAK")
+    print(f"  options present in prompt: {bad or 'none'}")
+
+    # A retrieved context that CONTAINS the correct answer must be allowed: that
+    # is retrieval working, and the MCQ arm behaves identically.
+    ctx = "The French-speaking cantons are Geneva, Jura, Neuchatel and Vaud."
+    try:
+        _, rag_user = build(q, ctx)
+        allowed = "Geneva, Jura, Neuchatel and Vaud" in rag_user
+        print(f"  answer-bearing retrieved context allowed: {allowed}")
+    except OptionLeak as e:
+        allowed = False
+        print(f"  FALSE REFUSAL on a legitimate context: {e}")
+
+    # An option spliced into the question scaffolding must be refused.
+    try:
+        build({**q, "question": q["question"] + "\nA) " + q["options"]["A"]})
+        caught = False
+    except OptionLeak:
+        caught = True
+    print(f"  injected option refused: {caught}")
+
+    ok = not bad and not problems and allowed and caught
+    print("  OK: option-free by construction, honest context tolerated"
+          if ok else "  FAILED")
     return 0 if ok else 1
 
 
