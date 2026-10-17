@@ -552,6 +552,7 @@ def test_numbers_traceable() -> None:
     section("6. Every number traces to the module that measured it")
     import narrative
     from statistical_report import detectable, wilson_ci
+    from narrative import TEST_N
 
     path, scen, have = build()
     text = path.read_text(encoding="utf-8")
