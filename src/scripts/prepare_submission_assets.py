@@ -134,6 +134,24 @@ def fig2_categories():
     return path
 
 
+def _corpus_shape() -> dict:
+    """Item / source / category counts read from the corpus itself."""
+    try:
+        items = json.loads((ROOT / "data" / "knowledge" / "knowledge_all.json")
+                           .read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {"items": 0, "sources": 0, "cats": 0}
+    return {
+        "items": len(items),
+        "sources": len({q["source_id"] for q in items if q.get("source_id")}),
+        "cats": len({q["category"] for q in items}),
+    }
+
+
+_CORPUS = _corpus_shape()
+N_ITEMS, N_SOURCES, N_CATS = _CORPUS["items"], _CORPUS["sources"], _CORPUS["cats"]
+
+
 def _values_mean_str() -> str:
     """The values mean as measured, with its own scale named."""
     v = SN.values()
@@ -144,16 +162,7 @@ def _values_mean_str() -> str:
 
 def _n_sources() -> int:
     """Distinct sources actually behind the corpus - not the original plan's 100."""
-    try:
-        ids = set()
-        for split in ("dev", "test"):
-            p = ROOT / "data" / "knowledge" / f"knowledge_{split}.json"
-            for q in json.loads(p.read_text(encoding="utf-8")):
-                if q.get("source_id"):
-                    ids.add(q["source_id"])
-        return len(ids)
-    except (OSError, json.JSONDecodeError, KeyError):
-        return 0
+    return N_SOURCES
 
 
 def _try_dev_knowledge() -> dict | None:
@@ -252,7 +261,7 @@ def infographic_pillars():
     muted = _font(14)
     d.text((40, 24), "Swiss Reality Check — three pillars", fill=INK, font=title)
     cards = [
-        (40, "120", "Knowledge MCQs", "6 categories · 84/36 split"),
+        (40, f"{N_ITEMS}", "Knowledge MCQs", f"{N_CATS} categories · {DEV_N}/{N_PAIRED} split"),
         (480, "30", "Values scenarios", "framing rubric · 6 languages"),
         (920, "30", "Dialect items", "Alemannic Wikipedia · unvalidated"),
     ]

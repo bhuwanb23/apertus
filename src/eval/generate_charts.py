@@ -86,6 +86,43 @@ from statistical_report import (MODELS, compute, crosscheck_agreement,  # noqa: 
 CHARTS = config.results_dir / "charts"
 SCORES = config.results_dir / "final_scores" / "test_scores.json"
 
+# Split sizes and the detection floor, read once and reused by every figure
+# that annotates a band. These were literals ("n=36", "n=84", detectable(36))
+# and each one silently described the previous split.
+def _split_sizes() -> dict:
+    """dev/test sizes from the data and the archived arms, not remembered.
+
+    dev comes from the split file itself: the archived arms under test_run/ are
+    the sealed-test run, so reading "n_questions" off them for BOTH splits would
+    have quietly labelled dev as 90 when it is 210.
+    """
+    out = {"dev": None, "test": None}
+    dev = ROOT / "data" / "knowledge" / "knowledge_dev.json"
+    if dev.is_file():
+        try:
+            out["dev"] = len(json.loads(dev.read_text(encoding="utf-8")))
+        except (OSError, json.JSONDecodeError):
+            pass
+    for arm in ("knowledge_8b_baseline.json", "knowledge_8b_improved.json"):
+        f = ROOT / "results" / "test_run" / arm
+        if not f.is_file():
+            continue
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        n_q = (d.get("run", {}) or {}).get("n_questions") or d.get("n")
+        if n_q:
+            out["test"] = n_q
+            break
+    if out["test"] is None:
+        out["test"] = 36          # nothing archived: keep the old figure, visibly
+    return out
+
+
+SPLIT_N = _split_sizes()
+DEV_N, TEST_N = SPLIT_N["dev"], SPLIT_N["test"]
+
 MODEL_LABEL = {"8b": "Apertus 8B", "70b": "Apertus 70B"}
 
 
@@ -206,10 +243,12 @@ def fig1_overall(stats) -> Canvas:
                10.5, INK, family=MONO)
         yy += 76
 
-    pw = detectable(36)
+    # The floor must be computed at the n the caption names. Left at detectable(36)
+    # while the caption said n=90, the two numbers came from different sample sizes.
+    pw = detectable(TEST_N)
     caveat(c, [
         "READ THIS BEFORE THE BARS.",
-        f"At n=36 a paired change is only detectable at {pw['min_improvements_zero_regressions']} "
+        f"At n={TEST_N} a paired change is only detectable at {pw['min_improvements_zero_regressions']} "
         f"improvements with ZERO regressions ({pw['min_delta_pp_zero_regressions']:+.1f} pp).",
         "A smaller real effect would look like noise here. \"No detectable change\" is a statement about",
         "this sample size, not about whether the model improved. The intervals overlap widely; that is the finding.",
@@ -329,17 +368,17 @@ def fig3_transfer(stats) -> Canvas:
     mocks = _is_mock(stats)
     header(c, "Dev → test: did the improvement survive data it was not built on?",
            "same intervention, two splits; each delta with its own exact interval",
-           "dev n=84 · test n=36 · paired McNemar on both")
+           f"dev n={DEV_N} · test n={TEST_N} · paired McNemar on both")
 
     p = Plot(c, 92, 130, 640, 360, -40, 40, ylabel="Change (pp)",
              ytick_fmt="{:+.0f}")
     p.hline(0, "no change", INK, dash=None)
-    # The detectable band, drawn on the chart: anything inside it is noise at n=36.
-    pw = detectable(36)
+    # The detectable band, drawn on the chart: anything inside it is noise at this n.
+    pw = detectable(TEST_N)
     lim = pw["min_delta_pp_zero_regressions"]
     p.band(-lim, lim)
     c.text(p.x1 - 6, p.ys(lim) - 8,
-           f"undetectable at n=36 (needs {lim:+.1f} pp with 0 regressions)",
+           f"undetectable at n={TEST_N} (needs {lim:+.1f} pp with 0 regressions)",
            10.5, WARN, "bold", anchor="end")
 
     rows = _transfer_rows(stats)
@@ -399,7 +438,7 @@ def _transfer_rows(stats) -> list[dict]:
 
     The dev numbers come from the paired RAG run Phase 3.4 validated; the test
     numbers from Phase 4.1. Both are labelled with their n, because a dev delta
-    at n=84 and a test delta at n=36 are different quantities with different
+    at n={DEV_N} and a test delta at n={TEST_N} are different quantities with different
     precision and the chart should say so.
     """
     from validate_improvement import analyse, find_paired
@@ -414,12 +453,12 @@ def _transfer_rows(stats) -> list[dict]:
             dev = a
         test = (stats or {}).get("knowledge", {}).get(m, {}).get("paired")
         rows.append({
-            "model": m, "label": f"{MODEL_LABEL.get(m, m)}\ndev (n=84)",
+            "model": m, "label": f"{MODEL_LABEL.get(m, m)}\ndev (n={DEV_N})",
             "delta": dev["delta_pp"] if dev else None,
             "lo": None, "hi": None, "split": "dev",
         })
         rows.append({
-            "model": m, "label": f"{MODEL_LABEL.get(m, m)}\ntest (n=36)",
+            "model": m, "label": f"{MODEL_LABEL.get(m, m)}\ntest (n={TEST_N})",
             "delta": test["delta_pp"] if test else None,
             "lo": test["delta_ci_lower"] if test else None,
             "hi": test["delta_ci_upper"] if test else None, "split": "test",

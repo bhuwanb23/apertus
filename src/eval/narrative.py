@@ -99,6 +99,41 @@ from statistical_report import (MODELS, compute, crosscheck_agreement,  # noqa: 
 
 NARRATIVE = config.results_dir / "narrative"
 MODEL_LABEL = {"8b": "Apertus 1.5 8B", "70b": "Apertus 1.5 70B"}
+
+
+def _corpus_shape() -> dict:
+    """Item and source counts read from the corpus, not restated from a plan."""
+    try:
+        items = json.loads((ROOT / "data" / "knowledge" / "knowledge_all.json")
+                           .read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {"items": 0, "sources": 0, "categories": 6}
+    return {"items": len(items),
+            "sources": len({q["source_id"] for q in items if q.get("source_id")}),
+            "categories": len({q["category"] for q in items}) or 6}
+
+
+def _sealed_n() -> int:
+    """n of the sealed arm the narrative describes."""
+    for arm in ("knowledge_8b_improved.json", "knowledge_8b_baseline.json"):
+        f = ROOT / "results" / "test_run" / arm
+        if not f.is_file():
+            continue
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        n_q = (d.get("run", {}) or {}).get("n_questions") or d.get("n")
+        if n_q:
+            return n_q
+    return 36
+
+
+_CORPUS = _corpus_shape()
+N_CATEGORIES = _CORPUS["categories"]
+N_ITEMS, N_SOURCES = _CORPUS["items"], _CORPUS["sources"]
+TEST_N = _sealed_n()
+FLOOR_IMPROVEMENTS = detectable(TEST_N)["min_improvements_zero_regressions"]
 CATEGORIES = ["politics", "law", "health", "geography", "services", "history"]
 
 
@@ -322,8 +357,8 @@ def choose_scenario(stats: dict, tax: dict, ret: dict) -> dict:
                 "why": f"significant paired gain of {best:+.1f} pp"}
     if not any_sig:
         return {"id": "C", "label": "No detectable improvement",
-                "why": ("no arm reached p<0.05; with n=36 a detectable paired "
-                        "change needs 6 improvements with zero regressions")}
+                "why": (f"no arm reached p<0.05; with n={TEST_N} a detectable paired "
+                        f"change needs {FLOOR_IMPROVEMENTS} improvements with zero regressions")}
     return {"id": "C", "label": "Mixed", "why": "gains and regressions both present"}
 
 
@@ -388,8 +423,11 @@ def write_findings(stats: dict | None = None) -> Path:
     con = contamination_state()
     scen = choose_scenario(stats, tax, ret)
     cc = crosscheck_agreement()
-    pw36, pw6 = detectable(36), detectable(6)
-    w0, w6 = wilson_ci(0, pw6["n"]), wilson_ci(pw6["n"], pw6["n"])
+    # Both floors follow the sealed n. pw_cat is n/N_CATEGORIES, i.e. what one
+    # category of the sealed split actually holds.
+    pw_overall = detectable(TEST_N)
+    pw_cat = detectable(max(1, TEST_N // N_CATEGORIES))
+    w0, w6 = wilson_ci(0, pw_cat["n"]), wilson_ci(pw_cat["n"], pw_cat["n"])
     have = knowledge_state(stats)
 
     L: list[str] = []
@@ -480,7 +518,7 @@ def write_findings(stats: dict | None = None) -> Path:
     A("")
     A("| | items | construction | scoring |")
     A("|---|---|---|---|")
-    A("| Knowledge | 120 MCQs | 55 official Swiss sources, every distractor "
+    A(f"| Knowledge | {N_ITEMS} MCQs | {N_SOURCES} official Swiss sources, every distractor "
       "traceable to a real neighbouring-country answer | exact letter match, "
       "with a paraphrase ladder |")
     A("| Values | 30 scenarios | rubric scores **framing and balance**, not "
@@ -673,17 +711,17 @@ def write_findings(stats: dict | None = None) -> Path:
       "rather than")
     A("a disappointing result:")
     A("")
-    A(f"- **Overall (n={pw36['n']}):** a paired change is detectable only at "
-      f"**{pw36['min_improvements_zero_regressions']} improvements with "
+    A(f"- **Overall (n={pw_overall['n']}):** a paired change is detectable only at "
+      f"**{pw_overall['min_improvements_zero_regressions']} improvements with "
       f"zero regressions** "
-      f"({_f(pw36['min_delta_pp_zero_regressions'], ' pp', True)}).")
-    A(f"- **Per category (n={pw6['n']}):** only a clean sweep is detectable "
-      f"(6/0, p={mcnemar_exact(pw6['n'], 0):.3f}).")
+      f"({_f(pw_overall['min_delta_pp_zero_regressions'], ' pp', True)}).")
+    A(f"- **Per category (n={pw_cat['n']}):** only a clean sweep is detectable "
+      f"(6/0, p={mcnemar_exact(pw_cat['n'], 0):.3f}).")
     A("  With a single regression, *nothing* is detectable at this n. A "
       "category scoring")
-    A(f"  0/{pw6['n']} has a 95% interval of "
+    A(f"  0/{pw_cat['n']} has a 95% interval of "
       f"[{_f(w0['ci_lower'], '')}, {_f(w0['ci_upper'], '')}]; one scoring "
-      f"{pw6['n']}/{pw6['n']} has "
+      f"{pw_cat['n']}/{pw_cat['n']} has "
       f"[{_f(w6['ci_lower'], '')}, {_f(w6['ci_upper'], '')}].")
     A("")
     A("Every per-category table in this project is therefore labelled "
@@ -735,7 +773,7 @@ def write_findings(stats: dict | None = None) -> Path:
                 A(f"All {moved} of the {len(cats)} categories moved in the same "
                   f"direction — none of them backwards. None is individually")
                 A(f"significant, and §3.4 is the arithmetic for why: at "
-                  f"n={pw6['n']} per category a clean sweep is")
+                  f"n={pw_cat['n']} per category a clean sweep is")
                 A("the only detectable result.")
             A("")
         v = next((stats["values"].get(m) for m in MODELS
@@ -885,10 +923,10 @@ def write_findings(stats: dict | None = None) -> Path:
     A("   built this way will measure its own prompt. Checking takes one function "
       "call and should")
     A("   be standard practice.")
-    A(f"3. **Know your detection floor before you measure.** At n={pw36['n']} a "
+    A(f"3. **Know your detection floor before you measure.** At n={pw_overall['n']} a "
       f"real effect of "
-      f"{_f(pw36['min_delta_pp_zero_regressions'], ' pp', True)}")
-    A(f"   is indistinguishable from noise, and at n={pw6['n']} per category "
+      f"{_f(pw_overall['min_delta_pp_zero_regressions'], ' pp', True)}")
+    A(f"   is indistinguishable from noise, and at n={pw_cat['n']} per category "
       f"*nothing* is. Benchmarks")
     A("   that report deltas without their floor are reporting noise as progress.")
     if have:
@@ -939,10 +977,10 @@ def write_findings(stats: dict | None = None) -> Path:
           "this project is")
         A("   a mock-backend self-test. The findings that survive are the "
           "model-free ones.")
-    A(f"2. **The test set is n={pw36['n']}.** A detectable paired change needs "
-      f"{pw36['min_improvements_zero_regressions']} improvements with zero "
+    A(f"2. **The test set is n={pw_overall['n']}.** A detectable paired change needs "
+      f"{pw_overall['min_improvements_zero_regressions']} improvements with zero "
       f"regressions. Per-category")
-    A(f"   n={pw6['n']} supports nothing. Confidence intervals are reported "
+    A(f"   n={pw_cat['n']} supports nothing. Confidence intervals are reported "
       f"throughout for this reason.")
     vals_run = any((stats.get("values", {}).get(m) or {}).get("present")
                    for m in MODELS)

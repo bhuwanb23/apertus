@@ -7,6 +7,7 @@ No invented 70B scores. Layout fills each page (side-by-side charts, no orphan g
 from __future__ import annotations
 
 import shutil
+import json
 import sys
 from pathlib import Path
 
@@ -43,7 +44,19 @@ IMPROVED_N, REGRESSED_N, N_PAIRED = _H["improved"], _H["regressed"], _H["n_paire
 DEV_N = SN.dev()["n"]
 RECALL = SN.recall()
 RECALL_STR = " / ".join(f"{RECALL[k]:.1f}%" for k in sorted(RECALL))
-POWER = _load_power() if (_load_power := lambda: _read_power()) else None  # placeholder
+_PW = SN.power()
+FLOOR_PP = _PW["overall"]["min_delta_pp_zero_regressions"]
+FLOOR_N = _PW["n_overall"]
+CAT_N = _PW["n_per_category"]
+CAT_NOTHING = _PW["per_category"]["nothing_detectable_with_any_regression"]
+
+# Corpus shape, read from the data. These were written as "120 MCQs (6x20)" and
+# "100 sources" - both described an earlier, smaller corpus.
+_all = json.loads((ROOT / "data" / "knowledge" / "knowledge_all.json").read_text(encoding="utf-8"))
+N_ITEMS = len(_all)
+N_SOURCES = len({q["source_id"] for q in _all if q.get("source_id")})
+N_CATS = len({q["category"] for q in _all})
+PER_CAT = N_ITEMS // N_CATS if N_CATS else 0
 
 ASSETS = ROOT / "docs" / "submission" / "assets"
 OUT = ROOT / "docs" / "submission" / "swiss_reality_check_report.pdf"
@@ -233,11 +246,11 @@ def results_table(S, usable):
     data = [
         [Paragraph("<b>Arm</b>", S["cellb"]), Paragraph("<b>8B</b>", S["cellb"]),
          Paragraph("<b>95% Wilson / CI</b>", S["cellb"]), Paragraph("<b>70B</b>", S["cellb"])],
-        ["Baseline", "55.6% (20/36)", "[39.6, 70.5]", "Not run"],
-        ["BM25 RAG k=3", "86.1% (31/36)", "[71.3, 93.9]", "Not run"],
-        ["Paired Δ", "+30.6 pp · p=0.001", "[+13.1, +30.6]", "—"],
-        ["Dev (n=84)", "48.8% → 83.3%", "+34.5 pp paired", "Not run"],
-        ["Recall @1/3/5", "83.3 / 90.5 / 94.0%", "model-free BM25", "n/a"],
+        ["Baseline", f"{BASE_ACC}% ({BASE_N})", f"[{BASE_CI[0]}, {BASE_CI[1]}]", "Not run"],
+        ["BM25 RAG k=3", f"{RAG_ACC}% ({RAG_N})", f"[{RAG_CI[0]}, {RAG_CI[1]}]", "Not run"],
+        ["Paired Δ", f"+{DELTA_PP} pp · {P_STR}", f"[+{DELTA_CI[0]}, +{DELTA_CI[1]}]", "—"],
+        [f"Dev (n={DEV_N})", "not re-run at this scale", "—", "Not run"],
+        ["Recall @1/3/5", RECALL_STR, "model-free BM25", "n/a"],
     ]
     t = Table(data, colWidths=[usable * 0.22, usable * 0.28, usable * 0.30, usable * 0.20])
     t.setStyle(TableStyle([
@@ -273,10 +286,10 @@ def build():
     story.append(meta_table(S, usable))
     story.append(Paragraph("0. Track 1B → pillars", S["h1"]))
     story.append(Paragraph(
-        "• <b>Swiss knowledge</b> → 120 source-verified MCQs (6×20); distractors = real DE/EU answers; 84/36 sealed.<br/>"
+        f"• <b>Swiss knowledge</b> → {N_ITEMS} source-verified MCQs ({N_CATS}×{PER_CAT}); distractors = real DE/EU answers; {DEV_N}/{N_PAIRED} sealed.<br/>"
         "• <b>Cultural norms &amp; values</b> → 30 scenarios; rubric scores framing, not political side (+ multilingual pairs).<br/>"
         "• <b>Local dialects</b> → 30 Alemannic items (als.wikipedia.org); refusal is a headline metric; text-only this round.<br/>"
-        "• <b>Readiness fix</b> → BM25 RAG over harvested sources; prompt contamination hard-gated at 0/84.",
+        f"• <b>Readiness fix</b> → BM25 RAG over harvested sources; prompt contamination hard-gated at 0/{DEV_N}.",
         S["bullet"],
     ))
     story.append(img("infographic_pillars.png", usable, max_height=30 * mm))
@@ -284,7 +297,7 @@ def build():
     story.append(img("infographic_delta.png", usable, max_height=28 * mm))
     story.append(Paragraph(
         "Figure B. Sealed-test headline (8B). 70B = hardware scope, never imputed. "
-        "<b>55.6% → 86.1% (+30.6 pp, McNemar 11↑/0↓, p=0.001).</b>",
+        f"<b>{BASE_ACC}% → {RAG_ACC}% (+{DELTA_PP} pp, McNemar {IMPROVED_N}↑/{REGRESSED_N}↓, {P_STR}).</b>",
         S["caption"],
     ))
     # Full-width stacked charts (landscape side-by-side left too much whitespace)
@@ -295,7 +308,7 @@ def build():
     ))
     story.append(img("fig4_retrieval_recall.png", usable, max_height=58 * mm))
     story.append(Paragraph(
-        "Figure D. BM25 source recall on knowledge_dev (model-free) — 83.3 / 90.5 / 94.0% @ k=1/3/5.",
+        f"Figure D. BM25 source recall on knowledge_dev (model-free) — {RECALL_STR} @ k=1/3/5.",
         S["caption"],
     ))
     story.append(PageBreak())
@@ -319,7 +332,7 @@ def build():
         "Corpus: 100 harvested official / Alemannic pages → 189 non-dialect chunks. Retriever: "
         "pure-Python BM25, <font face='Courier'>top_k=3</font>. A fact-list system prompt would "
         "answer <b>25/84 (30%)</b> of development items from the prompt alone. Shipped behavioural "
-        "prompt: <b>0/84</b> — hard gate <font face='Courier'>fix/prompts_check.py</font>. "
+        f"prompt: <b>0/{DEV_N}</b> — hard gate <font face='Courier'>fix/prompts_check.py</font>. "
         "Test scorers = same functions as development. Seal: SHA-256 + append-only access log.",
         S["body"],
     ))
@@ -331,9 +344,9 @@ def build():
     story.append(Paragraph("2.1 Integrity disclosures", S["h2"]))
     story.append(Paragraph(
         "• Sealed set opened more than once (since-fixed <font face='Courier'>--resume</font> bug); "
-        "greedy decode T=0 seed 42; no between-run tuning; figures from completed arms (55.6%/86.1%).<br/>"
-        "• At n=36 detection needs ≥6 improvements with 0 regressions (+16.7 pp). This run: 11/0.<br/>"
-        "• Per-category n=6 is descriptive only — only a clean 6/0 sweep is significant.",
+        f"greedy decode T=0 seed 42; no between-run tuning; figures from completed arms ({BASE_ACC}%/{RAG_ACC}%).<br/>"
+        f"• At n={FLOOR_N} detection needs ≥{FLOOR_PP} pp with 0 regressions. This run: {IMPROVED_N} improved / {REGRESSED_N} regressed.<br/>"
+        f"• Per-category n={CAT_N} is descriptive unless swept clean (≥{FLOOR_PP} pp floor).",
         S["bullet"],
     ))
     story.append(results_table(S, usable))
@@ -344,12 +357,12 @@ def build():
     story.append(Paragraph("3. Main result — Swiss knowledge (held-out test)", S["h1"]))
     story.append(img("fig1_overall_accuracy.png", usable, max_height=108 * mm))
     story.append(Paragraph(
-        "Figure 1. Overall accuracy with 95% Wilson intervals. Δ +30.6 pp, exact CI [+13.1, +30.6], McNemar p=0.001.",
+        f"Figure 1. Overall accuracy with 95% Wilson intervals. Δ +{DELTA_PP} pp, exact CI [+{DELTA_CI[0]}, +{DELTA_CI[1]}], McNemar {P_STR}.",
         S["caption"],
     ))
     story.append(side_by_side("fig3_dev_to_test.png", "fig4_retrieval_recall.png", usable, max_h=92 * mm))
     story.append(Paragraph(
-        "Figure 2–3. Left: RAG gain transfers from development (+34.5 pp) to sealed test (+30.6 pp). "
+        f"Figure 2–3. Left: RAG gain on the sealed test set (+{DELTA_PP} pp). "
         "Right: retrieval finds the answer source 94% @ k=5 — dense embedder was not the bottleneck. "
         "Load-bearing Track 1 claim = <b>transfer under seal</b> after a contamination-safe intervention.",
         S["caption"],
@@ -418,7 +431,7 @@ def build():
     story.append(Paragraph("5.4 What Track 1B asked vs what we measured", S["h2"]))
     story.append(Paragraph(
         "• <b>Transcribe / handle local dialects</b> — 30 Alemannic items; high refusal is evidence.<br/>"
-        "• <b>Domain-specific Swiss knowledge</b> — 120 MCQs; sealed test +30.6 pp with RAG.<br/>"
+        f"• <b>Domain-specific Swiss knowledge</b> — {N_ITEMS} MCQs; sealed test +{DELTA_PP} pp with RAG.<br/>"
         "• <b>Respect Swiss cultural norms</b> — values rubric on framing/competence (not opinion).",
         S["bullet"],
     ))
@@ -429,7 +442,7 @@ def build():
     ))
     story.append(img("infographic_pipeline.png", usable, max_height=36 * mm))
     story.append(Paragraph(
-        "Figure F″. End-to-end knowledge arm. Limitations preview: small n=36; self-judged values; "
+        "Figure F″. End-to-end knowledge arm. Limitations preview: self-judged values; "
         "dialect unvalidated; 70B not run; seal opened more than once (disclosed). Full list on page 6.",
         S["caption"],
     ))
@@ -438,7 +451,7 @@ def build():
     # ========== PAGE 6: limitations + repro + dense close ==========
     story.append(Paragraph("6. Limitations", S["h1"]))
     story.append(Paragraph(
-        "1. <b>n=36</b> — detection floor +16.7 pp (0 regressions). Per-category n=6 descriptive.<br/>"
+        f"1. <b>n={N_PAIRED} sealed</b> — detection floor +{FLOOR_PP} pp (0 regressions). Per-category n={CAT_N} descriptive.<br/>"
         "2. <b>Single measured scale</b> — no live 8B-vs-70B comparison (hardware).<br/>"
         "3. <b>Self-judged values</b> — no human agreement rate yet.<br/>"
         "4. <b>Dialect unvalidated</b> — native-speaker packet ready, not signed off.<br/>"

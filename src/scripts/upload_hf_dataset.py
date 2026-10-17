@@ -13,7 +13,19 @@ import sys
 from pathlib import Path
 
 ROOT = next(p for p in Path(__file__).resolve().parents
-              if (p / "data").is_dir() and (p / "Makefile").is_file())
+            if (p / "data").is_dir() and (p / "Makefile").is_file())
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+# The dataset card quotes the headline. Those numbers are loaded, not typed: they
+# were literals describing a 36-item run, and a dataset published on Hugging Face
+# with a stale headline is the most durable way to ship a wrong number.
+import submission_numbers as SN  # noqa: E402
+
+_H = SN.headline()
+BASE_ACC, BASE_N = _H["base_acc"], _H["base_n"]
+RAG_ACC, RAG_N = _H["rag_acc"], _H["rag_n"]
+DELTA_PP, PSTR = _H["delta_pp"], SN.fmt_p(_H["mcnemar_p"])
+DEV_N = SN.dev()["n"]
 STAGE = ROOT / "docs" / "submission" / "hf_dataset"
 
 COPY_FILES = [
@@ -41,8 +53,8 @@ COPY_FILES = [
     # docs / license / results summary
     ("DATASHEET.md", "DATASHEET.md"),
     ("LICENSE", "LICENSE"),
-    ("eval/results/final_scores/statistical_report.md", "results/statistical_report.md"),
-    ("eval/results/final_scores/test_scores.json", "results/test_scores.json"),
+    ("results/final_scores/statistical_report.md", "results/statistical_report.md"),
+    ("results/final_scores/test_scores.json", "results/test_scores.json"),
 ]
 
 COPY_TREE = [
@@ -54,7 +66,7 @@ ASSET_GLOBS = [
 ]
 
 
-DATASET_CARD = """---
+DATASET_CARD = f"""---
 license: cdla-permissive-2.0
 task_categories:
   - multiple-choice
@@ -111,10 +123,10 @@ Sealed knowledge test, **Apertus 1.5 8B** (Q4_K_M, llama.cpp, T=0):
 
 | Arm | Accuracy |
 |---|---|
-| Baseline | 55.6% (20/36) |
-| BM25 RAG (`top_k=3`) | 86.1% (31/36) |
+| Baseline | {BASE_ACC}% ({BASE_N}) |
+| BM25 RAG (`top_k=3`) | {RAG_ACC}% ({RAG_N}) |
 
-Paired Δ **+30.6 pp**, McNemar p=0.001. Dev transfer: 48.8% → 83.3%.
+Paired Δ **+{DELTA_PP} pp**, McNemar {PSTR}. Dev split n={DEV_N} (not re-run at this scale).
 
 **Apertus 70B was not evaluated** (8 GB VRAM). Do not treat missing 70B
 numbers as implied scores.

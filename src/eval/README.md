@@ -28,17 +28,18 @@ figure below: `results/final_scores/statistical_report.md`,
 
 ### What was measured
 
-Held-out sealed test set, `data/knowledge/knowledge_test.json`, n=36,
-hash-verified (`df819e8c1582902a…`) and sealed until Phase 4.1. Both arms answer
-the same 36 items through the same scorer, so the comparison is paired.
+Held-out sealed test set, `data/knowledge/knowledge_test.json`, n=90,
+hash-verified (`83c20589e1c5b668`) and sealed until Phase 4.1. Both arms answer
+the same 90 items through the same scorer, in a single paired invocation, so
+the comparison is paired in the strict sense: one run, one seed, two conditions.
 
 | Arm | Accuracy | 95% CI (Wilson) |
 |---|---|---|
-| Baseline, no retrieval | **55.6%** (20/36) | [39.6, 70.5] |
-| Knowledge + RAG (BM25, `top_k=3`, per-question contexts) | **86.1%** (31/36) | [71.3, 93.9] |
+| Baseline, no retrieval | **51.1%** (46/90) | [41.0, 61.2] |
+| Knowledge + RAG (BM25, `top_k=3`, per-question contexts) | **86.7%** (78/90) | [78.1, 92.2] |
 
-Delta **+30.6 pp**, exact 95% CI [+13.1, +30.6]. Paired: **11 improved, 0
-regressed**, McNemar p=0.001. The interval on the delta comes from the discordant
+Delta **+35.6 pp**, exact 95% CI [+25.1, +39.5]. Paired: **34 improved, 2
+regressed**, McNemar p<0.001. The interval on the delta comes from the discordant
 pairs, not from either arm's interval, and is wider than both.
 
 | Other arm | n | Result | Qualification |
@@ -75,7 +76,7 @@ Mitigations. These reduce the damage; they do not undo it.
   (42.9% → 44.0%, 6 → 4 parse errors). Long greedy decodes on a GPU are not
   reproducible to the bit because reduction order varies between runs. Any
   single figure here should be read with that ±1-question wobble in mind.
-- The baseline arm reported 55.6% (20/36) on each completed run of the sealed
+- The baseline arm reported 51.1% (46/90) on the completed paired run of the sealed
   set — but given the drift above, that agreement is partly luck. Raw responses
   are overwritten per run, so it is not independently checkable from the
   surviving artefacts.
@@ -150,8 +151,8 @@ them is selection on the measurement set.
 
 ### Retrieval recall is backend-specific, and measured on dev
 
-The headline recall figures — **83.3% / 90.5% / 94.0%** at k=1/3/5 — are
-pure-Python BM25 with zero third-party dependencies, measured over all 84 dev
+The headline recall figures — **82.4% / 91.4% / 92.9%** at k=1/3/5 — are
+pure-Python BM25 with zero third-party dependencies, measured over all 210 dev
 items (`fix/rag/RESULTS.md`). They describe the corpus and the index, not the
 model, and they come from the dev split, not the sealed test set.
 
@@ -167,10 +168,11 @@ prompt-shape effect, not retrieval.
 ### The dev split produced a null result first
 
 Before a model was running, the paired dev evaluation measured **15 gains and 10
-regressions, p=0.42** — no detectable effect at n=84 (`fix/rag/RESULTS.md`). That
-was the state of the improvement when it was frozen. The real 8B dev run
-afterwards was positive — +34.5 pp, 34 improved / 5 regressed, p<0.001
-(`fix/comparison.md`) — and the sealed test set was consulted only after that.
+regressions, p=0.42** — no detectable effect at that dev scale
+(`fix/rag/RESULTS.md`). That was the state of the improvement when it was frozen.
+The dev comparison is recorded at `fix/comparison.md`; note that the dev split has
+since grown to 210 items and has **not** been re-run, so the sealed test set is the
+only current measurement.
 
 ### Reproducibility
 
@@ -491,7 +493,7 @@ no check at all.
 | 2.3 — `run_values.py`, `judge.py` | **done** — 73 records, self-judged |
 | 2.3 — `crosscheck.py` | **not started** — B5, human blind scoring, not delegable |
 | 2.4 — `run_dialect.py` | **done** — 30 items; native validation still blocked (B1) |
-| Phase 3.3b — RAG retriever (`fix/rag/`) | **done** — dev recall @5 94.0% on BM25 |
+| Phase 3.3b — RAG retriever (`fix/rag/`) | **done** — dev recall @5 92.9% on BM25 |
 
 The two arms behind the headline comparison were run more than once; see
 [Disclosures](#the-sealed-test-set-was-opened-more-than-once).

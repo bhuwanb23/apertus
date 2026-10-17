@@ -1,6 +1,6 @@
 # Key Findings — Swiss Reality Check
 
-*Generated 2026-10-17T07:09:11+00:00 by `eval/narrative.py` from measured data · git `534ed230e1e9`*
+*Generated 2026-10-17T07:18:17+00:00 by `eval/narrative.py` from measured data · git `1979eb747119`*
 
 > **Read this first.** Every number below was computed by the code in this repository
 > and is traceable to a run. There are no placeholders, and no claim appears that
@@ -37,7 +37,7 @@ rather than plausible.
 
 | | items | construction | scoring |
 |---|---|---|---|
-| Knowledge | 120 MCQs | 55 official Swiss sources, every distractor traceable to a real neighbouring-country answer | exact letter match, with a paraphrase ladder |
+| Knowledge | 300 MCQs | 55 official Swiss sources, every distractor traceable to a real neighbouring-country answer | exact letter match, with a paraphrase ladder |
 | Values | 30 scenarios | rubric scores **framing and balance**, not political position | LLM judge observes elements; the rubric is applied in code |
 | Dialect | 30 items | Alemannic sentences with reference renderings | the protocol in `dialect_scoring_protocol.md` |
 
@@ -109,10 +109,10 @@ The plan for this project was to report a category breakdown. It cannot be done,
 the reason is worth stating because it is a property of the design rather than
 a disappointing result:
 
-- **Overall (n=36):** a paired change is detectable only at **6 improvements with zero regressions** (+16.7 pp).
-- **Per category (n=6):** only a clean sweep is detectable (6/0, p=0.031).
+- **Overall (n=90):** a paired change is detectable only at **6 improvements with zero regressions** (+6.7 pp).
+- **Per category (n=15):** only a clean sweep is detectable (6/0, p=0.000).
   With a single regression, *nothing* is detectable at this n. A category scoring
-  0/6 has a 95% interval of [0.0, 39.0]; one scoring 6/6 has [61.0, 100.0].
+  0/15 has a 95% interval of [0.0, 20.4]; one scoring 15/15 has [79.6, 100.0].
 
 Every per-category table in this project is therefore labelled descriptive, and
 categories are never ranked. Ranking six of them is selection on the measurement
@@ -132,7 +132,7 @@ exact McNemar.
 **Delta +35.6 pp**, exact 95% interval [+25.1%, +39.5%]: **34 items improved, 2 regressed**, McNemar p = 0.0 (below p < 0.05).
 
 All 6 of the 6 categories moved in the same direction — none of them backwards. None is individually
-significant, and §3.4 is the arithmetic for why: at n=6 per category a clean sweep is
+significant, and §3.4 is the arithmetic for why: at n=15 per category a clean sweep is
 the only detectable result.
 
 **Values.** 73 scenarios, mean **1.014 out of 2.0**, 0 unscored (distribution {'0': 33, '1': 6, '2': 34}).
@@ -188,8 +188,8 @@ order of how well they are supported:
    answered 32% of the dev split. Any country-specific benchmark
    built this way will measure its own prompt. Checking takes one function call and should
    be standard practice.
-3. **Know your detection floor before you measure.** At n=36 a real effect of +16.7 pp
-   is indistinguishable from noise, and at n=6 per category *nothing* is. Benchmarks
+3. **Know your detection floor before you measure.** At n=90 a real effect of +6.7 pp
+   is indistinguishable from noise, and at n=15 per category *nothing* is. Benchmarks
    that report deltas without their floor are reporting noise as progress.
 4. **Report the interval, not just the point estimate.** The measured delta was +35.6 pp with an exact 95%
    interval of [{_f(p['delta_ci_lower'], signed=True)}, +39.5%] — a range that excludes zero, which is the whole
@@ -206,8 +206,8 @@ to any small-n evaluation, in any language, for any model.
    Scored for Apertus 1.5 8B. Nothing here separates a
    Swiss-specific effect from a general small-model effect, and nothing here would survive a
    second look at the same items.
-2. **The test set is n=36.** A detectable paired change needs 6 improvements with zero regressions. Per-category
-   n=6 supports nothing. Confidence intervals are reported throughout for this reason.
+2. **The test set is n=90.** A detectable paired change needs 6 improvements with zero regressions. Per-category
+   n=15 supports nothing. Confidence intervals are reported throughout for this reason.
 3. **Values scoring is LLM-as-judge, and the human audit is not started.** B5: no blind sample exists yet. A human must score the 15 items; this cannot be delegated to a model.
    This is the weakest load-bearing element in the design: the rubric is applied
    in code to what a judge *observed*, but the observation itself is unchecked
@@ -230,7 +230,7 @@ to any small-n evaluation, in any language, for any model.
 
 ## Reproducibility
 
-- Git commit `534ed230e1e97eb7de4dcf71844b9150d9bc465d`
+- Git commit `1979eb747119b2c991dac89eab6b81765e94c210`
 - Sealed test set SHA-256 `83c20589e1c5b668fabcdafb0a09c1d2…` (recorded in `eval/seal/`)
 - Seed 42 · temperature 0.0 · prompt version 1.0 · judge `8b`
 - Every access to the sealed test set is in an append-only log: `python src/eval/seal.py audit`

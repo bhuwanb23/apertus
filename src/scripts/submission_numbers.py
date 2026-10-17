@@ -134,6 +134,16 @@ def values(model: str = "8b") -> dict:
         raise ClaimsUnavailable(f"no values results for model '{model}': {e}") from e
 
 
+def power() -> dict:
+    """Detection-floor analysis for the current n, as computed by
+    statistical_report.py. The PDF quotes this floor, so it must be the
+    computed one: at n=36 the floor was +16.7 pp, at n=90 it is +6.7 pp."""
+    try:
+        return _load()["power"]
+    except (KeyError, TypeError) as e:
+        raise ClaimsUnavailable(f"no power block in test_scores.json: {e}") from e
+
+
 def fmt_p(p: float) -> str:
     """p as a judge reads it: never a bare 0.0 from float rounding."""
     if p is None:
