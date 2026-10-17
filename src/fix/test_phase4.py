@@ -149,8 +149,8 @@ def test_seal_detects_tampering() -> None:
     check("the recorded seal verifies now", ok, "; ".join(problems))
 
     info = seal.compute()
-    check("the hash covers all 36 questions",
-          info["n_questions"] == 36, f"{info['n_questions']}")
+    check("the hash covers every sealed question",
+          info["n_questions"] == seal.EXPECTED_N, f"{info['n_questions']}")
     check("the seal records structure but not content",
           "correct_answer" in info["item_keys"] and len(info["item_keys"]) > 5,
           "item_keys must describe the shape")
@@ -180,7 +180,7 @@ def test_seal_detects_tampering() -> None:
               any("expected" in p for p in problems2), str(problems2))
     finally:
         seal.EXPECTED_N = saved
-    check("the count constant is restored", seal.EXPECTED_N == 36)
+    check("the count constant is restored", seal.EXPECTED_N == saved)
 
     ok3, _ = seal.verify()
     check("verification passes again once restored", ok3)
@@ -720,6 +720,7 @@ def test_audit_log() -> None:
 def test_sealed_content_untouched() -> None:
     section("9. The tests never open a test question")
     import ast
+    import seal
 
     # Only the sealed file's bytes are read, for hashing. Assert no test code
     # extracts a question, an option or an answer from the test split.
@@ -739,8 +740,8 @@ def test_sealed_content_untouched() -> None:
           seal_hash_matches(), "the tests must not have modified the sealed set")
 
     sealed = ROOT / "data" / "knowledge" / "knowledge_test.json"
-    check("the sealed file still has 36 questions",
-          len(json.loads(sealed.read_text(encoding="utf-8"))) == 36)
+    check("the sealed file still has its recorded size",
+          len(json.loads(sealed.read_text(encoding="utf-8"))) == seal.EXPECTED_N)
     # Snapshot test_run/ at the start of the suite and assert nothing NEW landed
     # in it. Asserting the directory is empty only holds before the pipeline has
     # ever been used - once real arm files exist (they should, after the

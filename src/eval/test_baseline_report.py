@@ -429,8 +429,11 @@ def test_pre_run() -> int:
     baseline_report.results.clear()
     baseline_report.pre_run()
     r = {i: s for i, s, _ in baseline_report.results}
-    check("pre/knowledge all 120", r.get("knowledge all = 120"), "PASS")
-    check("pre/values 30", r.get("values scenarios = 30"), "PASS")
+    # Labels carry no size, so these lookups keep working when the corpus is
+    # rescaled. They previously read "knowledge all = 120", which made the test
+    # assert a corpus size rather than the behaviour it is named for.
+    check("pre/knowledge all present", r.get("knowledge all"), "PASS")
+    check("pre/values present", r.get("values scenarios"), "PASS")
     check("pre/dialect present", r.get("dialect items present"), "PASS")
     check("pre/no dev/test overlap", r.get("dev/test no overlap"), "PASS")
     check("pre/temperature is 0", r.get("config: temperature is 0 on every model"), "PASS")

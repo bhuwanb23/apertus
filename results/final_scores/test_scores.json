@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-10-17T05:42:03+00:00",
-  "git_hash": "87b729a83c2cf243cdb0522d87229defd8581b0f",
+  "generated_utc": "2026-10-17T06:22:36+00:00",
+  "git_hash": "9069712e680d81e8a58fc48683678a785c002942",
   "alpha": 0.05,
   "knowledge": {
     "8b": {
@@ -444,7 +444,7 @@
     "70b": false
   },
   "power": {
-    "overall_n36": {
+    "overall": {
       "n": 36,
       "alpha": 0.05,
       "min_improvements_zero_regressions": 6,
@@ -509,7 +509,7 @@
         }
       ]
     },
-    "per_category_n6": {
+    "per_category": {
       "n": 6,
       "alpha": 0.05,
       "min_improvements_zero_regressions": null,
@@ -552,8 +552,11 @@
           "detectable": false
         }
       ]
-    }
+    },
+    "n_overall": 36,
+    "n_per_category": 6
   },
+  "dev_n": 84,
   "judge_model": "8b",
   "self_judged": true
 }

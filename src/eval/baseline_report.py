@@ -60,6 +60,21 @@ def record(item: str, status: str, detail: str = "") -> None:
     print(f"  [{tag:4}] {item}" + (f"  --  {detail}" if detail else ""))
 
 
+def _count(path) -> int | None:
+    """Number of items in a dataset file, or None if it is missing/unreadable.
+
+    Module level because both pre_run() and post_run() need it, and because the
+    counts it returns are what the corpus-size assertions are made against - the
+    whole point being that no caller repeats a literal 120/84/36.
+    """
+    if not path.exists():
+        return None
+    try:
+        return len(json.loads(path.read_text(encoding="utf-8")))
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
 # ============================================================== PRE-RUN CHECKS
 def pre_run() -> None:
     print("\n=== PRE-RUN CHECKLIST ===")
@@ -75,14 +90,6 @@ def pre_run() -> None:
     # invariants are that dev and test partition the whole set, that they do not
     # overlap, and that each dataset is non-empty. Hardcoding 120/84/36 meant a
     # corpus resize failed this checklist before any genuine problem was checked.
-    def _count(path):
-        if not path.exists():
-            return None
-        try:
-            return len(json.loads(path.read_text(encoding="utf-8")))
-        except (OSError, json.JSONDecodeError):
-            return None
-
     n_all, n_dev, n_test = _count(k_all), _count(k_dev), _count(k_test)
     for label, path, n in (
         ("knowledge all", k_all, n_all),

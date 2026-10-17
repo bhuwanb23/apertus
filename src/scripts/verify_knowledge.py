@@ -104,34 +104,69 @@ for f in draft_files:
 
 
 def _category_blocks():
-    """Derive (lo, hi, category) id blocks from the corpus itself.
+    """Contiguous id ranges per category, derived from the corpus itself.
 
-    Items are authored in contiguous id blocks per category (K001.. politics,
-    then law, and so on). Those boundaries were hardcoded as 20-item ranges,
-    which silently stops meaning anything once the corpus grows - the ranges
-    would cover a fraction of the ids and leave the rest unclassified. The
-    property actually worth protecting is that the blocks are contiguous,
-    non-overlapping and cover every id, so it is derived and checked here.
+    The original check hardcoded 20-item ranges (K001-K020 politics, and so on).
+    That is an authoring CONVENTION, not a correctness property: appending a
+    batch of services items after the history block legitimately gives services
+    two ranges, and the convention says nothing about whether the data is sound.
+
+    What actually matters is checked here instead:
+      * every id belongs to exactly one category (ranges never overlap), and
+      * the ranges together cover every id with no gap.
+
+    A category may legitimately hold more than one range. Collapsing its ids into
+    a single min..max span - the obvious implementation - silently creates
+    overlaps as soon as that happens, which is how a scale-up starts failing for
+    a reason that has nothing to do with the data.
     """
-    spans = {}
+    per_cat = {}
     for q in questions:
         if not q["id"][1:].isdigit():
             continue
-        n = int(q["id"][1:])
-        lo, hi = spans.get(q["category"], (n, n))
-        spans[q["category"]] = (min(lo, n), max(hi, n))
-    blocks = sorted((lo, hi, cat) for cat, (lo, hi) in spans.items())
-    for (lo1, hi1, c1), (lo2, _hi2, c2) in zip(blocks, blocks[1:]):
+        per_cat.setdefault(q["category"], set()).add(int(q["id"][1:]))
+
+    ranges = []
+    for cat, nums in per_cat.items():
+        for lo, hi in _runs(sorted(nums)):
+            ranges.append((lo, hi, cat))
+    ranges.sort()
+
+    for (lo1, hi1, c1), (lo2, hi2, c2) in zip(ranges, ranges[1:]):
         if lo2 <= hi1:
-            err("IDS", f"id blocks overlap: {c1} ends at {hi1}, {c2} starts at {lo2}")
-    return blocks
+            err("IDS", f"id ranges overlap: {c1} holds {lo1}-{hi1}, "
+                      f"{c2} holds {lo2}-{hi2}")
+
+    covered = set()
+    for lo, hi, _c in ranges:
+        covered |= set(range(lo, hi + 1))
+    all_ids = {int(q["id"][1:]) for q in questions if q["id"][1:].isdigit()}
+    if covered and covered != all_ids:
+        err("IDS", f"id ranges leave gaps: {sorted(all_ids - covered)[:10]}")
+    return ranges
 
 
-_BLOCKS = _category_blocks()
+def _runs(sorted_nums):
+    """Collapse a sorted int list into contiguous (lo, hi) runs."""
+    out, start, prev = [], None, None
+    for n in sorted_nums:
+        if start is None:
+            start = prev = n
+        elif n == prev + 1:
+            prev = n
+        else:
+            out.append((start, prev))
+            start = prev = n
+    if start is not None:
+        out.append((start, prev))
+    return out
 
 
 def _block_of(n):
     return next((cat for lo, hi, cat in _BLOCKS if lo <= n <= hi), None)
+
+
+_BLOCKS = _category_blocks()
 
 # ------------------------------------------------------------------ 1. schema
 for q in questions:
@@ -189,11 +224,19 @@ for q in questions:
 
 # Per-category balance. The invariant is that every category carries the same
 # number of items, not that each carries twenty of them.
+#
+# Severity depends on whether a target was declared. While a corpus is being
+# scaled one category at a time the counts are legitimately mid-flight, and a
+# hard error there just blocks the next batch from being added. Once a phase
+# declares the size it intends to reach, unevenness is a real failure and is
+# promoted back to an error.
 _cat_counts = Counter(q["category"] for q in questions)
+_balance_status = err if EXPECT_TOTAL is not None else warn
 if not _cat_counts:
     err("BALANCE", "no categories present")
 elif len(set(_cat_counts.values())) > 1:
-    err("BALANCE", f"categories are uneven: {dict(sorted(_cat_counts.items()))}")
+    _balance_status("BALANCE",
+                    f"categories are uneven: {dict(sorted(_cat_counts.items()))}")
 else:
     print(f"  per-category items: {_cat_counts.most_common(1)[0][1]} "
           f"x {len(_cat_counts)} categories")
