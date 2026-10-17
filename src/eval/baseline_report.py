@@ -148,7 +148,7 @@ def pre_run() -> None:
     stale = list(PARSED_DIR.glob("*_base.json")) if PARSED_DIR.is_dir() else []
     if stale:
         record("no stale results in parsed/", WARN,
-               f"{len(stale)} existing file(s) - rm -rf eval/results before a baseline run")
+               f"{len(stale)} existing file(s) - rm -rf results/{raw_responses,parsed,scores,logs} before a baseline run")
 
 
 def _probe_endpoint(key: str, m) -> None:

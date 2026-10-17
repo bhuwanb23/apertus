@@ -593,7 +593,7 @@ def write_report(s: dict, path: Path | None = None) -> Path:
     if not have:
         A("> ## ⚠️ No results yet")
         A(">")
-        A("> Phase 4.1 has not been run. `eval/results/test_run/` is empty, and")
+        A("> Phase 4.1 has not been run. `results/test_run/` is empty, and")
         A("> `run_test_final.py` refuses to run on a mock backend — the sealed set")
         A("> is scored once, on a real model, and that has not happened.")
         A(">")
@@ -749,8 +749,8 @@ def write_report(s: dict, path: Path | None = None) -> Path:
     A(f"- Git commit: `{s['git_hash']}`")
     A("- Seed: 42 · Temperature: 0.0 · Prompt version: 1.0")
     A(f"- Sealed test set SHA-256: `{seal.file_hash()[:32]}…`")
-    A(f"- Raw responses and per-arm metadata: `eval/results/test_run/`")
-    A(f"- Machine-readable statistics: `eval/results/final_scores/test_scores.json`")
+    A(f"- Raw responses and per-arm metadata: `results/test_run/`")
+    A(f"- Machine-readable statistics: `results/final_scores/test_scores.json`")
     path.write_text("\n".join(L) + "\n", encoding="utf-8")
     return path
 

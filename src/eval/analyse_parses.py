@@ -20,7 +20,7 @@ Buckets:
 
 Run:
     python eval/analyse_parses.py
-    python eval/analyse_parses.py --parsed eval/results/parsed/knowledge_8b_dev_base.json
+    python eval/analyse_parses.py --parsed results/parsed/knowledge_8b_dev_base.json
 """
 
 from __future__ import annotations

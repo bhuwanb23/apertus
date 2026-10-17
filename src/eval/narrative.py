@@ -477,7 +477,7 @@ def write_findings(stats: dict | None = None) -> Path:
         A(f"> Arms scored: {', '.join(f'`{m}`' for m, _ in metas)}. Accuracy, deltas "
           "and intervals")
         A("> come from `eval/statistical_report.py`; the per-item rows are in "
-          "`eval/results/test_run/`.")
+          "`results/test_run/`.")
         A("> The findings that hold *without* a model are in §3.1–§3.4, and they "
           "do not depend on this run.")
         A("")
@@ -812,7 +812,7 @@ def write_findings(stats: dict | None = None) -> Path:
         A("The full tables, including the per-category breakdown that is "
           "reported side by")
         A("side and never ranked, are in "
-          "`eval/results/final_scores/statistical_report.md`.")
+          "`results/final_scores/statistical_report.md`.")
         A("")
 
     # ---------------------------------------------------------------- act 4

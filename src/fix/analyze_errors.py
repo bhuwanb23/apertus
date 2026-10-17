@@ -550,7 +550,7 @@ def render_taxonomy_md(analysis: dict, tax: dict, models: dict) -> str:
 
     A("# Error Taxonomy — Apertus 1.5 baseline\n")
     A(f"*Generated {datetime.now(timezone.utc).isoformat(timespec='seconds')} "
-      f"from `eval/results/parsed/`*\n")
+      f"from `results/parsed/`*\n")
 
     if run.get("is_mock"):
         A("> ## ⚠️ MOCK BACKEND — this taxonomy describes synthetic responses\n"
