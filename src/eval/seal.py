@@ -104,6 +104,42 @@ def git_hash() -> str:
         return "unknown"
 
 
+def _seal_prefix() -> str:
+    """Repo-relative, forward-slashed path of the seal's own bookkeeping.
+
+    Derived from SEAL_DIR rather than written out, for the reason given in
+    git_dirty(): the literal stopped matching when the project moved from
+    track_1b/src/eval/ to src/eval/, and the failure mode is silent.
+    """
+    try:
+        return str(SEAL_DIR.relative_to(ROOT)).replace("\\", "/") + "/"
+    except ValueError:
+        return str(SEAL_DIR).replace("\\", "/").rstrip("/") + "/"
+
+
+def tree_hash() -> str:
+    """Hash of the tracked source tree, EXCLUDING the seal's own bookkeeping.
+
+    Why not compare HEAD. `check_freeze()` used to require the recorded
+    git_hash to equal `git rev-parse HEAD`. Committing frozen_code.json is itself
+    a commit, so committing the freeze record immediately invalidated it and the
+    check could never pass on a clean checkout - the seal could be recorded but
+    never committed.
+
+    Hashing the index instead, with src/eval/seal/ excluded, is invariant under
+    committing the record while still changing the moment any real code changes.
+    That is precisely the property being asserted: "the code that will run is the
+    code that was frozen".
+    """
+    try:
+        listing = subprocess.check_output(
+            ["git", "ls-files", "-s", ".", f":!{_seal_prefix()}rstrip('/')"],
+            cwd=ROOT, stderr=subprocess.DEVNULL).decode()
+    except Exception:
+        return "unknown"
+    return hashlib.sha256(listing.encode()).hexdigest()
+
+
 def git_dirty() -> bool:
     """Uncommitted changes. A dirty tree means the recorded hash does not
     identify the code that produced anything.
@@ -302,6 +338,7 @@ def freeze(note: str = "") -> dict:
     rec = {
         "frozen_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "git_hash": git_hash(),
+        "tree_hash": tree_hash(),
         "tree_dirty": git_dirty(),
         "note": note,
     }
@@ -324,11 +361,20 @@ def check_freeze() -> tuple[bool, list[str]]:
     if rec is None:
         return False, ["improvement not frozen - run: python src/eval/seal.py freeze"]
     problems = []
-    now = git_hash()
-    if rec.get("git_hash") != now:
+    if rec.get("tree_hash"):
+        # Preferred: invariant under committing the freeze record itself.
+        now = tree_hash()
+        if rec["tree_hash"] != now:
+            problems.append(
+                f"code moved since the freeze: frozen tree {rec['tree_hash'][:12]}, "
+                f"now {now[:12]}  - this is Golden Rule 4")
+    elif rec.get("git_hash") != git_hash():
+        # Legacy record with no tree_hash: fall back to the commit comparison,
+        # and say so, because that form cannot survive being committed.
         problems.append(
             f"code moved since the freeze: frozen at {rec.get('git_hash', '?')[:12]}, "
-            f"HEAD is now {now[:12]}  - this is Golden Rule 4")
+            f"HEAD is now {git_hash()[:12]}  - this is Golden Rule 4 "
+            f"(this freeze predates tree_hash; re-freeze to compare trees)")
     if rec.get("tree_dirty"):
         problems.append("the tree was dirty at freeze time, so the hash does not "
                         "identify the code that will run")

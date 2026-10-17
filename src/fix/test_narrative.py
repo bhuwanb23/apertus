@@ -552,7 +552,7 @@ def test_numbers_traceable() -> None:
     section("6. Every number traces to the module that measured it")
     import narrative
     from statistical_report import detectable, wilson_ci
-    from narrative import TEST_N
+    from narrative import TEST_N, N_CATEGORIES
 
     path, scen, have = build()
     text = path.read_text(encoding="utf-8")
@@ -588,11 +588,13 @@ def test_numbers_traceable() -> None:
     check("no recall figure is hardcoded in the generator's code", not lit,
           f"literals {lit}; retrieval_state() already computes these")
 
-    w0, w6 = wilson_ci(0, 6), wilson_ci(6, 6)
-    check("the 0/6 interval quoted matches wilson_ci",
+    # Derived: the worst case a category can show, at whatever n it has.
+    cat_n = max(1, TEST_N // N_CATEGORIES)
+    w0, w6 = wilson_ci(0, cat_n), wilson_ci(cat_n, cat_n)
+    check(f"the 0/{cat_n} interval quoted matches wilson_ci",
           f"[{w0['ci_lower']:.1f}, {w0['ci_upper']:.1f}]" in text,
           f"expected [{w0['ci_lower']:.1f}, {w0['ci_upper']:.1f}]")
-    check("the 6/6 interval quoted matches wilson_ci",
+    check(f"the {cat_n}/{cat_n} interval quoted matches wilson_ci",
           f"[{w6['ci_lower']:.1f}, {w6['ci_upper']:.1f}]" in text,
           f"expected [{w6['ci_lower']:.1f}, {w6['ci_upper']:.1f}]")
 
