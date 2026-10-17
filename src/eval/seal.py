@@ -340,6 +340,7 @@ def freeze(note: str = "") -> dict:
     questions.
     """
     SEAL_DIR.mkdir(parents=True, exist_ok=True)
+    prev = frozen()
     rec = {
         "frozen_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "git_hash": git_hash(),
@@ -347,6 +348,31 @@ def freeze(note: str = "") -> dict:
         "tree_dirty": git_dirty(),
         "note": note,
     }
+    # Carry the previous freeze forward as provenance.
+    #
+    # This record used to be built from five fixed keys and written wholesale,
+    # which silently deleted any `supersedes` entry on every re-freeze - i.e. the
+    # record of *why* the previous hash had been advanced, and what had changed in
+    # the scoring path since the measurement. That is precisely the information
+    # this file exists to hold, and losing it on an ordinary re-freeze is the same
+    # class of quiet erasure the rest of the project exists to catch.
+    #
+    # The chain nests rather than flattens, so no link is ever dropped no matter
+    # how many times the freeze is advanced.
+    if prev and prev.get("git_hash") and prev.get("git_hash") != rec["git_hash"]:
+        superseded = {k: prev[k] for k in
+                      ("git_hash", "frozen_utc", "tree_hash")
+                      if k in prev}
+        superseded["why_advanced"] = (
+            note or "freeze advanced; no reason recorded")
+        if prev.get("post_measurement_changes"):
+            superseded["post_measurement_changes"] = prev["post_measurement_changes"]
+        for k in ("scoring_files_touched", "mcq_scoring_unchanged",
+                  "generation_code_still_reproducible_from", "prior_chain",
+                  "supersedes"):
+            if prev.get(k):
+                superseded[k] = prev[k]
+        rec["supersedes"] = superseded
     FREEZE_PATH.write_text(json.dumps(rec, indent=2, ensure_ascii=False) + "\n",
                            encoding="utf-8")
     return rec
