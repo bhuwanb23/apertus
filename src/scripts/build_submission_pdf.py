@@ -59,8 +59,11 @@ N_CATS = len({q["category"] for q in _all})
 PER_CAT = N_ITEMS // N_CATS if N_CATS else 0
 
 ASSETS = ROOT / "docs" / "submission" / "assets"
-OUT = ROOT / "docs" / "submission" / "swiss_reality_check_report.pdf"
-OUT_ROOT = ROOT / "swiss_reality_check_report.pdf"
+# The brief requires the technical report uploaded as TeamName_Report.pdf.
+# The descriptive name is kept as a copy so existing links keep resolving.
+OUT = ROOT / "docs" / "submission" / "nullvoid_Report.pdf"
+OUT_ROOT = ROOT / "nullvoid_Report.pdf"
+OUT_ALIAS = ROOT / "swiss_reality_check_report.pdf"
 
 TEAM = "Bhuwan B · Padmanaban G · Avinash A"
 TEAM_SHORT = "Bhuwan B, Padmanaban G, Avinash A"
@@ -521,8 +524,11 @@ def build():
     from pypdf import PdfReader
     pages = len(PdfReader(str(OUT)).pages)
     shutil.copy2(OUT, OUT_ROOT)
+    # Keep the descriptive name as a copy, not a rename: anything that linked to
+    # it keeps working, and judges looking for TeamName_Report.pdf find that.
+    shutil.copy2(OUT, OUT_ALIAS)
     print(f"wrote {OUT} ({OUT.stat().st_size} bytes, {pages} pages)")
-    print(f"copied {OUT_ROOT}")
+    print(f"copied {OUT_ROOT.name} and {OUT_ALIAS.name}")
     if pages > 6:
         print(f"FAIL: page count {pages} > 6", file=sys.stderr)
         sys.exit(1)

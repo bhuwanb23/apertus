@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://huggingface.co/datasets/bhuwanb23/apertus"><img src="https://img.shields.io/badge/🤗_Dataset-bhuwanb23%2Fapertus-FFD21E?style=for-the-badge" alt="Hugging Face"/></a>
-  <a href="swiss_reality_check_report.pdf"><img src="https://img.shields.io/badge/Report-PDF_≤6p-E63946?style=for-the-badge" alt="PDF"/></a>
+  <a href="nullvoid_Report.pdf"><img src="https://img.shields.io/badge/Report-PDF_≤6p-E63946?style=for-the-badge" alt="PDF"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/Code-Apache--2.0-1F2933?style=for-the-badge" alt="License"/></a>
   <a href="DATASHEET.md"><img src="https://img.shields.io/badge/Data-CDLA--Permissive--2.0-457B9D?style=for-the-badge" alt="Data license"/></a>
 </p>
@@ -74,6 +74,13 @@ below. Full detail in **[CHANGELOG.md](CHANGELOG.md)**.
 verification of the dataset key (18 items) and judge-vs-human agreement on the
 values rubric (11 items). Sheets are ready; the rate is reported as *not started*
 rather than estimated. Dialect items remain unvalidated by a native speaker.
+
+> **Note on repository layout.** The brief asks teams to work in a `track_1b/`
+> directory and not move its files. This submission is a single-track entry, so
+> the project sits at the repository root instead — `src/`, `data/`,
+> `results/`, `docs/`. Nothing is renamed or lost; the layout is the flattened
+> form of the template, and `make run` works from the repository root as the
+> brief requires. Flagged here rather than left for a judge to notice.
 
 ---
 
@@ -163,7 +170,7 @@ Descriptive only at n=15 per category — not a ranking.
 | | |
 |---|---|
 | Technical report | [`technical_report.md`](technical_report.md) |
-| Jury PDF (≤6 pages) | [`swiss_reality_check_report.pdf`](swiss_reality_check_report.pdf) |
+| Jury PDF (≤6 pages) | [`nullvoid_Report.pdf`](nullvoid_Report.pdf) |
 | Hugging Face dataset | [huggingface.co/datasets/bhuwanb23/apertus](https://huggingface.co/datasets/bhuwanb23/apertus) |
 | Datasheet | [`DATASHEET.md`](DATASHEET.md) |
 | Statistical report | [`results/final_scores/statistical_report.md`](results/final_scores/statistical_report.md) |
@@ -203,7 +210,7 @@ make run
 ```
 Makefile · Dockerfile · docker-compose.yml
 technical_report.md · DATASHEET.md · LICENSE
-swiss_reality_check_report.pdf
+nullvoid_Report.pdf
 
 src/
   run.py              make run entrypoint

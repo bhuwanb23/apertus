@@ -250,6 +250,25 @@ def _write_metadata(stage: Path) -> None:
     shutil.copy2(ROOT / "data" / "sources" / "source_registry.csv", meta / "source_registry.csv")
     shutil.copy2(ROOT / "results" / "final_scores" / "test_scores.json", meta / "test_scores.json")
 
+    # Instance-level licensing is required by the brief ("where relevant, this
+    # file must contain instance-level licensing information"). source_registry.csv
+    # is per-SOURCE and carries no licence column, so item_licensing.csv is
+    # generated separately, one row per test item, and shipped alongside it.
+    licensing_csv = meta / "item_licensing.csv"
+    if not licensing_csv.exists():
+        import subprocess
+        subprocess.run([sys.executable,
+                        str(ROOT / "src" / "scripts" / "add_instance_licensing.py")],
+                       cwd=ROOT, check=True, capture_output=True, text=True)
+        shutil.copy2(ROOT / "docs" / "submission" / "metadata" / "item_licensing.csv",
+                     licensing_csv)
+
+    # The consent-form template the rubric asks to see, and the not-applicable
+    # table that explains why no consent was solicited.
+    consent = ROOT / "docs" / "submission" / "CONSENT_TEMPLATE.md"
+    if consent.is_file():
+        shutil.copy2(consent, meta / "CONSENT_TEMPLATE.md")
+
     claims = {
         "benchmark": "Swiss Reality Check",
         "track": "1B Swiss Voices",
@@ -287,10 +306,32 @@ def _write_metadata(stage: Path) -> None:
 
     licensing = (
         "# Licensing\n\n"
-        "- Dataset compilation / annotations: CDLA-Permissive-2.0\n"
-        "- Code: Apache-2.0\n"
-        "- Alemannic Wikipedia excerpts: CC BY-SA 4.0\n"
-        "- Swiss government source text: public information\n"
+        "This file is the summary. The authoritative, per-test-item licensing is\n"
+        "`metadata/item_licensing.csv` - one row per item, with the licence, the\n"
+        "attribution and share-alike obligations, and the basis for the\n"
+        "classification. Read that to answer \"may I use this item?\".\n\n"
+        "## This dataset\n\n"
+        "| part | licence |\n"
+        "|---|---|\n"
+        "| compilation, questions, answer keys, annotations | CDLA-Permissive-2.0 |\n"
+        "| code | Apache-2.0 |\n\n"
+        "## Underlying source text - obligations differ per item\n\n"
+        "| source | licence | items | obligation |\n"
+        "|---|---|---|---|\n"
+        "| Wikimedia (de/fr/it/als.wikipedia.org) | CC BY-SA 4.0 | 30 dialect + "
+        "knowledge items | attribution + share-alike |\n"
+        "| Swiss federal/cantonal official sites | OGDL where the site states one, "
+        "otherwise public information | majority of knowledge items | attribute the "
+        "source |\n"
+        "| swissinfo.ch (SRG SSR) | **CC BY-NC 4.0 - NON-COMMERCIAL ONLY** | 20 "
+        "knowledge items | attribution + share-alike, **no commercial use** |\n"
+        "| icrc.org | ICRC copyright, per-document terms | 6 knowledge items | check "
+        "the document before reuse |\n"
+        "| myswitzerland.ch, ch-info.swiss | publisher terms | remainder | check "
+        "before reuse |\n"
+        "| values scenarios (authored here) | CDLA-Permissive-2.0 | 30 | none |\n\n"
+        "The non-commercial restriction is the one that changes what a downstream\n"
+        "user may do, so it is called out here rather than left inside a CSV.\n"
     )
     (meta / "LICENSING.md").write_text(licensing, encoding="utf-8")
 
