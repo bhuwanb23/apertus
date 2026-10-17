@@ -37,16 +37,34 @@ services:
       LLM_NAME: ${LLM_NAME:-}
       LLM_BASE_URL: ${LLM_BASE_URL:-}
       LLM_API_KEY: ${LLM_API_KEY:-}
-      # --- harness aliases (only used when LLM_* are absent) ---------------
-      APERTUS_8B_BACKEND: ${APERTUS_8B_BACKEND:-}
+# --- harness aliases (only used when LLM_* are absent) ---------------
+      APERTUS_8B_BACKEND: ${APERTUS_8B_BACKEND:-http}
       APERTUS_8B_MODEL_ID: ${LLM_NAME:-}
       APERTUS_8B_API_BASE: ${LLM_BASE_URL:-}
-      APERTUS_8B_API_KEY: ${LLLM_API_KEY:-}
+      # The key comes from LLM_API_KEY. This read ${LLM_API_KEY}, which the shell
+      # expands to the empty string, so a live run was sent with no key at all -
+      # and it failed at request time with an auth error pointing nowhere near
+      # the compose file.
+      APERTUS_8B_API_KEY: ${LLM_API_KEY:-}
       # No secrets are baked in; .env is gitignored and never copied.
     extra_hosts:
       # Lets the container reach a llama.cpp server on the host by name.
       - "host.docker.internal:host-gateway"
-    # The harness reads results back from the repo, so mount it read-only for
-    # the run. Comment this out for a hermetic clean-checkout run.
+    # NO bind mount.
+    #
+    # An earlier version mounted "./:/app:ro", which was wrong twice over:
+    #
+    #   * it shadowed everything the Dockerfile COPYed, so `make run` exercised
+    #     the judge's working tree rather than the shipped image - the container
+    #     was never testing what it claims to ship;
+    #   * read-only meant run.py could not write results/ at all, and the
+    #     regeneration steps are the point of the offline run.
+    #
+    # The run is hermetic instead: the image carries the project, the container
+    # writes inside itself, and nothing outside is touched. Use `make run-mount`
+    # for the bind-mount workflow, where host results are wanted.
     volumes:
-      - ./:/app:ro
+      - results:/app/results
+
+volumes:
+  results:

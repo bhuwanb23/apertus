@@ -1,11 +1,11 @@
 # =============================================================================
 # Swiss Reality Check — Hack Apertus, Track 1B
 #
-#   make run     spin the project up in Docker  (this is what judges run)
-#   make verify  run the verification suite locally, no Docker, no model
-#   make test    every automated check
-#   make shell   a container with the project mounted, for poking around
-#   make clean   remove build artefacts
+#   make run         spin the project up in Docker  (this is what judges run)
+#   make verify      run the verification suite locally, no Docker, no model
+#   make test        every automated check (13 suites)
+#   make shell       a container with the project mounted, for poking around
+#   make clean       remove build artefacts
 #
 # `make run` must work on a clean checkout with no configuration at all, so it
 # runs OFFLINE by default: the benchmark's model-free checks (dataset integrity,
@@ -19,66 +19,88 @@
 #
 # These are aliases. The harness's own variables (APERTUS_8B_*) take precedence
 # when set, so an existing local setup is never silently overridden.
+#
+# -----------------------------------------------------------------------------
+# PORTABILITY NOTE — why this file avoids shell features.
+#
+# Every recipe below is a SINGLE command. That is deliberate. `set -e`, `for`,
+# `&&`, `||` and `$(shell ...)` with control flow all require a working POSIX
+# shell, and GNU Make on Windows (GnuWin32, still the common install) does not
+# reliably have one. An earlier version of this file used a shell loop for the
+# test suites and could not run on a stock Windows machine at all.
+#
+# Interpreter selection is done by probing with one-shot $(shell ...) calls and
+# $(findstring), which need no shell control flow. See PYTHON below.
 # =============================================================================
 
-.PHONY: help run build verify test verify-test shell clean docker-check
+.PHONY: help run build verify verify-test test shell clean docker-check check-interp
 
 DOCKER       ?= docker
 COMPOSE      ?= $(DOCKER) compose
-PYTHON       ?= python3
 
-help:
-	@echo "Swiss Reality Check — available targets:"
-	@echo "  make run        spin up in Docker (offline; add LLM_BASE_URL for live)"
-	@echo "  make build      build the image without running"
-	@echo "  make verify     offline verification, no Docker, no model"
-	@echo "  make test       every automated check (13 suites)"
-	@echo "  make shell      container with the project mounted"
-	@echo "  make clean      remove build artefacts"
+# ---------------------------------------------------------------- interpreter
+# `python3` is correct inside the image (python:3.11-slim) and on Linux. It is
+# NOT correct on a default Windows install, where `python3` is a Microsoft Store
+# alias stub: present on PATH, not a Python, and it fails with "The system
+# cannot find the path specified." rather than anything mentioning Python.
+#
+# So probe. A real interpreter answers `--version` with a version; the stub
+# answers with Store text, which contains no "3.". $(findstring) does the test
+# without needing a shell.
+_PROBE_PY3 := $(shell python3 --version 2>&1)
+_PROBE_PY  := $(shell python  --version 2>&1)
+_OK_PY3    := $(findstring 3.,$(_PROBE_PY3))
+_OK_PY     := $(findstring 3.,$(_PROBE_PY))
+
+# An explicit PYTHON=... on the command line always wins.
+ifeq ($(origin PYTHON),undefined)
+  ifneq ($(_OK_PY3),)
+    PYTHON := python3
+  else
+    ifneq ($(_OK_PY),)
+      PYTHON := python
+    else
+      PYTHON := python3
+    endif
+  endif
+endif
+
+help: check-interp
+	$(PYTHON) src/scripts/help_text.py
 
 # ---------------------------------------------------------------- the target
-run:
+# This is what judges run. It does not use $(PYTHON): the interpreter is chosen
+# inside the image, where python3 always exists.
+run: docker-check
 	$(COMPOSE) run --rm app
 
-build:
+build: docker-check
 	$(COMPOSE) build
 
-shell:
+shell: docker-check
 	$(COMPOSE) run --rm app /bin/bash
 
 docker-check:
-	@command -v $(DOCKER) >/dev/null 2>&1 \
-		|| { echo "docker not found on PATH."; \
-		     echo "If Docker is unavailable, run: make verify"; exit 1; }
 	@$(DOCKER) --version
 
 # ------------------------------------------------------- no-Docker fallback
 # The judges have Docker. A contributor may not. These targets exist so the
 # project is runnable either way, and `make verify` is what CI can call.
-verify:
+check-interp:
+	@$(PYTHON) src/scripts/check_interp.py
+
+verify: check-interp
 	$(PYTHON) src/run.py --offline
 
-test:
-	@set -e; \
-	for f in src/fix/test_error_taxonomy.py \
-	         src/fix/test_select_target.py \
-	         src/fix/test_improvement.py \
-	         src/fix/test_validation.py \
-	         src/fix/test_phase4.py \
-	         src/fix/test_statistics.py \
-	         src/fix/test_charts.py \
-	         src/fix/test_narrative.py \
-	         src/eval/test_knowledge_scoring.py \
-	         src/eval/test_judge.py \
-	         src/eval/test_dialect.py \
-	         src/eval/test_baseline_report.py \
-	         src/eval/smoke_test.py; do \
-	  printf '  %-40s ' "$$f"; \
-	  if $(PYTHON) "$$f" >/dev/null 2>&1; then echo PASS; else echo FAIL; exit 1; fi; \
-	done; \
-	echo; echo "all suites passed"
+# The held-out seal pre-flight on its own: is the sealed set intact, is the code
+# frozen, is the tree clean. This was declared .PHONY with no recipe, so
+# `make verify-test` silently did nothing and exited 0 - the worst possible
+# failure mode for a check that exists to stop a run.
+verify-test: check-interp
+	$(PYTHON) src/eval/run_test_final.py --preflight
 
-clean:
-	rm -rf .pytest_cache **/__pycache__ __pycache__
-	find . -name '__pycache__' -type d -prune -exec rm -rf {} + 2>/dev/null || true
-	find . -name '*.pyc' -delete 2>/dev/null || true
+test: check-interp
+	$(PYTHON) src/scripts/run_suites.py
+
+clean: check-interp
+	$(PYTHON) src/scripts/clean.py
