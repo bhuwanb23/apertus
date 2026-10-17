@@ -358,5 +358,149 @@
     "language": "en",
     "difficulty": "medium",
     "notes": "Distractor A is the pre-2001 Swiss rate pair. Figures as published by the Federal Office for Customs and Border Security at access date 2026-10-12."
+  },
+  {
+    "id": "K121",
+    "category": "services",
+    "question": "A restaurant guest asks whether they must leave a tip in Switzerland. What is the correct position according to the national tourism organisation's own statement of local custom?",
+    "options": {
+      "A": "The guest is not obliged to tip, although paying a tip is customary in many restaurants.",
+      "B": "Tipping is compulsory in restaurants, and the amount is fixed at ten percent of the bill by federal regulation.",
+      "C": "Tipping is compulsory only in Zurich and Geneva, and optional everywhere else in the country.",
+      "D": "The guest is obliged to tip whenever the restaurant has more than five employees."
+    },
+    "correct_answer": "A",
+    "source_id": "S055",
+    "source_url": "https://www.swissinfo.ch/eng/best-of-srg-content/opinions-divided-on-taxing-tips/90990050",
+    "source_quote": "In Switzerland, the guest is not obliged to tip. In many restaurants, however, it is customary to pay a tip.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Swiss-specific: customary but not a legal obligation. Distractors invent a federal fixed rate and cantonal differences that do not exist."
+  },
+  {
+    "id": "K122",
+    "category": "services",
+    "question": "Where a guest does leave a tip in a Swiss restaurant, what does the national tourism organisation describe as the customary amount?",
+    "options": {
+      "A": "A flat five francs per person, regardless of the size of the bill.",
+      "B": "Approximately ten percent of the bill, or a round-up to a round figure.",
+      "C": "Exactly fifteen percent, which is the rate used throughout the EU for hospitality services.",
+      "D": "Whatever the guest decides, with no commonly recognised convention at all."
+    },
+    "correct_answer": "B",
+    "source_id": "S055",
+    "source_url": "https://www.swissinfo.ch/eng/best-of-srg-content/opinions-divided-on-taxing-tips/90990050",
+    "source_quote": "This amounts to approximately 10 percent or it is rounded up to a round amount.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Picks the convention up from the same sentence. C imports an EU-style rate; D denies the stated convention."
+  },
+  {
+    "id": "K123",
+    "category": "services",
+    "question": "Why is tipping optional in the Swiss hospitality sector, according to the report's account of the industry?",
+    "options": {
+      "A": "Because service is already included in the price in that sector, so a tip is a bonus rather than payment for the service itself.",
+      "B": "Because Swiss law forbids employers from paying staff out of a tip pool.",
+      "C": "Because tipping was abolished in Switzerland by the federal government in 1974.",
+      "D": "Because restaurants in Switzerland are required to include a service charge instead of accepting tips."
+    },
+    "correct_answer": "A",
+    "source_id": "S055",
+    "source_url": "https://www.swissinfo.ch/eng/best-of-srg-content/opinions-divided-on-taxing-tips/90990050",
+    "source_quote": "The catering industry is one of those sectors in which service is actually included in the price. Nevertheless, some customers add a tip when paying for good service.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The causal link models miss: optional because service is priced in. C misreads 'since 1974' as an abolition date."
+  },
+  {
+    "id": "K124",
+    "category": "services",
+    "question": "Under the rules in force when the report was published, how were voluntary tips treated for tax and social security purposes?",
+    "options": {
+      "A": "Voluntary tips were always fully taxable as ordinary salary income, with no exceptions.",
+      "B": "Voluntary tips were generally exempt from tax and contributions, but a tip forming an integral part of an employee's salary was treated as income and became subject to tax and social security deductions.",
+      "C": "Voluntary tips were exempt from income tax but always subject to social security contributions.",
+      "D": "Voluntary tips fell outside the scope of Swiss tax and social security law altogether, in every circumstance."
+    },
+    "correct_answer": "B",
+    "source_id": "S055",
+    "source_url": "https://www.swissinfo.ch/eng/best-of-srg-content/opinions-divided-on-taxing-tips/90990050",
+    "source_quote": "Under current rules, voluntary tips are generally exempt from tax and contributions. However, if a tip forms an integral part of an employee's salary, it is treated as income and is therefore subject to tax and social security deductions.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Conditional structure matters: exemption is the general rule, not absolute. D is the over-generalised version."
+  },
+  {
+    "id": "K125",
+    "category": "services",
+    "question": "A lawyer asks how the phrase 'a substantial part of salary' is defined in Swiss law for the purpose of taxing tips. What does the reporting identify?",
+    "options": {
+      "A": "It is defined numerically as any amount above CHF 20 per month.",
+      "B": "It is defined in the Federal Act on old-age and Survivors' Insurance.",
+      "C": "The law does not clearly define it, which the report characterises as a source of legal uncertainty.",
+      "D": "Each canton defines it individually, so the threshold differs canton by canton."
+    },
+    "correct_answer": "C",
+    "source_id": "S055",
+    "source_url": "https://www.swissinfo.ch/eng/best-of-srg-content/opinions-divided-on-taxing-tips/90990050",
+    "source_quote": "The law does not clearly define what constitutes a \"substantial part\" of salary.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Tests resistance to inventing a precise threshold for an undefined statutory term. B is a plausible-looking but wrong statute."
+  },
+  {
+    "id": "K126",
+    "category": "services",
+    "question": "In a Swiss restaurant that shares tips among staff, how is the sharing governed, according to the hospitality trade association's own statement?",
+    "options": {
+      "A": "By a federal collective agreement that sets one fixed percentage for all staff.",
+      "B": "By the canton, which issues a binding allocation formula for tip pools.",
+      "C": "By the collective agreement, which requires tips to be paid out in proportion to hours worked.",
+      "D": "There are no generally applicable rules; operational practice differs from establishment to establishment."
+    },
+    "correct_answer": "D",
+    "source_id": "S055",
+    "source_url": "https://www.swissinfo.ch/eng/best-of-srg-content/opinions-divided-on-taxing-tips/90990050",
+    "source_quote": "In manchen Restaurants werden die Trinkgelder unter den Mitarbeitenden aufgeteilt. Allgemein gültige Regelungen gibt es nicht, die betriebliche Praxis ist unterschiedlich.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Evidence quote is the association's German original; question is the harvester's translation. A/C/D each posit a binding mechanism the source denies."
+  },
+  {
+    "id": "K127",
+    "category": "services",
+    "question": "The hospitality trade association states that tips are not wages. How should that statement be weighted when answering a question about Swiss law?",
+    "options": {
+      "A": "It is settled Swiss law, because the trade association is the sector's competent authority.",
+      "B": "It is settled Swiss law, because it is written into the hospitality sector's collective agreement.",
+      "C": "It carries no weight at all, because a trade association has no standing to interpret employment law.",
+      "D": "It is the association's own position and is contested by labour-law academics, so it cannot be presented as settled law."
+    },
+    "correct_answer": "D",
+    "source_id": "S055",
+    "source_url": "https://www.swissinfo.ch/eng/best-of-srg-content/opinions-divided-on-taxing-tips/90990050",
+    "source_quote": "Grundsätzlich sind Trinkgelder kein Lohn und auch kein Bestandteil davon. Das Gastgewerbe verfügt über einen guten Landes-Gesamtarbeitsvertrag.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "A source-criticism item: the answer is about evidential weight. B is the trap - the collective agreement exists but does not settle the point."
+  },
+  {
+    "id": "K128",
+    "category": "services",
+    "question": "As of the report's publication in March 2026, who was expected to decide whether tips become fully subject to social security contributions?",
+    "options": {
+      "A": "The cantonal governments, which vary the rule by canton.",
+      "B": "The Federal Council, acting alone, as it does for all tax questions.",
+      "C": "Parliament, following a proposal intended mainly to close social security coverage gaps.",
+      "D": "The cantonal tax authorities, which already have discretion to set the threshold."
+    },
+    "correct_answer": "C",
+    "source_id": "S055",
+    "source_url": "https://www.swissinfo.ch/eng/best-of-srg-content/opinions-divided-on-taxing-tips/90990050",
+    "source_quote": "Whether tips should remain tax-free or become fully subject to contributions will now be decided by parliament.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distinguishes proposing from deciding. C is the common error: assuming the executive settles tax treatment unilaterally."
   }
 ]
