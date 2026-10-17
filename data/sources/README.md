@@ -22,7 +22,7 @@
 |---|---|
 | Sources harvested | **100** (target was 30–40) |
 | Verified fact candidates | **933** (+461 Swiss German sentences) |
-| Target questions (Phase 1A.2) | 120 MCQs, 20 per category |
+| Target questions (Phase 1A.2) | 300 MCQs, 50 per category |
 | Capacity ratio | **~3.9 facts per question** — comfortably sufficient |
 | All URLs fetched | HTTP 200 verified on 2026-10-12; +45 dialect sources in Phase 1C |
 

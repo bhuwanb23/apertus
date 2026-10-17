@@ -1,6 +1,6 @@
 # Knowledge Dataset — Distribution & Verification Report
 
-**Phases 1A.2 / 1A.3 / 1A.4 complete.** 120 MCQs, all mechanically verified.
+**Phases 1A.2 / 1A.3 / 1A.4 complete.** 300 MCQs across 55 sources, all mechanically verified.
 
 ---
 
@@ -42,13 +42,13 @@ Scripts: `scripts/apply_reviewer_overrides.py` → `scripts/verify_knowledge.py`
 
 | | dev | test |
 |---|---|---|
-| total | 84 | 36 |
-| per category | 14 × 6 | 6 × 6 |
-| easy | 18 | 6 |
-| medium | 42 | 18 |
-| hard | 24 | 12 |
+| total | 210 | 90 |
+| per category | 35 × 6 | 15 × 6 |
+| easy | 42 | 18 |
+| medium | 102 | 46 |
+| hard | 66 | 26 |
 
-**Seed 42**, as specified in the plan. Integrity assertions passed: no overlap, full coverage, 84/36 exactly.
+**Seed 42**, as specified in the plan. Integrity assertions passed: no overlap, full coverage, 210/90 exactly. Answer letters are balanced 75/75/75/75 across the full corpus.
 
 ### One deliberate deviation from the plan
 

@@ -215,14 +215,38 @@ Stated plainly, because the n here is small enough that the numbers need it.
    premise and it is **half evidenced**: every arm is 8B, and there are no 70B
    results anywhere in the repository. Nothing here shows how these gaps scale.
 
-2. **The test set was opened 28 times.** The append-only log at
-   `src/eval/seal/access.log` records every access: 9 baseline, 19 improved.
-   More openings than the one-shot design intends. Decoding was greedy
-   (temperature 0, fixed seed) and nothing was tuned between runs, so these were
-   reproduction attempts rather than a search over attempts. They are **not
-   bit-exact** — a long greedy decode on a GPU is subject to run-to-run
-   reduction order — so the 28 openings are a limitation on the *exactness* of
-   the numbers, not evidence of selection.
+2. **The sealed set is not a clean one-shot, and the audit trail is incomplete.**
+   Two separate disclosures, because stating only one of them would mislead.
+
+   *The superseded 36-item seal* was opened 28 times (9 baseline, 19 improved)
+   — more than a one-shot design intends. Those arms are retained as
+   `*.superseded-n36.json` so the change is auditable rather than merely
+   overwritten.
+
+   *The current 90-item seal: the final paired run is absent from the log.* The
+   n=90 seal was frozen at 2026-10-17T06:46 UTC. The append-only log at
+   `src/eval/seal/access.log` holds 60 entries, of which 55 predate that
+   freeze and belong to the superseded seal. 5 entries postdate it — but
+   **none is timestamped at the 2026-10-17T06:59 UTC recorded in both archived arms**, so
+   the run that produced the headline result does not appear in the audit trail.
+   Those 5 entries are labelled `improved`, i.e. RAG-side only; no
+   `baseline` access to the new seal is recorded at all.
+
+   The cause is known and is an ordering mistake rather than a hidden procedure:
+   seal-access logging was added to the runners *after* the run had already been
+   driven through them. Instrumentation is now in place in both
+   `src/eval/run_knowledge.py` and `src/fix/rag/run_rag_eval.py`, so subsequent
+   opens are recorded. The log was **not** backfilled. An append-only log edited
+   after the fact to look complete is worse than one that is visibly short, and a
+   fabricated reconciliation between a remembered count and a present one would be
+   worse than either.
+
+   Decoding was greedy (temperature 0, fixed seed) and nothing was tuned between
+   runs, so the openings are reproduction attempts rather than a search over
+   attempts. They are in any case **not bit-exact** — a long greedy decode on a
+   GPU is subject to run-to-run reduction order — which bounds the effect on the
+   figures themselves. Read this as a limitation on the *exactness* of the numbers
+   and on the *completeness of the audit trail*; it is not evidence of selection.
 
 3. **n = 90.** A detectable paired change needs 6 improvements with **zero**
    regressions (+6.7 pp); this run moved 34 up against 2 down, comfortably clear.

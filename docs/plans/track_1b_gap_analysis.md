@@ -102,16 +102,31 @@ Legend: ✅ meets · ⚠️ partial · ❌ missing
 
 Re-splitting to 300 items creates a **new sealed test set**, so:
 
-- The headline **86.1 % (31/36) will change**. Everything downstream must be
-  regenerated from the frozen artefacts: `fixtures/`, `published_claims.json`,
-  `statistical_report.md`, `test_scores.json`, charts, narrative `findings.md`,
-  `DATASHEET.md`, the 6-page PDF, and the HF dataset.
+- **DONE.** The headline changed and everything downstream was regenerated from
+  the frozen artefacts. New sealed result: baseline **51.1 %** (46/90) -> BM25 RAG
+  **86.7 %** (78/90), **+35.6 pp**, exact 95 % CI [+25.1, +39.5], paired
+  34 improved / 2 regressed, McNemar p<0.001. The old 55.6 -> 86.1 / +30.6 pp
+  figures no longer appear in any shipped artefact. The previous arms are kept
+  beside the new ones as `*.superseded-n36.json` so the change is auditable
+  rather than merely overwritten.
 - **Opportunity:** a fresh seal lets us make a genuine one-shot measurement and
-  retire the current disclosure that the sealed set was **opened 30 times**
-  (9 baseline + 21 improved). Discipline: iterate only on the 210 dev items,
-  freeze, then open the 90 exactly once per arm.
-- **Statistics improve.** At n=90 the same +30.6 pp effect would be roughly
-  27 improved / 0 regressed rather than 11/0, with materially tighter intervals.
+  retire the current disclosure that the superseded sealed set was **opened 30
+  times** (9 baseline + 21 improved). Discipline: iterate only on the 210 dev
+  items, freeze, then open the 90 exactly once per arm.
+
+  **PARTIAL.** Both new arms were produced in a single paired invocation, which is
+  stronger than one-per-arm because the two arms share one generation context.
+  They were, however, driven by runners that were not yet writing to the seal
+  access log, so the log records **58** instrumented opens against an actual
+  cumulative **60**. The log is append-only and was **not** backfilled. That
+  reconciliation is disclosed in `technical_report.md` section 5 and must stay
+  there.
+- **Statistics improved, as predicted.** The detection floor fell from
+  **+16.7 pp** at n=36 to **+6.7 pp** at n=90, and the realised effect came in at
+  **+35.6 pp** (34 improved / 2 regressed). Three of six categories - geography,
+  history and politics - now clear the per-category floor (n=15); the other three
+  are reported as *no detectable change* rather than as small gains. No category
+  is ranked.
 
 ## 6. Non-determinism (carried forward, already disclosed)
 

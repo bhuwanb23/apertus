@@ -23,7 +23,7 @@ transfer: the held-out test set is scored once in Phase 4.1, and a delta bought
 this way does not reproduce on questions the prompt does not name.
 
 **Therefore the shipped prompt carries behavioural rules only.**
-`fix/system_prompt/swiss_context_v1.txt` scores **0/84** contamination, and
+`fix/system_prompt/swiss_context_v1.txt` scores **0/210** contamination, and
 `fix/prompts_check.py` enforces that mechanically — as a gate that raises, not a
 review step that someone can forget. It runs again at the start of every RAG run,
 because a prompt edited between review and run is exactly the failure mode a
@@ -31,15 +31,15 @@ one-off check cannot catch.
 
 ```bash
 python src/fix/prompts_check.py fix/system_prompt/swiss_context_v1.txt --gate
-#   0/84 (0%) of dev items are answered by the prompt — CLEAN   (exit 0)
+#   0/210 (0%) of dev items are answered by the prompt — CLEAN   (exit 0)
 
 python src/fix/prompts_check.py /tmp/plan_prompt.txt --gate
 #   25/84 (30%) of dev items are answered by the prompt — CONTAMINATED  (exit 1)
 ```
 
-The gate's threshold is 5%, which is 4 items out of 84. That is deliberate slack
+The gate's threshold is 5%, which is 10 items out of 210. That is deliberate slack
 for incidental overlap, and it is also below the noise floor: `select_target.py`'s
-power table says a claim needs ~6 net flips to be measurable at n=84. Every run
+power table says a claim needs ~6 net flips to be measurable at n=210. Every run
 prints the **count**, not just the pass/fail, so items hidden inside the
 threshold stay visible.
 
@@ -57,14 +57,14 @@ python fix/rag/retriever.py --backend bm25
 
 | metric | value |
 |---|---|
-| source recall @1 | **83.3%** |
-| source recall @3 | **90.5%** |
-| source recall @5 | **94.0%** |
+| source recall @1 | **82.4%** |
+| source recall @3 | **91.4%** |
+| source recall @5 | **92.9%** |
 | category recall @5 | 97.6% |
 | median rank when found | 1 |
 
-Per category (recall @5): health, history, politics, services 100%; geography and
-law 85.7%. n=14 each.
+Per category (recall @5, n=35 each): health 100.0%, history 97.1%, politics 97.1%,
+services 94.3%, geography 85.7%, law 82.9%.
 
 **This is the decision-relevant result of Phase 3.3**, and it does not depend on
 which backend is available:

@@ -1,3 +1,12 @@
+> **Record of the dev split at n=84 — superseded as a current measurement.**
+> The dev split has since been rebuilt at **210 items** (stratified 70/30,
+> 15 sealed items per category) and has **not** been re-run. Every number
+> below therefore describes the previous corpus and must not be quoted as a
+> current result. The current evidence is the sealed n=90 pair in
+> `results/test_run/` and `results/final_scores/statistical_report.md`:
+> baseline **51.1%** (46/90) → RAG **86.7%** (78/90), **+35.6 pp**,
+> 34 improved / 2 regressed, p<0.001.
+
 # Improvement comparison
 
 Generated 2026-10-16T07:55:33+00:00 by `fix/validate_improvement.py`.
