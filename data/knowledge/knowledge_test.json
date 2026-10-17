@@ -15,7 +15,14 @@
     "source_quote": "They discuss the items on the agenda at the Federal Council meeting and seek a common solution. Only if it does not reach a solution, does the Federal Council vote.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Consensus-before-vote is the defining feature of the Swiss collegial executive; no majority-vote casting exists in the normal case."
+    "notes": "Consensus-before-vote is the defining feature of the Swiss collegial executive; no majority-vote casting exists in the normal case.",
+    "answer": "The members first seek a common solution, and only vote if they fail to reach one.",
+    "answer_variations": [
+      "members first seek a common solution, and only vote if they fail to reach one.",
+      "The members first seek a common solution, and only vote if they fail to reach one"
+    ],
+    "answer_type": "sentence",
+    "reference": "They discuss the items on the agenda at the Federal Council meeting and seek a common solution. Only if it does not reach a solution, does the Federal Council vote."
   },
   {
     "id": "K007",
@@ -33,7 +40,14 @@
     "source_quote": "collect 50,000 valid signatures within 100 days of the publication of the new legislation",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Pair with K011: the optional referendum is 50,000 signatures / 100 days; the federal popular initiative is 100,000 / 18 months."
+    "notes": "Pair with K011: the optional referendum is 50,000 signatures / 100 days; the federal popular initiative is 100,000 / 18 months.",
+    "answer": "50,000 signatures within 100 days",
+    "answer_variations": [
+      "000 signatures within 100 days and 50",
+      "000 signatures within 100 days, 50"
+    ],
+    "answer_type": "list",
+    "reference": "collect 50,000 valid signatures within 100 days of the publication of the new legislation"
   },
   {
     "id": "K008",
@@ -51,7 +65,14 @@
     "source_quote": "A further requirement is that any given signature list may contain only the signatures of persons from the same commune – because the communes are the first to check the signatures.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Counter-intuitive administrative detail: signature gathering is decentralised to the commune for verification. The same per-commune form rule applies to popular initiatives."
+    "notes": "Counter-intuitive administrative detail: signature gathering is decentralised to the commune for verification. The same per-commune form rule applies to popular initiatives.",
+    "answer": "A single list may only contain signatures from people of the same commune, because the communes are the first to check the signatures.",
+    "answer_variations": [
+      "single list may only contain signatures from people of the same commune, because the communes are the first to check the signatures.",
+      "A single list may only contain signatures from people of the same commune, because the communes are the first to check the signatures"
+    ],
+    "answer_type": "sentence",
+    "reference": "A further requirement is that any given signature list may contain only the signatures of persons from the same commune – because the communes are the first to check the signatures."
   },
   {
     "id": "K011",
@@ -69,7 +90,14 @@
     "source_quote": "For an initiative to come to fruition, it must be signed by 100,000 voters within 18 months.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Direct democracy threshold. Contrast with K007: referendum 50,000 / 100 days."
+    "notes": "Direct democracy threshold. Contrast with K007: referendum 50,000 / 100 days.",
+    "answer": "100,000 signatures within 18 months",
+    "answer_variations": [
+      "000 signatures within 18 months and 100",
+      "000 signatures within 18 months, 100"
+    ],
+    "answer_type": "list",
+    "reference": "For an initiative to come to fruition, it must be signed by 100,000 voters within 18 months."
   },
   {
     "id": "K013",
@@ -87,7 +115,14 @@
     "source_quote": "Cantonal governments usually have a different president each year - the position rotating according to the length of time the government members have been in office. The president does not enjoy any special privileges or status, apart from chairing cantonal government meetings.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE: rotation follows length of service, so the source says 'usually'. Phrased as the general cantonal pattern, never as a universal seven-member rule."
+    "notes": "CANTONAL-VARIABLE: rotation follows length of service, so the source says 'usually'. Phrased as the general cantonal pattern, never as a universal seven-member rule.",
+    "answer": "The presidency usually rotates from year to year and carries no privileges beyond chairing the cantonal government's meetings.",
+    "answer_variations": [
+      "presidency usually rotates from year to year and carries no privileges beyond chairing the cantonal government's meetings.",
+      "The presidency usually rotates from year to year and carries no privileges beyond chairing the cantonal government's meetings"
+    ],
+    "answer_type": "sentence",
+    "reference": "Cantonal governments usually have a different president each year - the position rotating according to the length of time the government members have been in office. The president does not enjoy any special privileges or status, apart from chairing cantonal government meetings."
   },
   {
     "id": "K016",
@@ -105,7 +140,13 @@
     "source_quote": "The votes of the former half-cantons of Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden and Appenzell Innerrhoden each count as half a vote.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The six former half-cantons weigh 0.5 each, so the cantonal majority is effectively a weighted 23-canton vote. Note this is a separate mechanism from the single Council of States seat they hold."
+    "notes": "The six former half-cantons weigh 0.5 each, so the cantonal majority is effectively a weighted 23-canton vote. Note this is a separate mechanism from the single Council of States seat they hold.",
+    "answer": "Half a vote each.",
+    "answer_variations": [
+      "Half a vote each"
+    ],
+    "answer_type": "sentence",
+    "reference": "The votes of the former half-cantons of Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden and Appenzell Innerrhoden each count as half a vote."
   },
   {
     "id": "K021",
@@ -123,7 +164,13 @@
     "source_quote": "In einem Mietvertrag muss die Kündigungsfrist mindestens drei Monate für Wohnräume und sechs Monate für Geschäftsräume betragen, es können aber auch längere Fristen vereinbart werden.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Source quote is German (official Canton Bern conciliation-authority page); English rendering in the question: in a rental agreement the notice period must be at least three months for residential premises and six months for commercial premises, and longer periods may be agreed. Commonly cited German practice of one month's notice plus end-of-month termination is NOT the Swiss rule."
+    "notes": "Source quote is German (official Canton Bern conciliation-authority page); English rendering in the question: in a rental agreement the notice period must be at least three months for residential premises and six months for commercial premises, and longer periods may be agreed. Commonly cited German practice of one month's notice plus end-of-month termination is NOT the Swiss rule.",
+    "answer": "Three months for residential premises and six months for commercial premises",
+    "answer_variations": [
+      "Three months for residential premises and six months for commercial premises."
+    ],
+    "answer_type": "sentence",
+    "reference": "In einem Mietvertrag muss die Kündigungsfrist mindestens drei Monate für Wohnräume und sechs Monate für Geschäftsräume betragen, es können aber auch längere Fristen vereinbart werden."
   },
   {
     "id": "K028",
@@ -141,7 +188,13 @@
     "source_quote": "Federal law requires you to have lived in Switzerland for at least ten years, including three of the five years prior to the application being made.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE: on top of the federal ten-year rule, each canton sets an additional requirement of between two and five years' residence in the particular commune or canton, and each commune makes its own rules within cantonal and federal law. Those extra conditions are deliberately not tested here."
+    "notes": "CANTONAL-VARIABLE: on top of the federal ten-year rule, each canton sets an additional requirement of between two and five years' residence in the particular commune or canton, and each commune makes its own rules within cantonal and federal law. Those extra conditions are deliberately not tested here.",
+    "answer": "At least ten years of residence, including three of the five years prior to the application being made",
+    "answer_variations": [
+      "At least ten years of residence, including three of the five years prior to the application being made."
+    ],
+    "answer_type": "short",
+    "reference": "Federal law requires you to have lived in Switzerland for at least ten years, including three of the five years prior to the application being made."
   },
   {
     "id": "K030",
@@ -159,7 +212,14 @@
     "source_quote": "Holders of a settlement permit (C permit)",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Ordinary naturalisation is restricted to holders of a C permit; the residency periods themselves are tested separately. Simplified naturalisation is open to other categories (spouse or child of a Swiss citizen, stateless minor, third-generation residents under 25)."
+    "notes": "Ordinary naturalisation is restricted to holders of a C permit; the residency periods themselves are tested separately. Simplified naturalisation is open to other categories (spouse or child of a Swiss citizen, stateless minor, third-generation residents under 25).",
+    "answer": "A settlement permit (C)",
+    "answer_variations": [
+      "settlement permit (C)",
+      "A settlement permit (C)."
+    ],
+    "answer_type": "short",
+    "reference": "Holders of a settlement permit (C permit)"
   },
   {
     "id": "K033",
@@ -177,7 +237,13 @@
     "source_quote": "If you get your provisional licence before your 20th birthday, you will need to wait at least 12 months before you can take the practical driving test.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The 12-month wait is conditional on the provisional licence having been issued before the 20th birthday; the compulsory eight-hour traffic skills course is a separate precondition for registering for the test."
+    "notes": "The 12-month wait is conditional on the provisional licence having been issued before the 20th birthday; the compulsory eight-hour traffic skills course is a separate precondition for registering for the test.",
+    "answer": "At least twelve months",
+    "answer_variations": [
+      "At least twelve months."
+    ],
+    "answer_type": "short",
+    "reference": "If you get your provisional licence before your 20th birthday, you will need to wait at least 12 months before you can take the practical driving test."
   },
   {
     "id": "K035",
@@ -195,7 +261,13 @@
     "source_quote": "Because each commune determines its own tax co-efficient, and these can vary considerably, there can be low-tax and high-tax communes within the same canton.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "COMMUNAL-VARIABLE: the co-efficient is changed from time to time, so no specific value is permanent. This is why there can be low-tax and high-tax communes within a single canton — a distinctly Swiss feature of communal tax autonomy."
+    "notes": "COMMUNAL-VARIABLE: the co-efficient is changed from time to time, so no specific value is permanent. This is why there can be low-tax and high-tax communes within a single canton — a distinctly Swiss feature of communal tax autonomy.",
+    "answer": "Each commune determines its own tax co-efficient, and these co-efficients can vary considerably",
+    "answer_variations": [
+      "Each commune determines its own tax co-efficient, and these co-efficients can vary considerably."
+    ],
+    "answer_type": "sentence",
+    "reference": "Because each commune determines its own tax co-efficient, and these can vary considerably, there can be low-tax and high-tax communes within the same canton."
   },
   {
     "id": "K038",
@@ -213,7 +285,13 @@
     "source_quote": "Rental deposit, also known as a security deposit: This must only be paid when required in the agreement. For residential rentals, this is a maximum of three months' rent.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The deposit may be demanded only if the agreement provides for it; three months' rent is a ceiling, not an entitlement."
+    "notes": "The deposit may be demanded only if the agreement provides for it; three months' rent is a ceiling, not an entitlement.",
+    "answer": "Three months' rent",
+    "answer_variations": [
+      "Three months' rent."
+    ],
+    "answer_type": "short",
+    "reference": "Rental deposit, also known as a security deposit: This must only be paid when required in the agreement. For residential rentals, this is a maximum of three months' rent."
   },
   {
     "id": "K043",
@@ -231,7 +309,13 @@
     "source_quote": "Your letter must reach your current health insurer by 30 November.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The 'Stichtag 30. November' is uniquely Swiss. Note the separate mid-year cancellation right that only holders of the CHF 300 standard deductible enjoy (tested separately in this category)."
+    "notes": "The 'Stichtag 30. November' is uniquely Swiss. Note the separate mid-year cancellation right that only holders of the CHF 300 standard deductible enjoy (tested separately in this category).",
+    "answer": "30 November",
+    "answer_variations": [
+      "30 November."
+    ],
+    "answer_type": "short",
+    "reference": "Your letter must reach your current health insurer by 30 November."
   },
   {
     "id": "K044",
@@ -249,7 +333,13 @@
     "source_quote": "You should still put CHF 3,200 aside in case you do fall ill\n(CHF 2,500 deductible and CHF 700 retention fee).",
     "language": "en",
     "difficulty": "easy",
-    "notes": "CHF 3,200 = highest adult deductible CHF 2,500 + CHF 700 maximum annual retention fee. A German/EU reader is likely to think only of a deductible."
+    "notes": "CHF 3,200 = highest adult deductible CHF 2,500 + CHF 700 maximum annual retention fee. A German/EU reader is likely to think only of a deductible.",
+    "answer": "CHF 3,200",
+    "answer_variations": [
+      "CHF 3200"
+    ],
+    "answer_type": "number",
+    "reference": "You should still put CHF 3,200 aside in case you do fall ill\n(CHF 2,500 deductible and CHF 700 retention fee)."
   },
   {
     "id": "K045",
@@ -267,7 +357,13 @@
     "source_quote": "In other words, for an insured person with an annual deductible of CHF 300, the maximum cost share is CHF 1000 per calendar year.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Key anti-trap item: CHF 1,000 is the MAXIMUM ANNUAL COST SHARE (CHF 300 deductible + CHF 700 maximum retention fee), not a deductible band. Distractor A is the retention-fee cap alone."
+    "notes": "Key anti-trap item: CHF 1,000 is the MAXIMUM ANNUAL COST SHARE (CHF 300 deductible + CHF 700 maximum retention fee), not a deductible band. Distractor A is the retention-fee cap alone.",
+    "answer": "CHF 1,000",
+    "answer_variations": [
+      "CHF 1000"
+    ],
+    "answer_type": "number",
+    "reference": "In other words, for an insured person with an annual deductible of CHF 300, the maximum cost share is CHF 1000 per calendar year."
   },
   {
     "id": "K046",
@@ -285,7 +381,14 @@
     "source_quote": "For adults, the available deductibles are 500, 1000, 1500, 2000 and 2500 francs, and for children 100, 200, 300, 400, 500 and 600 francs.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Levels are chosen voluntarily; there is no age / income ('affluence') / rural-residence rule assigning a band. Distractor B is the children's list."
+    "notes": "Levels are chosen voluntarily; there is no age / income ('affluence') / rural-residence rule assigning a band. Distractor B is the children's list.",
+    "answer": "500, 1,000, 1,500, 2,000 and 2,500 francs",
+    "answer_variations": [
+      "500, 1, 000, 1, 500, 2, 000, 2 and 500 francs",
+      "1, 000, 1, 500, 2, 000, 2, 500 francs, 500"
+    ],
+    "answer_type": "list",
+    "reference": "For adults, the available deductibles are 500, 1000, 1500, 2000 and 2500 francs, and for children 100, 200, 300, 400, 500 and 600 francs."
   },
   {
     "id": "K050",
@@ -303,7 +406,13 @@
     "source_quote": "A change in the level of the deductible can only take effect at the beginning of a calendar year.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The deductible level is locked to the calendar year, unlike, for example, switching insurers. Do not confuse with the separate end-of-June cancellation right for CHF 300 deductible holders (S019)."
+    "notes": "The deductible level is locked to the calendar year, unlike, for example, switching insurers. Do not confuse with the separate end-of-June cancellation right for CHF 300 deductible holders (S019).",
+    "answer": "Only at the beginning of a calendar year",
+    "answer_variations": [
+      "Only at the beginning of a calendar year."
+    ],
+    "answer_type": "short",
+    "reference": "A change in the level of the deductible can only take effect at the beginning of a calendar year."
   },
   {
     "id": "K059",
@@ -321,7 +430,13 @@
     "source_quote": "Maternity allowance amounts to 80% of your\nearnings, but no more than CHF 220 per day.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Highly Swiss-specific 14-week / 80% / CHF 220-per-day package. Cantonal provisions, personnel regulations and collective employment contracts may provide more generous arrangements. Do not substitute EU maternity-benefit rates."
+    "notes": "Highly Swiss-specific 14-week / 80% / CHF 220-per-day package. Cantonal provisions, personnel regulations and collective employment contracts may provide more generous arrangements. Do not substitute EU maternity-benefit rates.",
+    "answer": "80 per cent of the mother's earnings, but no more than CHF 220 per day",
+    "answer_variations": [
+      "80 per cent of the mother's earnings, but no more than CHF 220 per day."
+    ],
+    "answer_type": "sentence",
+    "reference": "Maternity allowance amounts to 80% of your\nearnings, but no more than CHF 220 per day."
   },
   {
     "id": "K063",
@@ -339,7 +454,13 @@
     "source_quote": "Although it is not an official language, English is often used to bridge the divides, and a significant proportion of official documentation is available in English.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Switzerland is not in the EU, and English has no federal status of any kind; the source is SWI swissinfo.ch quoted in the S047 file."
+    "notes": "Switzerland is not in the EU, and English has no federal status of any kind; the source is SWI swissinfo.ch quoted in the S047 file.",
+    "answer": "No — it is not an official language, although it is widely used to bridge the country's linguistic divides",
+    "answer_variations": [
+      "No — it is not an official language, although it is widely used to bridge the country's linguistic divides."
+    ],
+    "answer_type": "sentence",
+    "reference": "Although it is not an official language, English is often used to bridge the divides, and a significant proportion of official documentation is available in English."
   },
   {
     "id": "K064",
@@ -357,7 +478,14 @@
     "source_quote": "Lowest point: Lake Maggiore (Ticino) 193 m (633 feet)",
     "language": "en",
     "difficulty": "easy",
-    "notes": "German-language readers often assume Lake Constance (Bodensee) is Switzerland's lowest point. The lowest point lies in Italian-speaking Ticino."
+    "notes": "German-language readers often assume Lake Constance (Bodensee) is Switzerland's lowest point. The lowest point lies in Italian-speaking Ticino.",
+    "answer": "Lake Maggiore (Ticino), at 193 m",
+    "answer_variations": [
+      "at 193 m and Lake Maggiore (Ticino)",
+      "at 193 m, Lake Maggiore (Ticino)"
+    ],
+    "answer_type": "list",
+    "reference": "Lowest point: Lake Maggiore (Ticino) 193 m (633 feet)"
   },
   {
     "id": "K067",
@@ -375,7 +503,13 @@
     "source_quote": "Italian is spoken in Ticino and four southern valleys of Canton Graubünden.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Same source file flags this fact REGIONAL VARIABLE (language shares are population-statistics dependent); the named location itself is stable. Distinct from the Graubünden trilingual-canton fact."
+    "notes": "Same source file flags this fact REGIONAL VARIABLE (language shares are population-statistics dependent); the named location itself is stable. Distinct from the Graubünden trilingual-canton fact.",
+    "answer": "In four southern valleys of the canton of Graubünden",
+    "answer_variations": [
+      "In four southern valleys of the canton of Graubünden."
+    ],
+    "answer_type": "short",
+    "reference": "Italian is spoken in Ticino and four southern valleys of Canton Graubünden."
   },
   {
     "id": "K068",
@@ -393,7 +527,13 @@
     "source_quote": "62 per cent of the population primarily speak (Swiss-)German, 23 per cent French, 8 per cent Italian and 0.5 per cent Romansh.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractors are the neighbouring shares in the same sentence (French / Italian / Romansh) — the classic mix-up. Figures are rounded; Switzerland Tourism (S028) gives 62.6 % German, 22.9 % French, 8.2 % Italian, 0.5 % Romansh. Shares are population-statistics dependent and REGIONAL VARIABLE."
+    "notes": "Distractors are the neighbouring shares in the same sentence (French / Italian / Romansh) — the classic mix-up. Figures are rounded; Switzerland Tourism (S028) gives 62.6 % German, 22.9 % French, 8.2 % Italian, 0.5 % Romansh. Shares are population-statistics dependent and REGIONAL VARIABLE.",
+    "answer": "62 per cent",
+    "answer_variations": [
+      "62 per cent."
+    ],
+    "answer_type": "short",
+    "reference": "62 per cent of the population primarily speak (Swiss-)German, 23 per cent French, 8 per cent Italian and 0.5 per cent Romansh."
   },
   {
     "id": "K072",
@@ -411,7 +551,13 @@
     "source_quote": "Around a fifth of Switzerland's communes have their own parliaments, and local laws relating to matters such as streets, school buildings, water and energy prices, as well as parking regulations.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Where a commune has no parliament, the commune assembly decides in its place — the source page does not state this, so it is not asserted here."
+    "notes": "Where a commune has no parliament, the commune assembly decides in its place — the source page does not state this, so it is not asserted here.",
+    "answer": "Around a fifth",
+    "answer_variations": [
+      "Around a fifth."
+    ],
+    "answer_type": "short",
+    "reference": "Around a fifth of Switzerland's communes have their own parliaments, and local laws relating to matters such as streets, school buildings, water and energy prices, as well as parking regulations."
   },
   {
     "id": "K074",
@@ -429,7 +575,14 @@
     "source_quote": "Highest point: Dufour Peak, in the Monte Rosa Mountains, 4,634 m (15,203 feet)",
     "language": "en",
     "difficulty": "medium",
-    "notes": "German- and Austrian-language readers commonly assume the Bernese Alps (Jungfrau/Zermatt area). The peak sits in the Monte Rosa massif on the Italian border."
+    "notes": "German- and Austrian-language readers commonly assume the Bernese Alps (Jungfrau/Zermatt area). The peak sits in the Monte Rosa massif on the Italian border.",
+    "answer": "Dufour Peak, 4,634 m, in the Monte Rosa Mountains",
+    "answer_variations": [
+      "Dufour Peak, 4, 634 m and in the Monte Rosa Mountains",
+      "4, 634 m, in the Monte Rosa Mountains, Dufour Peak"
+    ],
+    "answer_type": "list",
+    "reference": "Highest point: Dufour Peak, in the Monte Rosa Mountains, 4,634 m (15,203 feet)"
   },
   {
     "id": "K077",
@@ -447,7 +600,14 @@
     "source_quote": "The least populous is Kammersrohr in the canton of Solothurn (32 people)",
     "language": "en",
     "difficulty": "hard",
-    "notes": "32 residents. Counter-intuitive: the least populous commune is in Solothurn, not in an Appenzell or Graubünden mountain canton. Population figures are year-dependent and will drift."
+    "notes": "32 residents. Counter-intuitive: the least populous commune is in Solothurn, not in an Appenzell or Graubünden mountain canton. Population figures are year-dependent and will drift.",
+    "answer": "Kammersrohr, in the canton of Solothurn",
+    "answer_variations": [
+      "in the canton of Solothurn and Kammersrohr",
+      "in the canton of Solothurn, Kammersrohr"
+    ],
+    "answer_type": "list",
+    "reference": "The least populous is Kammersrohr in the canton of Solothurn (32 people)"
   },
   {
     "id": "K080",
@@ -465,7 +625,13 @@
     "source_quote": "The former half-cantons of Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft are only entitled to one.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Deliberately tests only the canton-identity half of the S026 fact, framed as the 6/20 structure behind the number 26. The Council of States seat arithmetic (20 cantons with two seats, 46 seats total) is owned by the politics category via S003 and is not asked here. Canton names appear in the German forms printed on the source page."
+    "notes": "Deliberately tests only the canton-identity half of the S026 fact, framed as the 6/20 structure behind the number 26. The Council of States seat arithmetic (20 cantons with two seats, 46 seats total) is owned by the politics category via S003 and is not asked here. Canton names appear in the German forms printed on the source page.",
+    "answer": "Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft",
+    "answer_variations": [
+      "Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt, Basel Landschaft, Obwalden"
+    ],
+    "answer_type": "list",
+    "reference": "The former half-cantons of Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft are only entitled to one."
   },
   {
     "id": "K087",
@@ -483,7 +649,13 @@
     "source_quote": "it must last at least 11 consecutive hours",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractor C is the rule for employees under 18 ('the daily rest period must always be at least 12 hours'); distractor A is the once-a-week reduction the employer may grant if the two-week average is 11 hours."
+    "notes": "Distractor C is the rule for employees under 18 ('the daily rest period must always be at least 12 hours'); distractor A is the once-a-week reduction the employer may grant if the two-week average is 11 hours.",
+    "answer": "11 consecutive hours",
+    "answer_variations": [
+      "11 consecutive hours."
+    ],
+    "answer_type": "short",
+    "reference": "it must last at least 11 consecutive hours"
   },
   {
     "id": "K088",
@@ -501,7 +673,14 @@
     "source_quote": "A supplement of at least 25% must be paid for work between 11pm and 6am carried out for less than 25 nights per calendar year.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Distractor A is the regime for regular night work (25 or more nights per calendar year), where the compensation is time off equal to 10% of night hours; distractor C is the 50% supplement for occasional Sunday work. Cash payment in lieu of compensatory time off is prohibited."
+    "notes": "Distractor A is the regime for regular night work (25 or more nights per calendar year), where the compensation is time off equal to 10% of night hours; distractor C is the 50% supplement for occasional Sunday work. Cash payment in lieu of compensatory time off is prohibited.",
+    "answer": "A wage supplement of at least 25%",
+    "answer_variations": [
+      "wage supplement of at least 25%",
+      "A wage supplement of at least 25%."
+    ],
+    "answer_type": "short",
+    "reference": "A supplement of at least 25% must be paid for work between 11pm and 6am carried out for less than 25 nights per calendar year."
   },
   {
     "id": "K090",
@@ -519,7 +698,14 @@
     "source_quote": "Compulsory education is the responsibility of the cantons. This is why it is important to check the information on your canton's website.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Switzerland has no federal school system — the structural opposite of Germany, Austria and France. Distractor B is scope confusion: communes run individual schools, but the responsibility statement sits with the cantons."
+    "notes": "Switzerland has no federal school system — the structural opposite of Germany, Austria and France. Distractor B is scope confusion: communes run individual schools, but the responsibility statement sits with the cantons.",
+    "answer": "The cantons",
+    "answer_variations": [
+      "cantons",
+      "The cantons."
+    ],
+    "answer_type": "short",
+    "reference": "Compulsory education is the responsibility of the cantons. This is why it is important to check the information on your canton's website."
   },
   {
     "id": "K097",
@@ -537,7 +723,13 @@
     "source_quote": "At present, over two thirds (70%) of Switzerland's total waste volume is recycled. Measured against total material consumption, materials recovered from waste (known as secondary raw materials) make up only a small proportion: 14% in 2019",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The 14% figure is from 2019; the 70% recycling rate is 'at present' as published by FOEN. Distractor D uses the municipal-solid-waste rate (53% in 2020), which measures a different quantity. MUNICIPAL-WASTE-VARIABLE: municipal waste figures are administered at commune level."
+    "notes": "The 14% figure is from 2019; the 70% recycling rate is 'at present' as published by FOEN. Distractor D uses the municipal-solid-waste rate (53% in 2020), which measures a different quantity. MUNICIPAL-WASTE-VARIABLE: municipal waste figures are administered at commune level.",
+    "answer": "70% of total waste volume recycled, but secondary raw materials at 14% of total material consumption",
+    "answer_variations": [
+      "70% of total waste volume recycled, but secondary raw materials at 14% of total material consumption."
+    ],
+    "answer_type": "short",
+    "reference": "At present, over two thirds (70%) of Switzerland's total waste volume is recycled. Measured against total material consumption, materials recovered from waste (known as secondary raw materials) make up only a small proportion: 14% in 2019"
   },
   {
     "id": "K099",
@@ -555,7 +747,13 @@
     "source_quote": "If the total value exceeds CHF 150, you must pay VAT on the total value of the imported goods. Example: The total value is CHF 400.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Distractor A is the intuitive 'excess only' rule used in many other countries. The verified Swiss tax-free limit is CHF 150 per person per day."
+    "notes": "Distractor A is the intuitive 'excess only' rule used in many other countries. The verified Swiss tax-free limit is CHF 150 per person per day.",
+    "answer": "On the whole value — CHF 400",
+    "answer_variations": [
+      "On the whole value — CHF 400."
+    ],
+    "answer_type": "short",
+    "reference": "If the total value exceeds CHF 150, you must pay VAT on the total value of the imported goods. Example: The total value is CHF 400."
   },
   {
     "id": "K100",
@@ -573,7 +771,14 @@
     "source_quote": "VAT is 8.1%. A reduced rate of 2.6% applies for certain goods (e.g. foodstuffs, including non-alcoholic beverages, books, magazines and medicines).",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractor A is the pre-2001 Swiss rate pair. Figures as published by the Federal Office for Customs and Border Security at access date 2026-10-12."
+    "notes": "Distractor A is the pre-2001 Swiss rate pair. Figures as published by the Federal Office for Customs and Border Security at access date 2026-10-12.",
+    "answer": "8.1% standard, 2.6% reduced",
+    "answer_variations": [
+      "2.6% reduced and 8.1% standard",
+      "2.6% reduced, 8.1% standard"
+    ],
+    "answer_type": "list",
+    "reference": "VAT is 8.1%. A reduced rate of 2.6% applies for certain goods (e.g. foodstuffs, including non-alcoholic beverages, books, magazines and medicines)."
   },
   {
     "id": "K102",
@@ -591,7 +796,14 @@
     "source_quote": "The Central Archives, a predecessor of the current Swiss Federal Archives, were also established during this time.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Distractors are all real Swiss federal institutions that simply do not date from 1798."
+    "notes": "Distractors are all real Swiss federal institutions that simply do not date from 1798.",
+    "answer": "the Central Archives",
+    "answer_variations": [
+      "Central Archives",
+      "the Central Archives."
+    ],
+    "answer_type": "short",
+    "reference": "The Central Archives, a predecessor of the current Swiss Federal Archives, were also established during this time."
   },
   {
     "id": "K106",
@@ -609,7 +821,13 @@
     "source_quote": "As a concession to the French-speaking liberals, the seat of the Swiss Federal Supreme Court was assigned to Lausanne.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A strong trap: the court does have a second site in Lucerne, but Lucerne was never the seat, and neither was Zurich or the federal city Bern."
+    "notes": "A strong trap: the court does have a second site in Lucerne, but Lucerne was never the seat, and neither was Zurich or the federal city Bern.",
+    "answer": "As a concession to the French-speaking liberals.",
+    "answer_variations": [
+      "As a concession to the French-speaking liberals"
+    ],
+    "answer_type": "sentence",
+    "reference": "As a concession to the French-speaking liberals, the seat of the Swiss Federal Supreme Court was assigned to Lausanne."
   },
   {
     "id": "K107",
@@ -627,7 +845,14 @@
     "source_quote": "Due to the outbreak of the First World War, the new courthouse could not be built until 1922. The striking Neoclassical building in the Mon-Repos park still shapes our image of the Swiss Federal Supreme Court today.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "1887 is the year the court moved into the purpose-built structure on the Esplanade de Montbenon — a deliberate near-miss distractor."
+    "notes": "1887 is the year the court moved into the purpose-built structure on the Esplanade de Montbenon — a deliberate near-miss distractor.",
+    "answer": "1922",
+    "answer_variations": [
+      "in 1922",
+      "1922."
+    ],
+    "answer_type": "number",
+    "reference": "Due to the outbreak of the First World War, the new courthouse could not be built until 1922. The striking Neoclassical building in the Mon-Repos park still shapes our image of the Swiss Federal Supreme Court today."
   },
   {
     "id": "K109",
@@ -645,7 +870,13 @@
     "source_quote": "On 7 February 1971, Switzerland's all-male electorate granted the vote to the nation's female citizens.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "1 February 1959 is the first (rejected) federal suffrage vote and 28 April 1991 the Appenzell Innerrhoden cantonal election — both genuine dates used as distractors."
+    "notes": "1 February 1959 is the first (rejected) federal suffrage vote and 28 April 1991 the Appenzell Innerrhoden cantonal election — both genuine dates used as distractors.",
+    "answer": "7 February 1971",
+    "answer_variations": [
+      "7 February 1971."
+    ],
+    "answer_type": "short",
+    "reference": "On 7 February 1971, Switzerland's all-male electorate granted the vote to the nation's female citizens."
   },
   {
     "id": "K114",
@@ -663,7 +894,14 @@
     "source_quote": "And in August 1864 it persuaded governments to adopt the first Geneva Convention. This treaty obliged armies to care for wounded soldiers, whatever side they were on, and introduced a unified emblem for the medical services: a red cross on a white background.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractor A is the actual Swiss flag; the emblem is its colour inverse. The source states only the colours, not the inversion — the inverse relationship must be inferred. The red crescent is the real alternative emblem used by the Red Crescent societies."
+    "notes": "Distractor A is the actual Swiss flag; the emblem is its colour inverse. The source states only the colours, not the inversion — the inverse relationship must be inferred. The red crescent is the real alternative emblem used by the Red Crescent societies.",
+    "answer": "a red cross on a white background",
+    "answer_variations": [
+      "red cross on a white background",
+      "a red cross on a white background."
+    ],
+    "answer_type": "short",
+    "reference": "And in August 1864 it persuaded governments to adopt the first Geneva Convention. This treaty obliged armies to care for wounded soldiers, whatever side they were on, and introduced a unified emblem for the medical services: a red cross on a white background."
   },
   {
     "id": "K115",
@@ -681,7 +919,13 @@
     "source_quote": "The ICRC was then awarded the Nobel Prize in 1917 and 1944, as a tribute to its humanitarian activities during the two World Wars, and again in 1963, together with the International Federation of Red Cross and Red Crescent Societies.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The Nobel quote comes from the second ICRC page recorded in the same raw_pages file. Distractor A mixes in Henry Dunant's 1901 prize, which went to him personally, not to the ICRC."
+    "notes": "The Nobel quote comes from the second ICRC page recorded in the same raw_pages file. Distractor A mixes in Henry Dunant's 1901 prize, which went to him personally, not to the ICRC.",
+    "answer": "1917, 1944 and again in 1963, the last together with the International Federation of Red Cross and Red Crescent Societies",
+    "answer_variations": [
+      "1917, 1944 and again in 1963, the last together with the International Federation of Red Cross and Red Crescent Societies."
+    ],
+    "answer_type": "short",
+    "reference": "The ICRC was then awarded the Nobel Prize in 1917 and 1944, as a tribute to its humanitarian activities during the two World Wars, and again in 1963, together with the International Federation of Red Cross and Red Crescent Societies."
   },
   {
     "id": "K117",
@@ -699,7 +943,13 @@
     "source_quote": "This total revision was approved by the People and the cantons on 18 April 1999 by majorities of 59.2% and 14 out of 26 cantons respectively.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "It came into force on 1 January 2000 (distractor D). The quote is from the parlament.ch Federal Constitution page recorded verbatim inside the S048 raw_pages file; ch-info.swiss is the header URL of that file. 14 of 26 cantons is a majority but not an overwhelming one."
+    "notes": "It came into force on 1 January 2000 (distractor D). The quote is from the parlament.ch Federal Constitution page recorded verbatim inside the S048 raw_pages file; ch-info.swiss is the header URL of that file. 14 of 26 cantons is a majority but not an overwhelming one.",
+    "answer": "18 April 1999",
+    "answer_variations": [
+      "18 April 1999."
+    ],
+    "answer_type": "short",
+    "reference": "This total revision was approved by the People and the cantons on 18 April 1999 by majorities of 59.2% and 14 out of 26 cantons respectively."
   },
   {
     "id": "K119",
@@ -717,7 +967,13 @@
     "source_quote": "When, on March 3, 2002, the Swiss were again called upon to vote on joining the world body, the decision turned out to be quite close.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Verified: referendum 3 March 2002; the UN General Assembly accepted Switzerland as the 190th member state on 10 September 2002 (distractor B). Distractor A, 10 March 2002, is the disproved date recorded in the verification log. 16 March 1986 was an earlier rejected initiative. swissinfo.ch is the Swiss Broadcasting Corporation, not a federal page."
+    "notes": "Verified: referendum 3 March 2002; the UN General Assembly accepted Switzerland as the 190th member state on 10 September 2002 (distractor B). Distractor A, 10 March 2002, is the disproved date recorded in the verification log. 16 March 1986 was an earlier rejected initiative. swissinfo.ch is the Swiss Broadcasting Corporation, not a federal page.",
+    "answer": "3 March 2002",
+    "answer_variations": [
+      "3 March 2002."
+    ],
+    "answer_type": "short",
+    "reference": "When, on March 3, 2002, the Swiss were again called upon to vote on joining the world body, the decision turned out to be quite close."
   },
   {
     "id": "K121",
@@ -735,7 +991,14 @@
     "source_quote": "In Switzerland, the guest is not obliged to tip. In many restaurants, however, it is customary to pay a tip.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Swiss-specific: customary but not a legal obligation. Distractors invent a federal fixed rate and cantonal differences that do not exist."
+    "notes": "Swiss-specific: customary but not a legal obligation. Distractors invent a federal fixed rate and cantonal differences that do not exist.",
+    "answer": "The guest is not obliged to tip, although paying a tip is customary in many restaurants.",
+    "answer_variations": [
+      "guest is not obliged to tip, although paying a tip is customary in many restaurants.",
+      "The guest is not obliged to tip, although paying a tip is customary in many restaurants"
+    ],
+    "answer_type": "sentence",
+    "reference": "In Switzerland, the guest is not obliged to tip. In many restaurants, however, it is customary to pay a tip."
   },
   {
     "id": "K127",
@@ -753,7 +1016,13 @@
     "source_quote": "Grundsätzlich sind Trinkgelder kein Lohn und auch kein Bestandteil davon. Das Gastgewerbe verfügt über einen guten Landes-Gesamtarbeitsvertrag.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A source-criticism item: the answer is about evidential weight. B is the trap - the collective agreement exists but does not settle the point."
+    "notes": "A source-criticism item: the answer is about evidential weight. B is the trap - the collective agreement exists but does not settle the point.",
+    "answer": "It is the association's own position and is contested by labour-law academics, so it cannot be presented as settled law.",
+    "answer_variations": [
+      "It is the association's own position and is contested by labour-law academics, so it cannot be presented as settled law"
+    ],
+    "answer_type": "sentence",
+    "reference": "Grundsätzlich sind Trinkgelder kein Lohn und auch kein Bestandteil davon. Das Gastgewerbe verfügt über einen guten Landes-Gesamtarbeitsvertrag."
   },
   {
     "id": "K131",
@@ -771,7 +1040,13 @@
     "source_quote": "Goods that are not intended for your personal use or as gifts are subject to VAT.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The allowance tests purpose first and value second; commercial goods fall outside it at any value. Distractor D is the common confusion of treating value as the only test."
+    "notes": "The allowance tests purpose first and value second; commercial goods fall outside it at any value. Distractor D is the common confusion of treating value as the only test.",
+    "answer": "They are subject to VAT",
+    "answer_variations": [
+      "They are subject to VAT."
+    ],
+    "answer_type": "short",
+    "reference": "Goods that are not intended for your personal use or as gifts are subject to VAT."
   },
   {
     "id": "K133",
@@ -789,7 +1064,13 @@
     "source_quote": "In addition to VAT, you must pay customs duties if the goods you are carrying exceed the duty-free allowances for alcohol, tobacco products and certain foodstuffs.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The CHF 150 figure is the VAT tax-free limit; the separate duty-free allowances belong to customs duties. Distractor C mixes the two regimes and adds a rate that does not apply to alcohol."
+    "notes": "The CHF 150 figure is the VAT tax-free limit; the separate duty-free allowances belong to customs duties. Distractor C mixes the two regimes and adds a rate that does not apply to alcohol.",
+    "answer": "Customs duties",
+    "answer_variations": [
+      "Customs duties."
+    ],
+    "answer_type": "short",
+    "reference": "In addition to VAT, you must pay customs duties if the goods you are carrying exceed the duty-free allowances for alcohol, tobacco products and certain foodstuffs."
   },
   {
     "id": "K134",
@@ -807,7 +1088,13 @@
     "source_quote": "Otherwise, the market value is taxed, e.g. in the case of gifts. The market value refers to the sum a third party would have had to pay to buy the item.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Purchases are taxed on the invoice, receipt or purchase contract; where there is none - gifts in particular - the market value applies, i.e. what a third party would have paid. Traps are the self-declared value and the recipient's sentimental valuation."
+    "notes": "Purchases are taxed on the invoice, receipt or purchase contract; where there is none - gifts in particular - the market value applies, i.e. what a third party would have paid. Traps are the self-declared value and the recipient's sentimental valuation.",
+    "answer": "Its market value",
+    "answer_variations": [
+      "Its market value."
+    ],
+    "answer_type": "short",
+    "reference": "Otherwise, the market value is taxed, e.g. in the case of gifts. The market value refers to the sum a third party would have had to pay to buy the item."
   },
   {
     "id": "K135",
@@ -825,7 +1112,13 @@
     "source_quote": "Overall, Switzerland generates about 80 to 90 million tonnes of waste annually, and it is fair to assume that the total quantity will continue to rise in the future.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Order-of-magnitude anchor for the whole waste topic: the headline recycling rate makes Swiss volumes sound modest, but construction and demolition account for the great majority. Distractors straddle the correct figure by roughly a decade each."
+    "notes": "Order-of-magnitude anchor for the whole waste topic: the headline recycling rate makes Swiss volumes sound modest, but construction and demolition account for the great majority. Distractors straddle the correct figure by roughly a decade each.",
+    "answer": "About 80 to 90 million tonnes",
+    "answer_variations": [
+      "About 80 to 90 million tonnes."
+    ],
+    "answer_type": "short",
+    "reference": "Overall, Switzerland generates about 80 to 90 million tonnes of waste annually, and it is fair to assume that the total quantity will continue to rise in the future."
   },
   {
     "id": "K138",
@@ -843,7 +1136,14 @@
     "source_quote": "The disposal of all waste costs Switzerland a good CHF 3 billion a year. The 'polluter pays' principle is widely applied in Switzerland, i.e. whoever creates the waste must also pay for its disposal.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The named principle matters more than the CHF 3 billion figure: whoever creates the waste pays for its disposal. Traps are the centrally funded reading and the producer-llevy model, neither of which is the stated basis."
+    "notes": "The named principle matters more than the CHF 3 billion figure: whoever creates the waste pays for its disposal. Traps are the centrally funded reading and the producer-llevy model, neither of which is the stated basis.",
+    "answer": "The 'polluter pays' principle",
+    "answer_variations": [
+      "'polluter pays' principle",
+      "The 'polluter pays' principle."
+    ],
+    "answer_type": "short",
+    "reference": "The disposal of all waste costs Switzerland a good CHF 3 billion a year. The 'polluter pays' principle is widely applied in Switzerland, i.e. whoever creates the waste must also pay for its disposal."
   },
   {
     "id": "K143",
@@ -861,7 +1161,14 @@
     "source_quote": "If you want to study for a baccalaureate, you need to meet different requirements depending on the canton and the type of baccalaureate you wish to obtain, including good grades, a recommendation from your class teacher or a successful entrance examination.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Entry is cantonal and type-dependent: good grades, a class teacher's recommendation or an entrance examination. Traps are the assumption of a single federal rule and the assumption that grades alone decide."
+    "notes": "Entry is cantonal and type-dependent: good grades, a class teacher's recommendation or an entrance examination. Traps are the assumption of a single federal rule and the assumption that grades alone decide.",
+    "answer": "The canton and the type of baccalaureate",
+    "answer_variations": [
+      "the type of baccalaureate and The canton",
+      "the type of baccalaureate, The canton"
+    ],
+    "answer_type": "list",
+    "reference": "If you want to study for a baccalaureate, you need to meet different requirements depending on the canton and the type of baccalaureate you wish to obtain, including good grades, a recommendation from your class teacher or a successful entrance examination."
   },
   {
     "id": "K145",
@@ -879,7 +1186,14 @@
     "source_quote": "Getting a child to school is the responsibility of the parents. The communes only provide support if the route to school is very long or too dangerous.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Communes step in only for a very long or dangerous route, which is what Pedibus-style schemes address. The over-general distractor D sounds like a parental duty with municipal backing and is the trap for those who half-remember the rule."
+    "notes": "Communes step in only for a very long or dangerous route, which is what Pedibus-style schemes address. The over-general distractor D sounds like a parental duty with municipal backing and is the trap for those who half-remember the rule.",
+    "answer": "The parents, with commune support only where the route is very long or too dangerous",
+    "answer_variations": [
+      "parents, with commune support only where the route is very long or too dangerous",
+      "The parents, with commune support only where the route is very long or too dangerous."
+    ],
+    "answer_type": "sentence",
+    "reference": "Getting a child to school is the responsibility of the parents. The communes only provide support if the route to school is very long or too dangerous."
   },
   {
     "id": "K152",
@@ -897,7 +1211,14 @@
     "source_quote": "Along with the cantons, the Federal Chancellery organises federal elections and popular votes. Referendum and initiative committees submit the signatures they collect to the Federal Chancellery.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Separates the Chancellery's organising role from its intake role, and separates both from the cantons' own task of organising the vote."
+    "notes": "Separates the Chancellery's organising role from its intake role, and separates both from the cantons' own task of organising the vote.",
+    "answer": "Referendum and initiative committees",
+    "answer_variations": [
+      "initiative committees and Referendum",
+      "initiative committees, Referendum"
+    ],
+    "answer_type": "list",
+    "reference": "Along with the cantons, the Federal Chancellery organises federal elections and popular votes. Referendum and initiative committees submit the signatures they collect to the Federal Chancellery."
   },
   {
     "id": "K156",
@@ -915,7 +1236,14 @@
     "source_quote": "The Federal Criminal Court hears criminal cases involving offences against federal interests, explosives offences, international cases of white-collar crime, cases relating to organised crime, corruption and money laundering, and offences related to civil aviation or war material.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distinguishes the four federal courts by subject matter. D invents a criminal first-instance division of the Supreme Court, a structure familiar from other countries."
+    "notes": "Distinguishes the four federal courts by subject matter. D invents a criminal first-instance division of the Supreme Court, a structure familiar from other countries.",
+    "answer": "The Federal Criminal Court",
+    "answer_variations": [
+      "Federal Criminal Court",
+      "The Federal Criminal Court."
+    ],
+    "answer_type": "short",
+    "reference": "The Federal Criminal Court hears criminal cases involving offences against federal interests, explosives offences, international cases of white-collar crime, cases relating to organised crime, corruption and money laundering, and offences related to civil aviation or war material."
   },
   {
     "id": "K164",
@@ -933,7 +1261,14 @@
     "source_quote": "All members of the cantonal government must defend the position of the collegial body, regardless of their personal opinion.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Collegiality binds the cantonal government exactly as it binds the Federal Council; B, C and D are all plausible reactions from a cabinet-style mental model."
+    "notes": "Collegiality binds the cantonal government exactly as it binds the Federal Council; B, C and D are all plausible reactions from a cabinet-style mental model.",
+    "answer": "Defend the government's position publicly, whatever their own opinion",
+    "answer_variations": [
+      "whatever their own opinion and Defend the government's position publicly",
+      "whatever their own opinion, Defend the government's position publicly"
+    ],
+    "answer_type": "list",
+    "reference": "All members of the cantonal government must defend the position of the collegial body, regardless of their personal opinion."
   },
   {
     "id": "K170",
@@ -951,7 +1286,14 @@
     "source_quote": "At the cantonal level, Jura and Neuchâtel grant the right to vote (but not to stand for election) to foreign nationals.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "High search cost and tests real cantonal variation; Geneva and Vaud are the intuitive French-speaking guesses and are not the cited pair."
+    "notes": "High search cost and tests real cantonal variation; Geneva and Vaud are the intuitive French-speaking guesses and are not the cited pair.",
+    "answer": "Jura and Neuchâtel",
+    "answer_variations": [
+      "Neuchâtel and Jura",
+      "Neuchâtel, Jura"
+    ],
+    "answer_type": "list",
+    "reference": "At the cantonal level, Jura and Neuchâtel grant the right to vote (but not to stand for election) to foreign nationals."
   },
   {
     "id": "K171",
@@ -969,7 +1311,14 @@
     "source_quote": "If you live in Switzerland, you do not need to register to vote: you will be added to the electoral register of your commune of residence as a matter of course as soon as you fulfil the conditions for being eligible to vote.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Contrast with the explicit registration required of Swiss citizens abroad; an automatic-register premise is unusual compared with most EU systems."
+    "notes": "Contrast with the explicit registration required of Swiss citizens abroad; an automatic-register premise is unusual compared with most EU systems.",
+    "answer": "No, the commune adds them automatically",
+    "answer_variations": [
+      "the commune adds them automatically and No",
+      "the commune adds them automatically, No"
+    ],
+    "answer_type": "list",
+    "reference": "If you live in Switzerland, you do not need to register to vote: you will be added to the electoral register of your commune of residence as a matter of course as soon as you fulfil the conditions for being eligible to vote."
   },
   {
     "id": "K176",
@@ -987,7 +1336,13 @@
     "source_quote": "A federal popular initiative concerns only the Constitution. In contrast to the position in some cantons, there is no procedure at federal level for amending existing laws or introducing new laws through an initiative.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The sharpest federalism point in the corpus: some cantons have legislative initiatives, federal level does not. C and D invent conditional routes."
+    "notes": "The sharpest federalism point in the corpus: some cantons have legislative initiatives, federal level does not. C and D invent conditional routes.",
+    "answer": "No, a federal popular initiative can concern only the Constitution",
+    "answer_variations": [
+      "No, a federal popular initiative can concern only the Constitution."
+    ],
+    "answer_type": "sentence",
+    "reference": "A federal popular initiative concerns only the Constitution. In contrast to the position in some cantons, there is no procedure at federal level for amending existing laws or introducing new laws through an initiative."
   },
   {
     "id": "K177",
@@ -1005,7 +1360,14 @@
     "source_quote": "The Federal Council must announce the date of the vote at least four months in advance.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The executive, not the Chancellery or Parliament, fixes the ballot date; C is the natural confusion with the Chancellery's vote-organising role."
+    "notes": "The executive, not the Chancellery or Parliament, fixes the ballot date; C is the natural confusion with the Chancellery's vote-organising role.",
+    "answer": "The Federal Council must announce it at least four months ahead",
+    "answer_variations": [
+      "Federal Council must announce it at least four months ahead",
+      "The Federal Council must announce it at least four months ahead."
+    ],
+    "answer_type": "sentence",
+    "reference": "The Federal Council must announce the date of the vote at least four months in advance."
   },
   {
     "id": "K179",
@@ -1023,7 +1385,14 @@
     "source_quote": "Parliament also decides on enactments that are not laws, for example decisions on international treaties between Switzerland and other countries. It is also possible to launch an optional referendum against these.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The referendum right reaches further than formally legislated acts; B and C are the usual assumptions about treaty approval in a parliamentary system."
+    "notes": "The referendum right reaches further than formally legislated acts; B and C are the usual assumptions about treaty approval in a parliamentary system.",
+    "answer": "Yes, an optional referendum is possible",
+    "answer_variations": [
+      "an optional referendum is possible and Yes",
+      "an optional referendum is possible, Yes"
+    ],
+    "answer_type": "list",
+    "reference": "Parliament also decides on enactments that are not laws, for example decisions on international treaties between Switzerland and other countries. It is also possible to launch an optional referendum against these."
   },
   {
     "id": "K180",
@@ -1041,7 +1410,13 @@
     "source_quote": "What is more, several groups can initiate a referendum against the same new or amended law – even though they might be from different political camps. The signatures collected are counted.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Competing committees do not exclude each other; C is a near-miss that would also work in practice but is not what the page states."
+    "notes": "Competing committees do not exclude each other; C is a near-miss that would also work in practice but is not what the page states.",
+    "answer": "Both may initiate a referendum, and their signatures are counted",
+    "answer_variations": [
+      "Both may initiate a referendum, and their signatures are counted."
+    ],
+    "answer_type": "sentence",
+    "reference": "What is more, several groups can initiate a referendum against the same new or amended law – even though they might be from different political camps. The signatures collected are counted."
   },
   {
     "id": "K181",
@@ -1059,7 +1434,14 @@
     "source_quote": "Data protection law does not protect data as such, but rather the persons about whom data is processed.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Traps the property-framing imported from data-protection-as-asset models; the FDPIC states the protection attaches to persons, not to the data as a commodity."
+    "notes": "Traps the property-framing imported from data-protection-as-asset models; the FDPIC states the protection attaches to persons, not to the data as a commodity.",
+    "answer": "The persons about whom data are processed",
+    "answer_variations": [
+      "persons about whom data are processed",
+      "The persons about whom data are processed."
+    ],
+    "answer_type": "sentence",
+    "reference": "Data protection law does not protect data as such, but rather the persons about whom data is processed."
   },
   {
     "id": "K183",
@@ -1077,7 +1459,13 @@
     "source_quote": "The situation is different for the processing of personal data by private entities. In principle, this is permitted in Switzerland.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Distractor A is the GDPR prior-consent default, which does not carry over to Swiss private-sector processing; the source deliberately does not use the words opt-in or opt-out."
+    "notes": "Distractor A is the GDPR prior-consent default, which does not carry over to Swiss private-sector processing; the source deliberately does not use the words opt-in or opt-out.",
+    "answer": "It is permitted in principle, with the test being whether the invasion of privacy can be justified by consent or by overriding interests",
+    "answer_variations": [
+      "It is permitted in principle, with the test being whether the invasion of privacy can be justified by consent or by overriding interests."
+    ],
+    "answer_type": "sentence",
+    "reference": "The situation is different for the processing of personal data by private entities. In principle, this is permitted in Switzerland."
   },
   {
     "id": "K186",
@@ -1095,7 +1483,13 @@
     "source_quote": "Moreover, the exceptions mentioned in Article 20 FADP limit or remove the duty to provide information, for example if a data subject already has the information (because they previously consented to their data being processed) or if the processing of personal data is required by law. These exceptions must be narrowly interpreted: the data controller should not assume that they will apply.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Names the Article 20 FADP exceptions and the narrow-interpretation rule; distractor A is the opposite of the FDPIC's express warning against assuming they apply."
+    "notes": "Names the Article 20 FADP exceptions and the narrow-interpretation rule; distractor A is the opposite of the FDPIC's express warning against assuming they apply.",
+    "answer": "They cover, for example, a data subject who already has the information or processing required by law, and they must be narrowly interpreted",
+    "answer_variations": [
+      "They cover, for example, a data subject who already has the information or processing required by law, and they must be narrowly interpreted."
+    ],
+    "answer_type": "sentence",
+    "reference": "Moreover, the exceptions mentioned in Article 20 FADP limit or remove the duty to provide information, for example if a data subject already has the information (because they previously consented to their data being processed) or if the processing of personal data is required by law. These exceptions must be narrowly interpreted: the data controller should not assume that they will apply."
   },
   {
     "id": "K193",
@@ -1113,7 +1507,13 @@
     "source_quote": "Biometric residence permits shall be issued to holders of the following categories of residence permit: - Short-term residence permits (L) - Residence permits (B) - Settlement permits (C)",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Exactly the three categories L, B and C; the N and F permits are deliberately not in the biometric programme."
+    "notes": "Exactly the three categories L, B and C; the N and F permits are deliberately not in the biometric programme.",
+    "answer": "Short-term residence permits (L), residence permits (B) and settlement permits (C)",
+    "answer_variations": [
+      "residence permits (B), settlement permits (C), Short-term residence permits (L)"
+    ],
+    "answer_type": "list",
+    "reference": "Biometric residence permits shall be issued to holders of the following categories of residence permit: - Short-term residence permits (L) - Residence permits (B) - Settlement permits (C)"
   },
   {
     "id": "K194",
@@ -1131,7 +1531,14 @@
     "source_quote": "The application procedure and issuance of a biometric residence permit are decided by the Canton of residence. Biometric data are obtained from the person by the corresponding authority in the Canton of residence.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Cantonal variable: no single national procedure or fee. Distractor A overstates the SEM's role, which is limited to centrally producing the cards."
+    "notes": "Cantonal variable: no single national procedure or fee. Distractor A overstates the SEM's role, which is limited to centrally producing the cards.",
+    "answer": "The canton of residence decides, and the biometric data are captured by that canton's authority",
+    "answer_variations": [
+      "canton of residence decides, and the biometric data are captured by that canton's authority",
+      "The canton of residence decides, and the biometric data are captured by that canton's authority."
+    ],
+    "answer_type": "sentence",
+    "reference": "The application procedure and issuance of a biometric residence permit are decided by the Canton of residence. Biometric data are obtained from the person by the corresponding authority in the Canton of residence."
   },
   {
     "id": "K201",
@@ -1149,7 +1556,13 @@
     "source_quote": "First-time renewal of the permit can be limited to one year, however, if the holder has been involuntarily unemployed for more than twelve consecutive months.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A shortening mechanism, not a withdrawal rule. Distractors B and D over-read the unemployment fact into loss of status or an automatic category change."
+    "notes": "A shortening mechanism, not a withdrawal rule. Distractors B and D over-read the unemployment fact into loss of status or an automatic category change.",
+    "answer": "It may be limited to one year",
+    "answer_variations": [
+      "It may be limited to one year."
+    ],
+    "answer_type": "short",
+    "reference": "First-time renewal of the permit can be limited to one year, however, if the holder has been involuntarily unemployed for more than twelve consecutive months."
   },
   {
     "id": "K202",
@@ -1167,7 +1580,13 @@
     "source_quote": "Employment contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The Swiss online notification procedure replaces a permit for short engagements below three months within a calendar year; the boundary is three months, not one year."
+    "notes": "The Swiss online notification procedure replaces a permit for short engagements below three months within a calendar year; the boundary is three months, not one year.",
+    "answer": "Contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure",
+    "answer_variations": [
+      "Contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure."
+    ],
+    "answer_type": "sentence",
+    "reference": "Employment contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure."
   },
   {
     "id": "K206",
@@ -1185,7 +1604,13 @@
     "source_quote": "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Eight is a ceiling on the cantonal additions, not a nationwide total of public holidays; distractor D misreads it as a federal maximum."
+    "notes": "Eight is a ceiling on the cantonal additions, not a nationwide total of public holidays; distractor D misreads it as a federal maximum.",
+    "answer": "Each canton, which can have up to eight additional public holidays on its territory",
+    "answer_variations": [
+      "Each canton, which can have up to eight additional public holidays on its territory."
+    ],
+    "answer_type": "sentence",
+    "reference": "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton."
   },
   {
     "id": "K208",
@@ -1203,7 +1628,13 @@
     "source_quote": "Die ordentliche Kündigung ist nur unter Einhaltung der Kündigungsfrist und der Kündigungstermine möglich.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Source quote is German. The source states the locally customary termination dates, not a universal end-of-month rule, so distractor B is the widely repeated but unverified one-month claim."
+    "notes": "Source quote is German. The source states the locally customary termination dates, not a universal end-of-month rule, so distractor B is the widely repeated but unverified one-month claim.",
+    "answer": "Only if the notice period and the locally customary termination dates are observed",
+    "answer_variations": [
+      "Only if the notice period and the locally customary termination dates are observed."
+    ],
+    "answer_type": "sentence",
+    "reference": "Die ordentliche Kündigung ist nur unter Einhaltung der Kündigungsfrist und der Kündigungstermine möglich."
   },
   {
     "id": "K212",
@@ -1221,7 +1652,14 @@
     "source_quote": "You are not allowed to return to work in the first eight weeks after the birth.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps confusion with the 14-week maternity leave itself and with the 16-week dismissal protection; 4/6/12 weeks are the plausible wrong figures."
+    "notes": "Traps confusion with the 14-week maternity leave itself and with the 16-week dismissal protection; 4/6/12 weeks are the plausible wrong figures.",
+    "answer": "The first eight weeks after the birth",
+    "answer_variations": [
+      "first eight weeks after the birth",
+      "The first eight weeks after the birth."
+    ],
+    "answer_type": "short",
+    "reference": "You are not allowed to return to work in the first eight weeks after the birth."
   },
   {
     "id": "K214",
@@ -1239,7 +1677,13 @@
     "source_quote": "You have the right to extend your maternity leave by two weeks beyond the standard 14-week period. However, you will not receive benefits for those two additional weeks.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps the 80%/CHF 220 allowance figures lifted from the standard maternity allowance rule; the extension is unpaid."
+    "notes": "Traps the 80%/CHF 220 allowance figures lifted from the standard maternity allowance rule; the extension is unpaid.",
+    "answer": "Nothing - no benefits are paid for the two additional weeks",
+    "answer_variations": [
+      "Nothing - no benefits are paid for the two additional weeks."
+    ],
+    "answer_type": "sentence",
+    "reference": "You have the right to extend your maternity leave by two weeks beyond the standard 14-week period. However, you will not receive benefits for those two additional weeks."
   },
   {
     "id": "K216",
@@ -1257,7 +1701,14 @@
     "source_quote": "Certain groups of people are not subject to the mandatory scheme: the self-employed, salaried persons with a job contract that does not exceed three months, family members of a person operating an agricultural establishment in which they are employed, persons who are disabled to at least 70 % according to the provisions of the AI.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The other three exempt groups (short contracts, agricultural family members, 70 % disabled) are real exemptions, so a distractor naming any of them would also be defensible; instead the distractors name categories that ARE covered, which is what a non-expert would wrongly believe."
+    "notes": "The other three exempt groups (short contracts, agricultural family members, 70 % disabled) are real exemptions, so a distractor naming any of them would also be defensible; instead the distractors name categories that ARE covered, which is what a non-expert would wrongly believe.",
+    "answer": "The self-employed",
+    "answer_variations": [
+      "self-employed",
+      "The self-employed."
+    ],
+    "answer_type": "short",
+    "reference": "Certain groups of people are not subject to the mandatory scheme: the self-employed, salaried persons with a job contract that does not exceed three months, family members of a person operating an agricultural establishment in which they are employed, persons who are disabled to at least 70 % according to the provisions of the AI."
   },
   {
     "id": "K217",
@@ -1275,7 +1726,13 @@
     "source_quote": "The obligation to take out insurance sets in with gainful employment, after reaching 17 at the earliest. Until the employee reaches the age of 24, contributions only cover the risks of death and disability. From 1 January after the employee reaches the age of 24, additional savings are made for the retirement pension.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Traps the two other ages on the same passage (17 = entry into the scheme, 18 = entry into savings elsewhere framed), and the off-by-one of 'at 24' vs 'from the 1 January after 24'."
+    "notes": "Traps the two other ages on the same passage (17 = entry into the scheme, 18 = entry into savings elsewhere framed), and the off-by-one of 'at 24' vs 'from the 1 January after 24'.",
+    "answer": "From 1 January after the employee reaches the age of 24",
+    "answer_variations": [
+      "From 1 January after the employee reaches the age of 24."
+    ],
+    "answer_type": "sentence",
+    "reference": "The obligation to take out insurance sets in with gainful employment, after reaching 17 at the earliest. Until the employee reaches the age of 24, contributions only cover the risks of death and disability. From 1 January after the employee reaches the age of 24, additional savings are made for the retirement pension."
   },
   {
     "id": "K218",
@@ -1293,7 +1750,13 @@
     "source_quote": "The state contributes only indirectly to the financing of pension funds, by granting tax exemption on the contributions and 2nd pillar assets.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps the assumption that the state co-funds the second pillar like it does the first; tax exemption is the only state support the page describes."
+    "notes": "Traps the assumption that the state co-funds the second pillar like it does the first; tax exemption is the only state support the page describes.",
+    "answer": "Only indirectly, by granting tax exemption on the contributions and on second-pillar assets",
+    "answer_variations": [
+      "Only indirectly, by granting tax exemption on the contributions and on second-pillar assets."
+    ],
+    "answer_type": "sentence",
+    "reference": "The state contributes only indirectly to the financing of pension funds, by granting tax exemption on the contributions and 2nd pillar assets."
   },
   {
     "id": "K219",
@@ -1311,7 +1774,13 @@
     "source_quote": "The LPP/BVG is based on the principle of collective financing: the contribution of the employer must be at least equal to the sum of contributions paid by all the employees.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Traps the common belief that the employer pays exactly the employee's own share, and the 50/50-style split that belongs to OASI."
+    "notes": "Traps the common belief that the employer pays exactly the employee's own share, and the 50/50-style split that belongs to OASI.",
+    "answer": "At least equal to the sum of contributions paid by all the employees",
+    "answer_variations": [
+      "At least equal to the sum of contributions paid by all the employees."
+    ],
+    "answer_type": "short",
+    "reference": "The LPP/BVG is based on the principle of collective financing: the contribution of the employer must be at least equal to the sum of contributions paid by all the employees."
   },
   {
     "id": "K222",
@@ -1329,7 +1798,13 @@
     "source_quote": "If you live or work in Switzerland, you must pay OASI contributions from 1 January after you turn 20 until you reach the reference (retirement) age. If you are already working, this obligation begins on 1 January of the year in which you turn 18.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Two-age item with an inverted rule: the working person starts EARLIER (18) than the general rule (20). Distractors transplant 16/20/25 and impose a paid-employment condition the page rejects."
+    "notes": "Two-age item with an inverted rule: the working person starts EARLIER (18) than the general rule (20). Distractors transplant 16/20/25 and impose a paid-employment condition the page rejects.",
+    "answer": "From 1 January after turning 20; for those already working, from 1 January of the year in which they turn 18",
+    "answer_variations": [
+      "From 1 January after turning 20; for those already working, from 1 January of the year in which they turn 18."
+    ],
+    "answer_type": "sentence",
+    "reference": "If you live or work in Switzerland, you must pay OASI contributions from 1 January after you turn 20 until you reach the reference (retirement) age. If you are already working, this obligation begins on 1 January of the year in which you turn 18."
   },
   {
     "id": "K228",
@@ -1347,7 +1822,14 @@
     "source_quote": "When the deductible has been used up you will still pay ten percent of your healthcare costs. However, this retention fee is limited to CHF 700 per year (CHF 350 for children).",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Two-figure item (coinsurance rate + annual cap). CHF 350 is the child cap, a confident wrong pick for an adult; 'no cap' is the other common misconception."
+    "notes": "Two-figure item (coinsurance rate + annual cap). CHF 350 is the child cap, a confident wrong pick for an adult; 'no cap' is the other common misconception.",
+    "answer": "Ten per cent, capped at CHF 700 per year",
+    "answer_variations": [
+      "capped at CHF 700 per year and Ten per cent",
+      "capped at CHF 700 per year, Ten per cent"
+    ],
+    "answer_type": "list",
+    "reference": "When the deductible has been used up you will still pay ten percent of your healthcare costs. However, this retention fee is limited to CHF 700 per year (CHF 350 for children)."
   },
   {
     "id": "K230",
@@ -1365,7 +1847,14 @@
     "source_quote": "Premiums are lower for children and young adults under the age of 25.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Traps the pensionable-age intuition that premiums fall after 65, which is where most countries' premium relief goes."
+    "notes": "Traps the pensionable-age intuition that premiums fall after 65, which is where most countries' premium relief goes.",
+    "answer": "Children and young adults under the age of 25",
+    "answer_variations": [
+      "young adults under the age of 25 and Children",
+      "young adults under the age of 25, Children"
+    ],
+    "answer_type": "list",
+    "reference": "Premiums are lower for children and young adults under the age of 25."
   },
   {
     "id": "K242",
@@ -1383,7 +1872,13 @@
     "source_quote": "In the Council of States, 20 cantons are entitled to two seats.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Half-canton trap: models frequently answer 26 (one seat per canton is not the rule) or 6 (counting only the former half-cantons). 20 two-seat cantons plus 6 one-seat cantons is the structure behind the chamber's 46 seats."
+    "notes": "Half-canton trap: models frequently answer 26 (one seat per canton is not the rule) or 6 (counting only the former half-cantons). 20 two-seat cantons plus 6 one-seat cantons is the structure behind the chamber's 46 seats.",
+    "answer": "20 cantons",
+    "answer_variations": [
+      "20 cantons."
+    ],
+    "answer_type": "short",
+    "reference": "In the Council of States, 20 cantons are entitled to two seats."
   },
   {
     "id": "K243",
@@ -1401,7 +1896,13 @@
     "source_quote": "Two seats: Aargau, Bern, Freiburg, Geneva, Glarus, Graubünden, Jura, Luzern, Neuchâtel, Schaffhausen, Schwyz, Solothurn, St. Gallen, Thurgau, Ticino, Uri, Vaud, Valais, Zug, Zurich.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "All three distractors appear on the same page under 'One seat', so the item tests membership of the 20-canton list rather than the six half-cantons already asked at K080/K006. Glarus is one of the smallest cantons by population yet still holds two upper-chamber seats, which is the counter-intuitive point."
+    "notes": "All three distractors appear on the same page under 'One seat', so the item tests membership of the 20-canton list rather than the six half-cantons already asked at K080/K006. Glarus is one of the smallest cantons by population yet still holds two upper-chamber seats, which is the counter-intuitive point.",
+    "answer": "Glarus",
+    "answer_variations": [
+      "Glarus."
+    ],
+    "answer_type": "short",
+    "reference": "Two seats: Aargau, Bern, Freiburg, Geneva, Glarus, Graubünden, Jura, Luzern, Neuchâtel, Schaffhausen, Schwyz, Solothurn, St. Gallen, Thurgau, Ticino, Uri, Vaud, Valais, Zug, Zurich."
   },
   {
     "id": "K249",
@@ -1419,7 +1920,14 @@
     "source_quote": "Rumantsch, like Italian and French, is a language with Latin roots.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The strongest misconception trap in the language set: because Switzerland is majority-German-speaking, models place Romansh in the Germanic family. It groups with the Romance languages, not with German."
+    "notes": "The strongest misconception trap in the language set: because Switzerland is majority-German-speaking, models place Romansh in the Germanic family. It groups with the Romance languages, not with German.",
+    "answer": "Italian and French",
+    "answer_variations": [
+      "French and Italian",
+      "French, Italian"
+    ],
+    "answer_type": "list",
+    "reference": "Rumantsch, like Italian and French, is a language with Latin roots."
   },
   {
     "id": "K254",
@@ -1437,7 +1945,14 @@
     "source_quote": "The Federal Constitution is the highest law of Switzerland. It takes precedence over all laws and ordinances of the Confederation, cantons and communes.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The three-level bite is what makes this hard: a federal constitution outranking not only federal statutes but cantonal and communal law too. Option A confuses constitutional rank with cantonal constitutional autonomy (tested at K255)."
+    "notes": "The three-level bite is what makes this hard: a federal constitution outranking not only federal statutes but cantonal and communal law too. Option A confuses constitutional rank with cantonal constitutional autonomy (tested at K255).",
+    "answer": "All laws and ordinances of the Confederation, the cantons and the communes",
+    "answer_variations": [
+      "All laws, ordinances of the Confederation, the cantons and the communes",
+      "ordinances of the Confederation, the cantons, the communes, All laws"
+    ],
+    "answer_type": "list",
+    "reference": "The Federal Constitution is the highest law of Switzerland. It takes precedence over all laws and ordinances of the Confederation, cantons and communes."
   },
   {
     "id": "K257",
@@ -1455,7 +1970,14 @@
     "source_quote": "Since 1938 Romansh has been recognised in the Swiss Constitution as a national language along with German, French and Italian.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "1848 is the federal-state date and 1979 the admission of Jura; both are confident wrong picks. The four-national-language set itself is asked at K061."
+    "notes": "1848 is the federal-state date and 1979 the admission of Jura; both are confident wrong picks. The four-national-language set itself is asked at K061.",
+    "answer": "1938",
+    "answer_variations": [
+      "in 1938",
+      "1938."
+    ],
+    "answer_type": "number",
+    "reference": "Since 1938 Romansh has been recognised in the Swiss Constitution as a national language along with German, French and Italian."
   },
   {
     "id": "K264",
@@ -1473,7 +1995,14 @@
     "source_quote": "The 26 cantons are divided into 2110 communes.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Tests whether the model attributes a commune count to its publication rather than treating it as a fixed fact. The corpus deliberately carries several snapshots: 2,110 here (undated CH Info), and 2,121 as of 1 January 2025 in K070 (SWI swissinfo.ch). Both are correct for their own publication; neither is the answer without the attribution. If a future revision of this corpus drops one of the two, drop the other too - two bare commune counts in one benchmark read as an internal contradiction."
+    "notes": "Tests whether the model attributes a commune count to its publication rather than treating it as a fixed fact. The corpus deliberately carries several snapshots: 2,110 here (undated CH Info), and 2,121 as of 1 January 2025 in K070 (SWI swissinfo.ch). Both are correct for their own publication; neither is the answer without the attribution. If a future revision of this corpus drops one of the two, drop the other too - two bare commune counts in one benchmark read as an internal contradiction.",
+    "answer": "2,110 communes",
+    "answer_variations": [
+      "110 communes and 2",
+      "110 communes, 2"
+    ],
+    "answer_type": "list",
+    "reference": "The 26 cantons are divided into 2110 communes."
   },
   {
     "id": "K268",
@@ -1491,7 +2020,13 @@
     "source_quote": "Borders: altogether: 1852 km/Austria 164 km/France 573 km/Germany 334 km/Italy 740 km/Liechtenstein 41 km",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Mirror image of K066, which asks for the longest border (Italy). Austria at 164 km is the confident wrong pick because it is the smallest of the 'big four'. Per-country border lengths vary with the measurement or border-survey basis, per the registry note."
+    "notes": "Mirror image of K066, which asks for the longest border (Italy). Austria at 164 km is the confident wrong pick because it is the smallest of the 'big four'. Per-country border lengths vary with the measurement or border-survey basis, per the registry note.",
+    "answer": "Liechtenstein",
+    "answer_variations": [
+      "Liechtenstein."
+    ],
+    "answer_type": "short",
+    "reference": "Borders: altogether: 1852 km/Austria 164 km/France 573 km/Germany 334 km/Italy 740 km/Liechtenstein 41 km"
   },
   {
     "id": "K272",
@@ -1509,7 +2044,13 @@
     "source_quote": "With the defeat of Napoleon, the great European powers recognised Swiss neutrality and set Switzerland's borders as they are today.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "B is the Liechtenstein trap and conflates the 1815 settlement with Liechtenstein's 1806 entry into the French sphere; A and C are the 'Alpine fortress with an outlet' fantasy that models reach for. Borders AND neutrality were settled together in 1815, which is the point of the item."
+    "notes": "B is the Liechtenstein trap and conflates the 1815 settlement with Liechtenstein's 1806 entry into the French sphere; A and C are the 'Alpine fortress with an outlet' fantasy that models reach for. Borders AND neutrality were settled together in 1815, which is the point of the item.",
+    "answer": "They set Switzerland's borders as they are today.",
+    "answer_variations": [
+      "They set Switzerland's borders as they are today"
+    ],
+    "answer_type": "sentence",
+    "reference": "With the defeat of Napoleon, the great European powers recognised Swiss neutrality and set Switzerland's borders as they are today."
   },
   {
     "id": "K274",
@@ -1527,7 +2068,14 @@
     "source_quote": "In exchange for the inviolability of their territory, such countries were, among other things, bound to stay out of wars, to treat all belligerents equally and not to supply them with arms or troops.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A and B treat neutrality as commerce and access, which is exactly the misunderstanding: neutrality is a reciprocity, not a trade. K120 asks which treaty first codified these rights; this item asks what the bargain was, so the two do not overlap. Quote comes from the swissinfo.ch page recorded in the S050 file."
+    "notes": "A and B treat neutrality as commerce and access, which is exactly the misunderstanding: neutrality is a reciprocity, not a trade. K120 asks which treaty first codified these rights; this item asks what the bargain was, so the two do not overlap. Quote comes from the swissinfo.ch page recorded in the S050 file.",
+    "answer": "A duty to stay out of wars, to treat all belligerents equally, and not to supply them with arms or troops.",
+    "answer_variations": [
+      "duty to stay out of wars, to treat all belligerents equally, and not to supply them with arms or troops.",
+      "A duty to stay out of wars, to treat all belligerents equally, and not to supply them with arms or troops"
+    ],
+    "answer_type": "sentence",
+    "reference": "In exchange for the inviolability of their territory, such countries were, among other things, bound to stay out of wars, to treat all belligerents equally and not to supply them with arms or troops."
   },
   {
     "id": "K286",
@@ -1545,7 +2093,14 @@
     "source_quote": "In 1919, they founded the League of Red Cross Societies, intended as the future coordinating and support body for the Movement.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The International Federation also dates from 1919, so A matches on the year and is the strongest trap in this item; the ICRC (D) appears in the same page and never founded it. This is the most confused corner of the Movement's institutional history and is a Swiss-specific fact rather than a European generality."
+    "notes": "The International Federation also dates from 1919, so A matches on the year and is the strongest trap in this item; the ICRC (D) appears in the same page and never founded it. This is the most confused corner of the Movement's institutional history and is a Swiss-specific fact rather than a European generality.",
+    "answer": "the League of Red Cross Societies",
+    "answer_variations": [
+      "League of Red Cross Societies",
+      "the League of Red Cross Societies."
+    ],
+    "answer_type": "short",
+    "reference": "In 1919, they founded the League of Red Cross Societies, intended as the future coordinating and support body for the Movement."
   },
   {
     "id": "K287",
@@ -1563,7 +2118,11 @@
     "source_quote": "The first series of bilateral agreements was accepted by 67% of Swiss voters in 2000. The 7 agreements mainly cover economic matters.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "9 is the count for the second series of 2005, which contains Schengen-Dublin - the two series are routinely swapped, and K113 already used the second series. Switzerland's EU relations run on over 100 bilateral agreements, which invites a larger number than either series."
+    "notes": "9 is the count for the second series of 2005, which contains Schengen-Dublin - the two series are routinely swapped, and K113 already used the second series. Switzerland's EU relations run on over 100 bilateral agreements, which invites a larger number than either series.",
+    "answer": "7",
+    "answer_variations": [],
+    "answer_type": "number",
+    "reference": "The first series of bilateral agreements was accepted by 67% of Swiss voters in 2000. The 7 agreements mainly cover economic matters."
   },
   {
     "id": "K292",
@@ -1581,7 +2140,14 @@
     "source_quote": "Switzerland developed over the centuries from a collection of different alliances to a confederation of states and finally to the federal state we know today.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The three-stage sequence alliances then confederation of states then federal state is the point; A is the real 1798 interlude but not the immediate predecessor in this chain, and C and D are generic European-state inventions with no Swiss referent."
+    "notes": "The three-stage sequence alliances then confederation of states then federal state is the point; A is the real 1798 interlude but not the immediate predecessor in this chain, and C and D are generic European-state inventions with no Swiss referent.",
+    "answer": "a confederation of states",
+    "answer_variations": [
+      "confederation of states",
+      "a confederation of states."
+    ],
+    "answer_type": "short",
+    "reference": "Switzerland developed over the centuries from a collection of different alliances to a confederation of states and finally to the federal state we know today."
   },
   {
     "id": "K295",
@@ -1599,7 +2165,13 @@
     "source_quote": "The Schwyzer, or Switzers, soon became well known far and wide thanks to the significant role they played in the Waldstätte Alliance and the importance of their troops as mercenaries. As a result, the surrounding German-speaking regions started to refer to all confederates as “Schwyzer”.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A is the natural-sounding wrong answer: Schwyz is the canton named, but the source credits role and mercenaries, not size, and the etymology runs from “Schwyzer” to “Schweizer”. C and D attach the distinction to the other two founding cantons. K101 already used the 1291 alliance from this page, so this is a different fact from the same source."
+    "notes": "A is the natural-sounding wrong answer: Schwyz is the canton named, but the source credits role and mercenaries, not size, and the etymology runs from “Schwyzer” to “Schweizer”. C and D attach the distinction to the other two founding cantons. K101 already used the 1291 alliance from this page, so this is a different fact from the same source.",
+    "answer": "Because the Schwyzers were famous for their role in the Waldstätte Alliance and for their mercenary troops.",
+    "answer_variations": [
+      "Because the Schwyzers were famous for their role in the Waldstätte Alliance and for their mercenary troops"
+    ],
+    "answer_type": "sentence",
+    "reference": "The Schwyzer, or Switzers, soon became well known far and wide thanks to the significant role they played in the Waldstätte Alliance and the importance of their troops as mercenaries. As a result, the surrounding German-speaking regions started to refer to all confederates as “Schwyzer”."
   },
   {
     "id": "K296",
@@ -1617,6 +2189,13 @@
     "source_quote": "The mercenaries had their heyday between the 15th and 18th century before being outlawed with the founding of the Federal State.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "A and B are the two big Swiss constitutional turning points and both are wrong here; D is a Swiss-adjacent date that appears on a different page entirely. The same sentence dates the heyday to the 15th to 18th century, so the two halves of the fact travel together."
+    "notes": "A and B are the two big Swiss constitutional turning points and both are wrong here; D is a Swiss-adjacent date that appears on a different page entirely. The same sentence dates the heyday to the 15th to 18th century, so the two halves of the fact travel together.",
+    "answer": "the founding of the Federal State",
+    "answer_variations": [
+      "founding of the Federal State",
+      "the founding of the Federal State."
+    ],
+    "answer_type": "short",
+    "reference": "The mercenaries had their heyday between the 15th and 18th century before being outlawed with the founding of the Federal State."
   }
 ]

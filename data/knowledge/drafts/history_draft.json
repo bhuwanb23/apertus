@@ -15,7 +15,14 @@
     "source_quote": "In 1291, the three cantons of Uri, Schwyz and Unterwalden concluded the regional Waldstätte Alliance, which was sealed by the Federal Charter of 1291.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractors C and D are real Swiss foundational documents, which is what makes the 1291 charter easy to confuse. Source URL is bar.admin.ch, a federal archive substitution for the blocked eda.admin.ch history page."
+    "notes": "Distractors C and D are real Swiss foundational documents, which is what makes the 1291 charter easy to confuse. Source URL is bar.admin.ch, a federal archive substitution for the blocked eda.admin.ch history page.",
+    "answer": "the Federal Charter of 1291",
+    "answer_variations": [
+      "Federal Charter of 1291",
+      "the Federal Charter of 1291."
+    ],
+    "answer_type": "short",
+    "reference": "In 1291, the three cantons of Uri, Schwyz and Unterwalden concluded the regional Waldstätte Alliance, which was sealed by the Federal Charter of 1291."
   },
   {
     "id": "K102",
@@ -33,7 +40,14 @@
     "source_quote": "The Central Archives, a predecessor of the current Swiss Federal Archives, were also established during this time.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Distractors are all real Swiss federal institutions that simply do not date from 1798."
+    "notes": "Distractors are all real Swiss federal institutions that simply do not date from 1798.",
+    "answer": "the Central Archives",
+    "answer_variations": [
+      "Central Archives",
+      "the Central Archives."
+    ],
+    "answer_type": "short",
+    "reference": "The Central Archives, a predecessor of the current Swiss Federal Archives, were also established during this time."
   },
   {
     "id": "K103",
@@ -51,7 +65,13 @@
     "source_quote": "Switzerland's neutrality is recognised worldwide, which is why it is often asked to mediate in conflicts or exercise protective power mandates.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Mediation and protective power mandates are classic Swiss neutrality roles; the options that assume alliance or UN membership are the standard EU/NATO import error."
+    "notes": "Mediation and protective power mandates are classic Swiss neutrality roles; the options that assume alliance or UN membership are the standard EU/NATO import error.",
+    "answer": "mediate in conflicts or exercise protective power mandates",
+    "answer_variations": [
+      "mediate in conflicts or exercise protective power mandates."
+    ],
+    "answer_type": "short",
+    "reference": "Switzerland's neutrality is recognised worldwide, which is why it is often asked to mediate in conflicts or exercise protective power mandates."
   },
   {
     "id": "K104",
@@ -69,7 +89,14 @@
     "source_quote": "Switzerland is not a member of NATO, but cooperates with it within the framework of the Partnership for Peace and the Euro-Atlantic Partnership Council.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Shared page with S041; NATO non-membership plus PfP/EAPC cooperation is a specifically Swiss arrangement."
+    "notes": "Shared page with S041; NATO non-membership plus PfP/EAPC cooperation is a specifically Swiss arrangement.",
+    "answer": "the Partnership for Peace and the Euro-Atlantic Partnership Council",
+    "answer_variations": [
+      "Partnership for Peace and the Euro-Atlantic Partnership Council",
+      "the Partnership for Peace and the Euro-Atlantic Partnership Council."
+    ],
+    "answer_type": "sentence",
+    "reference": "Switzerland is not a member of NATO, but cooperates with it within the framework of the Partnership for Peace and the Euro-Atlantic Partnership Council."
   },
   {
     "id": "K105",
@@ -87,7 +114,14 @@
     "source_quote": "It was only with the 1874 Constitution, which came into force in 1875, that the Swiss Federal Supreme Court became a permanent court",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Caveat: the 1848 federal state already had a supreme court, but it had no fixed seat and only convened as and when required."
+    "notes": "Caveat: the 1848 federal state already had a supreme court, but it had no fixed seat and only convened as and when required.",
+    "answer": "the 1874 Constitution, which came into force in 1875",
+    "answer_variations": [
+      "which came into force in 1875 and the 1874 Constitution",
+      "which came into force in 1875, the 1874 Constitution"
+    ],
+    "answer_type": "list",
+    "reference": "It was only with the 1874 Constitution, which came into force in 1875, that the Swiss Federal Supreme Court became a permanent court"
   },
   {
     "id": "K106",
@@ -105,7 +139,13 @@
     "source_quote": "As a concession to the French-speaking liberals, the seat of the Swiss Federal Supreme Court was assigned to Lausanne.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A strong trap: the court does have a second site in Lucerne, but Lucerne was never the seat, and neither was Zurich or the federal city Bern."
+    "notes": "A strong trap: the court does have a second site in Lucerne, but Lucerne was never the seat, and neither was Zurich or the federal city Bern.",
+    "answer": "As a concession to the French-speaking liberals.",
+    "answer_variations": [
+      "As a concession to the French-speaking liberals"
+    ],
+    "answer_type": "sentence",
+    "reference": "As a concession to the French-speaking liberals, the seat of the Swiss Federal Supreme Court was assigned to Lausanne."
   },
   {
     "id": "K107",
@@ -123,7 +163,14 @@
     "source_quote": "Due to the outbreak of the First World War, the new courthouse could not be built until 1922. The striking Neoclassical building in the Mon-Repos park still shapes our image of the Swiss Federal Supreme Court today.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "1887 is the year the court moved into the purpose-built structure on the Esplanade de Montbenon — a deliberate near-miss distractor."
+    "notes": "1887 is the year the court moved into the purpose-built structure on the Esplanade de Montbenon — a deliberate near-miss distractor.",
+    "answer": "1922",
+    "answer_variations": [
+      "in 1922",
+      "1922."
+    ],
+    "answer_type": "number",
+    "reference": "Due to the outbreak of the First World War, the new courthouse could not be built until 1922. The striking Neoclassical building in the Mon-Repos park still shapes our image of the Swiss Federal Supreme Court today."
   },
   {
     "id": "K108",
@@ -141,7 +188,13 @@
     "source_quote": "The Swiss Federal Supreme Court rules that women from the canton of Appenzell Innerrhoden be granted the right to vote at the cantonal assembly. On 28 April 1991, women in Appenzell Innerrhoden were also able to vote in cantonal elections for the first time. BGE 116 Ia 359",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Appenzell Innerrhoden is one of the six half-cantons and the last to hold out. The brochure does not date the ruling itself, only the cantonal election of 28 April 1991, so no year is asserted here. Appenzell Innerrhoden is deliberately not used in the S040 questions to avoid duplicate facts."
+    "notes": "Appenzell Innerrhoden is one of the six half-cantons and the last to hold out. The brochure does not date the ruling itself, only the cantonal election of 28 April 1991, so no year is asserted here. Appenzell Innerrhoden is deliberately not used in the S040 questions to avoid duplicate facts.",
+    "answer": "Appenzell Innerrhoden",
+    "answer_variations": [
+      "Appenzell Innerrhoden."
+    ],
+    "answer_type": "short",
+    "reference": "The Swiss Federal Supreme Court rules that women from the canton of Appenzell Innerrhoden be granted the right to vote at the cantonal assembly. On 28 April 1991, women in Appenzell Innerrhoden were also able to vote in cantonal elections for the first time. BGE 116 Ia 359"
   },
   {
     "id": "K109",
@@ -159,7 +212,13 @@
     "source_quote": "On 7 February 1971, Switzerland's all-male electorate granted the vote to the nation's female citizens.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "1 February 1959 is the first (rejected) federal suffrage vote and 28 April 1991 the Appenzell Innerrhoden cantonal election — both genuine dates used as distractors."
+    "notes": "1 February 1959 is the first (rejected) federal suffrage vote and 28 April 1991 the Appenzell Innerrhoden cantonal election — both genuine dates used as distractors.",
+    "answer": "7 February 1971",
+    "answer_variations": [
+      "7 February 1971."
+    ],
+    "answer_type": "short",
+    "reference": "On 7 February 1971, Switzerland's all-male electorate granted the vote to the nation's female citizens."
   },
   {
     "id": "K110",
@@ -177,7 +236,11 @@
     "source_quote": "The first vote at federal level in 1959 failed by a large margin, with 67% of those who cast their ballots against.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "33% is the share of men still voting no in 1971; 55% recurs in S041/S049 as the 2002 UN and 2005 Bilaterals II yes shares."
+    "notes": "33% is the share of men still voting no in 1971; 55% recurs in S041/S049 as the 2002 UN and 2005 Bilaterals II yes shares.",
+    "answer": "67%",
+    "answer_variations": [],
+    "answer_type": "number",
+    "reference": "The first vote at federal level in 1959 failed by a large margin, with 67% of those who cast their ballots against."
   },
   {
     "id": "K111",
@@ -195,7 +258,13 @@
     "source_quote": "In 1929, the Swiss Association for Women's Suffrage presented a petition in Bern signed by 170,400 women and 78,800 men. Parliament backed the petition, but the Federal Council chose not to pursue it.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Note the men-to-women inversion distractor D. Parliament supported the petition but the Federal Council declined to pursue it."
+    "notes": "Note the men-to-women inversion distractor D. Parliament supported the petition but the Federal Council declined to pursue it.",
+    "answer": "249,200 in total — 170,400 from women and 78,800 from men",
+    "answer_variations": [
+      "249,200 in total — 170,400 from women and 78,800 from men."
+    ],
+    "answer_type": "sentence",
+    "reference": "In 1929, the Swiss Association for Women's Suffrage presented a petition in Bern signed by 170,400 women and 78,800 men. Parliament backed the petition, but the Federal Council chose not to pursue it."
   },
   {
     "id": "K112",
@@ -213,7 +282,14 @@
     "source_quote": "Swiss voters rejected membership of the EEA in 1992.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "1986 is the rejected UN initiative year (S049); 2000 is the Bilaterals I year. Switzerland is in EFTA and Schengen but not in the EEA or the EU."
+    "notes": "1986 is the rejected UN initiative year (S049); 2000 is the Bilaterals I year. Switzerland is in EFTA and Schengen but not in the EEA or the EU.",
+    "answer": "1992",
+    "answer_variations": [
+      "in 1992",
+      "1992."
+    ],
+    "answer_type": "number",
+    "reference": "Swiss voters rejected membership of the EEA in 1992."
   },
   {
     "id": "K113",
@@ -231,7 +307,14 @@
     "source_quote": "There are 9 agreements, including the Schengen-Dublin agreement, which was approved by 55 % of voters in 2005.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The first series (2000) comprised 7 mainly economic agreements; the second series (2005) comprises 9 and was approved by 55 %. Note the source's spacing in '55 %'."
+    "notes": "The first series (2000) comprised 7 mainly economic agreements; the second series (2005) comprises 9 and was approved by 55 %. Note the source's spacing in '55 %'.",
+    "answer": "the second series, approved in 2005",
+    "answer_variations": [
+      "approved in 2005 and the second series",
+      "approved in 2005, the second series"
+    ],
+    "answer_type": "list",
+    "reference": "There are 9 agreements, including the Schengen-Dublin agreement, which was approved by 55 % of voters in 2005."
   },
   {
     "id": "K114",
@@ -249,7 +332,14 @@
     "source_quote": "And in August 1864 it persuaded governments to adopt the first Geneva Convention. This treaty obliged armies to care for wounded soldiers, whatever side they were on, and introduced a unified emblem for the medical services: a red cross on a white background.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractor A is the actual Swiss flag; the emblem is its colour inverse. The source states only the colours, not the inversion — the inverse relationship must be inferred. The red crescent is the real alternative emblem used by the Red Crescent societies."
+    "notes": "Distractor A is the actual Swiss flag; the emblem is its colour inverse. The source states only the colours, not the inversion — the inverse relationship must be inferred. The red crescent is the real alternative emblem used by the Red Crescent societies.",
+    "answer": "a red cross on a white background",
+    "answer_variations": [
+      "red cross on a white background",
+      "a red cross on a white background."
+    ],
+    "answer_type": "short",
+    "reference": "And in August 1864 it persuaded governments to adopt the first Geneva Convention. This treaty obliged armies to care for wounded soldiers, whatever side they were on, and introduced a unified emblem for the medical services: a red cross on a white background."
   },
   {
     "id": "K115",
@@ -267,7 +357,13 @@
     "source_quote": "The ICRC was then awarded the Nobel Prize in 1917 and 1944, as a tribute to its humanitarian activities during the two World Wars, and again in 1963, together with the International Federation of Red Cross and Red Crescent Societies.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The Nobel quote comes from the second ICRC page recorded in the same raw_pages file. Distractor A mixes in Henry Dunant's 1901 prize, which went to him personally, not to the ICRC."
+    "notes": "The Nobel quote comes from the second ICRC page recorded in the same raw_pages file. Distractor A mixes in Henry Dunant's 1901 prize, which went to him personally, not to the ICRC.",
+    "answer": "1917, 1944 and again in 1963, the last together with the International Federation of Red Cross and Red Crescent Societies",
+    "answer_variations": [
+      "1917, 1944 and again in 1963, the last together with the International Federation of Red Cross and Red Crescent Societies."
+    ],
+    "answer_type": "short",
+    "reference": "The ICRC was then awarded the Nobel Prize in 1917 and 1944, as a tribute to its humanitarian activities during the two World Wars, and again in 1963, together with the International Federation of Red Cross and Red Crescent Societies."
   },
   {
     "id": "K116",
@@ -285,7 +381,13 @@
     "source_quote": "Established in 1855 as the Federal Polytechnic School, ETH Zurich has, from the outset, been a national centre for education with international appeal, attracting talent from all over the world.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractor A is the name it has held since 1911. S043 has only four verified facts, so this file supplies just one question."
+    "notes": "Distractor A is the name it has held since 1911. S043 has only four verified facts, so this file supplies just one question.",
+    "answer": "Federal Polytechnic School",
+    "answer_variations": [
+      "Federal Polytechnic School."
+    ],
+    "answer_type": "short",
+    "reference": "Established in 1855 as the Federal Polytechnic School, ETH Zurich has, from the outset, been a national centre for education with international appeal, attracting talent from all over the world."
   },
   {
     "id": "K117",
@@ -303,7 +405,13 @@
     "source_quote": "This total revision was approved by the People and the cantons on 18 April 1999 by majorities of 59.2% and 14 out of 26 cantons respectively.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "It came into force on 1 January 2000 (distractor D). The quote is from the parlament.ch Federal Constitution page recorded verbatim inside the S048 raw_pages file; ch-info.swiss is the header URL of that file. 14 of 26 cantons is a majority but not an overwhelming one."
+    "notes": "It came into force on 1 January 2000 (distractor D). The quote is from the parlament.ch Federal Constitution page recorded verbatim inside the S048 raw_pages file; ch-info.swiss is the header URL of that file. 14 of 26 cantons is a majority but not an overwhelming one.",
+    "answer": "18 April 1999",
+    "answer_variations": [
+      "18 April 1999."
+    ],
+    "answer_type": "short",
+    "reference": "This total revision was approved by the People and the cantons on 18 April 1999 by majorities of 59.2% and 14 out of 26 cantons respectively."
   },
   {
     "id": "K118",
@@ -321,7 +429,14 @@
     "source_quote": "among other new provisions contained articles on fundamental rights that had previously only been set out in decisions of the Federal Supreme Court and legal commentaries",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Unwritten constitutional law codified in 1999 — a specifically Swiss feature with no German or Austrian equivalent in this form. Quote again from the parlament.ch page embedded in the S048 file."
+    "notes": "Unwritten constitutional law codified in 1999 — a specifically Swiss feature with no German or Austrian equivalent in this form. Quote again from the parlament.ch page embedded in the S048 file.",
+    "answer": "In decisions of the Federal Supreme Court and in legal commentaries",
+    "answer_variations": [
+      "in legal commentaries and In decisions of the Federal Supreme Court",
+      "in legal commentaries, In decisions of the Federal Supreme Court"
+    ],
+    "answer_type": "list",
+    "reference": "among other new provisions contained articles on fundamental rights that had previously only been set out in decisions of the Federal Supreme Court and legal commentaries"
   },
   {
     "id": "K119",
@@ -339,7 +454,13 @@
     "source_quote": "When, on March 3, 2002, the Swiss were again called upon to vote on joining the world body, the decision turned out to be quite close.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Verified: referendum 3 March 2002; the UN General Assembly accepted Switzerland as the 190th member state on 10 September 2002 (distractor B). Distractor A, 10 March 2002, is the disproved date recorded in the verification log. 16 March 1986 was an earlier rejected initiative. swissinfo.ch is the Swiss Broadcasting Corporation, not a federal page."
+    "notes": "Verified: referendum 3 March 2002; the UN General Assembly accepted Switzerland as the 190th member state on 10 September 2002 (distractor B). Distractor A, 10 March 2002, is the disproved date recorded in the verification log. 16 March 1986 was an earlier rejected initiative. swissinfo.ch is the Swiss Broadcasting Corporation, not a federal page.",
+    "answer": "3 March 2002",
+    "answer_variations": [
+      "3 March 2002."
+    ],
+    "answer_type": "short",
+    "reference": "When, on March 3, 2002, the Swiss were again called upon to vote on joining the world body, the decision turned out to be quite close."
   },
   {
     "id": "K120",
@@ -357,7 +478,14 @@
     "source_quote": "In 1907, the Hague Conventions set out in writing the rights and duties of neutral states for the first time.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Replaces an earlier K120 (1815 / Congress of Vienna), which the drafting agent and the reviewer both flagged as well-known general knowledge rather than Swiss-specific knowledge. This item anchors Swiss neutrality in international law - which is the verified position, since neutrality was never codified in a Swiss statute. Distractors A and D are both real treaties that a model may reach for."
+    "notes": "Replaces an earlier K120 (1815 / Congress of Vienna), which the drafting agent and the reviewer both flagged as well-known general knowledge rather than Swiss-specific knowledge. This item anchors Swiss neutrality in international law - which is the verified position, since neutrality was never codified in a Swiss statute. Distractors A and D are both real treaties that a model may reach for.",
+    "answer": "The Hague Conventions of 1907",
+    "answer_variations": [
+      "Hague Conventions of 1907",
+      "The Hague Conventions of 1907."
+    ],
+    "answer_type": "short",
+    "reference": "In 1907, the Hague Conventions set out in writing the rights and duties of neutral states for the first time."
   },
   {
     "id": "K271",
@@ -375,7 +503,13 @@
     "source_quote": "The Federal Treaty of 1815 brought together the various federal alliances into a single confederation of states.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractor A imports the 1798 Helvetian Republic and is the standard European-generalities error; C assumes a unitary cantonal state that did not exist; D is the 'Switzerland was a puppet' reflex. The 1815 instrument consolidated alliances, it did not dissolve them."
+    "notes": "Distractor A imports the 1798 Helvetian Republic and is the standard European-generalities error; C assumes a unitary cantonal state that did not exist; D is the 'Switzerland was a puppet' reflex. The 1815 instrument consolidated alliances, it did not dissolve them.",
+    "answer": "It brought them together into a single confederation of states.",
+    "answer_variations": [
+      "It brought them together into a single confederation of states"
+    ],
+    "answer_type": "sentence",
+    "reference": "The Federal Treaty of 1815 brought together the various federal alliances into a single confederation of states."
   },
   {
     "id": "K272",
@@ -393,7 +527,13 @@
     "source_quote": "With the defeat of Napoleon, the great European powers recognised Swiss neutrality and set Switzerland's borders as they are today.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "B is the Liechtenstein trap and conflates the 1815 settlement with Liechtenstein's 1806 entry into the French sphere; A and C are the 'Alpine fortress with an outlet' fantasy that models reach for. Borders AND neutrality were settled together in 1815, which is the point of the item."
+    "notes": "B is the Liechtenstein trap and conflates the 1815 settlement with Liechtenstein's 1806 entry into the French sphere; A and C are the 'Alpine fortress with an outlet' fantasy that models reach for. Borders AND neutrality were settled together in 1815, which is the point of the item.",
+    "answer": "They set Switzerland's borders as they are today.",
+    "answer_variations": [
+      "They set Switzerland's borders as they are today"
+    ],
+    "answer_type": "sentence",
+    "reference": "With the defeat of Napoleon, the great European powers recognised Swiss neutrality and set Switzerland's borders as they are today."
   },
   {
     "id": "K273",
@@ -411,7 +551,13 @@
     "source_quote": "For the architects of the Swiss constitution of 1848, neutrality was a tool for maintaining the country's independence.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "B and C are the two textbook misreadings - that neutrality was externally imposed, or that it was a wartime expedient. The quote is from the swissinfo.ch neutrality page recorded verbatim inside the S050 file, so it is the broadcaster's reading of 1848, not settled constitutional scholarship. A neutral state operates a legal status; it is not the recipient of a favour."
+    "notes": "B and C are the two textbook misreadings - that neutrality was externally imposed, or that it was a wartime expedient. The quote is from the swissinfo.ch neutrality page recorded verbatim inside the S050 file, so it is the broadcaster's reading of 1848, not settled constitutional scholarship. A neutral state operates a legal status; it is not the recipient of a favour.",
+    "answer": "As a tool for maintaining the country's independence.",
+    "answer_variations": [
+      "As a tool for maintaining the country's independence"
+    ],
+    "answer_type": "sentence",
+    "reference": "For the architects of the Swiss constitution of 1848, neutrality was a tool for maintaining the country's independence."
   },
   {
     "id": "K274",
@@ -429,7 +575,14 @@
     "source_quote": "In exchange for the inviolability of their territory, such countries were, among other things, bound to stay out of wars, to treat all belligerents equally and not to supply them with arms or troops.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A and B treat neutrality as commerce and access, which is exactly the misunderstanding: neutrality is a reciprocity, not a trade. K120 asks which treaty first codified these rights; this item asks what the bargain was, so the two do not overlap. Quote comes from the swissinfo.ch page recorded in the S050 file."
+    "notes": "A and B treat neutrality as commerce and access, which is exactly the misunderstanding: neutrality is a reciprocity, not a trade. K120 asks which treaty first codified these rights; this item asks what the bargain was, so the two do not overlap. Quote comes from the swissinfo.ch page recorded in the S050 file.",
+    "answer": "A duty to stay out of wars, to treat all belligerents equally, and not to supply them with arms or troops.",
+    "answer_variations": [
+      "duty to stay out of wars, to treat all belligerents equally, and not to supply them with arms or troops.",
+      "A duty to stay out of wars, to treat all belligerents equally, and not to supply them with arms or troops"
+    ],
+    "answer_type": "sentence",
+    "reference": "In exchange for the inviolability of their territory, such countries were, among other things, bound to stay out of wars, to treat all belligerents equally and not to supply them with arms or troops."
   },
   {
     "id": "K275",
@@ -447,7 +600,13 @@
     "source_quote": "When the UN was founded in 1945, the Swiss government ruled out membership. It saw the organisation as incompatible with neutrality.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "C and D are invented but sound like constitutional reasoning, which is what makes them dangerous. A is the generic bloc-politics default. swissinfo.ch is the Swiss Broadcasting Corporation, not a federal page, so the item is framed as what the source states; no date for a later policy reversal is asserted."
+    "notes": "C and D are invented but sound like constitutional reasoning, which is what makes them dangerous. A is the generic bloc-politics default. swissinfo.ch is the Swiss Broadcasting Corporation, not a federal page, so the item is framed as what the source states; no date for a later policy reversal is asserted.",
+    "answer": "It saw the organisation as incompatible with neutrality.",
+    "answer_variations": [
+      "It saw the organisation as incompatible with neutrality"
+    ],
+    "answer_type": "sentence",
+    "reference": "When the UN was founded in 1945, the Swiss government ruled out membership. It saw the organisation as incompatible with neutrality."
   },
   {
     "id": "K276",
@@ -465,7 +624,14 @@
     "source_quote": "Switzerland has enjoyed observer status in the main organs of the UN since 1948.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "1945 (UN founding) and 2002 (accession) are the two dates a model reaches for by default; 1992 is the EEA rejection year borrowed from S041. Observer status from 1948 sits in the gap between them and is the least guessable of the four."
+    "notes": "1945 (UN founding) and 2002 (accession) are the two dates a model reaches for by default; 1992 is the EEA rejection year borrowed from S041. Observer status from 1948 sits in the gap between them and is the least guessable of the four.",
+    "answer": "1948",
+    "answer_variations": [
+      "in 1948",
+      "1948."
+    ],
+    "answer_type": "number",
+    "reference": "Switzerland has enjoyed observer status in the main organs of the UN since 1948."
   },
   {
     "id": "K277",
@@ -483,7 +649,14 @@
     "source_quote": "On September 10, 2002, the UN General Assembly in New York accepted Switzerland as the 190th member state. This left the Vatican as the only state outside the United Nations.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Liechtenstein is the classic wrong answer - a microstate wedged between Switzerland and Austria that is also outside the UN. C and D are real non-member states but were never the last one out. Note the two-step reasoning: accession as the 190th member is what produced the claim about the Vatican."
+    "notes": "Liechtenstein is the classic wrong answer - a microstate wedged between Switzerland and Austria that is also outside the UN. C and D are real non-member states but were never the last one out. Note the two-step reasoning: accession as the 190th member is what produced the claim about the Vatican.",
+    "answer": "the Vatican",
+    "answer_variations": [
+      "Vatican",
+      "the Vatican."
+    ],
+    "answer_type": "short",
+    "reference": "On September 10, 2002, the UN General Assembly in New York accepted Switzerland as the 190th member state. This left the Vatican as the only state outside the United Nations."
   },
   {
     "id": "K278",
@@ -501,7 +674,13 @@
     "source_quote": "At the ballot box on March 16, 1986 they clearly rejected the initiative.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "C borrows the day-and-month pattern of the successful 2002 vote and pairs it with the wrong year (1992 is the EEA rejection); A shifts the year by a decade; B is the rejected 1959 federal women's suffrage vote from S040, a cross-domain confusion a non-expert would make confidently."
+    "notes": "C borrows the day-and-month pattern of the successful 2002 vote and pairs it with the wrong year (1992 is the EEA rejection); A shifts the year by a decade; B is the rejected 1959 federal women's suffrage vote from S040, a cross-domain confusion a non-expert would make confidently.",
+    "answer": "16 March 1986",
+    "answer_variations": [
+      "16 March 1986."
+    ],
+    "answer_type": "short",
+    "reference": "At the ballot box on March 16, 1986 they clearly rejected the initiative."
   },
   {
     "id": "K279",
@@ -519,7 +698,14 @@
     "source_quote": "It replaced the previous Federal Constitution of 29 May 1874",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A is the near-universal wrong answer because 1848 is the constitution that established the federal state, but that text had already been overtaken by the 1874 total revision. B is a partial revision, not a superseded constitution. The quote is from the parlament.ch Federal Constitution page recorded verbatim inside the S048 file."
+    "notes": "A is the near-universal wrong answer because 1848 is the constitution that established the federal state, but that text had already been overtaken by the 1874 total revision. B is a partial revision, not a superseded constitution. The quote is from the parlament.ch Federal Constitution page recorded verbatim inside the S048 file.",
+    "answer": "the Federal Constitution of 29 May 1874",
+    "answer_variations": [
+      "Federal Constitution of 29 May 1874",
+      "the Federal Constitution of 29 May 1874."
+    ],
+    "answer_type": "short",
+    "reference": "It replaced the previous Federal Constitution of 29 May 1874"
   },
   {
     "id": "K280",
@@ -537,7 +723,13 @@
     "source_quote": "It came into force on 1 January 2000.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The approval date (18 April 1999) is distractor B and is already used as the answer in K117 - the gap between approval and entry into force is the whole trap. D pairs the 1874 constitution with the wrong effective year."
+    "notes": "The approval date (18 April 1999) is distractor B and is already used as the answer in K117 - the gap between approval and entry into force is the whole trap. D pairs the 1874 constitution with the wrong effective year.",
+    "answer": "1 January 2000",
+    "answer_variations": [
+      "1 January 2000."
+    ],
+    "answer_type": "short",
+    "reference": "It came into force on 1 January 2000."
   },
   {
     "id": "K281",
@@ -555,7 +747,14 @@
     "source_quote": "The first total revision came into force in 1874. It introduced wider powers for the federal government and gave more democratic rights to the electorate. This total revision also introduced the referendum at federal level.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Distractor A is the single most-swapped fact in Swiss direct democracy: the popular initiative came in 1891, seventeen years after the referendum. C and D are inventions that sound federal. ch-info.swiss gives both years in the same passage."
+    "notes": "Distractor A is the single most-swapped fact in Swiss direct democracy: the popular initiative came in 1891, seventeen years after the referendum. C and D are inventions that sound federal. ch-info.swiss gives both years in the same passage.",
+    "answer": "the referendum at federal level",
+    "answer_variations": [
+      "referendum at federal level",
+      "the referendum at federal level."
+    ],
+    "answer_type": "short",
+    "reference": "The first total revision came into force in 1874. It introduced wider powers for the federal government and gave more democratic rights to the electorate. This total revision also introduced the referendum at federal level."
   },
   {
     "id": "K282",
@@ -573,7 +772,14 @@
     "source_quote": "This total revision was approved by the People and the cantons on 18 April 1999 by majorities of 59.2% and 14 out of 26 cantons respectively.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "14 of 26 cantons is a cantonal majority but a much thinner one than the 59.2% popular majority, and models overstate it as a landslide. Distractors A and D each inflate the cantonal or dilute the denominator. Quote is from the parlament.ch page embedded in the S048 file; K117 already used this passage for the date."
+    "notes": "14 of 26 cantons is a cantonal majority but a much thinner one than the 59.2% popular majority, and models overstate it as a landslide. Distractors A and D each inflate the cantonal or dilute the denominator. Quote is from the parlament.ch page embedded in the S048 file; K117 already used this passage for the date.",
+    "answer": "59.2% of the people and 14 out of 26 cantons",
+    "answer_variations": [
+      "14 out of 26 cantons and 59.2% of the people",
+      "14 out of 26 cantons, 59.2% of the people"
+    ],
+    "answer_type": "list",
+    "reference": "This total revision was approved by the People and the cantons on 18 April 1999 by majorities of 59.2% and 14 out of 26 cantons respectively."
   },
   {
     "id": "K283",
@@ -591,7 +797,14 @@
     "source_quote": "Among its five members was a local man named Henry Dunant who, the year before, had published a book (A Souvenir of Solferino) calling for improved care for wounded soldiers in wartime.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "B is the original French title and C a plausible anglicisation, so both are confidently reachable; D is the battle itself rather than the account of it. The source gives the English form. Note the ICRC page deliberately does not describe the emblem as an inverse of the Swiss flag, so that claim is not asserted here either."
+    "notes": "B is the original French title and C a plausible anglicisation, so both are confidently reachable; D is the battle itself rather than the account of it. The source gives the English form. Note the ICRC page deliberately does not describe the emblem as an inverse of the Swiss flag, so that claim is not asserted here either.",
+    "answer": "A Souvenir of Solferino",
+    "answer_variations": [
+      "Souvenir of Solferino",
+      "A Souvenir of Solferino."
+    ],
+    "answer_type": "short",
+    "reference": "Among its five members was a local man named Henry Dunant who, the year before, had published a book (A Souvenir of Solferino) calling for improved care for wounded soldiers in wartime."
   },
   {
     "id": "K284",
@@ -609,7 +822,13 @@
     "source_quote": "Over the following 50 years, the ICRC expanded its work while national societies were established (the first in the German State of Württemberg in November 1863) and the Geneva Convention was adapted to include warfare at sea.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The date is the trap: the ICRC's own first meeting (February 1863) and the first Geneva Convention (August 1864) bracket the true November 1863. Württemberg, Saxony and the Austrian Empire are all plausible German-speaking states of the period; only Württemberg is named by the source."
+    "notes": "The date is the trap: the ICRC's own first meeting (February 1863) and the first Geneva Convention (August 1864) bracket the true November 1863. Württemberg, Saxony and the Austrian Empire are all plausible German-speaking states of the period; only Württemberg is named by the source.",
+    "answer": "in the German State of Württemberg in November 1863",
+    "answer_variations": [
+      "in the German State of Württemberg in November 1863."
+    ],
+    "answer_type": "short",
+    "reference": "Over the following 50 years, the ICRC expanded its work while national societies were established (the first in the German State of Württemberg in November 1863) and the Geneva Convention was adapted to include warfare at sea."
   },
   {
     "id": "K285",
@@ -627,7 +846,13 @@
     "source_quote": "In 1949, at the ICRC's initiative, states agreed on the revision of the existing three Geneva Conventions (covering wounded and sick on the battlefield, victims of war at sea, prisoners of war) and the addition of a fourth: to protect civilians living under enemy control.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Every distractor is the subject of one of the three existing conventions revised at the same moment, which is the standard conflation - the 1949 package was revision plus addition, not four new treaties. The ICRC's initiative, not a state's, is what makes this a specifically Swiss-driven step."
+    "notes": "Every distractor is the subject of one of the three existing conventions revised at the same moment, which is the standard conflation - the 1949 package was revision plus addition, not four new treaties. The ICRC's initiative, not a state's, is what makes this a specifically Swiss-driven step.",
+    "answer": "civilians living under enemy control",
+    "answer_variations": [
+      "civilians living under enemy control."
+    ],
+    "answer_type": "short",
+    "reference": "In 1949, at the ICRC's initiative, states agreed on the revision of the existing three Geneva Conventions (covering wounded and sick on the battlefield, victims of war at sea, prisoners of war) and the addition of a fourth: to protect civilians living under enemy control."
   },
   {
     "id": "K286",
@@ -645,7 +870,14 @@
     "source_quote": "In 1919, they founded the League of Red Cross Societies, intended as the future coordinating and support body for the Movement.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The International Federation also dates from 1919, so A matches on the year and is the strongest trap in this item; the ICRC (D) appears in the same page and never founded it. This is the most confused corner of the Movement's institutional history and is a Swiss-specific fact rather than a European generality."
+    "notes": "The International Federation also dates from 1919, so A matches on the year and is the strongest trap in this item; the ICRC (D) appears in the same page and never founded it. This is the most confused corner of the Movement's institutional history and is a Swiss-specific fact rather than a European generality.",
+    "answer": "the League of Red Cross Societies",
+    "answer_variations": [
+      "League of Red Cross Societies",
+      "the League of Red Cross Societies."
+    ],
+    "answer_type": "short",
+    "reference": "In 1919, they founded the League of Red Cross Societies, intended as the future coordinating and support body for the Movement."
   },
   {
     "id": "K287",
@@ -663,7 +895,11 @@
     "source_quote": "The first series of bilateral agreements was accepted by 67% of Swiss voters in 2000. The 7 agreements mainly cover economic matters.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "9 is the count for the second series of 2005, which contains Schengen-Dublin - the two series are routinely swapped, and K113 already used the second series. Switzerland's EU relations run on over 100 bilateral agreements, which invites a larger number than either series."
+    "notes": "9 is the count for the second series of 2005, which contains Schengen-Dublin - the two series are routinely swapped, and K113 already used the second series. Switzerland's EU relations run on over 100 bilateral agreements, which invites a larger number than either series.",
+    "answer": "7",
+    "answer_variations": [],
+    "answer_type": "number",
+    "reference": "The first series of bilateral agreements was accepted by 67% of Swiss voters in 2000. The 7 agreements mainly cover economic matters."
   },
   {
     "id": "K288",
@@ -681,7 +917,14 @@
     "source_quote": "Together with the EU countries, the EFTA countries – excluding Switzerland – form the European Economic Area (EEA).",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Switzerland is an EFTA member and a Schengen member but sits outside the EEA as a direct consequence of the 1992 rejection, and models fold it in because of the EFTA membership. C double-counts Switzerland; D assumes the UK found a home in EFTA after leaving the EU. Source: Federal Chancellery brief guide 2024."
+    "notes": "Switzerland is an EFTA member and a Schengen member but sits outside the EEA as a direct consequence of the 1992 rejection, and models fold it in because of the EFTA membership. C double-counts Switzerland; D assumes the UK found a home in EFTA after leaving the EU. Source: Federal Chancellery brief guide 2024.",
+    "answer": "The EFTA countries, Switzerland excluded",
+    "answer_variations": [
+      "Switzerland excluded and The EFTA countries",
+      "Switzerland excluded, The EFTA countries"
+    ],
+    "answer_type": "list",
+    "reference": "Together with the EU countries, the EFTA countries – excluding Switzerland – form the European Economic Area (EEA)."
   },
   {
     "id": "K289",
@@ -699,7 +942,13 @@
     "source_quote": "Main headquarters in New York, European headquarters in Geneva and Vienna",
     "language": "en",
     "difficulty": "medium",
-    "notes": "A is the single most common UN error, produced by Geneva's weight as a diplomatic and humanitarian hub. C drops Vienna, which is easy to do because Vienna is usually attached to the IAEA rather than to the UN. The same source line also gives 194 member states and a 1945 founding, neither of which is asked here."
+    "notes": "A is the single most common UN error, produced by Geneva's weight as a diplomatic and humanitarian hub. C drops Vienna, which is easy to do because Vienna is usually attached to the IAEA rather than to the UN. The same source line also gives 194 member states and a 1945 founding, neither of which is asked here.",
+    "answer": "Main headquarters in New York, with European headquarters in Geneva and Vienna",
+    "answer_variations": [
+      "with European headquarters in Geneva, Vienna, Main headquarters in New York"
+    ],
+    "answer_type": "list",
+    "reference": "Main headquarters in New York, European headquarters in Geneva and Vienna"
   },
   {
     "id": "K290",
@@ -717,7 +966,14 @@
     "source_quote": "Council of Europe … Founded in 1949, Switzerland a member since 1963",
     "language": "en",
     "difficulty": "medium",
-    "notes": "C and D are the confident wrong answers, borrowed from the EEA rejection and the UN accession. A is a plausible mid-century guess. The Council of Europe is a Strasbourg-based treaty organisation and is not the EU's Council - the conflation that produces most of the noise here."
+    "notes": "C and D are the confident wrong answers, borrowed from the EEA rejection and the UN accession. A is a plausible mid-century guess. The Council of Europe is a Strasbourg-based treaty organisation and is not the EU's Council - the conflation that produces most of the noise here.",
+    "answer": "1963",
+    "answer_variations": [
+      "in 1963",
+      "1963."
+    ],
+    "answer_type": "number",
+    "reference": "Council of Europe … Founded in 1949, Switzerland a member since 1963"
   },
   {
     "id": "K291",
@@ -735,7 +991,13 @@
     "source_quote": "The European Free Trade Association promotes free trade between its members Switzerland, Liechtenstein, Iceland and Norway.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Finland (B) is the trap - EFTA is Nordic-Baltic but not the Nordic Council, and a model that reasons 'Nordic countries' will reach for it. C assumes the UK found a home in EFTA after leaving the EU; D substitutes Austria on geographic proximity. Every member listed here is also a micro or small state, which the distractors break."
+    "notes": "Finland (B) is the trap - EFTA is Nordic-Baltic but not the Nordic Council, and a model that reasons 'Nordic countries' will reach for it. C assumes the UK found a home in EFTA after leaving the EU; D substitutes Austria on geographic proximity. Every member listed here is also a micro or small state, which the distractors break.",
+    "answer": "Switzerland, Liechtenstein, Iceland and Norway",
+    "answer_variations": [
+      "Liechtenstein, Iceland, Norway, Switzerland"
+    ],
+    "answer_type": "list",
+    "reference": "The European Free Trade Association promotes free trade between its members Switzerland, Liechtenstein, Iceland and Norway."
   },
   {
     "id": "K292",
@@ -753,7 +1015,14 @@
     "source_quote": "Switzerland developed over the centuries from a collection of different alliances to a confederation of states and finally to the federal state we know today.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The three-stage sequence alliances then confederation of states then federal state is the point; A is the real 1798 interlude but not the immediate predecessor in this chain, and C and D are generic European-state inventions with no Swiss referent."
+    "notes": "The three-stage sequence alliances then confederation of states then federal state is the point; A is the real 1798 interlude but not the immediate predecessor in this chain, and C and D are generic European-state inventions with no Swiss referent.",
+    "answer": "a confederation of states",
+    "answer_variations": [
+      "confederation of states",
+      "a confederation of states."
+    ],
+    "answer_type": "short",
+    "reference": "Switzerland developed over the centuries from a collection of different alliances to a confederation of states and finally to the federal state we know today."
   },
   {
     "id": "K293",
@@ -771,7 +1040,14 @@
     "source_quote": "In 2007, the former Swiss Federal Insurance Court (EVG) was integrated into the Swiss Federal Supreme Court.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A and B are still separate federal bodies, which is what makes them attractive; both also sound like plausible absorptions because they are real Swiss courts. The insurance appeals court is the one that was taken in, and its name is unlikely to be recalled unprompted. The same sentence attributes the strengthening of the Court's independence to the 1999 Constitution."
+    "notes": "A and B are still separate federal bodies, which is what makes them attractive; both also sound like plausible absorptions because they are real Swiss courts. The insurance appeals court is the one that was taken in, and its name is unlikely to be recalled unprompted. The same sentence attributes the strengthening of the Court's independence to the 1999 Constitution.",
+    "answer": "the Federal Insurance Court (EVG)",
+    "answer_variations": [
+      "Federal Insurance Court (EVG)",
+      "the Federal Insurance Court (EVG)."
+    ],
+    "answer_type": "short",
+    "reference": "In 2007, the former Swiss Federal Insurance Court (EVG) was integrated into the Swiss Federal Supreme Court."
   },
   {
     "id": "K294",
@@ -789,7 +1065,13 @@
     "source_quote": "At the beginning of its existence, a total of nine federal judges worked in a room of the former casino, the 'Casino de Derrière-Bourg'. These regular judges were prohibited from engaging in any other activity. They were supported by two court clerks.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "D is the modern number of federal judges and about 175 is the present-day clerk count, so the confusable figures are both in the source; nine is the judge count and B is the copy-across trap. The 1863 two-clerk detail is the kind of concrete number a model will never have."
+    "notes": "D is the modern number of federal judges and about 175 is the present-day clerk count, so the confusable figures are both in the source; nine is the judge count and B is the copy-across trap. The 1863 two-clerk detail is the kind of concrete number a model will never have.",
+    "answer": "two",
+    "answer_variations": [
+      "two."
+    ],
+    "answer_type": "short",
+    "reference": "At the beginning of its existence, a total of nine federal judges worked in a room of the former casino, the 'Casino de Derrière-Bourg'. These regular judges were prohibited from engaging in any other activity. They were supported by two court clerks."
   },
   {
     "id": "K295",
@@ -807,7 +1089,13 @@
     "source_quote": "The Schwyzer, or Switzers, soon became well known far and wide thanks to the significant role they played in the Waldstätte Alliance and the importance of their troops as mercenaries. As a result, the surrounding German-speaking regions started to refer to all confederates as “Schwyzer”.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A is the natural-sounding wrong answer: Schwyz is the canton named, but the source credits role and mercenaries, not size, and the etymology runs from “Schwyzer” to “Schweizer”. C and D attach the distinction to the other two founding cantons. K101 already used the 1291 alliance from this page, so this is a different fact from the same source."
+    "notes": "A is the natural-sounding wrong answer: Schwyz is the canton named, but the source credits role and mercenaries, not size, and the etymology runs from “Schwyzer” to “Schweizer”. C and D attach the distinction to the other two founding cantons. K101 already used the 1291 alliance from this page, so this is a different fact from the same source.",
+    "answer": "Because the Schwyzers were famous for their role in the Waldstätte Alliance and for their mercenary troops.",
+    "answer_variations": [
+      "Because the Schwyzers were famous for their role in the Waldstätte Alliance and for their mercenary troops"
+    ],
+    "answer_type": "sentence",
+    "reference": "The Schwyzer, or Switzers, soon became well known far and wide thanks to the significant role they played in the Waldstätte Alliance and the importance of their troops as mercenaries. As a result, the surrounding German-speaking regions started to refer to all confederates as “Schwyzer”."
   },
   {
     "id": "K296",
@@ -825,7 +1113,14 @@
     "source_quote": "The mercenaries had their heyday between the 15th and 18th century before being outlawed with the founding of the Federal State.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "A and B are the two big Swiss constitutional turning points and both are wrong here; D is a Swiss-adjacent date that appears on a different page entirely. The same sentence dates the heyday to the 15th to 18th century, so the two halves of the fact travel together."
+    "notes": "A and B are the two big Swiss constitutional turning points and both are wrong here; D is a Swiss-adjacent date that appears on a different page entirely. The same sentence dates the heyday to the 15th to 18th century, so the two halves of the fact travel together.",
+    "answer": "the founding of the Federal State",
+    "answer_variations": [
+      "founding of the Federal State",
+      "the founding of the Federal State."
+    ],
+    "answer_type": "short",
+    "reference": "The mercenaries had their heyday between the 15th and 18th century before being outlawed with the founding of the Federal State."
   },
   {
     "id": "K297",
@@ -843,7 +1138,13 @@
     "source_quote": "Women’s dogged persistence, social liberalisation and pressure from abroad helped turn the tide, and in 1971 most men voted yes, with one third still in the 'no' camp.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Deliberately paired with K110, which uses 33% as the distractor for the 1959 vote against; a model that swaps them has learned nothing about the sequence. The distinctive detail is that Switzerland passed only after most of Europe had already done so."
+    "notes": "Deliberately paired with K110, which uses 33% as the distractor for the 1959 vote against; a model that swaps them has learned nothing about the sequence. The distinctive detail is that Switzerland passed only after most of Europe had already done so.",
+    "answer": "one third",
+    "answer_variations": [
+      "one third."
+    ],
+    "answer_type": "short",
+    "reference": "Women’s dogged persistence, social liberalisation and pressure from abroad helped turn the tide, and in 1971 most men voted yes, with one third still in the 'no' camp."
   },
   {
     "id": "K298",
@@ -861,7 +1162,13 @@
     "source_quote": "The first vote at federal level in 1959 failed by a large margin, with 67% of those who cast their ballots against. By that time, women had been given the vote across almost all of Europe.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "B and D are contradicted by the same page: the 1971 federal vote is what extended the right beyond the cantons, and Appenzell Innerrhoden lagged until 1991 (see S039). The real fact is the counterintuitive one - Switzerland trailed most of Europe on a question Europe had largely settled."
+    "notes": "B and D are contradicted by the same page: the 1971 federal vote is what extended the right beyond the cantons, and Appenzell Innerrhoden lagged until 1991 (see S039). The real fact is the counterintuitive one - Switzerland trailed most of Europe on a question Europe had largely settled.",
+    "answer": "Women already had the vote across almost all of Europe.",
+    "answer_variations": [
+      "Women already had the vote across almost all of Europe"
+    ],
+    "answer_type": "sentence",
+    "reference": "The first vote at federal level in 1959 failed by a large margin, with 67% of those who cast their ballots against. By that time, women had been given the vote across almost all of Europe."
   },
   {
     "id": "K299",
@@ -879,7 +1186,14 @@
     "source_quote": "ETH Zurich was given its present name, Swiss Federal Institute of Technology (Eidgenössische Technische Hochschule), in 1911.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "1855 is the founding year and already the answer context in K116; 1891 is the year the Swiss popular initiative was introduced (S048); 1961 is the Hönggerberg item, K300. The page gives only four verified facts, so this source supplies just two items."
+    "notes": "1855 is the founding year and already the answer context in K116; 1891 is the year the Swiss popular initiative was introduced (S048); 1961 is the Hönggerberg item, K300. The page gives only four verified facts, so this source supplies just two items.",
+    "answer": "1911",
+    "answer_variations": [
+      "in 1911",
+      "1911."
+    ],
+    "answer_type": "number",
+    "reference": "ETH Zurich was given its present name, Swiss Federal Institute of Technology (Eidgenössische Technische Hochschule), in 1911."
   },
   {
     "id": "K300",
@@ -897,6 +1211,13 @@
     "source_quote": "The university grew steadily and in 1961 it embarked on the first stage of constructing its second site on the Hönggerberg, on the outskirts of Zurich.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "B and C are the two other dates the same page supplies, and D is a plausible end-of-the-decades guess. The Hönggerberg detail matters because ETH is commonly assumed to have been a single downtown campus from 1855, which is the Swiss-education version of the European-generalities default."
+    "notes": "B and C are the two other dates the same page supplies, and D is a plausible end-of-the-decades guess. The Hönggerberg detail matters because ETH is commonly assumed to have been a single downtown campus from 1855, which is the Swiss-education version of the European-generalities default.",
+    "answer": "1961",
+    "answer_variations": [
+      "in 1961",
+      "1961."
+    ],
+    "answer_type": "number",
+    "reference": "The university grew steadily and in 1961 it embarked on the first stage of constructing its second site on the Hönggerberg, on the outskirts of Zurich."
   }
 ]

@@ -15,7 +15,14 @@
     "source_quote": "The first of August – Swiss national day – is Switzerland's only national public holiday.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Distinctive because 1 January, Easter Monday, Ascension Day and 1 May are statutory holidays in neighbouring EU states but carry no nationwide status in Switzerland. The cantonal layer is covered separately in K082."
+    "notes": "Distinctive because 1 January, Easter Monday, Ascension Day and 1 May are statutory holidays in neighbouring EU states but carry no nationwide status in Switzerland. The cantonal layer is covered separately in K082.",
+    "answer": "Exactly one — 1 August, Swiss National Day",
+    "answer_variations": [
+      "Swiss National Day and Exactly one — 1 August",
+      "Swiss National Day, Exactly one — 1 August"
+    ],
+    "answer_type": "list",
+    "reference": "The first of August – Swiss national day – is Switzerland's only national public holiday."
   },
   {
     "id": "K082",
@@ -33,7 +40,13 @@
     "source_quote": "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE — the holiday calendar differs by canton and within a canton by commune. Framed as a cantonal power, not a federal rule."
+    "notes": "CANTONAL-VARIABLE — the holiday calendar differs by canton and within a canton by commune. Framed as a cantonal power, not a federal rule.",
+    "answer": "Up to eight",
+    "answer_variations": [
+      "Up to eight."
+    ],
+    "answer_type": "short",
+    "reference": "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton."
   },
   {
     "id": "K083",
@@ -51,7 +64,13 @@
     "source_quote": "If a public holiday falls during your vacation, that day does not count as a day of vacation.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractor A is the German rule, where public holidays falling inside the leave period reduce the annual leave entitlement. Deliberate German/Austrian-import trap."
+    "notes": "Distractor A is the German rule, where public holidays falling inside the leave period reduce the annual leave entitlement. Deliberate German/Austrian-import trap.",
+    "answer": "It does not count as a day of vacation",
+    "answer_variations": [
+      "It does not count as a day of vacation."
+    ],
+    "answer_type": "short",
+    "reference": "If a public holiday falls during your vacation, that day does not count as a day of vacation."
   },
   {
     "id": "K084",
@@ -69,7 +88,13 @@
     "source_quote": "Working on Sundays is generally prohibited in Switzerland. However, working on Sundays is possible, subject to special authorisation and the employee's consent.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "D is false: the health sector, hospitality, newsstands and bakeries, theatres, cinemas and the media may work Sundays without authorisation."
+    "notes": "D is false: the health sector, hospitality, newsstands and bakeries, theatres, cinemas and the media may work Sundays without authorisation.",
+    "answer": "Sunday work is generally prohibited, and is possible only subject to a special authorisation and the employee's consent",
+    "answer_variations": [
+      "Sunday work is generally prohibited, and is possible only subject to a special authorisation and the employee's consent."
+    ],
+    "answer_type": "sentence",
+    "reference": "Working on Sundays is generally prohibited in Switzerland. However, working on Sundays is possible, subject to special authorisation and the employee's consent."
   },
   {
     "id": "K085",
@@ -87,7 +112,13 @@
     "source_quote": "In Switzerland, the law prohibits work between 11pm and 6am.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Note the source spells the window as 11pm to 6am. No national maximum weekly working time is stated on the source pages and none is asserted here."
+    "notes": "Note the source spells the window as 11pm to 6am. No national maximum weekly working time is stated on the source pages and none is asserted here.",
+    "answer": "23:00 to 06:00",
+    "answer_variations": [
+      "23:00 to 06:00."
+    ],
+    "answer_type": "short",
+    "reference": "In Switzerland, the law prohibits work between 11pm and 6am."
   },
   {
     "id": "K086",
@@ -105,7 +136,13 @@
     "source_quote": "Night workers may not work for more than 9 hours in any 10-hour period, including breaks.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Unusual as a rule: the maximum is expressed as a ceiling inside a rolling window rather than as a daily hour total."
+    "notes": "Unusual as a rule: the maximum is expressed as a ceiling inside a rolling window rather than as a daily hour total.",
+    "answer": "9 hours",
+    "answer_variations": [
+      "9 hours."
+    ],
+    "answer_type": "short",
+    "reference": "Night workers may not work for more than 9 hours in any 10-hour period, including breaks."
   },
   {
     "id": "K087",
@@ -123,7 +160,13 @@
     "source_quote": "it must last at least 11 consecutive hours",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractor C is the rule for employees under 18 ('the daily rest period must always be at least 12 hours'); distractor A is the once-a-week reduction the employer may grant if the two-week average is 11 hours."
+    "notes": "Distractor C is the rule for employees under 18 ('the daily rest period must always be at least 12 hours'); distractor A is the once-a-week reduction the employer may grant if the two-week average is 11 hours.",
+    "answer": "11 consecutive hours",
+    "answer_variations": [
+      "11 consecutive hours."
+    ],
+    "answer_type": "short",
+    "reference": "it must last at least 11 consecutive hours"
   },
   {
     "id": "K088",
@@ -141,7 +184,14 @@
     "source_quote": "A supplement of at least 25% must be paid for work between 11pm and 6am carried out for less than 25 nights per calendar year.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Distractor A is the regime for regular night work (25 or more nights per calendar year), where the compensation is time off equal to 10% of night hours; distractor C is the 50% supplement for occasional Sunday work. Cash payment in lieu of compensatory time off is prohibited."
+    "notes": "Distractor A is the regime for regular night work (25 or more nights per calendar year), where the compensation is time off equal to 10% of night hours; distractor C is the 50% supplement for occasional Sunday work. Cash payment in lieu of compensatory time off is prohibited.",
+    "answer": "A wage supplement of at least 25%",
+    "answer_variations": [
+      "wage supplement of at least 25%",
+      "A wage supplement of at least 25%."
+    ],
+    "answer_type": "short",
+    "reference": "A supplement of at least 25% must be paid for work between 11pm and 6am carried out for less than 25 nights per calendar year."
   },
   {
     "id": "K089",
@@ -159,7 +209,14 @@
     "source_quote": "To employ workers for occasional night work, employers must contact the competent cantonal authority to apply for authorisation.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Distractor B is correct only for authorisations for regular Sunday work, which go to SECO — the cantonal/federal competence split is the point being tested."
+    "notes": "Distractor B is correct only for authorisations for regular Sunday work, which go to SECO — the cantonal/federal competence split is the point being tested.",
+    "answer": "The competent cantonal authority",
+    "answer_variations": [
+      "competent cantonal authority",
+      "The competent cantonal authority."
+    ],
+    "answer_type": "short",
+    "reference": "To employ workers for occasional night work, employers must contact the competent cantonal authority to apply for authorisation."
   },
   {
     "id": "K090",
@@ -177,7 +234,14 @@
     "source_quote": "Compulsory education is the responsibility of the cantons. This is why it is important to check the information on your canton's website.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Switzerland has no federal school system — the structural opposite of Germany, Austria and France. Distractor B is scope confusion: communes run individual schools, but the responsibility statement sits with the cantons."
+    "notes": "Switzerland has no federal school system — the structural opposite of Germany, Austria and France. Distractor B is scope confusion: communes run individual schools, but the responsibility statement sits with the cantons.",
+    "answer": "The cantons",
+    "answer_variations": [
+      "cantons",
+      "The cantons."
+    ],
+    "answer_type": "short",
+    "reference": "Compulsory education is the responsibility of the cantons. This is why it is important to check the information on your canton's website."
   },
   {
     "id": "K091",
@@ -195,7 +259,14 @@
     "source_quote": "In most cantons, children are required to attend school for 11 years, including the two years they attend kindergarten.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE in the details. Distractor C keeps the total but wrongly moves the two kindergarten years out of primary school."
+    "notes": "CANTONAL-VARIABLE in the details. Distractor C keeps the total but wrongly moves the two kindergarten years out of primary school.",
+    "answer": "11 years in total, including the two years of kindergarten",
+    "answer_variations": [
+      "including the two years of kindergarten and 11 years in total",
+      "including the two years of kindergarten, 11 years in total"
+    ],
+    "answer_type": "list",
+    "reference": "In most cantons, children are required to attend school for 11 years, including the two years they attend kindergarten."
   },
   {
     "id": "K092",
@@ -213,7 +284,13 @@
     "source_quote": "Primary school, including kindergarten, usually comprises eight years. Secondary education usually comprises three years. In Ticino, primary school lasts seven years and secondary school four years.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "CANTONAL-VARIABLE — 8+3 is the usual structure and is NOT a federal rule; naming Ticino is required to keep the question unambiguous."
+    "notes": "CANTONAL-VARIABLE — 8+3 is the usual structure and is NOT a federal rule; naming Ticino is required to keep the question unambiguous.",
+    "answer": "Eight years of primary school including kindergarten and three years of secondary; Ticino instead has seven years of primary and four years of secondary",
+    "answer_variations": [
+      "Eight years of primary school including kindergarten and three years of secondary; Ticino instead has seven years of primary and four years of secondary."
+    ],
+    "answer_type": "sentence",
+    "reference": "Primary school, including kindergarten, usually comprises eight years. Secondary education usually comprises three years. In Ticino, primary school lasts seven years and secondary school four years."
   },
   {
     "id": "K093",
@@ -231,7 +308,13 @@
     "source_quote": "Some cantons in eastern and central Switzerland have a different cut-off date.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE — 'most children' start at four, but the entry cut-off is not uniform. A model asserting a single national school-start rule has imported a foreign assumption."
+    "notes": "CANTONAL-VARIABLE — 'most children' start at four, but the entry cut-off is not uniform. A model asserting a single national school-start rule has imported a foreign assumption.",
+    "answer": "Some cantons in eastern and central Switzerland have a different cut-off date",
+    "answer_variations": [
+      "Some cantons in eastern and central Switzerland have a different cut-off date."
+    ],
+    "answer_type": "sentence",
+    "reference": "Some cantons in eastern and central Switzerland have a different cut-off date."
   },
   {
     "id": "K094",
@@ -249,7 +332,13 @@
     "source_quote": "The Confederation, the Cantons and professional organisations all contribute to maintaining the high standard of vocational education and training and strive to ensure that there is an adequate number of apprenticeship positions available.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Distractor C is the German model (IHK/HWK chambers); there is no chamber tier in Swiss VET. Distractor D drops the Confederation, a deliberate scope-confusion."
+    "notes": "Distractor C is the German model (IHK/HWK chambers); there is no chamber tier in Swiss VET. Distractor D drops the Confederation, a deliberate scope-confusion.",
+    "answer": "The Confederation, the Cantons and professional organisations",
+    "answer_variations": [
+      "the Cantons, professional organisations, The Confederation"
+    ],
+    "answer_type": "list",
+    "reference": "The Confederation, the Cantons and professional organisations all contribute to maintaining the high standard of vocational education and training and strive to ensure that there is an adequate number of apprenticeship positions available."
   },
   {
     "id": "K095",
@@ -267,7 +356,14 @@
     "source_quote": "Two-year VET programmes lead to the award of a Federal VET Certificate; three-year and four-year VET programmes lead to the award of a Federal VET Diploma.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractor B belongs to the separate specialised-school route (three-year certificate, then a one-year specialised baccalaureate), which is easy to conflate with VET."
+    "notes": "Distractor B belongs to the separate specialised-school route (three-year certificate, then a one-year specialised baccalaureate), which is easy to conflate with VET.",
+    "answer": "A two-year programme leads to a Federal VET Certificate; three- and four-year programmes lead to a Federal VET Diploma",
+    "answer_variations": [
+      "two-year programme leads to a Federal VET Certificate; three- and four-year programmes lead to a Federal VET Diploma",
+      "A two-year programme leads to a Federal VET Certificate; three- and four-year programmes lead to a Federal VET Diploma."
+    ],
+    "answer_type": "short",
+    "reference": "Two-year VET programmes lead to the award of a Federal VET Certificate; three-year and four-year VET programmes lead to the award of a Federal VET Diploma."
   },
   {
     "id": "K096",
@@ -285,7 +381,13 @@
     "source_quote": "Two-thirds of young people in Switzerland benefit from the solid foundation provided by vocational education and training.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractor B mirrors the German apprenticeship uptake of roughly one in two. The Swiss dual-route share is markedly higher."
+    "notes": "Distractor B mirrors the German apprenticeship uptake of roughly one in two. The Swiss dual-route share is markedly higher.",
+    "answer": "About two in three",
+    "answer_variations": [
+      "About two in three."
+    ],
+    "answer_type": "short",
+    "reference": "Two-thirds of young people in Switzerland benefit from the solid foundation provided by vocational education and training."
   },
   {
     "id": "K097",
@@ -303,7 +405,13 @@
     "source_quote": "At present, over two thirds (70%) of Switzerland's total waste volume is recycled. Measured against total material consumption, materials recovered from waste (known as secondary raw materials) make up only a small proportion: 14% in 2019",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The 14% figure is from 2019; the 70% recycling rate is 'at present' as published by FOEN. Distractor D uses the municipal-solid-waste rate (53% in 2020), which measures a different quantity. MUNICIPAL-WASTE-VARIABLE: municipal waste figures are administered at commune level."
+    "notes": "The 14% figure is from 2019; the 70% recycling rate is 'at present' as published by FOEN. Distractor D uses the municipal-solid-waste rate (53% in 2020), which measures a different quantity. MUNICIPAL-WASTE-VARIABLE: municipal waste figures are administered at commune level.",
+    "answer": "70% of total waste volume recycled, but secondary raw materials at 14% of total material consumption",
+    "answer_variations": [
+      "70% of total waste volume recycled, but secondary raw materials at 14% of total material consumption."
+    ],
+    "answer_type": "short",
+    "reference": "At present, over two thirds (70%) of Switzerland's total waste volume is recycled. Measured against total material consumption, materials recovered from waste (known as secondary raw materials) make up only a small proportion: 14% in 2019"
   },
   {
     "id": "K098",
@@ -321,7 +429,13 @@
     "source_quote": "Recycling focuses on established materials such as glass (recycling rate in 2020: 99%), PET (recycling rate in 2020: 82%), aluminium (recycling rate in 2020: 97%), paper (recycling rate in 2020: 82%).",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The published rates are glass 99%, aluminium 97%, PET 82% and paper 82%. The top two are only two points apart, so intuition about 'metal vs glass' is not sufficient — the exact figures are required."
+    "notes": "The published rates are glass 99%, aluminium 97%, PET 82% and paper 82%. The top two are only two points apart, so intuition about 'metal vs glass' is not sufficient — the exact figures are required.",
+    "answer": "Glass",
+    "answer_variations": [
+      "Glass."
+    ],
+    "answer_type": "short",
+    "reference": "Recycling focuses on established materials such as glass (recycling rate in 2020: 99%), PET (recycling rate in 2020: 82%), aluminium (recycling rate in 2020: 97%), paper (recycling rate in 2020: 82%)."
   },
   {
     "id": "K099",
@@ -339,7 +453,13 @@
     "source_quote": "If the total value exceeds CHF 150, you must pay VAT on the total value of the imported goods. Example: The total value is CHF 400.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Distractor A is the intuitive 'excess only' rule used in many other countries. The verified Swiss tax-free limit is CHF 150 per person per day."
+    "notes": "Distractor A is the intuitive 'excess only' rule used in many other countries. The verified Swiss tax-free limit is CHF 150 per person per day.",
+    "answer": "On the whole value — CHF 400",
+    "answer_variations": [
+      "On the whole value — CHF 400."
+    ],
+    "answer_type": "short",
+    "reference": "If the total value exceeds CHF 150, you must pay VAT on the total value of the imported goods. Example: The total value is CHF 400."
   },
   {
     "id": "K100",
@@ -357,7 +477,14 @@
     "source_quote": "VAT is 8.1%. A reduced rate of 2.6% applies for certain goods (e.g. foodstuffs, including non-alcoholic beverages, books, magazines and medicines).",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractor A is the pre-2001 Swiss rate pair. Figures as published by the Federal Office for Customs and Border Security at access date 2026-10-12."
+    "notes": "Distractor A is the pre-2001 Swiss rate pair. Figures as published by the Federal Office for Customs and Border Security at access date 2026-10-12.",
+    "answer": "8.1% standard, 2.6% reduced",
+    "answer_variations": [
+      "2.6% reduced and 8.1% standard",
+      "2.6% reduced, 8.1% standard"
+    ],
+    "answer_type": "list",
+    "reference": "VAT is 8.1%. A reduced rate of 2.6% applies for certain goods (e.g. foodstuffs, including non-alcoholic beverages, books, magazines and medicines)."
   },
   {
     "id": "K121",
@@ -375,7 +502,14 @@
     "source_quote": "In Switzerland, the guest is not obliged to tip. In many restaurants, however, it is customary to pay a tip.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Swiss-specific: customary but not a legal obligation. Distractors invent a federal fixed rate and cantonal differences that do not exist."
+    "notes": "Swiss-specific: customary but not a legal obligation. Distractors invent a federal fixed rate and cantonal differences that do not exist.",
+    "answer": "The guest is not obliged to tip, although paying a tip is customary in many restaurants.",
+    "answer_variations": [
+      "guest is not obliged to tip, although paying a tip is customary in many restaurants.",
+      "The guest is not obliged to tip, although paying a tip is customary in many restaurants"
+    ],
+    "answer_type": "sentence",
+    "reference": "In Switzerland, the guest is not obliged to tip. In many restaurants, however, it is customary to pay a tip."
   },
   {
     "id": "K122",
@@ -393,7 +527,13 @@
     "source_quote": "This amounts to approximately 10 percent or it is rounded up to a round amount.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Picks the convention up from the same sentence. C imports an EU-style rate; D denies the stated convention."
+    "notes": "Picks the convention up from the same sentence. C imports an EU-style rate; D denies the stated convention.",
+    "answer": "Approximately ten percent of the bill, or a round-up to a round figure.",
+    "answer_variations": [
+      "Approximately ten percent of the bill, or a round-up to a round figure"
+    ],
+    "answer_type": "sentence",
+    "reference": "This amounts to approximately 10 percent or it is rounded up to a round amount."
   },
   {
     "id": "K123",
@@ -411,7 +551,13 @@
     "source_quote": "The catering industry is one of those sectors in which service is actually included in the price. Nevertheless, some customers add a tip when paying for good service.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The causal link models miss: optional because service is priced in. C misreads 'since 1974' as an abolition date."
+    "notes": "The causal link models miss: optional because service is priced in. C misreads 'since 1974' as an abolition date.",
+    "answer": "Because service is already included in the price in that sector, so a tip is a bonus rather than payment for the service itself.",
+    "answer_variations": [
+      "Because service is already included in the price in that sector, so a tip is a bonus rather than payment for the service itself"
+    ],
+    "answer_type": "sentence",
+    "reference": "The catering industry is one of those sectors in which service is actually included in the price. Nevertheless, some customers add a tip when paying for good service."
   },
   {
     "id": "K124",
@@ -429,7 +575,13 @@
     "source_quote": "Under current rules, voluntary tips are generally exempt from tax and contributions. However, if a tip forms an integral part of an employee's salary, it is treated as income and is therefore subject to tax and social security deductions.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Conditional structure matters: exemption is the general rule, not absolute. D is the over-generalised version."
+    "notes": "Conditional structure matters: exemption is the general rule, not absolute. D is the over-generalised version.",
+    "answer": "Voluntary tips were generally exempt from tax and contributions, but a tip forming an integral part of an employee's salary was treated as income and became subject to tax and social security deductions.",
+    "answer_variations": [
+      "Voluntary tips were generally exempt from tax and contributions, but a tip forming an integral part of an employee's salary was treated as income and became subject to tax and social security deductions"
+    ],
+    "answer_type": "sentence",
+    "reference": "Under current rules, voluntary tips are generally exempt from tax and contributions. However, if a tip forms an integral part of an employee's salary, it is treated as income and is therefore subject to tax and social security deductions."
   },
   {
     "id": "K125",
@@ -447,7 +599,14 @@
     "source_quote": "The law does not clearly define what constitutes a \"substantial part\" of salary.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Tests resistance to inventing a precise threshold for an undefined statutory term. B is a plausible-looking but wrong statute."
+    "notes": "Tests resistance to inventing a precise threshold for an undefined statutory term. B is a plausible-looking but wrong statute.",
+    "answer": "The law does not clearly define it, which the report characterises as a source of legal uncertainty.",
+    "answer_variations": [
+      "law does not clearly define it, which the report characterises as a source of legal uncertainty.",
+      "The law does not clearly define it, which the report characterises as a source of legal uncertainty"
+    ],
+    "answer_type": "sentence",
+    "reference": "The law does not clearly define what constitutes a \"substantial part\" of salary."
   },
   {
     "id": "K126",
@@ -465,7 +624,13 @@
     "source_quote": "In manchen Restaurants werden die Trinkgelder unter den Mitarbeitenden aufgeteilt. Allgemein gültige Regelungen gibt es nicht, die betriebliche Praxis ist unterschiedlich.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Evidence quote is the association's German original; question is the harvester's translation. A/C/D each posit a binding mechanism the source denies."
+    "notes": "Evidence quote is the association's German original; question is the harvester's translation. A/C/D each posit a binding mechanism the source denies.",
+    "answer": "There are no generally applicable rules; operational practice differs from establishment to establishment.",
+    "answer_variations": [
+      "There are no generally applicable rules; operational practice differs from establishment to establishment"
+    ],
+    "answer_type": "sentence",
+    "reference": "In manchen Restaurants werden die Trinkgelder unter den Mitarbeitenden aufgeteilt. Allgemein gültige Regelungen gibt es nicht, die betriebliche Praxis ist unterschiedlich."
   },
   {
     "id": "K127",
@@ -483,7 +648,13 @@
     "source_quote": "Grundsätzlich sind Trinkgelder kein Lohn und auch kein Bestandteil davon. Das Gastgewerbe verfügt über einen guten Landes-Gesamtarbeitsvertrag.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A source-criticism item: the answer is about evidential weight. B is the trap - the collective agreement exists but does not settle the point."
+    "notes": "A source-criticism item: the answer is about evidential weight. B is the trap - the collective agreement exists but does not settle the point.",
+    "answer": "It is the association's own position and is contested by labour-law academics, so it cannot be presented as settled law.",
+    "answer_variations": [
+      "It is the association's own position and is contested by labour-law academics, so it cannot be presented as settled law"
+    ],
+    "answer_type": "sentence",
+    "reference": "Grundsätzlich sind Trinkgelder kein Lohn und auch kein Bestandteil davon. Das Gastgewerbe verfügt über einen guten Landes-Gesamtarbeitsvertrag."
   },
   {
     "id": "K128",
@@ -501,7 +672,13 @@
     "source_quote": "Whether tips should remain tax-free or become fully subject to contributions will now be decided by parliament.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distinguishes proposing from deciding. C is the common error: assuming the executive settles tax treatment unilaterally."
+    "notes": "Distinguishes proposing from deciding. C is the common error: assuming the executive settles tax treatment unilaterally.",
+    "answer": "Parliament, following a proposal intended mainly to close social security coverage gaps.",
+    "answer_variations": [
+      "Parliament, following a proposal intended mainly to close social security coverage gaps"
+    ],
+    "answer_type": "sentence",
+    "reference": "Whether tips should remain tax-free or become fully subject to contributions will now be decided by parliament."
   },
   {
     "id": "K129",
@@ -519,7 +696,13 @@
     "source_quote": "When you return from abroad or enter Switzerland, goods up to a total value of CHF 150 may be imported VAT-free (tax-free limit), provided they are intended for your personal use or as gifts.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The threshold is CHF 150, not the CHF 100 used by a number of other jurisdictions, and it is a VAT threshold rather than a duty-free allowance - so the duty distractor is wrong at this value."
+    "notes": "The threshold is CHF 150, not the CHF 100 used by a number of other jurisdictions, and it is a VAT threshold rather than a duty-free allowance - so the duty distractor is wrong at this value.",
+    "answer": "They may be imported VAT-free.",
+    "answer_variations": [
+      "They may be imported VAT-free"
+    ],
+    "answer_type": "sentence",
+    "reference": "When you return from abroad or enter Switzerland, goods up to a total value of CHF 150 may be imported VAT-free (tax-free limit), provided they are intended for your personal use or as gifts."
   },
   {
     "id": "K130",
@@ -537,7 +720,14 @@
     "source_quote": "The tax-free limit can be claimed only once per person and per day. It applies also for children.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps the assumption that the allowance is per group or per week, and the assumption that a child's own goods consume a separate claim - the children's allowance is part of the same per-person, per-day claim."
+    "notes": "Traps the assumption that the allowance is per group or per week, and the assumption that a child's own goods consume a separate claim - the children's allowance is part of the same per-person, per-day claim.",
+    "answer": "Once per person per day, children included",
+    "answer_variations": [
+      "children included and Once per person per day",
+      "children included, Once per person per day"
+    ],
+    "answer_type": "list",
+    "reference": "The tax-free limit can be claimed only once per person and per day. It applies also for children."
   },
   {
     "id": "K131",
@@ -555,7 +745,13 @@
     "source_quote": "Goods that are not intended for your personal use or as gifts are subject to VAT.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The allowance tests purpose first and value second; commercial goods fall outside it at any value. Distractor D is the common confusion of treating value as the only test."
+    "notes": "The allowance tests purpose first and value second; commercial goods fall outside it at any value. Distractor D is the common confusion of treating value as the only test.",
+    "answer": "They are subject to VAT",
+    "answer_variations": [
+      "They are subject to VAT."
+    ],
+    "answer_type": "short",
+    "reference": "Goods that are not intended for your personal use or as gifts are subject to VAT."
   },
   {
     "id": "K132",
@@ -573,7 +769,14 @@
     "source_quote": "The value of personal effects, travelling provisions and fuel for your vehicle is not included.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Personal effects, travelling provisions and fuel are excluded, whereas duty-free foodstuffs, tobacco, alcohol, household pets and work done abroad on the private vehicle all count towards the limit. The trap is transferring the duty-free-shop exemption from customs duty to the VAT threshold."
+    "notes": "Personal effects, travelling provisions and fuel are excluded, whereas duty-free foodstuffs, tobacco, alcohol, household pets and work done abroad on the private vehicle all count towards the limit. The trap is transferring the duty-free-shop exemption from customs duty to the VAT threshold.",
+    "answer": "The traveller's personal effects and the fuel put into their vehicle",
+    "answer_variations": [
+      "the fuel put into their vehicle and The traveller's personal effects",
+      "the fuel put into their vehicle, The traveller's personal effects"
+    ],
+    "answer_type": "list",
+    "reference": "The value of personal effects, travelling provisions and fuel for your vehicle is not included."
   },
   {
     "id": "K133",
@@ -591,7 +794,13 @@
     "source_quote": "In addition to VAT, you must pay customs duties if the goods you are carrying exceed the duty-free allowances for alcohol, tobacco products and certain foodstuffs.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The CHF 150 figure is the VAT tax-free limit; the separate duty-free allowances belong to customs duties. Distractor C mixes the two regimes and adds a rate that does not apply to alcohol."
+    "notes": "The CHF 150 figure is the VAT tax-free limit; the separate duty-free allowances belong to customs duties. Distractor C mixes the two regimes and adds a rate that does not apply to alcohol.",
+    "answer": "Customs duties",
+    "answer_variations": [
+      "Customs duties."
+    ],
+    "answer_type": "short",
+    "reference": "In addition to VAT, you must pay customs duties if the goods you are carrying exceed the duty-free allowances for alcohol, tobacco products and certain foodstuffs."
   },
   {
     "id": "K134",
@@ -609,7 +818,13 @@
     "source_quote": "Otherwise, the market value is taxed, e.g. in the case of gifts. The market value refers to the sum a third party would have had to pay to buy the item.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Purchases are taxed on the invoice, receipt or purchase contract; where there is none - gifts in particular - the market value applies, i.e. what a third party would have paid. Traps are the self-declared value and the recipient's sentimental valuation."
+    "notes": "Purchases are taxed on the invoice, receipt or purchase contract; where there is none - gifts in particular - the market value applies, i.e. what a third party would have paid. Traps are the self-declared value and the recipient's sentimental valuation.",
+    "answer": "Its market value",
+    "answer_variations": [
+      "Its market value."
+    ],
+    "answer_type": "short",
+    "reference": "Otherwise, the market value is taxed, e.g. in the case of gifts. The market value refers to the sum a third party would have had to pay to buy the item."
   },
   {
     "id": "K135",
@@ -627,7 +842,13 @@
     "source_quote": "Overall, Switzerland generates about 80 to 90 million tonnes of waste annually, and it is fair to assume that the total quantity will continue to rise in the future.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Order-of-magnitude anchor for the whole waste topic: the headline recycling rate makes Swiss volumes sound modest, but construction and demolition account for the great majority. Distractors straddle the correct figure by roughly a decade each."
+    "notes": "Order-of-magnitude anchor for the whole waste topic: the headline recycling rate makes Swiss volumes sound modest, but construction and demolition account for the great majority. Distractors straddle the correct figure by roughly a decade each.",
+    "answer": "About 80 to 90 million tonnes",
+    "answer_variations": [
+      "About 80 to 90 million tonnes."
+    ],
+    "answer_type": "short",
+    "reference": "Overall, Switzerland generates about 80 to 90 million tonnes of waste annually, and it is fair to assume that the total quantity will continue to rise in the future."
   },
   {
     "id": "K136",
@@ -645,7 +866,13 @@
     "source_quote": "The largest share of waste in Switzerland is generated by construction activity: excavated and quarried materials comprise just under two thirds of all waste (57 million tonnes), and a fifth of the waste stems from the demolition of buildings, roads and railway lines (17 million tonnes).",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Municipal solid waste is only about 7% of the total, so the intuition imported from EU or US waste debates - that household waste dominates - inverts the Swiss picture. Demolition is large but smaller than excavation."
+    "notes": "Municipal solid waste is only about 7% of the total, so the intuition imported from EU or US waste debates - that household waste dominates - inverts the Swiss picture. Demolition is large but smaller than excavation.",
+    "answer": "Excavated and quarried materials from construction activity",
+    "answer_variations": [
+      "Excavated and quarried materials from construction activity."
+    ],
+    "answer_type": "sentence",
+    "reference": "The largest share of waste in Switzerland is generated by construction activity: excavated and quarried materials comprise just under two thirds of all waste (57 million tonnes), and a fifth of the waste stems from the demolition of buildings, roads and railway lines (17 million tonnes)."
   },
   {
     "id": "K137",
@@ -663,7 +890,13 @@
     "source_quote": "In that year, Switzerland became the first country in the world to make it obligatory to recover the nutrient phosphorus: from 1 January 2026, phosphorus has been recovered from sewage sludge, animal and bone meal and reused in agriculture or the chemical industry. The Federal Council has granted the cantons and the business community a 10-year period of grace.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Three dates are in play and are easy to interleave: the Ordinance and first-country claim date from 2016, the obligation bites from 1 January 2026, and a 10-year grace period runs for the cantons and industry."
+    "notes": "Three dates are in play and are easy to interleave: the Ordinance and first-country claim date from 2016, the obligation bites from 1 January 2026, and a 10-year grace period runs for the cantons and industry.",
+    "answer": "1 January 2026",
+    "answer_variations": [
+      "1 January 2026."
+    ],
+    "answer_type": "short",
+    "reference": "In that year, Switzerland became the first country in the world to make it obligatory to recover the nutrient phosphorus: from 1 January 2026, phosphorus has been recovered from sewage sludge, animal and bone meal and reused in agriculture or the chemical industry. The Federal Council has granted the cantons and the business community a 10-year period of grace."
   },
   {
     "id": "K138",
@@ -681,7 +914,14 @@
     "source_quote": "The disposal of all waste costs Switzerland a good CHF 3 billion a year. The 'polluter pays' principle is widely applied in Switzerland, i.e. whoever creates the waste must also pay for its disposal.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The named principle matters more than the CHF 3 billion figure: whoever creates the waste pays for its disposal. Traps are the centrally funded reading and the producer-llevy model, neither of which is the stated basis."
+    "notes": "The named principle matters more than the CHF 3 billion figure: whoever creates the waste pays for its disposal. Traps are the centrally funded reading and the producer-llevy model, neither of which is the stated basis.",
+    "answer": "The 'polluter pays' principle",
+    "answer_variations": [
+      "'polluter pays' principle",
+      "The 'polluter pays' principle."
+    ],
+    "answer_type": "short",
+    "reference": "The disposal of all waste costs Switzerland a good CHF 3 billion a year. The 'polluter pays' principle is widely applied in Switzerland, i.e. whoever creates the waste must also pay for its disposal."
   },
   {
     "id": "K139",
@@ -699,7 +939,13 @@
     "source_quote": "In 2020, approximately 1.85 million tonnes of hazardous waste underwent special treatment in Switzerland or was exported for environmentally sustainable disposal under strictly monitored conditions (0.5 million tonnes).",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The 0.5 million tonnes is the export subset inside the 1.85 million tonne total, so the two figures are routinely swapped. The distractor at 7 million tonnes reflects confusing hazardous waste with the hazardous fraction of municipal waste."
+    "notes": "The 0.5 million tonnes is the export subset inside the 1.85 million tonne total, so the two figures are routinely swapped. The distractor at 7 million tonnes reflects confusing hazardous waste with the hazardous fraction of municipal waste.",
+    "answer": "About 1.85 million tonnes",
+    "answer_variations": [
+      "About 1.85 million tonnes."
+    ],
+    "answer_type": "short",
+    "reference": "In 2020, approximately 1.85 million tonnes of hazardous waste underwent special treatment in Switzerland or was exported for environmentally sustainable disposal under strictly monitored conditions (0.5 million tonnes)."
   },
   {
     "id": "K140",
@@ -717,7 +963,13 @@
     "source_quote": "How do I find an apprenticeship? In a first step, you can choose from over 240 professions. Then look for a company with an opening for an apprenticeship.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The two nearest confusions are the order-of-magnitude errors 24 and 2,400; the distractors are chosen so that a model guessing a plausible Swiss-sounding number still lands wrong."
+    "notes": "The two nearest confusions are the order-of-magnitude errors 24 and 2,400; the distractors are chosen so that a model guessing a plausible Swiss-sounding number still lands wrong.",
+    "answer": "Over 240",
+    "answer_variations": [
+      "Over 240."
+    ],
+    "answer_type": "short",
+    "reference": "How do I find an apprenticeship? In a first step, you can choose from over 240 professions. Then look for a company with an opening for an apprenticeship."
   },
   {
     "id": "K141",
@@ -735,7 +987,14 @@
     "source_quote": "In most cases, your host company will provide you with practical training and you will learn the theoretical basics of your profession at the vocational school. In some cases, you can also complete your apprenticeship full-time in a school.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The dual model with company practice and school theory; the page also notes the minority full-time school-based route. Distractor B is the German-style reading where the vocational school is the main provider, and D imports a third mandatory venue."
+    "notes": "The dual model with company practice and school theory; the page also notes the minority full-time school-based route. Distractor B is the German-style reading where the vocational school is the main provider, and D imports a third mandatory venue.",
+    "answer": "In the host company and at the vocational school respectively",
+    "answer_variations": [
+      "at the vocational school respectively and In the host company",
+      "at the vocational school respectively, In the host company"
+    ],
+    "answer_type": "list",
+    "reference": "In most cases, your host company will provide you with practical training and you will learn the theoretical basics of your profession at the vocational school. In some cases, you can also complete your apprenticeship full-time in a school."
   },
   {
     "id": "K142",
@@ -753,7 +1012,13 @@
     "source_quote": "You usually start baccalaureate school after the second or third year of upper-secondary level school. The study programme lasts four years in most cantons and aims to provide a good general education. Students do not learn a profession, however the completion of an academic baccalaureate gives them access to study at a university or a federal institute of technology (ETH Zurich or EPFL).",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Separates the academic baccalaureate (general education, access to university and the ETH/EPFL) from the vocational baccalaureate (access to a university of applied sciences) and from the specialised school route, which is three years plus one."
+    "notes": "Separates the academic baccalaureate (general education, access to university and the ETH/EPFL) from the vocational baccalaureate (access to a university of applied sciences) and from the specialised school route, which is three years plus one.",
+    "answer": "Study at a university or a federal institute of technology, on a four-year programme",
+    "answer_variations": [
+      "Study at a university or a federal institute of technology, on a four-year programme."
+    ],
+    "answer_type": "short",
+    "reference": "You usually start baccalaureate school after the second or third year of upper-secondary level school. The study programme lasts four years in most cantons and aims to provide a good general education. Students do not learn a profession, however the completion of an academic baccalaureate gives them access to study at a university or a federal institute of technology (ETH Zurich or EPFL)."
   },
   {
     "id": "K143",
@@ -771,7 +1036,14 @@
     "source_quote": "If you want to study for a baccalaureate, you need to meet different requirements depending on the canton and the type of baccalaureate you wish to obtain, including good grades, a recommendation from your class teacher or a successful entrance examination.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Entry is cantonal and type-dependent: good grades, a class teacher's recommendation or an entrance examination. Traps are the assumption of a single federal rule and the assumption that grades alone decide."
+    "notes": "Entry is cantonal and type-dependent: good grades, a class teacher's recommendation or an entrance examination. Traps are the assumption of a single federal rule and the assumption that grades alone decide.",
+    "answer": "The canton and the type of baccalaureate",
+    "answer_variations": [
+      "the type of baccalaureate and The canton",
+      "the type of baccalaureate, The canton"
+    ],
+    "answer_type": "list",
+    "reference": "If you want to study for a baccalaureate, you need to meet different requirements depending on the canton and the type of baccalaureate you wish to obtain, including good grades, a recommendation from your class teacher or a successful entrance examination."
   },
   {
     "id": "K144",
@@ -789,7 +1061,13 @@
     "source_quote": "The school year starts in August.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Anchors the point that the school calendar is set cantonally and communally rather than by federal law - the exact holiday dates come from the commune or the school itself. September is the default imported from neighbouring systems."
+    "notes": "Anchors the point that the school calendar is set cantonally and communally rather than by federal law - the exact holiday dates come from the commune or the school itself. September is the default imported from neighbouring systems.",
+    "answer": "August",
+    "answer_variations": [
+      "August."
+    ],
+    "answer_type": "short",
+    "reference": "The school year starts in August."
   },
   {
     "id": "K145",
@@ -807,7 +1085,14 @@
     "source_quote": "Getting a child to school is the responsibility of the parents. The communes only provide support if the route to school is very long or too dangerous.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Communes step in only for a very long or dangerous route, which is what Pedibus-style schemes address. The over-general distractor D sounds like a parental duty with municipal backing and is the trap for those who half-remember the rule."
+    "notes": "Communes step in only for a very long or dangerous route, which is what Pedibus-style schemes address. The over-general distractor D sounds like a parental duty with municipal backing and is the trap for those who half-remember the rule.",
+    "answer": "The parents, with commune support only where the route is very long or too dangerous",
+    "answer_variations": [
+      "parents, with commune support only where the route is very long or too dangerous",
+      "The parents, with commune support only where the route is very long or too dangerous."
+    ],
+    "answer_type": "sentence",
+    "reference": "Getting a child to school is the responsibility of the parents. The communes only provide support if the route to school is very long or too dangerous."
   },
   {
     "id": "K146",
@@ -825,7 +1110,13 @@
     "source_quote": "Children can be sent to a public school or they can be homeschooled. Contact your canton for the specific rules and conditions.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Homeschooling is possible in Switzerland but the conditions are cantonal - there is no federal home-education ordinance. The federal-ordinance reading is imported from Germany, where a Bundesland ordinance framework exists."
+    "notes": "Homeschooling is possible in Switzerland but the conditions are cantonal - there is no federal home-education ordinance. The federal-ordinance reading is imported from Germany, where a Bundesland ordinance framework exists.",
+    "answer": "The canton, which sets its own rules and conditions",
+    "answer_variations": [
+      "which sets its own rules, conditions, The canton"
+    ],
+    "answer_type": "list",
+    "reference": "Children can be sent to a public school or they can be homeschooled. Contact your canton for the specific rules and conditions."
   },
   {
     "id": "K147",
@@ -843,7 +1134,14 @@
     "source_quote": "The law does not clearly define how many hours or days you can take off. Ask your employer about the rules that apply in your company.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The duration of these special absences is not fixed by law, unlike the minimum vacation entitlement, which is. The trap is confusing the two and assuming a uniform statutory day count for special absences."
+    "notes": "The duration of these special absences is not fixed by law, unlike the minimum vacation entitlement, which is. The trap is confusing the two and assuming a uniform statutory day count for special absences.",
+    "answer": "The employer sets the rules",
+    "answer_variations": [
+      "employer sets the rules",
+      "The employer sets the rules."
+    ],
+    "answer_type": "short",
+    "reference": "The law does not clearly define how many hours or days you can take off. Ask your employer about the rules that apply in your company."
   },
   {
     "id": "K148",
@@ -861,7 +1159,13 @@
     "source_quote": "If a public holiday falls on a non-working day, such as a Saturday or Sunday, you cannot redeem the holiday time during the week.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "No time in lieu for a holiday landing on a non-working day - a real gap in Swiss employment law compared with systems that credit the day. Must not be conflated with the separate rule that a holiday falling during annual leave does not consume a vacation day."
+    "notes": "No time in lieu for a holiday landing on a non-working day - a real gap in Swiss employment law compared with systems that credit the day. Must not be conflated with the separate rule that a holiday falling during annual leave does not consume a vacation day.",
+    "answer": "It cannot be redeemed",
+    "answer_variations": [
+      "It cannot be redeemed."
+    ],
+    "answer_type": "short",
+    "reference": "If a public holiday falls on a non-working day, such as a Saturday or Sunday, you cannot redeem the holiday time during the week."
   },
   {
     "id": "K149",
@@ -879,7 +1183,13 @@
     "source_quote": "Once a week, your employer has the right to reduce the rest period to 8 hours but only if you have been given an average daily rest period of 11 hours over two weeks.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The eleven-hour daily rest is the baseline; the statutory exception is a single weekly reduction to eight hours, conditional on an eleven-hour average across the two weeks. Traps are unconditional weekly discretion, a higher frequency, and reading the exception as a flat ban."
+    "notes": "The eleven-hour daily rest is the baseline; the statutory exception is a single weekly reduction to eight hours, conditional on an eleven-hour average across the two weeks. Traps are unconditional weekly discretion, a higher frequency, and reading the exception as a flat ban.",
+    "answer": "Once a week, if the two-week average daily rest is 11 hours",
+    "answer_variations": [
+      "Once a week, if the two-week average daily rest is 11 hours."
+    ],
+    "answer_type": "sentence",
+    "reference": "Once a week, your employer has the right to reduce the rest period to 8 hours but only if you have been given an average daily rest period of 11 hours over two weeks."
   },
   {
     "id": "K150",
@@ -897,6 +1207,12 @@
     "source_quote": "Time off equal to 10% of the hours of night work performed must be provided for night work carried out on 25 or more nights per calendar year.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "25 nights per calendar year is the dividing line: below it a supplement of at least 25% is payable, at or above it the employer owes compensatory time off of 10% of the night hours, and paying cash in lieu of that rest is against the law. Distractor D borrows the Sunday-work 24-hour rest figure."
+    "notes": "25 nights per calendar year is the dividing line: below it a supplement of at least 25% is payable, at or above it the employer owes compensatory time off of 10% of the night hours, and paying cash in lieu of that rest is against the law. Distractor D borrows the Sunday-work 24-hour rest figure.",
+    "answer": "Time off equal to 10% of the night hours worked",
+    "answer_variations": [
+      "Time off equal to 10% of the night hours worked."
+    ],
+    "answer_type": "short",
+    "reference": "Time off equal to 10% of the hours of night work performed must be provided for night work carried out on 25 or more nights per calendar year."
   }
 ]

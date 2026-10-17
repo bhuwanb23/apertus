@@ -15,7 +15,13 @@
     "source_quote": "In einem Mietvertrag muss die Kündigungsfrist mindestens drei Monate für Wohnräume und sechs Monate für Geschäftsräume betragen, es können aber auch längere Fristen vereinbart werden.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Source quote is German (official Canton Bern conciliation-authority page); English rendering in the question: in a rental agreement the notice period must be at least three months for residential premises and six months for commercial premises, and longer periods may be agreed. Commonly cited German practice of one month's notice plus end-of-month termination is NOT the Swiss rule."
+    "notes": "Source quote is German (official Canton Bern conciliation-authority page); English rendering in the question: in a rental agreement the notice period must be at least three months for residential premises and six months for commercial premises, and longer periods may be agreed. Commonly cited German practice of one month's notice plus end-of-month termination is NOT the Swiss rule.",
+    "answer": "Three months for residential premises and six months for commercial premises",
+    "answer_variations": [
+      "Three months for residential premises and six months for commercial premises."
+    ],
+    "answer_type": "sentence",
+    "reference": "In einem Mietvertrag muss die Kündigungsfrist mindestens drei Monate für Wohnräume und sechs Monate für Geschäftsräume betragen, es können aber auch längere Fristen vereinbart werden."
   },
   {
     "id": "K022",
@@ -33,7 +39,13 @@
     "source_quote": "Die Kündigungsfrist läuft erst ab Zustellung der Kündigung an die Vermieterin oder den Vermieter. Wenn Sie also beispielsweise am 31. März die Kündigung verschicken und die Vermieterin oder der Vermieter diese am 1. April erhält, gilt die Kündigung erst auf Ende Juli statt Ende Juni.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "German source; English rendering: the notice period only begins on delivery of the notice to the landlord — sent 31 March and received 1 April, it takes effect at the end of July rather than the end of June. Posting date is not decisive."
+    "notes": "German source; English rendering: the notice period only begins on delivery of the notice to the landlord — sent 31 March and received 1 April, it takes effect at the end of July rather than the end of June. Posting date is not decisive.",
+    "answer": "It runs from 1 April, the date the notice is delivered to the landlord, so the termination takes effect at the end of July",
+    "answer_variations": [
+      "It runs from 1 April, the date the notice is delivered to the landlord, so the termination takes effect at the end of July."
+    ],
+    "answer_type": "sentence",
+    "reference": "Die Kündigungsfrist läuft erst ab Zustellung der Kündigung an die Vermieterin oder den Vermieter. Wenn Sie also beispielsweise am 31. März die Kündigung verschicken und die Vermieterin oder der Vermieter diese am 1. April erhält, gilt die Kündigung erst auf Ende Juli statt Ende Juni."
   },
   {
     "id": "K023",
@@ -51,7 +63,13 @@
     "source_quote": "Wenn Sie als Ehepaar oder eingetragene Partner/innen in der Wohnung wohnen, müssen beide die Kündigung unterschreiben. Dies gilt auch dann, wenn nur eine/r von Ihnen auf dem Mietvertrag als Mieter/in aufgeführt ist.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "German source; English rendering: couples who live in the flat as spouses or registered partners must both sign the termination, and this applies even if only one of them is listed as tenant on the rental agreement. Covers registered partners as well as married couples."
+    "notes": "German source; English rendering: couples who live in the flat as spouses or registered partners must both sign the termination, and this applies even if only one of them is listed as tenant on the rental agreement. Covers registered partners as well as married couples.",
+    "answer": "Both spouses must sign the termination, even though only one of them is named as the tenant on the rental agreement",
+    "answer_variations": [
+      "Both spouses must sign the termination, even though only one of them is named as the tenant on the rental agreement."
+    ],
+    "answer_type": "sentence",
+    "reference": "Wenn Sie als Ehepaar oder eingetragene Partner/innen in der Wohnung wohnen, müssen beide die Kündigung unterschreiben. Dies gilt auch dann, wenn nur eine/r von Ihnen auf dem Mietvertrag als Mieter/in aufgeführt ist."
   },
   {
     "id": "K024",
@@ -69,7 +87,14 @@
     "source_quote": "The residence permit for EU/EFTA nationals is valid for five years. This permit is issued to EU/EFTA citizens holding a contract of employment of at least twelve months or of unlimited duration.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Switzerland applies its own permit categories to EU/EFTA nationals under the free movement agreement; it is in Schengen but not in the EU, so the EU directive-style permit nomenclature does not apply."
+    "notes": "Switzerland applies its own permit categories to EU/EFTA nationals under the free movement agreement; it is in Schengen but not in the EU, so the EU directive-style permit nomenclature does not apply.",
+    "answer": "A B residence permit, valid for five years",
+    "answer_variations": [
+      "B residence permit, valid for five years",
+      "A B residence permit, valid for five years."
+    ],
+    "answer_type": "sentence",
+    "reference": "The residence permit for EU/EFTA nationals is valid for five years. This permit is issued to EU/EFTA citizens holding a contract of employment of at least twelve months or of unlimited duration."
   },
   {
     "id": "K025",
@@ -87,7 +112,14 @@
     "source_quote": "EU/EFTA nationals are entitled to this permit provided they are in possession of an employment contract valid from three up to twelve months.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The Swiss L permit is defined by the employment-contract term, not by a 90-day short-stay rule as in EU free-movement law. Contracts of under three months within a calendar year need no permit at all, only the online notification procedure (separate fact, not tested here)."
+    "notes": "The Swiss L permit is defined by the employment-contract term, not by a 90-day short-stay rule as in EU free-movement law. Contracts of under three months within a calendar year need no permit at all, only the online notification procedure (separate fact, not tested here).",
+    "answer": "A contract of three to twelve months",
+    "answer_variations": [
+      "contract of three to twelve months",
+      "A contract of three to twelve months."
+    ],
+    "answer_type": "short",
+    "reference": "EU/EFTA nationals are entitled to this permit provided they are in possession of an employment contract valid from three up to twelve months."
   },
   {
     "id": "K026",
@@ -105,7 +137,14 @@
     "source_quote": "If they meet the required conditions, nationals of Austria, Belgium, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Luxembourg, the Netherlands, Portugal, Spain and Sweden as well as EFTA nationals (Iceland, Liechtenstein, Norway) are granted settlement permits pursuant to settlement treaties or reciprocal agreements after five years' regular and uninterrupted residence in Switzerland.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Switzerland holds bilateral settlement agreements with 15 EU states plus the three EFTA states; the source states expressly that no such treaties exist for the nationals of the other EU member states. SEM sets the earliest date from which settlement permits may be granted."
+    "notes": "Switzerland holds bilateral settlement agreements with 15 EU states plus the three EFTA states; the source states expressly that no such treaties exist for the nationals of the other EU member states. SEM sets the earliest date from which settlement permits may be granted.",
+    "answer": "Nationals of Austria, Belgium, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Luxembourg, the Netherlands, Portugal, Spain and Sweden, as well as EFTA nationals (Iceland, Liechtenstein, Norway)",
+    "answer_variations": [
+      "Nationals of Austria, Belgium, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Luxembourg, the Netherlands, Portugal, Spain, Sweden, as well as EFTA nationals (Iceland, Liechtenstein and Norway)",
+      "Belgium, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Luxembourg, the Netherlands, Portugal, Spain, Sweden, as well as EFTA nationals (Iceland, Liechtenstein, Norway), Nationals of Austria"
+    ],
+    "answer_type": "list",
+    "reference": "If they meet the required conditions, nationals of Austria, Belgium, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Luxembourg, the Netherlands, Portugal, Spain and Sweden as well as EFTA nationals (Iceland, Liechtenstein, Norway) are granted settlement permits pursuant to settlement treaties or reciprocal agreements after five years' regular and uninterrupted residence in Switzerland."
   },
   {
     "id": "K027",
@@ -123,7 +162,14 @@
     "source_quote": "Cross-border commuters must return to their main place of residence abroad as a rule every day, or at least once a week.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Category G has no direct EU equivalent; it is the Swiss instrument for EU/EFTA nationals who live abroad and work in Switzerland, whether employed or self-employed."
+    "notes": "Category G has no direct EU equivalent; it is the Swiss instrument for EU/EFTA nationals who live abroad and work in Switzerland, whether employed or self-employed.",
+    "answer": "As a rule every day, or at least once a week",
+    "answer_variations": [
+      "or at least once a week and As a rule every day",
+      "or at least once a week, As a rule every day"
+    ],
+    "answer_type": "list",
+    "reference": "Cross-border commuters must return to their main place of residence abroad as a rule every day, or at least once a week."
   },
   {
     "id": "K028",
@@ -141,7 +187,13 @@
     "source_quote": "Federal law requires you to have lived in Switzerland for at least ten years, including three of the five years prior to the application being made.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE: on top of the federal ten-year rule, each canton sets an additional requirement of between two and five years' residence in the particular commune or canton, and each commune makes its own rules within cantonal and federal law. Those extra conditions are deliberately not tested here."
+    "notes": "CANTONAL-VARIABLE: on top of the federal ten-year rule, each canton sets an additional requirement of between two and five years' residence in the particular commune or canton, and each commune makes its own rules within cantonal and federal law. Those extra conditions are deliberately not tested here.",
+    "answer": "At least ten years of residence, including three of the five years prior to the application being made",
+    "answer_variations": [
+      "At least ten years of residence, including three of the five years prior to the application being made."
+    ],
+    "answer_type": "short",
+    "reference": "Federal law requires you to have lived in Switzerland for at least ten years, including three of the five years prior to the application being made."
   },
   {
     "id": "K029",
@@ -159,7 +211,13 @@
     "source_quote": "The time spent in Switzerland between the ages of 8 and 18 counts double, but you cannot apply for naturalisation until you have lived in the country for at least six years.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The six-year floor is the earliest any application may be made and is a separate condition from the ten-year federal requirement tested in K028."
+    "notes": "The six-year floor is the earliest any application may be made and is a separate condition from the ten-year federal requirement tested in K028.",
+    "answer": "It counts double, but no application is possible until at least six years of total residence in the country",
+    "answer_variations": [
+      "It counts double, but no application is possible until at least six years of total residence in the country."
+    ],
+    "answer_type": "sentence",
+    "reference": "The time spent in Switzerland between the ages of 8 and 18 counts double, but you cannot apply for naturalisation until you have lived in the country for at least six years."
   },
   {
     "id": "K030",
@@ -177,7 +235,14 @@
     "source_quote": "Holders of a settlement permit (C permit)",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Ordinary naturalisation is restricted to holders of a C permit; the residency periods themselves are tested separately. Simplified naturalisation is open to other categories (spouse or child of a Swiss citizen, stateless minor, third-generation residents under 25)."
+    "notes": "Ordinary naturalisation is restricted to holders of a C permit; the residency periods themselves are tested separately. Simplified naturalisation is open to other categories (spouse or child of a Swiss citizen, stateless minor, third-generation residents under 25).",
+    "answer": "A settlement permit (C)",
+    "answer_variations": [
+      "settlement permit (C)",
+      "A settlement permit (C)."
+    ],
+    "answer_type": "short",
+    "reference": "Holders of a settlement permit (C permit)"
   },
   {
     "id": "K031",
@@ -195,7 +260,13 @@
     "source_quote": "The provisional licence is valid for 24 months for cars (category B) and for 4 months for motorcycles (category A).",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The motorcycle figure is strikingly short compared with the car figure; the provisional licence is also valid only in Switzerland."
+    "notes": "The motorcycle figure is strikingly short compared with the car figure; the provisional licence is also valid only in Switzerland.",
+    "answer": "24 months for cars and 4 months for motorcycles",
+    "answer_variations": [
+      "24 months for cars and 4 months for motorcycles."
+    ],
+    "answer_type": "sentence",
+    "reference": "The provisional licence is valid for 24 months for cars (category B) and for 4 months for motorcycles (category A)."
   },
   {
     "id": "K032",
@@ -213,7 +284,13 @@
     "source_quote": "The accompanying person must be at least 23 years old, have passed their driving test at least three years previously and must no longer have a probationary driving licence.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Three cumulative conditions: age, three years since passing the driving test, and no longer being on a probationary licence. Learner drivers may not have drunk alcohol before driving; the legal limit is a blood alcohol level of over 0.01%."
+    "notes": "Three cumulative conditions: age, three years since passing the driving test, and no longer being on a probationary licence. Learner drivers may not have drunk alcohol before driving; the legal limit is a blood alcohol level of over 0.01%.",
+    "answer": "They must be at least 23 years old, have passed their driving test at least three years previously, and no longer hold a probationary driving licence",
+    "answer_variations": [
+      "They must be at least 23 years old, have passed their driving test at least three years previously, and no longer hold a probationary driving licence."
+    ],
+    "answer_type": "sentence",
+    "reference": "The accompanying person must be at least 23 years old, have passed their driving test at least three years previously and must no longer have a probationary driving licence."
   },
   {
     "id": "K033",
@@ -231,7 +308,13 @@
     "source_quote": "If you get your provisional licence before your 20th birthday, you will need to wait at least 12 months before you can take the practical driving test.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The 12-month wait is conditional on the provisional licence having been issued before the 20th birthday; the compulsory eight-hour traffic skills course is a separate precondition for registering for the test."
+    "notes": "The 12-month wait is conditional on the provisional licence having been issued before the 20th birthday; the compulsory eight-hour traffic skills course is a separate precondition for registering for the test.",
+    "answer": "At least twelve months",
+    "answer_variations": [
+      "At least twelve months."
+    ],
+    "answer_type": "short",
+    "reference": "If you get your provisional licence before your 20th birthday, you will need to wait at least 12 months before you can take the practical driving test."
   },
   {
     "id": "K034",
@@ -249,7 +332,14 @@
     "source_quote": "The cantons and the communes levy their taxes on both the income and the assets of private individuals.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The page deliberately carries no CHF figures, rates or brackets; the Confederation taxes income only, whereas the two sub-national levels tax income and wealth. No rate may be presented as a nationwide figure."
+    "notes": "The page deliberately carries no CHF figures, rates or brackets; the Confederation taxes income only, whereas the two sub-national levels tax income and wealth. No rate may be presented as a nationwide figure.",
+    "answer": "The Confederation levies direct federal tax on income, while the cantons and communes levy taxes on both income and assets",
+    "answer_variations": [
+      "Confederation levies direct federal tax on income, while the cantons and communes levy taxes on both income and assets",
+      "The Confederation levies direct federal tax on income, while the cantons and communes levy taxes on both income and assets."
+    ],
+    "answer_type": "short",
+    "reference": "The cantons and the communes levy their taxes on both the income and the assets of private individuals."
   },
   {
     "id": "K035",
@@ -267,7 +357,13 @@
     "source_quote": "Because each commune determines its own tax co-efficient, and these can vary considerably, there can be low-tax and high-tax communes within the same canton.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "COMMUNAL-VARIABLE: the co-efficient is changed from time to time, so no specific value is permanent. This is why there can be low-tax and high-tax communes within a single canton — a distinctly Swiss feature of communal tax autonomy."
+    "notes": "COMMUNAL-VARIABLE: the co-efficient is changed from time to time, so no specific value is permanent. This is why there can be low-tax and high-tax communes within a single canton — a distinctly Swiss feature of communal tax autonomy.",
+    "answer": "Each commune determines its own tax co-efficient, and these co-efficients can vary considerably",
+    "answer_variations": [
+      "Each commune determines its own tax co-efficient, and these co-efficients can vary considerably."
+    ],
+    "answer_type": "sentence",
+    "reference": "Because each commune determines its own tax co-efficient, and these can vary considerably, there can be low-tax and high-tax communes within the same canton."
   },
   {
     "id": "K036",
@@ -285,7 +381,13 @@
     "source_quote": "Up to the age of 20, you are entitled to at least five weeks' vacation.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The general statutory minimum for all workers is four weeks regardless of full- or part-time; the entitlement rises to at least five weeks up to the age of 20, and more may be agreed. Distinct from the public-holiday facts carried by S031."
+    "notes": "The general statutory minimum for all workers is four weeks regardless of full- or part-time; the entitlement rises to at least five weeks up to the age of 20, and more may be agreed. Distinct from the public-holiday facts carried by S031.",
+    "answer": "Five weeks",
+    "answer_variations": [
+      "Five weeks."
+    ],
+    "answer_type": "short",
+    "reference": "Up to the age of 20, you are entitled to at least five weeks' vacation."
   },
   {
     "id": "K037",
@@ -303,7 +405,13 @@
     "source_quote": "You need your employer's approval to take time off. If your holidays are not compatible with the needs or interests of the company, your boss can ask you to change them.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "This is the fact that appears on S013 but not on the shared S031 page; keeping it here avoids duplicating the public-holiday facts."
+    "notes": "This is the fact that appears on S013 but not on the shared S031 page; keeping it here avoids duplicating the public-holiday facts.",
+    "answer": "No — the employer must approve the time off, and may require the employee to change dates that are not compatible with the needs or interests of the company",
+    "answer_variations": [
+      "No — the employer must approve the time off, and may require the employee to change dates that are not compatible with the needs or interests of the company."
+    ],
+    "answer_type": "sentence",
+    "reference": "You need your employer's approval to take time off. If your holidays are not compatible with the needs or interests of the company, your boss can ask you to change them."
   },
   {
     "id": "K038",
@@ -321,7 +429,13 @@
     "source_quote": "Rental deposit, also known as a security deposit: This must only be paid when required in the agreement. For residential rentals, this is a maximum of three months' rent.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The deposit may be demanded only if the agreement provides for it; three months' rent is a ceiling, not an entitlement."
+    "notes": "The deposit may be demanded only if the agreement provides for it; three months' rent is a ceiling, not an entitlement.",
+    "answer": "Three months' rent",
+    "answer_variations": [
+      "Three months' rent."
+    ],
+    "answer_type": "short",
+    "reference": "Rental deposit, also known as a security deposit: This must only be paid when required in the agreement. For residential rentals, this is a maximum of three months' rent."
   },
   {
     "id": "K039",
@@ -339,7 +453,13 @@
     "source_quote": "an embedded microchip with biometric data: two digital fingerprints and a facial image. The data are stored for five years and may only be used for the purpose of issuing a new biometric residence permit without the need for additional data processing.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The stored data may be used only to issue a new biometric residence permit. The chip does not allow a person to be located or monitored. CANTONAL-VARIABLE: application and issuance are decided by the canton of residence."
+    "notes": "The stored data may be used only to issue a new biometric residence permit. The chip does not allow a person to be located or monitored. CANTONAL-VARIABLE: application and issuance are decided by the canton of residence.",
+    "answer": "Two digital fingerprints and a facial image, stored for five years",
+    "answer_variations": [
+      "Two digital fingerprints and a facial image, stored for five years."
+    ],
+    "answer_type": "sentence",
+    "reference": "an embedded microchip with biometric data: two digital fingerprints and a facial image. The data are stored for five years and may only be used for the purpose of issuing a new biometric residence permit without the need for additional data processing."
   },
   {
     "id": "K040",
@@ -357,7 +477,13 @@
     "source_quote": "When it signed the Schengen Agreement on 12 December 2008, Switzerland began issuing a new residence permit in credit-card format to foreign nationals. In a subsequent development in early 2011, a microchip was added to these residence permits for the purpose of storing biometric data.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Switzerland joined Schengen in 2008 while remaining outside the EU and the EEA. Presented with a valid national passport, the biometric residence permit entitles the holder to travel throughout the Schengen area without a visa."
+    "notes": "Switzerland joined Schengen in 2008 while remaining outside the EU and the EEA. Presented with a valid national passport, the biometric residence permit entitles the holder to travel throughout the Schengen area without a visa.",
+    "answer": "Switzerland signed the Schengen Agreement on 12 December 2008, and the microchip was added in early 2011",
+    "answer_variations": [
+      "Switzerland signed the Schengen Agreement on 12 December 2008, and the microchip was added in early 2011."
+    ],
+    "answer_type": "sentence",
+    "reference": "When it signed the Schengen Agreement on 12 December 2008, Switzerland began issuing a new residence permit in credit-card format to foreign nationals. In a subsequent development in early 2011, a microchip was added to these residence permits for the purpose of storing biometric data."
   },
   {
     "id": "K181",
@@ -375,7 +501,14 @@
     "source_quote": "Data protection law does not protect data as such, but rather the persons about whom data is processed.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Traps the property-framing imported from data-protection-as-asset models; the FDPIC states the protection attaches to persons, not to the data as a commodity."
+    "notes": "Traps the property-framing imported from data-protection-as-asset models; the FDPIC states the protection attaches to persons, not to the data as a commodity.",
+    "answer": "The persons about whom data are processed",
+    "answer_variations": [
+      "persons about whom data are processed",
+      "The persons about whom data are processed."
+    ],
+    "answer_type": "sentence",
+    "reference": "Data protection law does not protect data as such, but rather the persons about whom data is processed."
   },
   {
     "id": "K182",
@@ -393,7 +526,14 @@
     "source_quote": "It contains legal norms that serve the protection of personality and informational self-determination and regulate the processing of personal data carried out by federal authorities or private individuals or legal entities (e.g. associations or commercial enterprises).",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The FADP reaches private companies as well as federal bodies. The distractor A imports the idea that data protection is a purely public-sector or cantonal matter."
+    "notes": "The FADP reaches private companies as well as federal bodies. The distractor A imports the idea that data protection is a purely public-sector or cantonal matter.",
+    "answer": "Both federal authorities and private individuals or legal entities, including associations and commercial enterprises",
+    "answer_variations": [
+      "Both federal authorities, private individuals or legal entities, including associations and commercial enterprises",
+      "private individuals or legal entities, including associations, commercial enterprises, Both federal authorities"
+    ],
+    "answer_type": "list",
+    "reference": "It contains legal norms that serve the protection of personality and informational self-determination and regulate the processing of personal data carried out by federal authorities or private individuals or legal entities (e.g. associations or commercial enterprises)."
   },
   {
     "id": "K183",
@@ -411,7 +551,13 @@
     "source_quote": "The situation is different for the processing of personal data by private entities. In principle, this is permitted in Switzerland.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Distractor A is the GDPR prior-consent default, which does not carry over to Swiss private-sector processing; the source deliberately does not use the words opt-in or opt-out."
+    "notes": "Distractor A is the GDPR prior-consent default, which does not carry over to Swiss private-sector processing; the source deliberately does not use the words opt-in or opt-out.",
+    "answer": "It is permitted in principle, with the test being whether the invasion of privacy can be justified by consent or by overriding interests",
+    "answer_variations": [
+      "It is permitted in principle, with the test being whether the invasion of privacy can be justified by consent or by overriding interests."
+    ],
+    "answer_type": "sentence",
+    "reference": "The situation is different for the processing of personal data by private entities. In principle, this is permitted in Switzerland."
   },
   {
     "id": "K184",
@@ -429,7 +575,13 @@
     "source_quote": "The protection of privacy is a constitutionally guaranteed fundamental right (Art. 13 of the Federal Constitution). In principle, there is no voluntary waiver of data protection rights with regard to the processing of personal data by the State.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Distractor A transplants the private-sector consent logic into the public-law sphere, where the FDPIC says no waiver is possible."
+    "notes": "Distractor A transplants the private-sector consent logic into the public-law sphere, where the FDPIC says no waiver is possible.",
+    "answer": "There is in principle no voluntary waiver, and the purpose, scope and extent of state processing are fixed by statute",
+    "answer_variations": [
+      "There is in principle no voluntary waiver, and the purpose, scope and extent of state processing are fixed by statute."
+    ],
+    "answer_type": "sentence",
+    "reference": "The protection of privacy is a constitutionally guaranteed fundamental right (Art. 13 of the Federal Constitution). In principle, there is no voluntary waiver of data protection rights with regard to the processing of personal data by the State."
   },
   {
     "id": "K185",
@@ -447,7 +599,13 @@
     "source_quote": "Whenever personal data is gathered, the data controller must inform the data subject in advance and in an adequate manner that their data is to be gathered, even if the data are not gathered directly from the data subject concerned.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The duty to inform bites on indirect collection too, and it bites in advance rather than after processing. Distractor D weakens advance notice to a post-hoc deadline."
+    "notes": "The duty to inform bites on indirect collection too, and it bites in advance rather than after processing. Distractor D weakens advance notice to a post-hoc deadline.",
+    "answer": "To inform the data subject in advance and in an adequate manner that their data are to be gathered",
+    "answer_variations": [
+      "To inform the data subject in advance and in an adequate manner that their data are to be gathered."
+    ],
+    "answer_type": "sentence",
+    "reference": "Whenever personal data is gathered, the data controller must inform the data subject in advance and in an adequate manner that their data is to be gathered, even if the data are not gathered directly from the data subject concerned."
   },
   {
     "id": "K186",
@@ -465,7 +623,13 @@
     "source_quote": "Moreover, the exceptions mentioned in Article 20 FADP limit or remove the duty to provide information, for example if a data subject already has the information (because they previously consented to their data being processed) or if the processing of personal data is required by law. These exceptions must be narrowly interpreted: the data controller should not assume that they will apply.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Names the Article 20 FADP exceptions and the narrow-interpretation rule; distractor A is the opposite of the FDPIC's express warning against assuming they apply."
+    "notes": "Names the Article 20 FADP exceptions and the narrow-interpretation rule; distractor A is the opposite of the FDPIC's express warning against assuming they apply.",
+    "answer": "They cover, for example, a data subject who already has the information or processing required by law, and they must be narrowly interpreted",
+    "answer_variations": [
+      "They cover, for example, a data subject who already has the information or processing required by law, and they must be narrowly interpreted."
+    ],
+    "answer_type": "sentence",
+    "reference": "Moreover, the exceptions mentioned in Article 20 FADP limit or remove the duty to provide information, for example if a data subject already has the information (because they previously consented to their data being processed) or if the processing of personal data is required by law. These exceptions must be narrowly interpreted: the data controller should not assume that they will apply."
   },
   {
     "id": "K187",
@@ -483,7 +647,13 @@
     "source_quote": "Fines of up to CHF250,000 may be imposed on the natural person responsible for the offence. Legal persons can be fined up to CHF50,000, only as a subsidiary measure.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Distractors A and C are GDPR-style supervisory powers the FDPIC does not have under the FADP; enforcement runs through binding orders and the FADP's criminal provisions."
+    "notes": "Distractors A and C are GDPR-style supervisory powers the FDPIC does not have under the FADP; enforcement runs through binding orders and the FADP's criminal provisions.",
+    "answer": "It has no power to impose sanctions under the FADP, so fines of up to CHF 250,000 fall on the natural person responsible for the offence",
+    "answer_variations": [
+      "It has no power to impose sanctions under the FADP, so fines of up to CHF 250,000 fall on the natural person responsible for the offence."
+    ],
+    "answer_type": "sentence",
+    "reference": "Fines of up to CHF250,000 may be imposed on the natural person responsible for the offence. Legal persons can be fined up to CHF50,000, only as a subsidiary measure."
   },
   {
     "id": "K188",
@@ -501,7 +671,13 @@
     "source_quote": "As a result, private CCTV systems in public areas are normally regarded as an excessive and unlawful measure and their installation is prohibited.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Public-space video surveillance is handled under cantonal and communal law with private systems generally barred; signage alone does not make a private public-space camera lawful."
+    "notes": "Public-space video surveillance is handled under cantonal and communal law with private systems generally barred; signage alone does not make a private public-space camera lawful.",
+    "answer": "No, such systems are normally regarded as an excessive and unlawful measure and their installation is prohibited",
+    "answer_variations": [
+      "No, such systems are normally regarded as an excessive and unlawful measure and their installation is prohibited."
+    ],
+    "answer_type": "sentence",
+    "reference": "As a result, private CCTV systems in public areas are normally regarded as an excessive and unlawful measure and their installation is prohibited."
   },
   {
     "id": "K189",
@@ -519,7 +695,13 @@
     "source_quote": "Interest in crime prevention: the preservation of security and order in public areas is not the responsibility of private individuals, but a task for the police. For this reason, protecting his or her own security is not a legitimate reason for a private individual to monitor a public area.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Self-protection is expressly not a legitimate reason for a private person to monitor a public area, because that task belongs to the police."
+    "notes": "Self-protection is expressly not a legitimate reason for a private person to monitor a public area, because that task belongs to the police.",
+    "answer": "Because preserving security and order in public areas is a task for the police, not for private individuals",
+    "answer_variations": [
+      "Because preserving security and order in public areas is a task for the police, not for private individuals."
+    ],
+    "answer_type": "sentence",
+    "reference": "Interest in crime prevention: the preservation of security and order in public areas is not the responsibility of private individuals, but a task for the police. For this reason, protecting his or her own security is not a legitimate reason for a private individual to monitor a public area."
   },
   {
     "id": "K190",
@@ -537,7 +719,13 @@
     "source_quote": "There are possible exceptions to this rule: When legitimate video surveillance of private property is conducted, images of public areas are also recorded. If the extent of this intrusion is negligible and the surveillance of the private property would otherwise be impossible, common sense dictates that surveillance will normally be allowed.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Two cumulative conditions: negligible intrusion plus impossibility of surveillance otherwise. Distractor B lifts the retention figure and mistakes a storage rule for a permission rule."
+    "notes": "Two cumulative conditions: negligible intrusion plus impossibility of surveillance otherwise. Distractor B lifts the retention figure and mistakes a storage rule for a permission rule.",
+    "answer": "When the intrusion on the public area is negligible and surveillance of the private property would otherwise be impossible",
+    "answer_variations": [
+      "When the intrusion on the public area is negligible and surveillance of the private property would otherwise be impossible."
+    ],
+    "answer_type": "sentence",
+    "reference": "There are possible exceptions to this rule: When legitimate video surveillance of private property is conducted, images of public areas are also recorded. If the extent of this intrusion is negligible and the surveillance of the private property would otherwise be impossible, common sense dictates that surveillance will normally be allowed."
   },
   {
     "id": "K191",
@@ -555,7 +743,14 @@
     "source_quote": "If public places are involved, it must be clarified in advance with the commune whether permission is required. Monitored areas must be clearly signposted.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "This is the cantonally anchored level: the commune decides, not a federal permit office. Distractors B and D transplant federal or building-law approval routes."
+    "notes": "This is the cantonally anchored level: the commune decides, not a federal permit office. Distractors B and D transplant federal or building-law approval routes.",
+    "answer": "The commune, with which it must be clarified in advance whether permission is required",
+    "answer_variations": [
+      "commune, with which it must be clarified in advance whether permission is required",
+      "The commune, with which it must be clarified in advance whether permission is required."
+    ],
+    "answer_type": "sentence",
+    "reference": "If public places are involved, it must be clarified in advance with the commune whether permission is required. Monitored areas must be clearly signposted."
   },
   {
     "id": "K192",
@@ -573,7 +768,13 @@
     "source_quote": "Recordings should only be retained for a limited period. The length of time the data is kept depends on the purpose of the monitoring. As a general rule, recordings should be deleted within 24 to 72 hours.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The window is a 24-72 hour range, not a fixed deadline; distractor D hard-codes the lower bound and distractor B imports a German-style retention period."
+    "notes": "The window is a 24-72 hour range, not a fixed deadline; distractor D hard-codes the lower bound and distractor B imports a German-style retention period.",
+    "answer": "As a general rule it should be deleted within 24 to 72 hours, the period depending on the purpose of the monitoring",
+    "answer_variations": [
+      "As a general rule it should be deleted within 24 to 72 hours, the period depending on the purpose of the monitoring."
+    ],
+    "answer_type": "sentence",
+    "reference": "Recordings should only be retained for a limited period. The length of time the data is kept depends on the purpose of the monitoring. As a general rule, recordings should be deleted within 24 to 72 hours."
   },
   {
     "id": "K193",
@@ -591,7 +792,13 @@
     "source_quote": "Biometric residence permits shall be issued to holders of the following categories of residence permit: - Short-term residence permits (L) - Residence permits (B) - Settlement permits (C)",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Exactly the three categories L, B and C; the N and F permits are deliberately not in the biometric programme."
+    "notes": "Exactly the three categories L, B and C; the N and F permits are deliberately not in the biometric programme.",
+    "answer": "Short-term residence permits (L), residence permits (B) and settlement permits (C)",
+    "answer_variations": [
+      "residence permits (B), settlement permits (C), Short-term residence permits (L)"
+    ],
+    "answer_type": "list",
+    "reference": "Biometric residence permits shall be issued to holders of the following categories of residence permit: - Short-term residence permits (L) - Residence permits (B) - Settlement permits (C)"
   },
   {
     "id": "K194",
@@ -609,7 +816,14 @@
     "source_quote": "The application procedure and issuance of a biometric residence permit are decided by the Canton of residence. Biometric data are obtained from the person by the corresponding authority in the Canton of residence.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Cantonal variable: no single national procedure or fee. Distractor A overstates the SEM's role, which is limited to centrally producing the cards."
+    "notes": "Cantonal variable: no single national procedure or fee. Distractor A overstates the SEM's role, which is limited to centrally producing the cards.",
+    "answer": "The canton of residence decides, and the biometric data are captured by that canton's authority",
+    "answer_variations": [
+      "canton of residence decides, and the biometric data are captured by that canton's authority",
+      "The canton of residence decides, and the biometric data are captured by that canton's authority."
+    ],
+    "answer_type": "sentence",
+    "reference": "The application procedure and issuance of a biometric residence permit are decided by the Canton of residence. Biometric data are obtained from the person by the corresponding authority in the Canton of residence."
   },
   {
     "id": "K195",
@@ -627,7 +841,13 @@
     "source_quote": "First-generation residence permits for foreign nationals (i.e. no biometric data stored) shall remain valid until the expiry date. The new biometric residence permit shall only be issued after the previous residence permit has expired or if changes in personal data require issuance of a new residence permit.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Transition rule, not a revocation rule; distractor B invents an automatic five-year upgrade that the page does not support."
+    "notes": "Transition rule, not a revocation rule; distractor B invents an automatic five-year upgrade that the page does not support.",
+    "answer": "It remains valid until its expiry date, a biometric permit being issued only once it has expired or if personal data change",
+    "answer_variations": [
+      "It remains valid until its expiry date, a biometric permit being issued only once it has expired or if personal data change."
+    ],
+    "answer_type": "sentence",
+    "reference": "First-generation residence permits for foreign nationals (i.e. no biometric data stored) shall remain valid until the expiry date. The new biometric residence permit shall only be issued after the previous residence permit has expired or if changes in personal data require issuance of a new residence permit."
   },
   {
     "id": "K196",
@@ -645,7 +865,13 @@
     "source_quote": "All parties who signed the rental agreement must sign the letter of termination. Tenants who are renting with a spouse or registered partner must have the approval of the other person to terminate the agreement, even if only one party has signed the agreement as the tenant. Tenants are not required to provide a reason for terminating the agreement. The letter of termination should be sent to the landlord by registered mail.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Two traps: signature is required from all signatories (not all occupants), and proof of dispatch matters, so registered mail is the safe route. The tenant need give no reason."
+    "notes": "Two traps: signature is required from all signatories (not all occupants), and proof of dispatch matters, so registered mail is the safe route. The tenant need give no reason.",
+    "answer": "All parties who signed the rental agreement, with the letter sent to the landlord by registered mail",
+    "answer_variations": [
+      "All parties who signed the rental agreement, with the letter sent to the landlord by registered mail."
+    ],
+    "answer_type": "short",
+    "reference": "All parties who signed the rental agreement must sign the letter of termination. Tenants who are renting with a spouse or registered partner must have the approval of the other person to terminate the agreement, even if only one party has signed the agreement as the tenant. Tenants are not required to provide a reason for terminating the agreement. The letter of termination should be sent to the landlord by registered mail."
   },
   {
     "id": "K197",
@@ -663,7 +889,13 @@
     "source_quote": "Tenants have 30 days to contact their commune's conciliation authority to contest the termination.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The 30-day contestation window is distinct from the notice period itself, which distractor B conflates with it."
+    "notes": "The 30-day contestation window is distinct from the notice period itself, which distractor B conflates with it.",
+    "answer": "30 days",
+    "answer_variations": [
+      "30 days."
+    ],
+    "answer_type": "short",
+    "reference": "Tenants have 30 days to contact their commune's conciliation authority to contest the termination."
   },
   {
     "id": "K198",
@@ -681,7 +913,14 @@
     "source_quote": "A maximum surcharge of 20% may be added to the monthly rent on a furnished apartment, to compensate for wear and tear on furnishings. In all other cases, tenants may only charge what they themselves pay for the apartment (incl. additional charges).",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The 20% allowance is confined to furnished apartments; distractor C states the rule for all other cases and drops the furnished exception."
+    "notes": "The 20% allowance is confined to furnished apartments; distractor C states the rule for all other cases and drops the furnished exception.",
+    "answer": "A surcharge of up to 20% of the monthly rent may be added, to compensate for wear and tear on furnishings",
+    "answer_variations": [
+      "surcharge of up to 20% of the monthly rent may be added, to compensate for wear and tear on furnishings",
+      "A surcharge of up to 20% of the monthly rent may be added, to compensate for wear and tear on furnishings."
+    ],
+    "answer_type": "sentence",
+    "reference": "A maximum surcharge of 20% may be added to the monthly rent on a furnished apartment, to compensate for wear and tear on furnishings. In all other cases, tenants may only charge what they themselves pay for the apartment (incl. additional charges)."
   },
   {
     "id": "K199",
@@ -699,7 +938,13 @@
     "source_quote": "In Switzerland, landlords are generally allowed to terminate a rental agreement for any reason. They are nevertheless required to observe the notice periods stated in law or in the agreement, and to use an official form to terminate the agreement.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Swiss law is cause-free for landlords but procedural: notice period plus official form. Distractor A imports the German cause requirement, distractor B drops the formalities."
+    "notes": "Swiss law is cause-free for landlords but procedural: notice period plus official form. Distractor A imports the German cause requirement, distractor B drops the formalities.",
+    "answer": "For any reason in principle, but the statutory or contractual notice period must be observed and an official form must be used",
+    "answer_variations": [
+      "For any reason in principle, but the statutory or contractual notice period must be observed and an official form must be used."
+    ],
+    "answer_type": "sentence",
+    "reference": "In Switzerland, landlords are generally allowed to terminate a rental agreement for any reason. They are nevertheless required to observe the notice periods stated in law or in the agreement, and to use an official form to terminate the agreement."
   },
   {
     "id": "K200",
@@ -717,7 +962,13 @@
     "source_quote": "Nationals from all EU/EFTA member states without gainful employment are entitled to a B permit if they can prove they have sufficient financial means and adequate health and accident insurance.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distractors A and C apply residence-duration or employment-contract thresholds that belong to other permit categories; the non-employed B route is insurance and means, not job history."
+    "notes": "Distractors A and C apply residence-duration or employment-contract thresholds that belong to other permit categories; the non-employed B route is insurance and means, not job history.",
+    "answer": "That they have sufficient financial means and adequate health and accident insurance",
+    "answer_variations": [
+      "That they have sufficient financial means and adequate health and accident insurance."
+    ],
+    "answer_type": "sentence",
+    "reference": "Nationals from all EU/EFTA member states without gainful employment are entitled to a B permit if they can prove they have sufficient financial means and adequate health and accident insurance."
   },
   {
     "id": "K201",
@@ -735,7 +986,13 @@
     "source_quote": "First-time renewal of the permit can be limited to one year, however, if the holder has been involuntarily unemployed for more than twelve consecutive months.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "A shortening mechanism, not a withdrawal rule. Distractors B and D over-read the unemployment fact into loss of status or an automatic category change."
+    "notes": "A shortening mechanism, not a withdrawal rule. Distractors B and D over-read the unemployment fact into loss of status or an automatic category change.",
+    "answer": "It may be limited to one year",
+    "answer_variations": [
+      "It may be limited to one year."
+    ],
+    "answer_type": "short",
+    "reference": "First-time renewal of the permit can be limited to one year, however, if the holder has been involuntarily unemployed for more than twelve consecutive months."
   },
   {
     "id": "K202",
@@ -753,7 +1010,13 @@
     "source_quote": "Employment contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The Swiss online notification procedure replaces a permit for short engagements below three months within a calendar year; the boundary is three months, not one year."
+    "notes": "The Swiss online notification procedure replaces a permit for short engagements below three months within a calendar year; the boundary is three months, not one year.",
+    "answer": "Contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure",
+    "answer_variations": [
+      "Contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure."
+    ],
+    "answer_type": "sentence",
+    "reference": "Employment contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure."
   },
   {
     "id": "K203",
@@ -771,7 +1034,14 @@
     "source_quote": "The cantonal tax authorities calculate your taxes on the basis of the figures you provide in your tax return. The cantons collect both the federal taxes and the cantonal and communal taxes.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Counterintuitive: the cantons are the collecting and assessing authority for the federal tax as well, which distractor A assigns to the Federal Tax Administration."
+    "notes": "Counterintuitive: the cantons are the collecting and assessing authority for the federal tax as well, which distractor A assigns to the Federal Tax Administration.",
+    "answer": "The cantons, which calculate the taxes and collect the federal taxes as well as cantonal and communal taxes",
+    "answer_variations": [
+      "The cantons, which calculate the taxes, collect the federal taxes as well as cantonal and communal taxes",
+      "which calculate the taxes, collect the federal taxes as well as cantonal, communal taxes, The cantons"
+    ],
+    "answer_type": "list",
+    "reference": "The cantonal tax authorities calculate your taxes on the basis of the figures you provide in your tax return. The cantons collect both the federal taxes and the cantonal and communal taxes."
   },
   {
     "id": "K204",
@@ -789,7 +1059,13 @@
     "source_quote": "Taxes are not calculated on the basis of your total income, but on the basis of what is known as your 'taxable income'. This is a lower amount. You can deduct social insurance contributions from your income and make various other deductions in your tax return.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Distractor D reverts to the federal/communal split of tax bases (income for the Confederation, income and wealth for cantons and communes), which is not the rule for computing the bill."
+    "notes": "Distractor D reverts to the federal/communal split of tax bases (income for the Confederation, income and wealth for cantons and communes), which is not the rule for computing the bill.",
+    "answer": "On 'taxable income', a lower amount from which social insurance contributions and other permissible deductions have been subtracted",
+    "answer_variations": [
+      "On 'taxable income', a lower amount from which social insurance contributions and other permissible deductions have been subtracted."
+    ],
+    "answer_type": "sentence",
+    "reference": "Taxes are not calculated on the basis of your total income, but on the basis of what is known as your 'taxable income'. This is a lower amount. You can deduct social insurance contributions from your income and make various other deductions in your tax return."
   },
   {
     "id": "K205",
@@ -807,7 +1083,13 @@
     "source_quote": "The first of August - Swiss national day - is Switzerland's only national public holiday.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Everything else is cantonal; 25 December and 1 January are cantonal holidays, not national ones."
+    "notes": "Everything else is cantonal; 25 December and 1 January are cantonal holidays, not national ones.",
+    "answer": "1 August",
+    "answer_variations": [
+      "1 August."
+    ],
+    "answer_type": "short",
+    "reference": "The first of August - Swiss national day - is Switzerland's only national public holiday."
   },
   {
     "id": "K206",
@@ -825,7 +1107,13 @@
     "source_quote": "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Eight is a ceiling on the cantonal additions, not a nationwide total of public holidays; distractor D misreads it as a federal maximum."
+    "notes": "Eight is a ceiling on the cantonal additions, not a nationwide total of public holidays; distractor D misreads it as a federal maximum.",
+    "answer": "Each canton, which can have up to eight additional public holidays on its territory",
+    "answer_variations": [
+      "Each canton, which can have up to eight additional public holidays on its territory."
+    ],
+    "answer_type": "sentence",
+    "reference": "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton."
   },
   {
     "id": "K207",
@@ -843,7 +1131,13 @@
     "source_quote": "Sie können das Mietverhältnis vor Ablauf einer festen Vertragsdauer, der Kündigungsfrist oder einem Kündigungstermin beenden, wenn Sie der Vermieterin oder dem Vermieter kumulativ - eine Nachmieterin oder einen Nachmieter vorschlagen, der/die den Mietvertrag zu den gleichen Bedingungen übernehmen will und zumutbar ist, und - das Mietobjekt zurückgeben.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Source quote is German (Canton Bern conciliation authority). English: the tenancy may be ended early only if the tenant cumulatively proposes a suitable replacement tenant taking over on the same conditions and returns the rented property. Both limbs are required."
+    "notes": "Source quote is German (Canton Bern conciliation authority). English: the tenancy may be ended early only if the tenant cumulatively proposes a suitable replacement tenant taking over on the same conditions and returns the rented property. Both limbs are required.",
+    "answer": "By cumulatively proposing a suitable replacement tenant who will take over on the same conditions and returning the rented property",
+    "answer_variations": [
+      "By cumulatively proposing a suitable replacement tenant who will take over on the same conditions and returning the rented property."
+    ],
+    "answer_type": "sentence",
+    "reference": "Sie können das Mietverhältnis vor Ablauf einer festen Vertragsdauer, der Kündigungsfrist oder einem Kündigungstermin beenden, wenn Sie der Vermieterin oder dem Vermieter kumulativ - eine Nachmieterin oder einen Nachmieter vorschlagen, der/die den Mietvertrag zu den gleichen Bedingungen übernehmen will und zumutbar ist, und - das Mietobjekt zurückgeben."
   },
   {
     "id": "K208",
@@ -861,7 +1155,13 @@
     "source_quote": "Die ordentliche Kündigung ist nur unter Einhaltung der Kündigungsfrist und der Kündigungstermine möglich.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Source quote is German. The source states the locally customary termination dates, not a universal end-of-month rule, so distractor B is the widely repeated but unverified one-month claim."
+    "notes": "Source quote is German. The source states the locally customary termination dates, not a universal end-of-month rule, so distractor B is the widely repeated but unverified one-month claim.",
+    "answer": "Only if the notice period and the locally customary termination dates are observed",
+    "answer_variations": [
+      "Only if the notice period and the locally customary termination dates are observed."
+    ],
+    "answer_type": "sentence",
+    "reference": "Die ordentliche Kündigung ist nur unter Einhaltung der Kündigungsfrist und der Kündigungstermine möglich."
   },
   {
     "id": "K209",
@@ -879,7 +1179,13 @@
     "source_quote": "The probationary period lasts three years. If you commit a serious traffic violation during this period and are disqualified from driving, the probationary period will be extended by one year.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Extension by one year, and only where disqualification from driving follows; distractor C confuses extension with revocation."
+    "notes": "Extension by one year, and only where disqualification from driving follows; distractor C confuses extension with revocation.",
+    "answer": "Three years, extended by one year where a serious traffic violation leads to disqualification from driving",
+    "answer_variations": [
+      "Three years, extended by one year where a serious traffic violation leads to disqualification from driving."
+    ],
+    "answer_type": "sentence",
+    "reference": "The probationary period lasts three years. If you commit a serious traffic violation during this period and are disqualified from driving, the probationary period will be extended by one year."
   },
   {
     "id": "K210",
@@ -897,6 +1203,12 @@
     "source_quote": "The cost of simplified naturalisation in Switzerland varies according to age:\n- 250 francs for minors under the age of 12\n- 650 francs for minors aged 12 and over\n- 900 francs for adults.\nFor spouses of Swiss citizens residing abroad, simplified naturalisation costs 600 francs.\nThe full amount must be paid in advance and is not refunded if the application is refused.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "CHF 900 is the adult rate, distinct from the 12-and-over minor rate of 650 and the under-12 rate of 250; CHF 2,000 is the cantonal fee for ordinary naturalisation, not this one."
+    "notes": "CHF 900 is the adult rate, distinct from the 12-and-over minor rate of 650 and the under-12 rate of 250; CHF 2,000 is the cantonal fee for ordinary naturalisation, not this one.",
+    "answer": "CHF 900, and the full amount must be paid in advance and is not refunded if the application is refused",
+    "answer_variations": [
+      "CHF 900, and the full amount must be paid in advance and is not refunded if the application is refused."
+    ],
+    "answer_type": "sentence",
+    "reference": "The cost of simplified naturalisation in Switzerland varies according to age:\n- 250 francs for minors under the age of 12\n- 650 francs for minors aged 12 and over\n- 900 francs for adults.\nFor spouses of Swiss citizens residing abroad, simplified naturalisation costs 600 francs.\nThe full amount must be paid in advance and is not refunded if the application is refused."
   }
 ]

@@ -15,7 +15,14 @@
     "source_quote": "In contrast to other countries, the President of the Confederation in Switzerland has hardly any more decision-making power than the other members of the Federal Council.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Swiss-specific: the rotating presidency is a chairmanship, not a head-of-state office. Traps the German Bundeskanzler and US presidential models."
+    "notes": "Swiss-specific: the rotating presidency is a chairmanship, not a head-of-state office. Traps the German Bundeskanzler and US presidential models.",
+    "answer": "The President has hardly any more decision-making power than the other members of the Federal Council.",
+    "answer_variations": [
+      "President has hardly any more decision-making power than the other members of the Federal Council.",
+      "The President has hardly any more decision-making power than the other members of the Federal Council"
+    ],
+    "answer_type": "sentence",
+    "reference": "In contrast to other countries, the President of the Confederation in Switzerland has hardly any more decision-making power than the other members of the Federal Council."
   },
   {
     "id": "K002",
@@ -33,7 +40,14 @@
     "source_quote": "There is often talk of an 'eighth Federal Councillor', the Federal Chancellor, who has a supporting and advisory role for the Federal Council.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The Chancellor is neither head of state (the rotating President) nor head of government (the Federal Council as a collegial body). Common model failure: importing the German Bundeskanzler."
+    "notes": "The Chancellor is neither head of state (the rotating President) nor head of government (the Federal Council as a collegial body). Common model failure: importing the German Bundeskanzler.",
+    "answer": "A supporting and advisory role for the Federal Council, rather than a seat in it.",
+    "answer_variations": [
+      "supporting and advisory role for the Federal Council, rather than a seat in it.",
+      "A supporting and advisory role for the Federal Council, rather than a seat in it"
+    ],
+    "answer_type": "sentence",
+    "reference": "There is often talk of an 'eighth Federal Councillor', the Federal Chancellor, who has a supporting and advisory role for the Federal Council."
   },
   {
     "id": "K003",
@@ -51,7 +65,14 @@
     "source_quote": "They discuss the items on the agenda at the Federal Council meeting and seek a common solution. Only if it does not reach a solution, does the Federal Council vote.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Consensus-before-vote is the defining feature of the Swiss collegial executive; no majority-vote casting exists in the normal case."
+    "notes": "Consensus-before-vote is the defining feature of the Swiss collegial executive; no majority-vote casting exists in the normal case.",
+    "answer": "The members first seek a common solution, and only vote if they fail to reach one.",
+    "answer_variations": [
+      "members first seek a common solution, and only vote if they fail to reach one.",
+      "The members first seek a common solution, and only vote if they fail to reach one"
+    ],
+    "answer_type": "sentence",
+    "reference": "They discuss the items on the agenda at the Federal Council meeting and seek a common solution. Only if it does not reach a solution, does the Federal Council vote."
   },
   {
     "id": "K004",
@@ -69,7 +90,13 @@
     "source_quote": "Parliament's decisions are only final if the National Council and the Council of States reach the same conclusion. Otherwise, the two chambers must follow the 'resolution of differences procedure' in an attempt to reach an agreement.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Neither chamber is dominant — a bicameral equal-footing design with no overrider, unlike most second chambers."
+    "notes": "Neither chamber is dominant — a bicameral equal-footing design with no overrider, unlike most second chambers.",
+    "answer": "Only when both chambers reach the same conclusion; otherwise the 'resolution of differences procedure' follows.",
+    "answer_variations": [
+      "Only when both chambers reach the same conclusion; otherwise the 'resolution of differences procedure' follows"
+    ],
+    "answer_type": "sentence",
+    "reference": "Parliament's decisions are only final if the National Council and the Council of States reach the same conclusion. Otherwise, the two chambers must follow the 'resolution of differences procedure' in an attempt to reach an agreement."
   },
   {
     "id": "K005",
@@ -87,7 +114,13 @@
     "source_quote": "The Swiss Parliament has 200 seats in the National Council and 46 seats in the Council of States.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "46 = 20 cantons x 2 seats + 6 former half-cantons x 1 seat. 52 is the intuitive-but-wrong 26 x 2. Sourced from S003 (S026 holds the same content)."
+    "notes": "46 = 20 cantons x 2 seats + 6 former half-cantons x 1 seat. 52 is the intuitive-but-wrong 26 x 2. Sourced from S003 (S026 holds the same content).",
+    "answer": "46 seats",
+    "answer_variations": [
+      "46 seats."
+    ],
+    "answer_type": "short",
+    "reference": "The Swiss Parliament has 200 seats in the National Council and 46 seats in the Council of States."
   },
   {
     "id": "K006",
@@ -105,7 +138,13 @@
     "source_quote": "The former half-cantons of Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft are only entitled to one.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The six are all former half-cantons; the historical reason is a leftover of the old Confederation's status. Source spells the Basel cantons without hyphens."
+    "notes": "The six are all former half-cantons; the historical reason is a leftover of the old Confederation's status. Source spells the Basel cantons without hyphens.",
+    "answer": "Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft",
+    "answer_variations": [
+      "Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt, Basel Landschaft, Obwalden"
+    ],
+    "answer_type": "list",
+    "reference": "The former half-cantons of Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft are only entitled to one."
   },
   {
     "id": "K007",
@@ -123,7 +162,14 @@
     "source_quote": "collect 50,000 valid signatures within 100 days of the publication of the new legislation",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Pair with K011: the optional referendum is 50,000 signatures / 100 days; the federal popular initiative is 100,000 / 18 months."
+    "notes": "Pair with K011: the optional referendum is 50,000 signatures / 100 days; the federal popular initiative is 100,000 / 18 months.",
+    "answer": "50,000 signatures within 100 days",
+    "answer_variations": [
+      "000 signatures within 100 days and 50",
+      "000 signatures within 100 days, 50"
+    ],
+    "answer_type": "list",
+    "reference": "collect 50,000 valid signatures within 100 days of the publication of the new legislation"
   },
   {
     "id": "K008",
@@ -141,7 +187,14 @@
     "source_quote": "A further requirement is that any given signature list may contain only the signatures of persons from the same commune – because the communes are the first to check the signatures.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Counter-intuitive administrative detail: signature gathering is decentralised to the commune for verification. The same per-commune form rule applies to popular initiatives."
+    "notes": "Counter-intuitive administrative detail: signature gathering is decentralised to the commune for verification. The same per-commune form rule applies to popular initiatives.",
+    "answer": "A single list may only contain signatures from people of the same commune, because the communes are the first to check the signatures.",
+    "answer_variations": [
+      "single list may only contain signatures from people of the same commune, because the communes are the first to check the signatures.",
+      "A single list may only contain signatures from people of the same commune, because the communes are the first to check the signatures"
+    ],
+    "answer_type": "sentence",
+    "reference": "A further requirement is that any given signature list may contain only the signatures of persons from the same commune – because the communes are the first to check the signatures."
   },
   {
     "id": "K009",
@@ -159,7 +212,13 @@
     "source_quote": "Currently Glarus is the only canton to allow 16- and 17-year-olds to vote at cantonal and communal level, but not to stand for election.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE and time-specific: Glarus is named as the sole canton on the page as accessed 2026-10-12. Canton is named explicitly in the stem."
+    "notes": "CANTONAL-VARIABLE and time-specific: Glarus is named as the sole canton on the page as accessed 2026-10-12. Canton is named explicitly in the stem.",
+    "answer": "In Glarus, at cantonal and communal level — they may vote but not stand for election.",
+    "answer_variations": [
+      "In Glarus, at cantonal and communal level — they may vote but not stand for election"
+    ],
+    "answer_type": "sentence",
+    "reference": "Currently Glarus is the only canton to allow 16- and 17-year-olds to vote at cantonal and communal level, but not to stand for election."
   },
   {
     "id": "K010",
@@ -177,7 +236,13 @@
     "source_quote": "A person may belong to only one of the three branches of the state (at federal, cantonal or communal level) at any one time.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Branch incompatibility. It is why a Federal Councillor cannot sit in Parliament or on the Federal Supreme Court."
+    "notes": "Branch incompatibility. It is why a Federal Councillor cannot sit in Parliament or on the Federal Supreme Court.",
+    "answer": "No — a person may belong to only one of the three branches of the state at any one time.",
+    "answer_variations": [
+      "No — a person may belong to only one of the three branches of the state at any one time"
+    ],
+    "answer_type": "sentence",
+    "reference": "A person may belong to only one of the three branches of the state (at federal, cantonal or communal level) at any one time."
   },
   {
     "id": "K011",
@@ -195,7 +260,14 @@
     "source_quote": "For an initiative to come to fruition, it must be signed by 100,000 voters within 18 months.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Direct democracy threshold. Contrast with K007: referendum 50,000 / 100 days."
+    "notes": "Direct democracy threshold. Contrast with K007: referendum 50,000 / 100 days.",
+    "answer": "100,000 signatures within 18 months",
+    "answer_variations": [
+      "000 signatures within 18 months and 100",
+      "000 signatures within 18 months, 100"
+    ],
+    "answer_type": "list",
+    "reference": "For an initiative to come to fruition, it must be signed by 100,000 voters within 18 months."
   },
   {
     "id": "K012",
@@ -213,7 +285,13 @@
     "source_quote": "The initiative committee must have at least 7 and no more than 27 members, who each must be eligible to vote in Switzerland.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "There is both a floor (7) and a ceiling (27) — models frequently recall only the lower bound or invent a minimum of 3."
+    "notes": "There is both a floor (7) and a ceiling (27) — models frequently recall only the lower bound or invent a minimum of 3.",
+    "answer": "At least seven and at most twenty-seven members, each of whom is eligible to vote in Switzerland.",
+    "answer_variations": [
+      "At least seven and at most twenty-seven members, each of whom is eligible to vote in Switzerland"
+    ],
+    "answer_type": "sentence",
+    "reference": "The initiative committee must have at least 7 and no more than 27 members, who each must be eligible to vote in Switzerland."
   },
   {
     "id": "K013",
@@ -231,7 +309,14 @@
     "source_quote": "Cantonal governments usually have a different president each year - the position rotating according to the length of time the government members have been in office. The president does not enjoy any special privileges or status, apart from chairing cantonal government meetings.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE: rotation follows length of service, so the source says 'usually'. Phrased as the general cantonal pattern, never as a universal seven-member rule."
+    "notes": "CANTONAL-VARIABLE: rotation follows length of service, so the source says 'usually'. Phrased as the general cantonal pattern, never as a universal seven-member rule.",
+    "answer": "The presidency usually rotates from year to year and carries no privileges beyond chairing the cantonal government's meetings.",
+    "answer_variations": [
+      "presidency usually rotates from year to year and carries no privileges beyond chairing the cantonal government's meetings.",
+      "The presidency usually rotates from year to year and carries no privileges beyond chairing the cantonal government's meetings"
+    ],
+    "answer_type": "sentence",
+    "reference": "Cantonal governments usually have a different president each year - the position rotating according to the length of time the government members have been in office. The president does not enjoy any special privileges or status, apart from chairing cantonal government meetings."
   },
   {
     "id": "K014",
@@ -249,7 +334,13 @@
     "source_quote": "The number of members of parliament varies from canton to canton. It is usually proportional to the population of the canton. The parliament of Appenzell Innerrhoden currently has 50 members while the Zurich parliament has 180 members.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE and time-specific ('currently' as of the 2026-10-12 page). Both cantons are named explicitly, per the cantonal-variation rule."
+    "notes": "CANTONAL-VARIABLE and time-specific ('currently' as of the 2026-10-12 page). Both cantons are named explicitly, per the cantonal-variation rule.",
+    "answer": "Appenzell Innerrhoden has 50 members and Zurich has 180.",
+    "answer_variations": [
+      "Appenzell Innerrhoden has 50 members and Zurich has 180"
+    ],
+    "answer_type": "sentence",
+    "reference": "The number of members of parliament varies from canton to canton. It is usually proportional to the population of the canton. The parliament of Appenzell Innerrhoden currently has 50 members while the Zurich parliament has 180 members."
   },
   {
     "id": "K015",
@@ -267,7 +358,13 @@
     "source_quote": "But the decision to amend the constitution or join a supranational community requires a so-called double majority. Such a proposal is accepted only if both the majority of voters (popular majority) as well as the majority of cantons say yes.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The supranational-community limb is the non-obvious half — it is what would apply to any EU accession question, which Switzerland is not part of."
+    "notes": "The supranational-community limb is the non-obvious half — it is what would apply to any EU accession question, which Switzerland is not part of.",
+    "answer": "Amendments to the Constitution and decisions to join a supranational community.",
+    "answer_variations": [
+      "Amendments to the Constitution and decisions to join a supranational community"
+    ],
+    "answer_type": "sentence",
+    "reference": "But the decision to amend the constitution or join a supranational community requires a so-called double majority. Such a proposal is accepted only if both the majority of voters (popular majority) as well as the majority of cantons say yes."
   },
   {
     "id": "K016",
@@ -285,7 +382,13 @@
     "source_quote": "The votes of the former half-cantons of Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden and Appenzell Innerrhoden each count as half a vote.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The six former half-cantons weigh 0.5 each, so the cantonal majority is effectively a weighted 23-canton vote. Note this is a separate mechanism from the single Council of States seat they hold."
+    "notes": "The six former half-cantons weigh 0.5 each, so the cantonal majority is effectively a weighted 23-canton vote. Note this is a separate mechanism from the single Council of States seat they hold.",
+    "answer": "Half a vote each.",
+    "answer_variations": [
+      "Half a vote each"
+    ],
+    "answer_type": "sentence",
+    "reference": "The votes of the former half-cantons of Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden and Appenzell Innerrhoden each count as half a vote."
   },
   {
     "id": "K017",
@@ -303,7 +406,13 @@
     "source_quote": "The scope of the trials is limited: a maximum of 30% of eligible voters are permitted to use e-voting in any particular canton, with the national cap set at 10%.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The per-canton 30% / national 10% split is inverted from the intuitive reading. As accessed 2026-10-12; actual participation falls well below these quotas."
+    "notes": "The per-canton 30% / national 10% split is inverted from the intuitive reading. As accessed 2026-10-12; actual participation falls well below these quotas.",
+    "answer": "Up to 30% of eligible voters in any one canton, with a national cap of 10%.",
+    "answer_variations": [
+      "Up to 30% of eligible voters in any one canton, with a national cap of 10%"
+    ],
+    "answer_type": "sentence",
+    "reference": "The scope of the trials is limited: a maximum of 30% of eligible voters are permitted to use e-voting in any particular canton, with the national cap set at 10%."
   },
   {
     "id": "K018",
@@ -321,7 +430,13 @@
     "source_quote": "The Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court are the three other courts at federal level.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "There is no separate Federal Constitutional Court — a common import from Germany (Bundesverfassungsgericht) or Austria. The Federal Patent Court is the genuinely non-obvious fourth federal court."
+    "notes": "There is no separate Federal Constitutional Court — a common import from Germany (Bundesverfassungsgericht) or Austria. The Federal Patent Court is the genuinely non-obvious fourth federal court.",
+    "answer": "Three — the Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court.",
+    "answer_variations": [
+      "Three — the Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court"
+    ],
+    "answer_type": "sentence",
+    "reference": "The Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court are the three other courts at federal level."
   },
   {
     "id": "K019",
@@ -339,7 +454,14 @@
     "source_quote": "Each year the Federal Council deals with around 2,500 items of business.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Replaces an earlier K019 (duration of the weekly meeting), which was rejected at manual review: three of its four options were implausible. This item tests the small size of the Swiss consensus executive - seven councillors handling ~2,500 items, against the tens of thousands a large national cabinet would process. Distractors span three orders of magnitude so each is a real candidate."
+    "notes": "Replaces an earlier K019 (duration of the weekly meeting), which was rejected at manual review: three of its four options were implausible. This item tests the small size of the Swiss consensus executive - seven councillors handling ~2,500 items, against the tens of thousands a large national cabinet would process. Distractors span three orders of magnitude so each is a real candidate.",
+    "answer": "around 2,500",
+    "answer_variations": [
+      "500 and around 2",
+      "500, around 2"
+    ],
+    "answer_type": "list",
+    "reference": "Each year the Federal Council deals with around 2,500 items of business."
   },
   {
     "id": "K020",
@@ -357,7 +479,13 @@
     "source_quote": "As guardian of the people's rights, the Federal Chancellery organises federal elections and referendums.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Precise delimitation: the Chancellery is the Federal Council's staff office, not a head of state/government. Referendum and initiative committees submit their signatures to it."
+    "notes": "Precise delimitation: the Chancellery is the Federal Council's staff office, not a head of state/government. Referendum and initiative committees submit their signatures to it.",
+    "answer": "Organising federal elections and referendums, as guardian of the people's rights.",
+    "answer_variations": [
+      "Organising federal elections and referendums, as guardian of the people's rights"
+    ],
+    "answer_type": "sentence",
+    "reference": "As guardian of the people's rights, the Federal Chancellery organises federal elections and referendums."
   },
   {
     "id": "K151",
@@ -375,7 +503,15 @@
     "source_quote": "German, French, Italian, and sometimes Romansh or English: the Federal Chancellery ensures that laws and official texts are understandable and correct.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps the assumption that a language-monitoring office would either cover only the two federal court languages or all five national languages on a mandatory basis."
+    "notes": "Traps the assumption that a language-monitoring office would either cover only the two federal court languages or all five national languages on a mandatory basis.",
+    "answer": "German, French, Italian, and sometimes Romansh or English",
+    "answer_variations": [
+      "German, French, Italian and sometimes Romansh or English",
+      "French, Italian, sometimes Romansh or English, German",
+      "German, French, Italian, sometimes Romansh or English"
+    ],
+    "answer_type": "list",
+    "reference": "German, French, Italian, and sometimes Romansh or English: the Federal Chancellery ensures that laws and official texts are understandable and correct."
   },
   {
     "id": "K152",
@@ -393,7 +529,14 @@
     "source_quote": "Along with the cantons, the Federal Chancellery organises federal elections and popular votes. Referendum and initiative committees submit the signatures they collect to the Federal Chancellery.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Separates the Chancellery's organising role from its intake role, and separates both from the cantons' own task of organising the vote."
+    "notes": "Separates the Chancellery's organising role from its intake role, and separates both from the cantons' own task of organising the vote.",
+    "answer": "Referendum and initiative committees",
+    "answer_variations": [
+      "initiative committees and Referendum",
+      "initiative committees, Referendum"
+    ],
+    "answer_type": "list",
+    "reference": "Along with the cantons, the Federal Chancellery organises federal elections and popular votes. Referendum and initiative committees submit the signatures they collect to the Federal Chancellery."
   },
   {
     "id": "K153",
@@ -411,7 +554,13 @@
     "source_quote": "The Federal Chancellery keeps abreast of international trends and develops scenarios for the future. This helps the Federal Council make policy decisions.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The Chancellery is a staff office, not a political negotiator, a constitutional reviewer or an audit body; each distractor assigns it a function belonging to another federal body."
+    "notes": "The Chancellery is a staff office, not a political negotiator, a constitutional reviewer or an audit body; each distractor assigns it a function belonging to another federal body.",
+    "answer": "It keeps abreast of international trends and develops scenarios for the future",
+    "answer_variations": [
+      "It keeps abreast of international trends and develops scenarios for the future."
+    ],
+    "answer_type": "sentence",
+    "reference": "The Federal Chancellery keeps abreast of international trends and develops scenarios for the future. This helps the Federal Council make policy decisions."
   },
   {
     "id": "K154",
@@ -429,7 +578,14 @@
     "source_quote": "It rules as the final instance on all appeals against decisions of the highest cantonal courts, the Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Tests the appellate ceiling: not every cantonal decision, only the top cantonal tier, and not only the federal criminal and administrative courts. D is a near-miss subset."
+    "notes": "Tests the appellate ceiling: not every cantonal decision, only the top cantonal tier, and not only the federal criminal and administrative courts. D is a near-miss subset.",
+    "answer": "Decisions of the highest cantonal courts and of the three other federal courts",
+    "answer_variations": [
+      "of the three other federal courts and Decisions of the highest cantonal courts",
+      "of the three other federal courts, Decisions of the highest cantonal courts"
+    ],
+    "answer_type": "list",
+    "reference": "It rules as the final instance on all appeals against decisions of the highest cantonal courts, the Federal Criminal Court, the Federal Administrative Court and the Federal Patent Court."
   },
   {
     "id": "K155",
@@ -447,7 +603,13 @@
     "source_quote": "Most criminal cases are decided in the first instance by cantonal courts.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Counterintuitive for anyone importing a model where a national criminal court is the ordinary first-instance criminal body; the Federal Criminal Court is a specialist exception."
+    "notes": "Counterintuitive for anyone importing a model where a national criminal court is the ordinary first-instance criminal body; the Federal Criminal Court is a specialist exception.",
+    "answer": "By cantonal courts",
+    "answer_variations": [
+      "By cantonal courts."
+    ],
+    "answer_type": "short",
+    "reference": "Most criminal cases are decided in the first instance by cantonal courts."
   },
   {
     "id": "K156",
@@ -465,7 +627,14 @@
     "source_quote": "The Federal Criminal Court hears criminal cases involving offences against federal interests, explosives offences, international cases of white-collar crime, cases relating to organised crime, corruption and money laundering, and offences related to civil aviation or war material.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Distinguishes the four federal courts by subject matter. D invents a criminal first-instance division of the Supreme Court, a structure familiar from other countries."
+    "notes": "Distinguishes the four federal courts by subject matter. D invents a criminal first-instance division of the Supreme Court, a structure familiar from other countries.",
+    "answer": "The Federal Criminal Court",
+    "answer_variations": [
+      "Federal Criminal Court",
+      "The Federal Criminal Court."
+    ],
+    "answer_type": "short",
+    "reference": "The Federal Criminal Court hears criminal cases involving offences against federal interests, explosives offences, international cases of white-collar crime, cases relating to organised crime, corruption and money laundering, and offences related to civil aviation or war material."
   },
   {
     "id": "K157",
@@ -483,7 +652,14 @@
     "source_quote": "The Federal Administrative Court rules on appeals against decisions made by authorities of the Federal Administration. Some of the issues may be controversial from both a social and political standpoint. Examples include decisions of principle in asylum-related cases or on major transport and infrastructure projects.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Each distractor is a real Swiss jurisdiction routed to the wrong court: civil appeals to the Supreme Court, patents to the Patent Court, federal criminal offences to the Federal Criminal Court."
+    "notes": "Each distractor is a real Swiss jurisdiction routed to the wrong court: civil appeals to the Supreme Court, patents to the Patent Court, federal criminal offences to the Federal Criminal Court.",
+    "answer": "An appeal against a federal decision of principle in an asylum case",
+    "answer_variations": [
+      "appeal against a federal decision of principle in an asylum case",
+      "An appeal against a federal decision of principle in an asylum case."
+    ],
+    "answer_type": "short",
+    "reference": "The Federal Administrative Court rules on appeals against decisions made by authorities of the Federal Administration. Some of the issues may be controversial from both a social and political standpoint. Examples include decisions of principle in asylum-related cases or on major transport and infrastructure projects."
   },
   {
     "id": "K158",
@@ -501,7 +677,14 @@
     "source_quote": "Every canton decides for itself whether to conduct e-voting trials. The cantons also decide which voters would be eligible to participate in the trials.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Proves cantonal autonomy inside a federally regulated area. B and D exploit the Chancellery's role in organising votes and the Supreme Court's constitutional role."
+    "notes": "Proves cantonal autonomy inside a federally regulated area. B and D exploit the Chancellery's role in organising votes and the Supreme Court's constitutional role.",
+    "answer": "Each canton, on its own",
+    "answer_variations": [
+      "on its own and Each canton",
+      "on its own, Each canton"
+    ],
+    "answer_type": "list",
+    "reference": "Every canton decides for itself whether to conduct e-voting trials. The cantons also decide which voters would be eligible to participate in the trials."
   },
   {
     "id": "K159",
@@ -519,7 +702,14 @@
     "source_quote": "Once you have cast your vote electronically, your voter identification card will be recorded and blocked for other forms of voting (by post or at a polling station). You cannot vote again at a polling station using a voter identification card that has already been used for e-voting. Votes sent by post with a voter identification card that has already been used will not be counted.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The card-blocking mechanism is the anti-double-vote control; B and C are the natural guesses from models trained on jurisdictions that reconcile rather than discard."
+    "notes": "The card-blocking mechanism is the anti-double-vote control; B and C are the natural guesses from models trained on jurisdictions that reconcile rather than discard.",
+    "answer": "The postal ballot is not counted",
+    "answer_variations": [
+      "postal ballot is not counted",
+      "The postal ballot is not counted."
+    ],
+    "answer_type": "short",
+    "reference": "Once you have cast your vote electronically, your voter identification card will be recorded and blocked for other forms of voting (by post or at a polling station). You cannot vote again at a polling station using a voter identification card that has already been used for e-voting. Votes sent by post with a voter identification card that has already been used will not be counted."
   },
   {
     "id": "K160",
@@ -537,7 +727,13 @@
     "source_quote": "Last but not least, the cantonal parliament supervises the activity of the cantonal government.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "B is the cantonal government's own core task and C is a plausible overreach; D confuses parliamentary oversight with judicial review."
+    "notes": "B is the cantonal government's own core task and C is a plausible overreach; D confuses parliamentary oversight with judicial review.",
+    "answer": "Supervising the activity of the cantonal government",
+    "answer_variations": [
+      "Supervising the activity of the cantonal government."
+    ],
+    "answer_type": "short",
+    "reference": "Last but not least, the cantonal parliament supervises the activity of the cantonal government."
   },
   {
     "id": "K161",
@@ -555,7 +751,14 @@
     "source_quote": "Parliament annually elects one of its members to be president. The president's duties include chairing the meetings of parliament.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps the assumption that the executive heads the legislature too, or that the federal president presides over cantonal business. Rotating annual presidency parallels the federal arrangement."
+    "notes": "Traps the assumption that the executive heads the legislature too, or that the federal president presides over cantonal business. Rotating annual presidency parallels the federal arrangement.",
+    "answer": "A member of that parliament, elected to the presidency each year",
+    "answer_variations": [
+      "elected to the presidency each year and A member of that parliament",
+      "elected to the presidency each year, A member of that parliament"
+    ],
+    "answer_type": "list",
+    "reference": "Parliament annually elects one of its members to be president. The president's duties include chairing the meetings of parliament."
   },
   {
     "id": "K162",
@@ -573,7 +776,14 @@
     "source_quote": "Council members holds regular, scheduled meetings, usually once a month. These meetings and their minutes are generally public.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Contrasts the legislature's public monthly rhythm with the cantonal government's behind-closed-doors meetings; C borrows the federal weekly cadence."
+    "notes": "Contrasts the legislature's public monthly rhythm with the cantonal government's behind-closed-doors meetings; C borrows the federal weekly cadence.",
+    "answer": "It meets roughly once a month, in public",
+    "answer_variations": [
+      "in public and It meets roughly once a month",
+      "in public, It meets roughly once a month"
+    ],
+    "answer_type": "list",
+    "reference": "Council members holds regular, scheduled meetings, usually once a month. These meetings and their minutes are generally public."
   },
   {
     "id": "K163",
@@ -591,7 +801,14 @@
     "source_quote": "There are between five and seven members in each cantonal government.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Establishes the cantonal counterpart to the seven-member Federal Council, which a model tends to over-generalise to cantonal level."
+    "notes": "Establishes the cantonal counterpart to the seven-member Federal Council, which a model tends to over-generalise to cantonal level.",
+    "answer": "Between five and seven",
+    "answer_variations": [
+      "seven and Between five",
+      "seven, Between five"
+    ],
+    "answer_type": "list",
+    "reference": "There are between five and seven members in each cantonal government."
   },
   {
     "id": "K164",
@@ -609,7 +826,14 @@
     "source_quote": "All members of the cantonal government must defend the position of the collegial body, regardless of their personal opinion.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Collegiality binds the cantonal government exactly as it binds the Federal Council; B, C and D are all plausible reactions from a cabinet-style mental model."
+    "notes": "Collegiality binds the cantonal government exactly as it binds the Federal Council; B, C and D are all plausible reactions from a cabinet-style mental model.",
+    "answer": "Defend the government's position publicly, whatever their own opinion",
+    "answer_variations": [
+      "whatever their own opinion and Defend the government's position publicly",
+      "whatever their own opinion, Defend the government's position publicly"
+    ],
+    "answer_type": "list",
+    "reference": "All members of the cantonal government must defend the position of the collegial body, regardless of their personal opinion."
   },
   {
     "id": "K165",
@@ -627,7 +851,13 @@
     "source_quote": "The members of the cantonal government hold regular scheduled meetings, usually behind closed doors.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Pairs with K162: the same canton legislates in public but executes behind closed doors. C is the tempting half-right compromise."
+    "notes": "Pairs with K162: the same canton legislates in public but executes behind closed doors. C is the tempting half-right compromise.",
+    "answer": "Behind closed doors",
+    "answer_variations": [
+      "Behind closed doors."
+    ],
+    "answer_type": "short",
+    "reference": "The members of the cantonal government hold regular scheduled meetings, usually behind closed doors."
   },
   {
     "id": "K166",
@@ -645,7 +875,14 @@
     "source_quote": "Each of the seven members of the Federal Council is head of one of the seven federal departments, which together with the Federal Chancellery make up the Federal Administration.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "B wrongly folds a court into the executive, C drops the Chancellery, D confuses the people who lead the administration with the administration's parts."
+    "notes": "B wrongly folds a court into the executive, C drops the Chancellery, D confuses the people who lead the administration with the administration's parts.",
+    "answer": "The seven federal departments together with the Federal Chancellery",
+    "answer_variations": [
+      "seven federal departments together with the Federal Chancellery",
+      "The seven federal departments together with the Federal Chancellery."
+    ],
+    "answer_type": "short",
+    "reference": "Each of the seven members of the Federal Council is head of one of the seven federal departments, which together with the Federal Chancellery make up the Federal Administration."
   },
   {
     "id": "K167",
@@ -663,7 +900,13 @@
     "source_quote": "The Federal supreme Court is Switzerland's highest court. Its task is to ensure the uniform application of the law and to uphold the rights of ordinary people.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "D is the key trap: uniform application is an internal Swiss function, not a supranational preliminary-reference power as in the EU."
+    "notes": "D is the key trap: uniform application is an internal Swiss function, not a supranational preliminary-reference power as in the EU.",
+    "answer": "Ensuring the uniform application of the law",
+    "answer_variations": [
+      "Ensuring the uniform application of the law."
+    ],
+    "answer_type": "short",
+    "reference": "The Federal supreme Court is Switzerland's highest court. Its task is to ensure the uniform application of the law and to uphold the rights of ordinary people."
   },
   {
     "id": "K168",
@@ -681,7 +924,15 @@
     "source_quote": "As the highest court of appeal, it also rules on disputes between individuals and the state or between the Confederation and the cantons.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Switzerland resolves federal-cantonal and state-citizen disputes domestically in its own apex court. C is the strongest distractor because it imports the CJEU's preliminary-reference role."
+    "notes": "Switzerland resolves federal-cantonal and state-citizen disputes domestically in its own apex court. C is the strongest distractor because it imports the CJEU's preliminary-reference role.",
+    "answer": "Disputes between individuals and the state, and between the Confederation and the cantons",
+    "answer_variations": [
+      "Disputes between individuals, the state, between the Confederation and the cantons",
+      "the state, between the Confederation, the cantons, Disputes between individuals",
+      "Disputes between individuals and the state, between the Confederation and the cantons"
+    ],
+    "answer_type": "list",
+    "reference": "As the highest court of appeal, it also rules on disputes between individuals and the state or between the Confederation and the cantons."
   },
   {
     "id": "K169",
@@ -699,7 +950,14 @@
     "source_quote": "In Switzerland, the powers of the state are divided among the three branches of the state: the legislature, the executive and the judiciary. This separation was introduced in 1848 on the founding of the federal state, with the aim of preventing a concentration of power in individual persons or institutions.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Dates the principle to the founding of the federal state, not to 1874 or 1891 (the direct-democracy instruments) or to a post-war revision."
+    "notes": "Dates the principle to the founding of the federal state, not to 1874 or 1891 (the direct-democracy instruments) or to a post-war revision.",
+    "answer": "In 1848, on the founding of the federal state",
+    "answer_variations": [
+      "on the founding of the federal state and In 1848",
+      "on the founding of the federal state, In 1848"
+    ],
+    "answer_type": "list",
+    "reference": "In Switzerland, the powers of the state are divided among the three branches of the state: the legislature, the executive and the judiciary. This separation was introduced in 1848 on the founding of the federal state, with the aim of preventing a concentration of power in individual persons or institutions."
   },
   {
     "id": "K170",
@@ -717,7 +975,14 @@
     "source_quote": "At the cantonal level, Jura and Neuchâtel grant the right to vote (but not to stand for election) to foreign nationals.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "High search cost and tests real cantonal variation; Geneva and Vaud are the intuitive French-speaking guesses and are not the cited pair."
+    "notes": "High search cost and tests real cantonal variation; Geneva and Vaud are the intuitive French-speaking guesses and are not the cited pair.",
+    "answer": "Jura and Neuchâtel",
+    "answer_variations": [
+      "Neuchâtel and Jura",
+      "Neuchâtel, Jura"
+    ],
+    "answer_type": "list",
+    "reference": "At the cantonal level, Jura and Neuchâtel grant the right to vote (but not to stand for election) to foreign nationals."
   },
   {
     "id": "K171",
@@ -735,7 +1000,14 @@
     "source_quote": "If you live in Switzerland, you do not need to register to vote: you will be added to the electoral register of your commune of residence as a matter of course as soon as you fulfil the conditions for being eligible to vote.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Contrast with the explicit registration required of Swiss citizens abroad; an automatic-register premise is unusual compared with most EU systems."
+    "notes": "Contrast with the explicit registration required of Swiss citizens abroad; an automatic-register premise is unusual compared with most EU systems.",
+    "answer": "No, the commune adds them automatically",
+    "answer_variations": [
+      "the commune adds them automatically and No",
+      "the commune adds them automatically, No"
+    ],
+    "answer_type": "list",
+    "reference": "If you live in Switzerland, you do not need to register to vote: you will be added to the electoral register of your commune of residence as a matter of course as soon as you fulfil the conditions for being eligible to vote."
   },
   {
     "id": "K172",
@@ -753,7 +1025,13 @@
     "source_quote": "Half of the cantons grant the right to vote at cantonal level to Swiss citizens abroad.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Federal voting rights abroad are universal, but the cantonal layer is split roughly down the middle; the page frames the result as a fraction, not a list."
+    "notes": "Federal voting rights abroad are universal, but the cantonal layer is split roughly down the middle; the page frames the result as a fraction, not a list.",
+    "answer": "Half of them",
+    "answer_variations": [
+      "Half of them."
+    ],
+    "answer_type": "short",
+    "reference": "Half of the cantons grant the right to vote at cantonal level to Swiss citizens abroad."
   },
   {
     "id": "K173",
@@ -771,7 +1049,14 @@
     "source_quote": "elect federal authorities, including the seven members of the Federal Council, the President of the Confederation, the Federal Chancellor and the judges of the Federal Supreme Court",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Parliament elects the government, the Chancellor AND the apex judges, so judicial appointments are a legislative act. B and D wrongly put appointments with the executive's staff office."
+    "notes": "Parliament elects the government, the Chancellor AND the apex judges, so judicial appointments are a legislative act. B and D wrongly put appointments with the executive's staff office.",
+    "answer": "The Federal Assembly",
+    "answer_variations": [
+      "Federal Assembly",
+      "The Federal Assembly."
+    ],
+    "answer_type": "short",
+    "reference": "elect federal authorities, including the seven members of the Federal Council, the President of the Confederation, the Federal Chancellor and the judges of the Federal Supreme Court"
   },
   {
     "id": "K174",
@@ -789,7 +1074,13 @@
     "source_quote": "The members of the two chambers meet during parliamentary sessions, which take place four times a year. Each session lasts three weeks.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "A calendar fact a model rarely has; distractors vary each component independently so a half-remembered figure is punished."
+    "notes": "A calendar fact a model rarely has; distractors vary each component independently so a half-remembered figure is punished.",
+    "answer": "Four sessions of three weeks",
+    "answer_variations": [
+      "Four sessions of three weeks."
+    ],
+    "answer_type": "short",
+    "reference": "The members of the two chambers meet during parliamentary sessions, which take place four times a year. Each session lasts three weeks."
   },
   {
     "id": "K175",
@@ -807,7 +1098,14 @@
     "source_quote": "monitor the activities of the Federal Council, the Federal Administration, the Federal Supreme Court and other bodies that perform federal tasks, e.g. the Swiss Post or the Swiss Federal Railways.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Federal oversight reaches beyond the classic branches into autonomous bodies with federal tasks; B is the canton-level confusion the whole source set is trying to prevent."
+    "notes": "Federal oversight reaches beyond the classic branches into autonomous bodies with federal tasks; B is the canton-level confusion the whole source set is trying to prevent.",
+    "answer": "Bodies that perform federal tasks, such as Swiss Post",
+    "answer_variations": [
+      "such as Swiss Post and Bodies that perform federal tasks",
+      "such as Swiss Post, Bodies that perform federal tasks"
+    ],
+    "answer_type": "list",
+    "reference": "monitor the activities of the Federal Council, the Federal Administration, the Federal Supreme Court and other bodies that perform federal tasks, e.g. the Swiss Post or the Swiss Federal Railways."
   },
   {
     "id": "K176",
@@ -825,7 +1123,13 @@
     "source_quote": "A federal popular initiative concerns only the Constitution. In contrast to the position in some cantons, there is no procedure at federal level for amending existing laws or introducing new laws through an initiative.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The sharpest federalism point in the corpus: some cantons have legislative initiatives, federal level does not. C and D invent conditional routes."
+    "notes": "The sharpest federalism point in the corpus: some cantons have legislative initiatives, federal level does not. C and D invent conditional routes.",
+    "answer": "No, a federal popular initiative can concern only the Constitution",
+    "answer_variations": [
+      "No, a federal popular initiative can concern only the Constitution."
+    ],
+    "answer_type": "sentence",
+    "reference": "A federal popular initiative concerns only the Constitution. In contrast to the position in some cantons, there is no procedure at federal level for amending existing laws or introducing new laws through an initiative."
   },
   {
     "id": "K177",
@@ -843,7 +1147,14 @@
     "source_quote": "The Federal Council must announce the date of the vote at least four months in advance.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The executive, not the Chancellery or Parliament, fixes the ballot date; C is the natural confusion with the Chancellery's vote-organising role."
+    "notes": "The executive, not the Chancellery or Parliament, fixes the ballot date; C is the natural confusion with the Chancellery's vote-organising role.",
+    "answer": "The Federal Council must announce it at least four months ahead",
+    "answer_variations": [
+      "Federal Council must announce it at least four months ahead",
+      "The Federal Council must announce it at least four months ahead."
+    ],
+    "answer_type": "sentence",
+    "reference": "The Federal Council must announce the date of the vote at least four months in advance."
   },
   {
     "id": "K178",
@@ -861,7 +1172,13 @@
     "source_quote": "More than 200 initiatives have been voted on since then, and around 10 per cent have been adopted.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Corrects the intuition that a successful signature-gathering initiative is usually a successful outcome; the low adoption rate is the point."
+    "notes": "Corrects the intuition that a successful signature-gathering initiative is usually a successful outcome; the low adoption rate is the point.",
+    "answer": "Around 10 per cent",
+    "answer_variations": [
+      "Around 10 per cent."
+    ],
+    "answer_type": "short",
+    "reference": "More than 200 initiatives have been voted on since then, and around 10 per cent have been adopted."
   },
   {
     "id": "K179",
@@ -879,7 +1196,14 @@
     "source_quote": "Parliament also decides on enactments that are not laws, for example decisions on international treaties between Switzerland and other countries. It is also possible to launch an optional referendum against these.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The referendum right reaches further than formally legislated acts; B and C are the usual assumptions about treaty approval in a parliamentary system."
+    "notes": "The referendum right reaches further than formally legislated acts; B and C are the usual assumptions about treaty approval in a parliamentary system.",
+    "answer": "Yes, an optional referendum is possible",
+    "answer_variations": [
+      "an optional referendum is possible and Yes",
+      "an optional referendum is possible, Yes"
+    ],
+    "answer_type": "list",
+    "reference": "Parliament also decides on enactments that are not laws, for example decisions on international treaties between Switzerland and other countries. It is also possible to launch an optional referendum against these."
   },
   {
     "id": "K180",
@@ -897,6 +1221,12 @@
     "source_quote": "What is more, several groups can initiate a referendum against the same new or amended law – even though they might be from different political camps. The signatures collected are counted.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Competing committees do not exclude each other; C is a near-miss that would also work in practice but is not what the page states."
+    "notes": "Competing committees do not exclude each other; C is a near-miss that would also work in practice but is not what the page states.",
+    "answer": "Both may initiate a referendum, and their signatures are counted",
+    "answer_variations": [
+      "Both may initiate a referendum, and their signatures are counted."
+    ],
+    "answer_type": "sentence",
+    "reference": "What is more, several groups can initiate a referendum against the same new or amended law – even though they might be from different political camps. The signatures collected are counted."
   }
 ]

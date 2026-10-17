@@ -15,7 +15,13 @@
     "source_quote": "The Swiss old-age insurance system is based on three pillars: state provision (OASI),\noccupational provision (pension funds) and private provision.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Swiss-specific: the AHV / BVG / Pillar-3a triad has no direct EU equivalent. Germany has state plus occupational pensions only and no third pillar."
+    "notes": "Swiss-specific: the AHV / BVG / Pillar-3a triad has no direct EU equivalent. Germany has state plus occupational pensions only and no third pillar.",
+    "answer": "State provision (OASI), occupational provision (pension funds) and private provision",
+    "answer_variations": [
+      "occupational provision (pension funds), private provision, State provision (OASI)"
+    ],
+    "answer_type": "list",
+    "reference": "The Swiss old-age insurance system is based on three pillars: state provision (OASI),\noccupational provision (pension funds) and private provision."
   },
   {
     "id": "K042",
@@ -33,7 +39,13 @@
     "source_quote": "If you have just moved to Switzerland, you have three months in which to arrange",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The same three-month deadline applies to new-borns, and the person or baby is already insured during that period. This is a Swiss KVG rule, not an EU social-security coordination rule (do not import the EU three-month rule or the EU residence-condition logic)."
+    "notes": "The same three-month deadline applies to new-borns, and the person or baby is already insured during that period. This is a Swiss KVG rule, not an EU social-security coordination rule (do not import the EU three-month rule or the EU residence-condition logic).",
+    "answer": "Within three months of arriving",
+    "answer_variations": [
+      "Within three months of arriving."
+    ],
+    "answer_type": "short",
+    "reference": "If you have just moved to Switzerland, you have three months in which to arrange"
   },
   {
     "id": "K043",
@@ -51,7 +63,13 @@
     "source_quote": "Your letter must reach your current health insurer by 30 November.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The 'Stichtag 30. November' is uniquely Swiss. Note the separate mid-year cancellation right that only holders of the CHF 300 standard deductible enjoy (tested separately in this category)."
+    "notes": "The 'Stichtag 30. November' is uniquely Swiss. Note the separate mid-year cancellation right that only holders of the CHF 300 standard deductible enjoy (tested separately in this category).",
+    "answer": "30 November",
+    "answer_variations": [
+      "30 November."
+    ],
+    "answer_type": "short",
+    "reference": "Your letter must reach your current health insurer by 30 November."
   },
   {
     "id": "K044",
@@ -69,7 +87,13 @@
     "source_quote": "You should still put CHF 3,200 aside in case you do fall ill\n(CHF 2,500 deductible and CHF 700 retention fee).",
     "language": "en",
     "difficulty": "easy",
-    "notes": "CHF 3,200 = highest adult deductible CHF 2,500 + CHF 700 maximum annual retention fee. A German/EU reader is likely to think only of a deductible."
+    "notes": "CHF 3,200 = highest adult deductible CHF 2,500 + CHF 700 maximum annual retention fee. A German/EU reader is likely to think only of a deductible.",
+    "answer": "CHF 3,200",
+    "answer_variations": [
+      "CHF 3200"
+    ],
+    "answer_type": "number",
+    "reference": "You should still put CHF 3,200 aside in case you do fall ill\n(CHF 2,500 deductible and CHF 700 retention fee)."
   },
   {
     "id": "K045",
@@ -87,7 +111,13 @@
     "source_quote": "In other words, for an insured person with an annual deductible of CHF 300, the maximum cost share is CHF 1000 per calendar year.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Key anti-trap item: CHF 1,000 is the MAXIMUM ANNUAL COST SHARE (CHF 300 deductible + CHF 700 maximum retention fee), not a deductible band. Distractor A is the retention-fee cap alone."
+    "notes": "Key anti-trap item: CHF 1,000 is the MAXIMUM ANNUAL COST SHARE (CHF 300 deductible + CHF 700 maximum retention fee), not a deductible band. Distractor A is the retention-fee cap alone.",
+    "answer": "CHF 1,000",
+    "answer_variations": [
+      "CHF 1000"
+    ],
+    "answer_type": "number",
+    "reference": "In other words, for an insured person with an annual deductible of CHF 300, the maximum cost share is CHF 1000 per calendar year."
   },
   {
     "id": "K046",
@@ -105,7 +135,14 @@
     "source_quote": "For adults, the available deductibles are 500, 1000, 1500, 2000 and 2500 francs, and for children 100, 200, 300, 400, 500 and 600 francs.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Levels are chosen voluntarily; there is no age / income ('affluence') / rural-residence rule assigning a band. Distractor B is the children's list."
+    "notes": "Levels are chosen voluntarily; there is no age / income ('affluence') / rural-residence rule assigning a band. Distractor B is the children's list.",
+    "answer": "500, 1,000, 1,500, 2,000 and 2,500 francs",
+    "answer_variations": [
+      "500, 1, 000, 1, 500, 2, 000, 2 and 500 francs",
+      "1, 000, 1, 500, 2, 000, 2, 500 francs, 500"
+    ],
+    "answer_type": "list",
+    "reference": "For adults, the available deductibles are 500, 1000, 1500, 2000 and 2500 francs, and for children 100, 200, 300, 400, 500 and 600 francs."
   },
   {
     "id": "K047",
@@ -123,7 +160,14 @@
     "source_quote": "The health insurer does not have to offer the full range of deductibles.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Insurers MAY also differentiate for young adults aged 19-25. Corrects the widespread misconception that Swiss deductible levels are assigned by rule."
+    "notes": "Insurers MAY also differentiate for young adults aged 19-25. Corrects the widespread misconception that Swiss deductible levels are assigned by rule.",
+    "answer": "The insurer is not required to offer the full range of deductible levels and may offer only some of them",
+    "answer_variations": [
+      "insurer is not required to offer the full range of deductible levels and may offer only some of them",
+      "The insurer is not required to offer the full range of deductible levels and may offer only some of them."
+    ],
+    "answer_type": "sentence",
+    "reference": "The health insurer does not have to offer the full range of deductibles."
   },
   {
     "id": "K048",
@@ -141,7 +185,13 @@
     "source_quote": "A maximum of 70 percent reduction on the additional risk assumed by the policyholder may be granted.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Statutory ceiling on the additional-risk discount. It is a separate rule from the statutory minimum-premium floor and must not be conflated with it."
+    "notes": "Statutory ceiling on the additional-risk discount. It is a separate rule from the statutory minimum-premium floor and must not be conflated with it.",
+    "answer": "70 per cent",
+    "answer_variations": [
+      "70 per cent."
+    ],
+    "answer_type": "short",
+    "reference": "A maximum of 70 percent reduction on the additional risk assumed by the policyholder may be granted."
   },
   {
     "id": "K049",
@@ -159,7 +209,13 @@
     "source_quote": "The health insurer is required to charge a minimum premium equivalent to 50 per cent of the ordinary premium with accident cover for the age group and premium region of the person concerned.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The floor cannot be undercut even by policies excluding accident cover or restricting the choice of service provider. Prevents insurers competing on restricted-benefit products."
+    "notes": "The floor cannot be undercut even by policies excluding accident cover or restricting the choice of service provider. Prevents insurers competing on restricted-benefit products.",
+    "answer": "50 per cent of the ordinary premium with accident cover for the relevant age group and premium region",
+    "answer_variations": [
+      "50 per cent of the ordinary premium with accident cover for the relevant age group and premium region."
+    ],
+    "answer_type": "sentence",
+    "reference": "The health insurer is required to charge a minimum premium equivalent to 50 per cent of the ordinary premium with accident cover for the age group and premium region of the person concerned."
   },
   {
     "id": "K050",
@@ -177,7 +233,13 @@
     "source_quote": "A change in the level of the deductible can only take effect at the beginning of a calendar year.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The deductible level is locked to the calendar year, unlike, for example, switching insurers. Do not confuse with the separate end-of-June cancellation right for CHF 300 deductible holders (S019)."
+    "notes": "The deductible level is locked to the calendar year, unlike, for example, switching insurers. Do not confuse with the separate end-of-June cancellation right for CHF 300 deductible holders (S019).",
+    "answer": "Only at the beginning of a calendar year",
+    "answer_variations": [
+      "Only at the beginning of a calendar year."
+    ],
+    "answer_type": "short",
+    "reference": "A change in the level of the deductible can only take effect at the beginning of a calendar year."
   },
   {
     "id": "K051",
@@ -195,7 +257,14 @@
     "source_quote": "cancel your basic insurance with effect from the end of June. A three-month notice period",
     "language": "en",
     "difficulty": "hard",
-    "notes": "This mid-year cancellation window is tied specifically to holding the CHF 300 standard deductible; it is an exception to the ordinary 30 November deadline. No foreign analogue exists."
+    "notes": "This mid-year cancellation window is tied specifically to holding the CHF 300 standard deductible; it is an exception to the ordinary 30 November deadline. No foreign analogue exists.",
+    "answer": "End of June, on three months' notice",
+    "answer_variations": [
+      "on three months' notice and End of June",
+      "on three months' notice, End of June"
+    ],
+    "answer_type": "list",
+    "reference": "cancel your basic insurance with effect from the end of June. A three-month notice period"
   },
   {
     "id": "K052",
@@ -213,7 +282,15 @@
     "source_quote": "Children, young adults in education and training\nand pregnant women do not pay any contribution to hospital costs.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The contribution itself is CHF 15 per day. Distractor C over-extends the 'young adults in education and training' exemption (which is not simply 'under 25')."
+    "notes": "The contribution itself is CHF 15 per day. Distractor C over-extends the 'young adults in education and training' exemption (which is not simply 'under 25').",
+    "answer": "Children, young adults in education and training, and pregnant women",
+    "answer_variations": [
+      "Children, young adults in education, training and pregnant women",
+      "young adults in education, training, pregnant women, Children",
+      "Children, young adults in education and training, pregnant women"
+    ],
+    "answer_type": "list",
+    "reference": "Children, young adults in education and training\nand pregnant women do not pay any contribution to hospital costs."
   },
   {
     "id": "K053",
@@ -231,7 +308,13 @@
     "source_quote": "as of the third day following your\naccident you are entitled to a daily allowance corresponding to 80% of your salary.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Swiss UVG accident insurance. If the insurer's allowance is below 80%, the employer must make up the difference. German sickness-benefit schedules (e.g. the 6-week Lohnfortzahlung) are not the relevant frame."
+    "notes": "Swiss UVG accident insurance. If the insurer's allowance is below 80%, the employer must make up the difference. German sickness-benefit schedules (e.g. the 6-week Lohnfortzahlung) are not the relevant frame.",
+    "answer": "From the third day after the accident, at 80 per cent of salary",
+    "answer_variations": [
+      "From the third day after the accident, at 80 per cent of salary."
+    ],
+    "answer_type": "sentence",
+    "reference": "as of the third day following your\naccident you are entitled to a daily allowance corresponding to 80% of your salary."
   },
   {
     "id": "K054",
@@ -249,7 +332,13 @@
     "source_quote": "If you work for less than eight hours a week for your employer, your accident insurance",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The 8-hours-per-week threshold is the UVG dividing line: at or above it, leisure-time accidents are also covered. Accidents on the way to and from work count as occupational. This is a Swiss statutory test, not an EU social-security coordination rule."
+    "notes": "The 8-hours-per-week threshold is the UVG dividing line: at or above it, leisure-time accidents are also covered. Accidents on the way to and from work count as occupational. This is a Swiss statutory test, not an EU social-security coordination rule.",
+    "answer": "Occupational accidents and occupational illnesses only; accidents during leisure time are not covered",
+    "answer_variations": [
+      "Occupational accidents and occupational illnesses only; accidents during leisure time are not covered."
+    ],
+    "answer_type": "sentence",
+    "reference": "If you work for less than eight hours a week for your employer, your accident insurance"
   },
   {
     "id": "K055",
@@ -267,7 +356,13 @@
     "source_quote": "You must be classified as at least\n10% disabled to qualify.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The accident disability pension may be awarded in addition to a pension under the state IV/AI disability scheme. Distractor D (70%) is the separate BVG exclusion threshold for compulsory occupational pension cover."
+    "notes": "The accident disability pension may be awarded in addition to a pension under the state IV/AI disability scheme. Distractor D (70%) is the separate BVG exclusion threshold for compulsory occupational pension cover.",
+    "answer": "At least 10 per cent",
+    "answer_variations": [
+      "At least 10 per cent."
+    ],
+    "answer_type": "short",
+    "reference": "You must be classified as at least\n10% disabled to qualify."
   },
   {
     "id": "K056",
@@ -285,7 +380,13 @@
     "source_quote": "- CHF 7,258 for employees/self-employed persons with occupational pension cover;",
     "language": "en",
     "difficulty": "hard",
-    "notes": "TIME-SENSITIVE: figure explicitly labelled 2025, so the year is stated in the stem. For a person WITHOUT occupational cover the 2025 limit is 20% of earnings up to CHF 36,288. Distractors B and C are BVG entry-threshold figures from other years, not Pillar 3a limits."
+    "notes": "TIME-SENSITIVE: figure explicitly labelled 2025, so the year is stated in the stem. For a person WITHOUT occupational cover the 2025 limit is 20% of earnings up to CHF 36,288. Distractors B and C are BVG entry-threshold figures from other years, not Pillar 3a limits.",
+    "answer": "CHF 7,258",
+    "answer_variations": [
+      "CHF 7258"
+    ],
+    "answer_type": "number",
+    "reference": "- CHF 7,258 for employees/self-employed persons with occupational pension cover;"
   },
   {
     "id": "K057",
@@ -303,7 +404,14 @@
     "source_quote": "- women born in 1962: 64 years and 6 months;",
     "language": "en",
     "difficulty": "hard",
-    "notes": "TIME-SENSITIVE and cohort-locked: born 1961 = 64y3m, 1962 = 64y6m, 1963 = 64y9m, born 1964 or later = 65. The reference age is 65 for men and for women born 1964 or later; the former general women's age of 64 is superseded and must never be presented as the current rule."
+    "notes": "TIME-SENSITIVE and cohort-locked: born 1961 = 64y3m, 1962 = 64y6m, 1963 = 64y9m, born 1964 or later = 65. The reference age is 65 for men and for women born 1964 or later; the former general women's age of 64 is superseded and must never be presented as the current rule.",
+    "answer": "64 years and 6 months",
+    "answer_variations": [
+      "6 months and 64 years",
+      "6 months, 64 years"
+    ],
+    "answer_type": "list",
+    "reference": "- women born in 1962: 64 years and 6 months;"
   },
   {
     "id": "K058",
@@ -321,7 +429,13 @@
     "source_quote": "basis of a conversion factor of 6,80% for men and women.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Swiss decimal-comma notation. A single gender-neutral conversion factor is a distinctive feature of the reformed BVG and has no direct EU analogue."
+    "notes": "Swiss decimal-comma notation. A single gender-neutral conversion factor is a distinctive feature of the reformed BVG and has no direct EU analogue.",
+    "answer": "6,80%",
+    "answer_variations": [
+      "680%"
+    ],
+    "answer_type": "number",
+    "reference": "basis of a conversion factor of 6,80% for men and women."
   },
   {
     "id": "K059",
@@ -339,7 +453,13 @@
     "source_quote": "Maternity allowance amounts to 80% of your\nearnings, but no more than CHF 220 per day.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Highly Swiss-specific 14-week / 80% / CHF 220-per-day package. Cantonal provisions, personnel regulations and collective employment contracts may provide more generous arrangements. Do not substitute EU maternity-benefit rates."
+    "notes": "Highly Swiss-specific 14-week / 80% / CHF 220-per-day package. Cantonal provisions, personnel regulations and collective employment contracts may provide more generous arrangements. Do not substitute EU maternity-benefit rates.",
+    "answer": "80 per cent of the mother's earnings, but no more than CHF 220 per day",
+    "answer_variations": [
+      "80 per cent of the mother's earnings, but no more than CHF 220 per day."
+    ],
+    "answer_type": "sentence",
+    "reference": "Maternity allowance amounts to 80% of your\nearnings, but no more than CHF 220 per day."
   },
   {
     "id": "K060",
@@ -357,7 +477,13 @@
     "source_quote": "Unlike maternity leave, paternity/co-parental leave is flexible. You can take\nit all at once, or as individual days as long as it is taken within the",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Co-parental leave runs for two weeks: 14 daily allowances and ten days off work, paid at 80% of earnings capped at CHF 220/day. It must be used within six months of the birth."
+    "notes": "Co-parental leave runs for two weeks: 14 daily allowances and ten days off work, paid at 80% of earnings capped at CHF 220/day. It must be used within six months of the birth.",
+    "answer": "It is flexible: it may be taken all at once or as individual days, but must be taken within six months of the child's birth",
+    "answer_variations": [
+      "It is flexible: it may be taken all at once or as individual days, but must be taken within six months of the child's birth."
+    ],
+    "answer_type": "sentence",
+    "reference": "Unlike maternity leave, paternity/co-parental leave is flexible. You can take\nit all at once, or as individual days as long as it is taken within the"
   },
   {
     "id": "K211",
@@ -375,7 +501,13 @@
     "source_quote": "You were insured under the OASI/DI scheme for the nine months prior to the birth.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps the OASI/AHV lettering variant (the page says OASI/DI here, OASI/AHV on the paternity side) and the 3/6/12/24-month alternatives a non-expert would guess."
+    "notes": "Traps the OASI/AHV lettering variant (the page says OASI/DI here, OASI/AHV on the paternity side) and the 3/6/12/24-month alternatives a non-expert would guess.",
+    "answer": "Nine months prior to the birth",
+    "answer_variations": [
+      "Nine months prior to the birth."
+    ],
+    "answer_type": "short",
+    "reference": "You were insured under the OASI/DI scheme for the nine months prior to the birth."
   },
   {
     "id": "K212",
@@ -393,7 +525,14 @@
     "source_quote": "You are not allowed to return to work in the first eight weeks after the birth.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps confusion with the 14-week maternity leave itself and with the 16-week dismissal protection; 4/6/12 weeks are the plausible wrong figures."
+    "notes": "Traps confusion with the 14-week maternity leave itself and with the 16-week dismissal protection; 4/6/12 weeks are the plausible wrong figures.",
+    "answer": "The first eight weeks after the birth",
+    "answer_variations": [
+      "first eight weeks after the birth",
+      "The first eight weeks after the birth."
+    ],
+    "answer_type": "short",
+    "reference": "You are not allowed to return to work in the first eight weeks after the birth."
   },
   {
     "id": "K213",
@@ -411,7 +550,13 @@
     "source_quote": "If your newborn has to stay in hospital for more than 14 days directly after the birth, the period for which you can claim maternity benefits is extended by a maximum of 56 days, provided that you return to work when your maternity leave ends.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Two-figure item (trigger threshold + extension). Distractors shift either the 14-day hospital trigger or the 56-day extension while keeping the other number right, and the last one shifts both. Also traps the unpaid two-week extension as a distractor-shaped confusion."
+    "notes": "Two-figure item (trigger threshold + extension). Distractors shift either the 14-day hospital trigger or the 56-day extension while keeping the other number right, and the last one shifts both. Also traps the unpaid two-week extension as a distractor-shaped confusion.",
+    "answer": "If the newborn must stay in hospital for more than 14 days directly after the birth, extended by a maximum of 56 days",
+    "answer_variations": [
+      "If the newborn must stay in hospital for more than 14 days directly after the birth, extended by a maximum of 56 days."
+    ],
+    "answer_type": "sentence",
+    "reference": "If your newborn has to stay in hospital for more than 14 days directly after the birth, the period for which you can claim maternity benefits is extended by a maximum of 56 days, provided that you return to work when your maternity leave ends."
   },
   {
     "id": "K214",
@@ -429,7 +574,13 @@
     "source_quote": "You have the right to extend your maternity leave by two weeks beyond the standard 14-week period. However, you will not receive benefits for those two additional weeks.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps the 80%/CHF 220 allowance figures lifted from the standard maternity allowance rule; the extension is unpaid."
+    "notes": "Traps the 80%/CHF 220 allowance figures lifted from the standard maternity allowance rule; the extension is unpaid.",
+    "answer": "Nothing - no benefits are paid for the two additional weeks",
+    "answer_variations": [
+      "Nothing - no benefits are paid for the two additional weeks."
+    ],
+    "answer_type": "sentence",
+    "reference": "You have the right to extend your maternity leave by two weeks beyond the standard 14-week period. However, you will not receive benefits for those two additional weeks."
   },
   {
     "id": "K215",
@@ -447,7 +598,14 @@
     "source_quote": "If the mother dies within 14 weeks of the child's birth, the surviving spouse is entitled to a further 14 weeks' leave.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Traps the mirror-image rule on the same page: if the father or spouse of the mother dies within six months, the mother gets only two additional weeks. 'two weeks' is the confident wrong pick."
+    "notes": "Traps the mirror-image rule on the same page: if the father or spouse of the mother dies within six months, the mother gets only two additional weeks. 'two weeks' is the confident wrong pick.",
+    "answer": "A further 14 weeks",
+    "answer_variations": [
+      "further 14 weeks",
+      "A further 14 weeks."
+    ],
+    "answer_type": "short",
+    "reference": "If the mother dies within 14 weeks of the child's birth, the surviving spouse is entitled to a further 14 weeks' leave."
   },
   {
     "id": "K216",
@@ -465,7 +623,14 @@
     "source_quote": "Certain groups of people are not subject to the mandatory scheme: the self-employed, salaried persons with a job contract that does not exceed three months, family members of a person operating an agricultural establishment in which they are employed, persons who are disabled to at least 70 % according to the provisions of the AI.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "The other three exempt groups (short contracts, agricultural family members, 70 % disabled) are real exemptions, so a distractor naming any of them would also be defensible; instead the distractors name categories that ARE covered, which is what a non-expert would wrongly believe."
+    "notes": "The other three exempt groups (short contracts, agricultural family members, 70 % disabled) are real exemptions, so a distractor naming any of them would also be defensible; instead the distractors name categories that ARE covered, which is what a non-expert would wrongly believe.",
+    "answer": "The self-employed",
+    "answer_variations": [
+      "self-employed",
+      "The self-employed."
+    ],
+    "answer_type": "short",
+    "reference": "Certain groups of people are not subject to the mandatory scheme: the self-employed, salaried persons with a job contract that does not exceed three months, family members of a person operating an agricultural establishment in which they are employed, persons who are disabled to at least 70 % according to the provisions of the AI."
   },
   {
     "id": "K217",
@@ -483,7 +648,13 @@
     "source_quote": "The obligation to take out insurance sets in with gainful employment, after reaching 17 at the earliest. Until the employee reaches the age of 24, contributions only cover the risks of death and disability. From 1 January after the employee reaches the age of 24, additional savings are made for the retirement pension.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Traps the two other ages on the same passage (17 = entry into the scheme, 18 = entry into savings elsewhere framed), and the off-by-one of 'at 24' vs 'from the 1 January after 24'."
+    "notes": "Traps the two other ages on the same passage (17 = entry into the scheme, 18 = entry into savings elsewhere framed), and the off-by-one of 'at 24' vs 'from the 1 January after 24'.",
+    "answer": "From 1 January after the employee reaches the age of 24",
+    "answer_variations": [
+      "From 1 January after the employee reaches the age of 24."
+    ],
+    "answer_type": "sentence",
+    "reference": "The obligation to take out insurance sets in with gainful employment, after reaching 17 at the earliest. Until the employee reaches the age of 24, contributions only cover the risks of death and disability. From 1 January after the employee reaches the age of 24, additional savings are made for the retirement pension."
   },
   {
     "id": "K218",
@@ -501,7 +672,13 @@
     "source_quote": "The state contributes only indirectly to the financing of pension funds, by granting tax exemption on the contributions and 2nd pillar assets.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps the assumption that the state co-funds the second pillar like it does the first; tax exemption is the only state support the page describes."
+    "notes": "Traps the assumption that the state co-funds the second pillar like it does the first; tax exemption is the only state support the page describes.",
+    "answer": "Only indirectly, by granting tax exemption on the contributions and on second-pillar assets",
+    "answer_variations": [
+      "Only indirectly, by granting tax exemption on the contributions and on second-pillar assets."
+    ],
+    "answer_type": "sentence",
+    "reference": "The state contributes only indirectly to the financing of pension funds, by granting tax exemption on the contributions and 2nd pillar assets."
   },
   {
     "id": "K219",
@@ -519,7 +696,13 @@
     "source_quote": "The LPP/BVG is based on the principle of collective financing: the contribution of the employer must be at least equal to the sum of contributions paid by all the employees.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Traps the common belief that the employer pays exactly the employee's own share, and the 50/50-style split that belongs to OASI."
+    "notes": "Traps the common belief that the employer pays exactly the employee's own share, and the 50/50-style split that belongs to OASI.",
+    "answer": "At least equal to the sum of contributions paid by all the employees",
+    "answer_variations": [
+      "At least equal to the sum of contributions paid by all the employees."
+    ],
+    "answer_type": "short",
+    "reference": "The LPP/BVG is based on the principle of collective financing: the contribution of the employer must be at least equal to the sum of contributions paid by all the employees."
   },
   {
     "id": "K220",
@@ -537,7 +720,11 @@
     "source_quote": "Early retirement is possible from the age of 63. Occupational benefits institutions may stipulate a lower age at which benefits can be received (but no earlier than 58).",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Traps the same page's maximum deferral age of 70 and the reference age of 65; 55/57/60 are plausible floors a non-expert would propose."
+    "notes": "Traps the same page's maximum deferral age of 70 and the reference age of 65; 55/57/60 are plausible floors a non-expert would propose.",
+    "answer": "58",
+    "answer_variations": [],
+    "answer_type": "number",
+    "reference": "Early retirement is possible from the age of 63. Occupational benefits institutions may stipulate a lower age at which benefits can be received (but no earlier than 58)."
   },
   {
     "id": "K221",
@@ -555,7 +742,13 @@
     "source_quote": "As a general rule, anyone who lives or works in Switzerland, regardless of their nationality, is covered by the mandatory old-age and survivors' insurance scheme. You are also covered if you are not in paid work, e.g. stay-at-home spouses and students.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps the citizenship test and the paid-employment test - the two most common non-Swiss assumptions about a national insurance scheme."
+    "notes": "Traps the citizenship test and the paid-employment test - the two most common non-Swiss assumptions about a national insurance scheme.",
+    "answer": "Anyone who lives or works in Switzerland, regardless of nationality, including people not in paid work",
+    "answer_variations": [
+      "Anyone who lives or works in Switzerland, regardless of nationality, including people not in paid work."
+    ],
+    "answer_type": "sentence",
+    "reference": "As a general rule, anyone who lives or works in Switzerland, regardless of their nationality, is covered by the mandatory old-age and survivors' insurance scheme. You are also covered if you are not in paid work, e.g. stay-at-home spouses and students."
   },
   {
     "id": "K222",
@@ -573,7 +766,13 @@
     "source_quote": "If you live or work in Switzerland, you must pay OASI contributions from 1 January after you turn 20 until you reach the reference (retirement) age. If you are already working, this obligation begins on 1 January of the year in which you turn 18.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Two-age item with an inverted rule: the working person starts EARLIER (18) than the general rule (20). Distractors transplant 16/20/25 and impose a paid-employment condition the page rejects."
+    "notes": "Two-age item with an inverted rule: the working person starts EARLIER (18) than the general rule (20). Distractors transplant 16/20/25 and impose a paid-employment condition the page rejects.",
+    "answer": "From 1 January after turning 20; for those already working, from 1 January of the year in which they turn 18",
+    "answer_variations": [
+      "From 1 January after turning 20; for those already working, from 1 January of the year in which they turn 18."
+    ],
+    "answer_type": "sentence",
+    "reference": "If you live or work in Switzerland, you must pay OASI contributions from 1 January after you turn 20 until you reach the reference (retirement) age. If you are already working, this obligation begins on 1 January of the year in which you turn 18."
   },
   {
     "id": "K223",
@@ -591,7 +790,14 @@
     "source_quote": "- minimum old-age pension: CHF 1,260\n- maximum old-age pension: CHF 2,520",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps moving one endpoint only - a CHF 880 minimum is the plausible older figure and CHF 3,780 is 1.5x the maximum."
+    "notes": "Traps moving one endpoint only - a CHF 880 minimum is the plausible older figure and CHF 3,780 is 1.5x the maximum.",
+    "answer": "CHF 1,260 to CHF 2,520",
+    "answer_variations": [
+      "CHF 1, 260 to CHF 2 and 520",
+      "260 to CHF 2, 520, CHF 1"
+    ],
+    "answer_type": "list",
+    "reference": "- minimum old-age pension: CHF 1,260\n- maximum old-age pension: CHF 2,520"
   },
   {
     "id": "K224",
@@ -609,7 +815,14 @@
     "source_quote": "- As an employee, you pay half of the contributions. Your employer pays the other half.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Traps an employer-heavy split borrowed from BVG reasoning (where the employer must at least match the employees' total), which is the natural wrong assumption here."
+    "notes": "Traps an employer-heavy split borrowed from BVG reasoning (where the employer must at least match the employees' total), which is the natural wrong assumption here.",
+    "answer": "The employee pays half and the employer pays the other half",
+    "answer_variations": [
+      "the employer pays the other half and The employee pays half",
+      "the employer pays the other half, The employee pays half"
+    ],
+    "answer_type": "list",
+    "reference": "- As an employee, you pay half of the contributions. Your employer pays the other half."
   },
   {
     "id": "K225",
@@ -627,7 +840,13 @@
     "source_quote": "You are subject to mandatory occupational pension contributions if you annually earn more than CHF 22,680 (as of 2025) from one employer and are older than 17 (insurance cover against the risks of invalidity and death from the age of 17; old-age insurance cover from the age 25). The mandatory insurance scheme covers annual incomes up to CHF 90,720.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Tests the upper coordination ceiling, not the CHF 22,680 entry threshold; CHF 45,360 is 2x the threshold and a plausible confusion."
+    "notes": "Tests the upper coordination ceiling, not the CHF 22,680 entry threshold; CHF 45,360 is 2x the threshold and a plausible confusion.",
+    "answer": "CHF 90,720",
+    "answer_variations": [
+      "CHF 90720"
+    ],
+    "answer_type": "number",
+    "reference": "You are subject to mandatory occupational pension contributions if you annually earn more than CHF 22,680 (as of 2025) from one employer and are older than 17 (insurance cover against the risks of invalidity and death from the age of 17; old-age insurance cover from the age 25). The mandatory insurance scheme covers annual incomes up to CHF 90,720."
   },
   {
     "id": "K226",
@@ -645,7 +864,14 @@
     "source_quote": "The lowest deductible for adults is CHF 300, the highest CHF 2,500.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Traps shifting either endpoint; the CHF 0 lower bound is the child rule on the adjacent sentence."
+    "notes": "Traps shifting either endpoint; the CHF 0 lower bound is the child rule on the adjacent sentence.",
+    "answer": "CHF 300 to CHF 2,500",
+    "answer_variations": [
+      "500 and CHF 300 to CHF 2",
+      "500, CHF 300 to CHF 2"
+    ],
+    "answer_type": "list",
+    "reference": "The lowest deductible for adults is CHF 300, the highest CHF 2,500."
   },
   {
     "id": "K227",
@@ -663,7 +889,14 @@
     "source_quote": "The lowest deductible for adults is CHF 300, the highest CHF 2,500. Deductibles of between CHF 0 and CHF 600 apply for children.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps transferring the adult band onto children and halving the child ceiling (S046 states children pay no deductible at all under the standard option, so CHF 0-300 is a confident wrong pick)."
+    "notes": "Traps transferring the adult band onto children and halving the child ceiling (S046 states children pay no deductible at all under the standard option, so CHF 0-300 is a confident wrong pick).",
+    "answer": "Between CHF 0 and CHF 600",
+    "answer_variations": [
+      "CHF 600 and Between CHF 0",
+      "CHF 600, Between CHF 0"
+    ],
+    "answer_type": "list",
+    "reference": "The lowest deductible for adults is CHF 300, the highest CHF 2,500. Deductibles of between CHF 0 and CHF 600 apply for children."
   },
   {
     "id": "K228",
@@ -681,7 +914,14 @@
     "source_quote": "When the deductible has been used up you will still pay ten percent of your healthcare costs. However, this retention fee is limited to CHF 700 per year (CHF 350 for children).",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Two-figure item (coinsurance rate + annual cap). CHF 350 is the child cap, a confident wrong pick for an adult; 'no cap' is the other common misconception."
+    "notes": "Two-figure item (coinsurance rate + annual cap). CHF 350 is the child cap, a confident wrong pick for an adult; 'no cap' is the other common misconception.",
+    "answer": "Ten per cent, capped at CHF 700 per year",
+    "answer_variations": [
+      "capped at CHF 700 per year and Ten per cent",
+      "capped at CHF 700 per year, Ten per cent"
+    ],
+    "answer_type": "list",
+    "reference": "When the deductible has been used up you will still pay ten percent of your healthcare costs. However, this retention fee is limited to CHF 700 per year (CHF 350 for children)."
   },
   {
     "id": "K229",
@@ -699,7 +939,13 @@
     "source_quote": "You must pay the contribution to hospital costs if you are hospitalised. It is CHF 15 per day.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Traps treating the hospital daily contribution as a German-style flat daily fee; the page gives it as a fixed CHF, not a percentage."
+    "notes": "Traps treating the hospital daily contribution as a German-style flat daily fee; the page gives it as a fixed CHF, not a percentage.",
+    "answer": "CHF 15 per day",
+    "answer_variations": [
+      "CHF 15 per day."
+    ],
+    "answer_type": "short",
+    "reference": "You must pay the contribution to hospital costs if you are hospitalised. It is CHF 15 per day."
   },
   {
     "id": "K230",
@@ -717,7 +963,14 @@
     "source_quote": "Premiums are lower for children and young adults under the age of 25.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Traps the pensionable-age intuition that premiums fall after 65, which is where most countries' premium relief goes."
+    "notes": "Traps the pensionable-age intuition that premiums fall after 65, which is where most countries' premium relief goes.",
+    "answer": "Children and young adults under the age of 25",
+    "answer_variations": [
+      "young adults under the age of 25 and Children",
+      "young adults under the age of 25, Children"
+    ],
+    "answer_type": "list",
+    "reference": "Premiums are lower for children and young adults under the age of 25."
   },
   {
     "id": "K231",
@@ -735,7 +988,14 @@
     "source_quote": "It you are self-employed you must take out personal accident insurance.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The quote reproduces the page's grammatical slip ('It you') verbatim. Distractors are the three groups the same page says are automatically covered by an employer, Suva or the trainee scheme."
+    "notes": "The quote reproduces the page's grammatical slip ('It you') verbatim. Distractors are the three groups the same page says are automatically covered by an employer, Suva or the trainee scheme.",
+    "answer": "The self-employed",
+    "answer_variations": [
+      "self-employed",
+      "The self-employed."
+    ],
+    "answer_type": "short",
+    "reference": "It you are self-employed you must take out personal accident insurance."
   },
   {
     "id": "K232",
@@ -753,7 +1013,14 @@
     "source_quote": "If you are registered unemployed, providing you receive unemployment benefits you are automatically insured via the Swiss National Accident Insurance Fund (Suva) in case of accident. The premium is deducted from your benefits.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps Suva for health insurance (B) and the employer-pays pattern that the same page gives for employees (C)."
+    "notes": "Traps Suva for health insurance (B) and the employer-pays pattern that the same page gives for employees (C).",
+    "answer": "The Swiss National Accident Insurance Fund (Suva), with the premium deducted from the unemployment benefits",
+    "answer_variations": [
+      "Swiss National Accident Insurance Fund (Suva), with the premium deducted from the unemployment benefits",
+      "The Swiss National Accident Insurance Fund (Suva), with the premium deducted from the unemployment benefits."
+    ],
+    "answer_type": "sentence",
+    "reference": "If you are registered unemployed, providing you receive unemployment benefits you are automatically insured via the Swiss National Accident Insurance Fund (Suva) in case of accident. The premium is deducted from your benefits."
   },
   {
     "id": "K233",
@@ -771,7 +1038,13 @@
     "source_quote": "Your accident insurance will reimburse accident-related medical expenses. You do not have to pay a deductible or retention fee yourself.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps transplanting the KVG franchise/retention structure into accident cover; the page's following sentence makes clear that paying the deductible and retention fee applies only when insured against accident via the health insurer."
+    "notes": "Traps transplanting the KVG franchise/retention structure into accident cover; the page's following sentence makes clear that paying the deductible and retention fee applies only when insured against accident via the health insurer.",
+    "answer": "Nothing - no deductible and no retention fee",
+    "answer_variations": [
+      "Nothing - no deductible and no retention fee."
+    ],
+    "answer_type": "sentence",
+    "reference": "Your accident insurance will reimburse accident-related medical expenses. You do not have to pay a deductible or retention fee yourself."
   },
   {
     "id": "K234",
@@ -789,7 +1062,13 @@
     "source_quote": "If the allowance paid by your accident insurance is lower than this figure, your employer must make up the difference. If your insurance benefits correspond to 80% of your salary or more, your employer does not have to continue paying your salary.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The quote's 'this figure' resolves to 80 per cent in the preceding sentence. Traps the assumption that the employer tops up on top of a continuing salary, and the three-day figure from the daily allowance's waiting period."
+    "notes": "The quote's 'this figure' resolves to 80 per cent in the preceding sentence. Traps the assumption that the employer tops up on top of a continuing salary, and the three-day figure from the daily allowance's waiting period.",
+    "answer": "Make up the difference, and if the allowance already reaches 80 per cent or more, stop paying salary",
+    "answer_variations": [
+      "Make up the difference, and if the allowance already reaches 80 per cent or more, stop paying salary."
+    ],
+    "answer_type": "short",
+    "reference": "If the allowance paid by your accident insurance is lower than this figure, your employer must make up the difference. If your insurance benefits correspond to 80% of your salary or more, your employer does not have to continue paying your salary."
   },
   {
     "id": "K235",
@@ -807,7 +1086,13 @@
     "source_quote": "You can choose any company that operates in the region where you live. Simply register, because they are required to offer everyone basic insurance.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps the canton-assigns-the-insurer model common in neighbouring systems, and the underwriting-capacity model used for supplementary cover on the same page."
+    "notes": "Traps the canton-assigns-the-insurer model common in neighbouring systems, and the underwriting-capacity model used for supplementary cover on the same page.",
+    "answer": "Yes - any authorised insurer operating in the region, because insurers must offer basic insurance to everyone",
+    "answer_variations": [
+      "Yes - any authorised insurer operating in the region, because insurers must offer basic insurance to everyone."
+    ],
+    "answer_type": "sentence",
+    "reference": "You can choose any company that operates in the region where you live. Simply register, because they are required to offer everyone basic insurance."
   },
   {
     "id": "K236",
@@ -825,7 +1110,14 @@
     "source_quote": "Foreign retirees, students and diplomats do not necessarily need to take out health insurance. The relevant agency in your canton or municipality approves any exemptions.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Tests where the decision sits in Swiss federalism: canton/municipality, not the federal office and not an employer. Traps a purely federal or purely contractual decision."
+    "notes": "Tests where the decision sits in Swiss federalism: canton/municipality, not the federal office and not an employer. Traps a purely federal or purely contractual decision.",
+    "answer": "The relevant agency in the person's canton or municipality, which approves any exemptions",
+    "answer_variations": [
+      "relevant agency in the person's canton or municipality, which approves any exemptions",
+      "The relevant agency in the person's canton or municipality, which approves any exemptions."
+    ],
+    "answer_type": "short",
+    "reference": "Foreign retirees, students and diplomats do not necessarily need to take out health insurance. The relevant agency in your canton or municipality approves any exemptions."
   },
   {
     "id": "K237",
@@ -843,7 +1135,13 @@
     "source_quote": "You can take out compulsory basic insurance and voluntary supplementary insurance from different health insurers.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "Traps the bundled-policy intuition common in other systems; the page adds that switching basic cover lets you keep supplementary cover where it is."
+    "notes": "Traps the bundled-policy intuition common in other systems; the page adds that switching basic cover lets you keep supplementary cover where it is.",
+    "answer": "Yes",
+    "answer_variations": [
+      "Yes."
+    ],
+    "answer_type": "short",
+    "reference": "You can take out compulsory basic insurance and voluntary supplementary insurance from different health insurers."
   },
   {
     "id": "K238",
@@ -861,7 +1159,14 @@
     "source_quote": "As a rule you will have to complete a questionnaire on your health before an insurer will approve supplementary health insurance for you.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps the open-enrolment rule for BASIC insurance: insurers must accept everyone for basic cover but may underwrite supplementary cover."
+    "notes": "Traps the open-enrolment rule for BASIC insurance: insurers must accept everyone for basic cover but may underwrite supplementary cover.",
+    "answer": "A questionnaire on their health",
+    "answer_variations": [
+      "questionnaire on their health",
+      "A questionnaire on their health."
+    ],
+    "answer_type": "short",
+    "reference": "As a rule you will have to complete a questionnaire on your health before an insurer will approve supplementary health insurance for you."
   },
   {
     "id": "K239",
@@ -879,7 +1184,13 @@
     "source_quote": "The health insurer does not have to offer the full range of deductibles.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Traps reading the published list of available deductible levels (500/1000/1500/2000/2500) as a guarantee that every insurer offers all of them."
+    "notes": "Traps reading the published list of available deductible levels (500/1000/1500/2000/2500) as a guarantee that every insurer offers all of them.",
+    "answer": "No - it does not have to offer the full range",
+    "answer_variations": [
+      "No - it does not have to offer the full range."
+    ],
+    "answer_type": "sentence",
+    "reference": "The health insurer does not have to offer the full range of deductibles."
   },
   {
     "id": "K240",
@@ -897,6 +1208,13 @@
     "source_quote": "It may offer different deductibles for adults and young adults (between the ages of 19 and 25).",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Tests the 19-25 young-adult band specifically; children are a separate deductible range on the same page and education/training is the hospital-contribution exemption on S020, so both are confident wrong picks."
+    "notes": "Tests the 19-25 young-adult band specifically; children are a separate deductible range on the same page and education/training is the hospital-contribution exemption on S020, so both are confident wrong picks.",
+    "answer": "Young adults between the ages of 19 and 25",
+    "answer_variations": [
+      "25 and Young adults between the ages of 19",
+      "25, Young adults between the ages of 19"
+    ],
+    "answer_type": "list",
+    "reference": "It may offer different deductibles for adults and young adults (between the ages of 19 and 25)."
   }
 ]
