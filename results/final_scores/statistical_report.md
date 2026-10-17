@@ -1,6 +1,6 @@
 # Statistical report — Swiss Reality Check
 
-Generated 2026-10-17T14:17:43+00:00 by `eval/statistical_report.py`, git `ee041854f6bb`.
+Generated 2026-10-17T14:17:51+00:00 by `eval/statistical_report.py`, git `ee041854f6bb`.
 
 Split: **held-out test set**. α = 0.05. Judge: `8b`  — **self-judged**, disclosed per `values_rubric.md` §5.
 

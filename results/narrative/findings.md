@@ -1,6 +1,6 @@
 # Key Findings — Swiss Reality Check
 
-*Generated 2026-10-17T14:17:43+00:00 by `eval/narrative.py` from measured data · git `ee041854f6bb`*
+*Generated 2026-10-17T14:17:52+00:00 by `eval/narrative.py` from measured data · git `ee041854f6bb`*
 
 > **Read this first.** Every number below was computed by the code in this repository
 > and is traceable to a run. There are no placeholders, and no claim appears that
