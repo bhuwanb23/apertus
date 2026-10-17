@@ -176,6 +176,62 @@ every row.
 Every question declares the `source_id` its answer was verified against, so this
 is ground truth over all 210 dev items. Chance is 25%..
 
+### 3.5 Open-ended factuality — what multiple choice cannot measure
+
+Sections 3.1–3.4 score what the model gets *right*. Multiple choice structurally
+cannot score what it gets *wrong*: with four options present, a confident
+fabrication and an honest refusal both score zero, so a multiple-choice benchmark
+cannot distinguish competence from bluffing. Since the brief asks for factuality
+and hallucination rates, the same 90 sealed items are also asked **without
+options** and graded against each item's reference passage on a three-way
+**correct / incorrect / not_attempted** scale (SimpleQA-style).
+
+**Prompting.** `src/eval/open_prompt.py`. The templates have no placeholder for an
+option, so an option cannot be injected by construction; `build()` additionally
+asserts no option text reaches the non-context part of the prompt, and refuses a
+build if one does. A retrieved context that *contains* the correct answer is
+allowed — that is retrieval working, and the MCQ arm behaves identically. All 300
+items are asserted to render option-free in both arms by the test suite.
+
+**Grading.** `src/eval/open_grade.py`.
+
+- *Abstention is decided by a deterministic rule before the judge is called*, not
+  by asking the judge. A refusal counts only when the non-knowledge claim is the
+  answer — it must open the reply, or the whole reply must be short. This is
+  deliberate: a real reply from this model asserts an answer and then hedges
+  ("…I don't know if there is a specific official role beyond that"). Filing that
+  as an abstention would delete a genuine attempt from both denominators and make
+  the hallucination rate look better without the model behaving better. The
+  offending reply is a regression test.
+- The judge then grades only genuine attempts, against the item's `reference`.
+  Unparseable judge output falls back to **INCORRECT**, one-directionally, so a
+  judge failure can never manufacture a good result.
+- Denominators are stated because the choice is a judgement:
+  `factuality = correct/(correct+incorrect)`, `hallucination =
+  incorrect/(correct+incorrect)` — both over attempted answers, so a model cannot
+  raise factuality by refusing everything — and `abstention = not_attempted/all`.
+
+| Arm | factuality | hallucination | abstention | c / i / n-a |
+|---|---|---|---|---|
+| Open-ended, no context | 43.8% | **56.2%** | 46.7% | 21 / 27 / 42 |
+| Open-ended, BM25 RAG | **87.4%** | **12.6%** | 3.3% | 76 / 11 / 3 |
+
+Paired across the same 90 items: **56** answers became correct, **1** was lost
+(net +55, McNemar p<0.001). `newly_abstained = 0` and 39 answers moved *out* of
+refusal.
+
+That last figure is reported deliberately. A retrieval arm can always lower its
+hallucination rate by declining more, which is arithmetically identical to
+improving and is worse behaviour; reporting `newly_abstained` beside the gain is
+the only way a reader can tell those apart.
+
+**Disclosure.** The judge is the same Apertus 8B under test — self-judged. The
+suite asserts it reaches both verdicts on the sealed set (a judge stuck on
+CORRECT would report a hallucination rate of exactly 0.0%), and a probe confirmed
+it separates a true answer from a distractor 12/12. A 20% stratified human
+cross-check sheet is prepared and **unscored**; no agreement rate is claimed. The
+baseline rate rests on the 48 questions it attempted, not all 90.
+
 ---
 
 ## 4. Two findings worth more than the accuracy number
@@ -280,6 +336,38 @@ Stated plainly, because the n here is small enough that the numbers need it.
    corpus and index rather than of the model, so it does not consume the sealed
    set — but it does mean the recall figure and the accuracy figure come from
    different splits.
+
+9. **The open-ended hallucination rate rests on a self-judge and a small
+   attempted pool.** Two distinct problems, both material.
+
+   *The grader is the same Apertus 8B under test.* Its verdicts are not
+   independent of the thing being measured, so the 56.2% figure is this model's
+   self-consistent notion of what the reference says, not an external verdict.
+   Abstention is decided by rule before the judge is called, which makes the
+   judge's three-way output auditable, and the suite asserts it reaches both
+   verdicts — but neither of those is an independent check on the judge's
+   accuracy. The 20% human cross-check sheet is prepared and **unscored**, so no
+   judge-vs-human agreement rate is claimed for this arm.
+
+   *The baseline denominator is smaller than n suggests.* Factuality is computed
+   over the **48** questions the baseline attempted, not all 90, because a metric
+   with a refusal option must exclude refusals from its denominator to mean
+   anything. That is correct by construction but it means the baseline
+   hallucination rate rests on fewer judgements than the headline n implies, and
+   its interval is correspondingly wider. The RAG arm attempted 87 of 90 and does
+   not have this problem to the same degree.
+
+   A further structural limit: `answer_variations` was authored from the verified
+   correct option, so it captures *acceptable phrasings of a known answer* and
+   not answers the dataset never anticipated. A judge shown only the canonical
+   answer and its variations may mark a correct-but-unanticipated response wrong.
+
+10. **The open-ended arm used the same sealed items as the MCQ arm.** That is
+    what makes the two comparable, and it is also why the two are not independent
+    measurements — the questions were selected for the MCQ arm, where a distractor
+    set existed. Items that are hard to answer open-ended but easy to guess between
+    four options are over-represented in this corpus relative to a corpus built
+    for open-ended use.
 
 ---
 

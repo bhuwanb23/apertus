@@ -43,8 +43,9 @@ Everything below supersedes it. Old arms are kept as
 | Paired Δ | +30.6 pp | **+35.6 pp** | 34 improved / 2 regressed, p < 0.001 |
 | Recall @1/3/5 | 83.3 / 90.5 / 94.0 % | **82.4 / 91.4 / 92.9 %** | re-measured on 210 dev items |
 | Categories clearing their own floor | 0 of 6 | **3 of 6** | geography, history, politics |
+| Hallucination rate | *not measured* | **56.2 %** unaided → **12.6 %** with retrieval | new open-ended arm, n=90 |
 
-**Four findings a reader of the PDF should know:**
+**Five findings a reader of the PDF should know:**
 
 1. **A parser bug was costing the baseline 23 points.** Served answers ended in a
    visible end-of-turn token, so **49 of 90** baseline answers were scored as
@@ -52,28 +53,49 @@ Everything below supersedes it. Old arms are kept as
    re-scored from the saved responses, recovering 21 answers; no regeneration.
    This is why the new baseline is *lower* despite a corpus 2.5× larger, and it
    means **the PDF's 55.6 % was not a model measurement**.
-2. **The gain is larger than the PDF claims, measured from a correct baseline.**
+2. **Multiple choice cannot measure hallucination, and this model hallucinates
+   a lot.** The PDF scores only what the model gets *right*. With four options
+   present a confident fabrication and an honest refusal both score zero, so the
+   format cannot tell competence from bluffing. Removing the options and grading
+   against each item's reference passage — **correct / incorrect / not
+   attempted** — on the same 90 sealed questions gives:
+
+   | Arm | factuality | hallucination | abstention |
+   |---|---|---|---|
+   | Open-ended, no context | 43.8 % | **56.2 %** | 46.7 % (42 of 90 declined) |
+   | Open-ended, BM25 RAG | 87.4 % | **12.6 %** | 3.3 % |
+
+   So the model that looks like it knows just over half of Switzerland invents an
+   answer **more than half the time** when you take the options away, and admits
+   ignorance on the rest. Neither fact is visible in the 51.1 % headline.
+   `newly_abstained = 0`: retrieval fixed hallucinations by making them *right*,
+   not by making the model quieter.
+3. **The gain is larger than the PDF claims, measured from a correct baseline.**
    +30.6 → **+35.6 pp** absolute, +55 % → **+70 %** relative. The PDF understated
    how much retrieval helps, because its baseline was inflated by a scoring bug.
    The RAG endpoint barely moved (86.1 → 86.7) — the fix was entirely on the
    control side, which is the signature of a measurement artefact rather than a
    lucky run.
-3. **`make run` was broken in Docker and now is not.** All 43 modules locate the
+4. **`make run` was broken in Docker and now is not.** All 43 modules locate the
    project root via `data/` + `Makefile`; the image shipped neither, so the judge
    target died on its first line. Also fixed: `verify-test` did nothing and exited
    0; the API key was interpolated from an empty variable.
-4. **One dataset key was wrong.** K108 (Appenzell Innerrhoden) was keyed C while
+5. **One dataset key was wrong.** K108 (Appenzell Innerrhoden) was keyed C while
    its own source said D — marking a correct model answer wrong. Fixed and
    disclosed.
 
 Also: ISO 639-3 glottocodes on all dialect items, an explicit consent statement,
-a published values annotation template, and the two human-verification sheets
-below. Full detail in **[CHANGELOG.md](CHANGELOG.md)**.
+a published values annotation template, per-item licensing for all 360 rows, and
+the human-verification sheets below. Full detail in
+**[CHANGELOG.md](CHANGELOG.md)**.
 
-**Still open, both need a person, neither is delegated to a model:** human
-verification of the dataset key (18 items) and judge-vs-human agreement on the
-values rubric (11 items). Sheets are ready; the rate is reported as *not started*
-rather than estimated. Dialect items remain unvalidated by a native speaker.
+**Still open, all three need a person, none is delegated to a model:** human
+verification of the dataset key (18 items), judge-vs-human agreement on the
+values rubric (11 items), and judge-vs-human agreement on the open-ended grader
+(17 RAG / 9 baseline verdicts). Sheets are ready; every rate is reported as *not
+started* rather than estimated. Dialect items remain unvalidated by a native
+speaker. The open-ended grader is additionally **self-judged** — it is the same
+8B under test — which is disclosed on every artefact that reports it.
 
 > **Note on repository layout.** The brief asks teams to work in a `track_1b/`
 > directory and not move its files. This submission is a single-track entry, so
@@ -104,6 +126,54 @@ McNemar: **34 improved · 2 regressed · p < 0.001**.
 <p align="center">
   <img src="docs/submission/assets/fig1_overall_accuracy.png" alt="Overall knowledge accuracy with Wilson intervals" width="920"/>
 </p>
+
+---
+
+## What multiple choice could not see
+
+Accuracy answers one question: how often is the model right. It says nothing about
+what happens when the model is **wrong** — and on this model those are very
+different situations. Multiple choice cannot tell them apart, because four options
+always guarantee an answer: a confident fabrication and an honest refusal both
+score zero.
+
+So we removed the options and graded each answer against the source passage it was
+written from — **correct / incorrect / not attempted**, SimpleQA-style — on the
+same 90 sealed questions, same weights, same seed.
+
+<p align="center">
+  <img src="docs/submission/assets/openqa_factuality.png" alt="Open-ended factuality: correct, incorrect and not attempted for multiple choice, open-ended baseline and open-ended RAG" width="920"/>
+</p>
+
+| Arm | factuality | hallucination | abstention | correct / incorrect / not attempted |
+|---|---|---|---|---|
+| Open-ended, no context | 43.8% | **56.2%** | 46.7% | 21 / 27 / 42 |
+| Open-ended, BM25 RAG | **87.4%** | **12.6%** | 3.3% | 76 / 11 / 3 |
+
+- **factuality** = `correct / (correct + incorrect)`
+- **hallucination** = `incorrect / (correct + incorrect)` — both over *attempted*
+  answers only, so a model cannot improve by refusing everything
+- **abstention** = `not attempted / all`
+
+Read that against the headline. The 51.1% multiple-choice score is real, and it is
+also incomplete: given the choice, this model answers Swiss institutional questions
+correctly about half the time; asked to answer unaided, it **invents an answer more
+than half the time** and admits ignorance on the remaining 42 of 90.
+
+Retrieval helps here for the right reason. Paired across the same 90 items, 56
+answers became correct against 1 lost, and **`newly_abstained = 0`** — the
+hallucination rate did not fall because the model went quiet. It fell because wrong
+answers turned into right ones, while 39 answers moved *out* of refusal.
+
+**Disclosed limits.** The grader is the same Apertus 8B under test — self-judged.
+Abstention is decided by a deterministic rule *before* the judge is called, so the
+judge only ever grades genuine attempts (42 and 3 responses respectively were
+withheld as refusals). A judge that never answered INCORRECT would report a
+hallucination rate of exactly 0.0%, so the test suite asserts it reaches both
+verdicts on the sealed set, and a probe confirmed it separates a true answer from
+a distractor 12/12. A 20% human cross-check sheet is prepared and **unscored** —
+no agreement rate is claimed. Baseline factuality rests on the 48 questions it
+attempted, not all 90.
 
 ---
 

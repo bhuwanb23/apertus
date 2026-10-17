@@ -38,7 +38,20 @@ The dataset contains three components:
 **A. Swiss Knowledge MCQs (300 items)**
 - Format: Multiple-choice (4 options, 1 correct)
 - Fields: question, options (A–D), correct answer, source id / URL,
-  source quote, category, difficulty
+  source quote, category, difficulty, `language`, `variety_uncertain`
+- Open-ended grading fields, added so the same items can be asked **without**
+  options and graded against a reference (see §2.1):
+  - `answer` — the canonical answer string. **Derived, not hand-written**: it is
+    `options[correct_answer]`, so it cannot drift from the key. Asserted equal to
+    that option across all 300 items by the test suite.
+  - `answer_variations` — 0–3 paraphrases that should also count as correct
+    (lists, names with alternate spellings). Present on 297/300; the three
+    without are bare numbers (`58`, `67%`, `7`) where a paraphrase would be
+    ambiguous.
+  - `answer_type` — `list` / `number` / `sentence` / `short` (67 / 16 / 102 / 115)
+  - `reference` — the verified source sentence. Identical to `source_quote` by
+    construction; kept under its own name so the open-ended grader has an explicit
+    reference rather than reaching into a field named for a different purpose.
 - Categories (50 each): politics, law, health, geography, services, history
 - Primary language: English
 - Split: 210 development / 90 sealed test (seed 42, stratified by
@@ -82,10 +95,35 @@ domains. It is not exhaustive.
 - Values: Yes — required / forbidden elements and a 0–2 rubric
 - Dialect: Yes — reference translations / MCQ keys; scoring protocol documented
 
+### 2.1 Second label form for the same knowledge items
+
+Every knowledge item carries **two** usable label forms, and this is deliberate:
+
+1. **Multiple choice** — `options` + `correct_answer`, scored by exact letter match.
+   No judge is involved, so it is reproducible but blind to refusal: the model
+   always has something to pick.
+2. **Open-ended** — `answer` + `answer_variations` + `reference`, scored on a
+   three-way **correct / incorrect / not_attempted** scale (SimpleQA-style), which
+   separates a confident falsehood from an honest refusal.
+
+The open-ended grader is an LLM judge **and, here, the same Apertus 8B weights
+under test** — self-judged. This is disclosed on every artefact reporting the
+metric. Two mitigations are in place and one gap is open:
+
+- Abstention is decided by a **deterministic rule before the judge is called**, so
+  the judge only grades genuine attempts and its three-way output is checkable.
+- The test suite asserts the judge reaches **both** verdicts on the sealed set; a
+  judge stuck on CORRECT would report a hallucination rate of exactly 0.0%. A probe
+  confirmed it separates a true answer from a distractor 12/12.
+- **Open gap:** the 20% human cross-check sheet for the open-ended grader is
+  prepared and **unscored**. No judge-vs-human agreement rate is claimed.
+
 ### Is any information missing from individual instances?
 Dialect items lack native-speaker validation metadata. Multilingual value
 renderings include unvalidated author-written text (see
-`data/values/multilingual_pairs_NOTES.md` if present).
+`data/values/multilingual_pairs_NOTES.md` if present). `answer_variations` is
+empty on 3 of 300 items — bare numbers where a paraphrase would be ambiguous; the
+canonical `answer` is still present.
 
 ### Are relationships between instances made explicit?
 Yes. Multilingual pairs are linked. Dev/test split is documented and sealed

@@ -20,6 +20,109 @@ violated and the violation was found by a scan rather than by reading.
 | Sealed baseline | 55.6 % (20/36) | **51.1 % (46/90)** |
 | Sealed BM25 RAG k=3 | 86.1 % (31/36) | **86.7 % (78/90)** |
 | Delta | +30.6 pp, CI [+13.1, +30.6] | **+35.6 pp, CI [+25.1, +39.5]** |
+
+---
+
+## Open-ended factuality arm (new)
+
+The brief asks submissions to *"measure factuality and hallucination rates"* and to
+use *"SimpleQA-style three-way grading (correct/incorrect/not attempted) against
+ground-truth references using LLM-as-a-judge"*. None of that existed: every arm
+scored only what the model got **right**, and multiple choice cannot score what it
+gets wrong, because with four options a confident fabrication and an honest refusal
+both score zero. The new arm removes the options and grades against each item's
+verified source sentence.
+
+**Sealed n=90, same weights, same seed:**
+
+| Arm | factuality | hallucination | abstention | c / i / n-a |
+|---|---|---|---|---|
+| Open-ended, no context | 43.8% | **56.2%** | 46.7% | 21 / 27 / 42 |
+| Open-ended, BM25 RAG | **87.4%** | **12.6%** | 3.3% | 76 / 11 / 3 |
+
+Paired: 56 answers became correct against 1 lost (net +55, McNemar p<0.001),
+`newly_abstained = 0`, 39 answers moved *out* of refusal.
+
+**What this changes about the headline.** The 51.1% multiple-choice score is real
+and also incomplete: asked to answer unaided, this model invents an answer on
+56.2% of the questions it attempts and declines 42 of 90. Multiple-choice accuracy
+overstates what it knows, because the options guarantee it always has something to
+answer with.
+
+**`newly_abstained` is reported beside the gain on purpose.** A retrieval arm can
+lower its hallucination rate simply by declining more — arithmetically identical
+to improving, behaviourally worse. Here the entire reduction comes from answers
+becoming *right*, with nothing new abstained.
+
+### Dataset changes
+- Added four derived fields to all 300 knowledge items: `answer`,
+  `answer_variations`, `answer_type`, `reference`.
+- **`answer` is derived, not authored**: it is `options[correct_answer]`, so it
+  cannot drift from the key. The suite asserts equality across all 300 items.
+- `answer_variations` is present on 297/300; the three without are bare numbers
+  (`58`, `67%`, `7`) where a paraphrase would be ambiguous.
+- `reference` is identical to `source_quote` by construction, kept under its own
+  name so the grader has an explicit reference.
+- **The 90-item seal was re-recorded** after a field-level equivalence check proved
+  all 90 ids and all 10 pre-existing scored fields byte-identical, with the four new
+  fields purely additive. Reason recorded in the seal's own audit entry.
+
+### Bugs the arm surfaced and fixed
+- **Abstention misclassified a real answer as a refusal.** A real reply asserts an
+  answer and *then* hedges ("…I don't know if there is a specific official role
+  beyond that"). The original regex matched the trailing hedge, which would have
+  deleted genuine attempts from both the factuality and hallucination denominators
+  — making hallucination look better with no change in model behaviour. Now a
+  refusal counts only when it opens the reply or the reply is short. The offending
+  reply is a regression test.
+- **`parse_judgement` crashed** on a judge reply containing neither `CORRECT` nor
+  `INCORRECT`, aborting the run instead of degrading one item. Now falls back to
+  INCORRECT one-directionally, so a judge failure can never manufacture a good
+  result.
+- **The option-leak guard rejected legitimate retrieved context** containing the
+  correct answer. Retrieval surfacing the answer is the point of the arm, and the
+  MCQ arm does the same. The guard now checks only the prompt scaffolding outside
+  the context.
+- **Regex missed `I'm not sure`** (contraction has no space before the
+  apostrophe), silently missing every contraction-form refusal.
+- Replies were truncated mid-sentence at `max_tokens=64`, so the judge graded
+  fragments. Raised to 128.
+
+### Honest limits, disclosed on every artefact
+- The judge is the same Apertus 8B under test — **self-judged**.
+- Mitigations: abstention fixed by rule before the judge is called; the suite
+  asserts the judge reaches both verdicts on the sealed set (a judge stuck on
+  CORRECT would report a hallucination rate of exactly 0.0%); a probe confirmed it
+  separates a true answer from a distractor 12/12.
+- **20% human cross-check sheet prepared and unscored** (17 RAG / 9 baseline
+  stratified verdicts). No agreement rate is claimed.
+- Baseline factuality rests on the 48 questions it attempted, not all 90.
+- `answer_variations` captures acceptable phrasings of a *known* answer, not
+  answers the dataset never anticipated.
+- The arm reuses the MCQ items, which were selected for a world where distractors
+  existed.
+
+### Process incident, disclosed
+
+While wiring this arm in, `src/eval/statistical_report.py` was destroyed by a
+PowerShell negative-index bug in a recovery command of mine (`$lines[-1..]` wraps
+around instead of erroring), and commit `19308af` captured the resulting 14-line
+corrupt file. It was restored from `HEAD~1` and the feature re-applied cleanly;
+the suite passes and the report regenerates. No generated artefact had been
+written from the corrupt version, and no number in any shipped artefact came from
+it. Recorded here because the same class of silent truncation is exactly what the
+rest of this changelog exists to catch — it was caught here only because the file
+failed to parse.
+
+Two PDF-integrity failures were also caught by existing gates rather than by
+inspection, and are worth recording for the same reason:
+- Adding the open-ended block as a 7th page tripped the **max-6-pages** gate from
+  the brief. The block was folded into page 4 and the redundant per-category
+  numeric table (which duplicated Figure 4 and the statistical report) was removed
+  to make room. All per-category numbers remain available in two other places.
+- The chart and the PDF asset disagreed on `newly abstained` vs
+  `newly_abstained`; the asset builder now cross-checks both renderings against the
+  SVG on disk and fails if they diverge.
 | Paired | 11 improved / 0 regressed, p=0.001 | **34 improved / 2 regressed, p<0.001** |
 | Retrieval recall @1/3/5 | 83.3 / 90.5 / 94.0 % | **82.4 / 91.4 / 92.9 %** |
 | Categories clearing their own floor | 0 of 6 | **3 of 6** (geography, history, politics) |

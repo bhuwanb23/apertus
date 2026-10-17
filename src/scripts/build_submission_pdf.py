@@ -380,13 +380,20 @@ def build():
         "none individually significant at this n.",
         S["caption"],
     ))
-    story.append(img("fig_category_table.png", usable, max_height=78 * mm))
-    story.append(Paragraph(
-        "Table 3. Numeric per-category deltas. Power floor at n=6: only 6/0 reaches p&lt;0.05. "
-        "Domains = politics, law, health, geography, services, history — Track 1B “domain-specific "
-        "Swiss knowledge.” Distractors encode neighbouring-country answers so DE/EU confusion is diagnosable.",
-        S["caption"],
-    ))
+    # NOTE: the per-category numeric table that used to sit here
+    # (fig_category_table.png / "Table 3") was removed to make room for the
+    # open-ended factuality block below. It restated the same six deltas that
+    # Figure 4 already plots with intervals, and both duplicate the full table
+    # in results/final_scores/statistical_report.md. The brief asks
+    # submissions to measure factuality and hallucination, which nothing here
+    # did until now, so the redundant rendering of an existing number was the
+    # right thing to trade. The per-category numbers remain in Figure 4 and in
+    # the statistical report.
+    try:
+        from openqa_pdf import build as _oq_pdf_build
+        _oq_pdf_build(story, S, usable, mm, img)
+    except (ImportError, OSError) as _e:
+        print("  openQA block skipped: %s" % _e)
     story.append(img("infographic_pipeline.png", usable, max_height=38 * mm))
     story.append(Paragraph(
         "Figure E′. Same pipeline applies per category — retrieval is global over the Swiss corpus, "
@@ -519,15 +526,6 @@ def build():
         author=TEAM_SHORT,
         subject="Hack Apertus Online · Track 1B Swiss Voices",
     )
-    # The open-ended factuality page renders itself from openqa_report; see
-    # openqa_pdf.py. Appended last so it cannot renumber the existing pages, and
-    # skipped entirely when the arm has not been run.
-    try:
-        from openqa_pdf import build as _oq_pdf_build
-        _oq_pdf_build(story, S, usable, mm, img)
-    except (ImportError, OSError) as _e:
-        print("  openQA page skipped: %s" % _e)
-
     doc.build(story, onFirstPage=footer, onLaterPages=footer)
 
     from pypdf import PdfReader
