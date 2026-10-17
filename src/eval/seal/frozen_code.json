@@ -1,6 +1,39 @@
 {
-  "frozen_utc": "2026-10-17T06:51:44+00:00",
-  "git_hash": "7b00bb3e30c9f025c5d09d3584c4872bb5e59a69",
+  "frozen_utc": "2026-10-17T12:58:26+05:30",
+  "git_hash": "b32cdd3b6c2ab522b0f9c3ce3b4ca5099a3e38a3",
   "tree_dirty": false,
-  "note": "manual"
+  "note": "advanced after the n=90 measurement; see supersedes",
+  "supersedes": {
+    "git_hash": "7b00bb3e30c9f025c5d09d3584c4872bb5e59a69",
+    "frozen_utc": "2026-10-17T06:51:44+00:00",
+    "why_advanced": "The measurement was taken at the superseded hash. Two changes were made afterwards and are recorded here rather than being silently absorbed into the new hash.",
+    "post_measurement_changes": [
+      {
+        "file": "src/eval/run_knowledge.py",
+        "change": "strip_control_markers() - parse the chat-template end-of-turn marker out of served answers",
+        "affects": "SCORING",
+        "how_applied": "re-derived from saved raw responses via src/eval/rescore.py; no regeneration",
+        "recorded_in_artefacts": "rescored=true, parser_revision=2.0",
+        "why": "49 of 90 sealed baseline answers were being scored as PARSE_ERROR (wrong) when they were the model's bare letter wrapped in transport scaffolding"
+      },
+      {
+        "file": "src/eval/run_knowledge.py, src/fix/rag/run_rag_eval.py",
+        "change": "seal-access logging on the test split",
+        "affects": "AUDIT TRAIL ONLY - does not touch parsing, scoring or generation",
+        "how_applied": "added after these runners had already been driven through them",
+        "consequence": "the headline paired run is absent from src/eval/seal/access.log; disclosed in technical_report.md section 5"
+      },
+      {
+        "file": "src/eval/generate_charts.py, src/eval/narrative.py, src/run.py, src/scripts/*",
+        "change": "derived n / recall / split sizes instead of literals",
+        "affects": "FIGURES AND PROSE ONLY"
+      }
+    ],
+    "scoring_files_touched": [
+      "src/eval/run_knowledge.py",
+      "src/fix/rag/retriever.py",
+      "src/fix/rag/run_rag_eval.py"
+    ],
+    "generation_code_still_reproducible_from": "7b00bb3e30c9f025c5d09d3584c4872bb5e59a69"
+  }
 }
