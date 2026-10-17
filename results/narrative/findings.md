@@ -1,6 +1,6 @@
 # Key Findings — Swiss Reality Check
 
-*Generated 2026-10-17T07:34:54+00:00 by `eval/narrative.py` from measured data · git `07e76e47e99f`*
+*Generated 2026-10-17T07:38:56+00:00 by `eval/narrative.py` from measured data · git `560512da0aec`*
 
 > **Read this first.** Every number below was computed by the code in this repository
 > and is traceable to a run. There are no placeholders, and no claim appears that
@@ -9,7 +9,7 @@
 
 > ## Model data — every accuracy figure below is from a live run
 >
-> The sealed test set was opened **67 times** according to the append-only log - 9 of the baseline arm and 58 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Latest arm: 2026-10-17T06:59:59+00:00, backend `http`, `is_mock: false`.
+> The sealed test set was opened **72 times** according to the append-only log - 9 of the baseline arm and 63 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Latest arm: 2026-10-17T06:59:59+00:00, backend `http`, `is_mock: false`.
 > Arms scored: `8b`. Accuracy, deltas and intervals
 > come from `eval/statistical_report.py`; the per-item rows are in `results/test_run/`.
 > The findings that hold *without* a model are in §3.1–§3.4, and they do not depend on this run.
@@ -48,7 +48,7 @@ Two properties matter more than the counts:
   plausible-sounding invention. That is what makes an error diagnosable rather
   than merely wrong.
 - **The split is stratified and sealed.** 84 dev / 36 test, split on `(category, difficulty)`
-  with a fixed seed. The sealed test set was opened **67 times** according to the append-only log - 9 of the baseline arm and 58 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Every individual access is listed by `python src/eval/seal.py audit`.
+  with a fixed seed. The sealed test set was opened **72 times** according to the append-only log - 9 of the baseline arm and 63 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Every individual access is listed by `python src/eval/seal.py audit`.
 
 ## Act 3 — What was actually found
 
@@ -202,7 +202,7 @@ to any small-n evaluation, in any language, for any model.
 
 ## Limitations
 
-1. **One model, one benchmark, one shot that was not one shot.** The sealed test set was opened **67 times** according to the append-only log - 9 of the baseline arm and 58 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full.
+1. **One model, one benchmark, one shot that was not one shot.** The sealed test set was opened **72 times** according to the append-only log - 9 of the baseline arm and 63 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full.
    Scored for Apertus 1.5 8B. Nothing here separates a
    Swiss-specific effect from a general small-model effect, and nothing here would survive a
    second look at the same items.
@@ -230,7 +230,7 @@ to any small-n evaluation, in any language, for any model.
 
 ## Reproducibility
 
-- Git commit `07e76e47e99f4264821e85dace7fbac913b04a91`
+- Git commit `560512da0aec5c410b8cfc704742335492b0bad8`
 - Sealed test set SHA-256 `83c20589e1c5b668fabcdafb0a09c1d2…` (recorded in `eval/seal/`)
 - Seed 42 · temperature 0.0 · prompt version 1.0 · judge `8b`
 - Every access to the sealed test set is in an append-only log: `python src/eval/seal.py audit`
