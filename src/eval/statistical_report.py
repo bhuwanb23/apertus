@@ -456,6 +456,39 @@ def _judge_used() -> str:
     return config.judge_model
 
 
+def knowledge_human_agreement() -> dict:
+    """Human-vs-key agreement on the knowledge items, if it has been done.
+
+    Absent means absent. An unrun check must never print a number someone could
+    mistake for a result - the same rule the values cross-check follows.
+    """
+    scored_path = ROOT / "results" / "human" / "knowledge_human_scored.json"
+    if not scored_path.is_file():
+        return {"status": "not started",
+                "detail": "no human has verified a sample of the knowledge items. "
+                          "Run `python src/scripts/human_worksheet.py knowledge "
+                          "--build`, answer the sheet, then `--score`."}
+    try:
+        d = json.loads(scored_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        return {"status": "unreadable", "detail": str(e)}
+    n = d.get("n", 0)
+    if not n:
+        return {"status": "incomplete", "detail": "sheet present but nothing scored"}
+    return {
+        "status": "complete",
+        "n": n,
+        "agreement": d.get("agreement"),
+        "meets_floor": d.get("meets_floor"),
+        "floor": d.get("floor", 0.75),
+        "disagreements": len(d.get("disagreements", [])),
+        "by_category": d.get("by_category", {}),
+        "detail": (f"human matches the dataset key on {d.get('agreed')}/{n} = "
+                   f"{d.get('agreement')}% ({len(d.get('disagreements', []))} "
+                   f"disagreement(s) — each is a candidate dataset defect)"),
+    }
+
+
 def crosscheck_agreement() -> dict:
     """
     The human-judgement agreement rate. B5.
@@ -464,19 +497,52 @@ def crosscheck_agreement() -> dict:
     person, the answer is that it does not exist yet, and the report says so in
     the field rather than printing an XX.X that someone might fill in.
     """
-    from pathlib import Path as P
-    blind = ROOT / "results" / "crosscheck_blind.json"
-    if not blind.exists():
+    # Discover the sample rather than guessing one filename. crosscheck.py writes
+    # <parsed>/values_<model>_crosscheck.json; an older layout used a single
+    # results/crosscheck_blind.json. Both are accepted, and more than one is
+    # reported rather than silently resolved - picking arbitrarily would let a
+    # stale sample be presented as the current one.
+    candidates = sorted(
+        (ROOT / "results").rglob("values_*_crosscheck.json"),
+        key=lambda q: q.stat().st_mtime,
+        reverse=True,
+    )
+    legacy = ROOT / "results" / "crosscheck_blind.json"
+    if legacy.is_file():
+        candidates.append(legacy)
+
+    if not candidates:
         return {"status": "not started",
-                "detail": "B5: no blind sample exists yet. A human must score the "
-                          "15 items; this cannot be delegated to a model."}
-    payload = json.loads(blind.read_text(encoding="utf-8"))
+                "detail": "B5: no blind sample exists yet. Run "
+                          "`python src/eval/crosscheck.py select --model 8b`, then "
+                          "score it by hand or with --interactive. This cannot be "
+                          "delegated to a model."}
+    if len(candidates) > 1:
+        names = ", ".join(str(c.relative_to(ROOT)) for c in candidates)
+        return {"status": "ambiguous",
+                "detail": f"found {len(candidates)} blind samples ({names}); "
+                          f"using the most recent. Delete the others so the "
+                          f"reported rate is unambiguous."}
+
+    blind = candidates[0]
+    try:
+        payload = json.loads(blind.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        return {"status": "unreadable",
+                "detail": f"{blind.relative_to(ROOT)} could not be read: {e}"}
+
+    if not isinstance(payload, list):
+        return {"status": "unreadable",
+                "detail": f"{blind.relative_to(ROOT)} is not a list of items"}
+
     scored = [r for r in payload if r.get("manual_score") is not None]
     if not scored:
         return {"status": "incomplete",
-                "detail": f"{len(payload)} items in the blind sample, 0 scored by a human"}
+                "detail": f"{len(payload)} items in the blind sample "
+                          f"({blind.relative_to(ROOT)}), 0 scored by a human"}
     agreed = sum(1 for r in scored if r.get("manual_score") == r.get("judge_score"))
     return {"status": "complete", "n": len(scored),
+            "source": str(blind.relative_to(ROOT)),
             "agreement": round(agreed / len(scored) * 100, 1),
             "floor": 0.75}
 
@@ -566,8 +632,15 @@ def render_console(s: dict) -> None:
     detail = cc.get("detail")
     if not detail:
         detail = f"agreement {cc.get('agreement')}% (n={cc.get('n')})"
-    print(f"  HUMAN CROSS-CHECK AGREEMENT: {cc['status']}")
+    print(f"  HUMAN CROSS-CHECK (values judge): {cc['status']}")
     print(f"    {detail}")
+
+    kh = knowledge_human_agreement()
+    kdetail = kh.get("detail")
+    if not kdetail:
+        kdetail = f"agreement {kh.get('agreement')}% (n={kh.get('n')})"
+    print(f"  HUMAN VERIFICATION  (knowledge key): {kh['status']}")
+    print(f"    {kdetail}")
     print("=" * 74)
 
 
@@ -708,6 +781,26 @@ def write_report(s: dict, path: Path | None = None) -> Path:
               f"per `values_rubric.md` §5.")
             A("")
 
+    kh = knowledge_human_agreement()
+    A("## Human verification of the knowledge key")
+    if kh["status"] == "complete":
+        A(f"A human independently answered **{kh['n']}** knowledge items drawn from the "
+          f"dev split, stratified by category and difficulty, blind to the stored key. "
+          f"The key matched on **{kh['agreement']}%**.")
+        A("")
+        A("This is a check on the DATASET, not on the model: the knowledge arm is scored "
+          "by exact letter match, so no judge is involved and a wrong key silently marks "
+          "a correct model answer wrong. Each disagreement is a candidate dataset "
+          "defect, and one already found this way (K108, Appenzell Innerrhoden) is "
+          "fixed and disclosed in the changelog.")
+    else:
+        A(f"**{kh['status']}** — {kh.get('detail', '')}")
+        A("")
+        A("Not yet performed. The knowledge items are graded by exact letter match "
+          "against the dataset's own key, so an incorrect key is indistinguishable "
+          "from model error in the headline number. This is a known open item, listed "
+          "in technical_report.md §5.")
+
     cc = crosscheck_agreement()
     A("## Human cross-check agreement")
     A("")
@@ -784,8 +877,15 @@ def _power_section(A, s: dict) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser(description="Phase 4.2 statistical report.")
     ap.add_argument("--model", action="append", choices=list(MODELS), default=None)
-    ap.add_argument("--write", action="store_true",
-                    help="write statistical_report.md and test_scores.json")
+    # Writing is the default. Both files are derived from the archived arms in
+    # results/test_run/, so regenerating is idempotent and always in scope.
+    # Gating it behind a flag meant the obvious invocation refreshed the console
+    # and left the SHIPPED report untouched on disk - so statistical_report.md
+    # could be arbitrarily stale while the terminal output looked perfect. That
+    # is the failure this project keeps having: the artefact a judge reads
+    # diverging from the one that was just computed.
+    ap.add_argument("--no-write", dest="write", action="store_false", default=True,
+                    help="console only; do not refresh the report files")
     args = ap.parse_args()
     models = tuple(args.model) if args.model else MODELS
 
@@ -802,8 +902,13 @@ def main() -> int:
         print(f"  scores  -> {(FINAL / 'test_scores.json').relative_to(ROOT)}")
         cc = crosscheck_agreement()
         if cc["status"] != "complete":
-            print(f"\n  NOTE: the human cross-check is {cc['status']}. The report "
-                  f"says so\n  rather than carrying a placeholder for it.")
+            print(f"\n  NOTE: the values human cross-check is {cc['status']}. The "
+                  f"report says so rather than carrying a placeholder for it.")
+            kh = knowledge_human_agreement()
+            if kh["status"] != "complete":
+                print(f"  NOTE: human verification of the knowledge key is "
+                      f"{kh['status']}. The report says so rather than "
+                      f"carrying a placeholder for it.")
         mocks = [m for m in models
                  if s["knowledge"].get(m, {}).get("baseline_meta", {}).get("is_mock")]
         if mocks:

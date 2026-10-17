@@ -234,14 +234,17 @@ def run_results() -> None:
 # ------------------------------------------------------------------ 4 outputs
 def regenerate() -> None:
     step("Generated artefacts")
-    for label, argv in (
-        ("statistical report", [sys.executable,
-                                str(ROOT / "src/eval/statistical_report.py"),
-                                "--write"]),
-        ("charts", [sys.executable, str(ROOT / "src/eval/generate_charts.py")]),
-        ("narrative", [sys.executable, str(ROOT / "src/eval/narrative.py"),
-                        "--write"]),
-    ):
+for label, argv in (
+            # No --write: statistical_report.py writes by default now. Passing a
+            # flag that no longer exists made argparse exit 2, and this loop
+            # reported it as "[FAIL] statistical report regenerated" with the
+            # real cause - an unknown argument - nowhere in sight.
+            ("statistical report", [sys.executable,
+                                    str(ROOT / "src/eval/statistical_report.py")]),
+            ("charts", [sys.executable, str(ROOT / "src/eval/generate_charts.py")]),
+            ("narrative", [sys.executable, str(ROOT / "src/eval/narrative.py"),
+                           "--write"]),
+        ):
         try:
             r = subprocess.run(argv, cwd=ROOT, capture_output=True, text=True,
                                timeout=900)

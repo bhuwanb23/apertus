@@ -421,9 +421,18 @@ def main() -> int:
         path = _parsed_path(args.model)
         out = select_crosscheck_sample(path, args.fraction)
         items = json.loads(out.read_text(encoding="utf-8"))
-        print(f"\nselected {len(items)} of "
-              f"{len(json.loads(path.read_text(encoding='utf-8'))['records'])} records "
-              f"({args.fraction * 100:.0f}%), stratified by category and language, seed {SEED}")
+        all_records = json.loads(path.read_text(encoding="utf-8"))["records"]
+        scored = [r for r in all_records if r.get("score") is not None]
+        # Name the denominator that was actually used. The rubric audits 20% of
+        # SCORED responses; reporting the total made 20% of 73 look like it should
+        # have been 15 rather than 11.
+        print(f"\nselected {len(items)} of {len(scored)} scored responses "
+              f"({args.fraction * 100:.0f}%), stratified by category and language, "
+              f"seed {SEED}")
+        unscored = len(all_records) - len(scored)
+        if unscored:
+            print(f"  ({unscored} of {len(all_records)} records had no valid score "
+                  f"and are not auditable)")
         print(f"blind file -> {out}")
         strata = defaultdict(int)
         for it in items:

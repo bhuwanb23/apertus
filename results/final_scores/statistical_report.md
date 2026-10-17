@@ -1,6 +1,6 @@
 # Statistical report — Swiss Reality Check
 
-Generated 2026-10-17T07:49:53+00:00 by `eval/statistical_report.py`, git `197d77f765cf`.
+Generated 2026-10-17T07:58:11+00:00 by `eval/statistical_report.py`, git `5dda9f104c13`.
 
 Split: **held-out test set**. α = 0.05. Judge: `8b`  — **self-judged**, disclosed per `values_rubric.md` §5.
 
@@ -60,9 +60,13 @@ Reported side by side and **not ranked** — picking the best of six is selectio
 
 > **The `8b` values arm is self-judged** — the judge and the model under test are the same weights. Disclosed per `values_rubric.md` §5.
 
+## Human verification of the knowledge key
+**not started** — no human has verified a sample of the knowledge items. Run `python src/scripts/human_worksheet.py knowledge --build`, answer the sheet, then `--score`.
+
+Not yet performed. The knowledge items are graded by exact letter match against the dataset's own key, so an incorrect key is indistinguishable from model error in the headline number. This is a known open item, listed in technical_report.md §5.
 ## Human cross-check agreement
 
-**Not available — not started.** B5: no blind sample exists yet. A human must score the 15 items; this cannot be delegated to a model.
+**Not available — incomplete.** 11 items in the blind sample (results\parsed\values_8b_crosscheck.json), 0 scored by a human
 
 ## Limitations
 
@@ -74,7 +78,7 @@ Reported side by side and **not ranked** — picking the best of six is selectio
 
 ## Reproducibility
 
-- Git commit: `197d77f765cf6c1db3d5949d002c6c18493122e3`
+- Git commit: `5dda9f104c136bdcc9d80a1824acb73d68c80bbb`
 - Seed: 42 · Temperature: 0.0 · Prompt version: 1.0
 - Sealed test set SHA-256: `83c20589e1c5b668fabcdafb0a09c1d2…`
 - Raw responses and per-arm metadata: `results/test_run/`
