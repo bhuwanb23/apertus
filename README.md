@@ -28,6 +28,55 @@ make run     # Docker · offline by default · clean checkout, zero config
 
 ---
 
+## What changed since the original submission
+
+The submitted PDF carries the **first** measurement, on a 36-item sealed set.
+Everything below supersedes it. Old arms are kept as
+`results/test_run/*.superseded-n36.json` so the change is auditable.
+
+| | PDF (first run) | Now | Why |
+|---|---|---|---|
+| Corpus | 120 MCQs | **300** | 36 items cannot support any per-category claim |
+| Split | 84 / **36** sealed | 210 / **90** sealed | 15 sealed items per category, not 6 |
+| Baseline | 55.6 % (20/36) | **51.1 %** (46/90) | ↓ *the old figure was partly a parser bug* |
+| With retrieval | 86.1 % (31/36) | **86.7 %** (78/90) | ↑ |
+| Paired Δ | +30.6 pp | **+35.6 pp** | 34 improved / 2 regressed, p < 0.001 |
+| Recall @1/3/5 | 83.3 / 90.5 / 94.0 % | **82.4 / 91.4 / 92.9 %** | re-measured on 210 dev items |
+| Categories clearing their own floor | 0 of 6 | **3 of 6** | geography, history, politics |
+
+**Four findings a reader of the PDF should know:**
+
+1. **A parser bug was costing the baseline 23 points.** Served answers ended in a
+   visible end-of-turn token, so **49 of 90** baseline answers were scored as
+   `PARSE_ERROR` — wrong. The raw baseline was **27.8 %** (25/90). Fixed and
+   re-scored from the saved responses, recovering 21 answers; no regeneration.
+   This is why the new baseline is *lower* despite a corpus 2.5× larger, and it
+   means **the PDF's 55.6 % was not a model measurement**.
+2. **The gain is larger than the PDF claims, measured from a correct baseline.**
+   +30.6 → **+35.6 pp** absolute, +55 % → **+70 %** relative. The PDF understated
+   how much retrieval helps, because its baseline was inflated by a scoring bug.
+   The RAG endpoint barely moved (86.1 → 86.7) — the fix was entirely on the
+   control side, which is the signature of a measurement artefact rather than a
+   lucky run.
+3. **`make run` was broken in Docker and now is not.** All 43 modules locate the
+   project root via `data/` + `Makefile`; the image shipped neither, so the judge
+   target died on its first line. Also fixed: `verify-test` did nothing and exited
+   0; the API key was interpolated from an empty variable.
+4. **One dataset key was wrong.** K108 (Appenzell Innerrhoden) was keyed C while
+   its own source said D — marking a correct model answer wrong. Fixed and
+   disclosed.
+
+Also: ISO 639-3 glottocodes on all dialect items, an explicit consent statement,
+a published values annotation template, and the two human-verification sheets
+below. Full detail in **[CHANGELOG.md](CHANGELOG.md)**.
+
+**Still open, both need a person, neither is delegated to a model:** human
+verification of the dataset key (18 items) and judge-vs-human agreement on the
+values rubric (11 items). Sheets are ready; the rate is reported as *not started*
+rather than estimated. Dialect items remain unvalidated by a native speaker.
+
+---
+
 ## Headline result
 
 Apertus 1.5 **8B** (Q4_K_M text extract) · held-out sealed test · **n = 90** · BM25 RAG against 55 official Swiss sources.
