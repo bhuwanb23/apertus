@@ -104,6 +104,38 @@ tokens, which found 12 string literals that had been given `{...}` references wi
 being converted to f-strings — i.e. the PDF was about to ship literal
 `{BASE_ACC}` to a judge.
 
+## 5a. Two defects found while making the figures right
+
+**A freeze that could never be committed.** `check_freeze()` required the recorded
+`git_hash` to equal `git rev-parse HEAD`. But committing `frozen_code.json` *is* a
+commit — so committing the freeze record immediately invalidated it, and the seal
+could be recorded but never committed. `tree_hash()` now hashes the git index with
+`src/eval/seal/` excluded: invariant under committing the record, still changing
+whenever real code is committed. `git_dirty()` already covered the other half
+(uncommitted working-tree edits), so the pair checks both.
+
+This was pre-existing, not caused by the rescale. It surfaced because the freeze
+genuinely had to be advanced, which is the first time anyone tried to commit one.
+
+A first attempt at the fix was itself wrong: written as
+`f":!{_seal_prefix()}rstrip('/')"`, the trailing call became literal text, the
+pathspec excluded nothing, and `tree_hash` stayed sensitive to the very file it
+was meant to ignore. Caught by asserting the invariant directly — *editing a seal
+file must not change the hash* — rather than by reading the code.
+
+**Tests that asserted the old constants.** Six checks across `test_charts.py`,
+`test_narrative.py` and `test_phase4.py` hardcoded `detectable(36)`,
+`detectable(6)`, `wilson_ci(0, 6)`, or the literal `"undetectable at n=36"`. These
+are the same defect as a stale chart: they fail for the wrong reason the day the
+corpus is rescaled, and they cannot distinguish *the chart is right* from *the chart
+matches a stale constant*. All six now derive their expectations the same way the
+code under test does, so they assert **agreement between two independent
+derivations** rather than agreement with a number typed before the rescale.
+
+The `test_phase4` case was the weakest of the six: it wrote a bogus `git_hash` while
+a valid `tree_hash` was present, so it was not testing the thing it claimed to test.
+It now perturbs each field in turn and requires a block from each.
+
 ## 6. Power analysis, recomputed
 
 The detection floor is computed, not asserted. At n=90 a paired change needs 6

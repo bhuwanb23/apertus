@@ -210,19 +210,36 @@ def test_freeze() -> None:
             rec = seal.freeze(note="test")
             check("freeze records the git hash",
                   rec["git_hash"] == seal.git_hash())
+            check("freeze records the tree hash it compares on",
+                  rec["tree_hash"] == seal.tree_hash(),
+                  "without tree_hash the freeze cannot survive being committed")
             check("freeze records when it happened", bool(rec["frozen_utc"]))
             check("a clean freeze records a clean tree", rec["tree_dirty"] is False)
             ok2, problems2 = seal.check_freeze()
             check("a fresh freeze at HEAD passes on a clean tree", ok2,
                   "; ".join(problems2))
 
-            # Golden Rule 4: HEAD moving after the freeze must block.
+            # Golden Rule 4: the code moving after the freeze must block. tree_hash
+            # is the authoritative comparison; git_hash alone is checked only on
+            # legacy records that predate it.
             seal.FREEZE_PATH.write_text(json.dumps(
-                {**rec, "git_hash": "0" * 40}), encoding="utf-8")
+                {**rec, "tree_hash": "0" * 64}), encoding="utf-8")
             ok3, problems3 = seal.check_freeze()
-            check("a moved HEAD blocks the run", not ok3)
+            check("a moved tree blocks the run", not ok3)
             check("the refusal names Golden Rule 4",
                   any("Golden Rule 4" in p for p in problems3), str(problems3))
+
+            # A legacy record with no tree_hash still blocks on the commit hash -
+            # it just also cannot be committed without invalidating itself, which
+            # the refusal says out loud.
+            legacy = {k: v for k, v in rec.items() if k != "tree_hash"}
+            legacy["git_hash"] = "0" * 40
+            seal.FREEZE_PATH.write_text(json.dumps(legacy), encoding="utf-8")
+            ok_l, problems_l = seal.check_freeze()
+            check("a legacy record with no tree_hash still blocks on git_hash",
+                  not ok_l, str(problems_l))
+            check("that refusal tells the reader to re-freeze",
+                  any("re-freeze" in p for p in problems_l), str(problems_l))
 
             # A dirty tree blocks: the hash would not identify the code.
             seal.FREEZE_PATH.write_text(json.dumps(rec), encoding="utf-8")
