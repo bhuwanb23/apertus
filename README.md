@@ -1,175 +1,182 @@
-# Swiss Reality Check — Hack Apertus
+# Swiss Reality Check
 
+### Hack Apertus · Track 1B — Swiss Voices
+
+<p align="center">
+  <strong>Does an open model know Switzerland?</strong><br/>
+  <em>Knowledge · Values · Alemannic dialect — every answer traced to an official Swiss source.</em>
+</p>
+
+<p align="center">
+  <a href="https://huggingface.co/datasets/bhuwanb23/apertus"><img src="https://img.shields.io/badge/🤗_Dataset-bhuwanb23%2Fapertus-FFD21E?style=for-the-badge" alt="Hugging Face"/></a>
+  <a href="swiss_reality_check_report.pdf"><img src="https://img.shields.io/badge/Report-PDF_≤6p-E63946?style=for-the-badge" alt="PDF"/></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Code-Apache--2.0-1F2933?style=for-the-badge" alt="License"/></a>
+  <a href="DATASHEET.md"><img src="https://img.shields.io/badge/Data-CDLA--Permissive--2.0-457B9D?style=for-the-badge" alt="Data license"/></a>
+</p>
+
+<p align="center">
+  <img src="docs/submission/assets/infographic_pillars.png" alt="Three pillars: knowledge, values, dialect" width="920"/>
+</p>
+
+**Team:** Swiss Reality Check — Bhuwan B · Padmanaban G · Avinash A  
+**Event:** Hack Apertus Online Phase (1–16 Oct 2026)  
 **Track:** [1B — Swiss Voices](https://github.com/HackApertus/project-template/tree/main/track_1b)
-**Team:** Swiss Reality Check — Bhuwan B · Padmanaban G · Avinash A
-**Event:** Hack Apertus Online Phase (1–16 Oct 2026)
-
-> **Does an open model know Switzerland?** 180 items — knowledge, values and
-> Alemannic dialect — where every answer traces to a verbatim passage in an
-> official Swiss source, and every distractor is a real answer from Germany or
-> the EU.
 
 ```bash
-make run     # Docker; works on a clean checkout with no configuration
+make run     # Docker · offline by default · clean checkout, zero config
 ```
 
 ---
 
 ## Headline result
 
-Apertus 1.5 **8B**, held-out test set (n=90), retrieval-augmented against 55
-harvested official Swiss sources (300 MCQs, 210 dev / 90 sealed):
+Apertus 1.5 **8B** (Q4_K_M text extract) · held-out sealed test · **n = 90** · BM25 RAG against 55 official Swiss sources.
 
-| Arm | Accuracy | 95% CI |
+<p align="center">
+  <img src="docs/submission/assets/infographic_delta.png" alt="51.1% to 86.7%, +35.6 pp" width="920"/>
+</p>
+
+| Arm | Accuracy | 95% Wilson CI |
 |---|---|---|
 | Baseline | 51.1% (46/90) | [41.0, 61.2] |
 | With retrieval | **86.7%** (78/90) | [78.1, 92.2] |
-| **Delta** | **+35.6 pp** | exact 95% CI [+25.1, +39.5] |
+| **Paired Δ** | **+35.6 pp** | exact 95% CI [+25.1, +39.5] |
 
-Paired McNemar: **34 improved, 2 regressed, p < 0.001**.
+McNemar: **34 improved · 2 regressed · p < 0.001**.  
+**Apertus 70B was not evaluated** (8 GB VRAM) — missing bars are not implied scores.
 
-And the number we would defend hardest, because it needs no model at all:
+<p align="center">
+  <img src="docs/submission/assets/fig1_overall_accuracy.png" alt="Overall knowledge accuracy with Wilson intervals" width="920"/>
+</p>
 
-| retrieval | finds the source containing the answer |
+---
+
+## Retrieval never was the bottleneck
+
+Pure-Python BM25 · zero ML dependencies · decided before a single model call:
+
+| Recall@k | Source containing the answer |
 |---|---|
-| top-1 | 82.4% |
-| top-3 | 91.4% |
+| top-1 | **82.4%** |
+| top-3 | **91.4%** |
 | top-5 | **92.9%** |
 
-**Read the limitations before the headline.** Only one model has results, the
-sealed set was opened more than once, values are self-judged, and per-category
-n=15 supports no ranking. All of it is in
-[technical_report.md §5](technical_report.md#5-limitations).
+<p align="center">
+  <img src="docs/submission/assets/fig4_retrieval_recall.png" alt="Retrieval source recall at k=1,3,5" width="920"/>
+</p>
+
+---
+
+## What we built
+
+<p align="center">
+  <img src="docs/submission/assets/infographic_scope.png" alt="Benchmark scope: 300 MCQs, values, dialect" width="920"/>
+</p>
+
+| Pillar | Size | What it measures |
+|---|---|---|
+| **Knowledge** | 300 MCQs · 210 / 90 sealed | Swiss facts vs Germany / EU distractors |
+| **Values** | 30 scenarios (+ multilingual) | Framing against Swiss cultural norms |
+| **Dialect** | 30 Alemannic items | Translation / comprehension proxies |
+| **Sources** | 101 harvested pages | Verbatim provenance for every answer |
+
+<p align="center">
+  <img src="docs/submission/assets/infographic_pipeline.png" alt="Contamination gate → seal → RAG → score" width="920"/>
+</p>
+
+### Two findings ahead of the accuracy number
+
+1. **The obvious fix was contaminated.** A system prompt that asserts Swiss facts answers ~30% of the development set. The shipped prompt carries behavioural rules only (0/210) and a gate that *raises* keeps it there.
+2. **Retrieval was never the bottleneck.** 92.9% recall@5 from stdlib BM25 ruled out a dense retriever before any model call — confirmed by the accuracy result afterwards.
+
+---
+
+## Per-category & transfer
+
+Descriptive only at n=15 per category — not a ranking.
+
+<p align="center">
+  <img src="docs/submission/assets/fig2_category_intervals.png" alt="Per-category paired intervals" width="920"/>
+</p>
+
+<p align="center">
+  <img src="docs/submission/assets/fig3_dev_to_test.png" alt="Dev to test transfer" width="920"/>
+</p>
+
+<p align="center">
+  <img src="docs/submission/assets/fig_values_dialect.png" alt="Values and dialect arms" width="920"/>
+</p>
 
 ---
 
 ## Deliverables
 
-| Deliverable | Location |
+| | |
 |---|---|
 | Technical report | [`technical_report.md`](technical_report.md) |
-| Technical report (PDF) | [`swiss_reality_check_report.pdf`](swiss_reality_check_report.pdf) |
-| Code | [`src/`](src/) — `eval/` harness, `fix/` analysis, `scripts/` |
-| Datasets | [`data/`](data/) |
-| Write-ups, charts, plans | [`docs/`](docs/) |
-| Key findings | [`results/narrative/findings.md`](results/narrative/findings.md) |
+| Jury PDF (≤6 pages) | [`swiss_reality_check_report.pdf`](swiss_reality_check_report.pdf) |
+| Hugging Face dataset | [huggingface.co/datasets/bhuwanb23/apertus](https://huggingface.co/datasets/bhuwanb23/apertus) |
+| Datasheet | [`DATASHEET.md`](DATASHEET.md) |
 | Statistical report | [`results/final_scores/statistical_report.md`](results/final_scores/statistical_report.md) |
-| Per-item results | [`results/test_run/`](results/test_run/) |
-| Dataset (Hugging Face) | https://huggingface.co/datasets/bhuwanb23/apertus |
-
-License: **Apache-2.0** (code) — see [`LICENSE`](LICENSE). The **dataset** is
-**CDLA-Permissive-2.0**; see [`DATASHEET.md`](DATASHEET.md).
+| Charts / infographics | [`docs/submission/assets/`](docs/submission/assets/) |
+| Code | [`src/`](src/) — `eval/` · `fix/` · `scripts/` |
 
 ---
 
-## Running it
+## Reproduce
 
-Judges run `make run` from the repository root, on a clean checkout. It runs
-**offline by default** — dataset integrity, retrieval recall, scoring,
-statistics, charts and narrative all execute without an LLM, because the
-benchmark's most important claim is model-free.
+Judges run from a clean checkout. Offline by default — integrity, recall, scoring, statistics, charts and narrative without an LLM.
 
 ```bash
-make run          # via Docker
+make run          # Docker
 make verify       # same checks, no Docker
-make test         # 13 automated suites, 11,540 checks
-make help         # all targets
+make test         # automated suites
+make help
 ```
 
-### With a live model
+### Live model (optional)
 
-The reported numbers were produced against a local **llama.cpp** server on an
-RTX 5060:
+Reported numbers: local **llama.cpp** on RTX 5060.
 
 ```bash
 export LLM_NAME=Apertus-v1.5-8B-Instruct-Q4_K_M
 export LLM_BASE_URL=http://host.docker.internal:8080/v1
 export LLM_API_KEY=EMPTY
-make run          # additionally smoke-tests the live model
+make run
 ```
 
-`host.docker.internal` rather than `127.0.0.1`: inside the container, loopback
-is the container itself, so a server on the host is unreachable by that name
-otherwise.
-
-On the host directly:
-
-```bash
-llama-server -m apertus-v1.5-8b-text-Q4_K_M.gguf \
-  --host 127.0.0.1 --port 8080 --ctx-size 8192 -ngl 99
-```
-
-**Model substitution, disclosed.** The reported run used the text-only
-**Q4_K_M** GGUF extract, not `swiss-ai/Apertus-v1.5-8B`. The full checkpoint is
-gated and is the Omni model — 8.9 B parameters, ~19 GB in bf16, with vision and
-audio towers — which does not fit an 8 GB card. Every pillar of this benchmark
-is text, so the text-only extract is the right instrument, but the substitution
-is recorded in every artefact rather than left implicit. Full rationale in
-[technical_report.md §6](technical_report.md#6-reproducibility).
-
-### Dependencies
-
-`python-dotenv`, and optionally `numpy` (dense retriever) and `openai` (OpenAI
-backend). **No torch, no pandas, no matplotlib** — the charts are hand-rolled
-SVG. The default retrieval and scoring path runs on the standard library.
+**Model substitution, disclosed.** Text-only **Q4_K_M** GGUF extract, not the gated Omni `swiss-ai/Apertus-v1.5-8B`. Every pillar is text; the substitution is recorded in every artefact. Details: [technical_report.md §6](technical_report.md#6-reproducibility).
 
 ---
 
-## What is in here
+## Layout
 
 ```
-Makefile              make run / verify / test
-Dockerfile            slim image; no GPU runtime, no weights
-docker-compose.yml    LLM_NAME / LLM_BASE_URL / LLM_API_KEY
-technical_report.md   architecture, evaluation, limitations
-DATASHEET.md          dataset card
+Makefile · Dockerfile · docker-compose.yml
+technical_report.md · DATASHEET.md · LICENSE
+swiss_reality_check_report.pdf
 
 src/
-  run.py              the entrypoint make run executes
-  eval/               harness: clients, prompts, runners, scoring, judge
-  fix/                the method: error taxonomy, target selection,
-                      contamination gate, RAG, statistics, charts, narrative
-  scripts/            dataset build and verification helpers
+  run.py              make run entrypoint
+  eval/               clients, prompts, runners, scoring, judge
+  fix/                taxonomy, contamination gate, RAG, stats, charts
+  scripts/            dataset build + HF upload
 
-data/                 the benchmark datasets and harvested sources
-docs/                 plans, baseline notes, submission assets
-results/              run artefacts — the evidence behind every number
-findings/             issue files
+data/                 knowledge · values · dialect · sources
+docs/submission/      PDF assets, charts, HF staging
+results/              sealed-run evidence behind every number
 ```
 
-### Two findings we would put ahead of the accuracy number
-
-**The obvious fix was contaminated.** The system prompt proposed in the project
-plan asserts Swiss facts verbatim. It answers **30 % of dev items**. A benchmark
-built that way measures its own prompt. The prompt that ships carries
-behavioural rules only, at 0/210, and a gate that *raises* keeps it there.
-
-**Retrieval was never the bottleneck.** 92.9 % recall at k=5 from pure-Python BM25
-with zero dependencies is what ruled out installing a dense retriever — decided
-before a single model call, and confirmed by the accuracy result afterwards.
-
 ---
 
-## Demo video
+## Honesty before the headline
 
-`brag-output/` is gitignored; the video is uploaded through the submission form.
-Its size and SHA-256 are recorded in [`docs/submission/`](docs/submission/) so
-the uploaded file can be verified.
+Read [technical_report.md §5](technical_report.md#5-limitations) in full. Short version:
 
----
+- **No 70B results** — half the premise is unevidenced.
+- **Sealed test opened more than once** — append-only log; greedy decode, nothing tuned between runs.
+- **Values are self-judged** (same weights as the model under test).
+- **Per-category n=15** supports no ranking.
+- **Error taxonomy unresolved** — majority `UNCLASSIFIED`; no weakest-area claim.
 
-## Honesty about what did not happen
-
-Three things a reader should know before trusting anything above:
-
-- **No 70B results exist.** The 8B-vs-70B comparison is this project's premise
-  and it is half evidenced.
-- **The sealed test set was opened 28 times**, recorded in an append-only log.
-  Greedy decoding, nothing tuned between runs, but not bit-exact — a long greedy
-  decode on a GPU is subject to run-to-run reduction order.
-- **The error taxonomy never resolved.** 78% of content errors are
-  `UNCLASSIFIED`, so no dominant failure mode is claimed and no weakest-area
-  target is named. The tools that would have named one refused, which is the
-  point.
-
-`make run` prints all three as disclosures, every time.
+`make run` prints these disclosures every time.

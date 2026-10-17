@@ -224,8 +224,9 @@ def test_power_limit_on_the_chart() -> None:
     section("4. The power limit is drawn onto the chart, not just described")
     charts, _ = render_all()
     from statistical_report import detectable
+    from generate_charts import SPLIT_N
 
-    lim = detectable(36)["min_improvements_zero_regressions"]
+    lim = detectable(SPLIT_N["test"])["min_improvements_zero_regressions"]
 
     f1 = charts.get("fig1_overall_accuracy") or ""
     check("fig1 names the number of improvements needed for p<0.05",
@@ -242,11 +243,16 @@ def test_power_limit_on_the_chart() -> None:
     check("fig2 says categories are not ranked", "never ranked" in f2)
 
     f3 = charts.get("fig3_dev_to_test") or ""
-    pp = detectable(36)["min_delta_pp_zero_regressions"]
+    # Derived, so this test resizes with the split instead of breaking on it.
+    test_n = SPLIT_N["test"]
+    pp = detectable(test_n)["min_delta_pp_zero_regressions"]
     check("fig3 draws the undetectable band on the axis",
           f"needs {pp:+.1f} pp with 0 regressions" in f3,
           "the band must be labelled with its own threshold")
-    check("fig3 labels the band as undetectable", "undetectable at n=36" in f3)
+    check("fig3 labels the band as undetectable at the split it used",
+          f"undetectable at n={test_n}" in f3,
+          f"expected the band labelled n={test_n}, got: "
+          f"{[l for l in f3.splitlines() if 'undetectable' in l][:2]}")
     print(f"   figs 1-3 all carry the {lim}-improvement / {pp:+.1f} pp limit on their face")
 
 

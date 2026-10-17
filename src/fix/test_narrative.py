@@ -430,7 +430,8 @@ def test_figures_traceable() -> None:
     tax = narrative.taxonomy_state()
     dia = narrative.dialect_state()
     from statistical_report import detectable, wilson_ci
-    pw = detectable(36)
+    from narrative import TEST_N
+    pw = detectable(TEST_N)
     expected = set(allowed)
 
     def add(v):
@@ -561,15 +562,18 @@ def test_numbers_traceable() -> None:
             check(f"the {v}% recall at top-{k} matches the retriever",
                   f"{v}%" in text)
 
-    pw36 = detectable(36)
+    # Derived from the sealed n, exactly as narrative.py derives them: the point
+    # of these checks is that two independent computations agree, not that they
+    # agree with a number typed before the corpus was rescaled.
+    pw_overall = detectable(TEST_N)
     check("the detection floor is the one the statistics module computes",
-          f"{pw36['min_improvements_zero_regressions']} improvements" in text)
+          f"{pw_overall['min_improvements_zero_regressions']} improvements" in text)
     check("the pp threshold matches",
-          f"{pw36['min_delta_pp_zero_regressions']:+.1f} pp" in text)
+          f"{pw_overall['min_delta_pp_zero_regressions']:+.1f} pp" in text)
 
-    pw6 = detectable(6)
-    check("it says n=6 supports nothing but a clean sweep",
-          pw6["nothing_detectable_with_any_regression"] and "6/0" in text)
+    pw_cat = detectable(max(1, TEST_N // N_CATEGORIES))
+    check(f"it says n={pw_cat['n']} supports nothing but a clean sweep",
+          pw_cat["nothing_detectable_with_any_regression"] and "6/0" in text)
 
     # And the recall figures must not ALSO exist as literals in the generator.
     # A document recomputes its recall from the retriever and then hardcodes the
@@ -704,12 +708,16 @@ def test_dialect_provenance() -> None:
 def test_two_audiences() -> None:
     section("7. The two audience checks, made mechanical")
     import narrative
+    from narrative import TEST_N
     stats_v = narrative.compute()
     path, scen, have = build()
     text = path.read_text(encoding="utf-8")
 
     # -- an EPFL/ETH reviewer --------------------------------------------
-    check("it names its sample sizes", "n=36" in text and "n=6" in text)
+    from narrative import N_CATEGORIES
+    cat_n = max(1, TEST_N // N_CATEGORIES)
+    check("it names its sample sizes",
+          f"n={TEST_N}" in text and f"n={cat_n}" in text)
     check("it reports uncertainty, not just point estimates",
           "95% interval" in text.lower() or "confidence" in text.lower()
           or "Wilson" in text)
