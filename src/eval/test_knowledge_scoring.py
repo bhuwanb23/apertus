@@ -413,10 +413,19 @@ def test_split_consistency(questions: list) -> int:
     n = 0
     all_ids = {q["id"] for q in questions}
     dev = json.loads(config.data_path("knowledge", "knowledge_dev.json").read_text(encoding="utf-8"))
+    test = json.loads(config.data_path("knowledge", "knowledge_test.json").read_text(encoding="utf-8"))
 
-    check("split/dev size", len(dev), 84)
-    check("split/dev unique ids", len({q["id"] for q in dev}), 84)
+    # Derived from the corpus, not asserted as a literal. The relationship that
+    # matters is that dev and test partition knowledge_all at the declared test
+    # fraction - the sizes themselves are a property of this corpus, not a rule.
+    check("split/dev size", len(dev), len(questions) - len(test))
+    check("split/dev unique ids", len({q["id"] for q in dev}), len(dev))
     check("split/dev subset of all", {q["id"] for q in dev} <= all_ids, True)
+    check("split/test subset of all", {q["id"] for q in test} <= all_ids, True)
+    check("split/dev and test are disjoint", {q["id"] for q in dev} & {q["id"] for q in test},
+          set())
+    check("split/dev + test = all", len({q["id"] for q in dev} | {q["id"] for q in test}),
+          len(all_ids))
 
     # every dev question must carry the four fields the scorer relies on
     for q in dev:
@@ -428,7 +437,7 @@ def test_split_consistency(questions: list) -> int:
 
     # no dev question may duplicate another dev question's stem
     stems = [q["question"].strip().casefold() for q in dev]
-    check("split/no duplicate stems", len(set(stems)), 84)
+    check("split/no duplicate stems", len(set(stems)), len(dev))
     n += 1
 
     return n

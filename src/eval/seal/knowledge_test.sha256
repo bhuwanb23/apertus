@@ -1,8 +1,10 @@
 {
   "exists": true,
-  "sha256": "df819e8c1582902a23197ed2aa4ab2e9aab431f0df60d0349a9ba5c9467293e2",
-  "n_questions": 36,
-  "bytes": 38696,
+  "sha256": "83c20589e1c5b668fabcdafb0a09c1d27aece8c09beabbce2be1de69c360996c",
+  "hash_scheme": "sha256/canonical-lf/v1",
+  "sha256_raw": "ffc3c7a1d000ec04afc6edb382621c47f5d6de2051671332c64989f36e86d912",
+  "n_questions": 90,
+  "bytes": 96031,
   "item_keys": [
     "category",
     "correct_answer",
@@ -16,7 +18,7 @@
     "source_quote",
     "source_url"
   ],
-  "recorded_utc": "2026-10-13T16:43:54+00:00",
-  "git_hash": "547cab4015d7dc8a91c13f1f44d6de9c0fb511f2",
-  "previous_record": null
+  "recorded_utc": "2026-10-17T06:46:56+00:00",
+  "git_hash": "44bfb5ff37ef755fe0ca48c5f54e717a346605f0",
+  "previous_record": "{\n  \"exists\": true,\n  \"sha256\": \"df819e8c1582902a23197ed2aa4ab2e9aab431f0df60d0349a9ba5c9467293e2\",\n  \"n_questions\": 36,\n  \"bytes\": 38696,\n  \"item_keys\": [\n    \"category\",\n    \"correct_answer\",\n    \"difficulty\",\n    \"id\",\n    \"language\",\n    \"notes\",\n    \"options\",\n    \"question\",\n    \"source_id\",\n    \"source_quote\",\n    \"source_url\"\n  ],\n  \"recorded_utc\": \"2026-10-13T16:43:54+00:00\",\n  \"git_hash\": \"547cab4015d7dc8a91c13f1f44d6de9c0fb511f2\",\n  \"previous_record\": null\n}"
 }

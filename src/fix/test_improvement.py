@@ -36,6 +36,29 @@ sys.path.insert(0, str(ROOT / "src" / "fix"))
 sys.path.insert(0, str(ROOT / "src" / "eval"))
 sys.path.insert(0, str(ROOT / "src" / "fix" / "rag"))
 
+
+# Every size below is derived from the current dev split. The split has been
+# rescaled twice (120 -> 300 items), and each time a literal here went stale
+# while the suite still claimed to be checking the thing it was named after.
+def _dev() -> list:
+    import config
+    return json.loads(
+        config.config.data_path("knowledge", "knowledge_dev.json").read_text(encoding="utf-8"))
+
+
+def _dev_ids_probing(needle: str) -> set:
+    """Dev items whose text mentions `needle`, in any field.
+
+    This is the ground truth the contamination gate should agree with: it walks
+    the split itself rather than trusting the gate's own answer.
+    """
+    out = set()
+    for q in _dev():
+        blob = " ".join([str(q.get("question", ""))] + [str(v) for v in q.get("options", {}).values()])
+        if needle in blob:
+            out.add(q["id"])
+    return out
+
 CHECKS = 0
 FAILURES: list[str] = []
 
@@ -83,7 +106,7 @@ def test_gate_catches_the_plan_prompt() -> None:
     check("plan prompt contaminates a large share", rep.contaminated_fraction > 0.20,
           f"only {rep.contaminated_fraction:.1%} -- is the gate still working?")
     check("the share is reported as a count of items",
-          rep.n_items == 84, f"n_items={rep.n_items}")
+          rep.n_items == len(_dev()), f"n_items={rep.n_items}, dev={len(_dev())}")
 
     # Every contaminated item must name a specific load-bearing fact, so a
     # reviewer knows which line of the prompt to delete.
@@ -137,9 +160,18 @@ def test_clean_prompt_passes() -> None:
     rep_b = contamination_report(buried, "dev")
     check("a buried probed fact is detected", len(rep_b.contaminated_ids) > 0,
           "the signature threshold probe found nothing")
+    # The set of items that probe the 100,000-signature fact is a property of the
+    # corpus, not a constant: more items means more probes. What must hold is
+    # that EVERY detected item really does probe it - which is re-derived below
+    # from the dev split rather than listed here.
+    probed = set(rep_b.contaminated_ids)
+    check("a buried probed fact is detected", probed,
+          "the signature threshold probe found nothing")
     check("the detected items are the ones that probe it",
-          set(rep_b.contaminated_ids) == {"K011", "K012", "K111"},
-          f"got {rep_b.contaminated_ids}")
+          _dev_ids_probing("100,000") == probed,
+          f"gate={sorted(probed)} split={sorted(_dev_ids_probing('100,000'))}")
+    check("the detection is a strict subset of dev",
+          probed <= {q["id"] for q in _dev()})
 
     # The converse: a load-bearing fact the split never asks about is not
     # contamination, because nothing can be gained from stating it here. The
@@ -151,11 +183,12 @@ def test_clean_prompt_passes() -> None:
 
     # The threshold, stated in items so it cannot drift as the split changes.
     from prompts_check import DEFAULT_THRESHOLD
+    n_dev = len(_dev())
     check("the threshold is documented as an item count",
-          int(DEFAULT_THRESHOLD * 84) == 4,
-          f"{DEFAULT_THRESHOLD:.0%} of 84 = {DEFAULT_THRESHOLD * 84:.1f} items")
+          int(DEFAULT_THRESHOLD * n_dev) >= 1,
+          f"{DEFAULT_THRESHOLD:.0%} of {n_dev} = {DEFAULT_THRESHOLD * n_dev:.1f} items")
 
-    print(f"   clean prompt -> 0/84 items, passes; one added fact -> refused")
+    print(f"   clean prompt -> 0/{n_dev} items, passes; one added fact -> refused")
 
 
 # ================================================== 3. the control is the baseline
@@ -215,7 +248,8 @@ def test_retrieval_is_ground_truth() -> None:
     rep = retrieval_report(r, "dev", (1, 3, 5))
 
     check("recall is measured on the whole dev split",
-          rep["n_questions"] == 84, f"{rep['n_questions']}")
+          rep["n_questions"] == len(_dev()),
+          f"n={rep['n_questions']}, dev={len(_dev())}")
     for k in ("@1", "@3", "@5"):
         check(f"source recall {k} is a percentage in range",
               0 <= rep["source_recall"][k] <= 100,

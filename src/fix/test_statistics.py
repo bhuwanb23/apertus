@@ -296,6 +296,13 @@ def test_net_is_not_significance() -> None:
 
 
 # ================================================= 8. nothing unmeasured
+def _pp(v) -> str:
+    """Render a delta the way statistical_report does, so the assertion below
+    compares the same string the document contains rather than a differently
+    rounded one."""
+    return f"{v:.1f}"
+
+
 def test_nothing_unmeasured_is_reported() -> None:
     section("8. Absent numbers are labelled, never zeroed or filled in")
     import statistical_report as sr
@@ -316,7 +323,16 @@ def test_nothing_unmeasured_is_reported() -> None:
         check("no bare XX survives", "XX " not in text and "X/36" not in text)
         check("it says the results do not exist yet",
               "not been run" in text.lower())
-        check("it still states the power limits", "6" in text and "16.7" in text)
+        # The power limits are whatever the power table computed for THIS corpus
+        # size. Asserting the n=36 figures meant the check quietly stopped
+        # testing anything the moment the sealed set was rescaled, while still
+        # reporting green as long as those digits appeared somewhere.
+        pw = empty["power"]["overall"]
+        check("it still states the power limits",
+              str(pw["min_improvements_zero_regressions"]) in text
+              and _pp(pw["min_delta_pp_zero_regressions"]) in text,
+              f"expected {pw['min_improvements_zero_regressions']} improvements "
+              f"and {_pp(pw['min_delta_pp_zero_regressions'])} pp in the text")
         check("it lists the blockers", all(b in text for b in ("B2", "B3", "B5")))
 
     # The cross-check agreement must not be invented.

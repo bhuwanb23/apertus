@@ -1,21 +1,21 @@
 [
   {
-    "id": "K002",
+    "id": "K003",
     "category": "politics",
-    "question": "The Federal Chancellor is sometimes referred to in Swiss media as the 'eighth Federal Councillor'. What is the Federal Chancellor's actual role?",
+    "question": "When the seven members of the Swiss Federal Council deal with an item of business at their meeting, how do they proceed to a decision?",
     "options": {
-      "A": "A supporting and advisory role for the Federal Council, rather than a seat in it.",
-      "B": "A voting member of the Federal Council, counted among the seven when decisions are taken.",
-      "C": "The head of state, who represents Switzerland towards foreign governments.",
-      "D": "The head of the Federal Administration, supervising its seven departments."
+      "A": "The President tables a proposal and the other six members confirm it unless three of them object.",
+      "B": "The members vote first on the available options, and the majority position becomes the Federal Council's decision.",
+      "C": "The item is first referred to the cantons for a consultative vote, and the Federal Council then implements the result.",
+      "D": "The members first seek a common solution, and only vote if they fail to reach one."
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "source_id": "S001",
     "source_url": "https://www.ch.ch/en/political-system/government/",
-    "source_quote": "There is often talk of an 'eighth Federal Councillor', the Federal Chancellor, who has a supporting and advisory role for the Federal Council.",
+    "source_quote": "They discuss the items on the agenda at the Federal Council meeting and seek a common solution. Only if it does not reach a solution, does the Federal Council vote.",
     "language": "en",
-    "difficulty": "hard",
-    "notes": "The Chancellor is neither head of state (the rotating President) nor head of government (the Federal Council as a collegial body). Common model failure: importing the German Bundeskanzler."
+    "difficulty": "medium",
+    "notes": "Consensus-before-vote is the defining feature of the Swiss collegial executive; no majority-vote casting exists in the normal case."
   },
   {
     "id": "K007",
@@ -54,112 +54,130 @@
     "notes": "Counter-intuitive administrative detail: signature gathering is decentralised to the commune for verification. The same per-commune form rule applies to popular initiatives."
   },
   {
-    "id": "K014",
+    "id": "K011",
     "category": "politics",
-    "question": "How does the size of a cantonal parliament vary in Switzerland? Give the two figures cited on the federal ch.ch portal.",
+    "question": "How many valid signatures must be collected for a federal popular initiative, and within what time limit?",
     "options": {
-      "A": "Appenzell Innerrhoden has 50 members and Zurich has 180.",
-      "B": "Appenzell Innerrhoden has 28 members and Zurich has 180.",
-      "C": "Appenzell Innerrhoden has 50 members and Zurich has 200.",
-      "D": "Every canton has 100 members, with seats assigned in proportion to population."
-    },
-    "correct_answer": "A",
-    "source_id": "S008b",
-    "source_url": "https://www.ch.ch/en/political-system/cantons/cantonal-parliament-role-and-composition/",
-    "source_quote": "The number of members of parliament varies from canton to canton. It is usually proportional to the population of the canton. The parliament of Appenzell Innerrhoden currently has 50 members while the Zurich parliament has 180 members.",
-    "language": "en",
-    "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE and time-specific ('currently' as of the 2026-10-12 page). Both cantons are named explicitly, per the cantonal-variation rule."
-  },
-  {
-    "id": "K015",
-    "category": "politics",
-    "question": "In Swiss popular votes, which proposals require a so-called 'double majority' rather than a simple majority of the voters?",
-    "options": {
-      "A": "Federal laws and most international treaties.",
-      "B": "Amendments to the Constitution and decisions to join a supranational community.",
-      "C": "Amendments to the Constitution only — joining a supranational community requires a popular majority alone.",
-      "D": "Any proposal on which more than one canton votes."
+      "A": "50,000 signatures within 100 days",
+      "B": "100,000 signatures within 18 months",
+      "C": "100,000 signatures within 100 days",
+      "D": "50,000 signatures within 18 months"
     },
     "correct_answer": "B",
-    "source_id": "S009",
-    "source_url": "https://www.ch.ch/en/votes-and-elections/votes/popular-majority-and-majority-of-the-cantons/",
-    "source_quote": "But the decision to amend the constitution or join a supranational community requires a so-called double majority. Such a proposal is accepted only if both the majority of voters (popular majority) as well as the majority of cantons say yes.",
+    "source_id": "S007",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/initiatives/what-is-a-federal-popular-initiative/",
+    "source_quote": "For an initiative to come to fruition, it must be signed by 100,000 voters within 18 months.",
     "language": "en",
-    "difficulty": "medium",
-    "notes": "The supranational-community limb is the non-obvious half — it is what would apply to any EU accession question, which Switzerland is not part of."
+    "difficulty": "easy",
+    "notes": "Direct democracy threshold. Contrast with K007: referendum 50,000 / 100 days."
   },
   {
-    "id": "K020",
+    "id": "K013",
     "category": "politics",
-    "question": "The Federal Chancellery supports the Federal Council but is neither the head of state nor the head of government. Which of the following is one of its actual duties in Switzerland?",
+    "question": "Across the Swiss cantons, who presides over the cantonal government, and what does that role carry with it?",
     "options": {
-      "A": "Chairing the Federal Council meetings and representing it abroad.",
-      "B": "Supervising the seven federal departments and their heads.",
-      "C": "Adjudicating appeals against decisions of the federal authorities.",
-      "D": "Organising federal elections and referendums, as guardian of the people's rights."
+      "A": "The population of the canton elects a cantonal president directly for a four-year term, with decision-making powers equal to those of the other members.",
+      "B": "The Federal Council appoints a cantonal president for a two-year term.",
+      "C": "The presidency passes to the longest-serving member and carries substantial additional powers.",
+      "D": "The presidency usually rotates from year to year and carries no privileges beyond chairing the cantonal government's meetings."
     },
     "correct_answer": "D",
-    "source_id": "S012b",
-    "source_url": "https://www.bk.admin.ch/en",
-    "source_quote": "As guardian of the people's rights, the Federal Chancellery organises federal elections and referendums.",
+    "source_id": "S008",
+    "source_url": "https://www.ch.ch/en/political-system/cantons/cantonal-government-role-and-composition/",
+    "source_quote": "Cantonal governments usually have a different president each year - the position rotating according to the length of time the government members have been in office. The president does not enjoy any special privileges or status, apart from chairing cantonal government meetings.",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Precise delimitation: the Chancellery is the Federal Council's staff office, not a head of state/government. Referendum and initiative committees submit their signatures to it."
+    "notes": "CANTONAL-VARIABLE: rotation follows length of service, so the source says 'usually'. Phrased as the general cantonal pattern, never as a universal seven-member rule."
   },
   {
-    "id": "K023",
-    "category": "law",
-    "question": "A married couple lives in a Swiss flat, but only one of the spouses is named as the tenant on the rental agreement. Who must sign the letter terminating the tenancy?",
+    "id": "K016",
+    "category": "politics",
+    "question": "When the cantonal majority is counted for a constitutional amendment or a vote on joining a supranational community, what weight does each of the former half-cantons carry?",
     "options": {
-      "A": "Both spouses must sign the termination, even though only one of them is named as the tenant on the rental agreement",
-      "B": "Only the spouse named as tenant must sign, because only that person is a contracting party",
-      "C": "Only the named tenant signs, but only after obtaining the written consent of the other spouse",
-      "D": "Either spouse may sign alone, and the landlord must accept either signature"
+      "A": "A full vote, the same as any other canton.",
+      "B": "No vote at all, since they are no longer separate cantons.",
+      "C": "Half a vote each.",
+      "D": "Two votes each, reflecting their combined historic weight."
     },
-    "correct_answer": "A",
-    "source_id": "S044",
-    "source_url": "https://www.zsg.justice.be.ch/de/start/themen/zivilrecht/mietrecht/beendigung-mietvertrag/beenden-mieter-in.html",
-    "source_quote": "Wenn Sie als Ehepaar oder eingetragene Partner/innen in der Wohnung wohnen, müssen beide die Kündigung unterschreiben. Dies gilt auch dann, wenn nur eine/r von Ihnen auf dem Mietvertrag als Mieter/in aufgeführt ist.",
-    "language": "en",
-    "difficulty": "medium",
-    "notes": "German source; English rendering: couples who live in the flat as spouses or registered partners must both sign the termination, and this applies even if only one of them is listed as tenant on the rental agreement. Covers registered partners as well as married couples."
-  },
-  {
-    "id": "K027",
-    "category": "law",
-    "question": "A holder of a Swiss EU/EFTA cross-border commuter permit (category G) lives in a neighbouring EU state and works in Switzerland. How often must they return to their main place of residence abroad?",
-    "options": {
-      "A": "As a rule every day, or at least once a week",
-      "B": "At least once a month",
-      "C": "At least once every six months",
-      "D": "Only when the permit is renewed or its validity is extended"
-    },
-    "correct_answer": "A",
-    "source_id": "S045",
-    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/eu_efta.html",
-    "source_quote": "Cross-border commuters must return to their main place of residence abroad as a rule every day, or at least once a week.",
-    "language": "en",
-    "difficulty": "medium",
-    "notes": "Category G has no direct EU equivalent; it is the Swiss instrument for EU/EFTA nationals who live abroad and work in Switzerland, whether employed or self-employed."
-  },
-  {
-    "id": "K029",
-    "category": "law",
-    "question": "For ordinary naturalisation in Switzerland, how is time spent in Switzerland between the ages of 8 and 18 treated, and when can the applicant first apply?",
-    "options": {
-      "A": "It counts once, and no application is possible until at least ten years of total residence",
-      "B": "It counts double, but no application is possible until at least six years of total residence in the country",
-      "C": "It counts double, but no application is possible until at least twelve years of total residence",
-      "D": "It counts double, but no application is possible before the applicant reaches the age of 18"
-    },
-    "correct_answer": "B",
-    "source_id": "S015",
-    "source_url": "https://www.ch.ch/en/foreign-nationals-in-switzerland/naturalisation/",
-    "source_quote": "The time spent in Switzerland between the ages of 8 and 18 counts double, but you cannot apply for naturalisation until you have lived in the country for at least six years.",
+    "correct_answer": "C",
+    "source_id": "S009",
+    "source_url": "https://www.ch.ch/en/votes-and-elections/votes/popular-majority-and-majority-of-the-cantons/",
+    "source_quote": "The votes of the former half-cantons of Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden and Appenzell Innerrhoden each count as half a vote.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The six-year floor is the earliest any application may be made and is a separate condition from the ten-year federal requirement tested in K028."
+    "notes": "The six former half-cantons weigh 0.5 each, so the cantonal majority is effectively a weighted 23-canton vote. Note this is a separate mechanism from the single Council of States seat they hold."
+  },
+  {
+    "id": "K021",
+    "category": "law",
+    "question": "In Switzerland, what is the shortest notice period that can validly be agreed for terminating a tenancy?",
+    "options": {
+      "A": "One month for residential premises and three months for commercial premises",
+      "B": "Two months for residential premises and four months for commercial premises",
+      "C": "Three months for residential premises and six months for commercial premises",
+      "D": "Three months for residential premises only, with no statutory minimum for commercial premises"
+    },
+    "correct_answer": "C",
+    "source_id": "S044",
+    "source_url": "https://www.zsg.justice.be.ch/de/start/themen/zivilrecht/mietrecht/beendigung-mietvertrag/beenden-mieter-in.html",
+    "source_quote": "In einem Mietvertrag muss die Kündigungsfrist mindestens drei Monate für Wohnräume und sechs Monate für Geschäftsräume betragen, es können aber auch längere Fristen vereinbart werden.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Source quote is German (official Canton Bern conciliation-authority page); English rendering in the question: in a rental agreement the notice period must be at least three months for residential premises and six months for commercial premises, and longer periods may be agreed. Commonly cited German practice of one month's notice plus end-of-month termination is NOT the Swiss rule."
+  },
+  {
+    "id": "K028",
+    "category": "law",
+    "question": "Under Swiss federal law, what residence requirement must be met before applying for ordinary naturalisation?",
+    "options": {
+      "A": "At least five years of residence, including one of the two years preceding the application",
+      "B": "At least ten years of residence, all of it within the five years preceding the application",
+      "C": "At least fifteen years of residence, including five of the ten years preceding the application",
+      "D": "At least ten years of residence, including three of the five years prior to the application being made"
+    },
+    "correct_answer": "D",
+    "source_id": "S015",
+    "source_url": "https://www.ch.ch/en/foreign-nationals-in-switzerland/naturalisation/",
+    "source_quote": "Federal law requires you to have lived in Switzerland for at least ten years, including three of the five years prior to the application being made.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "CANTONAL-VARIABLE: on top of the federal ten-year rule, each canton sets an additional requirement of between two and five years' residence in the particular commune or canton, and each commune makes its own rules within cantonal and federal law. Those extra conditions are deliberately not tested here."
+  },
+  {
+    "id": "K030",
+    "category": "law",
+    "question": "Which Swiss residence permit must a foreign citizen already hold before being able to apply for ordinary naturalisation?",
+    "options": {
+      "A": "A short-term residence permit (L)",
+      "B": "A residence permit (B)",
+      "C": "A settlement permit (C)",
+      "D": "A cross-border commuter permit (G)"
+    },
+    "correct_answer": "C",
+    "source_id": "S015",
+    "source_url": "https://www.ch.ch/en/foreign-nationals-in-switzerland/naturalisation/",
+    "source_quote": "Holders of a settlement permit (C permit)",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Ordinary naturalisation is restricted to holders of a C permit; the residency periods themselves are tested separately. Simplified naturalisation is open to other categories (spouse or child of a Swiss citizen, stateless minor, third-generation residents under 25)."
+  },
+  {
+    "id": "K033",
+    "category": "law",
+    "question": "A learner obtains a Swiss provisional driving licence on their 19th birthday. How long must they wait before they may take the practical driving test?",
+    "options": {
+      "A": "Six months",
+      "B": "At least twelve months",
+      "C": "At least twenty-four months",
+      "D": "No fixed waiting period, once the compulsory traffic skills course has been attended"
+    },
+    "correct_answer": "B",
+    "source_id": "S016",
+    "source_url": "https://www.ch.ch/en/vehicles-and-traffic/driving-licence/learning-to-drive/",
+    "source_quote": "If you get your provisional licence before your 20th birthday, you will need to wait at least 12 months before you can take the practical driving test.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The 12-month wait is conditional on the provisional licence having been issued before the 20th birthday; the compulsory eight-hour traffic skills course is a separate precondition for registering for the test."
   },
   {
     "id": "K035",
@@ -180,148 +198,130 @@
     "notes": "COMMUNAL-VARIABLE: the co-efficient is changed from time to time, so no specific value is permanent. This is why there can be low-tax and high-tax communes within a single canton — a distinctly Swiss feature of communal tax autonomy."
   },
   {
-    "id": "K036",
+    "id": "K038",
     "category": "law",
-    "question": "What is the minimum annual holiday entitlement for a worker in Switzerland who is under 20 years old?",
+    "question": "For a residential rental in Switzerland, what is the maximum rental deposit (security deposit) a landlord may require?",
     "options": {
-      "A": "Four weeks",
-      "B": "Three weeks",
-      "C": "Five weeks",
-      "D": "Six weeks"
+      "A": "One month's rent",
+      "B": "Two months' rent",
+      "C": "Three months' rent",
+      "D": "There is no statutory maximum"
     },
     "correct_answer": "C",
-    "source_id": "S013",
-    "source_url": "https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/",
-    "source_quote": "Up to the age of 20, you are entitled to at least five weeks' vacation.",
+    "source_id": "S014",
+    "source_url": "https://www.ch.ch/en/housing/rent/rental-and-leasing-agreements/",
+    "source_quote": "Rental deposit, also known as a security deposit: This must only be paid when required in the agreement. For residential rentals, this is a maximum of three months' rent.",
     "language": "en",
     "difficulty": "easy",
-    "notes": "The general statutory minimum for all workers is four weeks regardless of full- or part-time; the entitlement rises to at least five weeks up to the age of 20, and more may be agreed. Distinct from the public-holiday facts carried by S031."
+    "notes": "The deposit may be demanded only if the agreement provides for it; three months' rent is a ceiling, not an entitlement."
   },
   {
-    "id": "K040",
-    "category": "law",
-    "question": "When did Switzerland sign the Schengen Agreement, and when was a microchip for storing biometric data added to the new credit-card-format residence permit?",
-    "options": {
-      "A": "Switzerland signed the Schengen Agreement on 12 December 2008, and the microchip was added in early 2011",
-      "B": "Switzerland signed the Schengen Agreement on 12 December 2008, and the microchip was added in 2009",
-      "C": "Switzerland acceded to the Schengen acquis in 2004, and the microchip was added in early 2011",
-      "D": "Switzerland signed the Schengen Agreement on 15 March 2008, and the microchip was added in early 2013"
-    },
-    "correct_answer": "A",
-    "source_id": "S017",
-    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/biometr_auslaenderausweis.html",
-    "source_quote": "When it signed the Schengen Agreement on 12 December 2008, Switzerland began issuing a new residence permit in credit-card format to foreign nationals. In a subsequent development in early 2011, a microchip was added to these residence permits for the purpose of storing biometric data.",
-    "language": "en",
-    "difficulty": "medium",
-    "notes": "Switzerland joined Schengen in 2008 while remaining outside the EU and the EEA. Presented with a valid national passport, the biometric residence permit entitles the holder to travel throughout the Schengen area without a visa."
-  },
-  {
-    "id": "K041",
+    "id": "K043",
     "category": "health",
-    "question": "Switzerland's old-age insurance system is built on a three-pillar structure. Which combination correctly names the three pillars?",
+    "question": "In Switzerland, a policyholder who wants to switch compulsory basic health insurer for the following calendar year must have the cancellation letter received by their current insurer by which date?",
     "options": {
-      "A": "State provision (OASI) and occupational provision (pension funds) only",
-      "B": "State provision, occupational provision, private provision, and a fourth universal pillar for low-income households",
-      "C": "State provision (OASI), occupational provision (pension funds) and private provision",
-      "D": "State provision (OASI), mandatory employer pensions and mandatory private savings for every employee"
-    },
-    "correct_answer": "C",
-    "source_id": "S022",
-    "source_url": "https://www.bsv.admin.ch/en/old-age-insurance-system",
-    "source_quote": "The Swiss old-age insurance system is based on three pillars: state provision (OASI),\noccupational provision (pension funds) and private provision.",
-    "language": "en",
-    "difficulty": "easy",
-    "notes": "Swiss-specific: the AHV / BVG / Pillar-3a triad has no direct EU equivalent. Germany has state plus occupational pensions only and no third pillar."
-  },
-  {
-    "id": "K048",
-    "category": "health",
-    "question": "A Swiss compulsory health insurance policyholder opts for a deductible higher than the standard CHF 300, which reduces his premium. The premium reduction is capped by law at what share of the additional risk the policyholder assumes?",
-    "options": {
-      "A": "70 per cent",
-      "B": "50 per cent",
-      "C": "90 per cent",
-      "D": "100 per cent"
-    },
-    "correct_answer": "A",
-    "source_id": "S046",
-    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
-    "source_quote": "A maximum of 70 percent reduction on the additional risk assumed by the policyholder may be granted.",
-    "language": "en",
-    "difficulty": "medium",
-    "notes": "Statutory ceiling on the additional-risk discount. It is a separate rule from the statutory minimum-premium floor and must not be conflated with it."
-  },
-  {
-    "id": "K055",
-    "category": "health",
-    "question": "Under Swiss compulsory accident insurance, what minimum degree of disability must be assessed before an injured person can qualify for an accident disability pension?",
-    "options": {
-      "A": "At least 5 per cent",
-      "B": "At least 20 per cent",
-      "C": "At least 10 per cent",
-      "D": "At least 70 per cent"
-    },
-    "correct_answer": "C",
-    "source_id": "S021",
-    "source_url": "https://www.ch.ch/en/insurance/accident-insurance/",
-    "source_quote": "You must be classified as at least\n10% disabled to qualify.",
-    "language": "en",
-    "difficulty": "medium",
-    "notes": "The accident disability pension may be awarded in addition to a pension under the state IV/AI disability scheme. Distractor D (70%) is the separate BVG exclusion threshold for compulsory occupational pension cover."
-  },
-  {
-    "id": "K057",
-    "category": "health",
-    "question": "Under the AVS/AHV 21 reform in force in Switzerland since 1 January 2024, the ordinary retirement age for women is being raised in three-month steps by birth cohort. What reference age applies to a woman born in 1962?",
-    "options": {
-      "A": "64 years and 6 months",
-      "B": "64 years and 3 months",
-      "C": "64 years and 9 months",
-      "D": "65 years"
-    },
-    "correct_answer": "A",
-    "source_id": "S023",
-    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
-    "source_quote": "- women born in 1962: 64 years and 6 months;",
-    "language": "en",
-    "difficulty": "hard",
-    "notes": "TIME-SENSITIVE and cohort-locked: born 1961 = 64y3m, 1962 = 64y6m, 1963 = 64y9m, born 1964 or later = 65. The reference age is 65 for men and for women born 1964 or later; the former general women's age of 64 is superseded and must never be presented as the current rule."
-  },
-  {
-    "id": "K058",
-    "category": "health",
-    "question": "Under the Swiss compulsory occupational pension (2nd pillar), a member's accumulated old-age assets are converted into an annual old-age pension using a conversion factor that applies identically to men and women. What is that conversion factor?",
-    "options": {
-      "A": "4,80%",
-      "B": "6,80%",
-      "C": "8,80%",
-      "D": "3,80%"
+      "A": "15 October",
+      "B": "30 November",
+      "C": "15 December",
+      "D": "31 December"
     },
     "correct_answer": "B",
-    "source_id": "S023",
-    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
-    "source_quote": "basis of a conversion factor of 6,80% for men and women.",
+    "source_id": "S019",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-taking-out--changing--cancelling/",
+    "source_quote": "Your letter must reach your current health insurer by 30 November.",
     "language": "en",
-    "difficulty": "medium",
-    "notes": "Swiss decimal-comma notation. A single gender-neutral conversion factor is a distinctive feature of the reformed BVG and has no direct EU analogue."
+    "difficulty": "easy",
+    "notes": "The 'Stichtag 30. November' is uniquely Swiss. Note the separate mid-year cancellation right that only holders of the CHF 300 standard deductible enjoy (tested separately in this category)."
   },
   {
-    "id": "K060",
+    "id": "K044",
     "category": "health",
-    "question": "How does Swiss second-parent (co-parental) leave differ from maternity leave in the way it may be taken?",
+    "question": "In Switzerland, a healthy adult who chooses the highest available compulsory basic health insurance deductible should set aside how much per year in order to be able to cover their own maximum share of healthcare costs?",
     "options": {
-      "A": "It must be taken as one uninterrupted block within three months of the child's birth",
-      "B": "It is flexible: it may be taken all at once or as individual days, but must be taken within two years of the child's birth",
-      "C": "It must be taken in full before the mother returns to work",
-      "D": "It is flexible: it may be taken all at once or as individual days, but must be taken within six months of the child's birth"
+      "A": "CHF 3,200",
+      "B": "CHF 2,500",
+      "C": "CHF 2,700",
+      "D": "CHF 3,000"
+    },
+    "correct_answer": "A",
+    "source_id": "S020",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-costs/",
+    "source_quote": "You should still put CHF 3,200 aside in case you do fall ill\n(CHF 2,500 deductible and CHF 700 retention fee).",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "CHF 3,200 = highest adult deductible CHF 2,500 + CHF 700 maximum annual retention fee. A German/EU reader is likely to think only of a deductible."
+  },
+  {
+    "id": "K045",
+    "category": "health",
+    "question": "Under Swiss compulsory basic health insurance, an adult holds the standard annual deductible of CHF 300. What is the maximum that this adult can end up paying out of pocket for healthcare in one calendar year?",
+    "options": {
+      "A": "CHF 700",
+      "B": "CHF 1,300",
+      "C": "CHF 1,000",
+      "D": "CHF 1,500"
+    },
+    "correct_answer": "C",
+    "source_id": "S046",
+    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
+    "source_quote": "In other words, for an insured person with an annual deductible of CHF 300, the maximum cost share is CHF 1000 per calendar year.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Key anti-trap item: CHF 1,000 is the MAXIMUM ANNUAL COST SHARE (CHF 300 deductible + CHF 700 maximum retention fee), not a deductible band. Distractor A is the retention-fee cap alone."
+  },
+  {
+    "id": "K046",
+    "category": "health",
+    "question": "In Swiss compulsory basic health insurance, which set of optional annual deductible levels may adults choose from?",
+    "options": {
+      "A": "300, 600, 900, 1,200 and 1,500 francs",
+      "B": "100, 200, 300, 400, 500 and 600 francs",
+      "C": "1,000, 1,500, 2,000, 2,500 and 3,000 francs",
+      "D": "500, 1,000, 1,500, 2,000 and 2,500 francs"
     },
     "correct_answer": "D",
-    "source_id": "S024",
-    "source_url": "https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/",
-    "source_quote": "Unlike maternity leave, paternity/co-parental leave is flexible. You can take\nit all at once, or as individual days as long as it is taken within the",
+    "source_id": "S046",
+    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
+    "source_quote": "For adults, the available deductibles are 500, 1000, 1500, 2000 and 2500 francs, and for children 100, 200, 300, 400, 500 and 600 francs.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Levels are chosen voluntarily; there is no age / income ('affluence') / rural-residence rule assigning a band. Distractor B is the children's list."
+  },
+  {
+    "id": "K050",
+    "category": "health",
+    "question": "In Swiss compulsory basic health insurance, a policyholder wants to move from the standard CHF 300 deductible to a higher optional deductible. When can that change take effect?",
+    "options": {
+      "A": "At any time during the year, on 30 days' notice",
+      "B": "Only at the beginning of a calendar year",
+      "C": "From 1 April, when insurers recalculate their premiums",
+      "D": "Immediately, provided the policyholder has had no treatment in the current year"
+    },
+    "correct_answer": "B",
+    "source_id": "S046",
+    "source_url": "https://www.bag.admin.ch/en/health-insurance-premiums-and-co-payment",
+    "source_quote": "A change in the level of the deductible can only take effect at the beginning of a calendar year.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Co-parental leave runs for two weeks: 14 daily allowances and ten days off work, paid at 80% of earnings capped at CHF 220/day. It must be used within six months of the birth."
+    "notes": "The deductible level is locked to the calendar year, unlike, for example, switching insurers. Do not confuse with the separate end-of-June cancellation right for CHF 300 deductible holders (S019)."
+  },
+  {
+    "id": "K059",
+    "category": "health",
+    "question": "In Switzerland, what is the maternity allowance during the 14 weeks of maternity leave following a birth?",
+    "options": {
+      "A": "80 per cent of the mother's earnings, with no upper daily limit",
+      "B": "90 per cent of the mother's earnings, but no more than CHF 300 per day",
+      "C": "80 per cent of the mother's earnings, but no more than CHF 220 per day",
+      "D": "100 per cent of the mother's earnings, but no more than CHF 220 per week"
+    },
+    "correct_answer": "C",
+    "source_id": "S024",
+    "source_url": "https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/",
+    "source_quote": "Maternity allowance amounts to 80% of your\nearnings, but no more than CHF 220 per day.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Highly Swiss-specific 14-week / 80% / CHF 220-per-day package. Cantonal provisions, personnel regulations and collective employment contracts may provide more generous arrangements. Do not substitute EU maternity-benefit rates."
   },
   {
     "id": "K063",
@@ -340,6 +340,24 @@
     "language": "en",
     "difficulty": "easy",
     "notes": "Switzerland is not in the EU, and English has no federal status of any kind; the source is SWI swissinfo.ch quoted in the S047 file."
+  },
+  {
+    "id": "K064",
+    "category": "geography",
+    "question": "What is the lowest point in Switzerland, and in which canton is it located?",
+    "options": {
+      "A": "Lake Constance, in the canton of Thurgau, at 395 m",
+      "B": "Lake Maggiore (Ticino), at 193 m",
+      "C": "The Rhine gorge in the canton of Schaffhausen, at 302 m",
+      "D": "Lake Neuchâtel, in the canton of Neuchâtel, at 372 m"
+    },
+    "correct_answer": "B",
+    "source_id": "S027",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/geography",
+    "source_quote": "Lowest point: Lake Maggiore (Ticino) 193 m (633 feet)",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "German-language readers often assume Lake Constance (Bodensee) is Switzerland's lowest point. The lowest point lies in Italian-speaking Ticino."
   },
   {
     "id": "K067",
@@ -378,94 +396,76 @@
     "notes": "Distractors are the neighbouring shares in the same sentence (French / Italian / Romansh) — the classic mix-up. Figures are rounded; Switzerland Tourism (S028) gives 62.6 % German, 22.9 % French, 8.2 % Italian, 0.5 % Romansh. Shares are population-statistics dependent and REGIONAL VARIABLE."
   },
   {
-    "id": "K069",
+    "id": "K072",
     "category": "geography",
-    "question": "Under Switzerland's National Fiscal Equalisation system, how many cantons are net contributors, and how many receive equalisation payments?",
+    "question": "Roughly what proportion of Swiss communes have their own parliament?",
     "options": {
-      "A": "9 cantons are net contributors; the remaining 17 cantons receive equalisation payments",
-      "B": "17 cantons are net contributors; the remaining 9 cantons receive equalisation payments",
-      "C": "13 cantons are net contributors; the remaining 13 cantons receive equalisation payments",
-      "D": "9 cantons are net contributors; the remaining 16 cantons receive equalisation payments"
+      "A": "Around a fifth",
+      "B": "Around a third",
+      "C": "Around a half",
+      "D": "Around a tenth"
     },
     "correct_answer": "A",
+    "source_id": "S030",
+    "source_url": "https://www.swissinfo.ch/eng/swiss-politics/cantons-and-municipalities/29289028",
+    "source_quote": "Around a fifth of Switzerland's communes have their own parliaments, and local laws relating to matters such as streets, school buildings, water and energy prices, as well as parking regulations.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Where a commune has no parliament, the commune assembly decides in its place — the source page does not state this, so it is not asserted here."
+  },
+  {
+    "id": "K074",
+    "category": "geography",
+    "question": "What is the highest point in Switzerland, and in which mountain range is it located?",
+    "options": {
+      "A": "Dufour Peak, 4,634 m, in the Bernese Alps",
+      "B": "Monte Rosa, 4,634 m, in the Pennine Alps",
+      "C": "The Jungfrau, 4,158 m, in the Monte Rosa Mountains",
+      "D": "Dufour Peak, 4,634 m, in the Monte Rosa Mountains"
+    },
+    "correct_answer": "D",
+    "source_id": "S027",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/geography",
+    "source_quote": "Highest point: Dufour Peak, in the Monte Rosa Mountains, 4,634 m (15,203 feet)",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "German- and Austrian-language readers commonly assume the Bernese Alps (Jungfrau/Zermatt area). The peak sits in the Monte Rosa massif on the Italian border."
+  },
+  {
+    "id": "K077",
+    "category": "geography",
+    "question": "What is the least populous commune in Switzerland, and in which canton is it located?",
+    "options": {
+      "A": "Kammersrohr, in the canton of Appenzell Innerrhoden",
+      "B": "Rheinau, in the canton of Zurich",
+      "C": "Rivaz, in the canton of Vaud",
+      "D": "Kammersrohr, in the canton of Solothurn"
+    },
+    "correct_answer": "D",
     "source_id": "S029",
     "source_url": "https://www.ch-info.swiss/en/die-schweiz/foederalismus",
-    "source_quote": "The federal government and nine of the cantons are net contributors: ZH, SZ, OW, NW, ZG, BS, SH, AI, GE. The remaining 17 cantons receive equalisation payments (net beneficiaries).",
-    "language": "en",
-    "difficulty": "medium",
-    "notes": "REGIONAL VARIABLE: the source file flags this fact as year-dependent. The nine net-contributor cantons are Zürich, Schwyz, Obwalden, Nidwalden, Zug, Basel-Stadt, Schaffhausen, Appenzell Innerrhoden and Geneva. The federal government is also a net contributor, so the question asks about cantons only."
-  },
-  {
-    "id": "K075",
-    "category": "geography",
-    "question": "What is the constitutional status of Romansh at the level of the Confederation?",
-    "options": {
-      "A": "Romansh is one of the three fully official languages of the Confederation",
-      "B": "Romansh is a cantonal language only, recognised by the cantons that use it but not by the Federal Constitution",
-      "C": "Romansh is a national language and a semi-official language of the Confederation",
-      "D": "Romansh is an official language of the Confederation, but only where a canton grants it cantonal official status"
-    },
-    "correct_answer": "C",
-    "source_id": "S047",
-    "source_url": "https://www.bk.admin.ch/en/romansh",
-    "source_quote": "Romansh is a national language and a semi-official language of the Confederation.",
+    "source_quote": "The least populous is Kammersrohr in the canton of Solothurn (32 people)",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Highest-value item in the set: the four-national / three-official split. The same file adds that Romansh IS official 'when communicating with persons who speak Romansh', which is why option D's cantonal-conditional framing is wrong — the condition is linguistic, not cantonal."
+    "notes": "32 residents. Counter-intuitive: the least populous commune is in Solothurn, not in an Appenzell or Graubünden mountain canton. Population figures are year-dependent and will drift."
   },
   {
-    "id": "K078",
+    "id": "K080",
     "category": "geography",
-    "question": "Under Swiss federalism, which level of government is responsible for any task that does not fall within the remit of the federal government?",
+    "question": "Which six cantons are the former half-cantons of Switzerland?",
     "options": {
-      "A": "The communes, as the smallest political units",
-      "B": "The Federal Assembly, through its Federal Chancellery",
-      "C": "The cantons",
-      "D": "An association of municipalities, in consultation with the cantons"
+      "A": "Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Geneva",
+      "B": "Schwyz, Uri, Glarus, Zug, Thurgau and Solothurn",
+      "C": "Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, St. Gallen and Basel Landschaft",
+      "D": "Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft"
     },
-    "correct_answer": "C",
-    "source_id": "S025",
-    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/federalism/",
-    "source_quote": "Any tasks that do not fall under the remit of the federal government are the responsibility of the cantons.",
+    "correct_answer": "D",
+    "source_id": "S026",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/",
+    "source_quote": "The former half-cantons of Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft are only entitled to one.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Trap 4: residuary competence sits with the cantons, not with an EU-style supranational layer and not with the communes. In the EU the equivalent residue belongs to the member states; in Switzerland the member units are the cantons."
-  },
-  {
-    "id": "K082",
-    "category": "services",
-    "question": "Beyond Switzerland's single nationwide public holiday, what is the maximum number of additional public holidays a canton may declare on its own territory?",
-    "options": {
-      "A": "Up to two",
-      "B": "Up to four",
-      "C": "Up to eight",
-      "D": "Unlimited"
-    },
-    "correct_answer": "C",
-    "source_id": "S031",
-    "source_url": "https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/",
-    "source_quote": "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton.",
-    "language": "en",
-    "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE — the holiday calendar differs by canton and within a canton by commune. Framed as a cantonal power, not a federal rule."
-  },
-  {
-    "id": "K085",
-    "category": "services",
-    "question": "Between which hours of the day is work prohibited by the Swiss night-work ban?",
-    "options": {
-      "A": "23:00 to 06:00",
-      "B": "22:00 to 05:00",
-      "C": "21:00 to 06:00",
-      "D": "00:00 to 07:00"
-    },
-    "correct_answer": "A",
-    "source_id": "S032",
-    "source_url": "https://www.ch.ch/en/work/working-hours/working-on-sundays-and-at-night/",
-    "source_quote": "In Switzerland, the law prohibits work between 11pm and 6am.",
-    "language": "en",
-    "difficulty": "easy",
-    "notes": "Note the source spells the window as 11pm to 6am. No national maximum weekly working time is stated on the source pages and none is asserted here."
+    "notes": "Deliberately tests only the canton-identity half of the S026 fact, framed as the 6/20 structure behind the number 26. The Council of States seat arithmetic (20 cantons with two seats, 46 seats total) is owned by the politics category via S003 and is not asked here. Canton names appear in the German forms printed on the source page."
   },
   {
     "id": "K087",
@@ -486,40 +486,58 @@
     "notes": "Distractor C is the rule for employees under 18 ('the daily rest period must always be at least 12 hours'); distractor A is the once-a-week reduction the employer may grant if the two-week average is 11 hours."
   },
   {
-    "id": "K091",
+    "id": "K088",
     "category": "services",
-    "question": "How many years of compulsory schooling do children in most Swiss cantons have to attend, and how is that total made up?",
+    "question": "An employee works between 11pm and 6am on fewer than 25 nights per calendar year. What must the employer pay for those nights?",
     "options": {
-      "A": "9 years in total: 7 years of primary school followed by 2 years of secondary school",
-      "B": "11 years in total, including the two years of kindergarten",
-      "C": "11 years in total: 9 years of primary school followed by 2 years of secondary school",
-      "D": "13 years in total: 11 years of primary school followed by 2 years of secondary school"
+      "A": "Time off equal to 10% of the night hours worked",
+      "B": "A wage supplement of at least 10%",
+      "C": "A wage supplement of at least 50%",
+      "D": "A wage supplement of at least 25%"
     },
-    "correct_answer": "B",
-    "source_id": "S033",
-    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/school-and-kindergarten/",
-    "source_quote": "In most cantons, children are required to attend school for 11 years, including the two years they attend kindergarten.",
-    "language": "en",
-    "difficulty": "medium",
-    "notes": "CANTONAL-VARIABLE in the details. Distractor C keeps the total but wrongly moves the two kindergarten years out of primary school."
-  },
-  {
-    "id": "K094",
-    "category": "services",
-    "question": "Which three parties share responsibility for maintaining standards in the Swiss vocational education and training (VET) system and for ensuring an adequate number of apprenticeship places?",
-    "options": {
-      "A": "The Confederation, the cantons and the trade unions",
-      "B": "The Confederation, the Cantons and professional organisations",
-      "C": "The Confederation, the cantons and the chambers of commerce and industry",
-      "D": "The cantons, the communes and the professional organisations"
-    },
-    "correct_answer": "B",
-    "source_id": "S034",
-    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/what-comes-after-compulsory-education/",
-    "source_quote": "The Confederation, the Cantons and professional organisations all contribute to maintaining the high standard of vocational education and training and strive to ensure that there is an adequate number of apprenticeship positions available.",
+    "correct_answer": "D",
+    "source_id": "S032",
+    "source_url": "https://www.ch.ch/en/work/working-hours/working-on-sundays-and-at-night/",
+    "source_quote": "A supplement of at least 25% must be paid for work between 11pm and 6am carried out for less than 25 nights per calendar year.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "Distractor C is the German model (IHK/HWK chambers); there is no chamber tier in Swiss VET. Distractor D drops the Confederation, a deliberate scope-confusion."
+    "notes": "Distractor A is the regime for regular night work (25 or more nights per calendar year), where the compensation is time off equal to 10% of night hours; distractor C is the 50% supplement for occasional Sunday work. Cash payment in lieu of compensatory time off is prohibited."
+  },
+  {
+    "id": "K090",
+    "category": "services",
+    "question": "In Switzerland, which level of government is responsible for compulsory education?",
+    "options": {
+      "A": "The Confederation, acting through a federal education ministry",
+      "B": "The communes, which set the school system and appoint the teachers",
+      "C": "The cantons",
+      "D": "The cantons jointly with the Confederation, under federal supervision"
+    },
+    "correct_answer": "C",
+    "source_id": "S033",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/school-and-kindergarten/",
+    "source_quote": "Compulsory education is the responsibility of the cantons. This is why it is important to check the information on your canton's website.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Switzerland has no federal school system — the structural opposite of Germany, Austria and France. Distractor B is scope confusion: communes run individual schools, but the responsibility statement sits with the cantons."
+  },
+  {
+    "id": "K097",
+    "category": "services",
+    "question": "Switzerland recycles a high share of its waste, yet materials recovered from waste form only a small share of the country's total material consumption. What are the two figures?",
+    "options": {
+      "A": "70% of total waste volume recycled, but secondary raw materials at 14% of total material consumption",
+      "B": "70% of total waste volume recycled, and secondary raw materials at 70% of total material consumption",
+      "C": "14% of total waste volume recycled, and secondary raw materials at 70% of total material consumption",
+      "D": "53% of municipal solid waste recycled, and secondary raw materials at 14% of total material consumption"
+    },
+    "correct_answer": "A",
+    "source_id": "S035",
+    "source_url": "https://www.bafu.admin.ch/en/state-wastemanagement",
+    "source_quote": "At present, over two thirds (70%) of Switzerland's total waste volume is recycled. Measured against total material consumption, materials recovered from waste (known as secondary raw materials) make up only a small proportion: 14% in 2019",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The 14% figure is from 2019; the 70% recycling rate is 'at present' as published by FOEN. Distractor D uses the municipal-solid-waste rate (53% in 2020), which measures a different quantity. MUNICIPAL-WASTE-VARIABLE: municipal waste figures are administered at commune level."
   },
   {
     "id": "K099",
@@ -540,58 +558,112 @@
     "notes": "Distractor A is the intuitive 'excess only' rule used in many other countries. The verified Swiss tax-free limit is CHF 150 per person per day."
   },
   {
-    "id": "K105",
-    "category": "history",
-    "question": "Under which constitutional instrument did the Swiss Federal Supreme Court become a permanent court?",
+    "id": "K100",
+    "category": "services",
+    "question": "What are the Swiss standard VAT rate and the reduced rate that applies to goods such as foodstuffs, books, magazines and medicines?",
     "options": {
-      "A": "the 1874 Constitution, which came into force in 1875",
-      "B": "the Federal Constitution of 1848",
-      "C": "the total revision approved by voters in 1999",
-      "D": "the partial revision of 1866"
+      "A": "6.7% standard, 2.1% reduced",
+      "B": "8.1% standard, 3.8% reduced",
+      "C": "10.0% standard, 2.6% reduced",
+      "D": "8.1% standard, 2.6% reduced"
     },
-    "correct_answer": "A",
-    "source_id": "S039",
-    "source_url": "https://www.bger.ch/files/live/sites/tfl/files/pdf/Divers/Flyer_150_Years_SFSC.pdf",
-    "source_quote": "It was only with the 1874 Constitution, which came into force in 1875, that the Swiss Federal Supreme Court became a permanent court",
+    "correct_answer": "D",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "VAT is 8.1%. A reduced rate of 2.6% applies for certain goods (e.g. foodstuffs, including non-alcoholic beverages, books, magazines and medicines).",
     "language": "en",
     "difficulty": "medium",
-    "notes": "Caveat: the 1848 federal state already had a supreme court, but it had no fixed seat and only convened as and when required."
+    "notes": "Distractor A is the pre-2001 Swiss rate pair. Figures as published by the Federal Office for Customs and Border Security at access date 2026-10-12."
   },
   {
-    "id": "K108",
+    "id": "K102",
     "category": "history",
-    "question": "The Swiss Federal Supreme Court ruled that women from which canton must be granted the right to vote at the cantonal assembly?",
+    "question": "When the Helvetian Republic was proclaimed in 1798 under French occupation, which institution — described as a predecessor of today's Swiss Federal Archives — was established at the same time?",
     "options": {
-      "A": "Appenzell Ausserrhoden",
-      "B": "Glarus",
-      "C": "Obwalden",
-      "D": "Appenzell Innerrhoden"
-    },
-    "correct_answer": "C",
-    "source_id": "S039",
-    "source_url": "https://www.bger.ch/files/live/sites/tfl/files/pdf/Divers/Flyer_150_Years_SFSC.pdf",
-    "source_quote": "The Swiss Federal Supreme Court rules that women from the canton of Appenzell Innerrhoden be granted the right to vote at the cantonal assembly. On 28 April 1991, women in Appenzell Innerrhoden were also able to vote in cantonal elections for the first time. BGE 116 Ia 359",
-    "language": "en",
-    "difficulty": "hard",
-    "notes": "Appenzell Innerrhoden is one of the six half-cantons and the last to hold out. The brochure does not date the ruling itself, only the cantonal election of 28 April 1991, so no year is asserted here. Appenzell Innerrhoden is deliberately not used in the S040 questions to avoid duplicate facts."
-  },
-  {
-    "id": "K113",
-    "category": "history",
-    "question": "The Schengen and Dublin agreements were part of which series of Swiss bilateral agreements with the EU, and in which year was that series approved by voters?",
-    "options": {
-      "A": "the second series, approved in 2005",
-      "B": "the first series, approved in 2000",
-      "C": "the second series, approved in 2002",
-      "D": "the first series, approved in 2005"
+      "A": "the Central Archives",
+      "B": "the Swiss National Library",
+      "C": "the Federal Mint",
+      "D": "the Federal Chancellery"
     },
     "correct_answer": "A",
-    "source_id": "S041",
-    "source_url": "https://www.bk.admin.ch/dam/en/sd-web/9OAKySUiPAfR/buku2024.pdf",
-    "source_quote": "There are 9 agreements, including the Schengen-Dublin agreement, which was approved by 55 % of voters in 2005.",
+    "source_id": "S037",
+    "source_url": "https://www.bar.admin.ch/en/the-confederation-before-1798",
+    "source_quote": "The Central Archives, a predecessor of the current Swiss Federal Archives, were also established during this time.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Distractors are all real Swiss federal institutions that simply do not date from 1798."
+  },
+  {
+    "id": "K106",
+    "category": "history",
+    "question": "Why was the seat of the Swiss Federal Supreme Court assigned to Lausanne rather than to Zurich, Bern or Lucerne?",
+    "options": {
+      "A": "Because Lausanne was the largest city in French-speaking Switzerland.",
+      "B": "As a concession to the French-speaking liberals.",
+      "C": "Because the cantonal government of Vaud paid for the building.",
+      "D": "Because the first president of the court came from Lausanne."
+    },
+    "correct_answer": "B",
+    "source_id": "S039",
+    "source_url": "https://www.bger.ch/files/live/sites/tfl/files/pdf/Divers/Flyer_150_Years_SFSC.pdf",
+    "source_quote": "As a concession to the French-speaking liberals, the seat of the Swiss Federal Supreme Court was assigned to Lausanne.",
     "language": "en",
     "difficulty": "hard",
-    "notes": "The first series (2000) comprised 7 mainly economic agreements; the second series (2005) comprises 9 and was approved by 55 %. Note the source's spacing in '55 %'."
+    "notes": "A strong trap: the court does have a second site in Lucerne, but Lucerne was never the seat, and neither was Zurich or the federal city Bern."
+  },
+  {
+    "id": "K107",
+    "category": "history",
+    "question": "In which year did the Federal Supreme Court move into the Neoclassical building in the Mon-Repos park that still houses it today?",
+    "options": {
+      "A": "1875",
+      "B": "1887",
+      "C": "1919",
+      "D": "1922"
+    },
+    "correct_answer": "D",
+    "source_id": "S039",
+    "source_url": "https://www.bger.ch/files/live/sites/tfl/files/pdf/Divers/Flyer_150_Years_SFSC.pdf",
+    "source_quote": "Due to the outbreak of the First World War, the new courthouse could not be built until 1922. The striking Neoclassical building in the Mon-Repos park still shapes our image of the Swiss Federal Supreme Court today.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "1887 is the year the court moved into the purpose-built structure on the Esplanade de Montbenon — a deliberate near-miss distractor."
+  },
+  {
+    "id": "K109",
+    "category": "history",
+    "question": "On what date did Switzerland's all-male electorate grant the vote to the nation's female citizens?",
+    "options": {
+      "A": "7 February 1971",
+      "B": "1 February 1959",
+      "C": "14 June 1971",
+      "D": "28 April 1991"
+    },
+    "correct_answer": "A",
+    "source_id": "S040",
+    "source_url": "https://www.bar.admin.ch/en/womens-suffrage-in-switzerland",
+    "source_quote": "On 7 February 1971, Switzerland's all-male electorate granted the vote to the nation's female citizens.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "1 February 1959 is the first (rejected) federal suffrage vote and 28 April 1991 the Appenzell Innerrhoden cantonal election — both genuine dates used as distractors."
+  },
+  {
+    "id": "K114",
+    "category": "history",
+    "question": "The first Geneva Convention, adopted in August 1864, introduced a unified emblem for military medical services. What did that emblem look like?",
+    "options": {
+      "A": "a white cross on a red background",
+      "B": "a red cross on a white background",
+      "C": "a red crescent on a white background",
+      "D": "a red cross on a black background"
+    },
+    "correct_answer": "B",
+    "source_id": "S042",
+    "source_url": "https://www.icrc.org/en/document/history-icrc",
+    "source_quote": "And in August 1864 it persuaded governments to adopt the first Geneva Convention. This treaty obliged armies to care for wounded soldiers, whatever side they were on, and introduced a unified emblem for the medical services: a red cross on a white background.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distractor A is the actual Swiss flag; the emblem is its colour inverse. The source states only the colours, not the inversion — the inverse relationship must be inferred. The red crescent is the real alternative emblem used by the Red Crescent societies."
   },
   {
     "id": "K115",
@@ -630,21 +702,921 @@
     "notes": "It came into force on 1 January 2000 (distractor D). The quote is from the parlament.ch Federal Constitution page recorded verbatim inside the S048 raw_pages file; ch-info.swiss is the header URL of that file. 14 of 26 cantons is a majority but not an overwhelming one."
   },
   {
-    "id": "K120",
+    "id": "K119",
     "category": "history",
-    "question": "Which international treaty first set out in writing the rights and duties of neutral states?",
+    "question": "On what date did Swiss voters approve joining the United Nations?",
     "options": {
-      "A": "The Geneva Convention of 1864",
-      "B": "The Treaty of Versailles of 1919",
-      "C": "The United Nations Charter of 1945",
-      "D": "The Hague Conventions of 1907"
+      "A": "10 March 2002",
+      "B": "10 September 2002",
+      "C": "3 March 2002",
+      "D": "16 March 1986"
+    },
+    "correct_answer": "C",
+    "source_id": "S049",
+    "source_url": "https://www.swissinfo.ch/eng/swiss-politics/moving-towards-the-un-in-slow-motion/291972",
+    "source_quote": "When, on March 3, 2002, the Swiss were again called upon to vote on joining the world body, the decision turned out to be quite close.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Verified: referendum 3 March 2002; the UN General Assembly accepted Switzerland as the 190th member state on 10 September 2002 (distractor B). Distractor A, 10 March 2002, is the disproved date recorded in the verification log. 16 March 1986 was an earlier rejected initiative. swissinfo.ch is the Swiss Broadcasting Corporation, not a federal page."
+  },
+  {
+    "id": "K121",
+    "category": "services",
+    "question": "A restaurant guest asks whether they must leave a tip in Switzerland. What is the correct position according to the national tourism organisation's own statement of local custom?",
+    "options": {
+      "A": "The guest is not obliged to tip, although paying a tip is customary in many restaurants.",
+      "B": "Tipping is compulsory in restaurants, and the amount is fixed at ten percent of the bill by federal regulation.",
+      "C": "Tipping is compulsory only in Zurich and Geneva, and optional everywhere else in the country.",
+      "D": "The guest is obliged to tip whenever the restaurant has more than five employees."
+    },
+    "correct_answer": "A",
+    "source_id": "S055",
+    "source_url": "https://www.swissinfo.ch/eng/best-of-srg-content/opinions-divided-on-taxing-tips/90990050",
+    "source_quote": "In Switzerland, the guest is not obliged to tip. In many restaurants, however, it is customary to pay a tip.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Swiss-specific: customary but not a legal obligation. Distractors invent a federal fixed rate and cantonal differences that do not exist."
+  },
+  {
+    "id": "K127",
+    "category": "services",
+    "question": "The hospitality trade association states that tips are not wages. How should that statement be weighted when answering a question about Swiss law?",
+    "options": {
+      "A": "It is settled Swiss law, because the trade association is the sector's competent authority.",
+      "B": "It is settled Swiss law, because it is written into the hospitality sector's collective agreement.",
+      "C": "It carries no weight at all, because a trade association has no standing to interpret employment law.",
+      "D": "It is the association's own position and is contested by labour-law academics, so it cannot be presented as settled law."
+    },
+    "correct_answer": "D",
+    "source_id": "S055",
+    "source_url": "https://www.swissinfo.ch/eng/best-of-srg-content/opinions-divided-on-taxing-tips/90990050",
+    "source_quote": "Grundsätzlich sind Trinkgelder kein Lohn und auch kein Bestandteil davon. Das Gastgewerbe verfügt über einen guten Landes-Gesamtarbeitsvertrag.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "A source-criticism item: the answer is about evidential weight. B is the trap - the collective agreement exists but does not settle the point."
+  },
+  {
+    "id": "K131",
+    "category": "services",
+    "question": "A Swiss resident buys goods abroad purely for resale in a Swiss shop and brings them back. How are those goods treated at import?",
+    "options": {
+      "A": "They are covered by the CHF 150 tax-free limit in the same way as any other purchase made abroad",
+      "B": "They are covered by the tax-free limit as long as their total value stays below CHF 150",
+      "C": "They are subject to VAT",
+      "D": "They are subject to VAT only if their total value exceeds CHF 150"
+    },
+    "correct_answer": "C",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "Goods that are not intended for your personal use or as gifts are subject to VAT.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The allowance tests purpose first and value second; commercial goods fall outside it at any value. Distractor D is the common confusion of treating value as the only test."
+  },
+  {
+    "id": "K133",
+    "category": "services",
+    "question": "A traveller returns with goods that stay below the CHF 150 VAT tax-free limit but exceed the duty-free allowances for alcohol. What is still payable?",
+    "options": {
+      "A": "Customs duties",
+      "B": "VAT at the standard rate of 8.1%",
+      "C": "Customs duties and VAT at the reduced rate of 2.6%",
+      "D": "Nothing further, because the CHF 150 limit covers all import charges"
+    },
+    "correct_answer": "A",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "In addition to VAT, you must pay customs duties if the goods you are carrying exceed the duty-free allowances for alcohol, tobacco products and certain foodstuffs.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The CHF 150 figure is the VAT tax-free limit; the separate duty-free allowances belong to customs duties. Distractor C mixes the two regimes and adds a rate that does not apply to alcohol."
+  },
+  {
+    "id": "K134",
+    "category": "services",
+    "question": "A traveller receives a gift abroad and declares it to Swiss customs. On what basis is the import VAT assessed for such a gift?",
+    "options": {
+      "A": "On any receipt the giver can produce, or else on a self-declared value",
+      "B": "Its market value",
+      "C": "On the nominal value printed on the gift packaging, where one exists",
+      "D": "On the recipient's own estimate of what the gift is worth to them personally"
+    },
+    "correct_answer": "B",
+    "source_id": "S036",
+    "source_url": "https://www.bazg.admin.ch/en/value-added-tax-vat-chf-150-tax-free-limit",
+    "source_quote": "Otherwise, the market value is taxed, e.g. in the case of gifts. The market value refers to the sum a third party would have had to pay to buy the item.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Purchases are taxed on the invoice, receipt or purchase contract; where there is none - gifts in particular - the market value applies, i.e. what a third party would have paid. Traps are the self-declared value and the recipient's sentimental valuation."
+  },
+  {
+    "id": "K135",
+    "category": "services",
+    "question": "Roughly how much waste does Switzerland generate in a year, according to the Federal Office for the Environment?",
+    "options": {
+      "A": "About 8 to 9 million tonnes",
+      "B": "About 30 million tonnes",
+      "C": "About 80 to 90 million tonnes",
+      "D": "About 300 million tonnes"
+    },
+    "correct_answer": "C",
+    "source_id": "S035",
+    "source_url": "https://www.bafu.admin.ch/en/state-wastemanagement",
+    "source_quote": "Overall, Switzerland generates about 80 to 90 million tonnes of waste annually, and it is fair to assume that the total quantity will continue to rise in the future.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Order-of-magnitude anchor for the whole waste topic: the headline recycling rate makes Swiss volumes sound modest, but construction and demolition account for the great majority. Distractors straddle the correct figure by roughly a decade each."
+  },
+  {
+    "id": "K138",
+    "category": "services",
+    "question": "On which principle is the financing of waste disposal in Switzerland based?",
+    "options": {
+      "A": "Waste disposal is financed from general federal tax revenue collected centrally",
+      "B": "The 'polluter pays' principle",
+      "C": "The cantons and communes must cover the full cost of disposal from their own budgets",
+      "D": "Producers of packaged goods finance disposal through a federal levy on packaging"
+    },
+    "correct_answer": "B",
+    "source_id": "S035",
+    "source_url": "https://www.bafu.admin.ch/en/state-wastemanagement",
+    "source_quote": "The disposal of all waste costs Switzerland a good CHF 3 billion a year. The 'polluter pays' principle is widely applied in Switzerland, i.e. whoever creates the waste must also pay for its disposal.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The named principle matters more than the CHF 3 billion figure: whoever creates the waste pays for its disposal. Traps are the centrally funded reading and the producer-llevy model, neither of which is the stated basis."
+  },
+  {
+    "id": "K143",
+    "category": "services",
+    "question": "In Switzerland, admission to a baccalaureate school depends on which factor?",
+    "options": {
+      "A": "The Confederation alone, under a uniform federal admission rule",
+      "B": "The commune alone, through a single entrance test for all cantons",
+      "C": "The canton and the type of baccalaureate",
+      "D": "The federal institute of technology the pupil intends to attend afterwards"
+    },
+    "correct_answer": "C",
+    "source_id": "S034",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/what-comes-after-compulsory-education/",
+    "source_quote": "If you want to study for a baccalaureate, you need to meet different requirements depending on the canton and the type of baccalaureate you wish to obtain, including good grades, a recommendation from your class teacher or a successful entrance examination.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Entry is cantonal and type-dependent: good grades, a class teacher's recommendation or an entrance examination. Traps are the assumption of a single federal rule and the assumption that grades alone decide."
+  },
+  {
+    "id": "K145",
+    "category": "services",
+    "question": "Under Swiss rules, who is responsible for getting a child to school, and when may a commune step in?",
+    "options": {
+      "A": "The parents, with commune support only where the route is very long or too dangerous",
+      "B": "The commune, which must provide transport for any child living more than two kilometres from school",
+      "C": "The canton, which arranges school transport for every child in its territory",
+      "D": "The parents, with commune transport guaranteed for any child of compulsory-school age"
+    },
+    "correct_answer": "A",
+    "source_id": "S033",
+    "source_url": "https://www.ch.ch/en/school-and-education/compulsory-education/school-and-kindergarten/",
+    "source_quote": "Getting a child to school is the responsibility of the parents. The communes only provide support if the route to school is very long or too dangerous.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Communes step in only for a very long or dangerous route, which is what Pedibus-style schemes address. The over-general distractor D sounds like a parental duty with municipal backing and is the trap for those who half-remember the rule."
+  },
+  {
+    "id": "K152",
+    "category": "politics",
+    "question": "Alongside organising federal elections and popular votes, which parties submit the signatures they have collected to the Federal Chancellery?",
+    "options": {
+      "A": "The Federal Supreme Court",
+      "B": "Members of the Federal Assembly acting in united chambers",
+      "C": "Referendum and initiative committees",
+      "D": "The cantonal governments"
+    },
+    "correct_answer": "C",
+    "source_id": "S012b",
+    "source_url": "https://www.bk.admin.ch/en",
+    "source_quote": "Along with the cantons, the Federal Chancellery organises federal elections and popular votes. Referendum and initiative committees submit the signatures they collect to the Federal Chancellery.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Separates the Chancellery's organising role from its intake role, and separates both from the cantons' own task of organising the vote."
+  },
+  {
+    "id": "K156",
+    "category": "politics",
+    "question": "A case concerns money laundering and organised crime with an international dimension. Which federal body hears such cases?",
+    "options": {
+      "A": "The Federal Supreme Court sitting as a criminal first-instance court",
+      "B": "The Federal Criminal Court",
+      "C": "The Federal Administrative Court",
+      "D": "The Federal Patent Court"
+    },
+    "correct_answer": "B",
+    "source_id": "S011",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/courts/",
+    "source_quote": "The Federal Criminal Court hears criminal cases involving offences against federal interests, explosives offences, international cases of white-collar crime, cases relating to organised crime, corruption and money laundering, and offences related to civil aviation or war material.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Distinguishes the four federal courts by subject matter. D invents a criminal first-instance division of the Supreme Court, a structure familiar from other countries."
+  },
+  {
+    "id": "K164",
+    "category": "politics",
+    "question": "A member of a cantonal government privately disagrees with a decision the government has taken. What is that member required to do?",
+    "options": {
+      "A": "Ask the cantonal parliament to reverse the decision",
+      "B": "Abstain in public and distance themselves from the decision",
+      "C": "Defend the government's position publicly, whatever their own opinion",
+      "D": "Resign from the cantonal government immediately"
+    },
+    "correct_answer": "C",
+    "source_id": "S008",
+    "source_url": "https://www.ch.ch/en/political-system/cantons/cantonal-government-role-and-composition/",
+    "source_quote": "All members of the cantonal government must defend the position of the collegial body, regardless of their personal opinion.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Collegiality binds the cantonal government exactly as it binds the Federal Council; B, C and D are all plausible reactions from a cabinet-style mental model."
+  },
+  {
+    "id": "K170",
+    "category": "politics",
+    "question": "In which cantons do foreign nationals have the right to vote at cantonal level, though not to stand for election?",
+    "options": {
+      "A": "Jura and Geneva",
+      "B": "Neuchâtel and Basel-Stadt",
+      "C": "Geneva and Vaud",
+      "D": "Jura and Neuchâtel"
+    },
+    "correct_answer": "D",
+    "source_id": "S005",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/right-to-vote/",
+    "source_quote": "At the cantonal level, Jura and Neuchâtel grant the right to vote (but not to stand for election) to foreign nationals.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "High search cost and tests real cantonal variation; Geneva and Vaud are the intuitive French-speaking guesses and are not the cited pair."
+  },
+  {
+    "id": "K171",
+    "category": "politics",
+    "question": "Does a Swiss citizen living in Switzerland have to register in order to be entered on the electoral roll of their commune?",
+    "options": {
+      "A": "Yes, but only people holding a single nationality",
+      "B": "No, the commune adds them automatically",
+      "C": "Yes, at the commune's population office each year",
+      "D": "Yes, with the cantonal government before the vote"
+    },
+    "correct_answer": "B",
+    "source_id": "S005",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/right-to-vote/",
+    "source_quote": "If you live in Switzerland, you do not need to register to vote: you will be added to the electoral register of your commune of residence as a matter of course as soon as you fulfil the conditions for being eligible to vote.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Contrast with the explicit registration required of Swiss citizens abroad; an automatic-register premise is unusual compared with most EU systems."
+  },
+  {
+    "id": "K176",
+    "category": "politics",
+    "question": "Can a federal popular initiative be used at federal level to demand a change to an existing federal law rather than to the Constitution?",
+    "options": {
+      "A": "Yes, but only for laws adopted before the entry into force of the 1999 Constitution",
+      "B": "Yes, provided the Federal Assembly agrees to treat the proposal as constitutional",
+      "C": "No, a federal popular initiative can concern only the Constitution",
+      "D": "Yes, if the initiative is supported by a majority of the cantons"
+    },
+    "correct_answer": "C",
+    "source_id": "S007",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/initiatives/what-is-a-federal-popular-initiative/",
+    "source_quote": "A federal popular initiative concerns only the Constitution. In contrast to the position in some cantons, there is no procedure at federal level for amending existing laws or introducing new laws through an initiative.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The sharpest federalism point in the corpus: some cantons have legislative initiatives, federal level does not. C and D invent conditional routes."
+  },
+  {
+    "id": "K177",
+    "category": "politics",
+    "question": "How far in advance of the vote on a federal popular initiative must the date be announced, and by whom?",
+    "options": {
+      "A": "The cantonal governments must announce it at least one year ahead",
+      "B": "The Federal Council must announce it at least four months ahead",
+      "C": "The Federal Assembly must announce it at least six months ahead",
+      "D": "The Federal Chancellery must announce it at least three months ahead"
+    },
+    "correct_answer": "B",
+    "source_id": "S007",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/initiatives/what-is-a-federal-popular-initiative/",
+    "source_quote": "The Federal Council must announce the date of the vote at least four months in advance.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The executive, not the Chancellery or Parliament, fixes the ballot date; C is the natural confusion with the Chancellery's vote-organising role."
+  },
+  {
+    "id": "K179",
+    "category": "politics",
+    "question": "Parliament decides not only on laws but also on enactments that are not laws, such as decisions on international treaties. Can an optional referendum be launched against such a decision?",
+    "options": {
+      "A": "Yes, an optional referendum is possible",
+      "B": "No, only amendments to the Constitution are put to a vote",
+      "C": "No, because treaties are approved by the Federal Council alone",
+      "D": "Yes, but only after a majority of the cantons has approved the treaty"
+    },
+    "correct_answer": "A",
+    "source_id": "S004",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/referendum/",
+    "source_quote": "Parliament also decides on enactments that are not laws, for example decisions on international treaties between Switzerland and other countries. It is also possible to launch an optional referendum against these.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The referendum right reaches further than formally legislated acts; B and C are the usual assumptions about treaty approval in a parliamentary system."
+  },
+  {
+    "id": "K180",
+    "category": "politics",
+    "question": "Two groups from different political camps both want to challenge the same federal law. How is that handled?",
+    "options": {
+      "A": "Both may initiate a referendum, but their signatures are counted separately",
+      "B": "Only one group may challenge the law if the camps disagree",
+      "C": "Both may initiate a referendum, and their signatures are counted",
+      "D": "Only the group that registered first may challenge the law"
+    },
+    "correct_answer": "C",
+    "source_id": "S004",
+    "source_url": "https://www.ch.ch/en/political-system/political-rights/referendum/",
+    "source_quote": "What is more, several groups can initiate a referendum against the same new or amended law – even though they might be from different political camps. The signatures collected are counted.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Competing committees do not exclude each other; C is a near-miss that would also work in practice but is not what the page states."
+  },
+  {
+    "id": "K181",
+    "category": "law",
+    "question": "Under Swiss data protection law, what is actually protected?",
+    "options": {
+      "A": "The data themselves, as an asset of whoever holds them",
+      "B": "The persons about whom data are processed",
+      "C": "The commercial value of the collected information",
+      "D": "Only special categories of personal data, such as health and criminal records"
+    },
+    "correct_answer": "B",
+    "source_id": "S053",
+    "source_url": "https://www.edoeb.admin.ch/en/faq-data-protection",
+    "source_quote": "Data protection law does not protect data as such, but rather the persons about whom data is processed.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Traps the property-framing imported from data-protection-as-asset models; the FDPIC states the protection attaches to persons, not to the data as a commodity."
+  },
+  {
+    "id": "K183",
+    "category": "law",
+    "question": "Under Swiss law, how does the processing of personal data by private entities generally stand?",
+    "options": {
+      "A": "It is prohibited unless the data subject has given prior written consent",
+      "B": "It is permitted only where the data have been fully anonymised",
+      "C": "It requires prior authorisation from the FDPIC for each processing purpose",
+      "D": "It is permitted in principle, with the test being whether the invasion of privacy can be justified by consent or by overriding interests"
+    },
+    "correct_answer": "D",
+    "source_id": "S053",
+    "source_url": "https://www.edoeb.admin.ch/en/faq-data-protection",
+    "source_quote": "The situation is different for the processing of personal data by private entities. In principle, this is permitted in Switzerland.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Distractor A is the GDPR prior-consent default, which does not carry over to Swiss private-sector processing; the source deliberately does not use the words opt-in or opt-out."
+  },
+  {
+    "id": "K186",
+    "category": "law",
+    "question": "The duty to inform under Swiss data protection law is not absolute. How are its exceptions treated?",
+    "options": {
+      "A": "They are drawn broadly by the FDPIC and may be relied on at the controller's discretion",
+      "B": "They cover, for example, a data subject who already has the information or processing required by law, and they must be narrowly interpreted",
+      "C": "They apply only where a federal authority processes the data",
+      "D": "They apply only to special categories of data such as health data"
+    },
+    "correct_answer": "B",
+    "source_id": "S053",
+    "source_url": "https://www.edoeb.admin.ch/en/faq-data-protection",
+    "source_quote": "Moreover, the exceptions mentioned in Article 20 FADP limit or remove the duty to provide information, for example if a data subject already has the information (because they previously consented to their data being processed) or if the processing of personal data is required by law. These exceptions must be narrowly interpreted: the data controller should not assume that they will apply.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Names the Article 20 FADP exceptions and the narrow-interpretation rule; distractor A is the opposite of the FDPIC's express warning against assuming they apply."
+  },
+  {
+    "id": "K193",
+    "category": "law",
+    "question": "Which residence permit categories are issued as biometric residence permits for foreign nationals in Switzerland?",
+    "options": {
+      "A": "Short-term residence permits (L), residence permits (B) and settlement permits (C)",
+      "B": "All residence permits without exception, including the N permit for asylum seekers and the F permit for provisionally admitted foreigners",
+      "C": "Only residence permits (B), because short stays are covered by a passport stamp",
+      "D": "Only settlement permits (C), since biometric data are required for a permanent status"
+    },
+    "correct_answer": "A",
+    "source_id": "S017",
+    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/biometr_auslaenderausweis.html",
+    "source_quote": "Biometric residence permits shall be issued to holders of the following categories of residence permit: - Short-term residence permits (L) - Residence permits (B) - Settlement permits (C)",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Exactly the three categories L, B and C; the N and F permits are deliberately not in the biometric programme."
+  },
+  {
+    "id": "K194",
+    "category": "law",
+    "question": "Who decides the application procedure for a biometric residence permit in Switzerland, and who captures the biometric data?",
+    "options": {
+      "A": "The SEM decides nationally, and the fingerprints are taken at the Swiss embassy",
+      "B": "The municipality of residence decides, and the data are captured by the cantonal police",
+      "C": "The FDPIC decides, and the data are captured by an accredited private provider",
+      "D": "The canton of residence decides, and the biometric data are captured by that canton's authority"
+    },
+    "correct_answer": "D",
+    "source_id": "S017",
+    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/biometr_auslaenderausweis.html",
+    "source_quote": "The application procedure and issuance of a biometric residence permit are decided by the Canton of residence. Biometric data are obtained from the person by the corresponding authority in the Canton of residence.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Cantonal variable: no single national procedure or fee. Distractor A overstates the SEM's role, which is limited to centrally producing the cards."
+  },
+  {
+    "id": "K201",
+    "category": "law",
+    "question": "An EU/EFTA national's B residence permit comes up for renewal after more than twelve consecutive months of involuntary unemployment. How may that first renewal be dealt with?",
+    "options": {
+      "A": "It may be limited to one year",
+      "B": "It cannot be granted at all, because the holder no longer has gainful employment",
+      "C": "It must be reduced to the three-month minimum used for short-stay permits",
+      "D": "It is automatically replaced by an L permit issued to job seekers"
+    },
+    "correct_answer": "A",
+    "source_id": "S045",
+    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/eu_efta.html",
+    "source_quote": "First-time renewal of the permit can be limited to one year, however, if the holder has been involuntarily unemployed for more than twelve consecutive months.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "A shortening mechanism, not a withdrawal rule. Distractors B and D over-read the unemployment fact into loss of status or an automatic category change."
+  },
+  {
+    "id": "K202",
+    "category": "law",
+    "question": "An EU/EFTA national takes up a series of engagements in Switzerland, none lasting longer than three months. How are these handled?",
+    "options": {
+      "A": "Each engagement requires its own work permit of up to three months",
+      "B": "A G cross-border commuter permit is required throughout",
+      "C": "A B residence permit valid for twelve months is required",
+      "D": "Contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure"
+    },
+    "correct_answer": "D",
+    "source_id": "S045",
+    "source_url": "https://www.sem.admin.ch/sem/en/home/themen/aufenthalt/eu_efta.html",
+    "source_quote": "Employment contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The Swiss online notification procedure replaces a permit for short engagements below three months within a calendar year; the boundary is three months, not one year."
+  },
+  {
+    "id": "K206",
+    "category": "law",
+    "question": "Beyond Switzerland's single national public holiday, who determines the other public holidays observed in a canton?",
+    "options": {
+      "A": "The federal government, which publishes a national list each year",
+      "B": "Each canton, which can have up to eight additional public holidays on its territory",
+      "C": "Each commune alone, with no upper limit and no cantonal role",
+      "D": "The cantons and communes jointly, up to a federal ceiling of eight"
+    },
+    "correct_answer": "B",
+    "source_id": "S013",
+    "source_url": "https://www.ch.ch/en/work/working-hours/vacation--public-holidays-and-absences-from-work/",
+    "source_quote": "The cantons can each have up to eight additional public holidays on their territory. Public holidays can thus vary from canton to canton.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Eight is a ceiling on the cantonal additions, not a nationwide total of public holidays; distractor D misreads it as a federal maximum."
+  },
+  {
+    "id": "K208",
+    "category": "law",
+    "question": "According to the Canton Bern conciliation authority, when is an ordinary termination of a tenancy possible?",
+    "options": {
+      "A": "Only if the notice period and the locally customary termination dates are observed",
+      "B": "On one month's notice, aligned to the end of a calendar month",
+      "C": "Only with the prior consent of the conciliation authority",
+      "D": "Only for a fixed-term contract, never for an open-ended one"
+    },
+    "correct_answer": "A",
+    "source_id": "S044",
+    "source_url": "https://www.zsg.justice.be.ch/de/start/themen/zivilrecht/mietrecht/beendigung-mietvertrag/beenden-mieter-in.html",
+    "source_quote": "Die ordentliche Kündigung ist nur unter Einhaltung der Kündigungsfrist und der Kündigungstermine möglich.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Source quote is German. The source states the locally customary termination dates, not a universal end-of-month rule, so distractor B is the widely repeated but unverified one-month claim."
+  },
+  {
+    "id": "K212",
+    "category": "health",
+    "question": "Within what period after giving birth is a mother in Switzerland not allowed to return to work?",
+    "options": {
+      "A": "The first four weeks after the birth",
+      "B": "The first eight weeks after the birth",
+      "C": "The first twelve weeks after the birth",
+      "D": "The first six weeks after the birth"
+    },
+    "correct_answer": "B",
+    "source_id": "S024",
+    "source_url": "https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/",
+    "source_quote": "You are not allowed to return to work in the first eight weeks after the birth.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps confusion with the 14-week maternity leave itself and with the 16-week dismissal protection; 4/6/12 weeks are the plausible wrong figures."
+  },
+  {
+    "id": "K214",
+    "category": "health",
+    "question": "A mother in Switzerland extends her maternity leave by the two weeks available beyond the standard 14-week period. What does she receive for those two additional weeks?",
+    "options": {
+      "A": "Maternity allowance at half the usual rate",
+      "B": "The same maternity allowance as for the first 14 weeks",
+      "C": "Maternity allowance at 80% of earnings, capped at CHF 220 per day",
+      "D": "Nothing - no benefits are paid for the two additional weeks"
+    },
+    "correct_answer": "D",
+    "source_id": "S024",
+    "source_url": "https://www.ch.ch/en/family-and-partnership/maternity-and-paternity/maternity-leave/",
+    "source_quote": "You have the right to extend your maternity leave by two weeks beyond the standard 14-week period. However, you will not receive benefits for those two additional weeks.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps the 80%/CHF 220 allowance figures lifted from the standard maternity allowance rule; the extension is unpaid."
+  },
+  {
+    "id": "K216",
+    "category": "health",
+    "question": "Which group is not subject to the mandatory Swiss LPP/BVG occupational benefits scheme?",
+    "options": {
+      "A": "Salaried persons with a job contract of unlimited duration",
+      "B": "The self-employed",
+      "C": "Salaried persons working at least 50 per cent of full time for a company",
+      "D": "Salaried persons on contracts longer than three months"
+    },
+    "correct_answer": "B",
+    "source_id": "S023",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
+    "source_quote": "Certain groups of people are not subject to the mandatory scheme: the self-employed, salaried persons with a job contract that does not exceed three months, family members of a person operating an agricultural establishment in which they are employed, persons who are disabled to at least 70 % according to the provisions of the AI.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The other three exempt groups (short contracts, agricultural family members, 70 % disabled) are real exemptions, so a distractor naming any of them would also be defensible; instead the distractors name categories that ARE covered, which is what a non-expert would wrongly believe."
+  },
+  {
+    "id": "K217",
+    "category": "health",
+    "question": "Under the Swiss LPP/BVG, from what point are additional retirement savings made for an employee?",
+    "options": {
+      "A": "From the employee's 17th birthday",
+      "B": "From 1 January after the employee reaches the age of 20",
+      "C": "From 1 January after the employee reaches the age of 24",
+      "D": "From the employee's 18th birthday"
+    },
+    "correct_answer": "C",
+    "source_id": "S023",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
+    "source_quote": "The obligation to take out insurance sets in with gainful employment, after reaching 17 at the earliest. Until the employee reaches the age of 24, contributions only cover the risks of death and disability. From 1 January after the employee reaches the age of 24, additional savings are made for the retirement pension.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Traps the two other ages on the same passage (17 = entry into the scheme, 18 = entry into savings elsewhere framed), and the off-by-one of 'at 24' vs 'from the 1 January after 24'."
+  },
+  {
+    "id": "K218",
+    "category": "health",
+    "question": "How does the Swiss state contribute to the financing of second-pillar pension funds?",
+    "options": {
+      "A": "By paying a fixed share of each fund's annual expenditure",
+      "B": "By guaranteeing the conversion factor used when the accumulated capital is turned into a pension",
+      "C": "By paying a direct per-person annual subsidy into the fund of the person's employer",
+      "D": "Only indirectly, by granting tax exemption on the contributions and on second-pillar assets"
+    },
+    "correct_answer": "D",
+    "source_id": "S023",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
+    "source_quote": "The state contributes only indirectly to the financing of pension funds, by granting tax exemption on the contributions and 2nd pillar assets.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Traps the assumption that the state co-funds the second pillar like it does the first; tax exemption is the only state support the page describes."
+  },
+  {
+    "id": "K219",
+    "category": "health",
+    "question": "Under the collective financing principle of the LPP/BVG, what must an employer's contribution be?",
+    "options": {
+      "A": "At least equal to the sum of contributions paid by all the employees",
+      "B": "At least half of the sum of contributions paid by all the employees",
+      "C": "Equal to that individual employee's contribution and to no more",
+      "D": "Any amount agreed with the fund, provided it is disclosed in the fund's accounts"
+    },
+    "correct_answer": "A",
+    "source_id": "S023",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-provision-occupational-benefits-plan",
+    "source_quote": "The LPP/BVG is based on the principle of collective financing: the contribution of the employer must be at least equal to the sum of contributions paid by all the employees.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Traps the common belief that the employer pays exactly the employee's own share, and the 50/50-style split that belongs to OASI."
+  },
+  {
+    "id": "K222",
+    "category": "health",
+    "question": "Under the OASI, from when must a person resident in Switzerland pay contributions, and how does that differ for someone already in paid work?",
+    "options": {
+      "A": "From 1 January after turning 18 in all cases; for those already working, from 1 January of the year in which they turn 16",
+      "B": "From 1 January after turning 25 in all cases; for those already working, from 1 January of the year in which they turn 20",
+      "C": "From the age of 20, but only for those in paid employment; non-employed persons begin at 25",
+      "D": "From 1 January after turning 20; for those already working, from 1 January of the year in which they turn 18"
+    },
+    "correct_answer": "D",
+    "source_id": "S022",
+    "source_url": "https://www.bsv.admin.ch/en/old-age-insurance-system",
+    "source_quote": "If you live or work in Switzerland, you must pay OASI contributions from 1 January after you turn 20 until you reach the reference (retirement) age. If you are already working, this obligation begins on 1 January of the year in which you turn 18.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "Two-age item with an inverted rule: the working person starts EARLIER (18) than the general rule (20). Distractors transplant 16/20/25 and impose a paid-employment condition the page rejects."
+  },
+  {
+    "id": "K228",
+    "category": "health",
+    "question": "Once the annual deductible has been used up in Swiss compulsory health insurance, what share of healthcare costs does the insured person still pay?",
+    "options": {
+      "A": "Twenty per cent, capped at CHF 1,400 per year",
+      "B": "Ten per cent, capped at CHF 700 per year",
+      "C": "Ten per cent, with no annual cap",
+      "D": "Five per cent, capped at CHF 350 per year"
+    },
+    "correct_answer": "B",
+    "source_id": "S020",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-costs/",
+    "source_quote": "When the deductible has been used up you will still pay ten percent of your healthcare costs. However, this retention fee is limited to CHF 700 per year (CHF 350 for children).",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Two-figure item (coinsurance rate + annual cap). CHF 350 is the child cap, a confident wrong pick for an adult; 'no cap' is the other common misconception."
+  },
+  {
+    "id": "K230",
+    "category": "health",
+    "question": "Premiums for compulsory basic health insurance in Switzerland are lower for which group?",
+    "options": {
+      "A": "People over the age of 65",
+      "B": "Employees who work at least eight hours per week",
+      "C": "Insured persons who choose the CHF 2,500 deductible",
+      "D": "Children and young adults under the age of 25"
+    },
+    "correct_answer": "D",
+    "source_id": "S020",
+    "source_url": "https://www.ch.ch/en/health/health-insurance/health-insurance-costs/",
+    "source_quote": "Premiums are lower for children and young adults under the age of 25.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "Traps the pensionable-age intuition that premiums fall after 65, which is where most countries' premium relief goes."
+  },
+  {
+    "id": "K242",
+    "category": "geography",
+    "question": "In the Council of States, how many cantons are entitled to two seats?",
+    "options": {
+      "A": "6 cantons",
+      "B": "26 cantons",
+      "C": "20 cantons",
+      "D": "13 cantons"
+    },
+    "correct_answer": "C",
+    "source_id": "S026",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/",
+    "source_quote": "In the Council of States, 20 cantons are entitled to two seats.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Half-canton trap: models frequently answer 26 (one seat per canton is not the rule) or 6 (counting only the former half-cantons). 20 two-seat cantons plus 6 one-seat cantons is the structure behind the chamber's 46 seats."
+  },
+  {
+    "id": "K243",
+    "category": "geography",
+    "question": "Which of the following cantons is entitled to two seats in the Council of States?",
+    "options": {
+      "A": "Appenzell Innerrhoden",
+      "B": "Glarus",
+      "C": "Nidwalden",
+      "D": "Basel-Stadt"
+    },
+    "correct_answer": "B",
+    "source_id": "S026",
+    "source_url": "https://www.ch.ch/en/political-system/parliament/number-of-seats-in-parliament/",
+    "source_quote": "Two seats: Aargau, Bern, Freiburg, Geneva, Glarus, Graubünden, Jura, Luzern, Neuchâtel, Schaffhausen, Schwyz, Solothurn, St. Gallen, Thurgau, Ticino, Uri, Vaud, Valais, Zug, Zurich.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "All three distractors appear on the same page under 'One seat', so the item tests membership of the 20-canton list rather than the six half-cantons already asked at K080/K006. Glarus is one of the smallest cantons by population yet still holds two upper-chamber seats, which is the counter-intuitive point."
+  },
+  {
+    "id": "K249",
+    "category": "geography",
+    "question": "With which of Switzerland's other national languages does Romansh share a Latin origin?",
+    "options": {
+      "A": "Italian and French",
+      "B": "German and Italian",
+      "C": "German and French",
+      "D": "None — Romansh is Germanic in origin"
+    },
+    "correct_answer": "A",
+    "source_id": "S028",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/language-distribution/",
+    "source_quote": "Rumantsch, like Italian and French, is a language with Latin roots.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The strongest misconception trap in the language set: because Switzerland is majority-German-speaking, models place Romansh in the Germanic family. It groups with the Romance languages, not with German."
+  },
+  {
+    "id": "K254",
+    "category": "geography",
+    "question": "In the Swiss hierarchy of norms, what does the Federal Constitution take precedence over?",
+    "options": {
+      "A": "Cantonal constitutions only",
+      "B": "Federal laws adopted before the 1999 total revision",
+      "C": "Cantonal laws, but not communal ordinances",
+      "D": "All laws and ordinances of the Confederation, the cantons and the communes"
+    },
+    "correct_answer": "D",
+    "source_id": "S025",
+    "source_url": "https://www.ch.ch/en/political-system/operation-and-organisation-of-switzerland/federalism/",
+    "source_quote": "The Federal Constitution is the highest law of Switzerland. It takes precedence over all laws and ordinances of the Confederation, cantons and communes.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The three-level bite is what makes this hard: a federal constitution outranking not only federal statutes but cantonal and communal law too. Option A confuses constitutional rank with cantonal constitutional autonomy (tested at K255)."
+  },
+  {
+    "id": "K257",
+    "category": "geography",
+    "question": "Since when has Romansh been recognised in the Swiss Constitution as a national language?",
+    "options": {
+      "A": "1848",
+      "B": "1914",
+      "C": "1979",
+      "D": "1938"
+    },
+    "correct_answer": "D",
+    "source_id": "S047",
+    "source_url": "https://www.bk.admin.ch/en/romansh",
+    "source_quote": "Since 1938 Romansh has been recognised in the Swiss Constitution as a national language along with German, French and Italian.",
+    "language": "en",
+    "difficulty": "easy",
+    "notes": "1848 is the federal-state date and 1979 the admission of Jura; both are confident wrong picks. The four-national-language set itself is asked at K061."
+  },
+  {
+    "id": "K264",
+    "category": "geography",
+    "question": "Switzerland's commune count is falling through mergers, so published figures differ by publication date. In the undated CH Info brochure cited by the source file, into how many communes are the 26 cantons divided?",
+    "options": {
+      "A": "26 communes",
+      "B": "2,110 communes",
+      "C": "2,121 communes",
+      "D": "About 2,000 communes"
+    },
+    "correct_answer": "B",
+    "source_id": "S029",
+    "source_url": "https://www.ch-info.swiss/en/die-schweiz/foederalismus",
+    "source_quote": "The 26 cantons are divided into 2110 communes.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Tests whether the model attributes a commune count to its publication rather than treating it as a fixed fact. The corpus deliberately carries several snapshots: 2,110 here (undated CH Info), and 2,121 as of 1 January 2025 in K070 (SWI swissinfo.ch). Both are correct for their own publication; neither is the answer without the attribution. If a future revision of this corpus drops one of the two, drop the other too - two bare commune counts in one benchmark read as an internal contradiction."
+  },
+  {
+    "id": "K268",
+    "category": "geography",
+    "question": "Which of Switzerland's five neighbours shares the shortest stretch of border with it?",
+    "options": {
+      "A": "Austria",
+      "B": "Germany",
+      "C": "Liechtenstein",
+      "D": "France"
+    },
+    "correct_answer": "C",
+    "source_id": "S027",
+    "source_url": "https://www.myswitzerland.com/en-gb/planning/about-switzerland/general-facts/facts-about-switzerland/geography",
+    "source_quote": "Borders: altogether: 1852 km/Austria 164 km/France 573 km/Germany 334 km/Italy 740 km/Liechtenstein 41 km",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "Mirror image of K066, which asks for the longest border (Italy). Austria at 164 km is the confident wrong pick because it is the smallest of the 'big four'. Per-country border lengths vary with the measurement or border-survey basis, per the registry note."
+  },
+  {
+    "id": "K272",
+    "category": "history",
+    "question": "Following the defeat of Napoleon, what did the great European powers do to Switzerland's borders in 1815?",
+    "options": {
+      "A": "They extended them southward to include the whole of the canton of Ticino.",
+      "B": "They fixed them at the Rhine and the Alps, and added the principality of Vaduz.",
+      "C": "They granted Switzerland a permanent corridor to the Adriatic through the Gotthard.",
+      "D": "They set Switzerland's borders as they are today."
     },
     "correct_answer": "D",
     "source_id": "S050",
     "source_url": "https://ch-info.swiss/en/die-schweiz/geschichte",
-    "source_quote": "In 1907, the Hague Conventions set out in writing the rights and duties of neutral states for the first time.",
+    "source_quote": "With the defeat of Napoleon, the great European powers recognised Swiss neutrality and set Switzerland's borders as they are today.",
     "language": "en",
-    "difficulty": "easy",
-    "notes": "Replaces an earlier K120 (1815 / Congress of Vienna), which the drafting agent and the reviewer both flagged as well-known general knowledge rather than Swiss-specific knowledge. This item anchors Swiss neutrality in international law - which is the verified position, since neutrality was never codified in a Swiss statute. Distractors A and D are both real treaties that a model may reach for."
+    "difficulty": "medium",
+    "notes": "B is the Liechtenstein trap and conflates the 1815 settlement with Liechtenstein's 1806 entry into the French sphere; A and C are the 'Alpine fortress with an outlet' fantasy that models reach for. Borders AND neutrality were settled together in 1815, which is the point of the item."
+  },
+  {
+    "id": "K274",
+    "category": "history",
+    "question": "Under the 1907 Hague Conventions, what did neutral states owe in exchange for the inviolability of their territory?",
+    "options": {
+      "A": "The right to supply arms and troops to whichever belligerent paid for them.",
+      "B": "An obligation to grant belligerents the use of their airspace and ports.",
+      "C": "A duty to stay out of wars, to treat all belligerents equally, and not to supply them with arms or troops.",
+      "D": "A duty to enforce the peace settlement on both sides of the conflict."
+    },
+    "correct_answer": "C",
+    "source_id": "S050",
+    "source_url": "https://ch-info.swiss/en/die-schweiz/geschichte",
+    "source_quote": "In exchange for the inviolability of their territory, such countries were, among other things, bound to stay out of wars, to treat all belligerents equally and not to supply them with arms or troops.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "A and B treat neutrality as commerce and access, which is exactly the misunderstanding: neutrality is a reciprocity, not a trade. K120 asks which treaty first codified these rights; this item asks what the bargain was, so the two do not overlap. Quote comes from the swissinfo.ch page recorded in the S050 file."
+  },
+  {
+    "id": "K286",
+    "category": "history",
+    "question": "Which body did the Red Cross national societies found in 1919 as the future coordinating and support body of the Movement?",
+    "options": {
+      "A": "the International Federation of Red Cross and Red Crescent Societies",
+      "B": "the League of Nations' humanitarian commission",
+      "C": "the League of Red Cross Societies",
+      "D": "the International Committee of the Red Cross"
+    },
+    "correct_answer": "C",
+    "source_id": "S042",
+    "source_url": "https://www.icrc.org/en/document/history-icrc",
+    "source_quote": "In 1919, they founded the League of Red Cross Societies, intended as the future coordinating and support body for the Movement.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "The International Federation also dates from 1919, so A matches on the year and is the strongest trap in this item; the ICRC (D) appears in the same page and never founded it. This is the most confused corner of the Movement's institutional history and is a Swiss-specific fact rather than a European generality."
+  },
+  {
+    "id": "K287",
+    "category": "history",
+    "question": "How many agreements made up the first series of Swiss bilateral agreements with the EU, approved by voters in 2000?",
+    "options": {
+      "A": "9",
+      "B": "7",
+      "C": "12",
+      "D": "16"
+    },
+    "correct_answer": "B",
+    "source_id": "S041",
+    "source_url": "https://www.bk.admin.ch/dam/en/sd-web/9OAKySUiPAfR/buku2024.pdf",
+    "source_quote": "The first series of bilateral agreements was accepted by 67% of Swiss voters in 2000. The 7 agreements mainly cover economic matters.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "9 is the count for the second series of 2005, which contains Schengen-Dublin - the two series are routinely swapped, and K113 already used the second series. Switzerland's EU relations run on over 100 bilateral agreements, which invites a larger number than either series."
+  },
+  {
+    "id": "K292",
+    "category": "history",
+    "question": "In the sequence of Swiss constitutional development described by the Federal Chancellery, what stage came immediately before the federal state?",
+    "options": {
+      "A": "the Helvetian Republic",
+      "B": "a permanent Federal Diet representing 22 cantons",
+      "C": "a confederation of states",
+      "D": "an Austrian crown land under Habsburg administration"
+    },
+    "correct_answer": "C",
+    "source_id": "S038",
+    "source_url": "https://www.bk.admin.ch/dam/en/sd-web/9OAKySUiPAfR/buku2024.pdf",
+    "source_quote": "Switzerland developed over the centuries from a collection of different alliances to a confederation of states and finally to the federal state we know today.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "The three-stage sequence alliances then confederation of states then federal state is the point; A is the real 1798 interlude but not the immediate predecessor in this chain, and C and D are generic European-state inventions with no Swiss referent."
+  },
+  {
+    "id": "K295",
+    "category": "history",
+    "question": "Why did the surrounding German-speaking regions come to refer to all Swiss confederates by the name of a single canton?",
+    "options": {
+      "A": "Because Schwyz was the largest of the three founding cantons.",
+      "B": "Because Uri was the seat of the Federal Diet and issued the earliest federal charters.",
+      "C": "Because the Schwyzers were famous for their role in the Waldstätte Alliance and for their mercenary troops.",
+      "D": "Because Unterwalden supplied the largest contingent to the Swiss armies serving abroad."
+    },
+    "correct_answer": "C",
+    "source_id": "S037",
+    "source_url": "https://www.bar.admin.ch/en/the-confederation-before-1798",
+    "source_quote": "The Schwyzer, or Switzers, soon became well known far and wide thanks to the significant role they played in the Waldstätte Alliance and the importance of their troops as mercenaries. As a result, the surrounding German-speaking regions started to refer to all confederates as “Schwyzer”.",
+    "language": "en",
+    "difficulty": "hard",
+    "notes": "A is the natural-sounding wrong answer: Schwyz is the canton named, but the source credits role and mercenaries, not size, and the etymology runs from “Schwyzer” to “Schweizer”. C and D attach the distinction to the other two founding cantons. K101 already used the 1291 alliance from this page, so this is a different fact from the same source."
+  },
+  {
+    "id": "K296",
+    "category": "history",
+    "question": "Swiss mercenary service was outlawed in connection with which event?",
+    "options": {
+      "A": "the Congress of Vienna of 1815",
+      "B": "the proclamation of the Helvetian Republic in 1798",
+      "C": "the founding of the Federal State",
+      "D": "the adoption of the first Geneva Convention in 1864"
+    },
+    "correct_answer": "C",
+    "source_id": "S037",
+    "source_url": "https://www.bar.admin.ch/en/the-confederation-before-1798",
+    "source_quote": "The mercenaries had their heyday between the 15th and 18th century before being outlawed with the founding of the Federal State.",
+    "language": "en",
+    "difficulty": "medium",
+    "notes": "A and B are the two big Swiss constitutional turning points and both are wrong here; D is a Swiss-adjacent date that appears on a different page entirely. The same sentence dates the heyday to the 15th to 18th century, so the two halves of the fact travel together."
   }
 ]

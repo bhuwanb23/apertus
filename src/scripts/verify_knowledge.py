@@ -22,6 +22,15 @@ DRAFTS = ROOT / "data" / "knowledge" / "drafts"
 RAW = ROOT / "data" / "sources" / "raw_pages"
 REGISTRY = ROOT / "data" / "sources" / "source_registry.csv"
 
+DECLARED_BORROWS = {
+    # The registry files these under `privacy`, which is not one of the six
+    # knowledge categories. Data protection and public-space video surveillance
+    # are legal subject matter, so the items are classified `law`. Declaring the
+    # borrow documents the decision instead of warning on every run; an
+    # undeclared mismatch still surfaces.
+    ("privacy", "law"),
+}
+
 REQUIRED_KEYS = {
     "id", "category", "question", "options", "correct_answer",
     "source_id", "source_url", "source_quote", "language", "difficulty", "notes",
@@ -263,8 +272,17 @@ for q in questions:
     elif norm(quote) not in page["norm"]:
         err("QUOTE", f"{qid}: source_quote NOT found verbatim in {page['path'].name} ({sid})")
 
-    if registry[sid]["category"] != q["category"]:
-        warn("SRC", f"{qid}: category '{q['category']}' != registry category '{registry[sid]['category']}' for {sid}")
+    # A source may be filed in the registry under a topic that is not one of the six
+    # knowledge categories. The registry's `privacy` rows - data protection and
+    # public-space video surveillance - are legal subject matter, so their items
+    # are classified `law`. Declaring the borrow means a deliberate cross-filing
+    # is documented rather than warned about on every run, while an UNdeclared
+    # mismatch still surfaces. Add to this map when a new borrow is intended;
+    # do not silence the warning.
+    reg_cat = registry[sid]["category"]
+    if reg_cat != q["category"] and (reg_cat, q["category"]) not in DECLARED_BORROWS:
+        warn("SRC", f"{qid}: category '{q['category']}' != registry category "
+                    f"'{reg_cat}' for {sid} and the borrow is not declared")
 
 # ------------------------------------------------------------ 4. option sanity
 for q in questions:
