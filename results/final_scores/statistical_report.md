@@ -1,6 +1,6 @@
 # Statistical report — Swiss Reality Check
 
-Generated 2026-10-17T08:02:25+00:00 by `eval/statistical_report.py`, git `0664af1709b3`.
+Generated 2026-10-17T14:02:28+00:00 by `eval/statistical_report.py`, git `ce6a334b10f8`.
 
 Split: **held-out test set**. α = 0.05. Judge: `8b`  — **self-judged**, disclosed per `values_rubric.md` §5.
 
@@ -60,6 +60,50 @@ Reported side by side and **not ranked** — picking the best of six is selectio
 
 > **The `8b` values arm is self-judged** — the judge and the model under test are the same weights. Disclosed per `values_rubric.md` §5.
 
+## Open-ended factuality (three-way grading)
+
+The multiple-choice arm cannot measure hallucination: with four options presented, a confident wrong answer and a refusal both score zero, so there is nothing to distinguish. This arm removes the options and grades each answer **correct / incorrect / not_attempted** against the reference passage, SimpleQA-style. Sealed n=90, prompt `openqa-1.0`, model `8b`.
+
+| Arm | factuality | hallucination | abstention | correct / incorrect / not attempted |
+|---|---|---|---|---|
+| Baseline (no context) | 43.8% | 56.2% | 46.7% | 21 / 27 / 42 |
+| BM25 RAG | 87.4% | 12.6% | 3.3% | 76 / 11 / 3 |
+
+Factuality is `correct / (correct + incorrect)` and hallucination is `incorrect / (correct + incorrect)` — both over **attempted** answers only, so a model cannot raise factuality by refusing everything. Abstention is `not_attempted / all`. The baseline attempted only **48** of 90 items; the RAG arm attempted **87**.
+
+**What this shows that the MCQ arm cannot.** Asked open-ended, the same model hallucinates on **56.2%** of the questions it chooses to attempt and declines a further **42** of 90 outright. Multiple-choice accuracy systematically overstates what this model knows, because the options guarantee it always has something to answer with.
+
+Paired across the same 90 items: **56** answers became correct, **1** were lost (net +55, McNemar p=0.0).
+
+`newly_abstained = 0` is reported beside that gain deliberately. A retrieval arm can lower the hallucination rate merely by refusing more, which is arithmetically identical to improving and is worse behaviour. Here the whole reduction comes from answers becoming **right**: 39 items moved *out* of refusal, and none moved into it.
+
+Paired transitions (baseline → RAG):
+
+| from → to | items |
+|---|---|
+| correct->correct | 20 |
+| correct->incorrect | 1 |
+| incorrect->correct | 25 |
+| incorrect->incorrect | 2 |
+| not attempted->correct | 31 |
+| not attempted->incorrect | 8 |
+| not attempted->not attempted | 3 |
+
+Per category, RAG arm:
+
+| category | factuality | hallucination | abstention |
+|---|---|---|---|
+| geography | 86.7% | 13.3% | 0.0% |
+| health | 86.7% | 13.3% | 0.0% |
+| history | 100.0% | 0.0% | 0.0% |
+| law | 84.6% | 15.4% | 13.3% |
+| politics | 80.0% | 20.0% | 0.0% |
+| services | 85.7% | 14.3% | 6.7% |
+
+**Judge.** The grader is the same Apertus 8B under test — self-judged, and disclosed as such. Abstention is decided by a deterministic rule *before* the judge is called, so the judge only ever grades genuine attempts (42 baseline and 3 RAG responses were withheld from it as refusals). A judge that never answered INCORRECT would report a hallucination rate of exactly 0.0% — a perfect-looking headline meaning nothing — so the test suite asserts it reaches both verdicts on the sealed set, and a probe confirmed it separates a true answer from a distractor.
+
+**Human cross-check: not started.** 9 stratified judge verdicts await a human reviewer; no agreement rate is reported until the sheet is filled in.
+
 ## Human verification of the knowledge key
 **not started** — no human has verified a sample of the knowledge items. Run `python src/scripts/human_worksheet.py knowledge --build`, answer the sheet, then `--score`.
 
@@ -78,8 +122,8 @@ Not yet performed. The knowledge items are graded by exact letter match against 
 
 ## Reproducibility
 
-- Git commit: `0664af1709b35363b5882feea89ae816a7c17ebf`
+- Git commit: `ce6a334b10f8f4eee29259dff594b921d9fde816`
 - Seed: 42 · Temperature: 0.0 · Prompt version: 1.0
-- Sealed test set SHA-256: `83c20589e1c5b668fabcdafb0a09c1d2…`
+- Sealed test set SHA-256: `d00c8cf8548fd5597f225f16c8435755…`
 - Raw responses and per-arm metadata: `results/test_run/`
 - Machine-readable statistics: `results/final_scores/test_scores.json`

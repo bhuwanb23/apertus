@@ -43,7 +43,7 @@ SUITES: list[str] = [
     "src/eval/test_judge.py",
     "src/eval/test_dialect.py",
     "src/eval/test_baseline_report.py",
-    "src/eval/test_openqa.py",
+    "src/scripts/test_openqa.py",
     "src/eval/smoke_test.py",
     "src/scripts/test_dockerfile.py",
 ]

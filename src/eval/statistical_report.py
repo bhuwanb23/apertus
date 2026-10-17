@@ -456,6 +456,30 @@ def _judge_used() -> str:
     return config.judge_model
 
 
+def _oq_summary() -> dict:
+    """The open-ended arm's own summary. Never raises: a missing arm is a status."""
+    try:
+        from openqa_report import summary
+        return summary()
+    except (ImportError, OSError, json.JSONDecodeError, KeyError) as e:
+        return {"status": "unavailable", "detail": str(e)}
+
+
+def openqa_report_lines() -> list[str]:
+    """Markdown section for the open-ended arm, rendered by openqa_report."""
+    from openqa_report import markdown
+    return markdown(_oq_summary())
+
+
+def _oq_console() -> list[str]:
+    """Console lines for the open-ended arm, indented to match this report."""
+    try:
+        from openqa_report import console
+        return ["  " + line for line in console(_oq_summary())]
+    except (ImportError, OSError, json.JSONDecodeError, KeyError) as e:
+        return [f"  OPEN-ENDED FACTUALITY: unavailable - {e}"]
+
+
 def knowledge_human_agreement() -> dict:
     """Human-vs-key agreement on the knowledge items, if it has been done.
 
@@ -781,6 +805,19 @@ def write_report(s: dict, path: Path | None = None) -> Path:
               f"per `values_rubric.md` §5.")
             A("")
 
+    # The open-ended arm renders itself: different grading model (three-way judge,
+    # not letter match), no shared code with the sections above. Keeping it out
+    # here is what stops this file growing past a readable size.
+    try:
+        for _line in openqa_report_lines():
+            A(_line)
+        A("")
+    except (ImportError, OSError, json.JSONDecodeError) as e:
+        A("## Open-ended factuality (three-way grading)")
+        A("")
+        A(f"**unavailable** — {e}")
+        A("")
+
     kh = knowledge_human_agreement()
     A("## Human verification of the knowledge key")
     if kh["status"] == "complete":
@@ -909,6 +946,8 @@ def main() -> int:
                 print(f"  NOTE: human verification of the knowledge key is "
                       f"{kh['status']}. The report says so rather than "
                       f"carrying a placeholder for it.")
+            for line in _oq_console():
+                print(line)
         mocks = [m for m in models
                  if s["knowledge"].get(m, {}).get("baseline_meta", {}).get("is_mock")]
         if mocks:

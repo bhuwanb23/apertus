@@ -58,6 +58,12 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = next(p for p in HERE.parents if (p / "data").is_dir() and (p / "Makefile").is_file())
+sys.path.insert(0, str(HERE))
+# paired() borrows the project's existing McNemar implementation rather than
+# writing a second one. It lives in src/fix, so that path is added here rather
+# than relying on every caller to have done it - which is why importing this
+# module standalone used to fail only at call time.
+sys.path.insert(0, str(ROOT / "src" / "fix"))
 
 CORRECT = "correct"
 INCORRECT = "incorrect"
