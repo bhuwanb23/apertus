@@ -123,11 +123,23 @@ def git_dirty() -> bool:
         return False
     lines = [ln for ln in out.splitlines() if ln.strip()]
     # Drop the seal's own bookkeeping, modified or untracked, e.g.
-    # " M eval/seal/frozen_code.json" / "?? eval/seal/frozen_code.json".
+    # " M src/eval/seal/frozen_code.json".
+    #
+    # The prefix is derived from SEAL_DIR rather than written out, because the
+    # literal "eval/seal/" stopped matching when the project moved from
+    # track_1b/src/eval/ to src/eval/. The failure mode is nasty and silent: the
+    # freeze record made the tree dirty, so check_freeze() reported NO forever
+    # and a one-shot measurement could never be recorded as clean.
+    try:
+        seal_prefix = str(SEAL_DIR.relative_to(ROOT)).replace("\\", "/") + "/"
+    except ValueError:
+        seal_prefix = str(SEAL_DIR).replace("\\", "/").rstrip("/") + "/"
+
     def _is_seal_bookkeeping(line: str) -> bool:
         path = line[2:].strip() if len(line) > 2 else ""
         path = path.strip('"').replace("\\", "/")
-        return path.startswith("eval/seal/")
+        return path.startswith(seal_prefix)
+
     material = [ln for ln in lines if not _is_seal_bookkeeping(ln)]
     return bool(material)
 
