@@ -49,13 +49,29 @@ def check(label, got, expected):
 
 
 # --------------------------------------------------------------- fixtures
+def _dev_n() -> int:
+    """Size of the real dev split.
+
+    The "healthy full-dev run" fixture must be the same size as the split
+    baseline_report.py compares against, or baseline_report correctly classifies
+    it as a PARTIAL run and takes a different branch than the one under test.
+    That check reads the split for its threshold rather than hardcoding 84, so
+    the fixture has to follow it.
+    """
+    import json as _json
+    return len(_json.loads(
+        config.data_path("knowledge", "knowledge_dev.json").read_text(encoding="utf-8")))
+
+
 def _scores(**over):
     """A healthy full-dev knowledge score block; override one field at a time."""
+    n = _dev_n()
+    per = n // len(CATEGORIES)
     s = {
-        "overall": 55.0, "total_questions": 84, "correct": 46,
+        "overall": 55.0, "total_questions": n, "correct": int(n * 0.55),
         "parse_errors": 0, "parse_error_rate": 0.0, "api_errors": 0,
         "chance_level": 25.0,
-        "by_category": {c: {"accuracy": 55.0, "correct": 8, "total": 14}
+        "by_category": {c: {"accuracy": 55.0, "correct": int(per * 0.55), "total": per}
                         for c in CATEGORIES},
         "by_difficulty": {}, "by_correct_answer": {},
         "backend": "http", "is_mock": False,
@@ -244,9 +260,10 @@ def test_failure_modes() -> int:
 
     # -- a dropped category is caught
     _clean()
-    # a FULL run (n=84) whose breakdown is missing a category. n must stay 84,
-    # or the partial-run branch takes over and the full-run rule never fires.
-    bad = _scores(total_questions=84)
+    # a FULL run whose breakdown is missing a category. The size must equal the
+    # real dev split, or baseline_report correctly classifies this as a PARTIAL
+    # run and the full-run category rule under test never fires.
+    bad = _scores(total_questions=_dev_n())
     bad["by_category"] = {c: v for c, v in bad["by_category"].items() if c != "history"}
     _write("8b", scores=bad)
     r = _run_report()
@@ -256,9 +273,14 @@ def test_failure_modes() -> int:
     # -- aggregation that loses rows
     _clean()
     lost = _scores()
-    lost["by_category"] = {c: {"accuracy": 50.0, "correct": 7, "total": 14}
+    per = _dev_n() // len(CATEGORIES)
+    lost["by_category"] = {c: {"accuracy": 50.0, "correct": int(per * 0.5), "total": per}
                            for c in CATEGORIES}
-    _write("8b", scores=lost)   # 6x14 = 84, so this one is fine...
+    # The categories still sum to the full run, so this is NOT a row-loss
+    # scenario - the check below is the one that must still pass. The totals
+    # must track the real split size or baseline_report treats the run as
+    # partial and the row-loss rule is not reached.
+    _write("8b", scores=lost)
     r = _run_report()
     check("fp/row loss detected when it happens",
           r.get("8B: no rows dropped in aggregation"), "PASS")
