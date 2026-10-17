@@ -683,6 +683,23 @@ def main() -> int:
     for name, path in written:
         fname = Path(path).name
         lines.append(f"- **{name.replace('_', ' ')}** — `{fname}`")
+
+    # The open-ended figure lives in this directory but is built by its own
+    # module, because it is not an accuracy chart: it is three rates whose
+    # denominators differ. It is listed here from whatever is actually on disk
+    # rather than hard-coded, so this index cannot claim a figure that is absent
+    # and cannot silently drop one that is present - an earlier version of this
+    # README overwrote the mention on every regeneration.
+    oq = CHARTS / "openqa_factuality.svg"
+    if oq.is_file():
+        lines.append("- **openqa factuality** — `openqa_factuality.svg`")
+        lines += ["",
+                  "The figures above come from `generate_charts.py`. "
+                  "`openqa_factuality.svg` is built by "
+                  "`python src/eval/openqa_chart.py`; its PNG twin for the "
+                  "submission PDF comes from `python src/scripts/openqa_asset.py`, "
+                  "which cross-checks both renderings and fails if they disagree."]
+
     if mocks:
         lines += ["", "> **Mock data.** These figures were generated from "
                   "synthetic responses and are watermarked. They are not results."]
