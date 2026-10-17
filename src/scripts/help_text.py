@@ -53,11 +53,34 @@ def interpreter() -> str:
     return "python3"
 
 
+def suite_count() -> int:
+    """Read the suite count from the runner.
+
+    This was the literal 13, in this file and in the Makefile header, while the
+    list itself grew. A stated count that is not derived from the list is the
+    same defect as a hardcoded figure in a chart: it goes stale silently and
+    nobody notices until someone counts.
+    """
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from run_suites import SUITES
+        return len(SUITES)
+    except Exception:
+        return 0
+
+
 def main() -> int:
-    w = max(len(t) for t, _ in TARGETS)
-    print("\n  Swiss Reality Check \u2014 Hack Apertus, Track 1B")
+    n = suite_count()
+    targets = list(TARGETS)
+    targets = [
+        (name, f"every automated check ({n} suites)" if name == "make test" else desc)
+        for name, desc in targets
+    ]
+
+    w = max(len(t) for t, _ in targets)
+    print("\n  Swiss Reality Check — Hack Apertus, Track 1B")
     print("\n  available targets:")
-    for name, desc in TARGETS:
+    for name, desc in targets:
         print(f"    {name:<{w}}  {desc}")
 
     py = interpreter()

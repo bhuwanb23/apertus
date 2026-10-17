@@ -1,6 +1,6 @@
 # Statistical report — Swiss Reality Check
 
-Generated 2026-10-17T07:47:46+00:00 by `eval/statistical_report.py`, git `1b6e0e8cd02c`.
+Generated 2026-10-17T07:49:53+00:00 by `eval/statistical_report.py`, git `197d77f765cf`.
 
 Split: **held-out test set**. α = 0.05. Judge: `8b`  — **self-judged**, disclosed per `values_rubric.md` §5.
 
@@ -74,7 +74,7 @@ Reported side by side and **not ranked** — picking the best of six is selectio
 
 ## Reproducibility
 
-- Git commit: `1b6e0e8cd02ce38f27be0520eff971ef20f6e9b2`
+- Git commit: `197d77f765cf6c1db3d5949d002c6c18493122e3`
 - Seed: 42 · Temperature: 0.0 · Prompt version: 1.0
 - Sealed test set SHA-256: `83c20589e1c5b668fabcdafb0a09c1d2…`
 - Raw responses and per-arm metadata: `results/test_run/`

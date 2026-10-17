@@ -3,7 +3,7 @@
 #
 #   make run         spin the project up in Docker  (this is what judges run)
 #   make verify      run the verification suite locally, no Docker, no model
-#   make test        every automated check (13 suites)
+#   make test        every automated check
 #   make shell       a container with the project mounted, for poking around
 #   make clean       remove build artefacts
 #
@@ -51,6 +51,25 @@ _PROBE_PY3 := $(shell python3 --version 2>&1)
 _PROBE_PY  := $(shell python  --version 2>&1)
 _OK_PY3    := $(findstring 3.,$(_PROBE_PY3))
 _OK_PY     := $(findstring 3.,$(_PROBE_PY))
+
+# An explicit PYTHON=... on the command line always wins -- except when it names
+# something known to be broken, because then nothing can report it.
+#
+# src/scripts/check_interp.py explains this failure properly, but it runs *through*
+# $(PYTHON): if that is the Store stub, the explanation cannot execute either, and
+# the user gets the raw "install from the Microsoft Store" text with no mention of
+# the Makefile. $(error) fires at parse time, needs no shell, and therefore needs
+# no working interpreter.
+_PROBE_PY_LAUNCHER := $(shell py --version 2>&1)
+_OK_LAUNCHER       := $(findstring 3.,$(_PROBE_PY_LAUNCHER))
+
+ifeq ($(origin PYTHON),command line)
+  ifeq ($(PYTHON),python3)
+    ifeq ($(_OK_PY3),)
+      $(error PYTHON=python3 was requested, but `python3` is not a working interpreter here. On Windows it is normally a Microsoft Store alias stub: on PATH, not a Python, and it fails with "The system cannot find the path specified." rather than anything naming Python. Retry with a real one - `make help` prints the one this Makefile detected.)
+    endif
+  endif
+endif
 
 # An explicit PYTHON=... on the command line always wins.
 ifeq ($(origin PYTHON),undefined)
