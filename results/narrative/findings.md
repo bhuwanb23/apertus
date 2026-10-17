@@ -1,6 +1,6 @@
 # Key Findings — Swiss Reality Check
 
-*Generated 2026-10-17T06:22:37+00:00 by `eval/narrative.py` from measured data · git `9069712e680d`*
+*Generated 2026-10-17T07:09:11+00:00 by `eval/narrative.py` from measured data · git `534ed230e1e9`*
 
 > **Read this first.** Every number below was computed by the code in this repository
 > and is traceable to a run. There are no placeholders, and no claim appears that
@@ -9,7 +9,7 @@
 
 > ## Model data — every accuracy figure below is from a live run
 >
-> The sealed test set was opened **45 times** according to the append-only log - 9 of the baseline arm and 36 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Latest arm: 2026-10-16T03:35:15+00:00, backend `http`, `is_mock: false`.
+> The sealed test set was opened **53 times** according to the append-only log - 9 of the baseline arm and 44 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Latest arm: 2026-10-17T06:59:59+00:00, backend `http`, `is_mock: false`.
 > Arms scored: `8b`. Accuracy, deltas and intervals
 > come from `eval/statistical_report.py`; the per-item rows are in `eval/results/test_run/`.
 > The findings that hold *without* a model are in §3.1–§3.4, and they do not depend on this run.
@@ -48,7 +48,7 @@ Two properties matter more than the counts:
   plausible-sounding invention. That is what makes an error diagnosable rather
   than merely wrong.
 - **The split is stratified and sealed.** 84 dev / 36 test, split on `(category, difficulty)`
-  with a fixed seed. The sealed test set was opened **45 times** according to the append-only log - 9 of the baseline arm and 36 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Every individual access is listed by `python src/eval/seal.py audit`.
+  with a fixed seed. The sealed test set was opened **53 times** according to the append-only log - 9 of the baseline arm and 44 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full. Every individual access is listed by `python src/eval/seal.py audit`.
 
 ## Act 3 — What was actually found
 
@@ -59,11 +59,11 @@ against. That makes retrieval quality a **ground-truth metric requiring no model
 
 | retrieved chunks | source containing the answer |
 |---|---|
-| top-1 | **83.3%** |
-| top-3 | **90.5%** |
-| top-5 | **94.0%** |
+| top-1 | **82.4%** |
+| top-3 | **91.4%** |
+| top-5 | **92.9%** |
 
-Measured over all 84 dev items against 189 corpus chunks, using **pure-Python BM25 with zero
+Measured over all 210 dev items against 189 corpus chunks, using **pure-Python BM25 with zero
 third-party dependencies** — no sentence-transformers, no GPU.
 
 The consequence is concrete: **the dense retriever was not worth installing.**
@@ -78,14 +78,14 @@ The improvement proposed for this project was a system prompt listing Swiss
 facts: 26 cantons, 100,000 signatures, suffrage in 1971, the Federal Supreme
 Court in Lausanne. It reads like a good prompt.
 
-Measured against the dev split, that text answers **25 of 84 items (30%)**.
+Measured against the dev split, that text answers **67 of 210 items (32%)**.
 
 So a large part of any "improvement" from that prompt would be **the answer
 key placed in the prompt**, not a change in what the model knows. And it
 would not transfer: the held-out set is scored once, and a delta bought this
 way does not reproduce on questions the prompt does not name.
 
-The prompt that ships instead carries **behavioural rules only — 0/84 contamination** — and
+The prompt that ships instead carries **behavioural rules only — 0/210 contamination** — and
 `fix/prompts_check.py` enforces that as a gate that *raises*, re-running at the
 start of every evaluation so an edit between review and run cannot slip through.
 
@@ -120,16 +120,16 @@ set, and it is the easiest way to manufacture a clean-looking result here.
 
 ### 3.5 What Apertus actually did on the sealed test set
 
-**Apertus 1.5 8B, n=36.** Both arms answer the same
+**Apertus 1.5 8B, n=90.** Both arms answer the same
 items with the same scorer, so this is a paired comparison and the test is
 exact McNemar.
 
 | arm | accuracy | 95% interval (Wilson) |
 |---|---|---|
-| Baseline, no retrieval | **55.6%** (20/36) | [39.6%, 70.5%] |
-| Improved, retrieval-augmented | **86.1%** (31/36) | [71.3%, 93.9%] |
+| Baseline, no retrieval | **51.1%** (46/90) | [41.0%, 61.2%] |
+| Improved, retrieval-augmented | **86.7%** (78/90) | [78.1%, 92.2%] |
 
-**Delta +30.6 pp**, exact 95% interval [+13.1%, +30.6%]: **11 items improved, 0 regressed**, McNemar p = 0.001 (below p < 0.05).
+**Delta +35.6 pp**, exact 95% interval [+25.1%, +39.5%]: **34 items improved, 2 regressed**, McNemar p = 0.0 (below p < 0.05).
 
 All 6 of the 6 categories moved in the same direction — none of them backwards. None is individually
 significant, and §3.4 is the arithmetic for why: at n=6 per category a clean sweep is
@@ -152,11 +152,11 @@ The intervention is retrieval-augmented generation: before answering, the model
 receives the most relevant passages from the harvested Swiss corpus, with each passage
 labelled by source so a reader can see where it came from.
 
-Retrieval quality is **94.0% at k=5** (§3.1), measured against ground truth rather
+Retrieval quality is **92.9% at k=5** (§3.1), measured against ground truth rather
 than judged. That is the strong part of this section.
 
 **On the sealed test set the effect is established.** Retrieval-augmented generation
-moved accuracy by **+30.6 pp** (11 improved, 0 regressed, exact McNemar p = 0.001)
+moved accuracy by **+35.6 pp** (34 improved, 2 regressed, exact McNemar p = 0.0)
 — comfortably past the floor in §3.4, which is what makes it a result rather than a
 fluctuation.
 
@@ -185,14 +185,14 @@ order of how well they are supported:
    the missing ingredient precisely enough to fix it with a retriever rather than a
    larger model.
 2. **The obvious fix is usually contaminated.** A system prompt of Swiss facts
-   answered 30% of the dev split. Any country-specific benchmark
+   answered 32% of the dev split. Any country-specific benchmark
    built this way will measure its own prompt. Checking takes one function call and should
    be standard practice.
 3. **Know your detection floor before you measure.** At n=36 a real effect of +16.7 pp
    is indistinguishable from noise, and at n=6 per category *nothing* is. Benchmarks
    that report deltas without their floor are reporting noise as progress.
-4. **Report the interval, not just the point estimate.** The measured delta was +30.6 pp with an exact 95%
-   interval of [{_f(p['delta_ci_lower'], signed=True)}, +30.6%] — a range that excludes zero, which is the whole
+4. **Report the interval, not just the point estimate.** The measured delta was +35.6 pp with an exact 95%
+   interval of [{_f(p['delta_ci_lower'], signed=True)}, +39.5%] — a range that excludes zero, which is the whole
    claim. Note also what the comparison does *not* say: one model, one benchmark, one shot.
 
 The benchmark, the corpus, the evaluation harness, the error taxonomy and the RAG
@@ -202,7 +202,7 @@ to any small-n evaluation, in any language, for any model.
 
 ## Limitations
 
-1. **One model, one benchmark, one shot that was not one shot.** The sealed test set was opened **45 times** according to the append-only log - 9 of the baseline arm and 36 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full.
+1. **One model, one benchmark, one shot that was not one shot.** The sealed test set was opened **53 times** according to the append-only log - 9 of the baseline arm and 44 of the improved arm - which is more openings than the single-shot design intends. Decoding was greedy (temperature 0.0, fixed seed) and nothing was tuned between runs, so the repeats were reproduction attempts rather than a search over attempts; they are **not** bit-exact, because a long greedy decode on a GPU is subject to run-to-run reduction order. **Disclosures** in `eval/README.md` quantify the drift on the dev split and state this in full.
    Scored for Apertus 1.5 8B. Nothing here separates a
    Swiss-specific effect from a general small-model effect, and nothing here would survive a
    second look at the same items.
@@ -230,10 +230,10 @@ to any small-n evaluation, in any language, for any model.
 
 ## Reproducibility
 
-- Git commit `9069712e680d81e8a58fc48683678a785c002942`
-- Sealed test set SHA-256 `df819e8c1582902a23197ed2aa4ab2e9…` (recorded in `eval/seal/`)
+- Git commit `534ed230e1e97eb7de4dcf71844b9150d9bc465d`
+- Sealed test set SHA-256 `83c20589e1c5b668fabcdafb0a09c1d2…` (recorded in `eval/seal/`)
 - Seed 42 · temperature 0.0 · prompt version 1.0 · judge `8b`
 - Every access to the sealed test set is in an append-only log: `python src/eval/seal.py audit`
 - Scenario selected by the data, not by hand: **A — Strong improvement**
-  - significant paired gains of up to +30.6 pp
+  - significant paired gains of up to +35.6 pp
 
