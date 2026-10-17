@@ -354,6 +354,36 @@ def test_mock_watermarked() -> None:
     print("   mock arms watermarked; model-free fig4 correctly is not")
 
 
+def test_index_lists_every_figure_present() -> None:
+    """
+    The charts index must list every .svg in the directory.
+
+    It used to be generated from the list of figures THIS run happened to write,
+    so a partial run silently rewrote the index to its own successes and deleted
+    every other figure from it while the files stayed on disk. That is not
+    hypothetical: figs 1-3 need statistical_report.compute() to find the archived
+    arms, while fig4 recomputes from the corpus alone, so a short compute() left
+    an index naming fig4 only.
+
+    The index describes a directory, so it has to be derived from the directory.
+    """
+    print("\n[10] the charts index is complete")
+    index = ROOT / "results" / "charts" / "README.md"
+    svgs = sorted(p.name for p in (ROOT / "results" / "charts").glob("*.svg"))
+    check(bool(svgs), "there are figures to index", f"{len(svgs)} found")
+    if index.is_file() and svgs:
+        text = index.read_text(encoding="utf-8")
+        missing = [f for f in svgs if f not in text]
+        check(not missing, "every figure on disk appears in the index",
+              f"missing: {missing}")
+        # And the reverse: the index must not invent figures.
+        listed = set(re.findall(r"`([^`]+\.svg)`", text))
+        invented = sorted(listed - set(svgs))
+        check(not invented, "the index names no figure that is absent",
+              f"invented: {invented}")
+    print("   index derived from the directory, not from one run's successes")
+
+
 # ============================================ 8-9. numbers agree with the stats
 def test_charts_agree_with_statistics() -> None:
     section("8-9. Chart numbers agree with the statistics module")
@@ -418,6 +448,7 @@ def main() -> int:
                test_no_heatmap,
                test_no_ranking,
                test_mock_watermarked,
+               test_index_lists_every_figure_present,
                test_charts_agree_with_statistics):
         try:
             fn()

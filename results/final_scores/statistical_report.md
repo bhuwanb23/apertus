@@ -1,6 +1,6 @@
 # Statistical report — Swiss Reality Check
 
-Generated 2026-10-17T14:21:27+00:00 by `eval/statistical_report.py`, git `2744f19d4907`.
+Generated 2026-10-17T14:30:25+00:00 by `eval/statistical_report.py`, git `ad5b4aaa6795`.
 
 Split: **held-out test set**. α = 0.05. Judge: `8b`  — **self-judged**, disclosed per `values_rubric.md` §5.
 
@@ -122,7 +122,7 @@ Not yet performed. The knowledge items are graded by exact letter match against 
 
 ## Reproducibility
 
-- Git commit: `2744f19d4907079e3f51ea637d4c9e47fc066013`
+- Git commit: `ad5b4aaa6795d5db7ba51e73050f8838f83de891`
 - Seed: 42 · Temperature: 0.0 · Prompt version: 1.0
 - Sealed test set SHA-256: `d00c8cf8548fd5597f225f16c8435755…`
 - Raw responses and per-arm metadata: `results/test_run/`

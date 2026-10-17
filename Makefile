@@ -4,7 +4,8 @@
 #   make run         spin the project up in Docker  (this is what judges run)
 #   make verify      run the verification suite locally, no Docker, no model
 #   make test        every automated check
-#   make shell       a container with the project mounted, for poking around
+#   make shell       a container on the IMAGE copy, for poking around
+#                   (use `make run-mount` to mount the working tree instead)
 #   make clean       remove build artefacts
 #
 # `make run` must work on a clean checkout with no configuration at all, so it

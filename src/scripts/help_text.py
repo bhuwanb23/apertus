@@ -26,13 +26,32 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 
+
+def _suite_count() -> int:
+    """
+    The number of registered suites, read from run_suites rather than typed.
+
+    This used to be a literal and said "13 suites" while the project ran 15, so
+    `make help` - the first thing anyone runs - understated the checks by two.
+    A count that only changes when someone remembers to edit a string is not a
+    count.
+    """
+    try:
+        sys.path.insert(0, str(ROOT / "src" / "scripts"))
+        from run_suites import SUITES
+        return len(SUITES)
+    except Exception:
+        return 0
+
+
 TARGETS = [
     ("make run", "spin up in Docker (offline; add LLM_BASE_URL for live)"),
     ("make build", "build the image without running"),
     ("make verify", "offline verification, no Docker, no model"),
     ("make verify-test", "held-out seal pre-flight only"),
-    ("make test", "every automated check (13 suites)"),
-    ("make shell", "container with the project mounted"),
+    ("make test", "every automated check ({n} suites)".format(
+        n=_suite_count() or "all")),
+    ("make shell", "a container on the IMAGE copy of the project"),
     ("make run-mount", "bind-mount the working tree instead of the image copy"),
     ("make clean", "remove build artefacts"),
 ]
