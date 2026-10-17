@@ -126,3 +126,11 @@ Thumbs.db
 *.rej
 *.bak
 *~
+
+# ---- git-history tooling scratch ---------------------------------------------
+# Transient working files from git history rewrite/filter tools. Not project
+# content; left untracked they make `git status` dirty, which is what
+# src/eval/seal.py's check_freeze() reads to decide whether the recorded hash
+# identifies the code that ran.
+.git-rewrite/
+.git-filter-repo/
