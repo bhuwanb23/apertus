@@ -71,17 +71,32 @@ def pre_run() -> None:
     v = config.data_path("values", "values_scenarios.json")
     d = config.data_path("dialect", "dialect_items.json")
 
-    for label, path, expected in (
-        ("knowledge all = 120", k_all, 120), ("knowledge dev = 84", k_dev, 84),
-        ("knowledge test = 36", k_test, 36), ("values scenarios = 30", v, 30),
-        ("dialect items present", d, None),
+    # Counts are asserted against each other, not against literals. The real
+    # invariants are that dev and test partition the whole set, that they do not
+    # overlap, and that each dataset is non-empty. Hardcoding 120/84/36 meant a
+    # corpus resize failed this checklist before any genuine problem was checked.
+    def _count(path):
+        if not path.exists():
+            return None
+        try:
+            return len(json.loads(path.read_text(encoding="utf-8")))
+        except (OSError, json.JSONDecodeError):
+            return None
+
+    n_all, n_dev, n_test = _count(k_all), _count(k_dev), _count(k_test)
+    for label, path, n in (
+        ("knowledge all", k_all, n_all),
+        ("knowledge dev", k_dev, n_dev),
+        ("knowledge test", k_test, n_test),
+        ("values scenarios", v, _count(v)),
+        ("dialect items present", d, _count(d)),
     ):
         if not path.exists():
             record(label, FAIL, f"{path.name} missing")
-            continue
-        n = len(json.loads(path.read_text(encoding="utf-8")))
-        record(label, PASS if (expected is None or n == expected) else FAIL,
-               f"n={n}" + ("" if expected is None or n == expected else f" (expected {expected})"))
+        elif not n:
+            record(label, FAIL, f"{path.name} is empty")
+        else:
+            record(label, PASS, f"n={n}")
 
     # -- dev/test integrity: the split must be a real split
     if k_dev.exists() and k_test.exists():
@@ -89,8 +104,9 @@ def pre_run() -> None:
         test = {q["id"] for q in json.loads(k_test.read_text(encoding="utf-8"))}
         overlap = dev & test
         record("dev/test no overlap", PASS if not overlap else FAIL, f"{len(overlap)} shared")
-        record("dev+test = all 120", PASS if len(dev | test) == 120 else FAIL,
-               f"{len(dev | test)}")
+        total = len(dev | test)
+        record("dev+test = all", PASS if (n_all is None or total == n_all) else FAIL,
+               f"{total}" + ("" if n_all is None else f" of {n_all}"))
 
     # -- dialect items are honest about validation
     if d.exists():
@@ -202,17 +218,20 @@ def post_run(models: list[str]) -> None:
 
         # -- category breakdown complete and balanced.
         # The early-baseline run in docs/plans/phase_2.md §2.5 is deliberately
-        # partial (40 questions), so it covers a subset of the categories. Held
-        # to the full-6 rule it would fail a run that is working exactly as
-        # intended, which is how a check stops being read.
-        partial = s["total_questions"] < 84
+        # partial, so it covers a subset of the categories. Held to the full rule it
+        # would fail a run that is working exactly as intended, which is how a
+        # check stops being read. The threshold is the current dev split size,
+        # so "partial" keeps meaning what it meant when it was written.
+        dev_n = _count(config.data_path("knowledge", "knowledge_dev.json"))
+        partial = dev_n is not None and s["total_questions"] < dev_n
         cats = set(s["by_category"])
         if partial:
             record(f"{tag}: category coverage (partial run)", INFO,
-                   f"{sorted(cats)} of 6 - n={s['total_questions']}/84, expected "
+                   f"{sorted(cats)} of {len(CATEGORIES)} - "
+                   f"n={s['total_questions']}/{dev_n}, expected "
                    f"for an early-baseline run")
         else:
-            record(f"{tag}: all 6 categories present",
+            record(f"{tag}: all {len(CATEGORIES)} categories present",
                    PASS if cats == set(CATEGORIES) else FAIL, f"{sorted(cats)}")
         total_in_cats = sum(d["total"] for d in s["by_category"].values())
         record(f"{tag}: no rows dropped in aggregation",

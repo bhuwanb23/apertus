@@ -67,7 +67,32 @@ HASH_PATH = SEAL_DIR / "knowledge_test.sha256"
 FREEZE_PATH = SEAL_DIR / "frozen_code.json"
 AUDIT_PATH = SEAL_DIR / "access.log"
 
-EXPECTED_N = 36
+def _expected_n() -> int:
+    """The sealed item count, taken from the PRE-RECORDED seal, not the file.
+
+    Reading it from the current knowledge_test.json would make the check
+    vacuous: truncate the sealed set and the expectation would shrink to match.
+    The recorded hash is the pre-registration, so that is what the count must be
+    compared against. Falls back to the file only when no record exists yet.
+    """
+    if HASH_PATH.exists():
+        try:
+            rec = json.loads(HASH_PATH.read_text(encoding="utf-8"))
+            if isinstance(rec.get("n_questions"), int):
+                return rec["n_questions"]
+        except (json.JSONDecodeError, OSError):
+            pass
+    if SEALED.exists():
+        try:
+            return len(json.loads(SEALED.read_text(encoding="utf-8")))
+        except (json.JSONDecodeError, OSError):
+            pass
+    return 0
+
+
+# Kept as a module attribute (not a function) because the suites monkeypatch it
+# to exercise the mismatch path. See fix/test_phase4.py.
+EXPECTED_N = _expected_n()
 
 
 def git_hash() -> str:

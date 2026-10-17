@@ -359,8 +359,9 @@ def values_summary(rows: list | None) -> dict:
 
 
 # ============================================================== the report
-def compute(models=MODELS, n_expected: int = 36) -> dict:
+def compute(models=MODELS, n_expected: int | None = None) -> dict:
     knowledge: dict = {}
+    n_cats: int | None = None
     for m in models:
         base, bm = load_arm("knowledge", m, "baseline")
         imp, im = load_arm("knowledge", m, "improved")
@@ -375,7 +376,28 @@ def compute(models=MODELS, n_expected: int = 36) -> dict:
                 sum(1 for r in imp if r["is_correct"]), len(imp))
             entry["paired"] = paired_delta(base, imp)
             entry["by_category"] = by_category(base, imp)
+            # The sealed-set size is whatever was actually measured, not a
+            # constant this file remembers. At n=36 a hardcoded 36 was correct
+            # and invisible; at any other n the power table would have
+            # described a different experiment than the one in the report.
+            if n_expected is None:
+                n_expected = len(base)
+            if n_cats is None and entry["by_category"]:
+                n_cats = len(entry["by_category"])
         knowledge[m] = entry
+
+    if n_expected is None:
+        n_expected = seal.EXPECTED_N
+    n_cats = n_cats or 1
+    n_per_cat = max(1, n_expected // n_cats)
+
+    # The dev half is reported alongside the sealed half so the limitation
+    # section can state both sizes from the data rather than from memory.
+    try:
+        dev_n = len(json.loads(
+            config.data_path("knowledge", "knowledge_dev.json").read_text(encoding="utf-8")))
+    except (OSError, json.JSONDecodeError):
+        dev_n = None
 
     cross = {}
     if all(knowledge.get(m, {}).get("baseline_present") for m in models):
@@ -396,9 +418,16 @@ def compute(models=MODELS, n_expected: int = 36) -> dict:
         "values": vals,
         "dialect_present": dial,
         "power": {
-            "overall_n36": detectable(n_expected),
-            "per_category_n6": detectable(n_expected // 6),
+            # Size-agnostic keys. They used to be "overall_n36" and
+            # "per_category_n6", which baked the old corpus size into the name of
+            # every downstream lookup - the kind of constant that survives a
+            # rescale and then quietly lies about the experiment.
+            "overall": detectable(n_expected),
+            "per_category": detectable(n_per_cat),
+            "n_overall": n_expected,
+            "n_per_category": n_per_cat,
         },
+        "dev_n": dev_n,
         "judge_model": _judge_used(),
         "self_judged": _judge_used() in models,
     }
@@ -471,15 +500,15 @@ def render_console(s: dict) -> None:
         print("  Phase 4.1 must run first, and it refuses on a mock backend.\n")
         return
 
-    pw = s["power"]["overall_n36"]
-    pc = s["power"]["per_category_n6"]
-    print("\n  WHAT n=36 CAN SUPPORT (computed, not asserted)")
-    print(f"    overall n=36  : {pw['min_improvements_zero_regressions']} improvements "
+    pw = s["power"]["overall"]
+    pc = s["power"]["per_category"]
+    print(f"\n  WHAT n={pw['n']} CAN SUPPORT (computed, not asserted)")
+    print(f"    overall n={pw['n']}  : {pw['min_improvements_zero_regressions']} improvements "
           f"with 0 regressions = {_f(pw['min_delta_pp_zero_regressions'], ' pp')} "
           f"for p<{s['alpha']}")
     if pc["nothing_detectable_with_any_regression"]:
-        print(f"    per-category  : n=6. ONLY a clean sweep (6/0, p=0.031) is")
-        print(f"                   detectable. Anything with a regression is not.")
+        print(f"    per-category  : n={pc['n']}. ONLY a clean sweep ({pc['n']}/0) is "
+              f"detectable. Anything with a regression is not.")
     print()
 
     for m in MODELS:
@@ -571,7 +600,7 @@ def write_report(s: dict, path: Path | None = None) -> Path:
         A("> This file will be regenerated when the runs exist. Nothing below is")
         A("> a placeholder waiting to be filled in; there are no numbers to report.")
         A("")
-        A("## What n=36 supports, computed in advance")
+        A(f"## What n={s['power']['n_overall']} supports, computed in advance")
         A("")
         _power_section(A, s)
         A("## What still has to happen before this report can mean anything")
@@ -608,7 +637,7 @@ def write_report(s: dict, path: Path | None = None) -> Path:
         A(f"- Values: {v['n']} scenarios scored 0–2 by rubric")
     A("")
 
-    A("## What n=36 and n=6 can support")
+    A(f"## What n={s['power']['n_overall']} and n={s['power']['n_per_category']} can support")
     A("")
     _power_section(A, s)
 
@@ -691,21 +720,22 @@ def write_report(s: dict, path: Path | None = None) -> Path:
 
     A("## Limitations")
     A("")
-    pw = s["power"]["overall_n36"]
+    pw = s["power"]["overall"]
     A(f"1. **n={pw['n']} is small.** A detectable paired change needs "
       f"{pw['min_improvements_zero_regressions']} improvements with zero "
       f"regressions ({_f(pw['min_delta_pp_zero_regressions'], ' pp')}). A smaller "
       f"real effect would not be distinguishable from noise here, and this report "
       f"does not claim one.")
-    pc = s["power"]["per_category_n6"]
+    pc = s["power"]["per_category"]
     if pc["nothing_detectable_with_any_regression"]:
         A(f"2. **Per-category claims are not supportable at n={pc['n']}.** Only a "
           f"clean sweep with no regressions reaches p<{s['alpha']}. Every other "
           f"category outcome is indistinguishable from chance. The per-category "
           f"table is descriptive, not inferential.")
-    A("3. **The improvement was designed on dev (n=84)** and evaluated once on "
-      "test (n=36). A dev-set delta that fails to transfer is a finding about "
-      "overfitting to dev, and is reported as one.")
+    dev_note = f" (n={s['dev_n']})" if s.get("dev_n") else ""
+    A(f"3. **The improvement was designed on dev{dev_note}** and evaluated once "
+      f"on test (n={pw['n']}). A dev-set delta that fails to transfer is a finding "
+      f"about overfitting to dev, and is reported as one.")
     if s["self_judged"]:
         A("4. **LLM-as-judge scoring is subjective**, and the arm where judge and "
           "model are the same weights is self-judged.")
@@ -726,7 +756,7 @@ def write_report(s: dict, path: Path | None = None) -> Path:
 
 
 def _power_section(A, s: dict) -> None:
-    pw, pc = s["power"]["overall_n36"], s["power"]["per_category_n6"]
+    pw, pc = s["power"]["overall"], s["power"]["per_category"]
     A(f"**Overall (n={pw['n']}, paired)** — computed from the same exact test used "
       f"for the results above:")
     A("")

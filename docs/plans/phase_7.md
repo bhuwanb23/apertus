@@ -166,3 +166,63 @@ make run          # must recompute the NEW published claims and exit 0
 | Date | W | Outcome |
 |---|---|---|
 | 2026-10-16 | W0 | Plan + gap analysis written |
+| 2026-10-16 | W1 | Re-baselined after the folder restructure. All 12 suites green in the new layout; seal verifies; `run.py` exits 0. |
+
+---
+
+## Repo restructure (2026-10-16) — re-baseline notes
+
+`track_1b/` was flattened away. Everything under it moved to the repository root:
+
+```
+before                                   after
+track_1b/src/eval/      -> src/eval/
+track_1b/src/fix/       -> src/fix/
+track_1b/src/scripts/   -> src/scripts/
+track_1b/src/run.py     -> src/run.py
+track_1b/Dockerfile     -> Dockerfile            (repo root)
+track_1b/Makefile       -> Makefile              (repo root)
+track_1b/docker-compose -> docker-compose.yml    (repo root)
+track_1b/README.md      -> README.md             (repo root)
+track_1b/technical_report.md -> technical_report.md
+.../src/eval/results/   -> results/   (deliverables: charts, final_scores,
+                                        narrative, test_run)
+                        -> eval/results/ (scratch: logs, parsed,
+                                         raw_responses, scores)
+```
+
+**What the restructure fixed.** Every entrypoint now resolves the project root by
+searching upward for a directory containing both `data/` and `Makefile`, so the
+literal `ROOT / "data"` paths work again. That also repaired a real defect: before
+the move, `seal.py`'s `SEALED` path pointed at a directory that no longer existed,
+so `verify()` reported `sealed file missing` and **the seal hash gate had been
+doing nothing**. It now verifies against the recorded 2026-10-13 hash.
+
+**What is still open from the restructure:**
+
+1. **The 8B model weights are gone.** `models/Apertus-v1.5-8B-Q4_K_M.gguf` no longer
+   exists anywhere on the machine, and the HF cache holds only `refs/main` for
+   `swiss-ai/Apertus-v1.5-8B` (no blobs). `.env` is also gone, so
+   `HF_READ_TOKEN` / `HF_WRITE_TOKEN` are unavailable. `llama-server` therefore
+   exits in ~0.1 s with `failed to open GGUF file`. **This blocks W3b.** Re-running
+   requires re-downloading the gated BF16 weights, then our own convert + Q4_K_M
+   quantisation (`src/scripts/download_apertus.py`), or restoring a backup.
+2. **`results/` vs `eval/results/` is a half-finished migration.** `config.py`
+   points scratch dirs at `results/{parsed,raw_responses,scores,logs}`, but the
+   existing dev artefacts still sit in `eval/results/`. Both are git-tracked.
+   Until this is resolved, `baseline_report.py` reports the dev arms as missing.
+3. My earlier W1 edits in the old `track_1b/` paths were lost in the move and have
+   been re-applied to the new `src/` paths: derived counts in `build_knowledge.py`,
+   `verify_knowledge.py` (including the hardcoded 20-item `CATEGORY_OF_ID` ranges,
+   now derived from the data), `seal.py` (`EXPECTED_N` from the pre-recorded seal),
+   `statistical_report.py` (`n_expected`, size-agnostic power keys), and
+   `baseline_report.py`. The dev/test split regenerates **byte-identical** to the
+   committed files, so the sealed artefacts remain valid.
+
+### The 3-second window
+
+`serve_task.cmd` previously looped `llama-server -> exit -> sleep 3 -> repeat`
+forever, appending only its own `[supervisor] ... restarting` line and never the
+server's output. With the model missing, that looked like a console window
+opening and closing every 3 seconds. It now preflights the model, fails with exit
+code 3 and a one-line diagnosis, caps restarts at 5, and captures server output.
