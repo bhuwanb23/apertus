@@ -157,8 +157,16 @@ def _stamp(c: Canvas, mocks, stats) -> None:
 
 
 def _provenance(c: Canvas, stats, y=None) -> None:
+    # None means "this figure does not itself carry results", NOT "no results exist".
+    # Reading it as the latter stamped the model-free retrieval figure with
+    # "results do not exist yet" while a 92.9% measurement sat in its bars.
+    if stats is None:
+        try:
+            stats = compute()
+        except Exception:
+            stats = {}
     git = (stats or {}).get("git_hash", seal.git_hash())
-    n = "results do not exist yet" if not _has_knowledge(stats) else "held-out test set"
+    n = "held-out test set" if _has_knowledge(stats) else "no held-out results yet"
     c.text(48, (y if y is not None else c.height - 8),
            f"Swiss Reality Check · held-out {n} · git {git[:12]} · seed 42 · temp 0.0",
            9.5, MUTED, family=MONO)
@@ -541,8 +549,8 @@ def fig4_retrieval(stats=None) -> Canvas:
         yy += 30 if a else 16
 
     caveat(c, [
-        "This is the one figure here not limited by sample size, and the one number in Phase 3 that is real.",
-        "Model accuracy in figs 1–2 is still unmeasured: no model has run. This figure needs no model.",
+        f"n = {_retrieval_n() or '?'} dev items. Model-free ground truth: every question",
+        "declares the source its answer was verified against, so this needs no model."
     ], y=c.height - 58)
     _provenance(c, None)
     return c
