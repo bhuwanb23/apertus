@@ -189,5 +189,27 @@ def main() -> int:
     return 0
 
 
+def recall_figure(split: str = "dev", k: int = 5) -> dict:
+    """Source recall at k, computed - and the single source of truth for it.
+
+    This figure was hardcoded as "94%" in six places (run.py, the chart
+    generator, the narrative, the PDF builder, the asset builder and RESULTS.md).
+    Every one of them went stale the moment the corpus was rescaled from 84 to 210
+    dev items and the real figure moved to 92.9%, so the charts, the narrative and
+    the submitted PDF all carried a number that no longer described the run they
+    illustrated.
+
+    Anything that prints or draws this number imports it from here instead. It is
+    model-free ground truth - it needs the corpus and the retriever, not a GPU - so
+    it is cheap enough to recompute at render time rather than cache.
+    """
+    chunks = load_corpus()
+    rep = retrieval_report(SwissRetriever(build_index(chunks, "bm25"), chunks),
+                           split=split, top_ks=(k,))
+    pct = rep["source_recall"][f"@{k}"]
+    return {"split": split, "k": k, "pct": pct, "n": rep.get("n_questions"),
+            "rounded": round(pct), "one_dp": f"{pct:.1f}"}
+
+
 if __name__ == "__main__":
     sys.exit(main())

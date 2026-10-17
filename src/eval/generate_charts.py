@@ -442,11 +442,14 @@ def fig4_retrieval(stats=None) -> Canvas:
                desc="How often the retriever puts the source containing the "
                     "answer into the context window, at several k, against a "
                     "25% chance rate.")
+    _n = _retrieval_n()
     header(c, "Retrieval finds the answer's own source",
            "ground truth: every question declares the source its answer was verified against",
-           "n = 84 dev items · model-free · no GPU, no dependencies")
+           (f"n = {_n} dev items · model-free · no GPU, no dependencies" if _n
+            else "n unavailable · model-free · no GPU, no dependencies"))
 
     recall = _retrieval_numbers()
+    r5 = recall.get(5)
     p = Plot(c, 92, 130, 640, 380, 0, 100, ylabel="Source recall (%)")
     p.hline(25, "chance (25%)", WARN)
 
@@ -483,7 +486,8 @@ def fig4_retrieval(stats=None) -> Canvas:
     body = [
         ("Retrieval is not the", "bottleneck."),
         ("", ""),
-        ("94% recall at k=5 with", "pure-Python BM25 and zero"),
+        (f"{r5:.0f}% recall at k=5 with" if r5 is not None else "recall at k=5 with",
+         "pure-Python BM25 and zero"),
         ("third-party dependencies.", ""),
         ("", ""),
         ("So installing a dense", "retriever was not worth doing"),
@@ -525,6 +529,20 @@ def _retrieval_numbers() -> dict:
     except Exception as e:
         print(f"  ! retrieval recall could not be computed: {type(e).__name__}: {e}")
         return {}
+
+
+def _retrieval_n() -> int | None:
+    """n behind the recall figures, read from the data rather than restated.
+
+    The subtitle used to say "n = 84 dev items" from when the dev split was 84.
+    A caption that disagrees with the axis it captions is the most damaging kind
+    of stale figure, because nothing on the chart contradicts it.
+    """
+    try:
+        from retriever import recall_figure
+        return recall_figure(split="dev", k=5)["n"]
+    except Exception:
+        return None
 
 
 # ============================================================ empty figures
