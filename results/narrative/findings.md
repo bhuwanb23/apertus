@@ -1,6 +1,6 @@
 # Key Findings — Swiss Reality Check
 
-*Generated 2026-10-17T07:45:12+00:00 by `eval/narrative.py` from measured data · git `c48d82a5515f`*
+*Generated 2026-10-17T07:47:47+00:00 by `eval/narrative.py` from measured data · git `1b6e0e8cd02c`*
 
 > **Read this first.** Every number below was computed by the code in this repository
 > and is traceable to a run. There are no placeholders, and no claim appears that
@@ -230,7 +230,7 @@ to any small-n evaluation, in any language, for any model.
 
 ## Reproducibility
 
-- Git commit `c48d82a5515f3ce4a158ca0643cd8286bfd5c0c3`
+- Git commit `1b6e0e8cd02ce38f27be0520eff971ef20f6e9b2`
 - Sealed test set SHA-256 `83c20589e1c5b668fabcdafb0a09c1d2…` (recorded in `eval/seal/`)
 - Seed 42 · temperature 0.0 · prompt version 1.0 · judge `8b`
 - Every access to the sealed test set is in an append-only log: `python src/eval/seal.py audit`

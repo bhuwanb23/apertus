@@ -26,13 +26,27 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Project. src/ holds the harness (eval/, fix/, scripts/); data/ holds the
-# benchmark datasets; docs/ holds the write-ups.
+# benchmark datasets; docs/ holds the write-ups; results/ holds the archived
+# arms and generated reports.
 COPY src   ./src
 COPY data  ./data
 COPY docs  ./docs
+COPY results ./results
 COPY README.md          ./README.md
 COPY technical_report.md ./technical_report.md
 COPY DATASHEET.md       ./DATASHEET.md
+COPY CHANGELOG.md       ./CHANGELOG.md
+
+# Makefile and docker-compose.yml are NOT decoration. Every module in src/
+# locates the project root by walking up until it finds a directory holding both
+# data/ and Makefile - that pair is the root marker. An earlier Dockerfile copied
+# neither, so all 43 of those modules raised StopIteration inside the container
+# and `make run` - the target judges run - died on its first line of work.
+#
+# src/scripts/test_dockerfile.py asserts the marker files are present here, so
+# this cannot regress silently again.
+COPY Makefile          ./Makefile
+COPY docker-compose.yml ./docker-compose.yml
 
 # The harness reads its configuration from the environment (LLM_NAME,
 # LLM_BASE_URL, LLM_API_KEY) and from src/eval/.env if one is mounted. Nothing

@@ -33,7 +33,7 @@
 # $(findstring), which need no shell control flow. See PYTHON below.
 # =============================================================================
 
-.PHONY: help run build verify verify-test test shell clean docker-check check-interp
+.PHONY: help run build verify verify-test test shell run-mount clean docker-check check-interp
 
 DOCKER       ?= docker
 COMPOSE      ?= $(DOCKER) compose
@@ -80,8 +80,15 @@ build: docker-check
 shell: docker-check
 	$(COMPOSE) run --rm app /bin/bash
 
-docker-check:
-	@$(DOCKER) --version
+# Bind-mount the working tree instead of using the image's copy. Convenient
+# for iterating, but NOT what judges should run: it makes the container test
+# the local checkout rather than the shipped image. Results are written back
+# to ./results on the host.
+run-mount: docker-check
+	$(COMPOSE) run --rm -v ./:/app app
+
+docker-check: check-interp
+	@$(PYTHON) src/scripts/check_docker.py
 
 # ------------------------------------------------------- no-Docker fallback
 # The judges have Docker. A contributor may not. These targets exist so the

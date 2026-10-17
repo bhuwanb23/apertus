@@ -33,6 +33,7 @@ TARGETS = [
     ("make verify-test", "held-out seal pre-flight only"),
     ("make test", "every automated check (13 suites)"),
     ("make shell", "container with the project mounted"),
+    ("make run-mount", "bind-mount the working tree instead of the image copy"),
     ("make clean", "remove build artefacts"),
 ]
 

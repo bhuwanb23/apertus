@@ -183,14 +183,27 @@ def run_results() -> None:
         print("         rather than re-running them.")
         return
 
-    arms = sorted(p.name for p in test_run.glob("*.json") if p.name != "run_metadata.json")
-    ok(f"{len(arms)} arms present", len(arms) > 0, ", ".join(arms))
+    # Superseded arms are kept beside the live ones as evidence that a result was
+    # replaced rather than quietly overwritten. They must not be counted as arms,
+    # and must not contribute their commits to the reproducibility note - both
+    # errors make a rescaled run look like it has more provenance than it has.
+    def _is_archived(name: str) -> bool:
+        return ".superseded-" in name or ".pre_rescore" in name
+
+    all_files = sorted(p.name for p in test_run.glob("*.json")
+                       if p.name != "run_metadata.json")
+    arms = [a for a in all_files if not _is_archived(a)]
+    archived = [a for a in all_files if _is_archived(a)]
+    ok(f"{len(arms)} live arms present", len(arms) > 0, ", ".join(arms))
+    if archived:
+        print(f"  [NOTE] {len(archived)} archived arm(s) kept as supersession "
+              f"evidence — not counted as results: {', '.join(archived)}")
 
     mocks = []
     hashes: set = set()
     models = set()
     for p in test_run.glob("*.json"):
-        if p.name == "run_metadata.json":
+        if p.name == "run_metadata.json" or _is_archived(p.name):
             continue
         try:
             d = json.loads(p.read_text(encoding="utf-8"))

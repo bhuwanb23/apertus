@@ -44,6 +44,7 @@ SUITES: list[str] = [
     "src/eval/test_dialect.py",
     "src/eval/test_baseline_report.py",
     "src/eval/smoke_test.py",
+    "src/scripts/test_dockerfile.py",
 ]
 
 GREEN, RED, YELLOW, DIM, RESET = "\033[32m", "\033[31m", "\033[33m", "\033[2m", "\033[0m"

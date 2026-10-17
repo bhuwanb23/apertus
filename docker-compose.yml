@@ -60,11 +60,12 @@ services:
     #   * read-only meant run.py could not write results/ at all, and the
     #     regeneration steps are the point of the offline run.
     #
-    # The run is hermetic instead: the image carries the project, the container
-    # writes inside itself, and nothing outside is touched. Use `make run-mount`
-    # for the bind-mount workflow, where host results are wanted.
-    volumes:
-      - results:/app/results
-
-volumes:
-  results:
+    # The run is hermetic instead: the image carries the project including the
+    # archived arms under results/, the container writes inside itself, and
+    # nothing on the host is touched. Use `make run-mount` for the bind-mount
+    # workflow, where regenerated results are wanted back on the host.
+    #
+    # Note there is deliberately no volume on /app/results here: an EMPTY named
+    # volume over that path would hide the archived arms the Dockerfile copied,
+    # and the run would then report "no arms present" for a checkout that has
+    # them.
