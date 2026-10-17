@@ -131,9 +131,14 @@ def tree_hash() -> str:
     That is precisely the property being asserted: "the code that will run is the
     code that was frozen".
     """
+    # NB: the rstrip must happen in Python, not in the f-string. Written as
+    # f":!{_seal_prefix()}rstrip('/')" the call becomes literal text and the
+    # pathspec silently excludes nothing - which makes tree_hash sensitive to
+    # committing this very file, i.e. exactly the bug this function exists to fix.
+    exclude = ":!" + _seal_prefix().rstrip("/")
     try:
         listing = subprocess.check_output(
-            ["git", "ls-files", "-s", ".", f":!{_seal_prefix()}rstrip('/')"],
+            ["git", "ls-files", "-s", ".", exclude],
             cwd=ROOT, stderr=subprocess.DEVNULL).decode()
     except Exception:
         return "unknown"
