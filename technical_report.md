@@ -22,7 +22,7 @@ Three pillars, 180 items:
 
 | Pillar | Items | What it tests |
 |---|---|---|
-| **Knowledge** | 120 MCQs (84 dev / 36 sealed test) | Six domains: politics, law, health, geography, services, history |
+| **Knowledge** | 300 MCQs (210 dev / 90 sealed test) | Six domains: politics, law, health, geography, services, history |
 | **Values** | 30 scenarios × 6 languages = 73 scored responses | Epistemic quality — *not* political position |
 | **Dialect** | 30 Alemannic items | Swiss German comprehension and translation |
 
@@ -101,18 +101,18 @@ was a measured decision, not a shortcut — see §4.
 
 ## 3. Results
 
-### 3.1 Headline — knowledge, held-out test set (n=36)
+### 3.1 Headline — knowledge, held-out test set (n=90)
 
 | Arm | Accuracy | 95% Wilson CI |
 |---|---|---|
-| Baseline | **55.6%** (20/36) | [39.6, 70.5] |
-| With retrieval | **86.1%** (31/36) | [71.3, 93.9] |
-| **Delta** | **+30.6 pp** | **exact 95% CI [+13.1, +30.6]** |
+| Baseline | **51.1%** (46/90) | [41.0, 61.2] |
+| With retrieval | **86.7%** (78/90) | [78.1, 92.2] |
+| **Delta** | **+35.6 pp** | **exact 95% CI [+25.1, +39.5]** |
 
-Paired McNemar: **11 improved, 0 regressed, p = 0.001**.
+Paired McNemar: **34 improved, 2 regressed, p < 0.001**.
 
-Zero regressions across 36 items is the part worth noting. Retrieval did not
-help anything and hurt nothing — it supplied the right passage and the model
+Only two regressions across 90 items is the part worth noting. Retrieval almost
+never hurt anything — it supplied the right passage and the model
 used it.
 
 The interval on the delta is **not** an arm interval. Baseline and improved
@@ -169,12 +169,12 @@ every row.
 
 | top-k | source containing the answer |
 |---|---|
-| 1 | 83.3% |
-| 3 | 90.5% |
-| **5** | **94.0%** |
+| 1 | 82.4% |
+| 3 | 91.4% |
+| **5** | **92.9%** |
 
 Every question declares the `source_id` its answer was verified against, so this
-is ground truth over all 84 dev items. Chance is 25%.
+is ground truth over all 210 dev items. Chance is 25%..
 
 ---
 
@@ -191,7 +191,7 @@ So a large part of any "improvement" from that prompt would be the answer key
 placed in the prompt, not a change in what the model knows. And it would not
 transfer: the held-out set is scored once.
 
-The prompt that ships carries **behavioural rules only, 0/84 contamination**.
+The prompt that ships carries **behavioural rules only, 0/210 contamination**.
 `prompts_check.py` enforces that as a gate that *raises*, and re-runs at the
 start of every evaluation so an edit between review and run cannot slip through.
 
@@ -224,11 +224,13 @@ Stated plainly, because the n here is small enough that the numbers need it.
    reduction order — so the 28 openings are a limitation on the *exactness* of
    the numbers, not evidence of selection.
 
-3. **n = 36.** A detectable paired change needs 6 improvements with **zero**
-   regressions (+16.7 pp). This run cleared that comfortably. **Per category
-   n = 6 supports nothing**: only a clean sweep (6/0, p = 0.031) is detectable,
-   and with a single regression *no* achievable movement reaches significance.
-   A category scoring 0/6 has a 95% interval of [0.0, 39.0]. Every per-category
+3. **n = 90.** A detectable paired change needs 6 improvements with **zero**
+   regressions (+6.7 pp); this run moved 34 up against 2 down, comfortably clear.
+   **Per category n = 15 still supports no ranking**: only a clean sweep (6/0,
+   p = 0.031) is detectable. Three of six categories clear it — geography, history
+   and politics — and the other three carry 2, 0 and 0 regressions respectively, so
+   they are reported as *no detectable change* rather than as small gains. A
+   category scoring 0/15 has a 95% interval of [0.0, 20.4]. Every per-category
    table is descriptive and no category is ranked.
 
 4. **The error taxonomy is unresolved.** On the mock responses 78% of content

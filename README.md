@@ -17,28 +17,29 @@ make run     # Docker; works on a clean checkout with no configuration
 
 ## Headline result
 
-Apertus 1.5 **8B**, held-out test set (n=36), retrieval-augmented against 100
-harvested official Swiss sources:
+Apertus 1.5 **8B**, held-out test set (n=90), retrieval-augmented against 55
+harvested official Swiss sources (300 MCQs, 210 dev / 90 sealed):
 
 | Arm | Accuracy | 95% CI |
 |---|---|---|
-| Baseline | 55.6% (20/36) | [39.6, 70.5] |
-| With retrieval | **86.1%** (31/36) | [71.3, 93.9] |
-| **Delta** | **+30.6 pp** | exact 95% CI [+13.1, +30.6] |
+| Baseline | 51.1% (46/90) | [41.0, 61.2] |
+| With retrieval | **86.7%** (78/90) | [78.1, 92.2] |
+| **Delta** | **+35.6 pp** | exact 95% CI [+25.1, +39.5] |
 
-Paired McNemar: **11 improved, 0 regressed, p = 0.001**.
+Paired McNemar: **34 improved, 2 regressed, p < 0.001**.
 
 And the number we would defend hardest, because it needs no model at all:
 
 | retrieval | finds the source containing the answer |
 |---|---|
-| top-1 | 83.3% |
-| top-3 | 90.5% |
-| top-5 | **94.0%** |
+| top-1 | 82.4% |
+| top-3 | 91.4% |
+| top-5 | **92.9%** |
 
 **Read the limitations before the headline.** Only one model has results, the
-sealed set was opened 28 times, and n=36 supports no per-category claim. All of
-it is in [technical_report.md §5](technical_report.md#5-limitations).
+sealed set was opened more than once, values are self-judged, and per-category
+n=15 supports no ranking. All of it is in
+[technical_report.md §5](technical_report.md#5-limitations).
 
 ---
 
@@ -139,11 +140,11 @@ findings/             issue files
 ### Two findings we would put ahead of the accuracy number
 
 **The obvious fix was contaminated.** The system prompt proposed in the project
-plan asserts Swiss facts verbatim. It answers **25 of 84 dev items — 30%**. A
-benchmark built that way measures its own prompt. The prompt that ships carries
-behavioural rules only, at 0/84, and a gate that *raises* keeps it there.
+plan asserts Swiss facts verbatim. It answers **30 % of dev items**. A benchmark
+built that way measures its own prompt. The prompt that ships carries
+behavioural rules only, at 0/210, and a gate that *raises* keeps it there.
 
-**Retrieval was never the bottleneck.** 94% recall at k=5 from pure-Python BM25
+**Retrieval was never the bottleneck.** 92.9 % recall at k=5 from pure-Python BM25
 with zero dependencies is what ruled out installing a dense retriever — decided
 before a single model call, and confirmed by the accuracy result afterwards.
 

@@ -35,13 +35,13 @@ GPU hardware (8 GB VRAM).
 ### What do the instances consist of?
 The dataset contains three components:
 
-**A. Swiss Knowledge MCQs (120 items)**
+**A. Swiss Knowledge MCQs (300 items)**
 - Format: Multiple-choice (4 options, 1 correct)
 - Fields: question, options (A–D), correct answer, source id / URL,
   source quote, category, difficulty
-- Categories (20 each): politics, law, health, geography, services, history
+- Categories (50 each): politics, law, health, geography, services, history
 - Primary language: English
-- Split: 84 development / 36 sealed test (seed 42, stratified by
+- Split: 210 development / 90 sealed test (seed 42, stratified by
   category × difficulty)
 
 **B. Values & Norms Scenarios (30 items)**
@@ -59,10 +59,10 @@ The dataset contains three components:
 - Validation status: **pilot / unvalidated** (`validated_by: null`)
 
 ### How many instances are there?
-- Knowledge: 120 (84 dev + 36 test)
+- Knowledge: 300 (210 dev + 90 test)
 - Values: 30 scenarios (+ 53 multilingual renderings)
 - Dialect: 30
-- **Total core items: 180** (plus multilingual renderings)
+- **Total core items: 360** (plus multilingual renderings)
 
 ### Does the dataset contain all possible instances?
 No. This is a curated sample designed to cover common Swiss institutional
@@ -138,7 +138,7 @@ MCQ keys are deterministic; translation scoring uses keyword coverage.
 ### Has the dataset been used for any tasks already?
 Yes. Used to evaluate **Apertus 1.5 8B** (Q4_K_M) on knowledge, values, and
 dialect, and to measure a BM25 RAG improvement on the sealed knowledge test
-set: **55.6% → 86.1%** (+30.6 pp, McNemar p=0.001). **Apertus 70B was not
+set: **51.1% → 86.7%** (+35.6 pp, McNemar p<0.001). **Apertus 70B was not
 evaluated** (hardware scope: 8 GB VRAM).
 
 ### What other tasks could the dataset be used for?
@@ -148,7 +148,8 @@ evaluated** (hardware scope: 8 GB VRAM).
 - Dialect comprehension research (after native validation)
 
 ### Is there anything about the composition that might impact future uses?
-- Test set (n=36) is small; statistical power is limited
+- Test set (n=90) supports the headline paired claim but no per-category
+  ranking (n=15 per category)
 - Knowledge items reflect Swiss law as of October 2026
 - Dialect items are unvalidated and dialect coverage is uneven
 - Values scenarios reflect the author's framing of Swiss norms
@@ -208,7 +209,7 @@ A notice will be added to the README and this DATASHEET.md.
 6. **Source bias:** Official / institutional sources dominate knowledge.
 
 ### What are the known limitations?
-1. Small test set (n=36)
+1. Sealed test set of 90 items; per-category n=15 supports no ranking
 2. MCQ format tests recognition, not free recall
 3. Values scoring used a self-judged 8B judge; no human agreement rate yet
 4. Dialect section is a pilot without native validation
@@ -226,7 +227,7 @@ public Wikipedia text.
 ### Could the dataset cause harm?
 Unlikely. The benchmark aims to reduce Swiss misinformation from LLMs.
 Misuse (e.g. training on the sealed test set) would weaken evaluative
-validity — users should respect the 84/36 split.
+validity — users should respect the 210/90 split.
 
 ### Does the dataset reinforce existing biases?
 The benchmark is designed to *surface* German/EU-centric model biases, not
