@@ -1,0 +1,1799 @@
+{
+  "arm": "rag",
+  "split": "test",
+  "model": "8b",
+  "prompt_version": "openqa-1.0",
+  "metrics": {
+    "n": 90,
+    "correct": 76,
+    "incorrect": 11,
+    "not_attempted": 3,
+    "attempted": 87,
+    "abstention_rate": 3.3,
+    "factuality": 87.4,
+    "hallucination_rate": 12.6,
+    "accuracy_all": 84.4,
+    "denominators": {
+      "factuality": "correct / (correct + incorrect) - attempted answers only",
+      "hallucination_rate": "incorrect / (correct + incorrect) - attempted only",
+      "abstention_rate": "not_attempted / all"
+    },
+    "judge_called": 87,
+    "judge_skipped_by_filter": 3,
+    "judge_filter_overrides": 87
+  },
+  "by_category": {
+    "geography": {
+      "n": 15,
+      "correct": 13,
+      "incorrect": 2,
+      "not_attempted": 0,
+      "attempted": 15,
+      "abstention_rate": 0.0,
+      "factuality": 86.7,
+      "hallucination_rate": 13.3,
+      "accuracy_all": 86.7,
+      "denominators": {
+        "factuality": "correct / (correct + incorrect) - attempted answers only",
+        "hallucination_rate": "incorrect / (correct + incorrect) - attempted only",
+        "abstention_rate": "not_attempted / all"
+      },
+      "judge_called": 15,
+      "judge_skipped_by_filter": 0,
+      "judge_filter_overrides": 15
+    },
+    "health": {
+      "n": 15,
+      "correct": 13,
+      "incorrect": 2,
+      "not_attempted": 0,
+      "attempted": 15,
+      "abstention_rate": 0.0,
+      "factuality": 86.7,
+      "hallucination_rate": 13.3,
+      "accuracy_all": 86.7,
+      "denominators": {
+        "factuality": "correct / (correct + incorrect) - attempted answers only",
+        "hallucination_rate": "incorrect / (correct + incorrect) - attempted only",
+        "abstention_rate": "not_attempted / all"
+      },
+      "judge_called": 15,
+      "judge_skipped_by_filter": 0,
+      "judge_filter_overrides": 15
+    },
+    "history": {
+      "n": 15,
+      "correct": 15,
+      "incorrect": 0,
+      "not_attempted": 0,
+      "attempted": 15,
+      "abstention_rate": 0.0,
+      "factuality": 100.0,
+      "hallucination_rate": 0.0,
+      "accuracy_all": 100.0,
+      "denominators": {
+        "factuality": "correct / (correct + incorrect) - attempted answers only",
+        "hallucination_rate": "incorrect / (correct + incorrect) - attempted only",
+        "abstention_rate": "not_attempted / all"
+      },
+      "judge_called": 15,
+      "judge_skipped_by_filter": 0,
+      "judge_filter_overrides": 15
+    },
+    "law": {
+      "n": 15,
+      "correct": 11,
+      "incorrect": 2,
+      "not_attempted": 2,
+      "attempted": 13,
+      "abstention_rate": 13.3,
+      "factuality": 84.6,
+      "hallucination_rate": 15.4,
+      "accuracy_all": 73.3,
+      "denominators": {
+        "factuality": "correct / (correct + incorrect) - attempted answers only",
+        "hallucination_rate": "incorrect / (correct + incorrect) - attempted only",
+        "abstention_rate": "not_attempted / all"
+      },
+      "judge_called": 13,
+      "judge_skipped_by_filter": 2,
+      "judge_filter_overrides": 13
+    },
+    "politics": {
+      "n": 15,
+      "correct": 12,
+      "incorrect": 3,
+      "not_attempted": 0,
+      "attempted": 15,
+      "abstention_rate": 0.0,
+      "factuality": 80.0,
+      "hallucination_rate": 20.0,
+      "accuracy_all": 80.0,
+      "denominators": {
+        "factuality": "correct / (correct + incorrect) - attempted answers only",
+        "hallucination_rate": "incorrect / (correct + incorrect) - attempted only",
+        "abstention_rate": "not_attempted / all"
+      },
+      "judge_called": 15,
+      "judge_skipped_by_filter": 0,
+      "judge_filter_overrides": 15
+    },
+    "services": {
+      "n": 15,
+      "correct": 12,
+      "incorrect": 2,
+      "not_attempted": 1,
+      "attempted": 14,
+      "abstention_rate": 6.7,
+      "factuality": 85.7,
+      "hallucination_rate": 14.3,
+      "accuracy_all": 80.0,
+      "denominators": {
+        "factuality": "correct / (correct + incorrect) - attempted answers only",
+        "hallucination_rate": "incorrect / (correct + incorrect) - attempted only",
+        "abstention_rate": "not_attempted / all"
+      },
+      "judge_called": 14,
+      "judge_skipped_by_filter": 1,
+      "judge_filter_overrides": 14
+    }
+  },
+  "records": [
+    {
+      "question_id": "K003",
+      "category": "politics",
+      "difficulty": "medium",
+      "answer": "The members first seek a common solution, and only vote if they fail to reach one.",
+      "answer_variations": [
+        "members first seek a common solution, and only vote if they fail to reach one.",
+        "The members first seek a common solution, and only vote if they fail to reach one"
+      ],
+      "reply": "They discuss the item and seek a common solution; only if they cannot reach one do they vote. Once a decision is taken, all members must stand by it on a united front",
+      "reply_raw": "They discuss the item and seek a common solution; only if they cannot reach one do they vote. Once a decision is taken, all members must stand by it on a united front.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K007",
+      "category": "politics",
+      "difficulty": "easy",
+      "answer": "50,000 signatures within 100 days",
+      "answer_variations": [
+        "000 signatures within 100 days and 50",
+        "000 signatures within 100 days, 50"
+      ],
+      "reply": "50,000 valid signatures within 100 days of the publication of the new legislation",
+      "reply_raw": "50,000 valid signatures within 100 days of the publication of the new legislation.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K008",
+      "category": "politics",
+      "difficulty": "hard",
+      "answer": "A single list may only contain signatures from people of the same commune, because the communes are the first to check the signatures.",
+      "answer_variations": [
+        "single list may only contain signatures from people of the same commune, because the communes are the first to check the signatures.",
+        "A single list may only contain signatures from people of the same commune, because the communes are the first to check the signatures"
+      ],
+      "reply": "They must be valid within 100 days of the publication of the new legislation",
+      "reply_raw": "They must be valid within 100 days of the publication of the new legislation.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "incorrect",
+      "judge_overrode_filter": false,
+      "judge_raw": "INCORRECT<|im_end>",
+      "label": "incorrect"
+    },
+    {
+      "question_id": "K011",
+      "category": "politics",
+      "difficulty": "easy",
+      "answer": "100,000 signatures within 18 months",
+      "answer_variations": [
+        "000 signatures within 18 months and 100",
+        "000 signatures within 18 months, 100"
+      ],
+      "reply": "100,000 valid signatures within 18 months",
+      "reply_raw": "100,000 valid signatures within 18 months.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K013",
+      "category": "politics",
+      "difficulty": "medium",
+      "answer": "The presidency usually rotates from year to year and carries no privileges beyond chairing the cantonal government's meetings.",
+      "answer_variations": [
+        "presidency usually rotates from year to year and carries no privileges beyond chairing the cantonal government's meetings.",
+        "The presidency usually rotates from year to year and carries no privileges beyond chairing the cantonal government's meetings"
+      ],
+      "reply": "The cantonal government is headed by the cantonal president. This role carries the responsibility of presiding over the cantonal government and representing the canton in matters of cantonal administration and policy",
+      "reply_raw": "The cantonal government is headed by the cantonal president. This role carries the responsibility of presiding over the cantonal government and representing the canton in matters of cantonal administration and policy.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K016",
+      "category": "politics",
+      "difficulty": "hard",
+      "answer": "Half a vote each.",
+      "answer_variations": [
+        "Half a vote each"
+      ],
+      "reply": "Half a vote each",
+      "reply_raw": "Half a vote each.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K021",
+      "category": "law",
+      "difficulty": "hard",
+      "answer": "Three months for residential premises and six months for commercial premises",
+      "answer_variations": [
+        "Three months for residential premises and six months for commercial premises."
+      ],
+      "reply": "12 months",
+      "reply_raw": "12 months<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "incorrect",
+      "judge_overrode_filter": false,
+      "judge_raw": "INCORRECT<|im_end>",
+      "label": "incorrect"
+    },
+    {
+      "question_id": "K028",
+      "category": "law",
+      "difficulty": "medium",
+      "answer": "At least ten years of residence, including three of the five years prior to the application being made",
+      "answer_variations": [
+        "At least ten years of residence, including three of the five years prior to the application being made."
+      ],
+      "reply": "Ten years, including three of the five years prior to the application being made",
+      "reply_raw": "Ten years, including three of the five years prior to the application being made.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K030",
+      "category": "law",
+      "difficulty": "medium",
+      "answer": "A settlement permit (C)",
+      "answer_variations": [
+        "settlement permit (C)",
+        "A settlement permit (C)."
+      ],
+      "reply": "C permit",
+      "reply_raw": "C permit<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K033",
+      "category": "law",
+      "difficulty": "medium",
+      "answer": "At least twelve months",
+      "answer_variations": [
+        "At least twelve months."
+      ],
+      "reply": "12 months",
+      "reply_raw": "12 months<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K035",
+      "category": "law",
+      "difficulty": "hard",
+      "answer": "Each commune determines its own tax co-efficient, and these co-efficients can vary considerably",
+      "answer_variations": [
+        "Each commune determines its own tax co-efficient, and these co-efficients can vary considerably."
+      ],
+      "reply": "Different tax co-efficients set by each commune",
+      "reply_raw": "Different tax co-efficients set by each commune. \n<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT\n<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K038",
+      "category": "law",
+      "difficulty": "easy",
+      "answer": "Three months' rent",
+      "answer_variations": [
+        "Three months' rent."
+      ],
+      "reply": "Three months' rent",
+      "reply_raw": "Three months' rent.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K043",
+      "category": "health",
+      "difficulty": "easy",
+      "answer": "30 November",
+      "answer_variations": [
+        "30 November."
+      ],
+      "reply": "30 November",
+      "reply_raw": "30 November",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K044",
+      "category": "health",
+      "difficulty": "easy",
+      "answer": "CHF 3,200",
+      "answer_variations": [
+        "CHF 3200"
+      ],
+      "reply": "CHF 3,200",
+      "reply_raw": "CHF 3,200<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K045",
+      "category": "health",
+      "difficulty": "medium",
+      "answer": "CHF 1,000",
+      "answer_variations": [
+        "CHF 1000"
+      ],
+      "reply": "CHF 1000 per calendar year",
+      "reply_raw": "CHF 1000 per calendar year.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K046",
+      "category": "health",
+      "difficulty": "medium",
+      "answer": "500, 1,000, 1,500, 2,000 and 2,500 francs",
+      "answer_variations": [
+        "500, 1, 000, 1, 500, 2, 000, 2 and 500 francs",
+        "1, 000, 1, 500, 2, 000, 2, 500 francs, 500"
+      ],
+      "reply": "CHF 300 or higher levels (up to a maximum reduction of 70% on the additional risk assumed)",
+      "reply_raw": "CHF 300 or higher levels (up to a maximum reduction of 70% on the additional risk assumed)",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "incorrect",
+      "judge_overrode_filter": false,
+      "judge_raw": "INCORRECT<|im_end>",
+      "label": "incorrect"
+    },
+    {
+      "question_id": "K050",
+      "category": "health",
+      "difficulty": "hard",
+      "answer": "Only at the beginning of a calendar year",
+      "answer_variations": [
+        "Only at the beginning of a calendar year."
+      ],
+      "reply": "At the beginning of a calendar year",
+      "reply_raw": "At the beginning of a calendar year.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K059",
+      "category": "health",
+      "difficulty": "medium",
+      "answer": "80 per cent of the mother's earnings, but no more than CHF 220 per day",
+      "answer_variations": [
+        "80 per cent of the mother's earnings, but no more than CHF 220 per day."
+      ],
+      "reply": "CHF 220 per day, up to 80% of earnings",
+      "reply_raw": "CHF 220 per day, up to 80% of earnings.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K063",
+      "category": "geography",
+      "difficulty": "easy",
+      "answer": "No — it is not an official language, although it is widely used to bridge the country's linguistic divides",
+      "answer_variations": [
+        "No — it is not an official language, although it is widely used to bridge the country's linguistic divides."
+      ],
+      "reply": "No",
+      "reply_raw": "No<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K064",
+      "category": "geography",
+      "difficulty": "easy",
+      "answer": "Lake Maggiore (Ticino), at 193 m",
+      "answer_variations": [
+        "at 193 m and Lake Maggiore (Ticino)",
+        "at 193 m, Lake Maggiore (Ticino)"
+      ],
+      "reply": "Lake Maggiore (Ticino) at 193 m (633 feet) is the lowest point in Switzerland, located in the canton of Ticino",
+      "reply_raw": "Lake Maggiore (Ticino) at 193 m (633 feet) is the lowest point in Switzerland, located in the canton of Ticino.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K067",
+      "category": "geography",
+      "difficulty": "medium",
+      "answer": "In four southern valleys of the canton of Graubünden",
+      "answer_variations": [
+        "In four southern valleys of the canton of Graubünden."
+      ],
+      "reply": "Western part of Switzerland",
+      "reply_raw": "Western part of Switzerland.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "incorrect",
+      "judge_overrode_filter": false,
+      "judge_raw": "INCORRECT<|im_end>",
+      "label": "incorrect"
+    },
+    {
+      "question_id": "K068",
+      "category": "geography",
+      "difficulty": "medium",
+      "answer": "62 per cent",
+      "answer_variations": [
+        "62 per cent."
+      ],
+      "reply": "62 percent",
+      "reply_raw": "62 percent<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K072",
+      "category": "geography",
+      "difficulty": "medium",
+      "answer": "Around a fifth",
+      "answer_variations": [
+        "Around a fifth."
+      ],
+      "reply": "Around a fifth",
+      "reply_raw": "Around a fifth.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K074",
+      "category": "geography",
+      "difficulty": "medium",
+      "answer": "Dufour Peak, 4,634 m, in the Monte Rosa Mountains",
+      "answer_variations": [
+        "Dufour Peak, 4, 634 m and in the Monte Rosa Mountains",
+        "4, 634 m, in the Monte Rosa Mountains, Dufour Peak"
+      ],
+      "reply": "Dufour Peak, Monte Rosa Mountains",
+      "reply_raw": "Dufour Peak, Monte Rosa Mountains<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K077",
+      "category": "geography",
+      "difficulty": "hard",
+      "answer": "Kammersrohr, in the canton of Solothurn",
+      "answer_variations": [
+        "in the canton of Solothurn and Kammersrohr",
+        "in the canton of Solothurn, Kammersrohr"
+      ],
+      "reply": "Kammersrohr, canton of Solothurn",
+      "reply_raw": "Kammersrohr, canton of Solothurn<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K080",
+      "category": "geography",
+      "difficulty": "hard",
+      "answer": "Obwalden, Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt and Basel Landschaft",
+      "answer_variations": [
+        "Nidwalden, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel Stadt, Basel Landschaft, Obwalden"
+      ],
+      "reply": "Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden, Appenzell Innerrhoden",
+      "reply_raw": "Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden, Appenzell Innerrhoden<|im_end|>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K087",
+      "category": "services",
+      "difficulty": "medium",
+      "answer": "11 consecutive hours",
+      "answer_variations": [
+        "11 consecutive hours."
+      ],
+      "reply": "11 hours",
+      "reply_raw": "11 hours<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K088",
+      "category": "services",
+      "difficulty": "hard",
+      "answer": "A wage supplement of at least 25%",
+      "answer_variations": [
+        "wage supplement of at least 25%",
+        "A wage supplement of at least 25%."
+      ],
+      "reply": "A supplement of at least 25% must be paid for work between 11pm and 6am carried out for less than 25 nights per calendar year",
+      "reply_raw": "A supplement of at least 25% must be paid for work between 11pm and 6am carried out for less than 25 nights per calendar year.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K090",
+      "category": "services",
+      "difficulty": "easy",
+      "answer": "The cantons",
+      "answer_variations": [
+        "cantons",
+        "The cantons."
+      ],
+      "reply": "Cantons",
+      "reply_raw": "Cantons",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K097",
+      "category": "services",
+      "difficulty": "medium",
+      "answer": "70% of total waste volume recycled, but secondary raw materials at 14% of total material consumption",
+      "answer_variations": [
+        "70% of total waste volume recycled, but secondary raw materials at 14% of total material consumption."
+      ],
+      "reply": "6.1 million tonnes, 14%",
+      "reply_raw": "6.1 million tonnes, 14%<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K099",
+      "category": "services",
+      "difficulty": "hard",
+      "answer": "On the whole value — CHF 400",
+      "answer_variations": [
+        "On the whole value — CHF 400."
+      ],
+      "reply": "CHF 400.00",
+      "reply_raw": "CHF 400.00<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K100",
+      "category": "services",
+      "difficulty": "medium",
+      "answer": "8.1% standard, 2.6% reduced",
+      "answer_variations": [
+        "2.6% reduced and 8.1% standard",
+        "2.6% reduced, 8.1% standard"
+      ],
+      "reply": "8.1% and 2.6%",
+      "reply_raw": "8.1% and 2.6%<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K102",
+      "category": "history",
+      "difficulty": "easy",
+      "answer": "the Central Archives",
+      "answer_variations": [
+        "Central Archives",
+        "the Central Archives."
+      ],
+      "reply": "The Central Archives",
+      "reply_raw": "The Central Archives<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K106",
+      "category": "history",
+      "difficulty": "hard",
+      "answer": "As a concession to the French-speaking liberals.",
+      "answer_variations": [
+        "As a concession to the French-speaking liberals"
+      ],
+      "reply": "To accommodate French-speaking liberals",
+      "reply_raw": "To accommodate French-speaking liberals.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K107",
+      "category": "history",
+      "difficulty": "easy",
+      "answer": "1922",
+      "answer_variations": [
+        "in 1922",
+        "1922."
+      ],
+      "reply": "1922",
+      "reply_raw": "1922<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K109",
+      "category": "history",
+      "difficulty": "easy",
+      "answer": "7 February 1971",
+      "answer_variations": [
+        "7 February 1971."
+      ],
+      "reply": "7 February 1971",
+      "reply_raw": "7 February 1971<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K114",
+      "category": "history",
+      "difficulty": "medium",
+      "answer": "a red cross on a white background",
+      "answer_variations": [
+        "red cross on a white background",
+        "a red cross on a white background."
+      ],
+      "reply": "A red cross on a white background",
+      "reply_raw": "A red cross on a white background.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K115",
+      "category": "history",
+      "difficulty": "medium",
+      "answer": "1917, 1944 and again in 1963, the last together with the International Federation of Red Cross and Red Crescent Societies",
+      "answer_variations": [
+        "1917, 1944 and again in 1963, the last together with the International Federation of Red Cross and Red Crescent Societies."
+      ],
+      "reply": "1917, 1944, 1963",
+      "reply_raw": "1917, 1944, 1963<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K117",
+      "category": "history",
+      "difficulty": "medium",
+      "answer": "18 April 1999",
+      "answer_variations": [
+        "18 April 1999."
+      ],
+      "reply": "18 April 1999",
+      "reply_raw": "18 April 1999<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K119",
+      "category": "history",
+      "difficulty": "hard",
+      "answer": "3 March 2002",
+      "answer_variations": [
+        "3 March 2002."
+      ],
+      "reply": "March 3, 2002",
+      "reply_raw": "March 3, 2002<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K121",
+      "category": "services",
+      "difficulty": "easy",
+      "answer": "The guest is not obliged to tip, although paying a tip is customary in many restaurants.",
+      "answer_variations": [
+        "guest is not obliged to tip, although paying a tip is customary in many restaurants.",
+        "The guest is not obliged to tip, although paying a tip is customary in many restaurants"
+      ],
+      "reply": "No, the guest is not obliged to tip. It is customary, but not mandatory. Tips are considered voluntary and are not included in the price",
+      "reply_raw": "No, the guest is not obliged to tip. It is customary, but not mandatory. Tips are considered voluntary and are not included in the price.  <|im_end|>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K127",
+      "category": "services",
+      "difficulty": "hard",
+      "answer": "It is the association's own position and is contested by labour-law academics, so it cannot be presented as settled law.",
+      "answer_variations": [
+        "It is the association's own position and is contested by labour-law academics, so it cannot be presented as settled law"
+      ],
+      "reply": "I don't know. The statement that tips are not wages is a factual claim about Swiss labor law, but the sources provided do not explicitly confirm or deny whether tips are considered wages under current law. The text notes that tips may be treated as income if they form an integral part of an employee's salary, but it does not define what constitutes an integral part. Therefore, the claim cannot be verified with certainty from the given material. I don't know",
+      "reply_raw": "I don't know. The statement that tips are not wages is a factual claim about Swiss labor law, but the sources provided do not explicitly confirm or deny whether tips are considered wages under current law. The text notes that tips may be treated as income if they form an integral part of an employee's salary, but it does not define what constitutes an integral part. Therefore, the claim cannot be verified with certainty from the given material. I don't know.",
+      "abstained_by_filter": true,
+      "abstain_pattern": "opens_with:^\\s*i\\s+don'?t\\s+know\\b",
+      "label": "not_attempted",
+      "judged": false,
+      "judge_verdict": null,
+      "judge_overrode_filter": null
+    },
+    {
+      "question_id": "K131",
+      "category": "services",
+      "difficulty": "medium",
+      "answer": "They are subject to VAT",
+      "answer_variations": [
+        "They are subject to VAT."
+      ],
+      "reply": "They are subject to VAT. The tax-free limit does not apply because the goods are not intended for personal use or as gifts. VAT is calculated on the total value of the imported goods. If the total value exceeds CHF 150, VAT is due on the full amount. The tax-free limit applies only to goods intended for personal use or as gifts. If the goods are bought abroad for resale, they are considered commercial goods and therefore taxable. The VAT rate is 8.1% unless reduced rates apply to specific goods. Customs duties may also apply if the goods exceed duty-free allowances for alcohol",
+      "reply_raw": "They are subject to VAT. The tax-free limit does not apply because the goods are not intended for personal use or as gifts. VAT is calculated on the total value of the imported goods. If the total value exceeds CHF 150, VAT is due on the full amount. The tax-free limit applies only to goods intended for personal use or as gifts. If the goods are bought abroad for resale, they are considered commercial goods and therefore taxable. The VAT rate is 8.1% unless reduced rates apply to specific goods. Customs duties may also apply if the goods exceed duty-free allowances for alcohol,",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K133",
+      "category": "services",
+      "difficulty": "medium",
+      "answer": "Customs duties",
+      "answer_variations": [
+        "Customs duties."
+      ],
+      "reply": "Customs duties on alcohol",
+      "reply_raw": "Customs duties on alcohol.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K134",
+      "category": "services",
+      "difficulty": "hard",
+      "answer": "Its market value",
+      "answer_variations": [
+        "Its market value."
+      ],
+      "reply": "The import VAT is assessed on the market value of the gift, not on the amount paid for it. If the market value exceeds CHF 150, VAT at the applicable rate (8.1% or 2.6%) is due. The tax-free limit of CHF 150 applies per person per day, but only to goods intended for personal use or as gifts. Individual items valued above CHF 150 are always subject to VAT regardless of quantity. The basis for VAT calculation is the invoice, receipt, or purchase contract; if none exists, the market value is used. Fuel, personal",
+      "reply_raw": "The import VAT is assessed on the market value of the gift, not on the amount paid for it. If the market value exceeds CHF 150, VAT at the applicable rate (8.1% or 2.6%) is due. The tax-free limit of CHF 150 applies per person per day, but only to goods intended for personal use or as gifts. Individual items valued above CHF 150 are always subject to VAT regardless of quantity. The basis for VAT calculation is the invoice, receipt, or purchase contract; if none exists, the market value is used. Fuel, personal",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K135",
+      "category": "services",
+      "difficulty": "easy",
+      "answer": "About 80 to 90 million tonnes",
+      "answer_variations": [
+        "About 80 to 90 million tonnes."
+      ],
+      "reply": "CHF 200 million in annual costs for littering and waste management",
+      "reply_raw": "CHF 200 million in annual costs for littering and waste management.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "incorrect",
+      "judge_overrode_filter": false,
+      "judge_raw": "INCORRECT<|im_end>",
+      "label": "incorrect"
+    },
+    {
+      "question_id": "K138",
+      "category": "services",
+      "difficulty": "medium",
+      "answer": "The 'polluter pays' principle",
+      "answer_variations": [
+        "'polluter pays' principle",
+        "The 'polluter pays' principle."
+      ],
+      "reply": "The polluter pays principle",
+      "reply_raw": "The polluter pays principle.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K143",
+      "category": "services",
+      "difficulty": "hard",
+      "answer": "The canton and the type of baccalaureate",
+      "answer_variations": [
+        "the type of baccalaureate and The canton",
+        "the type of baccalaureate, The canton"
+      ],
+      "reply": "completion of upper-secondary level school",
+      "reply_raw": "completion of upper-secondary level school<|im_end|>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "incorrect",
+      "judge_overrode_filter": false,
+      "judge_raw": "INCORRECT<|im_end>",
+      "label": "incorrect"
+    },
+    {
+      "question_id": "K145",
+      "category": "services",
+      "difficulty": "medium",
+      "answer": "The parents, with commune support only where the route is very long or too dangerous",
+      "answer_variations": [
+        "parents, with commune support only where the route is very long or too dangerous",
+        "The parents, with commune support only where the route is very long or too dangerous."
+      ],
+      "reply": "Parents are responsible for getting a child to school; a commune may step in if the route is very long or too dangerous",
+      "reply_raw": "Parents are responsible for getting a child to school; a commune may step in if the route is very long or too dangerous.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K152",
+      "category": "politics",
+      "difficulty": "medium",
+      "answer": "Referendum and initiative committees",
+      "answer_variations": [
+        "initiative committees and Referendum",
+        "initiative committees, Referendum"
+      ],
+      "reply": "Referendum and initiative committees submit the signatures they have collected to the Federal Chancellery",
+      "reply_raw": "Referendum and initiative committees submit the signatures they have collected to the Federal Chancellery.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K156",
+      "category": "politics",
+      "difficulty": "medium",
+      "answer": "The Federal Criminal Court",
+      "answer_variations": [
+        "Federal Criminal Court",
+        "The Federal Criminal Court."
+      ],
+      "reply": "Federal Criminal Court",
+      "reply_raw": "Federal Criminal Court<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K164",
+      "category": "politics",
+      "difficulty": "hard",
+      "answer": "Defend the government's position publicly, whatever their own opinion",
+      "answer_variations": [
+        "whatever their own opinion and Defend the government's position publicly",
+        "whatever their own opinion, Defend the government's position publicly"
+      ],
+      "reply": "Nothing",
+      "reply_raw": "Nothing",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "incorrect",
+      "judge_overrode_filter": false,
+      "judge_raw": "INCORRECT<|im_end>",
+      "label": "incorrect"
+    },
+    {
+      "question_id": "K170",
+      "category": "politics",
+      "difficulty": "medium",
+      "answer": "Jura and Neuchâtel",
+      "answer_variations": [
+        "Neuchâtel and Jura",
+        "Neuchâtel, Jura"
+      ],
+      "reply": "Jura and Neuchâtel",
+      "reply_raw": "Jura and Neuchâtel<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K171",
+      "category": "politics",
+      "difficulty": "easy",
+      "answer": "No, the commune adds them automatically",
+      "answer_variations": [
+        "the commune adds them automatically and No",
+        "the commune adds them automatically, No"
+      ],
+      "reply": "No. They will be entered automatically when they meet the voting eligibility conditions",
+      "reply_raw": "No. They will be entered automatically when they meet the voting eligibility conditions.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K176",
+      "category": "politics",
+      "difficulty": "hard",
+      "answer": "No, a federal popular initiative can concern only the Constitution",
+      "answer_variations": [
+        "No, a federal popular initiative can concern only the Constitution."
+      ],
+      "reply": "No. A federal popular initiative concerns only the Constitution; it cannot be used to amend existing federal laws",
+      "reply_raw": "No. A federal popular initiative concerns only the Constitution; it cannot be used to amend existing federal laws.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K177",
+      "category": "politics",
+      "difficulty": "medium",
+      "answer": "The Federal Council must announce it at least four months ahead",
+      "answer_variations": [
+        "Federal Council must announce it at least four months ahead",
+        "The Federal Council must announce it at least four months ahead."
+      ],
+      "reply": "At least four months in advance by the Federal Council",
+      "reply_raw": "At least four months in advance by the Federal Council.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K179",
+      "category": "politics",
+      "difficulty": "medium",
+      "answer": "Yes, an optional referendum is possible",
+      "answer_variations": [
+        "an optional referendum is possible and Yes",
+        "an optional referendum is possible, Yes"
+      ],
+      "reply": "Yes. An optional referendum can be launched against a decision of the local parliament, including decisions on international treaties. It can also be launched at the federal level against decisions of the Federal Council regarding international treaties. The text explicitly states that \"It is also possible to launch an optional referendum against these [decisions on international treaties].\"",
+      "reply_raw": "Yes. An optional referendum can be launched against a decision of the local parliament, including decisions on international treaties. It can also be launched at the federal level against decisions of the Federal Council regarding international treaties. The text explicitly states that \"It is also possible to launch an optional referendum against these [decisions on international treaties].\"<|im_end|>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K180",
+      "category": "politics",
+      "difficulty": "medium",
+      "answer": "Both may initiate a referendum, and their signatures are counted",
+      "answer_variations": [
+        "Both may initiate a referendum, and their signatures are counted."
+      ],
+      "reply": "They can both initiate a referendum against the same law. Multiple groups may launch referendums on the same federal law. Signatures are counted separately for each group. If either group meets the signature threshold, the referendum is triggered. Multiple referendums on the same law are possible even if they come from opposing political camps. The process is governed by the Federal Constitution and the Referendum Act, allowing simultaneous challenges from different sides. This reflects the Swiss system's openness to diverse political participation and the principle that any citizen or group opposed to a federal law can seek a referendum, regardless of their political affiliation. The key point is that the same",
+      "reply_raw": "They can both initiate a referendum against the same law. Multiple groups may launch referendums on the same federal law. Signatures are counted separately for each group. If either group meets the signature threshold, the referendum is triggered. Multiple referendums on the same law are possible even if they come from opposing political camps. The process is governed by the Federal Constitution and the Referendum Act, allowing simultaneous challenges from different sides. This reflects the Swiss system's openness to diverse political participation and the principle that any citizen or group o",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "incorrect",
+      "judge_overrode_filter": false,
+      "judge_raw": "INCORRECT<|im_end>",
+      "label": "incorrect"
+    },
+    {
+      "question_id": "K181",
+      "category": "law",
+      "difficulty": "easy",
+      "answer": "The persons about whom data are processed",
+      "answer_variations": [
+        "persons about whom data are processed",
+        "The persons about whom data are processed."
+      ],
+      "reply": "Personal data about individuals",
+      "reply_raw": "Personal data about individuals",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K183",
+      "category": "law",
+      "difficulty": "hard",
+      "answer": "It is permitted in principle, with the test being whether the invasion of privacy can be justified by consent or by overriding interests",
+      "answer_variations": [
+        "It is permitted in principle, with the test being whether the invasion of privacy can be justified by consent or by overriding interests."
+      ],
+      "reply": "Generally permitted",
+      "reply_raw": "Generally permitted.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K186",
+      "category": "law",
+      "difficulty": "medium",
+      "answer": "They cover, for example, a data subject who already has the information or processing required by law, and they must be narrowly interpreted",
+      "answer_variations": [
+        "They cover, for example, a data subject who already has the information or processing required by law, and they must be narrowly interpreted."
+      ],
+      "reply": "Exceptions are narrowly interpreted and require specific conditions to apply. Data controllers should not assume exceptions apply without verification. I don't know if exceptions apply in a specific case. I don't know",
+      "reply_raw": "Exceptions are narrowly interpreted and require specific conditions to apply. Data controllers should not assume exceptions apply without verification. I don't know if exceptions apply in a specific case.  I don't know.  <|im_end|>",
+      "abstained_by_filter": true,
+      "abstain_pattern": "short_refusal:\\bi\\s+(?:don'?t|do\\s+not|cannot|can'?t)\\s+know\\b",
+      "label": "not_attempted",
+      "judged": false,
+      "judge_verdict": null,
+      "judge_overrode_filter": null
+    },
+    {
+      "question_id": "K193",
+      "category": "law",
+      "difficulty": "easy",
+      "answer": "Short-term residence permits (L), residence permits (B) and settlement permits (C)",
+      "answer_variations": [
+        "residence permits (B), settlement permits (C), Short-term residence permits (L)"
+      ],
+      "reply": "Short-term residence permits (L), residence permits (B), and settlement permits (C) for third-state nationals",
+      "reply_raw": "Short-term residence permits (L), residence permits (B), and settlement permits (C) for third-state nationals.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K194",
+      "category": "law",
+      "difficulty": "medium",
+      "answer": "The canton of residence decides, and the biometric data are captured by that canton's authority",
+      "answer_variations": [
+        "canton of residence decides, and the biometric data are captured by that canton's authority",
+        "The canton of residence decides, and the biometric data are captured by that canton's authority."
+      ],
+      "reply": "The Canton of residence decides the application procedure, and the corresponding authority in the Canton of residence captures the biometric data",
+      "reply_raw": "The Canton of residence decides the application procedure, and the corresponding authority in the Canton of residence captures the biometric data.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K201",
+      "category": "law",
+      "difficulty": "hard",
+      "answer": "It may be limited to one year",
+      "answer_variations": [
+        "It may be limited to one year."
+      ],
+      "reply": "It may be limited to one year",
+      "reply_raw": "It may be limited to one year.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K202",
+      "category": "law",
+      "difficulty": "medium",
+      "answer": "Contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure",
+      "answer_variations": [
+        "Contracts of less than three months' duration within a calendar year are not subject to a permit but are regulated via the online notification procedure."
+      ],
+      "reply": "I don't know",
+      "reply_raw": "I don't know.",
+      "abstained_by_filter": true,
+      "abstain_pattern": "opens_with:^\\s*i\\s+don'?t\\s+know\\b",
+      "label": "not_attempted",
+      "judged": false,
+      "judge_verdict": null,
+      "judge_overrode_filter": null
+    },
+    {
+      "question_id": "K206",
+      "category": "law",
+      "difficulty": "medium",
+      "answer": "Each canton, which can have up to eight additional public holidays on its territory",
+      "answer_variations": [
+        "Each canton, which can have up to eight additional public holidays on its territory."
+      ],
+      "reply": "The cantons determine the additional public holidays",
+      "reply_raw": "The cantons determine the additional public holidays.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K208",
+      "category": "law",
+      "difficulty": "medium",
+      "answer": "Only if the notice period and the locally customary termination dates are observed",
+      "answer_variations": [
+        "Only if the notice period and the locally customary termination dates are observed."
+      ],
+      "reply": "Anytime, provided the notice period stated in law or the agreement is observed and an official termination form is used",
+      "reply_raw": "Anytime, provided the notice period stated in law or the agreement is observed and an official termination form is used.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "incorrect",
+      "judge_overrode_filter": false,
+      "judge_raw": "INCORRECT<|im_end>",
+      "label": "incorrect"
+    },
+    {
+      "question_id": "K212",
+      "category": "health",
+      "difficulty": "medium",
+      "answer": "The first eight weeks after the birth",
+      "answer_variations": [
+        "first eight weeks after the birth",
+        "The first eight weeks after the birth."
+      ],
+      "reply": "Eight weeks",
+      "reply_raw": "Eight weeks<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K214",
+      "category": "health",
+      "difficulty": "medium",
+      "answer": "Nothing - no benefits are paid for the two additional weeks",
+      "answer_variations": [
+        "Nothing - no benefits are paid for the two additional weeks."
+      ],
+      "reply": "No benefits are received for those two additional weeks",
+      "reply_raw": "No benefits are received for those two additional weeks.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K216",
+      "category": "health",
+      "difficulty": "medium",
+      "answer": "The self-employed",
+      "answer_variations": [
+        "self-employed",
+        "The self-employed."
+      ],
+      "reply": "Individuals earning less than CHF 22,680 per year from one employer and younger than 17 years old",
+      "reply_raw": "Individuals earning less than CHF 22,680 per year from one employer and younger than 17 years old.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "incorrect",
+      "judge_overrode_filter": false,
+      "judge_raw": "INCORRECT<|im_end>",
+      "label": "incorrect"
+    },
+    {
+      "question_id": "K217",
+      "category": "health",
+      "difficulty": "hard",
+      "answer": "From 1 January after the employee reaches the age of 24",
+      "answer_variations": [
+        "From 1 January after the employee reaches the age of 24."
+      ],
+      "reply": "From 1 January after the employee reaches the age of 24",
+      "reply_raw": "From 1 January after the employee reaches the age of 24.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K218",
+      "category": "health",
+      "difficulty": "medium",
+      "answer": "Only indirectly, by granting tax exemption on the contributions and on second-pillar assets",
+      "answer_variations": [
+        "Only indirectly, by granting tax exemption on the contributions and on second-pillar assets."
+      ],
+      "reply": "Through tax exemption on contributions and assets",
+      "reply_raw": "Through tax exemption on contributions and assets.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K219",
+      "category": "health",
+      "difficulty": "hard",
+      "answer": "At least equal to the sum of contributions paid by all the employees",
+      "answer_variations": [
+        "At least equal to the sum of contributions paid by all the employees."
+      ],
+      "reply": "It must be at least equal to the sum of contributions paid by all the employees",
+      "reply_raw": "It must be at least equal to the sum of contributions paid by all the employees.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K222",
+      "category": "health",
+      "difficulty": "hard",
+      "answer": "From 1 January after turning 20; for those already working, from 1 January of the year in which they turn 18",
+      "answer_variations": [
+        "From 1 January after turning 20; for those already working, from 1 January of the year in which they turn 18."
+      ],
+      "reply": "From 1 January after turning 20; for those already in paid work, contributions begin on 1 January of the year they turn 18",
+      "reply_raw": "From 1 January after turning 20; for those already in paid work, contributions begin on 1 January of the year they turn 18.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K228",
+      "category": "health",
+      "difficulty": "medium",
+      "answer": "Ten per cent, capped at CHF 700 per year",
+      "answer_variations": [
+        "capped at CHF 700 per year and Ten per cent",
+        "capped at CHF 700 per year, Ten per cent"
+      ],
+      "reply": "10% of healthcare costs",
+      "reply_raw": "10% of healthcare costs. \n<|im_end|>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K230",
+      "category": "health",
+      "difficulty": "easy",
+      "answer": "Children and young adults under the age of 25",
+      "answer_variations": [
+        "young adults under the age of 25 and Children",
+        "young adults under the age of 25, Children"
+      ],
+      "reply": "Children and young adults under the age of 25",
+      "reply_raw": "Children and young adults under the age of 25.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K242",
+      "category": "geography",
+      "difficulty": "medium",
+      "answer": "20 cantons",
+      "answer_variations": [
+        "20 cantons."
+      ],
+      "reply": "20",
+      "reply_raw": "20<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K243",
+      "category": "geography",
+      "difficulty": "medium",
+      "answer": "Glarus",
+      "answer_variations": [
+        "Glarus."
+      ],
+      "reply": "Aargau",
+      "reply_raw": "Aargau<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "incorrect",
+      "judge_overrode_filter": false,
+      "judge_raw": "INCORRECT<|im_end>",
+      "label": "incorrect"
+    },
+    {
+      "question_id": "K249",
+      "category": "geography",
+      "difficulty": "hard",
+      "answer": "Italian and French",
+      "answer_variations": [
+        "French and Italian",
+        "French, Italian"
+      ],
+      "reply": "Italian",
+      "reply_raw": "Italian<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K254",
+      "category": "geography",
+      "difficulty": "hard",
+      "answer": "All laws and ordinances of the Confederation, the cantons and the communes",
+      "answer_variations": [
+        "All laws, ordinances of the Confederation, the cantons and the communes",
+        "ordinances of the Confederation, the cantons, the communes, All laws"
+      ],
+      "reply": "All laws and ordinances of the Confederation, cantons and communes",
+      "reply_raw": "All laws and ordinances of the Confederation, cantons and communes.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K257",
+      "category": "geography",
+      "difficulty": "easy",
+      "answer": "1938",
+      "answer_variations": [
+        "in 1938",
+        "1938."
+      ],
+      "reply": "1938",
+      "reply_raw": "1938<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K264",
+      "category": "geography",
+      "difficulty": "medium",
+      "answer": "2,110 communes",
+      "answer_variations": [
+        "110 communes and 2",
+        "110 communes, 2"
+      ],
+      "reply": "2110",
+      "reply_raw": "2110<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K268",
+      "category": "geography",
+      "difficulty": "medium",
+      "answer": "Liechtenstein",
+      "answer_variations": [
+        "Liechtenstein."
+      ],
+      "reply": "Liechtenstein",
+      "reply_raw": "Liechtenstein<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K272",
+      "category": "history",
+      "difficulty": "medium",
+      "answer": "They set Switzerland's borders as they are today.",
+      "answer_variations": [
+        "They set Switzerland's borders as they are today"
+      ],
+      "reply": "Set Switzerland's borders as they are today",
+      "reply_raw": "Set Switzerland's borders as they are today.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K274",
+      "category": "history",
+      "difficulty": "hard",
+      "answer": "A duty to stay out of wars, to treat all belligerents equally, and not to supply them with arms or troops.",
+      "answer_variations": [
+        "duty to stay out of wars, to treat all belligerents equally, and not to supply them with arms or troops.",
+        "A duty to stay out of wars, to treat all belligerents equally, and not to supply them with arms or troops"
+      ],
+      "reply": "They were bound to stay out of wars, treat all belligerents equally, and not supply them with arms or troops",
+      "reply_raw": "They were bound to stay out of wars, treat all belligerents equally, and not supply them with arms or troops.",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K286",
+      "category": "history",
+      "difficulty": "hard",
+      "answer": "the League of Red Cross Societies",
+      "answer_variations": [
+        "League of Red Cross Societies",
+        "the League of Red Cross Societies."
+      ],
+      "reply": "League of Red Cross Societies",
+      "reply_raw": "League of Red Cross Societies<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K287",
+      "category": "history",
+      "difficulty": "medium",
+      "answer": "7",
+      "answer_variations": [],
+      "reply": "7",
+      "reply_raw": "7<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K292",
+      "category": "history",
+      "difficulty": "medium",
+      "answer": "a confederation of states",
+      "answer_variations": [
+        "confederation of states",
+        "a confederation of states."
+      ],
+      "reply": "1848 Constitution of 12 September 1848",
+      "reply_raw": "1848 Constitution of 12 September 1848<|im_end|>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K295",
+      "category": "history",
+      "difficulty": "hard",
+      "answer": "Because the Schwyzers were famous for their role in the Waldstätte Alliance and for their mercenary troops.",
+      "answer_variations": [
+        "Because the Schwyzers were famous for their role in the Waldstätte Alliance and for their mercenary troops"
+      ],
+      "reply": "Because the Schwyzer (people of Schwyz canton) became well known for their role in the Waldstätte Alliance and as mercenaries, leading others to call all confederates \"Schwyzer\"",
+      "reply_raw": "Because the Schwyzer (people of Schwyz canton) became well known for their role in the Waldstätte Alliance and as mercenaries, leading others to call all confederates \"Schwyzer\".<|im_end|>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    },
+    {
+      "question_id": "K296",
+      "category": "history",
+      "difficulty": "medium",
+      "answer": "the founding of the Federal State",
+      "answer_variations": [
+        "founding of the Federal State",
+        "the founding of the Federal State."
+      ],
+      "reply": "the founding of the Federal State in 1848",
+      "reply_raw": "the founding of the Federal State in 1848<|im_end>",
+      "abstained_by_filter": false,
+      "abstain_pattern": "",
+      "judged": true,
+      "judge_verdict": "correct",
+      "judge_overrode_filter": false,
+      "judge_raw": "CORRECT<|im_end>",
+      "label": "correct"
+    }
+  ]
+}
